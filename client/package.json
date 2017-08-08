@@ -1,0 +1,25 @@
+{
+  "name": "www-client",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.10"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "CI=true react-scripts test --env=jsdom",
+    "test-w": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "jest": "^20.0.4",
+    "jest-cli": "^20.0.4"
+  },
+  "author": "Stephen Cresswell",
+  "license": "ISC"
+}
