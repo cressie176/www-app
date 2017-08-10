@@ -1,0 +1,22 @@
+.featured-projects {
+  margin-bottom: 20px;
+}
+
+.featured-projects .featured-projects__list {
+  margin-bottom: 10px;
+}
+
+.featured-projects__see-all-link {
+  text-align: right;
+}
+
+.featured-project__downloads {
+  float: right;
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}

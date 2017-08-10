@@ -1,0 +1,47 @@
+.featured-articles {
+    margin-bottom: 40px;
+}
+
+.featured-article img {
+  width: 100%;
+}
+
+.featured-articles__see-all-link {
+  text-align: right;
+}
+
+.featured-article__thumbnail {
+  margin-bottom: 10px;
+}
+
+.featured-article__summary {
+  margin-bottom: 10px;
+}
+
+.featured-article__details {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.featured-article__details i {
+  margin-right: 8px;
+}
+
+@media only screen and (min-width : 992px) {
+
+  .featured-article__title__wrapper {
+    height: 78px;
+    margin-bottom: 10px;
+  }
+
+  .featured-article__title {
+    height: inherit;
+    display: table-cell;
+    vertical-align: bottom;
+  }
+
+  .featured-articles__see-all-link {
+    text-align: right;
+  }
+}
+

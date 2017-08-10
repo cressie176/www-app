@@ -22,3 +22,31 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a, a:hover, a:visited {
+  color: #23CCF2;
+}
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #23CCF2;
+  text-align: center;
+  display: inline-block;
+  margin-right: 5px;
+  color: #fff;
+}
+
+.page {
+  padding-bottom: 40px;
+}

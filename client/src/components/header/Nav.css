@@ -1,0 +1,33 @@
+.navbar.navbar-overrides {
+  background-color: transparent;
+  margin-bottom: 0px;
+  border: 0px;
+}
+
+.navbar.navbar-overrides .navbar-nav > li > a {
+  padding: 30px 60px;
+}
+
+.navbar.navbar-overrides .navbar-nav > li.active > a {
+  background-color: #23CCF2;
+  border-bottom: 2px solid #23CCF2;
+  color: #FFF;
+}
+
+.navbar.navbar-overrides .navbar-nav > li.active > a:hover {
+  background-color: #23CCF2;
+  border-bottom: 2px solid #23CCF2;
+  color: #FFF;
+}
+
+.navbar.navbar-overrides .navbar-nav > li > a:hover {
+  background-color: transparent;
+  border-bottom: 2px solid #23CCF2;
+  color: #23CCF2;
+}
+
+@media only screen and (max-width : 767px) {
+  .navbar.navbar-overrides .navbar-brand {
+     display: none;
+  }
+}
