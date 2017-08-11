@@ -44,11 +44,11 @@ SITES_ENABLED=certbot docker-compose run -d www-nginx
 
 Then run a script in www-jobs to make the pretend to make the certificate request
 ```
-docker-compose run www-jobs /run-once-pretend
+docker-compose run --rm www-jobs /run-once-pretend
 ```
 
 Assuming it works run the real script
 ```
-docker-compose run www-jobs /run-once
+docker-compose run --rm www-jobs /run-once
 ```
 
