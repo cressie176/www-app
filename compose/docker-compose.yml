@@ -4,7 +4,7 @@ services:
 
   www-app-live:
     container_name: www-app-live
-    image: www-app-live
+    image: quay.io/cressie176/www-app
     build: ../app
     command: ['node', '.']
     restart: always
@@ -23,7 +23,7 @@ services:
 
   www-app-stage:
     container_name: www-app-stage
-    image: www-app-stage
+    image: quay.io/cressie176/www-app
     build: ../app
     command: ['node', '.']
     restart: always
@@ -42,7 +42,7 @@ services:
 
   www-app-local:
     container_name: www-app-local
-    image: www-app-local
+    image: quay.io/cressie176/www-app
     build: ../app
     command: ['node', '.']
     restart: always
@@ -61,7 +61,7 @@ services:
 
   www-nginx:
     container_name: www-nginx
-    image: www-nginx
+    image: quay.io/cressie176/www-nginx
     build:
       context: ../nginx
       args:
