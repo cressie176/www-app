@@ -45,6 +45,7 @@
 .footer__spotlights .links-spotlight--social .links-spotlight__list__item__link:hover {
   color: #111;
   background-color: #23CCF2;
+  border-color: #23CCF2;
 }
 
 .footer__spotlights .links-spotlight--social .links-spotlight__list__item__link__text {
@@ -54,7 +55,6 @@
 .footer__spotlights .links-spotlight--social .links-spotlight__list__item__link__icon {
   margin-right: 0px;
 }
-
 
 .footer__copyright {
   background-color: #000;
