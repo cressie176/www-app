@@ -1,0 +1,18 @@
+#!bin/bash
+set -e
+certbot certonly \
+        -n \
+        -m email@stephen-cresswell.net \
+        --agree-tos \
+        --webroot \
+        -w /var/www \
+        -d stephen-cresswell.net \
+        -d www.stephen-cresswell.net \
+        -d stage.stephen-cresswell.net
+
+cp /etc/letsencrypt/live/stephen-cresswell.net/privkey.pem /etc/nginx/ssl/stephen-cresswell.key
+cp /etc/letsencrypt/live/stephen-cresswell.net/fullchain.pem /etc/nginx/ssl/stephen-cresswell.pem
+docker kill -s HUP gs-nginx
+
+mkdir /etc/letsencrypt/renew-hook.d
+cp /run-post-renew /etc/letsencrypt/renew-hook.d/update-nginx

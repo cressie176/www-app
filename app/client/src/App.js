@@ -9,12 +9,20 @@ import reducer from './reducer';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import content from './test-data';
-
-import 'jquery/src/jquery';
-import 'bootstrap/dist/js/bootstrap.min.js';
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
+/***************************************************************
+Using require and assigning jQuery to window to workaround the
+following errors on npm start and npm test:
+
+  1) 'Bootstrap's JavaScript requires jQuery' error
+  2) Uncaught ReferenceError: define is not defined
+
+***************************************************************/
+window.jQuery = window.$ = require('jquery');
+require('bootstrap/dist/js/bootstrap.min.js');
 
 const store = createStore(reducer);
 

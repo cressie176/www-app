@@ -1,5 +1,5 @@
 {
-  "name": "www-client",
+  "name": "www-app-client",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -21,7 +21,7 @@
     "test-w": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "description": "",
+  "description": "The client half of www.stephen-cresswell.net",
   "main": "index.js",
   "devDependencies": {
     "jest": "^20.0.4",
