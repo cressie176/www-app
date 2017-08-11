@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
 import './FeaturedProjects.css';
 
@@ -21,7 +20,7 @@ const FeaturedProjects = ({ title, icon, projects, link }) => {
                 <a href={project.url}>{project.title}</a>
                 <span className='featured-project__downloads'>
                   {project.downloads.toLocaleString()}
-                  &nbsp;<i className='fa fa-download' aria-hidden='true'></i>
+                  <i className='fa fa-download featured-project__downloads__icon' aria-hidden='true'></i>
                 </span>
                 <div>{project.summary}</div>
               </li>
@@ -30,7 +29,7 @@ const FeaturedProjects = ({ title, icon, projects, link }) => {
         }
       </ul>
       <div className='featured-projects__see-all-link'>
-        <Link to={link.url}>{link.text}</Link>
+        <a href={link.url}>{link.text}</a>
       </div>
     </div>
   )

@@ -114,13 +114,7 @@ module.exports = {
           url: '/placeholder-360x240.png'
         },
       },
-      downloads: [
-        {
-          linkText: 'Handouts',
-          icon: 'fa-file-pdf-o',
-          url: 'https://meh',
-        },
-      ],
+      downloads: [],
     },
     '2': {
       id: '2',
@@ -137,7 +131,7 @@ module.exports = {
       },
       downloads: [
         {
-          linkText: 'Handouts',
+          text: 'Handouts',
           icon: 'fa-file-pdf-o',
           url: 'https://meh',
         },
@@ -158,7 +152,7 @@ module.exports = {
       },
       downloads: [
         {
-          linkText: 'Handouts',
+          text: 'Handouts',
           icon: 'fa-file-pdf-o',
           url: 'https://meh',
         },
@@ -242,12 +236,10 @@ module.exports = {
         links: [
           {
             icon: 'fa-github',
-            text: 'GitHub',
             url: 'https://www.github.com/cressie176/',
           },
           {
             icon: 'fa-linkedin',
-            text: 'Linkedin',
             url: 'https://www.linkedin.com/stephen-cresswell',
           }
         ]

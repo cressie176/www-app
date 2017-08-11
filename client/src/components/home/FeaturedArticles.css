@@ -23,8 +23,13 @@
   padding-left: 0px;
 }
 
-.featured-article__details i {
-  margin-right: 8px;
+.featured-article .icon-list__item__link {
+  color: #333;
+}
+
+.featured-article .icon-list__item__link:hover {
+  color: #23CCF2;
+  text-decoration: none;
 }
 
 @media only screen and (min-width : 992px) {

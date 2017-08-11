@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import IconListItem from './IconListItem'
 
 import './LinksSpotlight.css';
 
@@ -10,16 +11,7 @@ const LinksSpotlight = ({title, type, links}) => (
       {
         links.map((link, index) => {
           return (
-            <li key={index} className='links-spotlight__list__item'>
-              <a className='links-spotlight__list__item__link' href={link.url}>
-                {
-                  link.icon ? <i className={`fa ${link.icon} links-spotlight__list__item__link__icon`} aria-hidden='true'></i> : null
-                }
-                <span className='links-spotlight__list__item__link__text'>
-                  {link.text}
-                </span>
-              </a>
-            </li>
+            <IconListItem icon={link.icon} key={index} text={link.text} url={link.url} type={type} />
           )
         })
       }

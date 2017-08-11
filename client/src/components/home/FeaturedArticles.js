@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import IconListItem from '../common/IconListItem';
 
 import './FeaturedArticles.css';
 
@@ -30,36 +30,24 @@ const FeaturedArticles = ({ title, icon, articles, link }) => {
                 <ul className='featured-article__details'>
                   {
                     article.event ? (
-                      <li className='featured-article__event'>
-                        <i className='fa fa-group' aria-hidden='true'></i>
-                        {article.event}
-                      </li>
+                      <IconListItem icon='fa-group' text={article.event} url={article.url} type='event' />
                     ) : null
                   }
                   {
                     article.location ? (
-                      <li className='featured-article__location'>
-                        <i className='fa fa-location-arrow' aria-hidden='true'></i>
-                        {article.location}
-                      </li>
+                      <IconListItem icon='fa-location-arrow' text={article.location} type='location' />
                     ) : null
                   }
                   {
                     article.date ? (
-                      <li className='featured-article__date'>
-                        <i className='fa fa-calendar' aria-hidden='true'></i>
-                        {article.date.toLocaleString()}
-                      </li>
+                      <IconListItem icon='fa-calendar' text={article.date.toLocaleString()} type='date' />
                     ) : null
                   }
                   {
                     article.downloads ? (
                       article.downloads.map(download => {
                         return (
-                          <li key={download.url} className='featured-article__downloads'>
-                            <i className={`fa ${download.icon}`} aria-hidden='true'></i>
-                            <a href={download.url}>{download.linkText}</a>
-                          </li>
+                          <IconListItem key={download.url} icon={download.icon} text={download.text} url={download.url} type='download' />
                         )
                       })
                     ) : null
@@ -73,7 +61,7 @@ const FeaturedArticles = ({ title, icon, articles, link }) => {
       <div className='row'>
         <div className='col-md-12'>
           <div className='featured-articles__see-all-link'>
-            <Link to={link.url}>{link.text}</Link>
+            <a href={link.url}>{link.text}</a>
           </div>
         </div>
       </div>
