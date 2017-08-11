@@ -6,12 +6,9 @@ import './Nav.css';
 
 const Nav = ({ items }) => {
   return (
-    <div className='container'>
+    <div className='container-fluid'>
       <div className='row'>
         <nav className='navbar navbar-default navbar-overrides'>
-          <a className='navbar-brand pull-right' href='/'>
-            <img src='/logo.png' alt='logo' />
-          </a>
           <div className='navbar-header'>
             <button type='button' className='navbar-toggle collapsed' data-toggle='collapse' data-target='#navbar-collapse' aria-expanded='false'>
               <span className='sr-only'>Toggle navigation</span>
