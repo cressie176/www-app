@@ -81,16 +81,16 @@ services:
   #   volumes:
   #     - ${CONTAINERS_DIR}/mongo/data/db:/data/db
 
-  # www-jobs:
-  #   container_name: www-jobs
-  #   image: www-jobs
-  #   build: ../jobs
-  #   restart: always
-  #   volumes:
-  #     - /var/run/docker.sock:/var/run/docker.sock
-  #     - ${CONTAINERS_DIR}/jobs/etc/letsencrypt:/etc/letsencrypt
-  #     - ${CONTAINERS_DIR}/jobs/var/www/.well-known/acme-challenge:/var/www/.well-known/acme-challenge
-  #     - ${CONTAINERS_DIR}/nginx/etc/nginx/ssl:/etc/nginx/ssl
+  www-jobs:
+    container_name: www-jobs
+    image: quay.io/cressie176/www-jobs
+    build: ../jobs
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${CONTAINERS_DIR}/jobs/etc/letsencrypt:/etc/letsencrypt
+      - ${CONTAINERS_DIR}/jobs/var/www/.well-known/acme-challenge:/var/www/.well-known/acme-challenge
+      - ${CONTAINERS_DIR}/nginx/etc/nginx/ssl:/etc/nginx/ssl
 
 networks:
   default:
