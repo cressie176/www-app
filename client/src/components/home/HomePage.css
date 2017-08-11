@@ -1,9 +1,6 @@
 .hero {
   width: 100%;
+  background-color: transparent;
+  margin-bottom: 10px;
 }
 
-@media only screen and (max-width : 767px) {
-  .hero {
-    display: none;
-  }
-}
