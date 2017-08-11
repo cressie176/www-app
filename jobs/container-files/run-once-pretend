@@ -1,0 +1,16 @@
+#!bin/bash
+set -e
+certbot certonly \
+        -n \
+        -m email@stephen-cresswell.net \
+        --agree-tos \
+        --webroot \
+        --staging
+        -w /var/www \
+        -d stephen-cresswell.net \
+        -d www.stephen-cresswell.net \
+        -d stage.stephen-cresswell.net
+
+cp /etc/letsencrypt/staging/stephen-cresswell.net/privkey.pem /etc/nginx/ssl/stephen-cresswell.key
+cp /etc/letsencrypt/staging/stephen-cresswell.net/fullchain.pem /etc/nginx/ssl/stephen-cresswell.pem
+

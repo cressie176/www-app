@@ -92,23 +92,6 @@ services:
       - ${CONTAINERS_DIR}/jobs/var/www/.well-known/acme-challenge:/var/www/.well-known/acme-challenge
       - ${CONTAINERS_DIR}/nginx/etc/nginx/ssl:/etc/nginx/ssl
 
-  # nginx wont start until it has certificates
-  # certbot needs a webserver running on port 80 to confirm domain ownership
-  # to workaround the catch-22 this is a special version of the www-jobs service
-  # which will listen on port 80 and create and respond to the acme challenge
-  obtain-certificates:
-    image: quay.io/cressie176/www-jobs
-    build: ../jobs
-    command: [/etc/run-once]
-    restart: never
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ${CONTAINERS_DIR}/jobs/etc/letsencrypt:/etc/letsencrypt
-      - ${CONTAINERS_DIR}/jobs/var/www/.well-known/acme-challenge:/var/www/.well-known/acme-challenge
-      - ${CONTAINERS_DIR}/nginx/etc/nginx/ssl:/etc/nginx/ssl
-    ports:
-      - 80:80
-
 networks:
   default:
     external:

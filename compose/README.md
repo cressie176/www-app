@@ -28,3 +28,27 @@ SITES_ENABLED=local
 ### Start
 ```bash
 docker-compose up --build -d www-app-local
+
+### Obtaining Certificates For The First Time
+
+Problem:
+
+* nginx wont start until it has certificates
+* certbot needs a webserver running on port 80 to confirm domain ownership
+
+To workaround the catch-22, launch a special version of www-nginx service
+
+```
+SITES_ENABLED=certbot docker-compose run -d www-nginx
+```
+
+Then run a script in www-jobs to make the pretend to make the certificate request
+```
+docker-compose run www-jobs /run-once-pretend
+```
+
+Assuming it works run the real script
+```
+docker-compose run www-jobs /run-once
+```
+

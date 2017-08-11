@@ -18,9 +18,10 @@ RUN apt-get update && apt-get install -y certbot
 
 # Add scripts
 ADD container-files/run-once .
+ADD container-files/run-once-pretend .
 ADD container-files/run-post-renew .
 ADD container-files/etc/cron.daily/* /etc/cron.daily/
-RUN chmod +x /run-once /run-post-renew /etc/cron.daily/*
+RUN chmod +x /run-once /run-once-pretend /run-post-renew /etc/cron.daily/*
 
 # Start cron in the foreground
 CMD /usr/sbin/cron -f -L 15
