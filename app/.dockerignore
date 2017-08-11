@@ -7,6 +7,15 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+server/build
+server/node_modules
+server/coverage
+server/secrets
+server/.DS_Store
+server/npm-debug.log*
+server/yarn-debug.log*
+server/yarn-error.log*
+
 client/build
 client/node_modules
 client/coverage
