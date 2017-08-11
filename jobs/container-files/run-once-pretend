@@ -5,7 +5,7 @@ certbot certonly \
         -m email@stephen-cresswell.net \
         --agree-tos \
         --webroot \
-        --staging
+        --staging \
         -w /var/www \
         -d stephen-cresswell.net \
         -d www.stephen-cresswell.net \
