@@ -3,4 +3,4 @@
 set -e
 /bin/cp /etc/letsencrypt/live/stephen-cresswell.net/privkey.pem /etc/nginx/ssl/stephen-cresswell.key
 /bin/cp /etc/letsencrypt/live/stephen-cresswell.net/fullchain.pem /etc/nginx/ssl/stephen-cresswell.pem
-/usr/bin/docker kill -s HUP gs-nginx
+/usr/bin/docker kill -s HUP www-nginx
