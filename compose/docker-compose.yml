@@ -2,43 +2,43 @@ version: '3'
 
 services:
 
-  # www-app-live:
-  #   container_name: www-app-live
-  #   image: www-app-live
-  #   build: ../app
-  #   command: ['node', '.']
-  #   restart: always
-  #   depends_on:
-  #     - www-nginx
-  #     - www-mongo
-  #   environment:
-  #     - APP_ENV=live
-  #   volumes:
-  #     - ${CONTAINERS_DIR}/app-live/secrets:/opt/secrets
-  #   healthcheck:
-  #     test: ["CMD", "curl", "-f", "http://localhost:3000/__/status"]
-  #     interval: $HEALTHCHECK_INTERVAL
-  #     timeout: $HEALTHCHECK_TIMEOUT
-  #     retries: 3
+  www-app-live:
+    container_name: www-app-live
+    image: www-app-live
+    build: ../app
+    command: ['node', '.']
+    restart: always
+    depends_on:
+      - www-nginx
+      # - www-mongo
+    environment:
+      - APP_ENV=live
+    volumes:
+      - ${CONTAINERS_DIR}/app-live/secrets:/opt/secrets
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/__/status"]
+      interval: $HEALTHCHECK_INTERVAL
+      timeout: $HEALTHCHECK_TIMEOUT
+      retries: 3
 
-  # www-app-stage:
-  #   container_name: www-app-stage
-  #   image: www-app-stage
-  #   build: ../app
-  #   command: ['node', '.']
-  #   restart: always
-  #   depends_on:
-  #     - www-nginx
-  #     - www-mongo
-  #   environment:
-  #     - APP_ENV=stage
-  #   volumes:
-  #     - ${CONTAINERS_DIR}/app-stage/secrets:/opt/secrets
-  #   healthcheck:
-  #     test: ["CMD", "curl", "-f", "http://localhost:3000/__/status"]
-  #     interval: $HEALTHCHECK_INTERVAL
-  #     timeout: $HEALTHCHECK_TIMEOUT
-  #     retries: 3
+  www-app-stage:
+    container_name: www-app-stage
+    image: www-app-stage
+    build: ../app
+    command: ['node', '.']
+    restart: always
+    depends_on:
+      - www-nginx
+      # - www-mongo
+    environment:
+      - APP_ENV=stage
+    volumes:
+      - ${CONTAINERS_DIR}/app-stage/secrets:/opt/secrets
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/__/status"]
+      interval: $HEALTHCHECK_INTERVAL
+      timeout: $HEALTHCHECK_TIMEOUT
+      retries: 3
 
   www-app-local:
     container_name: www-app-local
@@ -49,8 +49,6 @@ services:
     depends_on:
       - www-nginx
     #   - www-mongo
-    ports:
-      - '3000:3000'
     environment:
       - APP_ENV=local
     volumes:

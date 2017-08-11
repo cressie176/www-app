@@ -1,7 +1,7 @@
 from node:alpine
 
 ENV NODE_ENV=production
-RUN apk add -U --no-cache tcpdump
+RUN apk add -U --no-cache tcpdump curl
 
 # First install the server dependencies (hopefully cached in previous image)
 RUN mkdir -p /opt/app
@@ -24,7 +24,7 @@ COPY client .
 RUN npm run test
 RUN npm run build
 
-# Now build the server (individually so as not to delete client/build)
+# Now build the server (likely to cachebust)
 WORKDIR /opt/app
 COPY . .
 RUN npm run test-server
