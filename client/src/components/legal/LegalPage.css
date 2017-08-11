@@ -1,0 +1,19 @@
+.legal-page__title__wrapper {
+  color: #fff;
+  background-color: #23CCF2;
+  margin-bottom: 20px;
+}
+
+.legal-page__title {
+  line-height: 63px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.legal-page__content li {
+  margin-bottom: 10px;
+}
+
+.legal-page__content {
+  margin-bottom: 30px;
+}

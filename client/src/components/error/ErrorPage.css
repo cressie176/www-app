@@ -1,0 +1,15 @@
+.error-page__title__wrapper {
+  color: #fff;
+  background-color: #F53355;
+}
+
+.error-page__title {
+  line-height: 63px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.error-page__hero {
+  width: 100%;
+}
+

@@ -26,7 +26,7 @@ const FeaturedArticles = ({ title, icon, articles, link }) => {
                   <h3 className='featured-article__title'>{article.title}</h3>
                 </div>
                 <img className='featured-article__thumbnail' src={article.images.thumbnail.url} alt={article.title} />
-                <div className='featured-article__summary'  dangerouslySetInnerHTML={{__html: article.summary}} />
+                <div className='featured-article__summary' dangerouslySetInnerHTML={{__html: article.summary}} />
                 <ul className='featured-article__details'>
                   {
                     article.event ? (

@@ -1,11 +1,12 @@
 .navbar.navbar-overrides {
   background-color: transparent;
   margin-bottom: 0px;
-  border: 0px;
+  border: none;
 }
 
 .navbar.navbar-overrides .navbar-nav > li > a {
   padding: 30px 60px;
+  border-bottom: 2px solid transparent;
 }
 
 .navbar.navbar-overrides .navbar-nav > li.active > a {
