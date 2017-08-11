@@ -46,33 +46,35 @@ services:
     build: ../app
     command: ['node', '.']
     restart: always
-    # depends_on:
-    #   - www-nginx
+    depends_on:
+      - www-nginx
     #   - www-mongo
+    ports:
+      - '3000:3000'
     environment:
       - APP_ENV=local
     volumes:
       - ${CONTAINERS_DIR}/www-app-local/secrets:/opt/secrets
-    # healthcheck:
-    #   test: ["CMD", "curl", "-f", "http://localhost:3000/__/status"]
-    #   interval: $HEALTHCHECK_INTERVAL
-    #   timeout: $HEALTHCHECK_TIMEOUT
-    #   retries: 3
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/__/status"]
+      interval: $HEALTHCHECK_INTERVAL
+      timeout: $HEALTHCHECK_TIMEOUT
+      retries: 3
 
-  # www-nginx:
-  #   container_name: www-nginx
-  #   image: www-nginx
-  #   build:
-  #     context: ../nginx
-  #     args:
-  #       SITES_ENABLED: ${SITES_ENABLED}
-  #   restart: always
-  #   volumes:
-  #     - ${CONTAINERS_DIR}/nginx/etc/nginx/ssl:/etc/nginx/ssl
-  #     - ${CONTAINERS_DIR}/jobs/var/www/.well-known/acme-challenge:/var/www/.well-known/acme-challenge
-  #   ports:
-  #     - 80:80
-  #     - 443:443
+  www-nginx:
+    container_name: www-nginx
+    image: www-nginx
+    build:
+      context: ../nginx
+      args:
+        SITES_ENABLED: ${SITES_ENABLED}
+    restart: always
+    volumes:
+      - ${CONTAINERS_DIR}/nginx/etc/nginx/ssl:/etc/nginx/ssl
+      - ${CONTAINERS_DIR}/jobs/var/www/.well-known/acme-challenge:/var/www/.well-known/acme-challenge
+    ports:
+      - 80:80
+      - 443:443
 
   # www-mongo:
   #   container_name: www-mongo
