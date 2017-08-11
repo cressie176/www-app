@@ -5,7 +5,6 @@ import Profile from './Profile';
 import FeaturedArticles from './FeaturedArticles';
 import FeaturedProjects from './FeaturedProjects';
 
-
 const HomePage = ({ page, profile, articles, projects, talks }) => (
   <div className='HomePage'>
     <div className='container-fluid'>
@@ -26,7 +25,7 @@ const HomePage = ({ page, profile, articles, projects, talks }) => (
             title={page.featuredProjects.title}
             icon={page.featuredProjects.icon}
             projects={page.featuredProjects.items.map(id => projects[id])}
-            linkText={page.featuredProjects.linkText}
+            link={page.featuredProjects.link}
           />
         </div>
       </div>
@@ -35,13 +34,13 @@ const HomePage = ({ page, profile, articles, projects, talks }) => (
       title={page.featuredArticles.title}
       icon={page.featuredArticles.icon}
       articles={page.featuredArticles.items.map(id => articles[id])}
-      linkText={page.featuredArticles.linkText}
+      link={page.featuredArticles.link}
     />
     <FeaturedArticles
       title={page.featuredTalks.title}
       icon={page.featuredTalks.icon}
       articles={page.featuredTalks.items.map(id => talks[id])}
-      linkText={page.featuredTalks.linkText}
+      link={page.featuredTalks.link}
     />
   </div>
 )

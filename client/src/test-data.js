@@ -28,25 +28,34 @@ module.exports = {
   pages: {
     home: {
       hero: {
-        url: '/placeholder-2560x640.png'
+        url: '/hero.jpg',
       },
       featuredArticles: {
         title: 'Featured Articles',
         icon: 'fa-file-text-o',
         items: ['1', '2', '3'],
-        linkText: 'See all articles…',
+        link: {
+          text: 'See all articles…',
+          url: '/blog',
+        },
       },
       featuredProjects: {
         title: 'Software',
         icon: 'fa-laptop',
         items: ['yadda', 'rascal', 'marv', 'confabulous', 'systemic'],
-        linkText: 'See all software…',
+        link: {
+          text: 'See all software…',
+          url: '/software',
+        },
       },
       featuredTalks: {
-        title: 'Upcoming Talks & Recent Talks',
+        title: 'Upcoming & Recent Talks',
         icon: 'fa-microphone',
         items: ['1', '2', '3'],
-        linkText: 'See all talks…',
+        link: {
+          text: 'See all talks…',
+          url: '/talks',
+        },
       },
     },
   },

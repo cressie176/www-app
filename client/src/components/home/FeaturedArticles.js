@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import './FeaturedArticles.css';
 
-const FeaturedArticles = ({ title, icon, articles, linkText }) => {
+const FeaturedArticles = ({ title, icon, articles, link }) => {
   return (
     <div className='container featured-articles'>
       <div className='row'>
@@ -72,9 +73,7 @@ const FeaturedArticles = ({ title, icon, articles, linkText }) => {
       <div className='row'>
         <div className='col-md-12'>
           <div className='featured-articles__see-all-link'>
-            <a href='/featured-articles'>
-              {linkText}
-            </a>
+            <Link to={link.url}>{link.text}</Link>
           </div>
         </div>
       </div>
@@ -86,7 +85,7 @@ FeaturedArticles.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.string,
   articles: PropTypes.array,
-  linkText: PropTypes.string,
+  link: PropTypes.object,
 }
 
 export default FeaturedArticles

@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import './FeaturedProjects.css';
 
-const FeaturedProjects = ({ title, icon, projects, linkText }) => {
+const FeaturedProjects = ({ title, icon, projects, link }) => {
   return (
     <div className='featured-projects'>
       <h2>
@@ -29,9 +30,7 @@ const FeaturedProjects = ({ title, icon, projects, linkText }) => {
         }
       </ul>
       <div className='featured-projects__see-all-link'>
-        <a href='/projects'>
-          {linkText}
-        </a>
+        <Link to={link.url}>{link.text}</Link>
       </div>
     </div>
   )
@@ -41,7 +40,7 @@ FeaturedProjects.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.string,
   projects: PropTypes.array,
-  linkText: PropTypes.string,
+  link: PropTypes.object,
 }
 
 export default FeaturedProjects
