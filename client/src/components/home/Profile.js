@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Profile = ({ title, summary }) => {
+const Profile = ({ title, summary, }) => {
   return (
     <div className='profile'>
       <h2>
@@ -9,14 +9,14 @@ const Profile = ({ title, summary }) => {
           <i className='fa fa-user' aria-hidden='true'></i>
         </span>
         {title} </h2>
-      <div dangerouslySetInnerHTML={{__html: summary}} />
+      <div dangerouslySetInnerHTML={{__html: summary,}} />
     </div>
-  )
-}
+  );
+};
 
 Profile.propTypes = {
   title: PropTypes.string,
   summary: PropTypes.string,
-}
+};
 
-export default Profile
+export default Profile;

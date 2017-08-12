@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ActiveNavItem, InactiveNavItem } from './NavItem';
+import { ActiveNavItem, InactiveNavItem, } from './NavItem';
 
 import './Nav.css';
 
-const Nav = ({ items }) => {
+const Nav = ({ items, }) => {
   return (
     <div className='container-fluid'>
       <div className='row'>
@@ -23,7 +23,7 @@ const Nav = ({ items }) => {
                 items.map((item) => {
                   const active = window.location.pathname === item.path;
                   return active ? <ActiveNavItem key={item.path} text={item.text} path={item.path} />
-                                : <InactiveNavItem key={item.path} text={item.text} path={item.path} />
+                                : <InactiveNavItem key={item.path} text={item.text} path={item.path} />;
                 })
               }
             </ul>
@@ -31,12 +31,12 @@ const Nav = ({ items }) => {
         </nav>
       </div>
     </div>
-  )
-}
+  );
+};
 
 Nav.propTypes = {
   items: PropTypes.array,
 };
 
 
-export default Nav
+export default Nav;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './FeaturedProjects.css';
 
-const FeaturedProjects = ({ title, icon, projects, link }) => {
+const FeaturedProjects = ({ title, icon, projects, link, }) => {
   return (
     <div className='featured-projects'>
       <h2>
@@ -24,7 +24,7 @@ const FeaturedProjects = ({ title, icon, projects, link }) => {
                 </span>
                 <div>{project.summary}</div>
               </li>
-            )
+            );
           })
         }
       </ul>
@@ -32,14 +32,14 @@ const FeaturedProjects = ({ title, icon, projects, link }) => {
         <a href={link.url}>{link.text}</a>
       </div>
     </div>
-  )
-}
+  );
+};
 
 FeaturedProjects.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.string,
   projects: PropTypes.array,
   link: PropTypes.object,
-}
+};
 
-export default FeaturedProjects
+export default FeaturedProjects;

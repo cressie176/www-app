@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Copyright = ({year, owner, rights}) => (
+const Copyright = ({year, owner, rights,}) => (
   <div className='container'>
     <div className='row'>
       <div className='col-md-12'>
@@ -9,7 +9,7 @@ const Copyright = ({year, owner, rights}) => (
       </div>
     </div>
   </div>
-)
+);
 
 Copyright.propTypes = {
   year: PropTypes.string,

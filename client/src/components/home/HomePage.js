@@ -5,7 +5,7 @@ import Profile from './Profile';
 import FeaturedArticles from './FeaturedArticles';
 import FeaturedProjects from './FeaturedProjects';
 
-const HomePage = ({ page, profile, articles, projects, talks }) => (
+const HomePage = ({ page, profile, articles, projects, talks, }) => (
   <div className='HomePage'>
     <div className='container-fluid'>
       <div className='row'>
@@ -43,7 +43,7 @@ const HomePage = ({ page, profile, articles, projects, talks }) => (
       link={page.featuredTalks.link}
     />
   </div>
-)
+);
 
 HomePage.propTypes = {
   page: PropTypes.object,

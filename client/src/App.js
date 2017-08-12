@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { Component, } from 'react';
+import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import HomePage from './components/home/HomePage';
 import LegalPage from './components/legal/LegalPage';
 import ErrorPage from './components/error/ErrorPage';
 import reducer from './reducer';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
+import { createStore, } from 'redux';
+import { Provider, } from 'react-redux';
 import content from './test-data';
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap/dist/css/bootstrap.min.css';

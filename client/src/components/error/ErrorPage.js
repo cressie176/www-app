@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './ErrorPage.css'
+import './ErrorPage.css';
 
-const ErrorPage = ({ title, html, type }) => (
+const ErrorPage = ({ title, html, type, }) => (
   <div className={`error-page error-page--{type}`}>
     <div className='container-fluid error-page__title__wrapper'>
       <div className='container'>
@@ -19,7 +19,7 @@ const ErrorPage = ({ title, html, type }) => (
         <img className='error-page__hero' alt='error' src='/error.jpg' />
       </div>
     </div> </div>
-)
+);
 
 ErrorPage.propTypes = {
   title: PropTypes.string,

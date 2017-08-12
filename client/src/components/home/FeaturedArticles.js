@@ -4,7 +4,7 @@ import IconListItem from '../common/IconListItem';
 
 import './FeaturedArticles.css';
 
-const FeaturedArticles = ({ title, icon, articles, link }) => {
+const FeaturedArticles = ({ title, icon, articles, link, }) => {
   return (
     <div className='container featured-articles'>
       <div className='row'>
@@ -26,7 +26,7 @@ const FeaturedArticles = ({ title, icon, articles, link }) => {
                   <h3 className='featured-article__title'>{article.title}</h3>
                 </div>
                 <img className='featured-article__thumbnail' src={article.images.thumbnail.url} alt={article.title} />
-                <div className='featured-article__summary' dangerouslySetInnerHTML={{__html: article.summary}} />
+                <div className='featured-article__summary' dangerouslySetInnerHTML={{__html: article.summary,}} />
                 <ul className='featured-article__details'>
                   {
                     article.event ? (
@@ -48,13 +48,13 @@ const FeaturedArticles = ({ title, icon, articles, link }) => {
                       article.downloads.map(download => {
                         return (
                           <IconListItem key={download.url} icon={download.icon} text={download.text} url={download.url} type='download' />
-                        )
+                        );
                       })
                     ) : null
                   }
                 </ul>
               </div>
-            )
+            );
           })
         }
       </div>
@@ -66,14 +66,14 @@ const FeaturedArticles = ({ title, icon, articles, link }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 FeaturedArticles.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.string,
   articles: PropTypes.array,
   link: PropTypes.object,
-}
+};
 
-export default FeaturedArticles
+export default FeaturedArticles;

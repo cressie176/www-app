@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import FooterSpotlights from './FooterSpotlights';
 import Copyright from './Copyright';
 
-import './Footer.css'
+import './Footer.css';
 
-const Footer = ({ spotlights, copyright }) => {
+const Footer = ({ spotlights, copyright, }) => {
   return (
     <footer>
       <div className='container-fluid footer__spotlights'>
@@ -15,8 +15,8 @@ const Footer = ({ spotlights, copyright }) => {
         <Copyright year={copyright.year} owner={copyright.owner} rights={copyright.rights} />
       </div>
     </footer>
-  )
-}
+  );
+};
 
 Footer.propTypes = {
   spotlights: PropTypes.array,
@@ -24,6 +24,5 @@ Footer.propTypes = {
 };
 
 
-export default Footer
-
+export default Footer;
 
