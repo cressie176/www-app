@@ -12,7 +12,7 @@ module.exports = {
   session: {
     store: 'mongodb',
     mongodb: {
-      uri: 'mongodb://mongodb:27017/www_app_live',
+      uri: 'mongodb://www-mongo:27017/www_app_live',
       collection: 'sessions',
     },
   },
