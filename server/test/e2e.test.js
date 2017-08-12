@@ -1,3 +1,4 @@
+import cheerio from 'cheerio';
 import request from 'request-promise';
 import createSystem from './test-system';
 
@@ -26,7 +27,19 @@ describe('admin api', () => {
     });
 
     expect(res.statusCode).toBe(200);
-    expect(res.headers['content-type']).toBe('application/json; charset=utf-8');
+    expect(res.headers['content-type'].toLowerCase()).toBe('application/json; charset=utf-8');
     expect(res.body.name).toBe('www-app');
+  });
+
+  it('should respond to application requests', async () => {
+    const res = await request({
+      url: `http://${config.server.host}:${config.server.port}/`,
+      resolveWithFullResponse: true,
+    });
+
+    expect(res.statusCode).toBe(200);
+    expect(res.headers['content-type'].toLowerCase()).toBe('text/html; charset=utf-8');
+    const $ = cheerio.load(res.body);
+    expect($('title').text()).toBe('Stephen Cresswell');
   });
 });
