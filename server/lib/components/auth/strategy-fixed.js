@@ -8,6 +8,8 @@ module.exports = function() {
 
   function start({ config, logger, app, passport, }, cb) {
 
+    logger.info('Using fixed authentication strategy');
+
     const strategy = new CustomStrategy((req, cb) => {
       const user = config.fixed.user;
       logger.info(`Authenticated ${user.id} using fixed strategy`);

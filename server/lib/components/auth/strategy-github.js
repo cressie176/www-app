@@ -8,6 +8,8 @@ module.exports = function() {
 
   function start({ config, logger, app, passport, }, cb) {
 
+    logger.info('Using github authentication strategy');
+
     const strategy = new GitHubStrategy({
       clientID: config.github.client.id,
       clientSecret: config.github.client.secret,

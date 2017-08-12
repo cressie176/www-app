@@ -6,7 +6,10 @@ const session = require('express-session');
  ********************************************************************************************/
 module.exports = function() {
 
-  function start({ config, }, cb) {
+  function start({ config, logger, }, cb) {
+
+    logger.info('Using mongodb based session');
+
     cb(null, session({
       secret: config.secret,
       resave: true,
