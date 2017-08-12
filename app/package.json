@@ -8,8 +8,8 @@
     "start-server": "nodemon server/index.js --exec babel-node",
     "start-client": "cd client; npm start",
     "test": "npm run test-server && npm run test-client",
-    "test-server": "cd server; jest",
-    "test-server-w": "cd server; jest --watch",
+    "test-server": "jest",
+    "test-server-w": "jest --watch",
     "test-client": "cd client; npm test",
     "test-client-w": "cd client; npm run test-w",
     "build": "concurrently 'npm run build-server' 'npm run build-client'",
@@ -23,7 +23,9 @@
     "babel-preset-env": "^1.6.0",
     "concurrently": "^3.5.0",
     "jest": "^20.0.4",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
