@@ -8,4 +8,7 @@ module.exports = {
     'client',
   ],
   'testEnvironment': 'node',
+  'setupFiles': [
+    './server/test/env.js',
+  ],
 };
