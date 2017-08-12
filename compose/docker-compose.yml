@@ -64,8 +64,6 @@ services:
     image: quay.io/cressie176/www-nginx
     build:
       context: ../nginx
-      args:
-        SITES_ENABLED: ${SITES_ENABLED}
     restart: always
     volumes:
       - ${CONTAINERS_DIR}/nginx/etc/nginx/ssl:/etc/nginx/ssl

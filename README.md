@@ -7,6 +7,8 @@
 1. [nginx](nginx)
 
 ## TODO
+1. Experiment with responsive min height on heros
+1. Pre commit hooks
 1. Stop returning json as default 404
 1. Use SASS variables with react-create-app
 1. Monorepo means quay.io builds images unnecessarily
@@ -23,3 +25,4 @@
 1. Status cake
 1. Datadog
 1. Fastly
+1. RSS
