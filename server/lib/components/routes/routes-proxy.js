@@ -12,7 +12,7 @@ module.exports = function() {
       app.use(key, proxy({ target: config.routes[key], logProvider: () => logger, changeOrigin: true, }));
     });
 
-    app.get('*', (req, res)  => {
+    app.get('*', app.locals.hasRole('guest'), (req, res)  => {
       res.sendFile(path.join(process.cwd(), 'client', 'build', 'index.html'));
     });
 

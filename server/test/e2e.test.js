@@ -2,7 +2,7 @@ import cheerio from 'cheerio';
 import request from 'request-promise';
 import createSystem from './test-system';
 
-describe('admin api', () => {
+describe('www.stephen-cresswell.net', () => {
 
   let system;
   let config;
