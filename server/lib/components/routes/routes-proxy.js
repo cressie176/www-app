@@ -6,7 +6,7 @@ module.exports = function() {
 
   function start({ app, config, logger, }, cb) {
 
-    app.use(express.static('./client/build'));
+    app.use(app.locals.hasRole('guest'), express.static('./client/build'));
 
     Object.keys(config.routes).forEach(key => {
       app.use(key, proxy({ target: config.routes[key], logProvider: () => logger, changeOrigin: true, }));
