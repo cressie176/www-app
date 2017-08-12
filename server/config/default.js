@@ -5,8 +5,8 @@ module.exports = {
   },
   routes: {
     proxy: {
-      routes: {}
-    }
+      routes: {},
+    },
   },
   logger: {
     include: [
@@ -36,6 +36,6 @@ module.exports = {
       'request.headers.cookie',
       'dependencies',
       'devDependencies',
-    ]
-  }
-}
+    ],
+  },
+};

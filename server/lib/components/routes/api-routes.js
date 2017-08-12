@@ -1,15 +1,15 @@
-import bodyParser from 'body-parser'
+import bodyParser from 'body-parser';
 
 module.exports = function(options = {}) {
 
-  function start({ app }, cb) {
+  function start({ app, }, cb) {
 
-    app.use(bodyParser.json())
+    app.use(bodyParser.json());
 
-    cb()
+    cb();
   }
 
   return {
-    start
-  }
-}
+    start,
+  };
+};

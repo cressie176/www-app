@@ -1,6 +1,6 @@
-import system from '../lib/system'
+import system from '../lib/system';
 
 export default function() {
-    return system()
+    return system();
 }
 

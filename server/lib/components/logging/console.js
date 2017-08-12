@@ -14,7 +14,7 @@ const colours = {
     warn: chalk.yellow,
     error: chalk.red,
     default: chalk.white,
-}
+};
 
 export default function() {
 
@@ -23,12 +23,12 @@ export default function() {
   }
 
   function onMessage(event) {
-    const details = omit(event, ['message', 'level']);
+    const details = omit(event, ['message', 'level',]);
     const data = merge({}, event, {
       displayTracer: has(event, 'tracer') ? event.tracer.substr(0, 6) : '------',
       displayLevel: event.level.toUpperCase(),
       details: Object.keys(details).length ? `\n ${JSON.stringify(details, null, 2)}` : '',
-    })
+    });
     const colour = colours[event.level] || colours.default;
     const log = console[event.level] || console.info; // eslint-disable-line no-console
     if (has(event, 'response.statusCode')) log(colour(response.render(data)));
@@ -37,7 +37,7 @@ export default function() {
   }
 
   return {
-    start
-  }
+    start,
+  };
 }
 

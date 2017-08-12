@@ -1,6 +1,6 @@
 module.exports = {
   'testMatch': [
-    '**/server/test/**/*.test.js?(x)'
+    '**/server/test/**/*.test.js?(x)',
   ],
   'testPathIgnorePatterns': [
     'node_modules',
@@ -8,4 +8,4 @@ module.exports = {
     'client',
   ],
   'testEnvironment': 'node',
-}
+};
