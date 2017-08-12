@@ -30,4 +30,6 @@ COPY . .
 RUN npm run test-server
 RUN npm run build-server
 
+RUN npm run lint
+
 
