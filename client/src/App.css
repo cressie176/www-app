@@ -10,7 +10,7 @@
 
 body {
   background-color: var(--black);
-  color: var(--text-color);
+  color: var(--text-colour);
 }
 
 #root {

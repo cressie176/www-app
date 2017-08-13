@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount, } from 'enzyme';
-import { MemoryRouter as Router } from 'react-router';
+import { MemoryRouter as Router, } from 'react-router';
 import Nav from './Nav';
 
 describe('Nav', () => {
@@ -10,8 +10,8 @@ describe('Nav', () => {
       <Router>
         <Nav
           items={[
-            { text: 'one', path: '/one' },
-            { text: 'two', path: '/two' },
+            { text: 'one', path: '/one', },
+            { text: 'two', path: '/two', },
           ]} />
       </Router>
     );
@@ -28,8 +28,8 @@ describe('Nav', () => {
       <Router>
         <Nav
           items={[
-            { text: 'current', path: '/' },
-            { text: 'other', path: '/other' },
+            { text: 'current', path: '/', },
+            { text: 'other', path: '/other', },
           ]} />
       </Router>
     );

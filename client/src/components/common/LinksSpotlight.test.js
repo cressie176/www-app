@@ -9,8 +9,8 @@ describe('LinksSpotlight', () => {
       <LinksSpotlight
         title='Social Networks'
         links={[
-          { icon: 'fa-github' },
-          { icon: 'fa-linkedin' }
+          { icon: 'fa-github', },
+          { icon: 'fa-linkedin', },
         ]}
         type='social' />
     );
