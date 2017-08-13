@@ -11,18 +11,19 @@ module.exports = {
         path: '/',
         active: true,
       },
-      {
-        text: 'Software',
-        path: '/software',
-      },
-      {
-        text: 'Blog',
-        path: '/blog',
-      },
-      {
-        text: 'Talks',
-        path: '/talks',
-      },
+      // Disabled for MVP
+      // {
+      //   text: 'Software',
+      //   path: '/software',
+      // },
+      // {
+      //   text: 'Blog',
+      //   path: '/blog',
+      // },
+      // {
+      //   text: 'Talks',
+      //   path: '/talks',
+      // },
     ],
   },
   pages: {
@@ -63,7 +64,7 @@ module.exports = {
     title: 'Profile',
     summary: [
       '<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React.</p>',
-      '<p>Until recently I was operating in a dual role, firstly as CTO and co-founder of GuideSmiths, a successful Node.js/Microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients. Due to a desire to spend more time with my family, I have negotiated an exit, and am seeking a senior, hands-on position in an agile or post agile environment, which can be predominantly carried out remotely or from the vicinity of my home in Suffolk.</p>',
+      '<p>I am currently operating in a dual role, firstly as CTO and co-founder of GuideSmiths, a successful Node.js/Microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients. .</p>',
       '<p>Between a young family (my wife and I have a 9 year old daughter, and 6 year old son), growing a successful business, and publishing around 60 open source libraries in the last four years, I have had limited time for hobbies. Even so I still find time to regularly practice Muay Thai and occasionally Brazilian jiu-jitsu.</p>',
     ].join(''),
   },
@@ -242,10 +243,11 @@ module.exports = {
             icon: 'fa-linkedin',
             url: 'https://www.linkedin.com/stephen-cresswell',
           },
-          {
-            icon: 'fa-twitter',
-            url: 'https://www.twitter.com/cressie176',
-          },
+          // Disabled for MVP
+          // {
+          //   icon: 'fa-twitter',
+          //   url: 'https://www.twitter.com/cressie176',
+          // },
         ],
       },
     ],

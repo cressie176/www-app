@@ -28,9 +28,11 @@ const FeaturedProjects = ({ title, icon, projects, link, }) => {
           })
         }
       </ul>
+      {/* Disabled for MVP
       <div className='featured-projects__see-all-link'>
         <a href={link.url}>{link.text}</a>
       </div>
+      */}
     </div>
   );
 };

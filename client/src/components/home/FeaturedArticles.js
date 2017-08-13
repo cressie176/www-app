@@ -58,6 +58,8 @@ const FeaturedArticles = ({ title, icon, articles, link, }) => {
           })
         }
       </div>
+
+      {/* Disabled for MVP
       <div className='row'>
         <div className='col-md-12'>
           <div className='featured-articles__see-all-link'>
@@ -65,6 +67,7 @@ const FeaturedArticles = ({ title, icon, articles, link, }) => {
           </div>
         </div>
       </div>
+    */}
     </div>
   );
 };

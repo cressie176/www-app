@@ -30,12 +30,14 @@ const HomePage = ({ page, profile, articles, projects, talks, }) => (
         </div>
       </div>
     </div>
+    {/*
     <FeaturedArticles
       title={page.featuredArticles.title}
       icon={page.featuredArticles.icon}
       articles={page.featuredArticles.items.map(id => articles[id])}
       link={page.featuredArticles.link}
     />
+    */}
     <FeaturedArticles
       title={page.featuredTalks.title}
       icon={page.featuredTalks.icon}
