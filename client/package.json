@@ -19,13 +19,16 @@
     "build": "react-scripts build",
     "test": "CI=true react-scripts test --env=jsdom",
     "test-w": "react-scripts test --env=jsdom",
+    "postbuild": "postcss --use postcss-custom-properties --replace build/**/*.css",
     "eject": "react-scripts eject"
   },
   "description": "The client half of www.stephen-cresswell.net",
   "main": "index.js",
   "devDependencies": {
     "jest": "^20.0.4",
-    "jest-cli": "^20.0.4"
+    "jest-cli": "^20.0.4",
+    "postcss-cli": "^4.1.0",
+    "postcss-custom-properties": "^6.1.0"
   },
   "author": "Stephen Cresswell",
   "license": "ISC"

@@ -10,21 +10,21 @@
 }
 
 .navbar.navbar-overrides .navbar-nav > li.active > a {
-  background-color: #23CCF2;
-  border-bottom: 2px solid #23CCF2;
-  color: #FFF;
+  background-color: var(--primary-colour);
+  border-bottom: 2px solid var(--primary-colour);
+  color: var(--white);
 }
 
 .navbar.navbar-overrides .navbar-nav > li.active > a:hover {
-  background-color: #23CCF2;
-  border-bottom: 2px solid #23CCF2;
-  color: #FFF;
+  background-color: var(--primary-colour);
+  border-bottom: 2px solid var(--primary-colour);
+  color: var(--white);
 }
 
 .navbar.navbar-overrides .navbar-nav > li > a:hover {
   background-color: transparent;
-  border-bottom: 2px solid #23CCF2;
-  color: #23CCF2;
+  border-bottom: 2px solid var(--primary-colour);
+  color: var(--primary-colour);
 }
 
 @media only screen and (max-width : 767px) {

@@ -1,13 +1,24 @@
+:root {
+  --black: #000;
+  --dark-grey: #111;
+  --light-grey: #ccc;
+  --white: #fff;
+  --text-colour: #333;
+  --primary-colour: #23ccf2;
+  --error-colour: #f53355;
+}
+
 body {
-  background-color: #000;
+  background-color: var(--black);
+  color: var(--text-color);
 }
 
 #root {
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 a, a:hover, a:visited {
-  color: #23ccf2;
+  color: var(--primary-colour);
   text-decoration: none;
 }
 
@@ -20,10 +31,10 @@ a, a:hover, a:visited {
   width: 40px;
   height: 40px;
   line-height: 40px;
-  background-color: #23ccf2;
+  background-color: var(--primary-colour);
   text-align: center;
   display: inline-block;
   margin-right: 5px;
-  color: #fff;
+  color: var(--white);
 }
 

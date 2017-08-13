@@ -24,11 +24,11 @@
 }
 
 .featured-article .icon-list__item__link {
-  color: #333;
+  color: var(--text-colour);
 }
 
 .featured-article .icon-list__item__link:hover {
-  color: #23CCF2;
+  color: var(--primary-colour);
   text-decoration: none;
 }
 

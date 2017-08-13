@@ -1,6 +1,6 @@
 .footer__spotlights {
-  background-color: #111;
-  color: #ccc;
+  background-color: var(--dark-grey);
+  color: var(--light-grey);
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -11,11 +11,11 @@
 
 .footer__spotlights .icon-list__item__link,
 .footer__spotlights .icon-list__item__link:visited {
-  color: #ccc;
+  color: var(--light-grey);
 }
 
 .footer__spotlights .icon-list__item__link:hover {
-  color: #23ccf2;
+  color: var(--primary-colour);
 }
 
 .footer__spotlights .icon-list__item--social {
@@ -26,7 +26,7 @@
   width: 40px;
   height: 40px;
   text-align: center;
-  border: 1px solid #ccc;
+  border: 1px solid var(--light-grey);
   line-height: 40px;
   font-size: 20px;
   display: block;
@@ -34,9 +34,9 @@
 }
 
 .footer__spotlights .icon-list__item--social .icon-list__item__link:hover {
-  color: #111;
-  background-color: #23ccf2;
-  border-color: #23ccf2;
+  color: var(--dark-grey);
+  background-color: var(--primary-colour);
+  border-color: var(--primary-colour);
 }
 
 .footer__spotlights .icon-list__item--social .icon-list__item__icon {
@@ -44,8 +44,8 @@
 }
 
 .footer__copyright {
-  background-color: #000;
-  color: #ccc;
+  background-color: var(--black);
+  color: var(--light-grey);
   padding-top: 20px;
   padding-bottom: 20px;
 }

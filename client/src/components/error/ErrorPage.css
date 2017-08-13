@@ -1,6 +1,6 @@
 .error-page__title__wrapper {
-  color: #fff;
-  background-color: #f53355;
+  color: var(--white);
+  background-color: var(--error-colour);
 }
 
 .error-page__title {

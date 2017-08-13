@@ -61,7 +61,7 @@ class App extends Component {
                   />
                 } />
                 <Route path='/' render={() =>
-                  <ErrorPage title='Error: Page Not Found' html='The page you have requested has not been found.' />
+                  <ErrorPage title='Page Not Found' html='The page you have requested has not been found.' />
                 } />
               </Switch>
             </div>
