@@ -1,5 +1,6 @@
 import cheerio from 'cheerio';
 import request from 'request-promise';
+import errors from 'request-promise/errors';
 import createSystem from './test-system';
 
 describe('www.stephen-cresswell.net', () => {
@@ -41,5 +42,17 @@ describe('www.stephen-cresswell.net', () => {
     expect(res.headers['content-type'].toLowerCase()).toBe('text/html; charset=utf-8');
     const $ = cheerio.load(res.body);
     expect($('title').text()).toBe('Stephen Cresswell');
+  });
+
+  it.only('should protect private resources', async () => {
+    expect.assertions(2);
+    await request({
+      url: `http://${config.server.host}:${config.server.port}/__/private`,
+      resolveWithFullResponse: true,
+      followRedirect: false,
+    }).catch(errors.StatusCodeError, (reason) => {
+      expect(reason.statusCode).toBe(302);
+      expect(reason.response.headers.location).toBe('/auth/fixed');
+    });
   });
 });

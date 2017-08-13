@@ -6,9 +6,13 @@ import { Strategy as GitHubStrategy, } from 'passport-github';
  ********************************************************************************************/
 module.exports = function() {
 
-  function start({ config, logger, app, passport, }, cb) {
+  function start({ config, logger, app, session, passport, }, cb) {
 
     logger.info('Using github authentication strategy');
+
+    app.use(session);
+    app.use(passport.initialize());
+    app.use(passport.session());
 
     const strategy = new GitHubStrategy({
       clientID: config.github.client.id,
@@ -16,7 +20,6 @@ module.exports = function() {
       callbackURL: config.github.callbackUrl,
     }, (accessToken, refreshToken, profile, cb) => {
       const user = { id: profile.username, name: profile.displayName, };
-      logger.info(`Authenticated ${user.id} using github strategy`);
       return cb(null, user);
     });
 
@@ -25,6 +28,7 @@ module.exports = function() {
     app.get('/auth/github', passport.authenticate('github'));
 
     app.get('/auth/github/callback', passport.authenticate('github', { failureRedirect: '/auth/github', }), (req, res) => {
+      res.locals.logger.info(`Authenticated ${req.user.id} using github strategy`);
       res.redirect(req.session.returnTo);
     });
 

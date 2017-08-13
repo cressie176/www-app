@@ -1,7 +1,9 @@
 module.exports = {
   auth: {
     roles: {
-      guest: ['*',],
+      guest: [],
+      private: [],
+      forbidden: [],
     },
   },
   server: {

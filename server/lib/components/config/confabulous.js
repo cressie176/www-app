@@ -9,7 +9,6 @@ export default function(options = {}) {
 
   function start(cb) {
     if (config) return cb(null, config);
-
     new Confabulous()
       .add(config => loaders.require({ path: path.join(process.cwd(), 'server', 'config', 'default.js'), watch: true, }))
       .add(config => loaders.require({ path: path.join(process.cwd(), 'server', 'config', `${process.env.APP_ENV}.js`), mandatory: false, }))

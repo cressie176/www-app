@@ -1,5 +1,9 @@
 module.exports = {
   auth: {
+    roles: {
+      guest: ['*',],
+      private: ['chuck',],
+    },
     strategy: {
       id: 'fixed',
       fixed: {
@@ -8,9 +12,6 @@ module.exports = {
           name: 'Charles Yeager',
         },
       },
-    },
-    roles: {
-        publisher: ['chuck',],
     },
   },
   server: {

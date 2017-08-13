@@ -1,13 +1,14 @@
 module.exports = {
   auth: {
+    roles: {
+      guest: ['*',],
+      private: ['chuck',],
+    },
     strategy: {
       id: 'fixed',
       fixed: {
         user: { id: 'chuck', name: 'Charles Yeager', },
       },
-    },
-    roles: {
-      publisher: ['chuck',],
     },
   },
 };

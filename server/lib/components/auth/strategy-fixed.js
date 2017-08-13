@@ -6,13 +6,16 @@ import { Strategy as CustomStrategy, } from 'passport-custom';
  ********************************************************************************************/
 module.exports = function() {
 
-  function start({ config, logger, app, passport, }, cb) {
+  function start({ config, logger, app, session, passport, }, cb) {
 
     logger.info('Using fixed authentication strategy');
 
+    app.use(session);
+    app.use(passport.initialize());
+    app.use(passport.session());
+
     const strategy = new CustomStrategy((req, cb) => {
       const user = config.fixed.user;
-      logger.info(`Authenticated ${user.id} using fixed strategy`);
       return cb(null, user);
     });
 
@@ -21,6 +24,7 @@ module.exports = function() {
     passport.use(strategy);
 
     app.get('/auth/fixed', passport.authenticate('fixed'), (req, res) => {
+      res.locals.logger.info(`Authenticated ${req.user.id} using fixed strategy`);
       res.redirect(req.session.returnTo);
     });
 
