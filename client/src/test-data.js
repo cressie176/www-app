@@ -61,7 +61,11 @@ module.exports = {
   },
   profile: {
     title: 'Profile',
-    summary: '<p>Bacon ipsum dolor amet tri-tip ball tip tenderloin hamburger boudin venison short loin drumstick pastrami pig ham tongue brisket leberkas. Bacon tongue ham hock beef ribs andouille t-bone pastrami chuck short loin. Cow chuck short loin jowl frankfurter filet mignon doner. Landjaeger leberkas fatback hamburger jowl corned beef, meatball cow pig tongue porchetta.</p><p>Kevin shankle meatball brisket, pastrami meatloaf porchetta. Leberkas bacon ball tip andouille, picanha meatloaf meatball landjaeger hamburger beef salami pork chop biltong chicken. Burgdoggen pork belly kevin ham sausage. Corned beef ribeye doner t-bone, chicken picanha ball tip tail andouille. Frankfurter kevin chicken, pork belly tenderloin pastrami landjaeger tongue picanha. Biltong ham rump kevin strip steak pig, ribeye spare ribs chicken drumstick short ribs tail tongue. Ball tip meatball pancetta turkey burgdoggen venison biltong shankle ham hock, leberkas turducken landjaeger doner shoulder capicola.</p>',
+    summary: [
+      '<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React.</p>',
+      '<p>Until recently I was operating in a dual role, firstly as CTO and co-founder of GuideSmiths, a successful Node.js/Microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients. Due to a desire to spend more time with my family, I have negotiated an exit, and am seeking a senior, hands-on position in an agile or post agile environment, which can be predominantly carried out remotely or from the vicinity of my home in Suffolk.</p>',
+      '<p>Between a young family (my wife and I have a 9 year old daughter, and 6 year old son), growing a successful business, and publishing around 60 open source libraries in the last four years, I have had limited time for hobbies. Even so I still find time to regularly practice Muay Thai and occasionally Brazilian jiu-jitsu.</p>',
+    ].join(''),
   },
   projects: {
     'yadda': {
