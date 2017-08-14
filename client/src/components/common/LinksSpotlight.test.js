@@ -5,7 +5,7 @@ import LinksSpotlight from './LinksSpotlight';
 describe('LinksSpotlight', () => {
 
   it('should render spotlights', () => {
-    const linksSpotlight = mount(
+    const wrapper = mount(
       <LinksSpotlight
         title='Social Networks'
         links={[
@@ -15,11 +15,11 @@ describe('LinksSpotlight', () => {
         type='social' />
     );
 
-    expect(linksSpotlight.hasClass('links-spotlight')).toBe(true);
-    expect(linksSpotlight.hasClass('links-spotlight--social')).toBe(true);
+    expect(wrapper.hasClass('links-spotlight')).toBe(true);
+    expect(wrapper.hasClass('links-spotlight--social')).toBe(true);
 
-    expect(linksSpotlight.find('h2').text()).toBe('Social Networks');
-    expect(linksSpotlight.find('ul li').length).toBe(2);
+    expect(wrapper.find('h2').text()).toBe('Social Networks');
+    expect(wrapper.find('ul li').length).toBe(2);
   });
 
 });

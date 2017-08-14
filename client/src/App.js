@@ -5,8 +5,9 @@ import Footer from './components/footer/Footer';
 import HomePage from './components/home/HomePage';
 import LegalPage from './components/legal/LegalPage';
 import ErrorPage from './components/error/ErrorPage';
-import reducer from './reducer';
-import { createStore, } from 'redux';
+import software from './reducers/softwareReducer';
+import { createStore, combineReducers, applyMiddleware, } from 'redux';
+import thunk from 'redux-thunk';
 import { Provider, } from 'react-redux';
 import content from './content';
 import 'font-awesome/css/font-awesome.css';
@@ -24,7 +25,9 @@ following errors on npm start and npm test:
 window.jQuery = window.$ = require('jquery');
 require('bootstrap/dist/js/bootstrap.min.js');
 
-const store = createStore(reducer);
+const store = createStore(combineReducers({
+  software,
+}), applyMiddleware(thunk));
 
 class App extends Component {
   render() {

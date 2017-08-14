@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import FeaturedProject from './FeaturedProject';
 import './FeaturedProjects.css';
 
 const FeaturedProjects = ({ title, icon, projects, link, }) => {
@@ -16,14 +16,13 @@ const FeaturedProjects = ({ title, icon, projects, link, }) => {
         {
           projects.map(project => {
             return (
-              <li key={project.id} className='list-group-item featured-project'>
-                <a href={project.url}>{project.title}</a>
-                <span className='featured-project__downloads'>
-                  {project.downloads.toLocaleString()}
-                  <i className='fa fa-download featured-project__downloads__icon' aria-hidden='true'></i>
-                </span>
-                <div>{project.summary}</div>
-              </li>
+              <FeaturedProject
+                key={project.id}
+                id={project.id}
+                title={project.title}
+                url={project.url}
+                summary={project.summary}
+              />
             );
           })
         }
