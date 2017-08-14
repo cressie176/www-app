@@ -23,7 +23,7 @@ const FeaturedArticles = ({ title, icon, articles, link, }) => {
             return (
               <div key={article.id} className='col-md-4 featured-article'>
                 <div className='featured-article__title__wrapper'>
-                  <h3 className='featured-article__title'>{article.title}</h3>
+                  <h3 className='featured-article__title'><a className='featured-article__title__link' href={article.url} dangerouslySetInnerHTML={{__html: article.title,}} /></h3>
                 </div>
                 <img className='featured-article__thumbnail' src={article.images.thumbnail.url} alt={article.title} />
                 <div className='featured-article__summary' dangerouslySetInnerHTML={{__html: article.summary,}} />
@@ -34,13 +34,13 @@ const FeaturedArticles = ({ title, icon, articles, link, }) => {
                     ) : null
                   }
                   {
-                    article.location ? (
-                      <IconListItem icon='fa-location-arrow' text={article.location} type='location' />
+                    article.date ? (
+                      <IconListItem icon='fa-calendar' text={article.date.toLocaleString()} type='date' />
                     ) : null
                   }
                   {
-                    article.date ? (
-                      <IconListItem icon='fa-calendar' text={article.date.toLocaleString()} type='date' />
+                    article.location ? (
+                      <IconListItem icon='fa-location-arrow' text={article.location} type='location' />
                     ) : null
                   }
                   {

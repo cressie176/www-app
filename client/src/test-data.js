@@ -50,7 +50,7 @@ module.exports = {
         },
       },
       featuredTalks: {
-        title: 'Upcoming & Recent Talks',
+        title: 'Recent & Upcoming Talks',
         icon: 'fa-microphone',
         items: ['1', '2', '3',],
         link: {
@@ -63,8 +63,8 @@ module.exports = {
   profile: {
     title: 'Profile',
     summary: [
-      '<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React.</p>',
-      '<p>I am currently operating in a dual role, firstly as CTO and co-founder of GuideSmiths, a successful Node.js/Microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients. .</p>',
+      '<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React, as demonstrated by the <a href="https://www.github.com/cressie176/www-app">source code</a> for this site.</p>',
+      '<p>I am currently operating in a dual role, firstly as CTO and co-founder of <a href="https://www.guidesmiths.com">GuideSmiths</a>, a successful Node.js/Microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients.</p>',
       '<p>Between a young family (my wife and I have a 9 year old daughter, and 6 year old son), growing a successful business, and publishing around 60 open source libraries in the last four years, I have had limited time for hobbies. Even so I still find time to regularly practice Muay Thai and occasionally Brazilian jiu-jitsu.</p>',
     ].join(''),
   },
@@ -108,65 +108,66 @@ module.exports = {
   talks: {
     '1': {
       id: '1',
-      title: 'Bacon ipsum dolor amet bacon bresaola strip steak short',
-      event: 'Corned beef meatloaf',
-      summary: 'Bacon ipsum dolor amet bacon bresaola strip steak short loin pork loin landjaeger pig turducken andouille capicola pastrami sausage alcatra pork filet mignon. Spare ribs corned beef turkey ball tip rump tenderloin. Corned beef meatloaf short ribs turducken hamburger turkey landjaeger rump tenderloin tail fatback beef short loin brisket. Short loin tenderloin shoulder sausage salami fatback. Landjaeger andouille capicola shoulder pastrami pig jerky venison tail jowl beef ribs',
-      date: new Date('2016-11-23T18:30:00'),
-      location: 'Tenderloin',
-      url: 'http://corpjs.com/event/corpjs-meetup-budapest-5/',
+      title: 'Yadda - The other JavaScript BDD library',
+      summary: [
+        '<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they\'re not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe(\'some test function\') with text. Chai and Expect don\'t even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this().</p>',
+        '<p>The only true BDD tool found during my search was CucumberJS. The problem with CucumberJS is that the Gerkin syntax is restrictive. I don\'t want to be limited to starting my sentences with Given, When, Then, And and But.</p>',
+        '<p>I want to express myself naturally. I also want a test runner makes good decisions about which steps to run, instead of picking the first matching one it comes to. I want a tool that doesn\'t fail silently.  I want a tool that I can use synchronously or asynchronously and run in a browser. I want a tool that lets me plugin different step libraries so that I can test multiple interfaces (e.g. rest and HTML) with the same scenarios. I even want a tool that has nothing to do with testing and just maps ordinary sentences to functions so I could use it in a rules engine or build script.</p>',
+        '<p>That\'s why I wrote <a href=\'http://www.github.com/acuminous/yadda\'>Yadda</a> - the other JavaScript BDD library.</p>',
+      ].join(''),
+      event: 'ASOS',
+      date: '1st June 2017',
+      location: 'London',
+      url: 'https://www.evensi.uk/yadda-yadda-yadda-asos-hq-asos-/211294453',
       images: {
         thumbnail: {
-          url: '/placeholder-360x240.png',
+          url: '/images/yadda.jpg',
         },
       },
       downloads: [],
     },
     '2': {
       id: '2',
-      title: 'Andouille flank capicola drumstick alcatra ham',
-      event: 'Rump fatback swine',
-      summary: 'Andouille flank capicola drumstick alcatra ham hock short loin picanha shankle cow. Shank chuck swine, meatloaf ball tip brisket meatball strip steak filet mignon sausage andouille tri-tip. Pork hamburger bresaola biltong andouille pork loin pig pastrami cupim shankle picanha. Frankfurter jerky shank, boudin porchetta jowl chicken pancetta bresaola flank bacon leberkas. Ball tip filet mignon tenderloin, short loin ham spare ribs corned beef cow short ribs.',
-      date: new Date('2016-07-29T19:00:00'),
-      location: 'Prosciutto',
-      url: 'https://www.meetup.com/Node-js-Meetup-London/events/231560165/',
+      title: 'Enterprise Grade Microservices',
+      event: 'Corp.js',
+      summary: [
+        '<p>Microservice adoption is driven by promises of simplicity, flexibility, resilience and productivity. It liberates developers from clunky frameworks and legacy technology, enabling them to release faster and more frequently than ever before. With an effective deployment pipeline it is possible to have a new microservice running in production and delivering value within 15 minutes, and to achieve 20+ production releases a day.</p>',
+        '<p>But the fast pace, technological freedom and segregated codebase is not without cost. The maxim that a microservice codebase doesn\'t matter because it\'s small, won\'t change and is easily replaced is more often false than it is true. The principles behind clean code and 12 factor apps are just as applicable to microservices as they are to monoliths, but are all too easily forgotten.</p>',
+      ].join(''),
+      url: 'https://www.meetup.com/Corporate-JavaScript-Meetup-Budapest/',
+      location: 'Budapest',
+      date: '23rd November 2016',
       images: {
         thumbnail: {
-          url: '/placeholder-360x240.png',
+          url: '/images/enterprise-grade-microservices.jpg',
         },
       },
-      downloads: [
-        {
-          text: 'Handouts',
-          icon: 'fa-file-pdf-o',
-          url: 'https://meh',
-        },
-      ],
+      downloads: [],
     },
     '3': {
       id: '3',
-      title: 'Pork loin flank',
-      event: 'Landjaeger meatloaf kielbasa',
-      summary: 'Pork loin flank beef ribs filet mignon pork cow pork chop t-bone turducken. Alcatra ground round pastrami boudin jowl bresaola fatback, salami pork belly picanha andouille. Spare ribs bacon andouille pork. Tri-tip bresaola shoulder t-bone.',
-      date: new Date('2016-03-03T18:30:00'),
-      location: 'Jowl pig',
-      url: 'http://www.youtube.com/watch?v=A4INwjywGpc&t=1m58s',
+      title: 'Divorcing Microservices With Rascal',
+      event: 'Node.js Meetup',
+      summary: [
+        '<p>Microservice based architectures are everywhere, but to succeed you must find ways to decouple your services so they can be developed and deployed in isolation. A popular strategy is to use a message broker, which in addition to providing the decoupling, can also add robustness and scalability. But messaging can be deceptively difficult. Which broker suits your needs best? Should you follow a "command" or "event" based model? How will you handle duplicates? Can you tolerate message loss? Will you recover from errors by discarding, retrying or dead lettering?</p>',
+        '<p>If these questions weren\'t enough, you have to find a good client library. For RabbitMQ there\'s the excellent <a href="https://github.com/squaremo/amqp.node">ampqlib</a>, but it\'s not for the faint of heart. Estabilishing a communication channel with the broker requires serveral api calls, and will not be automatically be restablished if dropped. Messages are not persistent or confirmed by default. Errors are likely to crash your application, and there\'s no support for clustering.</p>',
+        '<p>Enter <a href="https://www.github.com/guidesmiths/rascal">Rascal</a>, a friendly, config driven RabbitMQ client which sits on top of amqplib, simplyfing adoption significantly.</p>',
+      ].join(''),
+      date: '29th June 2016',
+      location: 'London',
+      url: 'https://www.meetup.com/Node-js-Meetup-London/events/231560165/',
       images: {
         thumbnail: {
-          url: '/placeholder-360x240.png',
+          url: '/images/divorcing-microservices-with-rascal.jpg',
         },
       },
-      downloads: [
-        {
-          text: 'Handouts',
-          icon: 'fa-file-pdf-o',
-          url: 'https://meh',
-        },
-      ],
+      downloads: [],
     },
   },
   'articles': {
     '1': {
       id: '1',
+      url: 'https://www.stephen-cresswell.net/blog/bacon-ipsum-dolor-amet-bacon-bresaola-strip-steak-short-1',
       title: 'Bacon ipsum dolor amet bacon bresaola strip steak short',
       summary: 'Pork loin flank beef ribs filet mignon pork cow pork chop t-bone turducken. Alcatra ground round pastrami boudin jowl bresaola fatback, salami pork belly picanha andouille. Spare ribs bacon andouille pork. Tri-tip bresaola shoulder t-bone.',
       date: new Date('2016-07-29T19:00:00'),
@@ -178,6 +179,7 @@ module.exports = {
     },
     '2': {
       id: '2',
+      url: 'https://www.stephen-cresswell.net/blog/andouille-flank-capicola-drumstick-alcatra-ham-2',
       title: 'Andouille flank capicola drumstick alcatra ham',
       summary: 'Andouille flank capicola drumstick alcatra ham hock short loin picanha shankle cow. Shank chuck swine, meatloaf ball tip brisket meatball strip steak filet mignon sausage andouille tri-tip. Pork hamburger bresaola biltong andouille pork loin pig pastrami cupim shankle picanha. Frankfurter jerky shank, boudin porchetta jowl chicken pancetta bresaola flank bacon leberkas. Ball tip filet mignon tenderloin, short loin ham spare ribs corned beef cow short ribs.',
       date: new Date('2016-07-29T19:00:00'),
@@ -189,6 +191,7 @@ module.exports = {
     },
     '3': {
       id: '3',
+      url: 'https://www.stephen-cresswell.net/blog/porkploinpflank-3',
       title: 'Pork loin flank',
       summary: 'Bacon ipsum dolor amet bacon bresaola strip steak short loin pork loin landjaeger pig turducken andouille capicola pastrami sausage alcatra pork filet mignon. Spare ribs corned beef turkey ball tip rump tenderloin. Corned beef meatloaf short ribs turducken hamburger turkey landjaeger rump tenderloin tail fatback beef short loin brisket. Short loin tenderloin shoulder sausage salami fatback. Landjaeger andouille capicola shoulder pastrami pig jerky venison tail jowl beef ribs',
       date: new Date('2016-07-29T19:00:00'),
@@ -243,11 +246,10 @@ module.exports = {
             icon: 'fa-linkedin',
             url: 'https://www.linkedin.com/stephen-cresswell',
           },
-          // Disabled for MVP
-          // {
-          //   icon: 'fa-twitter',
-          //   url: 'https://www.twitter.com/cressie176',
-          // },
+          {
+            icon: 'fa-twitter',
+            url: 'https://www.twitter.com/cressie176',
+          },
         ],
       },
     ],

@@ -16,7 +16,7 @@ const ErrorPage = ({ title, html, type, }) => (
     </div>
     <div className='container-fluid'>
       <div className='row'>
-        <img className='error-page__hero' alt='error' src='/error.jpg' />
+        <img className='error-page__hero' alt='error' src='/images/error.jpg' />
       </div>
     </div> </div>
 );

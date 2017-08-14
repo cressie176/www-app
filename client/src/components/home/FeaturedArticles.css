@@ -2,7 +2,16 @@
     margin-bottom: 40px;
 }
 
-.featured-article img {
+.featured-article__title__link,
+.featured-article__title__link:visited {
+  color: var(--text-colour);
+}
+
+.featured-article__title__link:hover {
+  color: var(--primary-colour);
+}
+
+.featured-article__thumbnail {
   width: 100%;
 }
 
@@ -42,7 +51,7 @@
   .featured-article__title {
     height: inherit;
     display: table-cell;
-    vertical-align: bottom;
+    vertical-align: middle;
   }
 
   .featured-articles__see-all-link {
