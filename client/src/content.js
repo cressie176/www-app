@@ -50,7 +50,7 @@ module.exports = {
         },
       },
       featuredTalks: {
-        title: 'Recent & Upcoming Talks',
+        title: 'Upcoming & Recent Talks',
         icon: 'fa-microphone',
         items: ['1', '2', '3',],
         link: {
