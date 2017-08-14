@@ -29,7 +29,7 @@ module.exports = {
   pages: {
     home: {
       hero: {
-        url: '/hero.jpg',
+        url: '/images/hero.jpg',
       },
       featuredArticles: {
         title: 'Featured Articles',
