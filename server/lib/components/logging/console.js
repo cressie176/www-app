@@ -2,11 +2,10 @@ import chalk from 'chalk';
 import hogan from 'hogan.js';
 import merge from 'lodash.merge';
 import has from 'lodash.has';
-import omit from 'lodash.omit';
 
-const response = hogan.compile('{{{displayTime}}} {{{displayTracer}}} {{{displayLevel}}} {{package.name}} {{{request.method}}} {{{response.statusCode}}} {{{request.url}}}');
-const error = hogan.compile('{{{displayTime}}} {{{displayTracer}}} {{{displayLevel}}} {{package.name}} {{{message}}} {{{code}}}\n{{{error.stack}}} {{{details}}}');
-const info = hogan.compile('{{{displayTime}}} {{{displayTracer}}} {{{displayLevel}}} {{package.name}} {{{message}}} {{{details}}}');
+const response = hogan.compile('{{{displayTracer}}} {{{displayLevel}}} {{package.name}} {{{request.method}}} {{{response.statusCode}}} {{{request.url}}}');
+const error = hogan.compile('{{{displayTracer}}} {{{displayLevel}}} {{package.name}} {{{message}}} {{{code}}}\n{{{error.stack}}} {{{details}}}');
+const info = hogan.compile('{{{displayTracer}}} {{{displayLevel}}} {{package.name}} {{{message}}}');
 
 const colours = {
     debug: chalk.gray,
@@ -23,12 +22,9 @@ export default function() {
   }
 
   function onMessage(event) {
-    const details = omit(event, ['message', 'level',]);
     const data = merge({}, event, {
       displayTracer: has(event, 'tracer') ? event.tracer.substr(0, 6) : '------',
       displayLevel: event.level.toUpperCase(),
-      details: Object.keys(details).length ? `\n ${JSON.stringify(details, null, 2)}` : '',
-      displayTime: event.timestamp.toISOString(),
     });
     const colour = colours[event.level] || colours.default;
     const log = console[event.level] || console.info; // eslint-disable-line no-console

@@ -1,12 +1,14 @@
-const merge = require('lodash.merge');
+import merge from 'lodash.merge';
+import get from 'lodash.get';
 
 module.exports = function(options = {}) {
 
     const prepper = options.prepper || require('prepper');
     const handlers = prepper.handlers;
 
-    function start({ config, transport, pkg = { name: 'unknown', }, }, cb) {
+    function start({ config, transports, pkg = { name: 'unknown', }, }, cb) {
 
+        const transport = options.transport !== undefined ? options.transport : get(transports, config.transport);
         config = merge({ include: [], exclude: [], }, config);
 
         const logger = new prepper.Logger({ handlers: [
