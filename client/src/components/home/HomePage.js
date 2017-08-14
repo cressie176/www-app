@@ -30,7 +30,7 @@ const HomePage = ({ page, profile, articles, projects, talks, }) => (
         </div>
       </div>
     </div>
-    {/*
+    {/* Disabled for MVP
     <FeaturedArticles
       title={page.featuredArticles.title}
       icon={page.featuredArticles.icon}

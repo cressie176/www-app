@@ -8,7 +8,7 @@ import ErrorPage from './components/error/ErrorPage';
 import reducer from './reducer';
 import { createStore, } from 'redux';
 import { Provider, } from 'react-redux';
-import content from './test-data';
+import content from './content';
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
