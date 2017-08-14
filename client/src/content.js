@@ -64,7 +64,7 @@ module.exports = {
     title: 'Profile',
     summary: [
       '<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React, as demonstrated by the <a href="https://www.github.com/cressie176/www-app">source code</a> for this site.</p>',
-      '<p>I am currently operating in a dual role, firstly as CTO and co-founder of <a href="https://www.guidesmiths.com">GuideSmiths</a>, a successful Node.js/Microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients.</p>',
+      '<p>I am currently operating in a dual role, firstly as CTO and co-founder of <a href="https://www.guidesmiths.com">GuideSmiths</a>, a successful Node.js & microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients.</p>',
       '<p>Between a young family (my wife and I have a 9 year old daughter, and 6 year old son), growing a successful business, and publishing around 60 open source libraries in the last four years, I have had limited time for hobbies. Even so I still find time to regularly practice Muay Thai and occasionally Brazilian jiu-jitsu.</p>',
     ].join(''),
   },
@@ -111,8 +111,8 @@ module.exports = {
       title: 'Yadda - The other JavaScript BDD library',
       summary: [
         '<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they\'re not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe(\'some test function\') with text. Chai and Expect don\'t even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this().</p>',
-        '<p>The only true BDD tool found during my search was CucumberJS. The problem with CucumberJS is that the Gerkin syntax is restrictive. I don\'t want to be limited to starting my sentences with Given, When, Then, And and But.</p>',
-        '<p>I want to express myself naturally. I also want a test runner makes good decisions about which steps to run, instead of picking the first matching one it comes to. I want a tool that doesn\'t fail silently.  I want a tool that I can use synchronously or asynchronously and run in a browser. I want a tool that lets me plugin different step libraries so that I can test multiple interfaces (e.g. rest and HTML) with the same scenarios. I even want a tool that has nothing to do with testing and just maps ordinary sentences to functions so I could use it in a rules engine or build script.</p>',
+        '<p>The only true BDD tool found for JavaScript is CucumberJS. The problem with CucumberJS is that the Gerkin syntax is restrictive. I don\'t want to be limited to starting my sentences with "Given", "When", "Then", "And" and "But". I want to express myself naturally.</p>',
+        '<p>I also want a test runner that makes good decisions about which steps to run, that works in a browser and that lets me plugin different step libraries so that I can test multiple interfaces (e.g. rest and HTML) with the same scenarios. I even want a tool that has nothing to do with testing and just maps ordinary sentences to functions so I could use it in a rules engine or build script.</p>',
         '<p>That\'s why I wrote <a href=\'http://www.github.com/acuminous/yadda\'>Yadda</a> - the other JavaScript BDD library.</p>',
       ].join(''),
       event: 'ASOS',
@@ -132,7 +132,8 @@ module.exports = {
       event: 'Corp.js',
       summary: [
         '<p>Microservice adoption is driven by promises of simplicity, flexibility, resilience and productivity. It liberates developers from clunky frameworks and legacy technology, enabling them to release faster and more frequently than ever before. With an effective deployment pipeline it is possible to have a new microservice running in production and delivering value within 15 minutes, and to achieve 20+ production releases a day.</p>',
-        '<p>But the fast pace, technological freedom and segregated codebase is not without cost. The maxim that a microservice codebase doesn\'t matter because it\'s small, won\'t change and is easily replaced is more often false than it is true. The principles behind clean code and 12 factor apps are just as applicable to microservices as they are to monoliths, but are all too easily forgotten.</p>',
+        '<p>But the fast pace, technological freedom and segregated codebase is not without cost. The maxim that a microservice codebase doesn\'t matter because it\'s small, won\'t change and is easily replaced is more often false than it is true.</p>',
+        '<p>The principles behind clean code and 12 factor apps are just as applicable to microservices as they are to monoliths, but are all too easily ignored in the typical hubbub and hype that surrounds microservice adoption.</p>',
       ].join(''),
       url: 'https://www.meetup.com/Corporate-JavaScript-Meetup-Budapest/',
       location: 'Budapest',

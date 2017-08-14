@@ -15,6 +15,7 @@ export default function(options = {}) {
       ],});
 
       onHeaders(res, () => {
+        if (res.locals.suppressPrepperMiddleware) return;
         const response = { response: { statusCode: res.statusCode, headers: res.headers, }, };
         if (res.statusCode === 400) requestLogger.error(req.url, response);
         if (res.statusCode < 500) requestLogger.info(req.url, response);
@@ -26,7 +27,17 @@ export default function(options = {}) {
       next();
     });
 
-    cb();
+    cb(null, { enable, disable, });
+  }
+
+  function enable(req, res, next) {
+    res.locals.suppressPrepperMiddleware = false;
+    next();
+  }
+
+  function disable(req, res, next) {
+    res.locals.suppressPrepperMiddleware = true;
+    next();
   }
 
   return {
