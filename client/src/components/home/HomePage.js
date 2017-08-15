@@ -35,23 +35,27 @@ const HomePage = ({ page, profile, articles, projects, talks, }) => (
           </div>
         </FeatureToggle>
       </div>
+      <div className='row'>
+        <FeatureToggle id='featuredArticles'>
+          <FeaturedArticles
+            title={page.featuredArticles.title}
+            icon={page.featuredArticles.icon}
+            articles={page.featuredArticles.items.map(id => articles[id])}
+            link={page.featuredArticles.link}
+          />
+        </FeatureToggle>
+      </div>
+      <div className='row'>
+        <FeatureToggle id='featuredTalks'>
+          <FeaturedArticles
+            title={page.featuredTalks.title}
+            icon={page.featuredTalks.icon}
+            articles={page.featuredTalks.items.map(id => talks[id])}
+            link={page.featuredTalks.link}
+          />
+        </FeatureToggle>
+      </div>
     </div>
-    <FeatureToggle id='featuredArticles'>
-      <FeaturedArticles
-        title={page.featuredArticles.title}
-        icon={page.featuredArticles.icon}
-        articles={page.featuredArticles.items.map(id => articles[id])}
-        link={page.featuredArticles.link}
-      />
-    </FeatureToggle>
-    <FeatureToggle id='featuredTalks'>
-      <FeaturedArticles
-        title={page.featuredTalks.title}
-        icon={page.featuredTalks.icon}
-        articles={page.featuredTalks.items.map(id => talks[id])}
-        link={page.featuredTalks.link}
-      />
-    </FeatureToggle>
   </div>
 );
 

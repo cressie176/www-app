@@ -1,8 +1,8 @@
 .footer__spotlights {
   background-color: var(--dark-grey);
   color: var(--light-grey);
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 40px; /* extra 10 to compensate for h2.margin-top */
 }
 
 .footer__spotlights .links-spotlight__title {

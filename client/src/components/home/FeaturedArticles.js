@@ -6,68 +6,63 @@ import './FeaturedArticles.css';
 
 const FeaturedArticles = ({ title, icon, articles, link, }) => {
   return (
-    <div className='container featured-articles'>
-      <div className='row'>
-        <div className='col-md-12'>
-          <h2 className='featured-articles__title'>
-            <span className='icon'>
-              <i className={`fa ${icon}`} aria-hidden='true'></i>
-            </span>
-            {title}
-          </h2>
-        </div>
+    <div className='featured-articles'>
+      <div className='col-md-12'>
+        <h2 className='featured-articles__title'>
+          <span className='icon'>
+            <i className={`fa ${icon}`} aria-hidden='true'></i>
+          </span>
+          {title}
+        </h2>
       </div>
-      <div className='row'>
-        {
-          articles.map(article => {
-            return (
-              <div key={article.id} className='col-md-4 featured-article'>
-                <div className='featured-article__title__wrapper'>
-                  <h3 className='featured-article__title'><a className='featured-article__title__link' href={article.url} dangerouslySetInnerHTML={{__html: article.title,}} /></h3>
-                </div>
-                <img className='featured-article__thumbnail' src={article.images.thumbnail.url} alt={article.title} />
-                <div className='featured-article__summary' dangerouslySetInnerHTML={{__html: article.summary,}} />
-                <ul className='featured-article__details'>
-                  {
-                    article.event ? (
-                      <IconListItem icon='fa-group' text={article.event} url={article.url} type='event' />
-                    ) : null
-                  }
-                  {
-                    article.date ? (
-                      <IconListItem icon='fa-calendar' text={article.date.toLocaleString()} type='date' />
-                    ) : null
-                  }
-                  {
-                    article.location ? (
-                      <IconListItem icon='fa-location-arrow' text={article.location} type='location' />
-                    ) : null
-                  }
-                  {
-                    article.downloads ? (
-                      article.downloads.map(download => {
-                        return (
-                          <IconListItem key={download.url} icon={download.icon} text={download.text} url={download.url} type='download' />
-                        );
-                      })
-                    ) : null
-                  }
-                </ul>
+      {
+        articles.map(article => {
+          return (
+            <div key={article.id} className='col-md-4 featured-article'>
+              <div className='featured-article__title__wrapper'>
+                <h3 className='featured-article__title'><a className='featured-article__title__link' href={article.url} dangerouslySetInnerHTML={{__html: article.title,}} /></h3>
               </div>
-            );
-          })
-        }
-      </div>
-
-      {/* Disabled for MVP
-      <div className='row'>
+              <img className='featured-article__thumbnail' src={article.images.thumbnail.url} alt={article.title} />
+              <div className='featured-article__summary' dangerouslySetInnerHTML={{__html: article.summary,}} />
+              <ul className='featured-article__details'>
+                {
+                  article.event ? (
+                    <IconListItem icon='fa-group' text={article.event} url={article.url} type='event' />
+                  ) : null
+                }
+                {
+                  article.date ? (
+                    <IconListItem icon='fa-calendar' text={article.date.toLocaleString()} type='date' />
+                  ) : null
+                }
+                {
+                  article.location ? (
+                    <IconListItem icon='fa-location-arrow' text={article.location} type='location' />
+                  ) : null
+                }
+                {
+                  article.downloads ? (
+                    article.downloads.map(download => {
+                      return (
+                        <IconListItem key={download.url} icon={download.icon} text={download.text} url={download.url} type='download' />
+                      );
+                    })
+                  ) : null
+                }
+              </ul>
+            </div>
+          );
+        })
+      }
+      {
+        /*
         <div className='col-md-12'>
           <div className='featured-articles__see-all-link'>
             <a href={link.url}>{link.text}</a>
           </div>
         </div>
-      </div>
-    */}
+        */
+      }
     </div>
   );
 };
