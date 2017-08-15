@@ -5,7 +5,7 @@ const Copyright = ({year, owner, rights,}) => (
   <div className='container'>
     <div className='row'>
       <div className='col-md-12'>
-        <span className='text'>&copy; {year} {owner}. {rights}</span>
+        <span className='text'><span className='text-nowrap'>&copy; {year} {owner}.</span> <span className='text-nowrap'>{rights}</span></span>
       </div>
     </div>
   </div>
