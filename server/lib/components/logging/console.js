@@ -28,8 +28,10 @@ export default function() {
     });
     const colour = colours[event.level] || colours.default;
     const log = console[event.level] || console.info; // eslint-disable-line no-console
-    if (has(event, 'response.statusCode')) log(colour(response.render(data)));
-    else if (has(event, 'error.message')) log(colour(error.render(data)));
+
+    if (has(event, 'error.message')) log(colour(error.render(data)));
+    else if (process.env.APP_ENV === 'test') return;
+    else if (has(event, 'response.statusCode')) log(colour(response.render(data)));
     else log(colour(info.render(data)));
   }
 

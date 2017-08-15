@@ -73,7 +73,7 @@ describe('Roles', () => {
         roles().start({ config, app, }, err => {
           if (err) return cb(err);
           app.use((req, res, next) => {
-            res.locals.logger = console;
+            res.locals.logger = { info: () => {}, };
             next();
           });
           app.get('/public', app.locals.hasRole('guest'), (req, res) => res.status(204).send());

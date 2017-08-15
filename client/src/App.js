@@ -10,6 +10,8 @@ import { createStore, combineReducers, applyMiddleware, } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider, } from 'react-redux';
 import content from './content';
+import 'autotrack/autotrack.js';
+
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';

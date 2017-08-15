@@ -44,7 +44,23 @@ describe('www.stephen-cresswell.net', () => {
     expect($('title').text()).toBe('Stephen Cresswell');
   });
 
-  it.only('should protect private resources', async () => {
+  it('should respond to config requests', async () => {
+    const res = await request({
+      url: `http://${config.server.host}:${config.server.port}/config.js`,
+      resolveWithFullResponse: true,
+    });
+
+    expect(res.statusCode).toBe(200);
+    expect(res.headers['content-type'].toLowerCase()).toBe('application/javascript; charset=utf-8');
+
+    const context = { window: {}, };
+    evalInContext(context, res.body);
+
+    expect(context.window.config.ga.trackingId).toBe('UA-104642477-2');
+    expect(context.window.config.foo).toBe('bar');
+  });
+
+  it('should protect private resources', async () => {
     expect.assertions(2);
     await request({
       url: `http://${config.server.host}:${config.server.port}/__/private`,
@@ -55,4 +71,11 @@ describe('www.stephen-cresswell.net', () => {
       expect(reason.response.headers.location).toBe('/auth/fixed');
     });
   });
+
+  function evalInContext(context, script) {
+    const fn = function (script) {
+      return eval(script);
+    };
+    fn.call(context, script);
+  }
 });

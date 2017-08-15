@@ -1,4 +1,13 @@
 module.exports = {
+  routes: {
+    client: {
+      public: {
+        ga: {
+          trackingId: 'UA-104642477-1',
+        },
+      },
+    },
+  },
   auth: {
     strategy: {
       id: 'github',

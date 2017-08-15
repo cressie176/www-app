@@ -1,4 +1,11 @@
 module.exports = {
+  routes: {
+    client: {
+      public: {
+        foo: 'bar',
+      },
+    },
+  },
   auth: {
     roles: {
       guest: ['*',],
