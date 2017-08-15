@@ -13,7 +13,7 @@ const HomePage = ({ page, profile, articles, projects, talks, }) => (
       <img className='hero' alt='hero' src={HeroImg} />
     </div>
     <div className='row'>
-      <div className='col-md-offset-1 col-md-5'>
+      <div className='col-md-offset-1 col-md-5 no-min-height'>
         <FeatureToggle id='profile'>
           <Profile
             title={profile.title}
@@ -21,7 +21,7 @@ const HomePage = ({ page, profile, articles, projects, talks, }) => (
           />
         </FeatureToggle>
       </div>
-      <div className='col-md-5'>
+      <div className='col-md-5 no-min-height'>
         <FeatureToggle id='featuredProjects'>
           <FeaturedProjects
             title={page.featuredProjects.title}

@@ -9,6 +9,11 @@
     border-top: none;
 }
 
+.navbar.navbar-overrides .navbar-nav {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .navbar.navbar-overrides .navbar-nav > li > a {
   padding: 30px 60px;
   border-bottom: 2px solid transparent;
