@@ -1,14 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link, } from 'react-router-dom';
 
 import './IconListItem.css';
 
-const IconListItem = ({icon, text, url, type,}) => {
+const CustomLink = ({ url, className, children, }) => (
+  url.startsWith('/') ? <Link className={className} to={url}>{children}</Link>
+                      : <a className={className} href={url}>{children}</a>
+);
+
+const IconListItem = ({ icon, text, url, type, }) => {
+
   if (icon && text && url) {
     return (
       <li className={`icon-list__item icon-list__item--${type}`}>
         <i className={`fa ${icon} icon-list__item__icon`} aria-hidden='true'></i>
-        <a className='icon-list__item__link' href={url}>{text}</a>
+        <CustomLink className={`icon-list__item__link`} url={url}>{text}</CustomLink>
       </li>
     );
   } else if (icon && text) {
@@ -21,15 +28,15 @@ const IconListItem = ({icon, text, url, type,}) => {
   } else if (icon && url) {
     return (
       <li className={`icon-list__item icon-list__item--${type}`}>
-        <a className='icon-list__item__link' href={url}>
+        <CustomLink className={`icon-list__item__link`} url={url}>
           <i className={`fa ${icon} icon-list__item__icon`} aria-hidden='true'></i>
-        </a>
+        </CustomLink>
       </li>
     );
   } else if (text && url) {
     return (
       <li className={`icon-list__item icon-list__item--${type}`}>
-        <a className='icon-list__item__link' href={url}>{text}</a>
+        <CustomLink className={`icon-list__item__link`} url={url}>{text}</CustomLink>
       </li>
     );
   } else if (icon) {
@@ -53,6 +60,7 @@ IconListItem.propTypes = {
   text: PropTypes.string,
   url: PropTypes.string,
   type: PropTypes.string,
+  obfuscate: PropTypes.bool,
 };
 
 export default IconListItem;

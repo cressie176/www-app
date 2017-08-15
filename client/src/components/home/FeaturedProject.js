@@ -28,8 +28,15 @@ export class FeaturedProject extends React.Component {
   }
 }
 
-function mapStateToProps(state, props) {
-  return { ...state.software[props.id], };
+FeaturedProject.propTypes = {
+  id: PropTypes.string,
+  title: PropTypes.string,
+  url: PropTypes.string,
+  summary: PropTypes.string,
+};
+
+function mapStateToProps({ software, }, { id, }) {
+  return { ...software[id], };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -39,12 +46,5 @@ function mapDispatchToProps(dispatch) {
     },
   };
 }
-
-FeaturedProject.propTypes = {
-  id: PropTypes.string,
-  title: PropTypes.string,
-  url: PropTypes.string,
-  summary: PropTypes.string,
-};
 
 export default connect(mapStateToProps, mapDispatchToProps)(FeaturedProject);

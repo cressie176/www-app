@@ -3,12 +3,6 @@
   padding-left: 0px;
 }
 
-.links-spotlight__list a,
-.links-spotlight__list a:hover,
-.links-spotlight__list a:visited {
-  text-decoration: none;
-}
-
-.links-spotlight__list__item__icon {
-  padding-right: 5px;
+.links-spotlight__list--obfuscated {
+  filter: blur(5px);
 }
