@@ -5,6 +5,7 @@ module.exports = {
         ga: {
           trackingId: 'UA-104642477-1',
         },
+        featureToggles: {},
       },
     },
   },

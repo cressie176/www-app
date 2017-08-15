@@ -1,4 +1,11 @@
 module.exports = {
+  routes: {
+    client: {
+      public: {
+        featureToggles: {},
+      },
+    },
+  },
   auth: {
     strategy: {
       id: 'github',

@@ -8,9 +8,10 @@ import ErrorPage from './components/error/ErrorPage';
 import ScrollToTop from './components/common/ScrollToTop';
 import software from './reducers/softwareReducer';
 import obfuscation from './reducers/obfuscationReducer';
+import featureToggles from './reducers/featureTogglesReducer';
 import { createStore, combineReducers, applyMiddleware, } from 'redux';
-import thunk from 'redux-thunk';
-import { Provider, } from 'react-redux';
+import thunk from 'redux-thunk'; import { Provider, } from 'react-redux';
+import { composeWithDevTools, } from 'redux-devtools-extension';
 import content from './content';
 import 'autotrack/autotrack.js';
 
@@ -29,10 +30,16 @@ following errors on npm start and npm test:
 window.jQuery = window.$ = require('jquery');
 require('bootstrap/dist/js/bootstrap.min.js');
 
+const config = Object.assign({ featureToggles: {}, }, window.config);
+
 const store = createStore(combineReducers({
   software,
   obfuscation,
-}), applyMiddleware(thunk));
+  featureToggles,
+}), config, composeWithDevTools(
+  applyMiddleware(thunk)
+));
+
 
 class App extends Component {
   render() {

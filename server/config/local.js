@@ -1,4 +1,16 @@
 module.exports = {
+  routes: {
+    client: {
+      public: {
+        featureToggles: {
+          profile: true,
+          featuredProjects: true,
+          featuredTalks: true,
+          featuredArticles: true,
+        },
+      },
+    },
+  },
   auth: {
     roles: {
       guest: ['*',],

@@ -27,7 +27,6 @@ const FeaturedArticles = ({ title, icon, articles, link, }) => {
                 </div>
                 <img className='featured-article__thumbnail' src={article.images.thumbnail.url} alt={article.title} />
                 <div className='featured-article__summary' dangerouslySetInnerHTML={{__html: article.summary,}} />
-                <hr className='featured-article__rule' />
                 <ul className='featured-article__details'>
                   {
                     article.event ? (
