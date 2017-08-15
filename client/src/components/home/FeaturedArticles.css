@@ -7,6 +7,8 @@
 }
 
 .featured-article__title__link,
+.featured-article__title__link:active,
+  .featured-article__title__link:focus,
 .featured-article__title__link:visited {
   color: var(--text-colour);
 }

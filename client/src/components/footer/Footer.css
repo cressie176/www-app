@@ -10,6 +10,8 @@
 }
 
 .footer__spotlights .icon-list__item__link,
+.footer__spotlights .icon-list__item__link:active,
+.footer__spotlights .icon-list__item__link:focus,
 .footer__spotlights .icon-list__item__link:visited {
   color: var(--light-grey);
 }

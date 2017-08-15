@@ -17,7 +17,7 @@ body {
   background-color: var(--white);
 }
 
-a, a:hover, a:visited {
+a, a:hover, a:visited, a:focus, a:active {
   color: var(--primary-colour);
   text-decoration: none;
 }
