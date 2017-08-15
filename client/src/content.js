@@ -28,9 +28,6 @@ module.exports = {
   },
   pages: {
     home: {
-      hero: {
-        url: '/images/hero.jpg',
-      },
       featuredArticles: {
         title: 'Featured Articles',
         icon: 'fa-file-text-o',

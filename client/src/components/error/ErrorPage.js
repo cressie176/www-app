@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './ErrorPage.css';
+import ErrorImg from './error.jpg';
 
 const ErrorPage = ({ title, html, type, }) => (
   <div className={`error-page error-page--{type}`}>
@@ -16,7 +17,7 @@ const ErrorPage = ({ title, html, type, }) => (
     </div>
     <div className='container-fluid'>
       <div className='row'>
-        <img className='error-page__hero' alt='error' src='/images/error.jpg' />
+        <img className='error-page__hero' alt='error' src={ErrorImg} />
       </div>
     </div> </div>
 );

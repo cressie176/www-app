@@ -4,12 +4,13 @@ import './HomePage.css';
 import Profile from './Profile';
 import FeaturedArticles from './FeaturedArticles';
 import FeaturedProjects from './FeaturedProjects';
+import HeroImg from './hero.jpg';
 
 const HomePage = ({ page, profile, articles, projects, talks, }) => (
   <div className='HomePage'>
     <div className='container-fluid'>
       <div className='row'>
-        <img className='hero' alt='hero' src={page.hero.url} />
+        <img className='hero' alt='hero' src={HeroImg} />
       </div>
     </div>
     <div className='container'>
