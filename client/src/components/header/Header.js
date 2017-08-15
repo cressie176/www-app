@@ -4,7 +4,7 @@ import Nav from './Nav';
 
 const Header = ({ navigation, }) => {
   return (
-    <header>
+    <header className='full-width'>
       <Nav items={navigation.items} />
     </header>
   );

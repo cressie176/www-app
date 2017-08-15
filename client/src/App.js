@@ -55,36 +55,34 @@ class App extends Component {
               <Header
                 navigation={content.navigation}
               />
-              <div className='container-fluid page'>
-                <Switch>
-                  <Route path='/legal/terms-and-conditions' render={() =>
-                    <LegalPage
-                      title={content['terms-and-conditions'].title}
-                      html={content['terms-and-conditions'].html}
-                      type='terms-and-conditions'
-                    />
-                  } />
-                  <Route path='/legal/privacy-policy' render={() =>
-                    <LegalPage
-                      title={content['privacy-policy'].title}
-                      html={content['privacy-policy'].html}
-                      type='privacy-policy'
-                    />
-                  } />
-                  <Route exact path='/' render={() =>
-                    <HomePage
-                      page={content.pages.home}
-                      profile={content.profile}
-                      articles={content.articles}
-                      projects={content.projects}
-                      talks={content.talks}
-                    />
-                  } />
-                  <Route path='/' render={() =>
-                    <ErrorPage title='Page Not Found' html='The page you have requested has not been found.' />
-                  } />
-                </Switch>
-              </div>
+              <Switch>
+                <Route path='/legal/terms-and-conditions' render={() =>
+                  <LegalPage
+                    title={content['terms-and-conditions'].title}
+                    html={content['terms-and-conditions'].html}
+                    type='terms-and-conditions'
+                  />
+                } />
+                <Route path='/legal/privacy-policy' render={() =>
+                  <LegalPage
+                    title={content['privacy-policy'].title}
+                    html={content['privacy-policy'].html}
+                    type='privacy-policy'
+                  />
+                } />
+                <Route exact path='/' render={() =>
+                  <HomePage
+                    page={content.pages.home}
+                    profile={content.profile}
+                    articles={content.articles}
+                    projects={content.projects}
+                    talks={content.talks}
+                  />
+                } />
+                <Route path='/' render={() =>
+                  <ErrorPage title='Page Not Found' html='The page you have requested has not been found.' />
+                } />
+              </Switch>
               <Footer
                 spotlights={content.footer.spotlights}
                 copyright={content.copyright}

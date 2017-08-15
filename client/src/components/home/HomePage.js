@@ -9,53 +9,45 @@ import FeatureToggle from '../common/FeatureToggle';
 
 const HomePage = ({ page, profile, articles, projects, talks, }) => (
   <div className='HomePage'>
-    <div className='container-fluid'>
-      <div className='row'>
-        <img className='hero' alt='hero' src={HeroImg} />
-      </div>
+    <div className='row'>
+      <img className='hero' alt='hero' src={HeroImg} />
     </div>
-    <div className='container'>
-      <div className='row'>
+    <div className='row'>
+      <div className='col-md-offset-1 col-md-5'>
         <FeatureToggle id='profile'>
-          <div className='col-md-6'>
-            <Profile
-              title={profile.title}
-              summary={profile.summary}
-            />
-          </div>
-        </FeatureToggle>
-        <FeatureToggle id='featuredProjects'>
-          <div className='col-md-6'>
-            <FeaturedProjects
-              title={page.featuredProjects.title}
-              icon={page.featuredProjects.icon}
-              projects={page.featuredProjects.items.map(id => projects[id])}
-              link={page.featuredProjects.link}
-            />
-          </div>
-        </FeatureToggle>
-      </div>
-      <div className='row'>
-        <FeatureToggle id='featuredArticles'>
-          <FeaturedArticles
-            title={page.featuredArticles.title}
-            icon={page.featuredArticles.icon}
-            articles={page.featuredArticles.items.map(id => articles[id])}
-            link={page.featuredArticles.link}
+          <Profile
+            title={profile.title}
+            summary={profile.summary}
           />
         </FeatureToggle>
       </div>
-      <div className='row'>
-        <FeatureToggle id='featuredTalks'>
-          <FeaturedArticles
-            title={page.featuredTalks.title}
-            icon={page.featuredTalks.icon}
-            articles={page.featuredTalks.items.map(id => talks[id])}
-            link={page.featuredTalks.link}
+      <div className='col-md-5'>
+        <FeatureToggle id='featuredProjects'>
+          <FeaturedProjects
+            title={page.featuredProjects.title}
+            icon={page.featuredProjects.icon}
+            projects={page.featuredProjects.items.map(id => projects[id])}
+            link={page.featuredProjects.link}
           />
         </FeatureToggle>
       </div>
     </div>
+    <FeatureToggle id='featuredArticles'>
+      <FeaturedArticles
+        title={page.featuredArticles.title}
+        icon={page.featuredArticles.icon}
+        articles={page.featuredArticles.items.map(id => articles[id])}
+        link={page.featuredArticles.link}
+      />
+    </FeatureToggle>
+    <FeatureToggle id='featuredTalks'>
+      <FeaturedArticles
+        title={page.featuredTalks.title}
+        icon={page.featuredTalks.icon}
+        articles={page.featuredTalks.items.map(id => talks[id])}
+        link={page.featuredTalks.link}
+      />
+    </FeatureToggle>
   </div>
 );
 

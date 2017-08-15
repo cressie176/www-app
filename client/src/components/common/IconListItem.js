@@ -15,7 +15,7 @@ const IconListItem = ({ icon, text, url, type, }) => {
     return (
       <li className={`icon-list__item icon-list__item--${type}`}>
         <i className={`fa ${icon} icon-list__item__icon`} aria-hidden='true'></i>
-        <CustomLink className={`icon-list__item__link`} url={url}>{text}</CustomLink>
+        <CustomLink className={`icon-list__item__link`} url={url} >{text}</CustomLink>
       </li>
     );
   } else if (icon && text) {

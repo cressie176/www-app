@@ -2,6 +2,11 @@
   background-color: transparent;
   margin-bottom: 0px;
   border: none;
+  padding-right: 10px;
+}
+
+.navbar.navbar-overrides .navbar-collapse {
+    border-top: none;
 }
 
 .navbar.navbar-overrides .navbar-nav > li > a {

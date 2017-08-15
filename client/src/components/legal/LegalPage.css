@@ -1,6 +1,6 @@
 .legal-page__title__wrapper {
-  color: #fff;
-  background-color: #23CCF2;
+  color: var(--white);
+  background-color: var(--primary-colour);
   margin-bottom: 20px;
 }
 

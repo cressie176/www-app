@@ -7,13 +7,9 @@ import './Footer.css';
 
 const Footer = ({ spotlights, copyright, }) => {
   return (
-    <footer>
-      <div className='container-fluid footer__spotlights'>
-        <FooterSpotlights spotlights={spotlights} />
-      </div>
-      <div className='container-fluid footer__copyright'>
-        <Copyright year={copyright.year} owner={copyright.owner} rights={copyright.rights} />
-      </div>
+    <footer className='full-width'>
+      <FooterSpotlights spotlights={spotlights} />
+      <Copyright year={copyright.year} owner={copyright.owner} rights={copyright.rights} />
     </footer>
   );
 };
