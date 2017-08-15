@@ -49,7 +49,7 @@ module.exports = {
       featuredTalks: {
         title: 'Upcoming & Recent Talks',
         icon: 'fa-microphone',
-        items: ['1', '2', '3',],
+        items: ['12', '11', '10',],
         link: {
           text: 'See all talks…',
           url: '/talks',
@@ -103,28 +103,8 @@ module.exports = {
     },
   },
   talks: {
-    '1': {
-      id: '1',
-      title: 'Yadda - The other JavaScript BDD library',
-      summary: [
-        '<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they\'re not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe(\'some test function\') with text. Chai and Expect don\'t even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this().</p>',
-        '<p>The only true BDD tool found for JavaScript is CucumberJS. The problem with CucumberJS is that the Gerkin syntax is restrictive. I don\'t want to be limited to starting my sentences with "Given", "When", "Then", "And" and "But". I want to express myself naturally.</p>',
-        '<p>I also want a test runner that makes good decisions about which steps to run, that works in a browser and that lets me plugin different step libraries so that I can test multiple interfaces (e.g. rest and HTML) with the same scenarios. I even want a tool that has nothing to do with testing and just maps ordinary sentences to functions so I could use it in a rules engine or build script.</p>',
-        '<p>That\'s why I wrote <a href=\'http://www.github.com/acuminous/yadda\'>Yadda</a> - the other JavaScript BDD library.</p>',
-      ].join(''),
-      event: 'ASOS',
-      date: '1st June 2017',
-      location: 'London',
-      url: 'https://www.evensi.uk/yadda-yadda-yadda-asos-hq-asos-/211294453',
-      images: {
-        thumbnail: {
-          url: '/images/yadda.jpg',
-        },
-      },
-      downloads: [],
-    },
-    '2': {
-      id: '2',
+    '12': {
+      id: '12',
       title: 'Enterprise Grade Microservices',
       event: 'Corp.js',
       summary: [
@@ -142,8 +122,8 @@ module.exports = {
       },
       downloads: [],
     },
-    '3': {
-      id: '3',
+    '11': {
+      id: '11',
       title: 'Divorcing Microservices With Rascal',
       event: 'Node.js Meetup',
       summary: [
@@ -157,6 +137,26 @@ module.exports = {
       images: {
         thumbnail: {
           url: '/images/divorcing-microservices-with-rascal.jpg',
+        },
+      },
+      downloads: [],
+    },
+    '10': {
+      id: '10',
+      title: 'Yadda - The other JavaScript BDD library',
+      summary: [
+        '<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they\'re not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe(\'some test function\') with text. Chai and Expect don\'t even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this().</p>',
+        '<p>The only true BDD tool found for JavaScript is CucumberJS. The problem with CucumberJS is that the Gerkin syntax is restrictive. I don\'t want to be limited to starting my sentences with "Given", "When", "Then", "And" and "But". I want to express myself naturally.</p>',
+        '<p>I also want a test runner that makes good decisions about which steps to run, that works in a browser and that lets me plugin different step libraries so that I can test multiple interfaces (e.g. rest and HTML) with the same scenarios. I even want a tool that has nothing to do with testing and just maps ordinary sentences to functions so I could use it in a rules engine or build script.</p>',
+        '<p>That\'s why I wrote <a href=\'http://www.github.com/acuminous/yadda\'>Yadda</a> - the other JavaScript BDD library.</p>',
+      ].join(''),
+      event: 'Community for Agile Testing',
+      date: '26th April 2016',
+      location: 'London',
+      url: 'https://www.meetup.com/es-ES/Community-for-Agile-Testing/events/229788565/',
+      images: {
+        thumbnail: {
+          url: '/images/yadda.jpg',
         },
       },
       downloads: [],
