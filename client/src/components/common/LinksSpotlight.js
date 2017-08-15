@@ -15,7 +15,6 @@ export class LinksSpotlight extends React.Component {
       <ul
         className={`links-spotlight__list links-spotlight__list--${obfuscation}`}
         onMouseOver={() => this.props.removeObfuscation(this.props.type)}
-        onTouchStart={() => this.props.removeObfuscation(this.props.type)}
       >
         {
           this.props.links.map((link, index) => {

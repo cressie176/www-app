@@ -6,6 +6,7 @@ import HomePage from './components/home/HomePage';
 import LegalPage from './components/legal/LegalPage';
 import ErrorPage from './components/error/ErrorPage';
 import ScrollToTop from './components/common/ScrollToTop';
+import { removeAllObfuscation, } from './actions/obfuscationActions';
 import software from './reducers/softwareReducer';
 import obfuscation from './reducers/obfuscationReducer';
 import featureToggles from './reducers/featureTogglesReducer';
@@ -42,12 +43,15 @@ const store = createStore(combineReducers({
 
 
 class App extends Component {
+  removeAllObfuscation() {
+    store.dispatch(removeAllObfuscation());
+  }
   render() {
     return (
       <Provider store={store}>
         <Router>
           <ScrollToTop>
-            <div className='container-fluid' >
+            <div className='container-fluid' onTouchStart={() => this.removeAllObfuscation()}>
               <Header
                 navigation={content.navigation}
               />
