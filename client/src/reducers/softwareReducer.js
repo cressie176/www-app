@@ -3,13 +3,14 @@ import {
   FETCH_DOWNLOAD_COUNT_SUCCESS,
 } from '../actions/softwareActions';
 
-export default function(state = { projects: {}, }, action)  {
+export default function(state = {}, action)  {
   switch (action.type) {
     case FETCH_DOWNLOAD_COUNT_REQUEST:
     case FETCH_DOWNLOAD_COUNT_SUCCESS: {
-      const projects = { ...state.projects, };
-      projects[action.project.id] = action.project;
-      return Object.assign({}, state, { projects, });
+      return {
+        ...state,
+        ...{ [action.project.id]: action.project, },
+      };
     }
     default: {
       return state;

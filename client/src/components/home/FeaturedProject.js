@@ -29,7 +29,7 @@ export class FeaturedProject extends React.Component {
 }
 
 function mapStateToProps(state, props) {
-  return { ...state.software.projects[props.id], };
+  return { ...state.software[props.id], };
 }
 
 function mapDispatchToProps(dispatch) {
