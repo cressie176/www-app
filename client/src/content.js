@@ -242,7 +242,7 @@ module.exports = {
           },
           {
             icon: 'fa-linkedin',
-            url: 'https://www.linkedin.com/stephen-cresswell',
+            url: 'https://www.linkedin.com/in/stephencresswell/',
           },
           {
             icon: 'fa-twitter',
