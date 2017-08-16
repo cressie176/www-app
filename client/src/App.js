@@ -5,6 +5,7 @@ import Footer from './components/footer/Footer';
 import HomePage from './components/home/HomePage';
 import LegalPage from './components/legal/LegalPage';
 import ErrorPage from './components/error/ErrorPage';
+import FeatureToggleQueryParser from './components/common/FeatureToggleQueryParser';
 import ScrollToTop from './components/common/ScrollToTop';
 import { removeAllObfuscation, } from './actions/obfuscationActions';
 import software from './reducers/softwareReducer';
@@ -51,6 +52,7 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <ScrollToTop>
+            <FeatureToggleQueryParser />
             <div className='container-fluid' onTouchStart={() => this.removeAllObfuscation()}>
               <Header
                 navigation={content.navigation}
