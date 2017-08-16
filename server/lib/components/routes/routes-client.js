@@ -5,6 +5,13 @@ module.exports = function() {
 
   function start({ app, config, logger, prepper,}, cb) {
 
+    // We use StatusCake for monitoring site availability. No need to log
+    app.use((req, res, next) => {
+      if (!req.headers['user-agent']) return next();
+      if (!req.headers['user-agent'].includes('StatusCake')) return next();
+      prepper.disable(req, res, next);
+    });
+
     // Serve react app (index.html) explicitly, instead of via express.static
     // so we can log requests and set cache control headers
     app.get([/^\/$/, '/index.html',], app.locals.hasRole('guest'), sendIndex);

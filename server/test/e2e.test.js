@@ -7,11 +7,13 @@ describe('www.stephen-cresswell.net', () => {
 
   let system;
   let config;
+  let logger;
 
   beforeAll(cb => {
     system = createSystem().start((err, components) => {
       if (err) return cb(err);
       config = components.config;
+      logger = components.logger;
       cb();
     });
   });
@@ -70,6 +72,55 @@ describe('www.stephen-cresswell.net', () => {
       expect(reason.statusCode).toBe(302);
       expect(reason.response.headers.location).toBe('/auth/fixed');
     });
+  });
+
+  it('should log requests under normal circumstances', async () => {
+    expect.assertions(1);
+
+    const handler = jest.fn();
+    logger.on('message', handler);
+
+    await request({
+      url: `http://${config.server.host}:${config.server.port}`,
+      resolveWithFullResponse: true,
+      headers: { 'user-agent': 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/98 Safari/537.4', },
+    });
+
+    logger.removeListener('message', handler);
+    expect(handler.mock.calls.length).toBe(1);
+  });
+
+  it('should not log request to static resources', async () => {
+    expect.assertions(1);
+
+    const handler = jest.fn();
+    logger.on('message', handler);
+
+    await request({
+      url: `http://${config.server.host}:${config.server.port}/robots.txt`,
+      resolveWithFullResponse: true,
+      headers: { 'user-agent': 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/98 Safari/537.4', },
+    });
+
+    logger.removeListener('message', handler);
+    expect(handler.mock.calls.length).toBe(0);
+
+  });
+
+  it('should not log request from StatusCake', async () => {
+    expect.assertions(1);
+
+    const handler = jest.fn();
+    logger.on('message', handler);
+
+    await request({
+      url: `http://${config.server.host}:${config.server.port}`,
+      resolveWithFullResponse: true,
+      headers: { 'user-agent': 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/98 Safari/537.4 (StatusCake)', },
+    });
+
+    logger.removeListener('message', handler);
+    expect(handler.mock.calls.length).toBe(0);
   });
 
   function evalInContext(context, script) {
