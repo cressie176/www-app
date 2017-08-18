@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import HomePage from './components/home/HomePage';
+import ArticleListPage from './components/articles/ArticleListPage';
 import LegalPage from './components/legal/LegalPage';
 import ErrorPage from './components/error/ErrorPage';
 import FeatureToggleQueryParser from './components/common/FeatureToggleQueryParser';
@@ -79,6 +80,11 @@ class App extends Component {
                     articles={content.articles}
                     projects={content.projects}
                     talks={content.talks}
+                  />
+                } />
+                <Route exact path='/blog' render={() =>
+                  <ArticleListPage
+                    page={content.pages.blog}
                   />
                 } />
                 <Route path='/' render={() =>

@@ -5,6 +5,7 @@
   --white: #fff;
   --text-colour: #333;
   --primary-colour: #23ccf2;
+  --alt-colour: #777;
   --error-colour: #f53355;
 }
 
@@ -46,4 +47,24 @@ a, a:hover, a:visited, a:focus, a:active {
   margin-right: 5px;
   color: var(--white);
 }
+
+.page-intro__wrapper {
+  text-align: center;
+  background-color: var(--primary-colour);
+  color: var(--white);
+}
+
+.page-intro {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.page-intro .page-intro__citation {
+  color: var(--white)
+}
+
+.page-intro__image {
+  width: 100%
+}
+
 

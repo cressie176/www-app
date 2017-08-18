@@ -16,10 +16,10 @@ module.exports = {
       //   text: 'Software',
       //   path: '/software',
       // },
-      // {
-      //   text: 'Blog',
-      //   path: '/blog',
-      // },
+      {
+        text: 'Blog',
+        path: '/blog',
+      },
       // {
       //   text: 'Talks',
       //   path: '/talks',
@@ -55,6 +55,8 @@ module.exports = {
           url: '/talks',
         },
       },
+    },
+    blog: {
     },
   },
   profile: {
@@ -165,7 +167,7 @@ module.exports = {
   'articles': {
     '1': {
       id: '1',
-      url: 'https://www.stephen-cresswell.net/blog/bacon-ipsum-dolor-amet-bacon-bresaola-strip-steak-short-1',
+      url: '/blog/bacon-ipsum-dolor-amet-bacon-bresaola-strip-steak-short-1',
       title: 'Bacon ipsum dolor amet bacon bresaola strip steak short',
       summary: 'Pork loin flank beef ribs filet mignon pork cow pork chop t-bone turducken. Alcatra ground round pastrami boudin jowl bresaola fatback, salami pork belly picanha andouille. Spare ribs bacon andouille pork. Tri-tip bresaola shoulder t-bone.',
       date: new Date('2016-07-29T19:00:00'),
@@ -177,7 +179,7 @@ module.exports = {
     },
     '2': {
       id: '2',
-      url: 'https://www.stephen-cresswell.net/blog/andouille-flank-capicola-drumstick-alcatra-ham-2',
+      url: '/blog/andouille-flank-capicola-drumstick-alcatra-ham-2',
       title: 'Andouille flank capicola drumstick alcatra ham',
       summary: 'Andouille flank capicola drumstick alcatra ham hock short loin picanha shankle cow. Shank chuck swine, meatloaf ball tip brisket meatball strip steak filet mignon sausage andouille tri-tip. Pork hamburger bresaola biltong andouille pork loin pig pastrami cupim shankle picanha. Frankfurter jerky shank, boudin porchetta jowl chicken pancetta bresaola flank bacon leberkas. Ball tip filet mignon tenderloin, short loin ham spare ribs corned beef cow short ribs.',
       date: new Date('2016-07-29T19:00:00'),
@@ -189,7 +191,7 @@ module.exports = {
     },
     '3': {
       id: '3',
-      url: 'https://www.stephen-cresswell.net/blog/porkploinpflank-3',
+      url: '/blog/porkploinpflank-3',
       title: 'Pork loin flank',
       summary: 'Bacon ipsum dolor amet bacon bresaola strip steak short loin pork loin landjaeger pig turducken andouille capicola pastrami sausage alcatra pork filet mignon. Spare ribs corned beef turkey ball tip rump tenderloin. Corned beef meatloaf short ribs turducken hamburger turkey landjaeger rump tenderloin tail fatback beef short loin brisket. Short loin tenderloin shoulder sausage salami fatback. Landjaeger andouille capicola shoulder pastrami pig jerky venison tail jowl beef ribs',
       date: new Date('2016-07-29T19:00:00'),

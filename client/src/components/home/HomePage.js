@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './HomePage.css';
 import Profile from './Profile';
 import FeaturedArticles from './FeaturedArticles';
 import FeaturedProjects from './FeaturedProjects';
 import HeroImg from './hero.jpg';
 import FeatureToggle from '../common/FeatureToggle';
+
+import './HomePage.css';
 
 const HomePage = ({ page, profile, articles, projects, talks, }) => (
   <div className='HomePage'>
