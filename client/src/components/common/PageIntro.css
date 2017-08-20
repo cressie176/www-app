@@ -1,0 +1,12 @@
+.page-intro {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.page-intro .page-intro__citation {
+  color: var(--white);
+}
+
+.page-intro__image {
+  width: 100%
+}

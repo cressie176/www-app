@@ -1,5 +1,10 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans', sans-serif;
+:root {
+  --black: #000;
+  --dark-grey: #111;
+  --light-grey: #ccc;
+  --white: #fff;
+  --text-colour: #333;
+  --primary-colour: #23ccf2;
+  --alt-colour: #777;
+  --error-colour: #f53355;
 }

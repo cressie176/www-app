@@ -1,5 +1,12 @@
+// React / Redux
 import React, { Component, } from 'react';
 import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
+import { createStore, combineReducers, applyMiddleware, } from 'redux';
+import thunk from 'redux-thunk';
+import { Provider, } from 'react-redux';
+import { composeWithDevTools, } from 'redux-devtools-extension';
+
+// Components
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import HomePage from './components/home/HomePage';
@@ -8,19 +15,23 @@ import LegalPage from './components/legal/LegalPage';
 import ErrorPage from './components/error/ErrorPage';
 import FeatureToggleQueryParser from './components/common/FeatureToggleQueryParser';
 import ScrollToTop from './components/common/ScrollToTop';
+
+// Actions
 import { removeAllObfuscation, } from './actions/obfuscationActions';
+
+// Reducers
 import software from './reducers/softwareReducer';
 import obfuscation from './reducers/obfuscationReducer';
 import featureToggles from './reducers/featureTogglesReducer';
-import { createStore, combineReducers, applyMiddleware, } from 'redux';
-import thunk from 'redux-thunk'; import { Provider, } from 'react-redux';
-import { composeWithDevTools, } from 'redux-devtools-extension';
+
+// Miscellaneous
 import content from './content';
 import 'autotrack/autotrack.js';
 
+// CSS
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './App.css'; // Must be imported after bootstrap css
 
 /***************************************************************
 Using require and assigning jQuery to window to workaround the

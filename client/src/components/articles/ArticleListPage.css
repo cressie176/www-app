@@ -2,6 +2,16 @@
   margin-bottom: 30px;
 }
 
+.article-list-page .page-intro__wrapper {
+  text-align: center;
+  background-color: var(--primary-colour);
+  color: var(--white);
+}
+
+.article-list-page .page-intro {
+  margin-bottom: 40px;
+}
+
 .article-list {
   margin-top: 30px;
   margin-bottom: 30px;

@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import FooterSpotlights from './FooterSpotlights';
 import Copyright from './Copyright';
 
-import './Footer.css';
-
 const Footer = ({ spotlights, copyright, }) => {
   return (
     <footer className='full-width'>

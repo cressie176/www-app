@@ -1,6 +1,7 @@
-.error-page__title__wrapper {
-  color: var(--white);
+.error-page .page-intro__wrapper {
+  text-align: left;
   background-color: var(--error-colour);
+  color: var(--white);
 }
 
 .error-page__title {

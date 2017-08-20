@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './Copyright.css';
+
 const Copyright = ({year, owner, rights,}) => (
-  <div className='footer__copyright gutter'>
+  <div className='copyright gutter'>
     <div className='row'>
       <div className='col-sm-offset-1 col-sm-10'>
         <span className='text'><span className='text-nowrap'>&copy; {year} {owner}.</span> <span className='text-nowrap'>{rights}</span></span>

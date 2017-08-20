@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LinksSpotlight from '../common/LinksSpotlight';
 
+import './FooterSpotlights.css';
+
 const FooterSpotlights = ({spotlights,}) => (
   <div className='footer__spotlights gutter'>
     <div className='row'>

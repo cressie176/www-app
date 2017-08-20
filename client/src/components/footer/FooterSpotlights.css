@@ -44,10 +44,3 @@
 .footer__spotlights .icon-list__item--social .icon-list__item__icon {
   margin-right: 0px;
 }
-
-.footer__copyright {
-  background-color: var(--black);
-  color: var(--light-grey);
-  padding-top: 20px;
-  padding-bottom: 20px;
-}

@@ -9,7 +9,7 @@ import FeatureToggle from '../common/FeatureToggle';
 import './HomePage.css';
 
 const HomePage = ({ page, profile, articles, projects, talks, }) => (
-  <div className='HomePage'>
+  <div className='page home-page'>
     <div className='row'>
       <img className='hero' alt='hero' src={HeroImg} />
     </div>

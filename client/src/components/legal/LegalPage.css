@@ -1,19 +1,17 @@
-.legal-page__title__wrapper {
-  color: var(--white);
+.legal-page .page-intro__wrapper {
+  text-align: left;
   background-color: var(--alt-colour);
-  margin-bottom: 20px;
+  color: var(--white);
 }
 
-.legal-page__title {
-  line-height: 63px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+.legal-page .page-intro {
+  margin-bottom: 40px;
 }
 
-.legal-page__content li {
+.legal-page .blurb {
+  margin-bottom: 60px;
+}
+
+.legal-page .blurb li {
   margin-bottom: 10px;
-}
-
-.legal-page__content {
-  margin-bottom: 30px;
 }
