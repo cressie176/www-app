@@ -23,9 +23,10 @@ import { removeAllObfuscation, } from './actions/obfuscationActions';
 import software from './reducers/softwareReducer';
 import obfuscation from './reducers/obfuscationReducer';
 import featureToggles from './reducers/featureTogglesReducer';
+import content from './reducers/contentReducer';
 
 // Miscellaneous
-import content from './content';
+import data from './content';
 import 'autotrack/autotrack.js';
 
 // CSS
@@ -44,13 +45,14 @@ following errors on npm start and npm test:
 window.jQuery = window.$ = require('jquery');
 require('bootstrap/dist/js/bootstrap.min.js');
 
-const config = Object.assign({ featureToggles: {}, }, window.config);
-
+const initialState = Object.assign({}, { content: data, featureToggles: {} }, window.config);
+console.log(initialState)
 const store = createStore(combineReducers({
   software,
   obfuscation,
   featureToggles,
-}), config, composeWithDevTools(
+  content,
+}), initialState, composeWithDevTools(
   applyMiddleware(thunk)
 ));
 
@@ -67,35 +69,27 @@ class App extends Component {
             <FeatureToggleQueryParser />
             <div className='container-fluid' onTouchStart={() => this.removeAllObfuscation()}>
               <Header
-                navigation={content.navigation}
+                navigation={data.navigation}
               />
               <Switch>
                 <Route path='/legal/terms-and-conditions' render={() =>
-                  <LegalPage
-                    title={content['terms-and-conditions'].title}
-                    html={content['terms-and-conditions'].html}
-                    type='terms-and-conditions'
-                  />
+                  <LegalPage id='terms-and-conditions' />
                 } />
                 <Route path='/legal/privacy-policy' render={() =>
-                  <LegalPage
-                    title={content['privacy-policy'].title}
-                    html={content['privacy-policy'].html}
-                    type='privacy-policy'
-                  />
+                  <LegalPage id='privacy-policy' />
                 } />
                 <Route exact path='/' render={() =>
                   <HomePage
-                    page={content.pages.home}
-                    profile={content.profile}
-                    articles={content.articles}
-                    projects={content.projects}
-                    talks={content.talks}
+                    page={data.pages.home}
+                    profile={data.profile}
+                    articles={data.articles}
+                    projects={data.projects}
+                    talks={data.talks}
                   />
                 } />
                 <Route exact path='/blog' render={() =>
                   <ArticleListPage
-                    page={content.pages.blog}
+                    page={data.pages.blog}
                   />
                 } />
                 <Route path='/' render={() =>
@@ -103,8 +97,8 @@ class App extends Component {
                 } />
               </Switch>
               <Footer
-                spotlights={content.footer.spotlights}
-                copyright={content.copyright}
+                spotlights={data.footer.spotlights}
+                copyright={data.copyright}
               />
             </div>
           </ScrollToTop>
