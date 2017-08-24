@@ -25,7 +25,7 @@ const ArticleList = ({ articles, }) => (
       citation={
         {
           url: 'https://xkcd.com/386/',
-          text: 'Duty Class - xkcd',
+          text: 'Duty Calls - xkcd',
         }
       }
       image={
