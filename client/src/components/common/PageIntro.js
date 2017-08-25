@@ -8,11 +8,13 @@ const PageIntro = ({ icon, title, citation, image, }) => (
     <div className='page-intro'>
       <div className='row'>
         <div className='col-md-offset-1 col-md-8'>
-          <h1 className='page-intro__title' >
-            { icon && <i className={`fa ${icon} page-intro__icon`} aria-hidden='true'></i> }
-            {title}
-          </h1>
-          { citation ? <a className='page-intro__citation' href='https://xkcd.com/386/' >{citation.text}</a> : null }
+          <div className='page-intro__details'>
+            <h1 className='page-intro__title' >
+              { icon && <i className={`fa ${icon} page-intro__icon`} aria-hidden='true'></i> }
+              {title}
+            </h1>
+            { citation ? <a className='page-intro__citation' href='https://xkcd.com/386/' >{citation.text}</a> : null }
+          </div>
         </div>
         {
           image ?

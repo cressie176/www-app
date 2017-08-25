@@ -23,6 +23,7 @@
 
 .article-list__article__thumbnail {
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .article-list__article__title {
@@ -58,4 +59,17 @@
   background-color: grey;
   border-color: grey;
 }
+
+.article-list-page .page-intro__image {
+  width: 200px;
+  height: 220px;
+}
+
+@media only screen and (max-width : 991px) {
+  .article-list-page .page-intro__image {
+    width: 300px;
+    height: 330px;
+  }
+}
+
 

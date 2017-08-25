@@ -9,12 +9,9 @@
 
 .page-intro .page-intro__citation {
   color: var(--white);
-  margin-bottom: 20px;
 }
 
 .page-intro__image {
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 100%;
-  max-width: 330px;
 }
