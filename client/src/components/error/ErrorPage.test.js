@@ -13,6 +13,7 @@ describe('ErrorPage', () => {
         message='Oh '
         finishedTyping={false}
         typeKey={() => {}}
+        finishTyping={() => {}}
       />
     );
 
@@ -29,6 +30,7 @@ describe('ErrorPage', () => {
         message='Oh Noes!'
         finishedTyping={true}
         typeKey={() => {}}
+        finishTyping={() => {}}
       />
     );
 
@@ -40,11 +42,12 @@ describe('ErrorPage', () => {
     expect.assertions(1);
 
     const onTypeKey = key => {
+      clearTimeout(wrapper.instance().timeout);
       expect(key).toBe('N');
       done();
     };
 
-    shallow(
+    const wrapper = shallow(
       <ErrorPage
         title='Oh Noes!'
         type='not-found'
@@ -52,6 +55,7 @@ describe('ErrorPage', () => {
         message='Oh '
         finishedTyping={false}
         typeKey={onTypeKey}
+        finishTyping={() => {}}
       />
     );
   });
