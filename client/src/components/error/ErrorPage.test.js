@@ -40,10 +40,12 @@ describe('ErrorPage', () => {
 
   it('should type next letter', (done) => {
     expect.assertions(1);
+    let expected = true;
 
     const onTypeKey = key => {
       clearTimeout(wrapper.instance().timeout);
-      expect(key).toBe('N');
+      if (expected) expect(key).toBe('N');
+      expected = false; // Jest suffers from test bleed
       done();
     };
 
