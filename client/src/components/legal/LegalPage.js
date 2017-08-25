@@ -19,9 +19,9 @@ export class LegalPage extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
-};
+}
 
 LegalPage.propTypes = {
   id: PropTypes.string,
@@ -30,8 +30,8 @@ LegalPage.propTypes = {
 
 function mapStateToProps(state, props) {
   return {
-    page: state.content.pages[props.id]
-  }
+    page: state.content.pages[props.id],
+  };
 }
 
 export default connect(mapStateToProps)(LegalPage);

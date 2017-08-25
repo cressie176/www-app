@@ -23,6 +23,7 @@ import { removeAllObfuscation, } from './actions/obfuscationActions';
 import software from './reducers/softwareReducer';
 import obfuscation from './reducers/obfuscationReducer';
 import featureToggles from './reducers/featureTogglesReducer';
+import error from './reducers/errorReducer';
 import content from './reducers/contentReducer';
 
 // Miscellaneous
@@ -45,12 +46,13 @@ following errors on npm start and npm test:
 window.jQuery = window.$ = require('jquery');
 require('bootstrap/dist/js/bootstrap.min.js');
 
-const initialState = Object.assign({}, { content: data, featureToggles: {} }, window.config);
-console.log(initialState)
+const initialState = Object.assign({}, { content: data, featureToggles: {}, }, window.config);
+
 const store = createStore(combineReducers({
   software,
   obfuscation,
   featureToggles,
+  error,
   content,
 }), initialState, composeWithDevTools(
   applyMiddleware(thunk)

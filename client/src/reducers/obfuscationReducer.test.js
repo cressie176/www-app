@@ -11,7 +11,7 @@ describe('Obfuscation Reducer', () => {
     expect(state.contact).toBe(false);
   });
 
-  it('should work on uninitialised items ', () => {
+  it('should work on uninitialised items', () => {
     const state = obfuscationReducer({}, { type: REMOVE_ELEMENT_OBFUSCATION, id: 'other', });
     expect(state.other).toBe(false);
   });
