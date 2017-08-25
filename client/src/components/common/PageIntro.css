@@ -7,6 +7,10 @@
   margin-bottom: 20px;
 }
 
+.page-intro__details {
+  margin-bottom: 20px;
+}
+
 .page-intro .page-intro__citation {
   color: var(--white);
 }
