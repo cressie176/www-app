@@ -21,7 +21,8 @@ module.exports = function(options = {}) {
             new handlers.KeyFilter({ include: config.include, exclude: config.exclude, }),
             new handlers.Unflatten(),
         ],}).on('message', event => {
-            if (transport) transport(event);
+            if (event.error && event.error.code === '__test') return;
+            transport(event);
         });
 
         cb(null, logger);
