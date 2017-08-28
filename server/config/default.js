@@ -1,3 +1,5 @@
+import path from 'path';
+
 module.exports = {
   auth: {
     roles: {
@@ -18,6 +20,9 @@ module.exports = {
         },
       },
     },
+  },
+  cms: {
+    path: path.join(process.cwd(), 'server', 'content'),
   },
   logger: {
     transport: 'bunyan',
