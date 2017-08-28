@@ -1,4 +1,7 @@
 module.exports = {
+  server: {
+    port: 3001,
+  },
   routes: {
     client: {
       public: {
