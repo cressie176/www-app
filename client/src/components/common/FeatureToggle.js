@@ -14,7 +14,7 @@ FeatureToggle.propTypes = {
 
 function mapStateToProps(state, props) {
   return {
-    enabled: !!state.featureToggles[props.id],
+    enabled: !!state.config.featureToggles[props.id],
   };
 }
 

@@ -22,7 +22,7 @@ import { removeAllObfuscation, } from './actions/obfuscationActions';
 // Reducers
 import software from './reducers/softwareReducer';
 import obfuscation from './reducers/obfuscationReducer';
-import featureToggles from './reducers/featureTogglesReducer';
+import config from './reducers/configReducer';
 import error from './reducers/errorReducer';
 import channels from './reducers/channelsReducer';
 
@@ -46,12 +46,12 @@ following errors on npm start and npm test:
 window.jQuery = window.$ = require('jquery');
 require('bootstrap/dist/js/bootstrap.min.js');
 
-const initialState = Object.assign({}, { featureToggles: window.config.featureToggles, });
+const initialState = Object.assign({}, { config: window.config, });
 
 const store = createStore(combineReducers({
+  config,
   software,
   obfuscation,
-  featureToggles,
   error,
   channels,
 }), initialState, composeWithDevTools(
