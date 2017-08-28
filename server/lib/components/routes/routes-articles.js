@@ -2,7 +2,7 @@ import bodyParser from 'body-parser';
 
 module.exports = function(options = {}) {
 
-  function start({ app, cms, }, cb) {
+  function start({ config, app, cms, }, cb) {
 
     app.use(bodyParser.json());
 

@@ -4,6 +4,7 @@
   "description": "The server half of www.stephen-cresswell.net",
   "main": "server/build/index.js",
   "scripts": {
+    "start": "concurrently 'npm run start-server' 'npm run start-client'",
     "start-server": "nodemon server/index.js --exec babel-node",
     "start-client": "cd client; npm start",
     "test": "npm run test-server && npm run test-client",

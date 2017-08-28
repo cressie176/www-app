@@ -25,6 +25,7 @@ import obfuscation from './reducers/obfuscationReducer';
 import featureToggles from './reducers/featureTogglesReducer';
 import error from './reducers/errorReducer';
 import content from './reducers/contentReducer';
+import articles from './reducers/articlesReducer';
 
 // Miscellaneous
 import data from './content';
@@ -54,6 +55,7 @@ const store = createStore(combineReducers({
   featureToggles,
   error,
   content,
+  articles,
 }), initialState, composeWithDevTools(
   applyMiddleware(thunk)
 ));

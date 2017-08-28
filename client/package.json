@@ -2,6 +2,7 @@
   "name": "www-app-client",
   "version": "1.0.0",
   "private": true,
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "autotrack": "^2.4.1",
     "bootstrap": "^3.3.7",

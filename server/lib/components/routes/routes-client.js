@@ -26,7 +26,7 @@ module.exports = function() {
     app.use(prepper.disable, app.locals.hasRole('guest'), express.static('./client/build', { cachecontrol: true, maxage: '1d', }));
 
     // Ensures 404's are handled by the app
-    app.get('*', prepper.enable, app.locals.hasRole('guest'), sendIndex);
+    app.get(/\/((?!api).)*/, prepper.enable, app.locals.hasRole('guest'), sendIndex);
 
     function sendIndex(req, res) {
       res.sendFile(path.join(process.cwd(), 'client', 'build', 'index.html'));
