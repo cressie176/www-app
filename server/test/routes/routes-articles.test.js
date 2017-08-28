@@ -1,8 +1,8 @@
 import request from 'request-promise';
 import errors from 'request-promise/errors';
-import createSystem from './test-system';
+import createSystem from '../test-system';
 
-describe('API', () => {
+describe('Articles', () => {
 
   let system;
   let config;
