@@ -27,7 +27,7 @@ describe('Articles', () => {
 
       expect.assertions(8);
 
-      cms.listArticles = function(cb) {
+      cms.listArticles = function(channel, cb) {
         return cb(null, {
           total: 4,
           items: [
@@ -73,7 +73,7 @@ describe('Articles', () => {
 
       expect.assertions(1);
 
-      cms.listArticles = function(cb) {
+      cms.listArticles = function(channel, cb) {
         return cb(Object.assign(new Error('Oh Noes!'), { code: '__test', }));
       };
 

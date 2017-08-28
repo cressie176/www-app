@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import parseJson from 'safe-json-parse/callback';
+import R from 'ramda';
 
 module.exports = function(options = {}) {
 
@@ -23,8 +24,10 @@ module.exports = function(options = {}) {
       });
     }
 
-    function listArticles(cb) {
-      const articles = Object.keys(content.articles).map(toArticleList);
+    function listArticles(channel, cb) {
+      const articles = Object.keys(content.articles)
+        .map(toArticleList)
+        .filter(byChannel(channel));
       return cb(null, {
         items: articles,
         total: articles.length,
@@ -43,6 +46,10 @@ module.exports = function(options = {}) {
     function toArticle(raw) {
       return raw ? Object.assign({}, raw, { date: new Date(raw.date), }) : raw;
     }
+
+    const byChannel = R.curry(function(channel, article) {
+      return article.channel === channel;
+    });
 
     loadContent(tag, err => {
       if (err) return cb(err);

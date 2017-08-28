@@ -24,7 +24,7 @@ import software from './reducers/softwareReducer';
 import obfuscation from './reducers/obfuscationReducer';
 import featureToggles from './reducers/featureTogglesReducer';
 import error from './reducers/errorReducer';
-import articles from './reducers/articlesReducer';
+import channels from './reducers/channelsReducer';
 
 // Miscellaneous
 import data from './content';
@@ -46,14 +46,14 @@ following errors on npm start and npm test:
 window.jQuery = window.$ = require('jquery');
 require('bootstrap/dist/js/bootstrap.min.js');
 
-const initialState = Object.assign({}, { featureToggles: {}, }, window.config);
+const initialState = Object.assign({}, { featureToggles: window.config.featureToggles, });
 
 const store = createStore(combineReducers({
   software,
   obfuscation,
   featureToggles,
   error,
-  articles,
+  channels,
 }), initialState, composeWithDevTools(
   applyMiddleware(thunk)
 ));
@@ -94,6 +94,12 @@ class App extends Component {
                     page={data.pages.blog}
                   />
                 } />
+                <Route exact path='/talks' render={() =>
+                  <ArticleListPage
+                    page={data.pages.talks}
+                  />
+                } />
+
                 <Route path='/' render={() =>
                   <ErrorPage title='Page Not Found' html='The page you have requested has not been found.' />
                 } />

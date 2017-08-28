@@ -1,6 +1,8 @@
 import path from 'path';
 import express from 'systemic-express/express';
 
+const ALL_NON_API_REQUESTS = /^(?!\/api\/).*/;
+
 module.exports = function() {
 
   function start({ app, config, logger, prepper,}, cb) {
@@ -26,9 +28,9 @@ module.exports = function() {
     app.use(prepper.disable, app.locals.hasRole('guest'), express.static('./client/build', { cachecontrol: true, maxage: '1d', }));
 
     // Ensures 404's are handled by the app
-    app.get(/\/((?!api).)*/, prepper.enable, app.locals.hasRole('guest'), sendIndex);
+    app.get(ALL_NON_API_REQUESTS, prepper.enable, app.locals.hasRole('guest'), sendIndex);
 
-    function sendIndex(req, res) {
+    function sendIndex(req, res, next) {
       res.sendFile(path.join(process.cwd(), 'client', 'build', 'index.html'));
     }
 

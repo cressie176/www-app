@@ -12,7 +12,7 @@ describe('CMS', () => {
   };
 
 
-  it('should get list of articles', done => {
+  it('should get list of articles by channel', done => {
 
     expect.assertions(4);
 
@@ -20,15 +20,14 @@ describe('CMS', () => {
 
     component().start({ config, logger, tag, }, (err, cms) => {
       expect(err).toBe(null);
-      cms.listArticles((err, articles) => {
+      cms.listArticles('blog', (err, articles) => {
         expect(err).toBe(null);
-        expect(articles.items.length).toBe(4);
-        expect(articles.total).toBe(4);
+        expect(articles.items.length).toBe(3);
+        expect(articles.total).toBe(3);
         done();
       });
     });
   });
-
 
   it('should convert raw article to decorated one', done => {
 
@@ -38,14 +37,13 @@ describe('CMS', () => {
 
     component().start({ config, logger, tag, }, (err, cms) => {
       expect(err).toBe(null);
-      cms.listArticles((err, articles) => {
+      cms.listArticles('blog', (err, articles) => {
         expect(err).toBe(null);
         expect(articles.items[0].date.getTime()).toBe(1483228800000);
         done();
       });
     });
   });
-
 
   it('should tolerate no articles', done => {
     expect.assertions(4);
@@ -54,7 +52,23 @@ describe('CMS', () => {
 
     component().start({ config, logger, tag, }, (err, cms) => {
       expect(err).toBe(null);
-      cms.listArticles((err, articles) => {
+      cms.listArticles('blog', (err, articles) => {
+        expect(err).toBe(null);
+        expect(articles.items.length).toBe(0);
+        expect(articles.total).toBe(0);
+        done();
+      });
+    });
+  });
+
+  it('should tolerate missing channel', done => {
+    expect.assertions(4);
+
+    const tag = 'no-articles';
+
+    component().start({ config, logger, tag, }, (err, cms) => {
+      expect(err).toBe(null);
+      cms.listArticles(undefined, (err, articles) => {
         expect(err).toBe(null);
         expect(articles.items.length).toBe(0);
         expect(articles.total).toBe(0);

@@ -62,7 +62,7 @@ const FeaturedArticles = ({ title, icon, articles, link, }) => {
           </div>
         </div>
       </div>
-      {/*
+      {
         <div className='row'>
           <div className='col-md-offset-1 col-md-10'>
             <div className='featured-articles__see-all-link'>
@@ -70,7 +70,7 @@ const FeaturedArticles = ({ title, icon, articles, link, }) => {
             </div>
           </div>
         </div>
-      */}
+      }
     </div>
   );
 };

@@ -23,6 +23,9 @@ describe('www.stephen-cresswell.net', () => {
   });
 
   it('should respond to status requests', async () => {
+
+    expect.assertions(3);
+
     const res = await request({
       url: `http://${config.server.host}:${config.server.port}/__/status`,
       resolveWithFullResponse: true,
@@ -35,6 +38,9 @@ describe('www.stephen-cresswell.net', () => {
   });
 
   it('should respond to application requests', async () => {
+
+    expect.assertions(3);
+
     const res = await request({
       url: `http://${config.server.host}:${config.server.port}/`,
       resolveWithFullResponse: true,
@@ -47,6 +53,9 @@ describe('www.stephen-cresswell.net', () => {
   });
 
   it('should respond to config requests', async () => {
+
+    expect.assertions(4);
+
     const res = await request({
       url: `http://${config.server.host}:${config.server.port}/config.js`,
       resolveWithFullResponse: true,
@@ -62,8 +71,52 @@ describe('www.stephen-cresswell.net', () => {
     expect(context.window.config.foo).toBe('bar');
   });
 
-  it('should protect private resources', async () => {
+  it('should respond to api requests', async () => {
+
+    expect.assertions(3);
+
+    const res = await request({
+      url: `http://${config.server.host}:${config.server.port}/api/1.0/articles?channel=missing`,
+      resolveWithFullResponse: true,
+      json: true,
+    });
+
+    expect(res.statusCode).toBe(200);
+    expect(res.headers['content-type'].toLowerCase()).toBe('application/json; charset=utf-8');
+    expect(res.body.total).toBe(0);
+  });
+
+  it('should respond with 404 to unknown api requests', async () => {
+
     expect.assertions(2);
+
+    await request({
+      url: `http://${config.server.host}:${config.server.port}/api/1.0/unknown`,
+      resolveWithFullResponse: true,
+      json: true,
+    }).catch(errors.StatusCodeError, (reason) => {
+      expect(reason.statusCode).toBe(404);
+      expect(reason.response.headers['content-type'].toLowerCase()).toBe('application/json; charset=utf-8');
+    });
+  });
+
+  it('should respond with index.html to unknown client requests', async () => {
+
+    expect.assertions(2);
+
+    const res = await request({
+      url: `http://${config.server.host}:${config.server.port}/unknown`,
+      resolveWithFullResponse: true,
+    });
+
+    expect(res.statusCode).toBe(200);
+    expect(res.headers['content-type'].toLowerCase()).toBe('text/html; charset=utf-8');
+  });
+
+  it('should protect private resources', async () => {
+
+    expect.assertions(2);
+
     await request({
       url: `http://${config.server.host}:${config.server.port}/__/private`,
       resolveWithFullResponse: true,
@@ -75,6 +128,7 @@ describe('www.stephen-cresswell.net', () => {
   });
 
   it('should log requests under normal circumstances', async () => {
+
     expect.assertions(1);
 
     const handler = jest.fn();
@@ -91,6 +145,7 @@ describe('www.stephen-cresswell.net', () => {
   });
 
   it('should not log request to static resources', async () => {
+
     expect.assertions(1);
 
     const handler = jest.fn();
@@ -108,6 +163,7 @@ describe('www.stephen-cresswell.net', () => {
   });
 
   it('should not log request from StatusCake', async () => {
+
     expect.assertions(1);
 
     const handler = jest.fn();

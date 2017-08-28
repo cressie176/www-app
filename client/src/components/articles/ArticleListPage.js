@@ -3,14 +3,20 @@ import PropTypes from 'prop-types';
 import PageIntro from '../common/PageIntro';
 import ArticleList from './ArticleList';
 import { connect, } from 'react-redux';
-import { fetchArticles, } from '../../actions/articlesActions';
+import { fetchArticles, } from '../../actions/channelActions';
 
 import './ArticleListPage.css';
 
 class ArticleListPage extends React.Component {
 
-  componentWillMount() {
-    this.props.fetchArticles();
+  componentDidMount() {
+    this.props.fetchArticles(this.props.page.channel);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.page.channel !== this.props.page.channel) {
+      this.props.fetchArticles(nextProps.page.channel);
+    }
   }
 
   render() {
@@ -18,28 +24,18 @@ class ArticleListPage extends React.Component {
       <div className='article-list-page'>
 
         <PageIntro
-          title='"Someone is wrong on the internet."'
-          citation={
-            {
-              url: 'https://xkcd.com/386/',
-              text: 'Duty Calls - xkcd',
-            }
-          }
-          image={
-            {
-              url: 'https://imgs.xkcd.com/comics/duty_calls.png',
-              title: 'It\'s Me!',
-            }
-          }
+          title={this.props.page.title}
+          citation={this.props.page.citation}
+          image={this.props.page.image}
         />
 
-        <ArticleList articles={this.props.articles.items} />
+        <ArticleList articles={this.props.channel.articles.items} />
 
         <div className='row'>
           <div className='col-md-offset-4 col-md-8'>
             <div className='article-list-controls'>
               {
-                this.props.isTruncated && <button className='article-list-controls__load-more-button'>Load More</button>
+                this.props.channel.articles.truncated && <button className='article-list-controls__load-more-button'>Load More</button>
               }
             </div>
           </div>
@@ -51,20 +47,19 @@ class ArticleListPage extends React.Component {
 
 ArticleListPage.propTypes = {
   page: PropTypes.object,
-  articles: PropTypes.object,
+  channel: PropTypes.object,
 };
 
 function mapStateToProps(state, props) {
   return {
-    articles: state.articles,
-    isTruncated: state.articles.items.length < state.articles.total,
+    channel: state.channels[props.page.channel] || { articles: { items: [], total: 0, }, },
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    fetchArticles: () => {
-      dispatch(fetchArticles());
+    fetchArticles: (channel) => {
+      dispatch(fetchArticles(channel));
     },
   };
 }

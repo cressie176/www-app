@@ -3,27 +3,32 @@
     "1": {
       "id": 1,
       "title": "Article 1",
-      "date": "2017-01-01T00:00:00.000Z"
+      "date": "2017-01-01T00:00:00.000Z",
+      "channel": "blog"
     },
     "2": {
       "id": 2,
       "title": "Article 2",
-      "date": "2017-01-01T00:00:00.000Z"
+      "date": "2017-01-01T00:00:00.000Z",
+      "channel": "talk"
     },
     "3": {
       "id": 3,
       "title": "Article 3",
-      "date": "2017-01-01T00:00:00.000Z"
+      "date": "2017-01-01T00:00:00.000Z",
+      "channel": "blog"
     },
     "4": {
       "id": 4,
       "title": "Article 4",
-      "date": "2017-01-01T00:00:00.000Z"
+      "date": "2017-01-01T00:00:00.000Z",
+      "channel": "blog"
     },
     "5": {
       "id": 5,
       "title": "Article 5",
-      "date": "2017-01-01T00:00:00.000Z"
+      "date": "2017-01-01T00:00:00.000Z",
+      "channel": "blog"
     }
   }
 }

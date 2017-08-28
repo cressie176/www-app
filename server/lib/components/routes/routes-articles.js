@@ -7,7 +7,8 @@ module.exports = function(options = {}) {
     app.use(bodyParser.json());
 
     app.get('/api/1.0/articles', (req, res, next) => {
-      cms.listArticles((err, articles) => {
+      const channel = req.query.channel;
+      cms.listArticles(channel, (err, articles) => {
         if (err) return next(err);
         res.json({
           total: articles.total,
