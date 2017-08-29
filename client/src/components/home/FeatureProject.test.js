@@ -4,10 +4,15 @@ import { FeaturedProject, } from './FeaturedProject';
 
 describe('FeatureProject', () => {
 
-  it('should render a featured project while fetching download count', () => {
+  it.only('should render a featured project while fetching download count', () => {
 
     const wrapper = shallow(
-      <FeaturedProject id='yadda' title='Yadda' url='https://yadda' summary='meh' />
+      <FeaturedProject
+        id='yadda'
+        project={{ id: 'yadda', title: 'Yadda',  url: 'https://yadda', summary:'meh',}}
+        fetchProject={() => {}}
+        fetchDownloadCount={() => {}}
+      />
     );
 
     expect(wrapper.hasClass('featured-project')).toBe(true);
@@ -21,7 +26,12 @@ describe('FeatureProject', () => {
   it('should render a featured project with download count', () => {
 
     const wrapper = shallow(
-      <FeaturedProject id='yadda' title='Yadda' url='https://yadda' summary='meh' downloads={1000} />
+      <FeaturedProject
+        id='yadda'
+        project={{ id: 'yadda', title: 'Yadda',  url: 'https://yadda', summary:'meh', downloads: 1000, }}
+        fetchProject={()=>{}}
+        fetchDownloadCount={() => {}}
+      />
     );
 
     expect(wrapper.hasClass('featured-project')).toBe(true);

@@ -49,7 +49,7 @@ function mapStateToProps(state, props) {
 function mapDispatchToProps(dispatch) {
   return {
     fetchPage: id => {
-      dispatch(fetchPage(id));
+      dispatch(fetchPage(id, { relative: true, }));
     },
   };
 }

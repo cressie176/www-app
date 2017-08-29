@@ -5,7 +5,7 @@ export const FETCH_ARTICLE_ERROR = 'FETCH_ARTICLE_ERROR';
 
 export function fetchArticle(id, options = { quiet: false, timeout: 5000, }) {
   return async (dispatch) => {
-    dispatch({ type: FETCH_ARTICLE_REQUEST, loading: true, });
+    dispatch({ type: FETCH_ARTICLE_REQUEST, article: { id, loading: true, }, });
 
     let article;
 
@@ -26,12 +26,12 @@ export function fetchArticle(id, options = { quiet: false, timeout: 5000, }) {
       }
     } catch(error) {
       if (!options.quiet) console.error(error); // eslint-disable-line no-console
-      dispatch({ type: FETCH_ARTICLE_ERROR, loading: false, error, });
+      dispatch({ type: FETCH_ARTICLE_ERROR, article: { id, loading: false, error: error, }, });
       return;
     }
 
     return article
-      ? dispatch({ type: FETCH_ARTICLE_SUCCESS, loading: false, article, })
-      : dispatch({ type: FETCH_ARTICLE_NOT_FOUND, loading: false, });
+      ? dispatch({ type: FETCH_ARTICLE_SUCCESS, article: Object.assign({ id, loading: false, }, article), })
+      : dispatch({ type: FETCH_ARTICLE_NOT_FOUND, article: { id, loading: false, missing: true, }, });
   };
 }

@@ -11,6 +11,7 @@ export function fetchPage(id, options = { quiet: false, timeout: 5000, }) {
 
     try {
       const url = `/api/content/1.0/pages/${id}`;
+
       const res = await fetch(url, { timeout: options.timeout, } );
       switch (res.status) {
         case 200: {

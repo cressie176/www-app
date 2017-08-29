@@ -84,7 +84,7 @@ describe('Articles', () => {
         loggerOptions.suppress = true;
 
         await request({
-          url: `http://${config.server.host}:${config.server.port}/api/content/1.0/articles/1`,
+          url: `http://${config.server.host}:${config.server.port}/api/content/1.0/pages/home`,
           resolveWithFullResponse: true,
           json: true,
         }).catch(errors.StatusCodeError, (reason) => {
@@ -93,6 +93,73 @@ describe('Articles', () => {
       });
 
     });
+
+
+    describe('Get Project', () => {
+
+      it('should get a single project by id', async () => {
+
+        expect.assertions(4);
+
+        cms.getProject = function(id, cb) {
+          expect(id).toBe('yadda');
+          return cb(null, {
+            id: 'yadda',
+          });
+        };
+
+        const res = await request({
+          url: `http://${config.server.host}:${config.server.port}/api/content/1.0/projects/yadda`,
+          resolveWithFullResponse: true,
+          json: true,
+        });
+
+        expect(res.statusCode).toBe(200);
+        expect(res.headers['content-type'].toLowerCase()).toBe('application/json; charset=utf-8');
+        expect(res.body.id).toBe('yadda');
+      });
+
+      it('should respond with 404 for missing projects', async () => {
+
+        expect.assertions(2);
+
+        cms.getProject = function(id, cb) {
+          return cb(null, null);
+        };
+
+        loggerOptions.suppress = true;
+
+        await request({
+          url: `http://${config.server.host}:${config.server.port}/api/content/1.0/projects/yadda`,
+          resolveWithFullResponse: true,
+          json: true,
+        }).catch(errors.StatusCodeError, (reason) => {
+          expect(reason.statusCode).toBe(404);
+          expect(reason.response.headers['content-type'].toLowerCase()).toBe('application/json; charset=utf-8');
+        });
+      });
+
+      it('should report errors', async () => {
+
+        expect.assertions(1);
+
+        cms.getProject = function(id, cb) {
+          return cb(new Error('Oh Noes!'));
+        };
+
+        loggerOptions.suppress = true;
+
+        await request({
+          url: `http://${config.server.host}:${config.server.port}/api/content/1.0/projects/yadda`,
+          resolveWithFullResponse: true,
+          json: true,
+        }).catch(errors.StatusCodeError, (reason) => {
+          expect(reason.statusCode).toBe(500);
+        });
+      });
+
+    });
+
 
     describe('List Articles', () => {
 

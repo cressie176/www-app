@@ -29,6 +29,10 @@ module.exports = function(options = {}) {
       return cb(null, content.pages[id]);
     }
 
+    function getProject(id, cb) {
+      return cb(null, content.projects[id]);
+    }
+
     function listArticles(channel, cb) {
       const articles = Object.keys(content.articles)
         .map(toArticleList)
@@ -61,6 +65,7 @@ module.exports = function(options = {}) {
       cb(null, {
         loadContent,
         getPage,
+        getProject,
         listArticles,
         getArticle,
       });

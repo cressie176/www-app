@@ -21,7 +21,7 @@ module.exports = function() {
     // Make runtime client config available to index.html via script tag (yuck!)
     app.get('/config.js', app.locals.hasRole('guest'), (req, res) => {
       res.set('content-type' ,'application/javascript; charset=utf-8');
-      res.set('cache-control' ,'public, max-age=3600, must-revalidate');
+      res.set('cache-control', 'public, max-age=3600, must-revalidate');
       res.send(`this.window.config = ${JSON.stringify(config.public)}`);
     });
 

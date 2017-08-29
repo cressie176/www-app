@@ -100,15 +100,13 @@ class ArticlePage extends React.Component {
 }
 
 ArticlePage.propTypes = {
-  slug: PropTypes.string,
   id: PropTypes.number,
   article: PropTypes.object,
 };
 
 function mapStateToProps(state, props) {
   return {
-    id: parseInt(props.slug.split('-').slice(-1)[0], 10),
-    article: state.article,
+    article: state.articles[props.id] || {},
   };
 }
 

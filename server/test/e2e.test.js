@@ -76,7 +76,7 @@ describe('www.stephen-cresswell.net', () => {
     expect.assertions(3);
 
     const res = await request({
-      url: `http://${config.server.host}:${config.server.port}/api/1.0/articles?channel=missing`,
+      url: `http://${config.server.host}:${config.server.port}/api/content/1.0/articles?channel=missing`,
       resolveWithFullResponse: true,
       json: true,
     });

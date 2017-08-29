@@ -22,12 +22,12 @@ import { removeAllObfuscation, } from './actions/obfuscationActions';
 
 // Reducers
 import config from './reducers/configReducer';
-import software from './reducers/softwareReducer';
 import obfuscation from './reducers/obfuscationReducer';
 import error from './reducers/errorReducer';
 import page from './reducers/pageReducer';
 import channels from './reducers/channelsReducer';
-import article from './reducers/articleReducer';
+import articles from './reducers/articlesReducer';
+import projects from './reducers/projectsReducer';
 
 // Miscellaneous
 import data from './content';
@@ -53,12 +53,12 @@ const initialState = Object.assign({}, { config: window.config, });
 
 const store = createStore(combineReducers({
   config,
-  software,
   obfuscation,
   error,
   page,
   channels,
-  article,
+  articles,
+  projects,
 }), initialState, composeWithDevTools(
   applyMiddleware(thunk)
 ));
@@ -80,13 +80,7 @@ class App extends Component {
               />
               <Switch>
                 <Route exact path='/' render={() =>
-                  <HomePage
-                    page={data.pages.home}
-                    profile={data.profile}
-                    articles={data.articles}
-                    projects={data.projects}
-                    talks={data.talks}
-                  />
+                  <HomePage />
                 } />
                 <Route exact path='/legal/:pageId(terms-and-conditions|privacy-policy)' render={({ match, }) =>
                   <LegalPage id={match.params.pageId} />
@@ -98,7 +92,7 @@ class App extends Component {
                 } />
                 <Route exact path='/:channelId(blog|talks)/:slug' render={({ match, }) =>
                   <ArticlePage
-                    slug={match.params.slug}
+                    id={parseInt(match.params.slug.split('-').slice(-1)[0], 10)}
                   />
                 } />
 

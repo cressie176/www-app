@@ -7,11 +7,24 @@ module.exports = function(options = {}) {
 
     app.use(bodyParser.json());
 
+    app.use('/api/content/1.0', (req, res, next) => {
+      res.set('cache-control', 'public, max-age=3600, must-revalidate');
+      next();
+    });
+
     app.get('/api/content/1.0/pages/:id', app.locals.hasRole('guest'), (req, res, next) => {
       cms.getPage(req.params.id, (err, page) => {
         if (err) return next(err);
         if (!page) return next(Boom.notFound());
         res.json(page);
+      });
+    });
+
+    app.get('/api/content/1.0/projects/:id', app.locals.hasRole('guest'), (req, res, next) => {
+      cms.getProject(req.params.id, (err, project) => {
+        if (err) return next(err);
+        if (!project) return next(Boom.notFound());
+        res.json(project);
       });
     });
 

@@ -3,25 +3,22 @@ import PropTypes from 'prop-types';
 import FeaturedProject from './FeaturedProject';
 import './FeaturedProjects.css';
 
-const FeaturedProjects = ({ title, icon, projects, link, }) => {
+const FeaturedProjects = ({ projects = { items: [], link: {}, }, }) => {
   return (
     <div className='featured-projects'>
       <h2>
         <span className='icon'>
-          <i className={`fa ${icon}`} aria-hidden='true'></i>
+          <i className={`fa ${projects.icon}`} aria-hidden='true'></i>
         </span>
-        {title}
+        {projects.title}
       </h2>
       <ul className='list-group featured-projects__list'>
         {
-          projects.map(project => {
+          projects.items.map((id, index) => {
             return (
               <FeaturedProject
-                key={project.id}
-                id={project.id}
-                title={project.title}
-                url={project.url}
-                summary={project.summary}
+                key={index}
+                id={id}
               />
             );
           })
@@ -29,7 +26,7 @@ const FeaturedProjects = ({ title, icon, projects, link, }) => {
       </ul>
       {/* Disabled for MVP
       <div className='featured-projects__see-all-link'>
-        <a href={link.url}>{link.text}</a>
+        <a href={projects.link.url}>{projects.link.text}</a>
       </div>
       */}
     </div>
@@ -37,10 +34,7 @@ const FeaturedProjects = ({ title, icon, projects, link, }) => {
 };
 
 FeaturedProjects.propTypes = {
-  title: PropTypes.string,
-  icon: PropTypes.string,
-  projects: PropTypes.array,
-  link: PropTypes.object,
+  projects: PropTypes.object,
 };
 
 export default FeaturedProjects;

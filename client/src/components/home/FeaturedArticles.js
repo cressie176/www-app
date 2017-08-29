@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import IconListItem from '../common/IconListItem';
+import FeaturedArticle from './FeaturedArticle';
 
 import './FeaturedArticles.css';
 
-const FeaturedArticles = ({ title, icon, articles, link, }) => {
+const FeaturedArticles = ({ articles = { items: [], link: {}, }, }) => {
   return (
     <div className='featured-articles'>
       <div className='row'>
         <div className='col-md-offset-1 col-md-10'>
           <h2 className='featured-articles__title'>
             <span className='icon'>
-              <i className={`fa ${icon}`} aria-hidden='true'></i>
+              <i className={`fa ${articles.icon}`} aria-hidden='true'></i>
             </span>
-            {title}
+            {articles.title}
           </h2>
         </div>
       </div>
@@ -21,41 +21,12 @@ const FeaturedArticles = ({ title, icon, articles, link, }) => {
         <div className='col-md-offset-1 col-md-10'>
           <div className='row'>
             {
-              articles.map((article) => {
+              articles.items.map((id, index) => {
                 return (
-                  <div key={article.id} className='col-md-4 featured-article'>
-                    <div className='featured-article__title__wrapper'>
-                      <h3 className='featured-article__title'><a className='featured-article__title__link' href={article.url} dangerouslySetInnerHTML={{__html: article.title,}} /></h3>
-                    </div>
-                    <img className='featured-article__thumbnail' src={article.images.thumbnail.url} alt={article.title} />
-                    <div className='featured-article__summary' dangerouslySetInnerHTML={{__html: article.summary,}} />
-                    <ul className='featured-article__details'>
-                      {
-                        article.event ? (
-                          <IconListItem icon='fa-group' text={article.event} url={article.url} type='event' />
-                        ) : null
-                      }
-                      {
-                        article.date ? (
-                          <IconListItem icon='fa-calendar' text={article.date.toLocaleString()} type='date' />
-                        ) : null
-                      }
-                      {
-                        article.location ? (
-                          <IconListItem icon='fa-location-arrow' text={article.location} type='location' />
-                        ) : null
-                      }
-                      {
-                        article.downloads ? (
-                          article.downloads.map(download => {
-                            return (
-                              <IconListItem key={download.url} icon={download.icon} text={download.text} url={download.url} type='download' />
-                            );
-                          })
-                        ) : null
-                      }
-                    </ul>
-                  </div>
+                  <FeaturedArticle
+                    key={index}
+                    id={id}
+                  />
                 );
               })
             }
@@ -66,7 +37,7 @@ const FeaturedArticles = ({ title, icon, articles, link, }) => {
         <div className='row'>
           <div className='col-md-offset-1 col-md-10'>
             <div className='featured-articles__see-all-link'>
-              <a href={link.url}>{link.text}</a>
+              <a href={articles.link.url}>{articles.link.text}</a>
             </div>
           </div>
         </div>
@@ -76,10 +47,7 @@ const FeaturedArticles = ({ title, icon, articles, link, }) => {
 };
 
 FeaturedArticles.propTypes = {
-  title: PropTypes.string,
-  icon: PropTypes.string,
-  articles: PropTypes.array,
-  link: PropTypes.object,
+  articles: PropTypes.object,
 };
 
 export default FeaturedArticles;

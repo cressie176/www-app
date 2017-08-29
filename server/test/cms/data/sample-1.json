@@ -4,6 +4,11 @@
       "id": "home"
     }
   },
+  "projects": {
+    "yadda": {
+      "id": "yadda"
+    }
+  },
   "articles": {
     "1": {
       "id": 1,

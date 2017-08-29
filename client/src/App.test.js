@@ -1,21 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import nock from 'nock';
-
+import fetchMock from 'fetch-mock';
 
 describe('App', () => {
 
   afterEach(() => {
-    nock.cleanAll();
+    fetchMock.restore();
   });
 
   it('should render without crashing', () => {
 
-    nock('https://api.npmjs.org')
-      .get(/.*/)
-      .times(100)
-      .reply(200, { downloads: 1000, });
+    fetchMock.get('*', {});
 
     const div = document.createElement('div');
     ReactDOM.render(<App />, div);

@@ -5,12 +5,12 @@ import {
   FETCH_DOWNLOAD_COUNT_REQUEST,
   FETCH_DOWNLOAD_COUNT_SUCCESS,
   FETCH_DOWNLOAD_COUNT_ERROR,
-} from '../actions/softwareActions';
+} from '../actions/projectActions';
 import nock from 'nock';
 
 const mockStore = configureStore([thunk,]);
 
-describe('Software Actions', () => {
+describe('Project Actions', () => {
 
   afterEach(() => {
     nock.cleanAll();
