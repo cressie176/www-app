@@ -27,6 +27,6 @@ module.exports = {
     },
   },
   logger: {
-    transport: 'console',
+    transport: 'human',
   },
 };

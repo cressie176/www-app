@@ -11,6 +11,7 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import HomePage from './components/home/HomePage';
 import ArticleListPage from './components/articles/ArticleListPage';
+import ArticlePage from './components/articles/ArticlePage';
 import LegalPage from './components/legal/LegalPage';
 import ErrorPage from './components/error/ErrorPage';
 import FeatureToggleQueryParser from './components/common/FeatureToggleQueryParser';
@@ -20,11 +21,12 @@ import ScrollToTop from './components/common/ScrollToTop';
 import { removeAllObfuscation, } from './actions/obfuscationActions';
 
 // Reducers
+import config from './reducers/configReducer';
 import software from './reducers/softwareReducer';
 import obfuscation from './reducers/obfuscationReducer';
-import config from './reducers/configReducer';
 import error from './reducers/errorReducer';
 import channels from './reducers/channelsReducer';
+import article from './reducers/articleReducer';
 
 // Miscellaneous
 import data from './content';
@@ -54,6 +56,7 @@ const store = createStore(combineReducers({
   obfuscation,
   error,
   channels,
+  article,
 }), initialState, composeWithDevTools(
   applyMiddleware(thunk)
 ));
@@ -89,14 +92,14 @@ class App extends Component {
                     talks={data.talks}
                   />
                 } />
-                <Route exact path='/blog' render={() =>
+                <Route exact path='/:channelId(blog|talks)' render={({ match, }) =>
                   <ArticleListPage
-                    page={data.pages.blog}
+                    page={data.pages[match.params.channelId]}
                   />
                 } />
-                <Route exact path='/talks' render={() =>
-                  <ArticleListPage
-                    page={data.pages.talks}
+                <Route exact path='/:channelId(blog|talks)/:slug' render={({ match, }) =>
+                  <ArticlePage
+                    slug={match.params.slug}
                   />
                 } />
 

@@ -221,7 +221,7 @@ module.exports = {
     },
     '3': {
       id: '3',
-      url: '/blog/porkploinpflank-3',
+      url: '/blog/pork-loin-flank-3',
       title: 'Pork loin flank',
       summary: 'Bacon ipsum dolor amet bacon bresaola strip steak short loin pork loin landjaeger pig turducken andouille capicola pastrami sausage alcatra pork filet mignon. Spare ribs corned beef turkey ball tip rump tenderloin. Corned beef meatloaf short ribs turducken hamburger turkey landjaeger rump tenderloin tail fatback beef short loin brisket. Short loin tenderloin shoulder sausage salami fatback. Landjaeger andouille capicola shoulder pastrami pig jerky venison tail jowl beef ribs',
       date: new Date('2016-07-29T19:00:00'),

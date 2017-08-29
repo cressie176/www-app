@@ -1,4 +1,5 @@
 import bodyParser from 'body-parser';
+import Boom from 'boom';
 
 module.exports = function(options = {}) {
 
@@ -17,12 +18,10 @@ module.exports = function(options = {}) {
       });
     });
 
-    app.get('/api/1.0/articles/:article', (req, res, next) => {
-      const articleId = getArticleId(req.params.article);
-      cms.getArticle(articleId, (err, article) => {
+    app.get('/api/1.0/articles/:id', (req, res, next) => {
+      cms.getArticle(parseInt(req.params.id, 10), (err, article) => {
         if (err) return next(err);
-        if (!article) return res.status(404).json({ message: 'Not found', }); // TODO replace with negative lookahead in routes-client.js
-        if (article.slug !== req.params.article) return res.redirect(`/api/1.0/articles/${article.slug}`);
+        if (!article) return next(Boom.notFound());
         res.json(article);
       });
     });
@@ -32,11 +31,6 @@ module.exports = function(options = {}) {
 
   function byDateAndId(a, b) {
     return b.date.getTime() - a.date.getTime() || b.id - a.id;
-  }
-
-  function getArticleId(slug) {
-    const list = slug.split('-');
-    return parseInt(list[list.length - 1], 10);
   }
 
   return {

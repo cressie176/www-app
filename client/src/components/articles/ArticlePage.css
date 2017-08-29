@@ -1,0 +1,31 @@
+.article-page {
+  margin-bottom: 60px;
+}
+
+.article-page .page-intro__wrapper {
+  text-align: left;
+  background-color: var(--primary-colour);
+  color: var(--white);
+}
+
+.article-page .page-intro {
+  margin-bottom: 30px;
+}
+
+.article-page .image--main {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.article-page .blurb p {
+  margin-bottom: 20px;
+}
+
+.article-page .blurb li {
+  margin-bottom: 10px;
+}
+
+.article-page .blurb ol,
+.article-page .blurb ul {
+  margin-bottom: 20px;
+}

@@ -26,6 +26,6 @@ module.exports = {
     port: 13000,
   },
   logger: {
-    transport: 'console',
+    transport: 'human',
   },
 };

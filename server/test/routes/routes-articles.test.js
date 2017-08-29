@@ -1,6 +1,7 @@
 import request from 'request-promise';
 import errors from 'request-promise/errors';
 import createSystem from '../test-system';
+import human from '../../lib/components/logging/human';
 
 describe('Articles', () => {
 
@@ -8,9 +9,10 @@ describe('Articles', () => {
   let config;
 
   const cms = {};
+  const loggerOptions = {};
 
   beforeAll(cb => {
-    system = createSystem().set('cms', cms).start((err, components) => {
+    system = createSystem().set('transports.human', human(loggerOptions)).set('cms', cms).start((err, components) => {
       if (err) return cb(err);
       config = components.config;
       cb();
@@ -19,6 +21,10 @@ describe('Articles', () => {
 
   afterAll(cb => {
     system.stop(cb);
+  });
+
+  afterEach(() => {
+    loggerOptions.suppress = false;
   });
 
   describe('List Articles', () => {
@@ -77,6 +83,8 @@ describe('Articles', () => {
         return cb(Object.assign(new Error('Oh Noes!'), { code: '__test', }));
       };
 
+      loggerOptions.suppress = true;
+
       await request({
         url: `http://${config.server.host}:${config.server.port}/api/1.0/articles`,
         resolveWithFullResponse: true,
@@ -103,7 +111,7 @@ describe('Articles', () => {
       };
 
       const res = await request({
-        url: `http://${config.server.host}:${config.server.port}/api/1.0/articles/foo-1`,
+        url: `http://${config.server.host}:${config.server.port}/api/1.0/articles/1`,
         resolveWithFullResponse: true,
         json: true,
       });
@@ -122,36 +130,15 @@ describe('Articles', () => {
         return cb(null, null);
       };
 
+      loggerOptions.suppress = true;
+
       await request({
-        url: `http://${config.server.host}:${config.server.port}/api/1.0/articles/meh-1`,
+        url: `http://${config.server.host}:${config.server.port}/api/1.0/articles/1`,
         resolveWithFullResponse: true,
         json: true,
       }).catch(errors.StatusCodeError, (reason) => {
         expect(reason.statusCode).toBe(404);
         expect(reason.response.headers['content-type'].toLowerCase()).toBe('application/json; charset=utf-8');
-      });
-    });
-
-    it('should redirect to canonical url', async () => {
-
-      expect.assertions(2);
-
-      cms.getArticle = function(id, cb) {
-        return cb(null, {
-          id: 1,
-          title: 'foo',
-          slug: 'foo-1',
-        });
-      };
-
-      await request({
-        url: `http://${config.server.host}:${config.server.port}/api/1.0/articles/bar-1`,
-        resolveWithFullResponse: true,
-        json: true,
-        followRedirect: false,
-      }).catch(errors.StatusCodeError, (reason) => {
-        expect(reason.statusCode).toBe(302);
-        expect(reason.response.headers['location']).toBe('/api/1.0/articles/foo-1');
       });
     });
 
@@ -163,8 +150,10 @@ describe('Articles', () => {
         return cb(Object.assign(new Error('Oh Noes!'), { code: '__test', }));
       };
 
+      loggerOptions.suppress = true;
+
       await request({
-        url: `http://${config.server.host}:${config.server.port}/api/1.0/articles/foo-1`,
+        url: `http://${config.server.host}:${config.server.port}/api/1.0/articles/1`,
         resolveWithFullResponse: true,
         json: true,
       }).catch(errors.StatusCodeError, (reason) => {

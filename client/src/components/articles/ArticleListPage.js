@@ -58,7 +58,7 @@ function mapStateToProps(state, props) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    fetchArticles: (channel) => {
+    fetchArticles: channel => {
       dispatch(fetchArticles(channel));
     },
   };

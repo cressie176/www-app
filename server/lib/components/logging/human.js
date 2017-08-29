@@ -15,13 +15,14 @@ const colours = {
     default: chalk.white,
 };
 
-export default function() {
+export default function(options = {}) {
 
   function start(cb) {
     cb(null, onMessage);
   }
 
   function onMessage(event) {
+    if (options.suppress) return;
     const data = merge({}, event, {
       displayTracer: has(event, 'tracer') ? event.tracer.substr(0, 6) : '------',
       displayLevel: event.level.toUpperCase(),
