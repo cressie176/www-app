@@ -26,7 +26,7 @@ module.exports = function(options = {}) {
     }
 
     function getPage(id, cb) {
-      return cb(null, content.pages[id])
+      return cb(null, content.pages[id]);
     }
 
     function listArticles(channel, cb) {

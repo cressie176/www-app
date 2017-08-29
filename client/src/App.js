@@ -25,6 +25,7 @@ import config from './reducers/configReducer';
 import software from './reducers/softwareReducer';
 import obfuscation from './reducers/obfuscationReducer';
 import error from './reducers/errorReducer';
+import page from './reducers/pageReducer';
 import channels from './reducers/channelsReducer';
 import article from './reducers/articleReducer';
 
@@ -55,6 +56,7 @@ const store = createStore(combineReducers({
   software,
   obfuscation,
   error,
+  page,
   channels,
   article,
 }), initialState, composeWithDevTools(
@@ -77,12 +79,6 @@ class App extends Component {
                 navigation={data.navigation}
               />
               <Switch>
-                <Route path='/legal/terms-and-conditions' render={() =>
-                  <LegalPage id='terms-and-conditions' />
-                } />
-                <Route path='/legal/privacy-policy' render={() =>
-                  <LegalPage id='privacy-policy' />
-                } />
                 <Route exact path='/' render={() =>
                   <HomePage
                     page={data.pages.home}
@@ -91,6 +87,9 @@ class App extends Component {
                     projects={data.projects}
                     talks={data.talks}
                   />
+                } />
+                <Route exact path='/legal/:pageId(terms-and-conditions|privacy-policy)' render={({ match, }) =>
+                  <LegalPage id={match.params.pageId} />
                 } />
                 <Route exact path='/:channelId(blog|talks)' render={({ match, }) =>
                   <ArticleListPage

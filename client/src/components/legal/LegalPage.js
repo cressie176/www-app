@@ -1,12 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect, } from 'react-redux';
+import { fetchPage, } from '../../actions/pageActions';
 
 import PageIntro from '../common/PageIntro';
 
 import './LegalPage.css';
 
 export class LegalPage extends React.Component {
+
+  componentDidMount() {
+    this.props.fetchPage(this.props.id);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.id !== this.props.id) {
+      this.props.fetchPage(nextProps.id);
+    }
+  }
+
   render() {
     return (
         <div className={`page legal-page legal-page--{this.props.id}`}>
@@ -30,8 +42,16 @@ LegalPage.propTypes = {
 
 function mapStateToProps(state, props) {
   return {
-    page: state.content.pages[props.id],
+    page: state.page,
   };
 }
 
-export default connect(mapStateToProps)(LegalPage);
+function mapDispatchToProps(dispatch) {
+  return {
+    fetchPage: id => {
+      dispatch(fetchPage(id));
+    },
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(LegalPage);

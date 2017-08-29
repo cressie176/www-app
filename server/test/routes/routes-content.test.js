@@ -38,7 +38,7 @@ describe('Articles', () => {
         cms.getPage = function(id, cb) {
           expect(id).toBe('home');
           return cb(null, {
-            id: 'home'
+            id: 'home',
           });
         };
 
@@ -92,7 +92,7 @@ describe('Articles', () => {
         });
       });
 
-    })
+    });
 
     describe('List Articles', () => {
 
@@ -228,5 +228,5 @@ describe('Articles', () => {
         });
       });
     });
-  })
+  });
 });
