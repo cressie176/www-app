@@ -10,10 +10,7 @@ export default function(state = {}, action)  {
     case FETCH_PAGE_REQUEST:
     case FETCH_PAGE_SUCCESS:
     case FETCH_PAGE_ERROR: {
-      return {
-        ...state,
-        ...action.page,
-      };
+      return action.page || {};
     }
     case FETCH_PAGE_NOT_FOUND: {
       return {

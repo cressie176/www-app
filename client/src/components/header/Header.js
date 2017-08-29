@@ -1,17 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Nav from './Nav';
 
-const Header = ({ navigation, }) => {
+const Header = () => {
   return (
     <header className='full-width'>
-      <Nav items={navigation.items} />
+      <Nav />
     </header>
   );
-};
-
-Header.propTypes = {
-  navigation: PropTypes.object,
 };
 
 export default Header;

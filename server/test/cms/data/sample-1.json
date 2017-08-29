@@ -1,4 +1,6 @@
 {
+  "site": {
+  },
   "pages": {
     "home": {
       "id": "home"

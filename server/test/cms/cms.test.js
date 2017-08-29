@@ -11,6 +11,23 @@ describe('CMS', () => {
     path: `${__dirname}/data`,
   };
 
+  describe('Get Site', () => {
+    it('should get site', done => {
+
+      expect.assertions(3);
+
+      const tag = 'sample-1';
+
+      component().start({ config, logger, tag, }, (err, cms) => {
+        expect(err).toBe(null);
+        cms.getSite((err, site) => {
+          expect(err).toBe(null);
+          expect(site).toBeDefined();
+          done();
+        });
+      });
+    });
+  });
 
   describe('Get Page', () => {
     it('should get page by id', done => {
@@ -93,7 +110,7 @@ describe('CMS', () => {
         expect(err).toBe(null);
         cms.listArticles((err, articles) => {
           expect(err).toBe(null);
-          expect(articles.length).toBe(4);
+          expect(Object.keys(articles).length).toBe(4);
           done();
         });
       });
@@ -109,7 +126,7 @@ describe('CMS', () => {
         expect(err).toBe(null);
         cms.listArticles((err, articles) => {
           expect(err).toBe(null);
-          expect(articles[0].date.getTime()).toBe(1483228800000);
+          expect(articles[1].date.getTime()).toBe(1483228800000);
           done();
         });
       });
@@ -124,7 +141,7 @@ describe('CMS', () => {
         expect(err).toBe(null);
         cms.listArticles((err, articles) => {
           expect(err).toBe(null);
-          expect(articles.length).toBe(0);
+          expect(Object.keys(articles).length).toBe(0);
           done();
         });
       });
@@ -139,7 +156,7 @@ describe('CMS', () => {
         expect(err).toBe(null);
         cms.listArticles((err, articles) => {
           expect(err).toBe(null);
-          expect(articles.length).toBe(0);
+          expect(Object.keys(articles).length).toBe(0);
           done();
         });
       });

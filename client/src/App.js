@@ -1,5 +1,5 @@
 // React / Redux
-import React, { Component, } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
 import { createStore, combineReducers, applyMiddleware, } from 'redux';
 import thunk from 'redux-thunk';
@@ -19,17 +19,18 @@ import ScrollToTop from './components/common/ScrollToTop';
 
 // Actions
 import { removeAllObfuscation, } from './actions/obfuscationActions';
+import { fetchSite, } from './actions/siteActions';
 
 // Reducers
 import config from './reducers/configReducer';
 import obfuscation from './reducers/obfuscationReducer';
 import error from './reducers/errorReducer';
+import site from './reducers/siteReducer';
 import page from './reducers/pageReducer';
 import articles from './reducers/articlesReducer';
 import projects from './reducers/projectsReducer';
 
 // Miscellaneous
-import data from './content';
 import 'autotrack/autotrack.js';
 
 // CSS
@@ -54,6 +55,7 @@ const store = createStore(combineReducers({
   config,
   obfuscation,
   error,
+  site,
   page,
   articles,
   projects,
@@ -62,7 +64,10 @@ const store = createStore(combineReducers({
 ));
 
 
-class App extends Component {
+class App extends React.Component {
+  componentWillMount() {
+    store.dispatch(fetchSite());
+  }
   removeAllObfuscation() {
     store.dispatch(removeAllObfuscation());
   }
@@ -73,9 +78,7 @@ class App extends Component {
           <ScrollToTop>
             <FeatureToggleQueryParser />
             <div className='container-fluid' onTouchStart={() => this.removeAllObfuscation()}>
-              <Header
-                navigation={data.navigation}
-              />
+              <Header />
               <Switch>
                 <Route exact path='/' render={() =>
                   <HomePage />
@@ -84,24 +87,16 @@ class App extends Component {
                   <LegalPage id={match.params.pageId} />
                 } />
                 <Route exact path='/:channel(blog|talks)' render={({ match, }) =>
-                  <ArticleListPage
-                    id={match.params.channel}
-                  />
+                  <ArticleListPage id={match.params.channel} />
                 } />
                 <Route exact path='/:channel(blog|talks)/:slug' render={({ match, }) =>
-                  <ArticlePage
-                    id={parseInt(match.params.slug.split('-').slice(-1)[0], 10)}
-                  />
+                  <ArticlePage id={parseInt(match.params.slug.split('-').slice(-1)[0], 10)} />
                 } />
-
                 <Route path='/' render={() =>
                   <ErrorPage title='Page Not Found' html='The page you have requested has not been found.' />
                 } />
               </Switch>
-              <Footer
-                spotlights={data.footer.spotlights}
-                copyright={data.copyright}
-              />
+              <Footer />
             </div>
           </ScrollToTop>
         </Router>

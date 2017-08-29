@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount, } from 'enzyme';
 import { MemoryRouter as Router, } from 'react-router';
-import Nav from './Nav';
+import { Nav, } from './Nav';
 
 describe('Nav', () => {
 
@@ -9,6 +9,7 @@ describe('Nav', () => {
     const wrapper = mount(
       <Router>
         <Nav
+          location={{ pathname: '/', }}
           items={[
             { text: 'one', path: '/one', },
             { text: 'two', path: '/two', },
@@ -27,6 +28,7 @@ describe('Nav', () => {
     const wrapper = mount(
       <Router>
         <Nav
+          location={{ pathname: '/', }}
           items={[
             { text: 'current', path: '/', },
             { text: 'other', path: '/other', },

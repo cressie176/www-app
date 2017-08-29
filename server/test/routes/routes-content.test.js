@@ -169,24 +169,24 @@ describe('Articles', () => {
 
         cms.listArticles = function(cb) {
           return cb(null,
-            [
-              {
+            {
+              1: {
                 id: 1,
                 date: new Date('2001-01-01T00:00:00.000Z'),
               },
-              {
+              2: {
                 id: 2,
                 date: new Date('2000-01-01T00:00:00.000Z'),
               },
-              {
+              3: {
                 id: 3,
                 date: new Date('2003-01-01T00:00:00.000Z'),
               },
-              {
+              4: {
                 id: 4,
                 date: new Date('2003-01-01T00:00:00.000Z'),
               },
-            ]
+            }
           );
         };
 
@@ -198,12 +198,12 @@ describe('Articles', () => {
 
         expect(res.statusCode).toBe(200);
         expect(res.headers['content-type'].toLowerCase()).toBe('application/json; charset=utf-8');
-        expect(res.body.length).toBe(4);
+        expect(Object.keys(res.body).length).toBe(4);
 
-        expect(res.body[0].id).toBe(1);
-        expect(res.body[1].id).toBe(2);
-        expect(res.body[2].id).toBe(3);
-        expect(res.body[3].id).toBe(4);
+        expect(res.body[1].id).toBe(1);
+        expect(res.body[2].id).toBe(2);
+        expect(res.body[3].id).toBe(3);
+        expect(res.body[4].id).toBe(4);
       });
 
       it('should report errors', async () => {

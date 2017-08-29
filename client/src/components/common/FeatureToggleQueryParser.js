@@ -5,7 +5,7 @@ import { toggleFeatures, } from '../../actions/featureToggleActions';
 import 'url-search-params-polyfill';
 
 export class FeatureToggleQueryParser extends React.Component {
-  componentDidMount() {
+  componentWillMount() {
     const features = new URLSearchParams(this.props.location.search).getAll('feature').reduce((features, token) => {
       const [name, value = 'on', ] = token.split(/=/);
       features[name] = value === 'on' ? true : false;

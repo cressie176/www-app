@@ -24,6 +24,10 @@ module.exports = function(options = {}) {
       });
     }
 
+    function getSite(cb) {
+      return cb(null, content.site);
+    }
+
     function getPage(id, cb) {
       return cb(null, content.pages[id]);
     }
@@ -33,17 +37,15 @@ module.exports = function(options = {}) {
     }
 
     function listArticles(cb) {
-      const articles = Object.keys(content.articles).map(toArticleList);
+      const articles = Object.keys(content.articles).reduce((memo, id) => {
+        return Object.assign(memo, { [id]: toArticle(content.articles[id]), });
+      }, {});
       return cb(null, articles);
     }
 
     function getArticle(id, cb) {
       const raw = content.articles[`${id}`];
       return cb(null, toArticle(raw));
-    }
-
-    function toArticleList(id) {
-      return toArticle(content.articles[id]);
     }
 
     function toArticle(raw) {
@@ -54,6 +56,7 @@ module.exports = function(options = {}) {
       if (err) return cb(err);
       cb(null, {
         loadContent,
+        getSite,
         getPage,
         getProject,
         listArticles,

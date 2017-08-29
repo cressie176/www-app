@@ -12,6 +12,14 @@ module.exports = function(options = {}) {
       next();
     });
 
+    app.get('/api/content/1.0/site', (req, res, next) => {
+      cms.getSite((err, site) => {
+        if (err) return next(err);
+        if (!site) return next(Boom.notFound());
+        res.json(site);
+      });
+    });
+
     app.get('/api/content/1.0/pages/:id', (req, res, next) => {
       cms.getPage(req.params.id, (err, page) => {
         if (err) return next(err);

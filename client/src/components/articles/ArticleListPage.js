@@ -25,7 +25,7 @@ class ArticleListPage extends React.Component {
 
   render() {
     return (
-      <div className='article-list-page'>
+      <div className={`article-list-page article-list-page--${this.props.id}`}>
 
         <PageIntro
           title={this.props.page.title}

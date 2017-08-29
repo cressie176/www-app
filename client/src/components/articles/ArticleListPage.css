@@ -3,10 +3,14 @@
 }
 
 .article-list-page .page-intro__wrapper {
-  text-align: center;
   background-color: var(--primary-colour);
   color: var(--white);
 }
+
+.article-list-page--blog .page-intro__wrapper {
+  text-align: center;
+}
+
 
 .article-list-page .page-intro {
   margin-bottom: 40px;

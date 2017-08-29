@@ -23,10 +23,7 @@ export default function(state = {}, action)  {
     case FETCH_ARTICLES_SUCCESS:
     case FETCH_ARTICLES_ERROR: {
       const articles = Object.keys(action.articles).reduce((memo, id) => {
-        return {
-          ...memo,
-          ...{ [id]: decorate(action.articles[id]), },
-        };
+        return Object.assign(memo, { [id]: decorate(action.articles[id]), });
       }, {});
       return {
         ...state,
