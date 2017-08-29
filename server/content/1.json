@@ -35,6 +35,28 @@
         }
       }
     },
+    "blog": {
+      "title": "Someone is wrong on the internet.",
+      "citation": {
+        "url": "https://xkcd.com/386/",
+        "text": "Duty Calls - xkcd"
+      },
+      "image": {
+        "url": "https://imgs.xkcd.com/comics/duty_calls.png",
+        "title": "It's Me!"
+      }
+    },
+    "talks": {
+      "title": "Talks",
+      "citation": {
+        "url": "https://xkcd.com/386/",
+        "text": "Duty Calls - xkcd"
+      },
+      "image": {
+        "url": "https://imgs.xkcd.com/comics/duty_calls.png",
+        "title": "It's Me!"
+      }
+    },
     "terms-and-conditions": {
       "id": "terms-and-conditions",
       "title": "Terms & Conditions",
@@ -120,6 +142,40 @@
       "title": "Pork loin flank",
       "summary": "Bacon ipsum dolor amet bacon bresaola strip steak short loin pork loin landjaeger pig turducken andouille capicola pastrami sausage alcatra pork filet mignon. Spare ribs corned beef turkey ball tip rump tenderloin. Corned beef meatloaf short ribs turducken hamburger turkey landjaeger rump tenderloin tail fatback beef short loin brisket. Short loin tenderloin shoulder sausage salami fatback. Landjaeger andouille capicola shoulder pastrami pig jerky venison tail jowl beef ribs",
       "html": "Bacon ipsum dolor amet bacon bresaola strip steak short loin pork loin landjaeger pig turducken andouille capicola pastrami sausage alcatra pork filet mignon. Spare ribs corned beef turkey ball tip rump tenderloin. Corned beef meatloaf short ribs turducken hamburger turkey landjaeger rump tenderloin tail fatback beef short loin brisket. Short loin tenderloin shoulder sausage salami fatback. Landjaeger andouille capicola shoulder pastrami pig jerky venison tail jowl beef ribs",
+      "date": "2016-07-29T19:00:00",
+      "images": {
+        "thumbnail": {
+          "url": "/placeholder-360x240.png"
+        },
+        "main": {
+          "url": "/placeholder-2560x640.png"
+        }
+      }
+    },
+    "4": {
+      "id": 4,
+      "channel": "talks",
+      "url": "/talks/bacon-ipsum-dolor-amet-bacon-bresaola-strip-steak-short-4",
+      "title": "Bacon ipsum dolor amet bacon bresaola strip steak short",
+      "summary": "Pork loin flank beef ribs filet mignon pork cow pork chop t-bone turducken. Alcatra ground round pastrami boudin jowl bresaola fatback, salami pork belly picanha andouille. Spare ribs bacon andouille pork. Tri-tip bresaola shoulder t-bone.",
+      "html": "Pork loin flank beef ribs filet mignon pork cow pork chop t-bone turducken. Alcatra ground round pastrami boudin jowl bresaola fatback, salami pork belly picanha andouille. Spare ribs bacon andouille pork. Tri-tip bresaola shoulder t-bone.",
+      "date": "2016-07-29T19:00:00",
+      "images": {
+        "thumbnail": {
+          "url": "/placeholder-360x240.png"
+        },
+        "main": {
+          "url": "/placeholder-2560x640.png"
+        }
+      }
+    },
+    "5": {
+      "id": 5,
+      "channel": "talks",
+      "url": "/talks/andouille-flank-capicola-drumstick-alcatra-ham-5",
+      "title": "Andouille flank capicola drumstick alcatra ham",
+      "summary": "Andouille flank capicola drumstick alcatra ham hock short loin picanha shankle cow. Shank chuck swine, meatloaf ball tip brisket meatball strip steak filet mignon sausage andouille tri-tip. Pork hamburger bresaola biltong andouille pork loin pig pastrami cupim shankle picanha. Frankfurter jerky shank, boudin porchetta jowl chicken pancetta bresaola flank bacon leberkas. Ball tip filet mignon tenderloin, short loin ham spare ribs corned beef cow short ribs.",
+      "html": "Andouille flank capicola drumstick alcatra ham hock short loin picanha shankle cow. Shank chuck swine, meatloaf ball tip brisket meatball strip steak filet mignon sausage andouille tri-tip. Pork hamburger bresaola biltong andouille pork loin pig pastrami cupim shankle picanha. Frankfurter jerky shank, boudin porchetta jowl chicken pancetta bresaola flank bacon leberkas. Ball tip filet mignon tenderloin, short loin ham spare ribs corned beef cow short ribs.",
       "date": "2016-07-29T19:00:00",
       "images": {
         "thumbnail": {

@@ -29,13 +29,9 @@ module.exports = function(options = {}) {
     });
 
     app.get('/api/content/1.0/articles', app.locals.hasRole('guest'), (req, res, next) => {
-      const channel = req.query.channel;
-      cms.listArticles(channel, (err, articles) => {
+      cms.listArticles((err, articles) => {
         if (err) return next(err);
-        res.json({
-          total: articles.total,
-          items: articles.items.sort(byDateAndId),
-        });
+        res.json(articles);
       });
     });
 
@@ -48,10 +44,6 @@ module.exports = function(options = {}) {
     });
 
     cb();
-  }
-
-  function byDateAndId(a, b) {
-    return b.date.getTime() - a.date.getTime() || b.id - a.id;
   }
 
   return {

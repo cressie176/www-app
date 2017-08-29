@@ -26,32 +26,6 @@ module.exports = {
       },
     ],
   },
-  pages: {
-    blog: {
-      title: 'Someone is wrong on the internet.',
-      citation: {
-        url: 'https://xkcd.com/386/',
-        text: 'Duty Calls - xkcd',
-      },
-      image: {
-        url: 'https://imgs.xkcd.com/comics/duty_calls.png',
-        title: 'It\'s Me!',
-      },
-      channel: 'blog',
-    },
-    talks: {
-      title: 'Talks',
-      citation: {
-        url: 'https://xkcd.com/386/',
-        text: 'Duty Calls - xkcd',
-      },
-      image: {
-        url: 'https://imgs.xkcd.com/comics/duty_calls.png',
-        title: 'It\'s Me!',
-      },
-      channel: 'talk',
-    },
-  },
   footer: {
     spotlights: [
       {

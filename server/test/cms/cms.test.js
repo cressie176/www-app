@@ -83,18 +83,17 @@ describe('CMS', () => {
 
   describe('List Articles', () => {
 
-    it('should get list of articles by channel', done => {
+    it('should get list of articles', done => {
 
-      expect.assertions(4);
+      expect.assertions(3);
 
       const tag = 'sample-1';
 
       component().start({ config, logger, tag, }, (err, cms) => {
         expect(err).toBe(null);
-        cms.listArticles('blog', (err, articles) => {
+        cms.listArticles((err, articles) => {
           expect(err).toBe(null);
-          expect(articles.items.length).toBe(3);
-          expect(articles.total).toBe(3);
+          expect(articles.length).toBe(4);
           done();
         });
       });
@@ -108,41 +107,39 @@ describe('CMS', () => {
 
       component().start({ config, logger, tag, }, (err, cms) => {
         expect(err).toBe(null);
-        cms.listArticles('blog', (err, articles) => {
+        cms.listArticles((err, articles) => {
           expect(err).toBe(null);
-          expect(articles.items[0].date.getTime()).toBe(1483228800000);
+          expect(articles[0].date.getTime()).toBe(1483228800000);
           done();
         });
       });
     });
 
     it('should tolerate no articles', done => {
-      expect.assertions(4);
+      expect.assertions(3);
 
       const tag = 'no-content';
 
       component().start({ config, logger, tag, }, (err, cms) => {
         expect(err).toBe(null);
-        cms.listArticles('blog', (err, articles) => {
+        cms.listArticles((err, articles) => {
           expect(err).toBe(null);
-          expect(articles.items.length).toBe(0);
-          expect(articles.total).toBe(0);
+          expect(articles.length).toBe(0);
           done();
         });
       });
     });
 
     it('should tolerate missing channel', done => {
-      expect.assertions(4);
+      expect.assertions(3);
 
       const tag = 'no-content';
 
       component().start({ config, logger, tag, }, (err, cms) => {
         expect(err).toBe(null);
-        cms.listArticles(undefined, (err, articles) => {
+        cms.listArticles((err, articles) => {
           expect(err).toBe(null);
-          expect(articles.items.length).toBe(0);
-          expect(articles.total).toBe(0);
+          expect(articles.length).toBe(0);
           done();
         });
       });

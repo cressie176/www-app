@@ -76,14 +76,14 @@ describe('www.stephen-cresswell.net', () => {
     expect.assertions(3);
 
     const res = await request({
-      url: `http://${config.server.host}:${config.server.port}/api/content/1.0/articles?channel=missing`,
+      url: `http://${config.server.host}:${config.server.port}/api/content/1.0/articles`,
       resolveWithFullResponse: true,
       json: true,
     });
 
     expect(res.statusCode).toBe(200);
     expect(res.headers['content-type'].toLowerCase()).toBe('application/json; charset=utf-8');
-    expect(res.body.total).toBe(0);
+    expect(res.body.length).toBe(5);
   });
 
   it('should respond with 404 to unknown api requests', async () => {

@@ -163,14 +163,13 @@ describe('Articles', () => {
 
     describe('List Articles', () => {
 
-      it('should get list of articles sorted by date desc and id desc', async () => {
+      it('should get list of articles', async () => {
 
-        expect.assertions(8);
+        expect.assertions(7);
 
-        cms.listArticles = function(channel, cb) {
-          return cb(null, {
-            total: 4,
-            items: [
+        cms.listArticles = function(cb) {
+          return cb(null,
+            [
               {
                 id: 1,
                 date: new Date('2001-01-01T00:00:00.000Z'),
@@ -187,8 +186,8 @@ describe('Articles', () => {
                 id: 4,
                 date: new Date('2003-01-01T00:00:00.000Z'),
               },
-            ],
-          });
+            ]
+          );
         };
 
         const res = await request({
@@ -197,16 +196,14 @@ describe('Articles', () => {
           json: true,
         });
 
-
         expect(res.statusCode).toBe(200);
         expect(res.headers['content-type'].toLowerCase()).toBe('application/json; charset=utf-8');
-        expect(res.body.items.length).toBe(4);
-        expect(res.body.total).toBe(4);
+        expect(res.body.length).toBe(4);
 
-        expect(res.body.items[0].id).toBe(4);
-        expect(res.body.items[1].id).toBe(3);
-        expect(res.body.items[2].id).toBe(1);
-        expect(res.body.items[3].id).toBe(2);
+        expect(res.body[0].id).toBe(1);
+        expect(res.body[1].id).toBe(2);
+        expect(res.body[2].id).toBe(3);
+        expect(res.body[3].id).toBe(4);
       });
 
       it('should report errors', async () => {
