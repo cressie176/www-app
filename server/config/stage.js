@@ -2,7 +2,12 @@ module.exports = {
   routes: {
     client: {
       public: {
-        featureToggles: {},
+        featureToggles: {
+          profile: true,
+          featuredProjects: true,
+          featuredTalks: true,
+          featuredArticles: true,
+        },
       },
     },
   },
