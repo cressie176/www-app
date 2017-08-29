@@ -13,7 +13,7 @@ import './ArticlePage.css';
 
 class ArticlePage extends React.Component {
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchArticle(this.props.id);
   }
 

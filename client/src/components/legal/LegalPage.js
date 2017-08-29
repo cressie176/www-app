@@ -9,7 +9,7 @@ import './LegalPage.css';
 
 export class LegalPage extends React.Component {
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchPage(this.props.id);
   }
 
