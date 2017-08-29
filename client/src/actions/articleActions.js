@@ -11,7 +11,7 @@ export function fetchArticle(id, options = { quiet: false, timeout: 5000, }) {
 
     try {
       const url = `/api/content/1.0/articles/${id}`;
-      const res = await fetch(url, { timeout: options.timeout, } );
+      const res = await fetch(url, { credentials: 'include', timeout: options.timeout, } );
       switch (res.status) {
         case 200: {
           article = await res.json();
