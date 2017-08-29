@@ -42,7 +42,7 @@ class ArticlePage extends React.Component {
       return (
         <div className='article-page'/>
       );
-    } else if (this.props.article.url !== this.props.location.pathname) {
+    } else if (this.props.article.id === this.props.id && this.props.article.url !== this.props.location.pathname) {
       return (
         <Redirect to={this.props.article.url} />
       );
