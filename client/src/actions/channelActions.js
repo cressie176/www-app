@@ -9,7 +9,7 @@ export function fetchArticles(channel, options = { quiet: false, timeout: 5000, 
     let articles;
 
     try {
-      const url = `/api/1.0/articles?channel=${channel}`;
+      const url = `/api/content/1.0/articles?channel=${channel}`;
       const res = await fetch(url, { timeout: options.timeout, } );
       if (res.status !== 200) throw new Error(`${url} returned ${res.status} ${res.statusText}`);
       articles = await res.json();

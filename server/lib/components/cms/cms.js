@@ -8,6 +8,7 @@ module.exports = function(options = {}) {
   function start({ config, logger, tag, }, cb) {
 
     let content = {
+      pages: {},
       articles: [],
     };
 
@@ -22,6 +23,10 @@ module.exports = function(options = {}) {
           cb(null);
         });
       });
+    }
+
+    function getPage(id, cb) {
+      return cb(null, content.pages[id])
     }
 
     function listArticles(channel, cb) {
@@ -55,6 +60,7 @@ module.exports = function(options = {}) {
       if (err) return cb(err);
       cb(null, {
         loadContent,
+        getPage,
         listArticles,
         getArticle,
       });

@@ -7,7 +7,15 @@ module.exports = function(options = {}) {
 
     app.use(bodyParser.json());
 
-    app.get('/api/1.0/articles', (req, res, next) => {
+    app.get('/api/content/1.0/pages/:id', (req, res, next) => {
+      cms.getPage(req.params.id, (err, page) => {
+        if (err) return next(err);
+        if (!page) return next(Boom.notFound());
+        res.json(page);
+      });
+    });
+
+    app.get('/api/content/1.0/articles', (req, res, next) => {
       const channel = req.query.channel;
       cms.listArticles(channel, (err, articles) => {
         if (err) return next(err);
@@ -18,7 +26,7 @@ module.exports = function(options = {}) {
       });
     });
 
-    app.get('/api/1.0/articles/:id', (req, res, next) => {
+    app.get('/api/content/1.0/articles/:id', (req, res, next) => {
       cms.getArticle(parseInt(req.params.id, 10), (err, article) => {
         if (err) return next(err);
         if (!article) return next(Boom.notFound());

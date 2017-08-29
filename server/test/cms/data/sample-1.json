@@ -1,4 +1,9 @@
 {
+  "pages": {
+    "home": {
+      "id": "home"
+    }
+  },
   "articles": {
     "1": {
       "id": 1,

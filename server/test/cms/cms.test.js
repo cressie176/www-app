@@ -12,6 +12,38 @@ describe('CMS', () => {
   };
 
 
+  it('should get page by id', done => {
+
+    expect.assertions(3);
+
+    const tag = 'sample-1';
+
+    component().start({ config, logger, tag, }, (err, cms) => {
+      expect(err).toBe(null);
+      cms.getPage('home', (err, page) => {
+        expect(err).toBe(null);
+        expect(page.id).toBe('home');
+        done();
+      });
+    });
+  });
+
+  it('should tolerate no pages', done => {
+
+    expect.assertions(3);
+
+    const tag = 'no-content';
+
+    component().start({ config, logger, tag, }, (err, cms) => {
+      expect(err).toBe(null);
+      cms.getPage('home', (err, page) => {
+        expect(err).toBe(null);
+        expect(page).toBe(undefined);
+        done();
+      });
+    });
+  });
+
   it('should get list of articles by channel', done => {
 
     expect.assertions(4);
@@ -48,7 +80,7 @@ describe('CMS', () => {
   it('should tolerate no articles', done => {
     expect.assertions(4);
 
-    const tag = 'no-articles';
+    const tag = 'no-content';
 
     component().start({ config, logger, tag, }, (err, cms) => {
       expect(err).toBe(null);
@@ -64,7 +96,7 @@ describe('CMS', () => {
   it('should tolerate missing channel', done => {
     expect.assertions(4);
 
-    const tag = 'no-articles';
+    const tag = 'no-content';
 
     component().start({ config, logger, tag, }, (err, cms) => {
       expect(err).toBe(null);
@@ -113,7 +145,7 @@ describe('CMS', () => {
   it('should respond with undefined when no articles', done => {
     expect.assertions(3);
 
-    const tag = 'no-articles';
+    const tag = 'no-content';
 
     component().start({ config, logger, tag, }, (err, cms) => {
       expect(err).toBe(null);

@@ -10,7 +10,7 @@ export function fetchArticle(id, options = { quiet: false, timeout: 5000, }) {
     let article;
 
     try {
-      const url = `/api/1.0/articles/${id}`;
+      const url = `/api/content/1.0/articles/${id}`;
       const res = await fetch(url, { timeout: options.timeout, } );
       switch (res.status) {
         case 200: {
