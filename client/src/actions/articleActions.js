@@ -11,7 +11,7 @@ export function fetchArticle(id, options = { quiet: false, timeout: 5000, }) {
 
     try {
       const url = `/api/content/1.0/articles/${id}`;
-      const res = await fetch(url, { timeout: options.timeout, } );
+      const res = await fetch(url, { credentials: 'same-origin', timeout: options.timeout, } );
       switch (res.status) {
         case 200: {
           article = await res.json();
@@ -48,7 +48,7 @@ export function fetchArticles(options = { quiet: false, timeout: 5000, }) {
 
     try {
       const url = `/api/content/1.0/articles`;
-      const res = await fetch(url, { timeout: options.timeout, } );
+      const res = await fetch(url, { credentials: 'same-origin', timeout: options.timeout, } );
       if (res.status !== 200) throw new Error(`${url} returned ${res.status} ${res.statusText}`);
       articles = await res.json();
     } catch(error) {

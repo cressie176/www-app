@@ -10,7 +10,7 @@ export function fetchSite(options = { quiet: false, timeout: 5000, }) {
 
     try {
       const url = `/api/content/1.0/site`;
-      const res = await fetch(url, { timeout: options.timeout, } );
+      const res = await fetch(url, { credentials: 'same-origin', timeout: options.timeout, } );
       if (res.status !== 200) throw new Error(`${url} returned ${res.status} ${res.statusText}`);
       site = await res.json();
     } catch(error) {

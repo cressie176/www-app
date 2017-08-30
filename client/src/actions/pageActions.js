@@ -12,7 +12,7 @@ export function fetchPage(id, options = { quiet: false, timeout: 5000, }) {
     try {
       const url = `/api/content/1.0/pages/${id}`;
 
-      const res = await fetch(url, { timeout: options.timeout, } );
+      const res = await fetch(url, { credentials: 'same-origin', timeout: options.timeout, } );
       switch (res.status) {
         case 200: {
           page = await res.json();
