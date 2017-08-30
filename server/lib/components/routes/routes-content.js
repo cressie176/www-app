@@ -7,7 +7,7 @@ module.exports = function(options = {}) {
 
     app.use(bodyParser.json());
 
-    app.use('/api/content/1.0', (req, res, next) => {
+    app.use('/api/content/1.0', app.locals.hasRole('guest'), (req, res, next) => {
       res.set('cache-control', 'public, max-age=3600, must-revalidate');
       next();
     });
