@@ -8,26 +8,39 @@ import {
   FETCH_ARTICLES_ERROR,
 } from '../actions/articleActions';
 
-export default function(state = {}, action)  {
+export default function(state = { items: {}, }, action)  {
   switch (action.type) {
     case FETCH_ARTICLE_REQUEST:
     case FETCH_ARTICLE_SUCCESS:
     case FETCH_ARTICLE_NOT_FOUND:
     case FETCH_ARTICLE_ERROR: {
+      const article = extractArticle(action);
+      const items = {
+        ...state.items,
+        ...{ [article.id]: article, },
+      };
       return {
         ...state,
-        ...{ [action.article.id]: decorate(action.article), },
+        ...{ items: items, },
       };
     }
     case FETCH_ARTICLES_REQUEST:
     case FETCH_ARTICLES_SUCCESS:
     case FETCH_ARTICLES_ERROR: {
+
       const articles = Object.keys(action.articles).reduce((memo, id) => {
-        return Object.assign(memo, { [id]: decorate(action.articles[id]), });
+        return Object.assign(memo, { [id]: extractArticle({ article: action.articles[id], }), });
       }, {});
+
+      const items = {
+        ...state.items,
+        ...articles,
+      };
+
       return {
         ...state,
-        ...articles,
+        ...{ items: items, },
+        ...{ loading: action.loading, error: action.error, },
       };
     }
     default: {
@@ -36,9 +49,10 @@ export default function(state = {}, action)  {
   }
 }
 
-function decorate(article) {
+function extractArticle({ article, loading = false, missing = false, error, }) {
   return {
     ...article,
-    ...{ date: new Date(article.date), },
+    ...{ date: article.date ? new Date(article.date) : undefined, },
+    ...{ loading: loading, missing: missing, error: error, },
   };
 }

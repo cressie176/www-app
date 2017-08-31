@@ -9,7 +9,7 @@ describe('FeatureProject', () => {
     const wrapper = shallow(
       <FeaturedProject
         id='yadda'
-        project={{ id: 'yadda', title: 'Yadda',  url: 'https://yadda', summary:'meh',}}
+        project={{ id: 'yadda', title: 'Yadda',  url: 'https://yadda', summary:'meh', downloads_loading: true, }}
         fetchProject={() => {}}
         fetchDownloadCount={() => {}}
       />

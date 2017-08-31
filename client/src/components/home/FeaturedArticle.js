@@ -72,7 +72,7 @@ FeaturedArticle.propTypes = {
 
 function mapStateToProps(state, props) {
   return {
-    article: state.articles[props.id] || {},
+    article: state.articles.items[props.id] || {},
   };
 }
 

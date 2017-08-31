@@ -16,10 +16,7 @@ const FeaturedProjects = ({ projects = { items: [], link: {}, }, }) => {
         {
           projects.items.map((id, index) => {
             return (
-              <FeaturedProject
-                key={index}
-                id={id}
-              />
+              <FeaturedProject key={index} id={id} />
             );
           })
         }

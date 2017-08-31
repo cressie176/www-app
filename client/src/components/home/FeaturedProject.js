@@ -13,35 +13,56 @@ export class FeaturedProject extends React.Component {
   render() {
     if (this.props.project.error) {
       return (
-        <li className='featured-project--error' />
+        <li className='list-group-item featured-project--error'>
+          <i className='fa fa-exclamation-triangle featured-project__downloads__icon' aria-hidden='true'></i>
+          <span className='featured-project__link'>{this.props.project.downloads_error.message}</span>
+        </li>
       );
     } else if (this.props.project.missing) {
       return (
-        <li className='featured-project--not-found' />
+        <li className='list-group-item featured-project--missing'>
+          <i className='fa fa-chain-broken featured-project__icon' aria-hidden='true'></i>
+          <span className='featured-project__link'>Module Not Found</span>
+        </li>
       );
     } else if (this.props.project.loading) {
       return (
-        <li className='featured-project--loading' />
+        <li className='list-group-item featured-project--loading'>
+          <span className='featured-project__link'>Loading…</span>
+          <span className='featured-project__downloads featured-project__downloads--loading'>
+            <i className='fa fa-spinner fa-spin featured-project__downloads__icon' aria-hidden='true'></i>
+          </span>
+          <div></div>
+        </li>
       );
     } else if (!this.props.project.id) {
       return (
-        <li className='featured-project' />
+        <li className='list-group-item featured-project' />
       );
     } else {
       return (
         <li className='list-group-item featured-project'>
           <a className='featured-project__link' href={this.props.project.url}>{this.props.project.title}</a>
-          {
-            this.props.project.downloads === undefined ? (
-              <span className='featured-project__downloads featured-project__downloads--loading'>
+          {(() => {
+            if (this.props.project.downloads_loading) {
+              return <span className='featured-project__downloads featured-project__downloads--loading'>
                 <i className='fa fa-spinner fa-spin featured-project__downloads__icon' aria-hidden='true'></i>
-              </span>
-            ) : (
-              <span className='featured-project__downloads featured-project__downloads--loaded'>
-                {this.props.project.downloads.toLocaleString()}<i className='fa fa-download featured-project__downloads__icon' aria-hidden='true'></i>
-              </span>
-            )
-          }
+              </span>;
+            } else if (this.props.project.downloads_missing) {
+              return <span className='featured-project__downloads featured-project__downloads--missing'>
+                <i className='fa fa-chain-broken featured-project__downloads__icon' aria-hidden='true'></i>
+              </span>;
+            } else if (this.props.project.downloads_error) {
+              return <span className='featured-project__downloads featured-project__downloads--error'>
+                <i className='fa fa-exclamation-triangle featured-project__downloads__icon' aria-hidden='true' title={this.props.project.downloads_error.message}></i>
+              </span>;
+            } else if (this.props.project.downloads) {
+              return <span className='featured-project__downloads featured-project__downloads--loaded'>
+                {this.props.project.downloads.toLocaleString()}
+                <i className='fa fa-download featured-project__downloads__icon' aria-hidden='true' title={`${this.props.project.downloads.toLocaleString()} downloads per month`}></i>
+              </span>;
+            }
+          })()}
           <div>{this.props.project.summary}</div>
         </li>
       );
@@ -56,7 +77,7 @@ FeaturedProject.propTypes = {
 
 function mapStateToProps(state, props) {
   return {
-    project: state.projects[props.id] || {},
+    project: state.projects.items[props.id] || {},
   };
 }
 

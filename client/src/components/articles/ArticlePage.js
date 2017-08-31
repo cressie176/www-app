@@ -34,9 +34,7 @@ class ArticlePage extends React.Component {
       );
     } else if (this.props.article.loading) {
       return (
-        <PageIntro
-          title='Loading...'
-        />
+        <PageIntro title='Loading…' />
       );
     } else if (!this.props.article.id) {
       return (
@@ -106,7 +104,7 @@ ArticlePage.propTypes = {
 
 function mapStateToProps(state, props) {
   return {
-    article: state.articles[props.id] || {},
+    article: state.articles.items[props.id] || {},
   };
 }
 

@@ -6,6 +6,17 @@
   margin-bottom: 10px;
 }
 
+.featured-projects .featured-project--missing,
+.featured-projects .featured-project__downloads--missing,
+.featured-projects .featured-project--error,
+.featured-projects .featured-project__downloads--error {
+  color: var(--error-colour);
+}
+
+.featured-projects .featured-project__icon {
+  margin-right: 5px;
+}
+
 .featured-projects__see-all-link {
   text-align: right;
 }

@@ -9,17 +9,23 @@ export default function(state = {}, action)  {
   switch (action.type) {
     case FETCH_PAGE_REQUEST:
     case FETCH_PAGE_SUCCESS:
+    case FETCH_PAGE_NOT_FOUND:
     case FETCH_PAGE_ERROR: {
-      return action.page || {};
-    }
-    case FETCH_PAGE_NOT_FOUND: {
+      const page = extractPage(action);
       return {
         ...state,
-        ...{ missing: true, },
+        ...page,
       };
     }
     default: {
       return state;
     }
   }
+}
+
+function extractPage({ page, loading = false, missing = false, error, }) {
+  return {
+    ...page,
+    ...{ loading: loading, missing: missing, error: error, },
+  };
 }

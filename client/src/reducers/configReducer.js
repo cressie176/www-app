@@ -1,6 +1,6 @@
 import {
   TOGGLE_FEATURES,
-} from '../actions/featureToggleActions';
+} from '../actions/configActions';
 
 export default function(state = { featureToggles: {}, }, action)  {
   switch (action.type) {

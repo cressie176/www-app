@@ -27,11 +27,7 @@ class ArticleListPage extends React.Component {
     return (
       <div className={`article-list-page article-list-page--${this.props.id}`}>
 
-        <PageIntro
-          title={this.props.page.title}
-          citation={this.props.page.citation}
-          image={this.props.page.image}
-        />
+        <PageIntro title={this.props.page.title} citation={this.props.page.citation} image={this.props.page.image}/>
 
         <ArticleList articles={this.props.articles} />
 
@@ -57,7 +53,7 @@ ArticleListPage.propTypes = {
 function mapStateToProps(state, props) {
 
   function toArticle(id) {
-    return state.articles[id];
+    return state.articles.items[id];
   }
 
   function byChannel(article) {
@@ -70,7 +66,7 @@ function mapStateToProps(state, props) {
 
   return {
     page: state.page,
-    articles: Object.keys(state.articles || []).map(toArticle).filter(byChannel).sort(byDateAndId),
+    articles: Object.keys(state.articles.items || {}).map(toArticle).filter(byChannel).sort(byDateAndId),
   };
 }
 

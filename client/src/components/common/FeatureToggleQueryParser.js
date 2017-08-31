@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect, } from 'react-redux';
 import { withRouter, } from 'react-router';
-import { toggleFeatures, } from '../../actions/featureToggleActions';
+import { toggleFeatures, } from '../../actions/configActions';
 import 'url-search-params-polyfill';
 
 export class FeatureToggleQueryParser extends React.Component {
