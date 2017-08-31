@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PageIntro from '../common/PageIntro';
 import ArticleList from './ArticleList';
+import ErrorPage from '../error/ErrorPage';
 import { connect, } from 'react-redux';
 import { fetchArticles, } from '../../actions/articleActions';
 import { fetchPage, } from '../../actions/pageActions';
@@ -9,7 +10,7 @@ import { fetchPage, } from '../../actions/pageActions';
 
 import './ArticleListPage.css';
 
-class ArticleListPage extends React.Component {
+export class ArticleListPage extends React.Component {
 
   componentDidMount() {
     this.props.fetchPage(this.props.id);
@@ -24,30 +25,29 @@ class ArticleListPage extends React.Component {
   }
 
   render() {
-    return (
-      <div className={`article-list-page article-list-page--${this.props.id}`}>
+    if (this.props.page.error) {
+      return (
+        <ErrorPage title='Error loading page' />
+      );
+    } else {
+      return (
+        <div className={`article-list-page article-list-page--${this.props.id}`}>
 
-        <PageIntro title={this.props.page.title} citation={this.props.page.citation} image={this.props.page.image}/>
+          <PageIntro title={this.props.page.title} citation={this.props.page.citation} image={this.props.page.image}/>
 
-        <ArticleList articles={this.props.articles} />
+          <ArticleList articles={this.props.filteredArticles} loading={this.props.articles.loading} error={this.props.articles.error} />
 
-        <div className='row'>
-          <div className='col-md-offset-4 col-md-8'>
-            <div className='article-list-controls'>
-              {
-                false && <button className='article-list-controls__load-more-button'>Load More</button>
-              }
-            </div>
-          </div>
         </div>
-      </div>
-    );
+      );
+    }
   }
 }
 
 ArticleListPage.propTypes = {
   id: PropTypes.string,
   page: PropTypes.object,
+  articles: PropTypes.object,
+  filteredArticles: PropTypes.array,
 };
 
 function mapStateToProps(state, props) {
@@ -66,7 +66,8 @@ function mapStateToProps(state, props) {
 
   return {
     page: state.page,
-    articles: Object.keys(state.articles.items || {}).map(toArticle).filter(byChannel).sort(byDateAndId),
+    articles: state.articles,
+    filteredArticles: Object.keys(state.articles.items || {}).map(toArticle).filter(byChannel).sort(byDateAndId),
   };
 }
 

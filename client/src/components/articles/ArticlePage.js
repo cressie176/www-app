@@ -11,9 +11,9 @@ import { Redirect,} from 'react-router-dom';
 
 import './ArticlePage.css';
 
-class ArticlePage extends React.Component {
+export class ArticlePage extends React.Component {
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchArticle(this.props.id);
   }
 
@@ -34,7 +34,9 @@ class ArticlePage extends React.Component {
       );
     } else if (this.props.article.loading) {
       return (
-        <PageIntro title='Loading…' />
+        <div className='article-page'>
+          <PageIntro title='Loading…' />
+        </div>
       );
     } else if (!this.props.article.id) {
       return (
@@ -48,12 +50,10 @@ class ArticlePage extends React.Component {
     else {
       return (
         <div className='article-page'>
-          <PageIntro
-            title={this.props.article.title}
-          />
+          <PageIntro title={this.props.article.title} />
           <div className='row'>
             <div className='col-sm-offset-1 col-sm-10'>
-              <img className='image--main' src={this.props.article.images.main.url} alt={this.props.article.images.alt} />
+              <img className='image--main' src={this.props.article.images.main.url} alt={this.props.article.images.main.alt} />
             </div>
           </div>
           <div className='row'>
@@ -81,7 +81,7 @@ class ArticlePage extends React.Component {
                 }
                 {
                   this.props.article.downloads ? (
-                    this.props.article.article.downloads.map(download => {
+                    this.props.article.downloads.map(download => {
                       return (
                         <IconListItem key={download.url} icon={download.icon} text={download.text} url={download.url} type='download' />
                       );
@@ -104,7 +104,7 @@ ArticlePage.propTypes = {
 
 function mapStateToProps(state, props) {
   return {
-    article: state.articles.items[props.id] || {},
+    article: state.articles.items[props.id] || { images: { main: {}, }, },
   };
 }
 

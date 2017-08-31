@@ -21,11 +21,6 @@ const FeaturedProjects = ({ projects = { items: [], link: {}, }, }) => {
           })
         }
       </ul>
-      {/* Disabled for MVP
-      <div className='featured-projects__see-all-link'>
-        <a href={projects.link.url}>{projects.link.text}</a>
-      </div>
-      */}
     </div>
   );
 };

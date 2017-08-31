@@ -5,7 +5,7 @@ import { fetchProject, fetchDownloadCount, } from '../../actions/projectActions'
 
 export class FeaturedProject extends React.Component {
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchProject(this.props.id);
     this.props.fetchDownloadCount(this.props.id);
   }
@@ -13,21 +13,21 @@ export class FeaturedProject extends React.Component {
   render() {
     if (this.props.project.error) {
       return (
-        <li className='list-group-item featured-project--error'>
+        <li className='list-group-item featured-project featured-project--error'>
           <i className='fa fa-exclamation-triangle featured-project__downloads__icon' aria-hidden='true'></i>
-          <span className='featured-project__link'>{this.props.project.downloads_error.message}</span>
+          <span className='featured-project__link'>Error loading module</span>
         </li>
       );
     } else if (this.props.project.missing) {
       return (
-        <li className='list-group-item featured-project--missing'>
+        <li className='list-group-item featured-project featured-project--missing'>
           <i className='fa fa-chain-broken featured-project__icon' aria-hidden='true'></i>
-          <span className='featured-project__link'>Module Not Found</span>
+          <span className='featured-project__link'>Module not found</span>
         </li>
       );
     } else if (this.props.project.loading) {
       return (
-        <li className='list-group-item featured-project--loading'>
+        <li className='list-group-item featured-project featured-project--loading'>
           <span className='featured-project__link'>Loading…</span>
           <span className='featured-project__downloads featured-project__downloads--loading'>
             <i className='fa fa-spinner fa-spin featured-project__downloads__icon' aria-hidden='true'></i>

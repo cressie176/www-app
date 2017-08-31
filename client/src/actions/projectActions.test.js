@@ -21,7 +21,7 @@ describe('Project Actions', () => {
     fetchMock.restore();
   });
 
-it('should fetch project', async () => {
+  it('should fetch project', async () => {
 
     fetchMock.mock('/api/content/1.0/projects/yadda', { id: 'yadda', });
 
