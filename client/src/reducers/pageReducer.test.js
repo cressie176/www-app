@@ -25,6 +25,31 @@ describe('Page Reducer', () => {
       expect(state.loading).toBe(true);
     });
 
+    it('should keep page attributes if same as previous page', () => {
+      const initialState = {
+        id: 'A',
+        title: 'Same Page',
+        loading: false,
+      };
+      const state = pageReducer(initialState, { type: FETCH_PAGE_REQUEST, loading: true, page: { id: 'A', }, });
+      expect(state.id).toBe('A');
+      expect(state.title).toBe('Same Page');
+      expect(state.loading).toBe(true);
+    });
+
+
+    it('should reset page attributes if the different ot previous page', () => {
+      const initialState = {
+        id: 'B',
+        title: 'Different Page',
+        loading: false,
+      };
+      const state = pageReducer(initialState, { type: FETCH_PAGE_REQUEST, loading: true, page: { id: 'A', }, });
+      expect(state.id).toBe('A');
+      expect(state.title).toBe(undefined);
+      expect(state.loading).toBe(true);
+    });
+
   });
 
   describe('Fetch Page Success', () => {

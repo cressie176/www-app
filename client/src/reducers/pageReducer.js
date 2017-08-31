@@ -12,8 +12,9 @@ export default function(state = {}, action)  {
     case FETCH_PAGE_NOT_FOUND:
     case FETCH_PAGE_ERROR: {
       const page = extractPage(action);
+      const mergeState = page.id === state.id ? state : {};
       return {
-        ...state,
+        ...mergeState,
         ...page,
       };
     }
