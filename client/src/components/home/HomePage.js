@@ -6,7 +6,6 @@ import { fetchPage, } from '../../actions/pageActions';
 import Profile from './Profile';
 import FeaturedArticles from './FeaturedArticles';
 import FeaturedProjects from './FeaturedProjects';
-import HeroImg from './hero.jpg';
 import FeatureToggle from '../common/FeatureToggle';
 
 import './HomePage.css';
@@ -18,46 +17,43 @@ class HomePage extends React.Component {
   }
 
   render() {
-
-    return (
-      <div className='page home-page'>
-        <div className='row'>
-          <img className='hero' alt='hero' src={HeroImg} />
-        </div>
-        <div className='row'>
-          <div className='col-md-offset-1 col-md-5 no-min-height'>
-            <FeatureToggle id='profile'>
-              <Profile
-                profile={this.props.page.profile}
-              />
-            </FeatureToggle>
+    if (this.props.page.id !== 'home' || this.props.page.loading) {
+      return <div className='page home-page' />;
+    } else {
+      return (
+        <div className='page home-page'>
+          <div className='row'>
+            <img className='hero' title={this.props.page.heroImage.title} alt={this.props.page.heroImage.title} src={this.props.page.heroImage.url} />
           </div>
-          <div className='col-md-5 no-min-height'>
-            <FeatureToggle id='featuredProjects'>
-            {
-              <FeaturedProjects
-                projects={this.props.page.featuredProjects}
-              />
-            }
-            </FeatureToggle>
+          <div className='row'>
+            <div className='col-md-offset-1 col-md-5 no-min-height'>
+              <FeatureToggle id='profile'>
+                <Profile
+                  profile={this.props.page.profile}
+                />
+              </FeatureToggle>
+            </div>
+            <div className='col-md-5 no-min-height'>
+              <FeatureToggle id='featuredProjects'>
+              {
+                <FeaturedProjects projects={this.props.page.featuredSoftware} />
+              }
+              </FeatureToggle>
+            </div>
           </div>
+          <FeatureToggle id='featuredArticles'>
+          {
+            <FeaturedArticles articles={this.props.page.featuredArticles} />
+          }
+          </FeatureToggle>
+          <FeatureToggle id='featuredTalks'>
+          {
+            <FeaturedArticles articles={this.props.page.featuredTalks} />
+          }
+          </FeatureToggle>
         </div>
-        <FeatureToggle id='featuredArticles'>
-        {
-          <FeaturedArticles
-            articles={this.props.page.featuredArticles}
-          />
-        }
-        </FeatureToggle>
-        <FeatureToggle id='featuredTalks'>
-        {
-          <FeaturedArticles
-            articles={this.props.page.featuredTalks}
-          />
-        }
-        </FeatureToggle>
-      </div>
-    );
+      );
+    }
   }
 }
 

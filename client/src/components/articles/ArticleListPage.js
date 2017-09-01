@@ -33,7 +33,7 @@ export class ArticleListPage extends React.Component {
       return (
         <div className={`article-list-page article-list-page--${this.props.id}`}>
 
-          <PageIntro title={this.props.page.title} citation={this.props.page.citation} image={this.props.page.image}/>
+          <PageIntro title={this.props.page.title} citation={this.props.page.citation} image={this.props.page.introImage}/>
 
           <ArticleList articles={this.props.filteredArticles} loading={this.props.articles.loading} error={this.props.articles.error} />
 
@@ -57,7 +57,7 @@ function mapStateToProps(state, props) {
   }
 
   function byChannel(article) {
-    return article.channel === props.id;
+    return article.channel.id === props.id;
   }
 
   function byDateAndId(a, b) {

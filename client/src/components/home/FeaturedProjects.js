@@ -14,10 +14,8 @@ const FeaturedProjects = ({ projects = { items: [], link: {}, }, }) => {
       </h2>
       <ul className='list-group featured-projects__list'>
         {
-          projects.items.map((id, index) => {
-            return (
-              <FeaturedProject key={index} id={id} />
-            );
+          projects.items.map((project, index) => {
+            return <FeaturedProject key={index} id={project.id} />;
           })
         }
       </ul>

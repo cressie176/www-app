@@ -16,7 +16,7 @@ class FooterSpotlights extends React.Component {
                 this.props.spotlights && this.props.spotlights.map((spotlight, index) => {
                   return (
                     <div key={index} className='col-sm-4'>
-                      <LinksSpotlight title={spotlight.title} type={spotlight.type} links={spotlight.links} />
+                      <LinksSpotlight title={spotlight.title} id={spotlight.id} links={spotlight.links} />
                     </div>
                   );
                 })
@@ -35,7 +35,7 @@ FooterSpotlights.propTypes = {
 
 function mapStateToProps(state, props) {
   return {
-    ...state.site.footer,
+    ...state.site,
   };
 }
 

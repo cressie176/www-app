@@ -3,6 +3,7 @@ import async from 'async';
 import request from 'request';
 import R from 'ramda';
 import slug from 'slug';
+import path from 'path';
 
 const debug = Debug('app:contentful');
 const collectionNames = {
@@ -12,6 +13,7 @@ const collectionNames = {
   linkList: 'linkLists',
   imageSet: 'imageSets',
   homePage: 'pages',
+  legalPage: 'pages',
   channelPage: 'pages',
   featuredSoftware: 'featured',
   featuredArticles: 'featured',
@@ -57,7 +59,7 @@ class KeyValueStore {
   }
 
   addAsset(asset) {
-    this.set(asset.sys.id, 'asset', { url: asset.fields, title: asset.fields.title, });
+    this.set(asset.sys.id, 'asset', { url: asset.fields.file.url, title: asset.fields.title, });
   }
 
   values() {
@@ -100,7 +102,7 @@ module.exports = function() {
           }
           case 'article': {
             item.fields.id = parseInt(item.fields.id, 10);
-            item.fields.slug = slug(`${item.fields.title}-${item.fields.id}`).toLowerCase();
+            item.fields.url = path.join('/', item.fields.channel.link.url, slug(`${item.fields.title}-${item.fields.id}`).toLowerCase());
             item.fields.date = new Date(item.fields.date);
           }
           case 'imageSet':
@@ -110,6 +112,7 @@ module.exports = function() {
           case 'linkList':
           case 'link':
           case 'channelPage':
+          case 'legalPage':
           case 'homePage': {
             const collectionName = collectionNames[item.type];
             const collection = content[collectionName] || {};

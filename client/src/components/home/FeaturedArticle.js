@@ -31,12 +31,12 @@ export class FeaturedArticle extends React.Component {
           <div className='featured-article__title__wrapper'>
             <h3 className='featured-article__title'><a className='featured-article__title__link' href={this.props.article.url} dangerouslySetInnerHTML={{__html: this.props.article.title,}} /></h3>
           </div>
-          <img className='featured-article__thumbnail' src={this.props.article.images.thumbnail.url} alt={this.props.article.title} />
+          <img className='featured-article__thumbnail' src={this.props.article.images.thumbnail.url} title={this.props.article.images.thumbnail.title} alt={this.props.article.images.thumbnail.title} />
           <div className='featured-article__summary' dangerouslySetInnerHTML={{__html: this.props.article.summary,}} />
           <ul className='featured-article__details'>
             {
               this.props.article.event ? (
-                <IconListItem icon='fa-group' text={this.props.article.event} url={this.props.article.url} type='event' />
+                <IconListItem icon='fa-group' text={this.props.article.event.text} url={this.props.article.event.url} type='event' />
               ) : null
             }
             {

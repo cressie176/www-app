@@ -10,9 +10,9 @@ describe('Nav', () => {
       <Router>
         <Nav
           location={{ pathname: '/', }}
-          items={[
-            { text: 'one', path: '/one', },
-            { text: 'two', path: '/two', },
+          links={[
+            { text: 'one', url: '/one', },
+            { text: 'two', url: '/two', },
           ]} />
       </Router>
     );
@@ -29,9 +29,9 @@ describe('Nav', () => {
       <Router>
         <Nav
           location={{ pathname: '/', }}
-          items={[
-            { text: 'current', path: '/', },
-            { text: 'other', path: '/other', },
+          links={[
+            { text: 'current', url: '/', },
+            { text: 'other', url: '/other', },
           ]} />
       </Router>
     );

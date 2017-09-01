@@ -21,13 +21,8 @@ const FeaturedArticles = ({ articles = { items: [], link: {}, }, }) => {
         <div className='col-md-offset-1 col-md-10'>
           <div className='row'>
             {
-              articles.items.map((id, index) => {
-                return (
-                  <FeaturedArticle
-                    key={index}
-                    id={id}
-                  />
-                );
+              articles.items.map((article, index) => {
+                return <FeaturedArticle key={index} id={article.id} />;
               })
             }
           </div>

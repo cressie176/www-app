@@ -17,6 +17,7 @@ module.exports = {
   auth: {
     roles: {
       guest: ['*',],
+      publisher: ['*',],
       private: ['chuck',],
     },
     strategy: {

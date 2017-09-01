@@ -27,7 +27,7 @@ export class LegalPage extends React.Component {
 
         <div className='row'>
           <div className='col-sm-offset-1 col-sm-8'>
-            <div className='blurb' dangerouslySetInnerHTML={{__html: this.props.page.html,}} />
+            <div className='blurb' dangerouslySetInnerHTML={{__html: this.props.page.body,}} />
           </div>
         </div>
       </div>

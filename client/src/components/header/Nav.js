@@ -23,10 +23,10 @@ export class Nav extends React.Component {
           <div className='collapse navbar-collapse' id='navbar-collapse'>
             <ul className='nav navbar-nav'>
               {
-                this.props.items && this.props.items.map((item, index) => {
-                  const active = this.props.location.pathname === item.path;
-                  return active ? <ActiveNavItem key={item.path} text={item.text} path={item.path} />
-                                : <InactiveNavItem key={item.path} text={item.text} path={item.path} />;
+                this.props.links && this.props.links.map((item, index) => {
+                  const active = this.props.location.pathname === item.url;
+                  return active ? <ActiveNavItem key={item.url} text={item.text} path={item.url} />
+                                : <InactiveNavItem key={item.url} text={item.text} path={item.url} />;
                 })
               }
             </ul>
@@ -38,7 +38,7 @@ export class Nav extends React.Component {
 }
 
 Nav.propTypes = {
-  items: PropTypes.array,
+  links: PropTypes.array,
 };
 
 function mapStateToProps(state, props) {

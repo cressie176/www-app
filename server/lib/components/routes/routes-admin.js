@@ -9,15 +9,15 @@ export default function(options = {}) {
     app.get('/__/private', app.locals.hasRole('private'), (req, res) => res.status(204).send());
     app.get('/__/forbidden', app.locals.hasRole('forbidden'), (req, res) => res.status(204).send());
 
-    app.post('/__/cms/:tag', app.locals.hasRole('publisher'), (req, res, err) => {
-      contentful.extract(err, content) => {
+    app.post('/__/cms/:tag', app.locals.hasRole('publisher'), (req, res, next) => {
+      contentful.extract((err, content) => {
         if (err) return next(err);
-        store.saveContent(req.params.tag, content, cb(err) => {
+        store.saveContent(req.params.tag, content, err => {
           if (err) return next(err);
           res.send(204);
         });
-      })
-    })
+      });
+    });
 
     cb();
   }

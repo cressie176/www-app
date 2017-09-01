@@ -2,7 +2,7 @@ import createSystem from '../test-system';
 import nock from 'nock';
 import rawContent from './data/contentful';
 
-describe.only('Contentful', () => {
+describe('Contentful', () => {
 
   let system;
   let config;
@@ -238,7 +238,7 @@ describe.only('Contentful', () => {
         expect(content.articles[1]).toBeDefined();
         expect(content.articles[1].id).toBe(1);
         expect(content.articles[1].title).toBe('Enterprise Grade Microservices');
-        expect(content.articles[1].slug).toBe('enterprise-grade-microservices-1');
+        expect(content.articles[1].url).toBe('/talks/enterprise-grade-microservices-1');
         expect(content.articles[1].channel).toBe(content.pages['talks']);
         expect(content.articles[1].keywords).toContain('Microservices');
         expect(content.articles[1].date.toISOString()).toBe('2016-11-23T19:00:00.000Z');

@@ -8,11 +8,10 @@ describe('Content API', () => {
   let system;
   let config;
 
-  const cms = {};
   const loggerOptions = {};
 
   beforeAll(cb => {
-    system = createSystem().set('transports.human', human(loggerOptions)).set('cms', cms).start((err, components) => {
+    system = createSystem().set('transports.human', human(loggerOptions)).start((err, components) => {
       if (err) return cb(err);
       config = components.config;
       cb();
@@ -31,14 +30,7 @@ describe('Content API', () => {
 
     it('should get a single page by id', async () => {
 
-      expect.assertions(4);
-
-      cms.getPage = function(tag, id, cb) {
-        expect(id).toBe('home');
-        return cb(null, {
-          id: 'home',
-        });
-      };
+      expect.assertions(3);
 
       const res = await request({
         url: `http://${config.server.host}:${config.server.port}/api/content/1.0/pages/home`,
@@ -55,38 +47,15 @@ describe('Content API', () => {
 
       expect.assertions(2);
 
-      cms.getPage = function(tag, id, cb) {
-        return cb(null, null);
-      };
-
       loggerOptions.suppress = true;
 
       await request({
-        url: `http://${config.server.host}:${config.server.port}/api/content/1.0/pages/home`,
+        url: `http://${config.server.host}:${config.server.port}/api/content/1.0/pages/does-not-exist`,
         resolveWithFullResponse: true,
         json: true,
       }).catch(errors.StatusCodeError, (reason) => {
         expect(reason.statusCode).toBe(404);
         expect(reason.response.headers['content-type'].toLowerCase()).toBe('application/json; charset=utf-8');
-      });
-    });
-
-    it('should report errors', async () => {
-
-      expect.assertions(1);
-
-      cms.getPage = function(tag, id, cb) {
-        return cb(new Error('Oh Noes!'));
-      };
-
-      loggerOptions.suppress = true;
-
-      await request({
-        url: `http://${config.server.host}:${config.server.port}/api/content/1.0/pages/home`,
-        resolveWithFullResponse: true,
-        json: true,
-      }).catch(errors.StatusCodeError, (reason) => {
-        expect(reason.statusCode).toBe(500);
       });
     });
   });
@@ -95,14 +64,7 @@ describe('Content API', () => {
 
     it('should get a single project by id', async () => {
 
-      expect.assertions(4);
-
-      cms.getProject = function(tag, id, cb) {
-        expect(id).toBe('yadda');
-        return cb(null, {
-          id: 'yadda',
-        });
-      };
+      expect.assertions(3);
 
       const res = await request({
         url: `http://${config.server.host}:${config.server.port}/api/content/1.0/projects/yadda`,
@@ -119,14 +81,10 @@ describe('Content API', () => {
 
       expect.assertions(2);
 
-      cms.getProject = function(tag, id, cb) {
-        return cb(null, null);
-      };
-
       loggerOptions.suppress = true;
 
       await request({
-        url: `http://${config.server.host}:${config.server.port}/api/content/1.0/projects/yadda`,
+        url: `http://${config.server.host}:${config.server.port}/api/content/1.0/projects/does-not-exist`,
         resolveWithFullResponse: true,
         json: true,
       }).catch(errors.StatusCodeError, (reason) => {
@@ -134,26 +92,6 @@ describe('Content API', () => {
         expect(reason.response.headers['content-type'].toLowerCase()).toBe('application/json; charset=utf-8');
       });
     });
-
-    it('should report errors', async () => {
-
-      expect.assertions(1);
-
-      cms.getProject = function(tag, id, cb) {
-        return cb(new Error('Oh Noes!'));
-      };
-
-      loggerOptions.suppress = true;
-
-      await request({
-        url: `http://${config.server.host}:${config.server.port}/api/content/1.0/projects/yadda`,
-        resolveWithFullResponse: true,
-        json: true,
-      }).catch(errors.StatusCodeError, (reason) => {
-        expect(reason.statusCode).toBe(500);
-      });
-    });
-
   });
 
 
@@ -161,30 +99,7 @@ describe('Content API', () => {
 
     it('should get list of articles', async () => {
 
-      expect.assertions(7);
-
-      cms.listArticles = function(tag, cb) {
-        return cb(null,
-          {
-            1: {
-              id: 1,
-              date: new Date('2001-01-01T00:00:00.000Z'),
-            },
-            2: {
-              id: 2,
-              date: new Date('2000-01-01T00:00:00.000Z'),
-            },
-            3: {
-              id: 3,
-              date: new Date('2003-01-01T00:00:00.000Z'),
-            },
-            4: {
-              id: 4,
-              date: new Date('2003-01-01T00:00:00.000Z'),
-            },
-          }
-        );
-      };
+      expect.assertions(6);
 
       const res = await request({
         url: `http://${config.server.host}:${config.server.port}/api/content/1.0/articles`,
@@ -194,48 +109,18 @@ describe('Content API', () => {
 
       expect(res.statusCode).toBe(200);
       expect(res.headers['content-type'].toLowerCase()).toBe('application/json; charset=utf-8');
-      expect(Object.keys(res.body).length).toBe(4);
-
+      expect(Object.keys(res.body).length).toBe(3);
       expect(res.body[1].id).toBe(1);
       expect(res.body[2].id).toBe(2);
       expect(res.body[3].id).toBe(3);
-      expect(res.body[4].id).toBe(4);
     });
 
-    it('should report errors', async () => {
-
-      expect.assertions(1);
-
-      cms.listArticles = function(tag, cb) {
-        return cb(new Error('Oh Noes!'));
-      };
-
-      loggerOptions.suppress = true;
-
-      await request({
-        url: `http://${config.server.host}:${config.server.port}/api/content/1.0/articles`,
-        resolveWithFullResponse: true,
-        json: true,
-      }).catch(errors.StatusCodeError, (reason) => {
-        expect(reason.statusCode).toBe(500);
-      });
-    });
   });
-
 
   describe('Get Article', () => {
     it('should get a single article by id', async () => {
 
-      expect.assertions(5);
-
-      cms.getArticle = function(tag, id, cb) {
-        expect(id).toBe(1);
-        return cb(null, {
-          id: 1,
-          title: 'foo',
-          slug: 'foo-1',
-        });
-      };
+      expect.assertions(4);
 
       const res = await request({
         url: `http://${config.server.host}:${config.server.port}/api/content/1.0/articles/1`,
@@ -246,45 +131,22 @@ describe('Content API', () => {
       expect(res.statusCode).toBe(200);
       expect(res.headers['content-type'].toLowerCase()).toBe('application/json; charset=utf-8');
       expect(res.body.id).toBe(1);
-      expect(res.body.title).toBe('foo');
+      expect(res.body.title).toBe('Enterprise Grade Microservices');
     });
 
     it('should respond with 404 for missing articles', async () => {
 
       expect.assertions(2);
 
-      cms.getArticle = function(tag, id, cb) {
-        return cb(null, null);
-      };
-
       loggerOptions.suppress = true;
 
       await request({
-        url: `http://${config.server.host}:${config.server.port}/api/content/1.0/articles/1`,
+        url: `http://${config.server.host}:${config.server.port}/api/content/1.0/articles/9999`,
         resolveWithFullResponse: true,
         json: true,
       }).catch(errors.StatusCodeError, (reason) => {
         expect(reason.statusCode).toBe(404);
         expect(reason.response.headers['content-type'].toLowerCase()).toBe('application/json; charset=utf-8');
-      });
-    });
-
-    it('should report errors', async () => {
-
-      expect.assertions(1);
-
-      cms.getArticle = function(tag, id, cb) {
-        return cb(new Error('Oh Noes!'));
-      };
-
-      loggerOptions.suppress = true;
-
-      await request({
-        url: `http://${config.server.host}:${config.server.port}/api/content/1.0/articles/1`,
-        resolveWithFullResponse: true,
-        json: true,
-      }).catch(errors.StatusCodeError, (reason) => {
-        expect(reason.statusCode).toBe(500);
       });
     });
   });

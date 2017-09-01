@@ -9,7 +9,7 @@ const Profile = ({ profile = {}, }) => {
           <i className='fa fa-user' aria-hidden='true'></i>
         </span>
         {profile.title} </h2>
-      <div dangerouslySetInnerHTML={{__html: profile.html,}} />
+      <div dangerouslySetInnerHTML={{__html: profile.body,}} />
     </div>
   );
 };

@@ -58,7 +58,7 @@ export class ArticlePage extends React.Component {
           </div>
           <div className='row'>
             <div className='col-sm-offset-1 col-sm-10'>
-              <div className='blurb' dangerouslySetInnerHTML={{__html: this.props.article.html,}} />
+              <div className='blurb' dangerouslySetInnerHTML={{__html: this.props.article.body,}} />
             </div>
           </div>
           <div className='row'>
@@ -66,7 +66,7 @@ export class ArticlePage extends React.Component {
               <ul className='featured-article__details'>
                 {
                   this.props.article.event ? (
-                    <IconListItem icon='fa-group' text={this.props.article.event} url={this.props.article.url} type='event' />
+                    <IconListItem icon='fa-group' text={this.props.article.event.text} url={this.props.article.event.url} type='event' />
                   ) : null
                 }
                 {
