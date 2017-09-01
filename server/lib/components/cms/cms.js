@@ -1,61 +1,56 @@
-import fs from 'fs';
-import path from 'path';
-import parseJson from 'safe-json-parse/callback';
+import get from 'lodash.get';
 
-module.exports = function(options = {}) {
+export default function(options = {}) {
 
-  function start({ config, logger, tag, }, cb) {
+  function start({ config, logger, store, tag, }, cb) {
 
-    let content = {
-      pages: {},
-      articles: [],
-    };
-
-    function loadContent(tag, cb) {
-      const contentPath = path.join(config.path, `${tag}.json`);
-      logger.info(`Loading content from ${contentPath}`);
-      fs.readFile(contentPath, { encoding: 'utf-8', }, (err, text) => {
+    function getSite(tag, cb) {
+      store.loadContent(tag, (err, content) => {
         if (err) return cb(err);
-        parseJson(text, (err, _content) => {
-          if (err) return cb(err);
-          content = _content;
-          cb(null);
-        });
+        cb(null, content.site);
       });
     }
 
-    function getSite(cb) {
-      return cb(null, content.site);
+    function getPage(tag, id, cb) {
+      store.loadContent(tag, (err, content) => {
+        if (err) return cb(err);
+        cb(null, get(content, `pages.${id}`));
+      });
     }
 
-    function getPage(id, cb) {
-      return cb(null, content.pages[id]);
+    function getProject(tag, id, cb) {
+      store.loadContent(tag, (err, content) => {
+        if (err) return cb(err);
+        cb(null, get(content, `projects.${id}`));
+      });
     }
 
-    function getProject(id, cb) {
-      return cb(null, content.projects[id]);
+    function listArticles(tag, cb) {
+      store.loadContent(tag, (err, content) => {
+        if (err) return cb(err);
+        if (!content.articles) return cb(null, undefined);
+        const articles = Object.keys(content.articles).reduce((memo, id) => {
+          return Object.assign(memo, { [id]: toArticle(content.articles[id]), });
+        }, {});
+        cb(null, articles);
+      });
     }
 
-    function listArticles(cb) {
-      const articles = Object.keys(content.articles).reduce((memo, id) => {
-        return Object.assign(memo, { [id]: toArticle(content.articles[id]), });
-      }, {});
-      return cb(null, articles);
-    }
-
-    function getArticle(id, cb) {
-      const raw = content.articles[`${id}`];
-      return cb(null, toArticle(raw));
+    function getArticle(tag, id, cb) {
+      store.loadContent(tag, (err, content) => {
+        if (err) return cb(err);
+        const raw = get(content, `articles.${id}`);
+        cb(null, toArticle(raw));
+      });
     }
 
     function toArticle(raw) {
       return raw ? Object.assign({}, raw, { date: new Date(raw.date), }) : raw;
     }
 
-    loadContent(tag, err => {
+    store.loadContent(tag, (err, content) => {
       if (err) return cb(err);
       cb(null, {
-        loadContent,
         getSite,
         getPage,
         getProject,
@@ -68,4 +63,4 @@ module.exports = function(options = {}) {
   return {
     start: start,
   };
-};
+}

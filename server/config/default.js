@@ -22,7 +22,9 @@ module.exports = {
     },
   },
   cms: {
-    path: path.join(process.cwd(), 'server', 'content'),
+    store: {
+      path: path.join(process.cwd(), 'server', 'content'),
+    },
   },
   contentful: {
     timeout: 5000,

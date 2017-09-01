@@ -1,6 +1,6 @@
 import createSystem from '../test-system';
 import nock from 'nock';
-import rawContent from './data/raw-content';
+import rawContent from './data/contentful';
 
 describe.only('Contentful', () => {
 
