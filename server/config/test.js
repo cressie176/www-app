@@ -6,6 +6,10 @@ module.exports = {
       },
     },
   },
+  contentful: {
+    space: "test-space",
+    key: "test-key",
+  },
   auth: {
     roles: {
       guest: ['*',],

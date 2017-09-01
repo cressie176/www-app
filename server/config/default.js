@@ -24,6 +24,9 @@ module.exports = {
   cms: {
     path: path.join(process.cwd(), 'server', 'content'),
   },
+  contentful: {
+    timeout: 5000,
+  },
   logger: {
     transport: 'bunyan',
     include: [
