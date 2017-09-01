@@ -17,6 +17,54 @@ const collectionNames = {
   featuredArticles: 'featured',
 };
 
+class KeyValueStore {
+  constructor() {
+    this.store = {};
+  }
+
+  set(id, type, fields) {
+    this.store[id] = { id, fields, type, };
+  }
+
+  get(id) {
+    return this.store[id];
+  }
+
+  resolveAll() {
+    this.values().forEach(item => {
+      Object.keys(item.fields).forEach(name => {
+        item.fields[name] = this.resolve(item.fields[name]);
+      });
+    });
+  }
+
+  resolve(field) {
+    switch (R.type(field)) {
+      case 'Array': {
+        return field.map(item => this.resolve(item));
+      }
+      case 'Object': {
+        return field.sys ? this.get(field.sys.id).fields : field;
+      }
+      default: {
+        return field;
+      }
+    }
+  }
+
+  addItem(item) {
+    this.set(item.sys.id, item.sys.contentType.sys.id, item.fields);
+  }
+
+  addAsset(asset) {
+    this.set(asset.sys.id, 'asset', { url: asset.fields, title: asset.fields.title, });
+  }
+
+  values() {
+    return R.values(this.store);
+  }
+}
+
 module.exports = function() {
 
   function start({ config, logger, }, cb) {
@@ -34,33 +82,16 @@ module.exports = function() {
     }
 
     function buildKeyValueStore(raw, cb) {
-      const kvs = {};
-
-      raw.items.forEach(item => {
-        return Object.assign(kvs, {
-          [item.sys.id]: {
-            fields: item.fields,
-            type: item.sys.contentType.sys.id,
-          },
-        });
-      });
-
-      raw.includes.Asset.forEach(item => {
-        return Object.assign(kvs, {
-          [item.sys.id]: {
-            fields: { url: item.fields.file.url, title: item.fields.title, },
-            type: 'asset',
-          },
-        });
-      });
-
+      const kvs = new KeyValueStore();
+      raw.items.forEach(item => kvs.addItem(item));
+      raw.includes.Asset.forEach(asset => kvs.addAsset(asset));
+      kvs.resolveAll();
       cb(null, kvs);
     }
 
     function transformContent(kvs, cb) {
 
-      const transformed = Object.keys(kvs).reduce((content, contentId) => {
-        const item = kvs[contentId];
+      const transformed = kvs.values().reduce((content, item) => {
         debug(`Transforming ${item.type} '${item.fields.id}'`);
 
         switch (item.type) {
@@ -71,7 +102,6 @@ module.exports = function() {
             item.fields.id = parseInt(item.fields.id, 10);
             item.fields.slug = slug(`${item.fields.title}-${item.fields.id}`).toLowerCase();
             item.fields.date = new Date(item.fields.date);
-            return transformNamedCollection(kvs, content, contentId, item);
           }
           case 'imageSet':
           case 'project':
@@ -81,13 +111,15 @@ module.exports = function() {
           case 'link':
           case 'channelPage':
           case 'homePage': {
-            return transformNamedCollection(kvs, content, contentId, item);
+            const collectionName = collectionNames[item.type];
+            const collection = content[collectionName] || {};
+            collection[item.fields.id] = item.fields;
+            return Object.assign(content, { [collectionName]: collection, });
           }
           case 'copyright':
           case 'profile':
           case 'site': {
-            const contentItem = transformContentItem(kvs, contentId);
-            return Object.assign(content, { [item.type]: contentItem, });
+            return Object.assign(content, { [item.type]: item.fields, });
           }
           default: {
             return cb(new Error(`Unsupported content type ${item.type}`));
@@ -96,34 +128,6 @@ module.exports = function() {
       }, {});
 
       cb(null, transformed);
-    }
-
-    function transformNamedCollection(kvs, content, contentId, item) {
-      const collectionName = collectionNames[item.type];
-      const collection = content[collectionName] || {};
-      const contentItem = transformContentItem(kvs, contentId);
-      collection[item.fields.id] = contentItem;
-      return Object.assign(content, { [collectionName]: collection, });
-    }
-
-    function transformContentItem(kvs, contentId) {
-      return Object.keys(kvs[contentId].fields).reduce((fields, name) => {
-        return Object.assign(fields, { [name]: resolve(kvs, kvs[contentId].fields[name]), });
-      }, kvs[contentId].fields);
-    }
-
-    function resolve(kvs, field) {
-      switch (R.type(field)) {
-        case 'Array': {
-          return field.map(item => resolve(kvs, item));
-        }
-        case 'Object': {
-          return kvs[field.sys.id].fields;
-        }
-        default: {
-          return field;
-        }
-      }
     }
 
     function extract(cb) {
