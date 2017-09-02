@@ -11,6 +11,5 @@ The Node.js / React application which serves www.stephen-cresswell.net
 1. Image restrictions
 1. consider duplicated content model
 1. Test articles
-1. Redirection on not found
 1. Green => Blue on article images
 1. Get it working on staging

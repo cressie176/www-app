@@ -74,10 +74,9 @@ export default function() {
     function fetchContent(cb) {
 
       const url = `https://cdn.contentful.com/spaces/${config.space}/entries`;
-      const loggableUrl = `https://cdn.contentful.com/spaces/******/entries`;
       request({ url: url, auth: { bearer: config.key, }, qs: { limit: 1000, }, json: true, }, (err, res, body) => {
         if (err) return cb(err);
-        if (res.statusCode >= 400) return cb(new Error(`Received status ${res.statusCode} getting content from ${loggableUrl}`));
+        if (res.statusCode >= 400) return cb(new Error(`Received status ${res.statusCode} getting content from ${url}`));
         if (body.errors && body.errors.length > 0) cb(new Error('Invalid content'));
         return cb(null, body);
       });
