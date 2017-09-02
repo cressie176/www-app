@@ -16,7 +16,15 @@ export default function(options = {}) {
       });
     }
 
-    cb(null, { loadContent, });
+    function saveContent(tag, content, cb) {
+      store.saveContent(tag, content, (err) => {
+        if (err) return cb(err);
+        cache.set(tag, content);
+        cb();
+      });
+    }
+
+    cb(null, { loadContent, saveContent, });
   }
 
   return {

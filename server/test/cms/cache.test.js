@@ -17,6 +17,10 @@ describe('Cache', () => {
       if (tag >= 0) return cb(null, { version: tag, });
       cb(new Error('Oh Noes!'));
     },
+    saveContent: (tag, content, cb) => {
+      if (tag >= 0) return cb();
+      cb(new Error('Oh Noes!'));
+    },
   };
 
   describe('Cache', () => {
@@ -76,10 +80,36 @@ describe('Cache', () => {
       });
     });
 
-    it('should relay errors', done => {
+    it('should relay load errors', done => {
       component().start({ logger, config, store, }, (err, cache) => {
         expect(err).toBe(null);
         cache.loadContent(-1, (err, content) => {
+          expect(err).toBeDefined();
+          expect(err.message).toBe('Oh Noes!');
+          done();
+        });
+      });
+    });
+
+    it('should return cached content following successful save', done => {
+      component().start({ logger, config, store, }, (err, cache) => {
+        const content1 = { version: 1, };
+        expect(err).toBe(null);
+        async.series({
+          __: cache.saveContent.bind(cache, 1, content1),
+          content2: cache.loadContent.bind(cache, 1),
+        }, (err, results) => {
+          expect(err).toBe(null);
+          expect(content1).toBe(results.content2);
+          done();
+        });
+      });
+    });
+
+    it('should relay save errors', done => {
+      component().start({ logger, config, store, }, (err, cache) => {
+        expect(err).toBe(null);
+        cache.saveContent(-1, {}, (err) => {
           expect(err).toBeDefined();
           expect(err.message).toBe('Oh Noes!');
           done();

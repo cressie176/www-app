@@ -236,8 +236,8 @@ describe('Contentful', () => {
         expect(content.featured.articles).toBeDefined();
         expect(content.featured.articles.id).toBe('articles');
         expect(content.featured.articles.icon).toBe('fa-file-text-o');
-        expect(content.featured.articles.items.length).toBe(3);
-        expect(content.featured.articles.items[0]).toBe(content.articles[1]);
+        expect(content.featured.articles.items.length).toBe(1);
+        expect(content.featured.articles.items[0]).toBe(content.articles[2]);
         done();
       });
     });
