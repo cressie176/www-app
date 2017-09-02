@@ -2,7 +2,7 @@ import LRU from 'lru-cache';
 
 export default function(options = {}) {
 
-  function start({ config, logger, store }, cb) {
+  function start({ config, logger, store, }, cb) {
 
     const cache = new LRU(config);
 
@@ -13,7 +13,7 @@ export default function(options = {}) {
         if (err) return cb(err);
         cache.set(tag, content);
         cb(null, content);
-      })
+      });
     }
 
     cb(null, { loadContent, });
@@ -22,4 +22,4 @@ export default function(options = {}) {
   return {
     start: start,
   };
-};
+}

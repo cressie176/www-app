@@ -24,7 +24,7 @@ describe('ArticleList', () => {
     expect(wrapper.find('.article-list__loading__text').text()).toBe('Loading articles…');
   });
 
-  it.only('should render articles', () => {
+  it('should render articles', () => {
     const wrapper = shallow(
       <ArticleList
         articles={[
@@ -35,7 +35,7 @@ describe('ArticleList', () => {
             images: {
               thumbnail: {
                 url: 'http://thumb-1.jpg',
-                alt: 'thumb-1',
+                title: 'thumb-1',
               },
             },
             summary: '<p>Article 1 Summary</p>',
@@ -47,7 +47,7 @@ describe('ArticleList', () => {
             images: {
               thumbnail: {
                 url: 'http://thumb-2.jpg',
-                alt: 'thumb-2',
+                title: 'thumb-2',
               },
             },
             summary: '<p>Article 2 Summary</p>',

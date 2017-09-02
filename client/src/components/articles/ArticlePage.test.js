@@ -90,7 +90,7 @@ describe('ArticlePage', () => {
           id: 1,
           url: '/blog/article-1',
           title: 'Article 1',
-          html: '<p>blurb</p>',
+          body: '<p>blurb</p>',
           images: {
             main: {
               url: 'http://main.jpg',
@@ -119,7 +119,7 @@ describe('ArticlePage', () => {
           id: 1,
           url: '/blog/article-1',
           title: 'Article 1',
-          html: '<p>blurb</p>',
+          body: '<p>blurb</p>',
           images: {
             main: {
               url: 'http://main.jpg',
@@ -128,7 +128,10 @@ describe('ArticlePage', () => {
           },
           date: new Date('2017-01-01T00:00:00.000Z'),
           location: 'London',
-          event: 'meetup',
+          event: {
+            text: 'meetup',
+            url: 'http://meetup',
+          },
           downloads: [{
             url: 'http://download-1',
             text: 'download-1',
@@ -146,7 +149,7 @@ describe('ArticlePage', () => {
     expect(wrapper.is('.article-page')).toBe(true);
     expect(wrapper.find('IconListItem[type="date"]').prop('text')).toBe('2017-1-1 00:00:00');
     expect(wrapper.find('IconListItem[type="event"]').prop('text')).toBe('meetup');
-    expect(wrapper.find('IconListItem[type="event"]').prop('url')).toBe('/blog/article-1');
+    expect(wrapper.find('IconListItem[type="event"]').prop('url')).toBe('http://meetup');
     expect(wrapper.find('IconListItem[type="location"]').prop('text')).toBe('London');
 
     expect(wrapper.find('IconListItem[type="download"]').length).toBe(2);

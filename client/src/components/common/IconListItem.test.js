@@ -6,7 +6,7 @@ describe('IconListItem', () => {
 
   it('should render list item with an icon, text and url', () => {
     const wrapper = mount(
-      <IconListItem icon='fa-github' text='GitHub' url='https://github' type='social' />
+      <IconListItem icon='fa-github' text='GitHub' url='https://github' id='social' />
     );
 
     expect(wrapper.hasClass('icon-list__item')).toBe(true);
@@ -20,7 +20,7 @@ describe('IconListItem', () => {
 
   it('should render list item with an icon and text', () => {
     const wrapper = mount(
-      <IconListItem icon='fa-github' text='GitHub' type='social'/>
+      <IconListItem icon='fa-github' text='GitHub' id='social'/>
     );
 
     expect(wrapper.hasClass('icon-list__item')).toBe(true);
@@ -33,7 +33,7 @@ describe('IconListItem', () => {
 
   it('should render list item with an icon and url', () => {
     const wrapper = mount(
-      <IconListItem icon='fa-github' url='https://github' type='social'/>
+      <IconListItem icon='fa-github' url='https://github' id='social'/>
     );
 
     expect(wrapper.hasClass('icon-list__item')).toBe(true);
@@ -46,7 +46,7 @@ describe('IconListItem', () => {
 
   it('should render list item with text and url', () => {
     const wrapper = mount(
-      <IconListItem text='GitHub' url='https://github' type='social'/>
+      <IconListItem text='GitHub' url='https://github' id='social'/>
     );
 
     expect(wrapper.hasClass('icon-list__item')).toBe(true);
@@ -59,7 +59,7 @@ describe('IconListItem', () => {
 
   it('should render list item with an icon', () => {
     const wrapper = mount(
-      <IconListItem icon='fa-github' type='social'/>
+      <IconListItem icon='fa-github' id='social'/>
     );
 
     expect(wrapper.hasClass('icon-list__item')).toBe(true);
@@ -71,7 +71,7 @@ describe('IconListItem', () => {
 
   it('should render list item with text', () => {
     const wrapper = mount(
-      <IconListItem text='GitHub' type='social'/>
+      <IconListItem text='GitHub' id='social'/>
     );
 
     expect(wrapper.hasClass('icon-list__item')).toBe(true);

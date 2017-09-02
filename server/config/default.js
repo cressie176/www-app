@@ -27,7 +27,7 @@ module.exports = {
     },
     cache: {
       max: 10,
-    }
+    },
   },
   contentful: {
     timeout: 5000,

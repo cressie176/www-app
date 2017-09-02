@@ -12,7 +12,7 @@ describe('LinksSpotlight', () => {
           { icon: 'fa-email', text: 'foo@bar.com', url: 'mailto://foo@bar.com', },
           { icon: 'fa-phone', text: '+44 (0) 123 456', url: 'tel:+4412345x', },
         ]}
-        type='contact'
+        id='contact'
         obfuscate={ false } />
     );
 
@@ -34,7 +34,7 @@ describe('LinksSpotlight', () => {
           { icon: 'fa-email', text: 'foo@bar.com', url: 'mailto://foo@bar.com', },
           { icon: 'fa-phone', text: '+44 (0) 123 456', url: 'tel:+44123456', },
         ]}
-        type='contact'
+        id='contact'
         obfuscate={ true } />
     );
 
