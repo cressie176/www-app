@@ -94,7 +94,7 @@ class App extends React.Component {
                     const id = parseInt(match.params.slug.split('-').slice(-1)[0], 10);
                     return isNaN(id)
                       ? <ErrorPage title='Page Not Found' html='The page you have requested has not been found.' />
-                      : <ArticlePage id={id} />
+                      : <ArticlePage id={id} />;
                   }
                 } />
                 <Route path='/' render={() =>

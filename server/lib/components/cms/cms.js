@@ -1,32 +1,33 @@
 import get from 'lodash.get';
+import async from 'async';
 
 export default function(options = {}) {
 
-  function start({ config, logger, store, tag, }, cb) {
+  function start({ config, logger, store, }, cb) {
 
-    function getSite(tag, cb) {
-      store.loadContent(tag, (err, content) => {
+    function getSite(tagId, cb) {
+      store.loadContent(tagId, (err, content) => {
         if (err) return cb(err);
         cb(null, content.site);
       });
     }
 
-    function getPage(tag, id, cb) {
-      store.loadContent(tag, (err, content) => {
+    function getPage(tagId, pageId, cb) {
+      store.loadContent(tagId, (err, content) => {
         if (err) return cb(err);
-        cb(null, get(content, `pages.${id}`));
+        cb(null, get(content, `pages.${pageId}`));
       });
     }
 
-    function getProject(tag, id, cb) {
-      store.loadContent(tag, (err, content) => {
+    function getProject(tagId, projectId, cb) {
+      store.loadContent(tagId, (err, content) => {
         if (err) return cb(err);
-        cb(null, get(content, `projects.${id}`));
+        cb(null, get(content, `projects.${projectId}`));
       });
     }
 
-    function listArticles(tag, cb) {
-      store.loadContent(tag, (err, content) => {
+    function listArticles(tagId, cb) {
+      store.loadContent(tagId, (err, content) => {
         if (err) return cb(err);
         if (!content.articles) return cb(null, undefined);
         const articles = Object.keys(content.articles).reduce((memo, id) => {
@@ -36,10 +37,10 @@ export default function(options = {}) {
       });
     }
 
-    function getArticle(tag, id, cb) {
-      store.loadContent(tag, (err, content) => {
+    function getArticle(tagId, articleId, cb) {
+      store.loadContent(tagId, (err, content) => {
         if (err) return cb(err);
-        const raw = get(content, `articles.${id}`);
+        const raw = get(content, `articles.${articleId}`);
         cb(null, toArticle(raw));
       });
     }
@@ -48,8 +49,11 @@ export default function(options = {}) {
       return raw ? Object.assign({}, raw, { date: new Date(raw.date), }) : raw;
     }
 
-    store.loadContent(tag, (err, content) => {
-      if (err) return cb(err);
+    async.waterfall([
+      store.loadTag.bind(store),
+      store.loadContent.bind(store),
+    ], ((err, content) => {
+      if (err) logger.warn('Error pre-loading content', err);
       cb(null, {
         getSite,
         getPage,
@@ -57,7 +61,7 @@ export default function(options = {}) {
         listArticles,
         getArticle,
       });
-    });
+    }));
   }
 
   return {

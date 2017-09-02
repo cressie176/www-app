@@ -34,7 +34,7 @@ describe('Contentful', () => {
 
       contentful.extract((err, content) => {
         expect(err).toBeDefined();
-        expect(err.message).toBe('Received status 500 getting content from https://cdn.contentful.com/spaces/******/entries');
+        expect(err.message).toMatch(new RegExp('Received status 500 getting content from https://cdn.contentful.com/spaces/.*/entries'));
         done();
       });
     });

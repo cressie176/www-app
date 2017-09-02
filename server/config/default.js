@@ -8,22 +8,14 @@ module.exports = {
       forbidden: [],
     },
   },
-  server: {
-    host: '0.0.0.0',
-    port: 3000,
-  },
-  routes: {
-    client: {
-      public: {
-        ga: {
-          trackingId: 'UA-104642477-2',
-        },
-      },
-    },
-  },
   cms: {
     store: {
-      path: path.join(process.cwd(), 'server', 'content'),
+      content: {
+        path: path.join(process.cwd(), 'server', 'content', 'tagged'),
+      },
+      tag: {
+        path: path.join(process.cwd(), 'server', 'content'),
+      },
     },
     cache: {
       max: 10,
@@ -62,6 +54,19 @@ module.exports = {
       'dependencies',
       'devDependencies',
     ],
+  },
+  server: {
+    host: '0.0.0.0',
+    port: 3000,
+  },
+  routes: {
+    client: {
+      public: {
+        ga: {
+          trackingId: 'UA-104642477-2',
+        },
+      },
+    },
   },
   session: {
     store: 'memory',

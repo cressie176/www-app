@@ -1,15 +1,4 @@
 module.exports = {
-  routes: {
-    client: {
-      public: {
-        foo: 'bar',
-      },
-    },
-  },
-  contentful: {
-    space: "test-space",
-    key: "test-key",
-  },
   auth: {
     roles: {
       guest: ['*',],
@@ -25,11 +14,29 @@ module.exports = {
       },
     },
   },
-  server: {
-    host: '0.0.0.0',
-    port: 13000,
+  cms: {
+    store: {
+      tag: {
+        name: 'test',
+      },
+    },
+  },
+  contentful: {
+    space: "test-space",
+    key: "test-key",
   },
   logger: {
     transport: 'human',
+  },
+  routes: {
+    client: {
+      public: {
+        foo: 'bar',
+      },
+    },
+  },
+  server: {
+    host: '0.0.0.0',
+    port: 13000,
   },
 };

@@ -26,33 +26,45 @@ class HomePage extends React.Component {
     } else {
       return (
         <div className='page home-page'>
-          <div className='row'>
-            <img className='hero' title={this.props.page.heroImage.title} alt={this.props.page.heroImage.description} src={this.props.page.heroImage.url} />
-          </div>
+          {
+            this.props.page.heroImage && (
+              <div className='row'>
+                <img className='hero' title={this.props.page.heroImage.title} alt={this.props.page.heroImage.description} src={this.props.page.heroImage.url} />
+              </div>
+            )
+          }
           <div className='row'>
             <div className='col-md-offset-1 col-md-5 no-min-height'>
               <FeatureToggle id='profile'>
-                <Profile
-                  profile={this.props.page.profile}
-                />
+              {
+                this.props.page.profile
+                  ? <Profile profile={this.props.page.profile} />
+                  : null
+              }
               </FeatureToggle>
             </div>
             <div className='col-md-5 no-min-height'>
               <FeatureToggle id='featuredProjects'>
               {
-                <FeaturedProjects projects={this.props.page.featuredSoftware} />
+                this.props.page.featuredProjects
+                  ? <FeaturedProjects projects={this.props.page.featuredSoftware} />
+                  : null
               }
               </FeatureToggle>
             </div>
           </div>
           <FeatureToggle id='featuredArticles'>
           {
-            <FeaturedArticles articles={this.props.page.featuredArticles} />
+            this.props.page.featuredArticles
+              ? <FeaturedArticles articles={this.props.page.featuredArticles} />
+              : null
           }
           </FeatureToggle>
           <FeatureToggle id='featuredTalks'>
           {
-            <FeaturedArticles articles={this.props.page.featuredTalks} />
+            this.props.page.featuredTalks
+              ? <FeaturedArticles articles={this.props.page.featuredTalks} />
+              : null
           }
           </FeatureToggle>
         </div>

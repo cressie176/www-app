@@ -19,6 +19,9 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
+        loadTag: cb => {
+          return cb(null, tag);
+        },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
           cb(null, { site: { id: 'SITE', }, });
@@ -41,6 +44,9 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
+        loadTag: cb => {
+          return cb(null, tag);
+        },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
           cb(null, {});
@@ -65,6 +71,9 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
+        loadTag: cb => {
+          return cb(null, tag);
+        },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
           cb(null, { pages: { home: { id: 'HOME', }, }, });
@@ -87,6 +96,9 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
+        loadTag: cb => {
+          return cb(null, tag);
+        },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
           cb(null, {});
@@ -112,6 +124,9 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
+        loadTag: cb => {
+          return cb(null, tag);
+        },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
           cb(null, { projects: { yadda: { id: 'YADDA', }, }, });
@@ -134,6 +149,9 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
+        loadTag: cb => {
+          return cb(null, tag);
+        },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
           cb(null, {});
@@ -160,6 +178,9 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
+        loadTag: cb => {
+          return cb(null, tag);
+        },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
           cb(null, { articles: { a: 1, b: 2, c: 3, d: 4, }, });
@@ -182,6 +203,9 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
+        loadTag: cb => {
+          return cb(null, tag);
+        },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
           cb(null, {});
@@ -208,6 +232,9 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
+        loadTag: cb => {
+          return cb(null, tag);
+        },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
           cb(null, { articles: { '1': { id: 1, title: 'Article 1', }, },} );
@@ -231,6 +258,9 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
+        loadTag: cb => {
+          return cb(null, tag);
+        },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
           cb(null, { articles: { '1': { id: 1, title: 'Article 1', }, },} );
@@ -253,6 +283,9 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
+        loadTag: cb => {
+          return cb(null, tag);
+        },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
           cb(null, {} );

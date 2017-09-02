@@ -1,14 +1,4 @@
 module.exports = {
-  routes: {
-    client: {
-      public: {
-        ga: {
-          trackingId: 'UA-104642477-1',
-        },
-        featureToggles: {},
-      },
-    },
-  },
   auth: {
     strategy: {
       id: 'github',
@@ -16,6 +6,23 @@ module.exports = {
         client: {
           callbackUrl: 'https://www.stephen-cresswell.net/auth/github/callback',
         },
+      },
+    },
+  },
+  cms: {
+    store: {
+      tag: {
+        name: 'live',
+      },
+    },
+  },
+  routes: {
+    client: {
+      public: {
+        ga: {
+          trackingId: 'UA-104642477-1',
+        },
+        featureToggles: {},
       },
     },
   },

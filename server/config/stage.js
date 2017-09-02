@@ -1,4 +1,21 @@
 module.exports = {
+  auth: {
+    strategy: {
+      id: 'github',
+      github: {
+        client: {
+          callbackUrl: 'https://stage.stephen-cresswell.net/auth/github/callback',
+        },
+      },
+    },
+  },
+  cms: {
+    store: {
+      tag: {
+        name: 'stage',
+      },
+    },
+  },
   routes: {
     client: {
       public: {
@@ -7,16 +24,6 @@ module.exports = {
           featuredProjects: true,
           featuredTalks: true,
           featuredArticles: false,
-        },
-      },
-    },
-  },
-  auth: {
-    strategy: {
-      id: 'github',
-      github: {
-        client: {
-          callbackUrl: 'https://stage.stephen-cresswell.net/auth/github/callback',
         },
       },
     },
