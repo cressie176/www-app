@@ -53,7 +53,7 @@ export class ArticlePage extends React.Component {
           <PageIntro title={this.props.article.title} />
           <div className='row'>
             <div className='col-sm-offset-1 col-sm-10'>
-              <img className='image--main' src={this.props.article.images.main.url} alt={this.props.article.images.main.alt} />
+              <img className='image--main' src={this.props.article.images.main.url} title={this.props.article.images.main.title} alt={this.props.article.images.main.description} />
             </div>
           </div>
           <div className='row'>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './PageIntro.css';
 
-const PageIntro = ({ icon, title, citation, image, }) => (
+const PageIntro = ({ icon, title, text, link, image, }) => (
   <div className='page-intro__wrapper full-width gutter'>
     <div className='page-intro'>
       <div className='row'>
@@ -11,16 +11,16 @@ const PageIntro = ({ icon, title, citation, image, }) => (
           <div className='page-intro__details'>
             <h1 className='page-intro__title' >
               { icon && <i className={`fa ${icon} page-intro__icon`} aria-hidden='true'></i> }
-              {title}
+              {text || title}
             </h1>
-            { citation ? <a className='page-intro__citation' href='https://xkcd.com/386/' >{citation.text}</a> : null }
+            { link ? <a className='page-intro__citation' href='{link.url}' >{link.text}</a> : null }
           </div>
         </div>
         {
           image ?
           (
             <div className='col-md-2'>
-              <img className='page-intro__image' title={image.title} alt='' src={image.url}/>
+              <img className='page-intro__image' title={image.title} alt={image.description} src={image.url}/>
             </div>
           ) : null
         }

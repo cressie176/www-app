@@ -119,10 +119,14 @@ describe('Contentful', () => {
         expect(content).toBeDefined();
         expect(content.imageSets).toBeDefined();
         expect(content.imageSets['Yadda - The Other BDD Library'].id).toBe('Yadda - The Other BDD Library');
-        expect(content.imageSets['Yadda - The Other BDD Library'].mainImage).toBeDefined();
-        expect(content.imageSets['Yadda - The Other BDD Library'].mainImage.url).toBeDefined();
-        expect(content.imageSets['Yadda - The Other BDD Library'].thumbnailImage).toBeDefined();
-        expect(content.imageSets['Yadda - The Other BDD Library'].thumbnailImage.url).toBeDefined();
+        expect(content.imageSets['Yadda - The Other BDD Library'].main).toBeDefined();
+        expect(content.imageSets['Yadda - The Other BDD Library'].main.url).toBeDefined();
+        expect(content.imageSets['Yadda - The Other BDD Library'].main.title).toBe('Yadda - The Other BDD Library');
+        expect(content.imageSets['Yadda - The Other BDD Library'].main.description).toBe('Man sitting among boxes labelled chai, jasmine, mocha, vows and cucumber');
+        expect(content.imageSets['Yadda - The Other BDD Library'].thumbnail).toBeDefined();
+        expect(content.imageSets['Yadda - The Other BDD Library'].thumbnail.url).toBeDefined();
+        expect(content.imageSets['Yadda - The Other BDD Library'].thumbnail.title).toBe('Yadda - The Other BDD Library (Thumbnail)');
+        expect(content.imageSets['Yadda - The Other BDD Library'].thumbnail.description).toBe('Man sitting among boxes labelled chai, jasmine, mocha, vows and cucumber');
         done();
       });
     });
@@ -151,7 +155,7 @@ describe('Contentful', () => {
         expect(content).toBeDefined();
         expect(content.links).toBeDefined();
         expect(content.links.GitHub.id).toBe('GitHub');
-        expect(content.links.GitHub.text).toBe('GitHub');
+        expect(content.links.GitHub.text).toBe(undefined);
         expect(content.links.GitHub.icon).toBe('fa-github');
         expect(content.links.GitHub.url).toBe('https://www.github.com/cressie176/');
         done();
@@ -169,7 +173,8 @@ describe('Contentful', () => {
         expect(content.pages.home.id).toBe('home');
         expect(content.pages.home.title).toBe('Home');
         expect(content.pages.home.heroImage).toBeDefined();
-        expect(content.pages.home.heroImage.title).toBeDefined();
+        expect(content.pages.home.heroImage.title).toBe('Coding On The Sofa');
+        expect(content.pages.home.heroImage.description).toBe('Someone lying on a sofa writing code on a laptop');
         expect(content.pages.home.heroImage.url).toBeDefined();
 
         expect(content.pages.home.profile).toBe(content.profile);
@@ -177,6 +182,28 @@ describe('Contentful', () => {
         expect(content.pages.home.featuredSoftware).toBe(content.featured.software);
         expect(content.pages.home.featuredTalks).toBe(content.featured.talks);
         expect(content.pages.home.featuredArticles).toBe(content.featured.articles);
+
+        done();
+      });
+    });
+
+    it('should transform the channel page', done => {
+
+      contentful.extract((err, content) => {
+        expect(err).toBe(null);
+        expect(content).toBeDefined();
+        expect(content.pages).toBeDefined();
+        expect(content.pages.blog).toBeDefined();
+
+        expect(content.pages.blog.id).toBe('blog');
+        expect(content.pages.blog.title).toBe('Blog');
+        expect(content.pages.blog.introImage).toBeDefined();
+        expect(content.pages.blog.introImage.title).toBe('Duty Calls');
+        expect(content.pages.blog.introImage.description).toBe('A stick figure refusing to leave his computer and come to bed');
+        expect(content.pages.blog.introImage.url).toBeDefined();
+        expect(content.pages.blog.introText).toBe('"Someone is wrong on the internet"');
+        expect(content.pages.blog.introLink).toBeDefined();
+        expect(content.pages.blog.introLink.text).toBe('Duty Calls - xkcd');
 
         done();
       });

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FeaturedArticle from './FeaturedArticle';
+import { Link, } from 'react-router-dom';
 
 import './FeaturedArticles.css';
 
@@ -32,7 +33,7 @@ const FeaturedArticles = ({ articles = { items: [], link: {}, }, }) => {
         <div className='row'>
           <div className='col-md-offset-1 col-md-10'>
             <div className='featured-articles__see-all-link'>
-              <a href={articles.link.url}>{articles.link.text}</a>
+              <Link to={articles.link.url}>{articles.link.text}</Link>
             </div>
           </div>
         </div>

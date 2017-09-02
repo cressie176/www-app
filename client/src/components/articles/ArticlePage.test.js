@@ -94,7 +94,7 @@ describe('ArticlePage', () => {
           images: {
             main: {
               url: 'http://main.jpg',
-              alt: 'main',
+              description: 'main',
             },
           },
         }}

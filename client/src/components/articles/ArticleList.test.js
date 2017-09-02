@@ -35,7 +35,8 @@ describe('ArticleList', () => {
             images: {
               thumbnail: {
                 url: 'http://thumb-1.jpg',
-                title: 'thumb-1',
+                title: 'Thumb-1',
+                description: 'thumb-1',
               },
             },
             summary: '<p>Article 1 Summary</p>',
@@ -47,7 +48,8 @@ describe('ArticleList', () => {
             images: {
               thumbnail: {
                 url: 'http://thumb-2.jpg',
-                title: 'thumb-2',
+                title: 'Thumb-2',
+                description: 'thumb-2',
               },
             },
             summary: '<p>Article 2 Summary</p>',
@@ -62,6 +64,7 @@ describe('ArticleList', () => {
     expect(article1.find('.article-list__article__title Link').prop('to')).toBe('http://article-1');
     expect(article1.find('.article-list__article__thumbnail').prop('src')).toBe('http://thumb-1.jpg');
     expect(article1.find('.article-list__article__thumbnail').prop('alt')).toBe('thumb-1');
+    expect(article1.find('.article-list__article__thumbnail').prop('title')).toBe('Thumb-1');
     expect(article1.find('.article-list__article__summary').html()).toBe('<div class="article-list__article__summary"><p>Article 1 Summary</p></div>');
   });
 

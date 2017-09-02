@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import IconListItem from '../common/IconListItem';
 import { connect, } from 'react-redux';
 import { fetchArticle, } from '../../actions/articleActions';
+import { Link, } from 'react-router-dom';
+
 
 export class FeaturedArticle extends React.Component {
   componentDidMount() {
@@ -29,9 +31,11 @@ export class FeaturedArticle extends React.Component {
       return (
         <div className='col-md-4 featured-article'>
           <div className='featured-article__title__wrapper'>
-            <h3 className='featured-article__title'><a className='featured-article__title__link' href={this.props.article.url} dangerouslySetInnerHTML={{__html: this.props.article.title,}} /></h3>
+            <h3 className='featured-article__title'><Link className='featured-article__title__link' to={this.props.article.url} dangerouslySetInnerHTML={{__html: this.props.article.title,}} /></h3>
           </div>
-          <img className='featured-article__thumbnail' src={this.props.article.images.thumbnail.url} title={this.props.article.images.thumbnail.title} alt={this.props.article.images.thumbnail.title} />
+          <Link to={this.props.article.url}>
+            <img className='featured-article__thumbnail' src={this.props.article.images.thumbnail.url} title={this.props.article.images.thumbnail.title} alt={this.props.article.images.thumbnail.description} />
+          </Link>
           <div className='featured-article__summary' dangerouslySetInnerHTML={{__html: this.props.article.summary,}} />
           <ul className='featured-article__details'>
             {

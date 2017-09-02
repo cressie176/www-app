@@ -2,7 +2,7 @@
   "sys": {
     "type": "Array"
   },
-  "total": 41,
+  "total": 43,
   "skip": 0,
   "limit": 1000,
   "items": [
@@ -15,10 +15,454 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "5x2gdy4Q1yoa2wWwqiMoMA",
+        "id": "6NXtw4v3GMCgoaE4IKk6a2",
         "type": "Entry",
-        "createdAt": "2017-08-31T22:51:26.155Z",
-        "updatedAt": "2017-09-01T14:04:44.063Z",
+        "createdAt": "2017-08-31T21:37:38.599Z",
+        "updatedAt": "2017-08-31T21:37:38.599Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "systemic",
+        "title": "Systemic",
+        "summary": "A minimal dependency injection library",
+        "body": "A minimal dependency injection library",
+        "url": "https://www.github.com/guidesmiths/systemic"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3yKsrbq2XSgU0mooEyO4oo",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:35:07.184Z",
+        "updatedAt": "2017-08-31T23:35:07.184Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Node.js Meetup - Divorcing Microservices With Rascal",
+        "text": "Node.js Meetup",
+        "url": "https://www.meetup.com/Node-js-Meetup-London/events/231560165/"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "6Y0NzhDESk8qg0IsEwc2mE",
+        "type": "Entry",
+        "createdAt": "2017-08-31T22:12:50.200Z",
+        "updatedAt": "2017-09-01T11:23:49.829Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "site"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "www.stephen-cresswell.net",
+        "title": "www.stephen-cresswell.net",
+        "navigation": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5tyOG8UYlaw0s8G8YqS0wQ"
+          }
+        },
+        "spotlights": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "fL9gaet7tCCegUiCOoUme"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2nyUF7itooUI8yMasiyAUs"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6oPgI4zNzqSIWUS2QOsQKy"
+            }
+          }
+        ],
+        "copyright": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "3d4GTHKfj2GEsIAYcuScoQ"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "2ksz0Er8busMsUc6YO4Go2",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:30:46.853Z",
+        "updatedAt": "2017-08-31T21:38:42.017Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "See all software…",
+        "text": "See all software…",
+        "url": "/software"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "7DYkHbFZv28smw4QukeUkS",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:02:19.698Z",
+        "updatedAt": "2017-08-31T23:02:19.698Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "profile"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "profile",
+        "title": "Profile",
+        "body": "<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React, as demonstrated by the <a href='https://www.github.com/cressie176/www-app'>source code</a> for this site.</p><p>Until recently I was operating in a dual role, firstly as CTO and co-founder of <a href='https://www.guidesmiths.com'>GuideSmiths</a>, a successful Node.js & microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients.<p></p>Due to a desire to spend more time with my family, I have negotiated an exit, and am seeking a senior, hands-on position in an agile or post agile environment, which can be predominantly carried out remotely or from the vicinity of my home in Suffolk.</p>"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "5uraX28hqg2EU02umO8qog",
+        "type": "Entry",
+        "createdAt": "2017-09-02T19:21:46.999Z",
+        "updatedAt": "2017-09-02T20:06:03.151Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Duty Calls",
+        "text": "Duty Calls - xkcd",
+        "url": "https://xkcd.com/386/"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "2mGqla8uE8ukUSUwIY8swS",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:27:15.257Z",
+        "updatedAt": "2017-08-31T23:31:35.672Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "article"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": 1,
+        "title": "Enterprise Grade Microservices",
+        "channel": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5AeYQEH78Ie4OCKWWkmI2o"
+          }
+        },
+        "keywords": [
+          "Node.js",
+          "12 Factor",
+          "Microservices",
+          "Architecture",
+          "Design",
+          "Software"
+        ],
+        "summary": "<p>Microservice adoption is driven by promises of simplicity, flexibility, resilience and productivity. It liberates developers from clunky frameworks and legacy technology, enabling them to release faster and more frequently than ever before. With an effective deployment pipeline it is possible to have a new microservice running in production and delivering value within 15 minutes, and to achieve 20+ production releases a day.</p>\n\n<p>But the fast pace, technological freedom and segregated codebase is not without cost. The maxim that a microservice codebase doesn't matter because it's small, won't change and is easily replaced is more often false than it is true.</p>\n\n<p>The principles behind clean code and 12 factor apps are just as applicable to microservices as they are to monoliths, but are all too easily ignored in the typical hubbub and hype that surrounds microservice adoption.</p>",
+        "date": "2016-11-23T19:00+00:00",
+        "event": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "19VmSbmGN2gGoGU24CIE2a"
+          }
+        },
+        "location": "Budapest",
+        "images": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "9hIixEpd04ksKwqCoWYKg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "13bFqt7AHAGemE2cuUsiqM",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:56:17.744Z",
+        "updatedAt": "2017-09-02T19:23:45.219Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "channelPage"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "blog",
+        "title": "Blog",
+        "link": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5ovlS609fqOmywE2kcSAWg"
+          }
+        },
+        "introImage": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "6oYIvHjLUsU0UISMyaOqq4"
+          }
+        },
+        "introText": "\"Someone is wrong on the internet\"",
+        "introLink": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5uraX28hqg2EU02umO8qog"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3e6i5bHPBYKyuG8YKu066E",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:11:37.665Z",
+        "updatedAt": "2017-08-31T21:39:59.447Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Mobile",
+        "text": "+44 (0)7814033321",
+        "icon": "fa-phone",
+        "url": "tel:+447814033321"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3COc9WAIMMY0QKkaycg0WQ",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:37:55.487Z",
+        "updatedAt": "2017-09-02T20:10:35.094Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "article"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": 2,
+        "title": "Divorcing Microservices With Rascal",
+        "channel": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5AeYQEH78Ie4OCKWWkmI2o"
+          }
+        },
+        "keywords": [
+          "Node.js",
+          "Rascal",
+          "RabbitMQ",
+          "AMQP",
+          "Microservices",
+          "Messaging",
+          "Software",
+          "Architecture",
+          "Design"
+        ],
+        "summary": "<p>Microservice based architectures are everywhere, but to succeed you must find ways to decouple your services so they can be developed and deployed in isolation. A popular strategy is to use a message broker, which in addition to providing the decoupling, can also add robustness and scalability. But messaging can be deceptively difficult. Which broker suits your needs best? Should you follow a \"command\" or \"event\" based model? How will you handle duplicates? Can you tolerate message loss? Will you recover from errors by discarding, retrying or dead lettering?</p>\n\n<p>If these questions weren't enough, you have to find a good client library. For RabbitMQ there's the excellent <a href=\"https://github.com/squaremo/amqp.node\">ampqlib</a>, but it's not for the faint of heart. Estabilishing a communication channel with the broker requires serveral api calls, and will not be automatically be restablished if dropped. Messages are not persistent or confirmed by default. Errors are likely to crash your application, and there's no support for clustering.</p>\n\n<p>Enter <a href=\"https://www.github.com/guidesmiths/rascal\">Rascal</a>, a friendly, config driven RabbitMQ client which sits on top of amqplib, simplyfing adoption significantly.</p>",
+        "date": "2016-06-29T19:00+00:00",
+        "event": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "3yKsrbq2XSgU0mooEyO4oo"
+          }
+        },
+        "location": "London",
+        "images": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "6xesezFf7G4mCEaYAO6wg8"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "1vB10lNZBSiiKsai0KiCIe",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:12:39.858Z",
+        "updatedAt": "2017-09-01T22:20:56.371Z",
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "GitHub",
+        "icon": "fa-github",
+        "url": "https://www.github.com/cressie176/"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "72cEhCrZAIOY0wmI64MMIm",
+        "type": "Entry",
+        "createdAt": "2017-08-31T22:52:08.237Z",
+        "updatedAt": "2017-09-01T14:04:34.786Z",
         "revision": 3,
         "contentType": {
           "sys": {
@@ -30,9 +474,9 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "articles",
-        "title": "Featured Articles",
-        "icon": "fa-file-text-o",
+        "id": "talks",
+        "title": "Upcoming & Recent Talks",
+        "icon": "fa-microphone",
         "items": [
           {
             "sys": {
@@ -60,7 +504,7 @@
           "sys": {
             "type": "Link",
             "linkType": "Entry",
-            "id": "fXohBYKRpeI606eSQYAwQ"
+            "id": "Ho8vv9fNWUgeiyYggOGWo"
           }
         }
       }
@@ -74,10 +518,126 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "6oPgI4zNzqSIWUS2QOsQKy",
+        "id": "3w2lWUvmhGi8K0WS4mksYk",
         "type": "Entry",
-        "createdAt": "2017-08-31T22:02:59.642Z",
-        "updatedAt": "2017-08-31T22:02:59.642Z",
+        "createdAt": "2017-08-31T21:12:01.437Z",
+        "updatedAt": "2017-08-31T21:40:12.384Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Privacy Policy",
+        "text": "Privacy Policy",
+        "url": "/legal/privacy-policy"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "5b5pXtgGjSiCcKwCieE4UC",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:10:04.513Z",
+        "updatedAt": "2017-08-31T21:39:11.321Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Terms & Conditions",
+        "text": "Terms & Conditions",
+        "url": "/legal/terms-and-conditions"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "Ho8vv9fNWUgeiyYggOGWo",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:31:09.787Z",
+        "updatedAt": "2017-08-31T21:38:34.266Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "See all talks…",
+        "text": "See all talks…",
+        "url": "/talks"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "XXrykuPGkUEeuSkMGug64",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:13:33.601Z",
+        "updatedAt": "2017-09-01T22:21:21.156Z",
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Twitter",
+        "icon": "fa-twitter",
+        "url": "https://www.twitter.com/cressie176"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "fL9gaet7tCCegUiCOoUme",
+        "type": "Entry",
+        "createdAt": "2017-08-31T22:03:21.056Z",
+        "updatedAt": "2017-08-31T22:03:21.056Z",
         "revision": 1,
         "contentType": {
           "sys": {
@@ -89,31 +649,251 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "social",
-        "title": "Social Networks",
+        "id": "contact",
+        "title": "Contact",
         "links": [
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "1vB10lNZBSiiKsai0KiCIe"
+              "id": "23BQPn6dHWOu2AkK8ymS68"
             }
           },
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "Q4D5N4wyQ0wWO0AmwmCmE"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "XXrykuPGkUEeuSkMGug64"
+              "id": "3e6i5bHPBYKyuG8YKu066E"
             }
           }
         ]
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3pVLW3iAYgcIUuUe6EUmCS",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:43:25.836Z",
+        "updatedAt": "2017-09-02T19:44:18.589Z",
+        "revision": 6,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "imageSet"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Yadda - The Other BDD Library",
+        "main": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "FntIzfFlAGWGOQMcoUCOm"
+          }
+        },
+        "thumbnail": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "6jixHMToeAgwWUO62SSm6Q"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "7iTlZrljgWkQ0gGaYywaUU",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:36:02.352Z",
+        "updatedAt": "2017-08-31T21:36:02.353Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "rascal",
+        "title": "Rascal",
+        "summary": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
+        "body": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
+        "url": "https://www.github.com/guidesmiths/rascal"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3d4GTHKfj2GEsIAYcuScoQ",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:24:43.330Z",
+        "updatedAt": "2017-09-01T11:54:58.659Z",
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "copyright"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "© 2017 Stephen Cresswell. All rights reserved.",
+        "year": 2017,
+        "owner": "Stephen Cresswell",
+        "rights": "All rights reserved."
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "23BQPn6dHWOu2AkK8ymS68",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:08:23.477Z",
+        "updatedAt": "2017-08-31T21:39:20.732Z",
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Email",
+        "text": "hello@stephen-cresswell.net",
+        "icon": "fa-envelope",
+        "url": "mailto:hello@stephen-cresswell.net"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3dmRj7SUUg2Mei2eWoa0ok",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:36:34.809Z",
+        "updatedAt": "2017-08-31T21:36:34.809Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "marv",
+        "title": "Marv",
+        "summary": "A database migration library with pluggable drivers for PostgreSQL and MySQL",
+        "body": "A database migration library with pluggable drivers for PostgreSQL and MySQL",
+        "url": "https://www.github.com/guidesmiths/marv"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "5uE0rEBTS8KKAo2EYAoyGq",
+        "type": "Entry",
+        "createdAt": "2017-09-01T22:06:47.727Z",
+        "updatedAt": "2017-09-01T22:06:47.727Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "legalPage"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "privacy-policy",
+        "title": "Privacy Policy",
+        "body": "<p>This privacy policy sets out how we use and protect any information that you give us when you use this website.</p>\n\n<p>We are committed to ensuring that your privacy is protected. Should we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement.</p>\n\n<p>We may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes. This policy is effective from 1st August 2017.</p>\n\n<h3>What we collect</h3>\n<p>This website does not ask for or collect personal information.</p>\n\n<h3>How we use cookies</h3>\n<p>A cookie is a small file which asks permission to be placed on your computer&apos;s hard drive. Once you agree, the file is added and the cookie helps analyse web traffic or lets you know when you visit a particular site. Cookies allow web applications to respond to you as an individual. The web application can tailor its operations to your needs, likes and dislikes by gathering and remembering information about your preferences.</p>\n\n<p>We use traffic log cookies to identify which pages are being used. This helps us analyse data about webpage traffic and improve our website in order to tailor it to customer needs. We only use this information for statistical analysis purposes and then the data is removed from the system.</p>\n\n<p>Overall, cookies help us provide you with a better website by enabling us to monitor which pages you find useful and which you do not. A cookie in no way gives us access to your computer or any information about you, other than the data you choose to share with us.</p>\n\n<p>You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of the website.</p>\n\n<h3>Links to other websites</h3>\n\n<p>Our website may contain links to other websites of interest. However, once you have used these links to leave our site, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites and such sites are not governed by this privacy statement. You should exercise caution and look at the privacy statement applicable to the website in question.</p>"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "5AeYQEH78Ie4OCKWWkmI2o",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:56:36.596Z",
+        "updatedAt": "2017-08-31T23:51:57.899Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "channelPage"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "talks",
+        "title": "Talks",
+        "link": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "74hFY4cLKggKiGuyy2iqK0"
+          }
+        }
       }
     },
     {
@@ -128,8 +908,8 @@
         "id": "74hFY4cLKggKiGuyy2iqK0",
         "type": "Entry",
         "createdAt": "2017-08-31T21:07:43.485Z",
-        "updatedAt": "2017-08-31T23:52:05.660Z",
-        "revision": 5,
+        "updatedAt": "2017-09-01T22:23:29.474Z",
+        "revision": 6,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -140,7 +920,7 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "talks",
+        "id": "Talks",
         "text": "Talks",
         "url": "/talks"
       }
@@ -154,10 +934,10 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "2nyUF7itooUI8yMasiyAUs",
+        "id": "5tyOG8UYlaw0s8G8YqS0wQ",
         "type": "Entry",
-        "createdAt": "2017-08-31T22:03:45.486Z",
-        "updatedAt": "2017-08-31T22:03:45.486Z",
+        "createdAt": "2017-08-31T22:04:35.017Z",
+        "updatedAt": "2017-08-31T22:04:35.017Z",
         "revision": 1,
         "contentType": {
           "sys": {
@@ -169,21 +949,28 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "legal",
-        "title": "Legal",
+        "id": "navigation",
+        "title": "Navigation",
         "links": [
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "5b5pXtgGjSiCcKwCieE4UC"
+              "id": "5CuaQgEL4souWSi0uiei8o"
             }
           },
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "3w2lWUvmhGi8K0WS4mksYk"
+              "id": "5ovlS609fqOmywE2kcSAWg"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "74hFY4cLKggKiGuyy2iqK0"
             }
           }
         ]
@@ -198,58 +985,24 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "1cPPtw2Z3YOk6WYWO8IKY8",
+        "id": "19VmSbmGN2gGoGU24CIE2a",
         "type": "Entry",
-        "createdAt": "2017-09-01T10:54:18.270Z",
-        "updatedAt": "2017-09-01T10:54:18.270Z",
+        "createdAt": "2017-08-31T23:31:13.936Z",
+        "updatedAt": "2017-08-31T23:31:13.936Z",
         "revision": 1,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "homePage"
+            "id": "link"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "home",
-        "title": "Home",
-        "heroImage": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "2U93BNINsIgIKccgSo2Ewi"
-          }
-        },
-        "profile": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "7DYkHbFZv28smw4QukeUkS"
-          }
-        },
-        "featuredSoftware": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "BiHMILP0e4GougCcgss4G"
-          }
-        },
-        "featuredArticles": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5x2gdy4Q1yoa2wWwqiMoMA"
-          }
-        },
-        "featuredTalks": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "72cEhCrZAIOY0wmI64MMIm"
-          }
-        }
+        "id": "Corp.js - Enterprise Grade Microservices",
+        "text": "Corp.js",
+        "url": "https://www.meetup.com/Corporate-JavaScript-Meetup-Budapest/"
       }
     },
     {
@@ -261,10 +1014,39 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "3hFiS8u624mskWOeqQygOS",
+        "id": "5ovlS609fqOmywE2kcSAWg",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:14:22.249Z",
-        "updatedAt": "2017-08-31T21:52:22.779Z",
+        "createdAt": "2017-08-31T21:07:33.567Z",
+        "updatedAt": "2017-09-01T22:23:39.748Z",
+        "revision": 6,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Blog",
+        "text": "Blog",
+        "url": "/blog"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "fXohBYKRpeI606eSQYAwQ",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:29:30.348Z",
+        "updatedAt": "2017-08-31T22:05:02.439Z",
         "revision": 4,
         "contentType": {
           "sys": {
@@ -276,101 +1058,9 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Duty Calls - xkcd",
-        "text": "Duty Calls - xkcd",
-        "url": "https://xkcd.com/386/",
-        "altText": "It's Me!"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "77RHHsHuSsKIuCE4uew000",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:41:44.131Z",
-        "updatedAt": "2017-08-31T23:41:44.131Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Community For Agile Testing - Yadda",
-        "text": "Community For Agile Testing",
-        "url": "https://www.meetup.com/es-ES/Community-for-Agile-Testing/events/229788565/"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "2Z335f4s5G4M880UCeUe0W",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:35:05.655Z",
-        "updatedAt": "2017-08-31T21:35:05.655Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "yadda",
-        "title": "Yadda",
-        "summary": "A cucumber-esque BDD library, but with greater flexibility",
-        "body": "A cucumber-esque BDD library, but with greater flexibility",
-        "url": "https://www.github.com/acuminous/yadda"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "BeyYWLb8AgOUsYMciKG4",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:37:03.113Z",
-        "updatedAt": "2017-08-31T21:37:03.113Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "confabulous",
-        "title": "Confabulous",
-        "summary": "A hierarchical configuration loader with support for remote sources such as S3, etcd and Vault",
-        "body": "A hierarchical configuration loader with support for remote sources such as S3, etcd and Vault",
-        "url": "https://www.github.com/guidesmiths/confabulous"
+        "id": "See all articles…",
+        "text": "See all articles…",
+        "url": "/blog"
       }
     },
     {
@@ -455,114 +1145,96 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "fXohBYKRpeI606eSQYAwQ",
+        "id": "BeyYWLb8AgOUsYMciKG4",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:29:30.348Z",
-        "updatedAt": "2017-08-31T22:05:02.439Z",
+        "createdAt": "2017-08-31T21:37:03.113Z",
+        "updatedAt": "2017-08-31T21:37:03.113Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "confabulous",
+        "title": "Confabulous",
+        "summary": "A hierarchical configuration loader with support for remote sources such as S3, etcd and Vault",
+        "body": "A hierarchical configuration loader with support for remote sources such as S3, etcd and Vault",
+        "url": "https://www.github.com/guidesmiths/confabulous"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "2Z335f4s5G4M880UCeUe0W",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:35:05.655Z",
+        "updatedAt": "2017-08-31T21:35:05.655Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "yadda",
+        "title": "Yadda",
+        "summary": "A cucumber-esque BDD library, but with greater flexibility",
+        "body": "A cucumber-esque BDD library, but with greater flexibility",
+        "url": "https://www.github.com/acuminous/yadda"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "9hIixEpd04ksKwqCoWYKg",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:26:51.194Z",
+        "updatedAt": "2017-09-02T19:45:57.627Z",
         "revision": 4,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "link"
+            "id": "imageSet"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "See all articles…",
-        "text": "See all articles…",
-        "url": "/blog"
-      }
-    },
-    {
-      "sys": {
-        "space": {
+        "id": "Enterprise Grade Microservices",
+        "main": {
           "sys": {
             "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
+            "linkType": "Asset",
+            "id": "3rAYG3rbaEI6Ka4SwigAuA"
           }
         },
-        "id": "19VmSbmGN2gGoGU24CIE2a",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:31:13.936Z",
-        "updatedAt": "2017-08-31T23:31:13.936Z",
-        "revision": 1,
-        "contentType": {
+        "thumbnail": {
           "sys": {
             "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Corp.js - Enterprise Grade Microservices",
-        "text": "Corp.js",
-        "url": "https://www.meetup.com/Corporate-JavaScript-Meetup-Budapest/"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "3COc9WAIMMY0QKkaycg0WQ",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:37:55.487Z",
-        "updatedAt": "2017-08-31T23:37:55.487Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "article"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": 2,
-        "title": "Divorcing Microservices With Rascal",
-        "channel": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5AeYQEH78Ie4OCKWWkmI2o"
-          }
-        },
-        "keywords": [
-          "Node.js",
-          "Rascal",
-          "RabbitMQ",
-          "AMQP",
-          "Microservices",
-          "Messaging",
-          "Software",
-          "Architecture",
-          "Design"
-        ],
-        "summary": "<p>Microservice based architectures are everywhere, but to succeed you must find ways to decouple your services so they can be developed and deployed in isolation. A popular strategy is to use a message broker, which in addition to providing the decoupling, can also add robustness and scalability. But messaging can be deceptively difficult. Which broker suits your needs best? Should you follow a \"command\" or \"event\" based model? How will you handle duplicates? Can you tolerate message loss? Will you recover from errors by discarding, retrying or dead lettering?</p>\n\n<p>If these questions weren\\'t enough, you have to find a good client library. For RabbitMQ there's the excellent <a href=\"https://github.com/squaremo/amqp.node\">ampqlib</a>, but it\\'s not for the faint of heart. Estabilishing a communication channel with the broker requires serveral api calls, and will not be automatically be restablished if dropped. Messages are not persistent or confirmed by default. Errors are likely to crash your application, and there's no support for clustering.</p>\n\n<p>Enter <a href=\"https://www.github.com/guidesmiths/rascal\">Rascal</a>, a friendly, config driven RabbitMQ client which sits on top of amqplib, simplyfing adoption significantly.</p>",
-        "date": "2016-11-23T19:00+00:00",
-        "event": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "3yKsrbq2XSgU0mooEyO4oo"
-          }
-        },
-        "location": "London",
-        "images": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "6xesezFf7G4mCEaYAO6wg8"
+            "linkType": "Asset",
+            "id": "3rAYG3rbaEI6Ka4SwigAuA"
           }
         }
       }
@@ -576,46 +1248,11 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "5AeYQEH78Ie4OCKWWkmI2o",
+        "id": "77RHHsHuSsKIuCE4uew000",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:56:36.596Z",
-        "updatedAt": "2017-08-31T23:51:57.899Z",
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "channelPage"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "talks",
-        "title": "Talks",
-        "link": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "74hFY4cLKggKiGuyy2iqK0"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "XXrykuPGkUEeuSkMGug64",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:13:33.601Z",
-        "updatedAt": "2017-08-31T21:40:40.380Z",
-        "revision": 3,
+        "createdAt": "2017-08-31T23:41:44.131Z",
+        "updatedAt": "2017-08-31T23:41:44.131Z",
+        "revision": 1,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -626,10 +1263,9 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Twitter",
-        "text": "Twitter",
-        "icon": "fa-twitter",
-        "url": "https://www.twitter.com/cressie176"
+        "id": "Community For Agile Testing - Yadda",
+        "text": "Community For Agile Testing",
+        "url": "https://www.meetup.com/es-ES/Community-for-Agile-Testing/events/229788565/"
       }
     },
     {
@@ -641,10 +1277,10 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "5tyOG8UYlaw0s8G8YqS0wQ",
+        "id": "2nyUF7itooUI8yMasiyAUs",
         "type": "Entry",
-        "createdAt": "2017-08-31T22:04:35.017Z",
-        "updatedAt": "2017-08-31T22:04:35.017Z",
+        "createdAt": "2017-08-31T22:03:45.486Z",
+        "updatedAt": "2017-08-31T22:03:45.486Z",
         "revision": 1,
         "contentType": {
           "sys": {
@@ -656,28 +1292,21 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "navigation",
-        "title": "Navigation",
+        "id": "legal",
+        "title": "Legal",
         "links": [
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "5CuaQgEL4souWSi0uiei8o"
+              "id": "5b5pXtgGjSiCcKwCieE4UC"
             }
           },
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "5ovlS609fqOmywE2kcSAWg"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "74hFY4cLKggKiGuyy2iqK0"
+              "id": "3w2lWUvmhGi8K0WS4mksYk"
             }
           }
         ]
@@ -692,36 +1321,24 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "3pVLW3iAYgcIUuUe6EUmCS",
+        "id": "1ybkgfeC0Usu6W4ICKmmco",
         "type": "Entry",
-        "createdAt": "2017-08-31T23:43:25.836Z",
-        "updatedAt": "2017-09-01T11:55:56.287Z",
-        "revision": 3,
+        "createdAt": "2017-09-01T22:05:15.270Z",
+        "updatedAt": "2017-09-01T22:07:41.521Z",
+        "revision": 2,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "imageSet"
+            "id": "legalPage"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Yadda - The Other BDD Library",
-        "mainImage": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "6jixHMToeAgwWUO62SSm6Q"
-          }
-        },
-        "thumbnailImage": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "FntIzfFlAGWGOQMcoUCOm"
-          }
-        }
+        "id": "terms-and-conditions",
+        "title": "Terms & Conditions",
+        "body": "<p>Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern our relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.</p>\n\n<p>The term 'us' or 'we' refers to the owner of the website. The term 'you' refers to the user or viewer of our website.</p>\n\n<p>The use of this website is subject to the following terms of use:\n\n<ol>\n<li>The content of the pages of this website is for your general information and use only. It is subject to change without notice.</li>\n<li>This website uses cookies to monitor browsing preferences. If you do allow cookies to be used, the personal information may be stored by us for use by third parties.</li>\n<li>Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</li>\n<li>Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific requirements.</li>\n<li>This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</li>\n<li>All trade marks reproduced in this website which are not the property of, or licensed to, the operator are acknowledged on the website.</li>\n<li>Unauthorised use of this website may give rise to a claim for damages and/or be a criminal offence.</li><li>From time to time this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).</li>\n<li>Your use of this website and any dispute arising out of such use of the website is subject to the laws of England, Northern Ireland, Scotland and Wales.</li>\n</ol>\n</p>"
       }
     },
     {
@@ -733,56 +1350,58 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "3dmRj7SUUg2Mei2eWoa0ok",
+        "id": "1cPPtw2Z3YOk6WYWO8IKY8",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:36:34.809Z",
-        "updatedAt": "2017-08-31T21:36:34.809Z",
+        "createdAt": "2017-09-01T10:54:18.270Z",
+        "updatedAt": "2017-09-01T10:54:18.270Z",
         "revision": 1,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "project"
+            "id": "homePage"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "marv",
-        "title": "Marv",
-        "summary": "A database migration library with pluggable drivers for PostgreSQL and MySQL",
-        "body": "A database migration library with pluggable drivers for PostgreSQL and MySQL",
-        "url": "https://www.github.com/guidesmiths/marv"
-      }
-    },
-    {
-      "sys": {
-        "space": {
+        "id": "home",
+        "title": "Home",
+        "heroImage": {
           "sys": {
             "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
+            "linkType": "Asset",
+            "id": "2U93BNINsIgIKccgSo2Ewi"
           }
         },
-        "id": "23BQPn6dHWOu2AkK8ymS68",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:08:23.477Z",
-        "updatedAt": "2017-08-31T21:39:20.732Z",
-        "revision": 4,
-        "contentType": {
+        "profile": {
           "sys": {
             "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
+            "linkType": "Entry",
+            "id": "7DYkHbFZv28smw4QukeUkS"
           }
         },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Email",
-        "text": "hello@stephen-cresswell.net",
-        "icon": "fa-envelope",
-        "url": "mailto:hello@stephen-cresswell.net"
+        "featuredSoftware": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "BiHMILP0e4GougCcgss4G"
+          }
+        },
+        "featuredArticles": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5x2gdy4Q1yoa2wWwqiMoMA"
+          }
+        },
+        "featuredTalks": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "72cEhCrZAIOY0wmI64MMIm"
+          }
+        }
       }
     },
     {
@@ -797,8 +1416,8 @@
         "id": "5CuaQgEL4souWSi0uiei8o",
         "type": "Entry",
         "createdAt": "2017-08-31T21:07:22.607Z",
-        "updatedAt": "2017-08-31T21:39:45.921Z",
-        "revision": 4,
+        "updatedAt": "2017-09-01T22:23:19.126Z",
+        "revision": 6,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -823,173 +1442,10 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "3d4GTHKfj2GEsIAYcuScoQ",
+        "id": "6oPgI4zNzqSIWUS2QOsQKy",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:24:43.330Z",
-        "updatedAt": "2017-09-01T11:54:58.659Z",
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "copyright"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "© 2017 Stephen Cresswell. All rights reserved.",
-        "year": 2017,
-        "owner": "Stephen Cresswell",
-        "rights": "All rights reserved."
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "1vB10lNZBSiiKsai0KiCIe",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:12:39.858Z",
-        "updatedAt": "2017-08-31T21:40:21.320Z",
-        "revision": 3,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "GitHub",
-        "text": "GitHub",
-        "icon": "fa-github",
-        "url": "https://www.github.com/cressie176/"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "6NXtw4v3GMCgoaE4IKk6a2",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:37:38.599Z",
-        "updatedAt": "2017-08-31T21:37:38.599Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "systemic",
-        "title": "Systemic",
-        "summary": "A minimal dependency injection library",
-        "body": "A minimal dependency injection library",
-        "url": "https://www.github.com/guidesmiths/systemic"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "9hIixEpd04ksKwqCoWYKg",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:26:51.194Z",
-        "updatedAt": "2017-09-01T11:56:09.979Z",
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "imageSet"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Enterprise Grade Microservices",
-        "mainImage": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "4pBKNjkDzaoiYqsScA6aQ2"
-          }
-        },
-        "thumbnailImage": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "3rAYG3rbaEI6Ka4SwigAuA"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "7iTlZrljgWkQ0gGaYywaUU",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:36:02.352Z",
-        "updatedAt": "2017-08-31T21:36:02.353Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "rascal",
-        "title": "Rascal",
-        "summary": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
-        "body": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
-        "url": "https://www.github.com/guidesmiths/rascal"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "fL9gaet7tCCegUiCOoUme",
-        "type": "Entry",
-        "createdAt": "2017-08-31T22:03:21.056Z",
-        "updatedAt": "2017-08-31T22:03:21.056Z",
+        "createdAt": "2017-08-31T22:02:59.642Z",
+        "updatedAt": "2017-08-31T22:02:59.642Z",
         "revision": 1,
         "contentType": {
           "sys": {
@@ -1001,21 +1457,28 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "contact",
-        "title": "Contact",
+        "id": "social",
+        "title": "Social Networks",
         "links": [
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "23BQPn6dHWOu2AkK8ymS68"
+              "id": "1vB10lNZBSiiKsai0KiCIe"
             }
           },
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "3e6i5bHPBYKyuG8YKu066E"
+              "id": "Q4D5N4wyQ0wWO0AmwmCmE"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "XXrykuPGkUEeuSkMGug64"
             }
           }
         ]
@@ -1030,363 +1493,11 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "Ho8vv9fNWUgeiyYggOGWo",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:31:09.787Z",
-        "updatedAt": "2017-08-31T21:38:34.266Z",
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "See all talks…",
-        "text": "See all talks…",
-        "url": "/talks"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "5b5pXtgGjSiCcKwCieE4UC",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:10:04.513Z",
-        "updatedAt": "2017-08-31T21:39:11.321Z",
-        "revision": 3,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Terms & Conditions",
-        "text": "Terms & Conditions",
-        "url": "/legal/terms-and-conditions"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "3w2lWUvmhGi8K0WS4mksYk",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:12:01.437Z",
-        "updatedAt": "2017-08-31T21:40:12.384Z",
-        "revision": 3,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Privacy Policy",
-        "text": "Privacy Policy",
-        "url": "/legal/privacy-policy"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "72cEhCrZAIOY0wmI64MMIm",
-        "type": "Entry",
-        "createdAt": "2017-08-31T22:52:08.237Z",
-        "updatedAt": "2017-09-01T14:04:34.786Z",
-        "revision": 3,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "featuredArticles"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "talks",
-        "title": "Upcoming & Recent Talks",
-        "icon": "fa-microphone",
-        "items": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "2mGqla8uE8ukUSUwIY8swS"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "3COc9WAIMMY0QKkaycg0WQ"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "5l4bNL91LOeicAIAMayAAc"
-            }
-          }
-        ],
-        "link": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "Ho8vv9fNWUgeiyYggOGWo"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "3yKsrbq2XSgU0mooEyO4oo",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:35:07.184Z",
-        "updatedAt": "2017-08-31T23:35:07.184Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Node.js Meetup - Divorcing Microservices With Rascal",
-        "text": "Node.js Meetup",
-        "url": "https://www.meetup.com/Node-js-Meetup-London/events/231560165/"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "13bFqt7AHAGemE2cuUsiqM",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:56:17.744Z",
-        "updatedAt": "2017-08-31T23:51:27.019Z",
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "channelPage"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "blog",
-        "title": "Blog",
-        "link": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5ovlS609fqOmywE2kcSAWg"
-          }
-        },
-        "introImage": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "3hFiS8u624mskWOeqQygOS"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "5ovlS609fqOmywE2kcSAWg",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:07:33.567Z",
-        "updatedAt": "2017-08-31T23:51:43.390Z",
-        "revision": 5,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "blog",
-        "text": "Blog",
-        "url": "/blog"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "6Y0NzhDESk8qg0IsEwc2mE",
-        "type": "Entry",
-        "createdAt": "2017-08-31T22:12:50.200Z",
-        "updatedAt": "2017-09-01T11:23:49.829Z",
-        "revision": 3,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "site"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "www.stephen-cresswell.net",
-        "title": "www.stephen-cresswell.net",
-        "navigation": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5tyOG8UYlaw0s8G8YqS0wQ"
-          }
-        },
-        "spotlights": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "fL9gaet7tCCegUiCOoUme"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "2nyUF7itooUI8yMasiyAUs"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "6oPgI4zNzqSIWUS2QOsQKy"
-            }
-          }
-        ],
-        "copyright": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "3d4GTHKfj2GEsIAYcuScoQ"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "6xesezFf7G4mCEaYAO6wg8",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:38:00.761Z",
-        "updatedAt": "2017-09-01T11:56:02.907Z",
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "imageSet"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Divorcing Microservices With Rascal",
-        "mainImage": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "1CYrJfCdiEMmO2GqsiQOMc"
-          }
-        },
-        "thumbnailImage": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "1qT8990i1SqsACkwECicAI"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
         "id": "Q4D5N4wyQ0wWO0AmwmCmE",
         "type": "Entry",
         "createdAt": "2017-08-31T21:13:14.690Z",
-        "updatedAt": "2017-08-31T21:40:32.111Z",
-        "revision": 3,
+        "updatedAt": "2017-09-01T22:21:04.244Z",
+        "revision": 4,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1398,7 +1509,6 @@
       },
       "fields": {
         "id": "Linkedin",
-        "text": "Linkedin",
         "icon": "fa-linkedin",
         "url": "https://www.linkedin.com/in/stephencresswell/"
       }
@@ -1412,143 +1522,40 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "3e6i5bHPBYKyuG8YKu066E",
+        "id": "5x2gdy4Q1yoa2wWwqiMoMA",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:11:37.665Z",
-        "updatedAt": "2017-08-31T21:39:59.447Z",
-        "revision": 3,
+        "createdAt": "2017-08-31T22:51:26.155Z",
+        "updatedAt": "2017-09-02T20:11:01.998Z",
+        "revision": 4,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "link"
+            "id": "featuredArticles"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Mobile",
-        "text": "+44 (0)7814033321",
-        "icon": "fa-phone",
-        "url": "tel:+447814033321"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
+        "id": "articles",
+        "title": "Featured Articles",
+        "icon": "fa-file-text-o",
+        "items": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3COc9WAIMMY0QKkaycg0WQ"
+            }
           }
-        },
-        "id": "2mGqla8uE8ukUSUwIY8swS",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:27:15.257Z",
-        "updatedAt": "2017-08-31T23:31:35.672Z",
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "article"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": 1,
-        "title": "Enterprise Grade Microservices",
-        "channel": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5AeYQEH78Ie4OCKWWkmI2o"
-          }
-        },
-        "keywords": [
-          "Node.js",
-          "12 Factor",
-          "Microservices",
-          "Architecture",
-          "Design",
-          "Software"
         ],
-        "summary": "<p>Microservice adoption is driven by promises of simplicity, flexibility, resilience and productivity. It liberates developers from clunky frameworks and legacy technology, enabling them to release faster and more frequently than ever before. With an effective deployment pipeline it is possible to have a new microservice running in production and delivering value within 15 minutes, and to achieve 20+ production releases a day.</p>\n\n<p>But the fast pace, technological freedom and segregated codebase is not without cost. The maxim that a microservice codebase doesn't matter because it's small, won't change and is easily replaced is more often false than it is true.</p>\n\n<p>The principles behind clean code and 12 factor apps are just as applicable to microservices as they are to monoliths, but are all too easily ignored in the typical hubbub and hype that surrounds microservice adoption.</p>",
-        "date": "2016-11-23T19:00+00:00",
-        "event": {
+        "link": {
           "sys": {
             "type": "Link",
             "linkType": "Entry",
-            "id": "19VmSbmGN2gGoGU24CIE2a"
-          }
-        },
-        "location": "Budapest",
-        "images": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "9hIixEpd04ksKwqCoWYKg"
+            "id": "fXohBYKRpeI606eSQYAwQ"
           }
         }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "7DYkHbFZv28smw4QukeUkS",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:02:19.698Z",
-        "updatedAt": "2017-08-31T23:02:19.698Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "profile"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "profile",
-        "title": "Profile",
-        "body": "<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React, as demonstrated by the <a href='https://www.github.com/cressie176/www-app'>source code</a> for this site.</p><p>Until recently I was operating in a dual role, firstly as CTO and co-founder of <a href='https://www.guidesmiths.com'>GuideSmiths</a>, a successful Node.js & microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients.<p></p>Due to a desire to spend more time with my family, I have negotiated an exit, and am seeking a senior, hands-on position in an agile or post agile environment, which can be predominantly carried out remotely or from the vicinity of my home in Suffolk.</p>"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "2ksz0Er8busMsUc6YO4Go2",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:30:46.853Z",
-        "updatedAt": "2017-08-31T21:38:42.017Z",
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "See all software…",
-        "text": "See all software…",
-        "url": "/software"
       }
     },
     {
@@ -1610,6 +1617,47 @@
           }
         }
       }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "6xesezFf7G4mCEaYAO6wg8",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:38:00.761Z",
+        "updatedAt": "2017-09-02T19:57:40.091Z",
+        "revision": 5,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "imageSet"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Divorcing Microservices With Rascal",
+        "main": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "1qT8990i1SqsACkwECicAI"
+          }
+        },
+        "thumbnail": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "1qT8990i1SqsACkwECicAI"
+          }
+        }
+      }
     }
   ],
   "includes": {
@@ -1623,57 +1671,26 @@
               "id": "g99n9a78vx0s"
             }
           },
-          "id": "1CYrJfCdiEMmO2GqsiQOMc",
-          "type": "Asset",
-          "createdAt": "2017-08-31T23:36:48.348Z",
-          "updatedAt": "2017-08-31T23:36:48.348Z",
-          "revision": 1,
-          "locale": "en-GB"
-        },
-        "fields": {
-          "title": "Divorcing Microservices With Rascal Thumbnail",
-          "file": {
-            "url": "//images.contentful.com/g99n9a78vx0s/1CYrJfCdiEMmO2GqsiQOMc/c717210960a4d86501e92ba5ea0622dc/divorcing-microservices-with-rascal.jpg",
-            "details": {
-              "size": 311368,
-              "image": {
-                "width": 720,
-                "height": 540
-              }
-            },
-            "fileName": "divorcing-microservices-with-rascal.jpg",
-            "contentType": "image/jpeg"
-          }
-        }
-      },
-      {
-        "sys": {
-          "space": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Space",
-              "id": "g99n9a78vx0s"
-            }
-          },
           "id": "1qT8990i1SqsACkwECicAI",
           "type": "Asset",
           "createdAt": "2017-08-31T23:37:20.693Z",
-          "updatedAt": "2017-08-31T23:37:20.693Z",
-          "revision": 1,
+          "updatedAt": "2017-09-02T19:42:09.242Z",
+          "revision": 5,
           "locale": "en-GB"
         },
         "fields": {
-          "title": "Divorcing Microservices With Rascal Cover",
+          "title": "Divorcing Microservices With Rascal (Thumbnail)",
+          "description": "A picture of a heart, ripped in two",
           "file": {
-            "url": "//images.contentful.com/g99n9a78vx0s/1qT8990i1SqsACkwECicAI/4509ff5b8e13df19120d0a6dc19e8dd8/divorcing-microservices-with-rascal.jpg",
+            "url": "//images.contentful.com/g99n9a78vx0s/1qT8990i1SqsACkwECicAI/ed05fc680b9409d92d0ebc46ca2b274a/divorcing-microservices-with-rascal-720x540.jpg",
             "details": {
-              "size": 311368,
+              "size": 60429,
               "image": {
                 "width": 720,
                 "height": 540
               }
             },
-            "fileName": "divorcing-microservices-with-rascal.jpg",
+            "fileName": "divorcing-microservices-with-rascal-720x540.jpg",
             "contentType": "image/jpeg"
           }
         }
@@ -1690,12 +1707,13 @@
           "id": "2U93BNINsIgIKccgSo2Ewi",
           "type": "Asset",
           "createdAt": "2017-09-01T10:53:59.285Z",
-          "updatedAt": "2017-09-01T10:53:59.285Z",
-          "revision": 1,
+          "updatedAt": "2017-09-02T19:30:48.879Z",
+          "revision": 2,
           "locale": "en-GB"
         },
         "fields": {
           "title": "Coding On The Sofa",
+          "description": "Someone lying on a sofa writing code on a laptop",
           "file": {
             "url": "//images.contentful.com/g99n9a78vx0s/2U93BNINsIgIKccgSo2Ewi/33107dd33838f8a51986fea1306ae9a7/hero.jpg",
             "details": {
@@ -1722,54 +1740,23 @@
           "id": "3rAYG3rbaEI6Ka4SwigAuA",
           "type": "Asset",
           "createdAt": "2017-08-31T23:19:44.408Z",
-          "updatedAt": "2017-08-31T23:19:44.408Z",
-          "revision": 1,
+          "updatedAt": "2017-09-02T19:42:32.821Z",
+          "revision": 4,
           "locale": "en-GB"
         },
         "fields": {
-          "title": "Enterprise Grade Microservices Cover",
+          "title": "Enterprise Grade Microservices (Thumbnail)",
+          "description": "Businessman standing by a window in a skyscraper",
           "file": {
-            "url": "//images.contentful.com/g99n9a78vx0s/3rAYG3rbaEI6Ka4SwigAuA/48844722f56594a6d72c378e98f9bd47/enterprise-grade-microservices.jpg",
+            "url": "//images.contentful.com/g99n9a78vx0s/3rAYG3rbaEI6Ka4SwigAuA/a0c40e3e2e6113fcdbf3323775f35665/enterprise-grade-microservices-720x540.jpg",
             "details": {
-              "size": 182086,
+              "size": 40674,
               "image": {
                 "width": 720,
                 "height": 540
               }
             },
-            "fileName": "enterprise-grade-microservices.jpg",
-            "contentType": "image/jpeg"
-          }
-        }
-      },
-      {
-        "sys": {
-          "space": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Space",
-              "id": "g99n9a78vx0s"
-            }
-          },
-          "id": "4pBKNjkDzaoiYqsScA6aQ2",
-          "type": "Asset",
-          "createdAt": "2017-08-31T23:15:16.690Z",
-          "updatedAt": "2017-08-31T23:37:35.502Z",
-          "revision": 3,
-          "locale": "en-GB"
-        },
-        "fields": {
-          "title": "Enterprise Grade Microservices Thumbnail",
-          "file": {
-            "url": "//images.contentful.com/g99n9a78vx0s/4pBKNjkDzaoiYqsScA6aQ2/0e0fc5c764fe9d8e6578e50700e6050d/enterprise-grade-microservices.jpg",
-            "details": {
-              "size": 182086,
-              "image": {
-                "width": 720,
-                "height": 540
-              }
-            },
-            "fileName": "enterprise-grade-microservices.jpg",
+            "fileName": "enterprise-grade-microservices-720x540.jpg",
             "contentType": "image/jpeg"
           }
         }
@@ -1786,23 +1773,57 @@
           "id": "6jixHMToeAgwWUO62SSm6Q",
           "type": "Asset",
           "createdAt": "2017-08-31T23:42:35.196Z",
-          "updatedAt": "2017-08-31T23:43:56.222Z",
-          "revision": 2,
+          "updatedAt": "2017-09-02T19:42:55.039Z",
+          "revision": 5,
           "locale": "en-GB"
         },
         "fields": {
-          "title": "Yadda - The Other BDD Library Cover",
+          "title": "Yadda - The Other BDD Library (Thumbnail)",
+          "description": "Man sitting among boxes labelled chai, jasmine, mocha, vows and cucumber",
           "file": {
-            "url": "//images.contentful.com/g99n9a78vx0s/6jixHMToeAgwWUO62SSm6Q/6942d3ac6f0c2dcd6e115ab4f130d22a/yadda.jpg",
+            "url": "//images.contentful.com/g99n9a78vx0s/6jixHMToeAgwWUO62SSm6Q/fce6ea7787e9ebbab381c260397fce82/yadda-720x540.jpg",
             "details": {
-              "size": 402548,
+              "size": 63660,
               "image": {
                 "width": 720,
                 "height": 540
               }
             },
-            "fileName": "yadda.jpg",
+            "fileName": "yadda-720x540.jpg",
             "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "g99n9a78vx0s"
+            }
+          },
+          "id": "6oYIvHjLUsU0UISMyaOqq4",
+          "type": "Asset",
+          "createdAt": "2017-09-02T19:19:41.880Z",
+          "updatedAt": "2017-09-02T19:32:07.237Z",
+          "revision": 2,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Duty Calls",
+          "description": "A stick figure refusing to leave his computer and come to bed",
+          "file": {
+            "url": "//images.contentful.com/g99n9a78vx0s/6oYIvHjLUsU0UISMyaOqq4/5ab8c6d5dcdbbe1e6beb0f5a9992d54e/duty_calls.png",
+            "details": {
+              "size": 14103,
+              "image": {
+                "width": 300,
+                "height": 330
+              }
+            },
+            "fileName": "duty_calls.png",
+            "contentType": "image/png"
           }
         }
       },
@@ -1818,22 +1839,23 @@
           "id": "FntIzfFlAGWGOQMcoUCOm",
           "type": "Asset",
           "createdAt": "2017-08-31T23:43:06.953Z",
-          "updatedAt": "2017-08-31T23:44:12.682Z",
-          "revision": 2,
+          "updatedAt": "2017-09-02T19:12:45.224Z",
+          "revision": 4,
           "locale": "en-GB"
         },
         "fields": {
-          "title": "Yadda - The Other BDD Library Thumbnail",
+          "title": "Yadda - The Other BDD Library",
+          "description": "Man sitting among boxes labelled chai, jasmine, mocha, vows and cucumber",
           "file": {
-            "url": "//images.contentful.com/g99n9a78vx0s/FntIzfFlAGWGOQMcoUCOm/8368eaa5af563e4be1a4c6ec6e433b55/yadda.jpg",
+            "url": "//images.contentful.com/g99n9a78vx0s/FntIzfFlAGWGOQMcoUCOm/595ab12150d77d1304c6de070c1711bc/yadda-720x540.jpg",
             "details": {
-              "size": 402548,
+              "size": 63660,
               "image": {
                 "width": 720,
                 "height": 540
               }
             },
-            "fileName": "yadda.jpg",
+            "fileName": "yadda-720x540.jpg",
             "contentType": "image/jpeg"
           }
         }

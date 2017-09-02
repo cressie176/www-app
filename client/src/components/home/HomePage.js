@@ -23,7 +23,7 @@ class HomePage extends React.Component {
       return (
         <div className='page home-page'>
           <div className='row'>
-            <img className='hero' title={this.props.page.heroImage.title} alt={this.props.page.heroImage.title} src={this.props.page.heroImage.url} />
+            <img className='hero' title={this.props.page.heroImage.title} alt={this.props.page.heroImage.description} src={this.props.page.heroImage.url} />
           </div>
           <div className='row'>
             <div className='col-md-offset-1 col-md-5 no-min-height'>

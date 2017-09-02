@@ -9,7 +9,7 @@ module.exports = {
           profile: true,
           featuredProjects: true,
           featuredTalks: true,
-          featuredArticles: true,
+          featuredArticles: false,
         },
       },
     },
