@@ -24,6 +24,10 @@ export class ArticleListPage extends React.Component {
     }
   }
 
+  shouldComponentUpdate(nextProps) {
+    return nextProps.page && (nextProps.page.title || nextProps.page.error) ? true : false;
+  }
+
   render() {
     if (this.props.page.error) {
       return (

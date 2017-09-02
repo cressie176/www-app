@@ -16,6 +16,10 @@ class HomePage extends React.Component {
     this.props.fetchPage('home');
   }
 
+  shouldComponentUpdate(nextProps) {
+    return nextProps.page && (nextProps.page.title || nextProps.page.error) ? true : false;
+  }
+
   render() {
     if (this.props.page.id !== 'home' || this.props.page.loading) {
       return <div className='page home-page' />;

@@ -19,6 +19,10 @@ export class LegalPage extends React.Component {
     }
   }
 
+  shouldComponentUpdate(nextProps) {
+    return nextProps.page && nextProps.page.title ? true : false;
+  }
+
   render() {
     return (
         <div className={`page legal-page legal-page--{this.props.id}`}>
