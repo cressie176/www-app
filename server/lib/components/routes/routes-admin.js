@@ -25,7 +25,7 @@ export default function(options = {}) {
     });
 
     app.post('/__/cms/tag', app.locals.hasRole('publisher'), (req, res, next) => {
-      const tag = { id: req.body.id, comment: req.body.comment, date: new Date(), user: req.user, };
+      const tag = { id: req.body.id, date: new Date(), user: req.user, };
       store.saveTag(tag, err => {
         if (err) return next(err);
         res.send(204);

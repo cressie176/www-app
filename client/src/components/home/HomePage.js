@@ -44,9 +44,9 @@ class HomePage extends React.Component {
               </FeatureToggle>
             </div>
             <div className='col-md-5 no-min-height'>
-              <FeatureToggle id='featuredProjects'>
+              <FeatureToggle id='featuredSoftware'>
               {
-                this.props.page.featuredProjects
+                this.props.page.featuredSoftware
                   ? <FeaturedProjects projects={this.props.page.featuredSoftware} />
                   : null
               }
