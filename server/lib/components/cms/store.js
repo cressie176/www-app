@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import parseJson from 'safe-json-parse/callback';
 
-module.exports = function(options = {}) {
+export default function(options = {}) {
 
   function start({ config, logger, }, cb) {
 

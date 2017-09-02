@@ -25,6 +25,9 @@ module.exports = {
     store: {
       path: path.join(process.cwd(), 'server', 'content'),
     },
+    cache: {
+      max: 10,
+    }
   },
   contentful: {
     timeout: 5000,

@@ -67,7 +67,7 @@ class KeyValueStore {
   }
 }
 
-module.exports = function() {
+export default function() {
 
   function start({ config, logger, }, cb) {
 
