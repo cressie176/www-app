@@ -89,8 +89,13 @@ class App extends React.Component {
                 <Route exact path='/:channel(blog|talks)' render={({ match, }) =>
                   <ArticleListPage id={match.params.channel} />
                 } />
-                <Route exact path='/:channel(blog|talks)/:slug' render={({ match, }) =>
-                  <ArticlePage id={parseInt(match.params.slug.split('-').slice(-1)[0], 10)} />
+                <Route exact path='/:channel(blog|talks)/:slug' render={
+                  ({ match, }) => {
+                    const id = parseInt(match.params.slug.split('-').slice(-1)[0], 10);
+                    return isNaN(id)
+                      ? <ErrorPage title='Page Not Found' html='The page you have requested has not been found.' />
+                      : <ArticlePage id={id} />
+                  }
                 } />
                 <Route path='/' render={() =>
                   <ErrorPage title='Page Not Found' html='The page you have requested has not been found.' />
