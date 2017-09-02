@@ -351,11 +351,6 @@
       }
     }
   },
-  "profile": {
-    "id": "profile",
-    "title": "Profile",
-    "body": "<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React, as demonstrated by the <a href='https://www.github.com/cressie176/www-app'>source code</a> for this site.</p><p>Until recently I was operating in a dual role, firstly as CTO and co-founder of <a href='https://www.guidesmiths.com'>GuideSmiths</a>, a successful Node.js & microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients.<p></p>Due to a desire to spend more time with my family, I have negotiated an exit, and am seeking a senior, hands-on position in an agile or post agile environment, which can be predominantly carried out remotely or from the vicinity of my home in Suffolk.</p>"
-  },
   "featured": {
     "talks": {
       "id": "talks",
@@ -759,7 +754,7 @@
       "profile": {
         "id": "profile",
         "title": "Profile",
-        "body": "<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React, as demonstrated by the <a href='https://www.github.com/cressie176/www-app'>source code</a> for this site.</p><p>Until recently I was operating in a dual role, firstly as CTO and co-founder of <a href='https://www.guidesmiths.com'>GuideSmiths</a>, a successful Node.js & microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients.<p></p>Due to a desire to spend more time with my family, I have negotiated an exit, and am seeking a senior, hands-on position in an agile or post agile environment, which can be predominantly carried out remotely or from the vicinity of my home in Suffolk.</p>"
+        "body": "<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React, as demonstrated by the <a href='https://www.github.com/cressie176/www-app'>source code</a> for this site.</p>\n\n<p>Until recently I was operating in a dual role, firstly as CTO and co-founder of <a href='https://www.guidesmiths.com'>GuideSmiths</a>, a successful Node.js & microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients.<p>\n\n</p>Due to a desire to spend more time with my family, I have negotiated an exit, and accepted a senior, hands-on position, which can be predominantly carried out from the vicinity of my home in Suffolk.</p>\n\n<p>\nIf you would like more detail about my skills and experience please <a href=\"https://assets.contentful.com/g99n9a78vx0s/3zsZxciH7GIuOccQWEyEG8/eb74811d96bf98fc652f296db70bdb37/stephen-cresswell-cv-2017.pdf\">download</a> a copy of my CV.\n\n"
       },
       "featuredSoftware": {
         "id": "software",
@@ -1031,5 +1026,10 @@
         "url": "https://xkcd.com/386/"
       }
     }
+  },
+  "profile": {
+    "id": "profile",
+    "title": "Profile",
+    "body": "<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React, as demonstrated by the <a href='https://www.github.com/cressie176/www-app'>source code</a> for this site.</p>\n\n<p>Until recently I was operating in a dual role, firstly as CTO and co-founder of <a href='https://www.guidesmiths.com'>GuideSmiths</a>, a successful Node.js & microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients.<p>\n\n</p>Due to a desire to spend more time with my family, I have negotiated an exit, and accepted a senior, hands-on position, which can be predominantly carried out from the vicinity of my home in Suffolk.</p>\n\n<p>\nIf you would like more detail about my skills and experience please <a href=\"https://assets.contentful.com/g99n9a78vx0s/3zsZxciH7GIuOccQWEyEG8/eb74811d96bf98fc652f296db70bdb37/stephen-cresswell-cv-2017.pdf\">download</a> a copy of my CV.\n\n"
   }
 }

@@ -27,7 +27,7 @@ module.exports = {
       public: {
         featureToggles: {
           profile: true,
-          featuredProjects: true,
+          featuredSoftware: true,
           featuredTalks: true,
           featuredArticles: false,
         },
