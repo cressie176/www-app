@@ -71,7 +71,7 @@ export class ArticlePage extends React.Component {
                 }
                 {
                   this.props.article.date ? (
-                    <IconListItem icon='fa-calendar' text={this.props.article.date.toLocaleString()} type='date' />
+                    <IconListItem icon='fa-calendar' text={this.props.article.date.toLocaleString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', })} type='date' />
                   ) : null
                 }
                 {

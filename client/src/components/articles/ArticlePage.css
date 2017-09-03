@@ -29,3 +29,12 @@
 .article-page .blurb ul {
   margin-bottom: 20px;
 }
+
+.article-page .icon-list__item__link {
+  color: var(--text-colour);
+}
+
+.article-page .icon-list__item__link:hover {
+  color: var(--primary-colour);
+  text-decoration: none;
+}

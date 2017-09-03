@@ -147,7 +147,7 @@ describe('ArticlePage', () => {
     );
 
     expect(wrapper.is('.article-page')).toBe(true);
-    expect(wrapper.find('IconListItem[type="date"]').prop('text')).toBe('2017-1-1 00:00:00');
+    expect(wrapper.find('IconListItem[type="date"]').prop('text')).toBe('2017 M01 1, Sun');
     expect(wrapper.find('IconListItem[type="event"]').prop('text')).toBe('meetup');
     expect(wrapper.find('IconListItem[type="event"]').prop('url')).toBe('http://meetup');
     expect(wrapper.find('IconListItem[type="location"]').prop('text')).toBe('London');
