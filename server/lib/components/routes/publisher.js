@@ -37,8 +37,8 @@ export default function(options = {}) {
       });
     });
 
-    app.post('/api/publisher/1.0/references', app.locals.hasRole('publisher'), (req, res, next) => {
-      const reference = { tag: req.body.tag, date: new Date(), user: req.user, };
+    app.post('/api/publisher/1.0/references/:tag', app.locals.hasRole('publisher'), (req, res, next) => {
+      const reference = { tag: req.params.tag, date: new Date(), user: req.user, };
       store.saveReference(reference, err => {
         if (err) return next(err);
         res.send(204);

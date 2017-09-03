@@ -1,3 +1,7 @@
+.publisher-page {
+  margin-bottom: 80px;
+}
+
 .publisher-page .page-intro__wrapper {
   text-align: left;
   background-color: var(--alt-colour);

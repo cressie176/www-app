@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import { connect, } from 'react-redux';
 import { deleteContent, } from '../../actions/contentActions';
 
+import './TagTable.css';
 
 export class TagTable extends React.Component {
 
   render() {
     return (
       <div>
-        <h2>Tags</h2>
+        <h2>Available Tags</h2>
         <table className='tag-table table table-hover table-condensed'>
           <thead>
             <tr>
