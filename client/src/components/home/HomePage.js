@@ -8,6 +8,8 @@ import FeaturedArticles from './FeaturedArticles';
 import FeaturedProjects from './FeaturedProjects';
 import FeatureToggle from '../common/FeatureToggle';
 
+import ErrorPage from '../error/ErrorPage';
+
 import './HomePage.css';
 
 class HomePage extends React.Component {
@@ -23,6 +25,10 @@ class HomePage extends React.Component {
   render() {
     if (this.props.page.id !== 'home' || this.props.page.loading) {
       return <div className='page home-page' />;
+    } else if (this.props.page.error) {
+      return (
+        <ErrorPage title='Error loading page' />
+      );
     } else {
       return (
         <div className='page home-page'>

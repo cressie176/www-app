@@ -19,8 +19,8 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
-        loadTag: cb => {
-          return cb(null, tag);
+        loadReference: cb => {
+          return cb(null, { tag, });
         },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
@@ -44,8 +44,8 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
-        loadTag: cb => {
-          return cb(null, tag);
+        loadReference: cb => {
+          return cb(null, { tag, });
         },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
@@ -71,8 +71,8 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
-        loadTag: cb => {
-          return cb(null, tag);
+        loadReference: cb => {
+          return cb(null, { tag, });
         },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
@@ -96,8 +96,8 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
-        loadTag: cb => {
-          return cb(null, tag);
+        loadReference: cb => {
+          return cb(null, { tag, });
         },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
@@ -124,8 +124,8 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
-        loadTag: cb => {
-          return cb(null, tag);
+        loadReference: cb => {
+          return cb(null, { tag, });
         },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
@@ -149,8 +149,8 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
-        loadTag: cb => {
-          return cb(null, tag);
+        loadReference: cb => {
+          return cb(null, { tag, });
         },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
@@ -178,8 +178,8 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
-        loadTag: cb => {
-          return cb(null, tag);
+        loadReference: cb => {
+          return cb(null, { tag, });
         },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
@@ -203,8 +203,8 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
-        loadTag: cb => {
-          return cb(null, tag);
+        loadReference: cb => {
+          return cb(null, { tag, });
         },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
@@ -232,8 +232,8 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
-        loadTag: cb => {
-          return cb(null, tag);
+        loadReference: cb => {
+          return cb(null, { tag, });
         },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
@@ -258,8 +258,8 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
-        loadTag: cb => {
-          return cb(null, tag);
+        loadReference: cb => {
+          return cb(null, { tag, });
         },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice
@@ -283,8 +283,8 @@ describe('CMS', () => {
 
       const tag = 'sample-1';
       const store = {
-        loadTag: cb => {
-          return cb(null, tag);
+        loadReference: cb => {
+          return cb(null, { tag, });
         },
         loadContent: (tag, cb) => {
           expect(tag).toBe('sample-1'); // Executed twice

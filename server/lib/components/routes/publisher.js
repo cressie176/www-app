@@ -18,7 +18,7 @@ export default function(options = {}) {
         if (err) return next(err);
         store.saveContent(req.params.tag, content, err => {
           if (err) return next(err);
-          res.send(201);
+          res.sendStatus(201);
         });
       });
     });
@@ -26,7 +26,7 @@ export default function(options = {}) {
     app.delete('/api/publisher/1.0/tags/:tag', (req, res, next) => {
       store.deleteContent(req.params.tag, err => {
         if (err) return next(err);
-        res.send(204);
+        res.sendStatus(204);
       });
     });
 
@@ -41,7 +41,7 @@ export default function(options = {}) {
       const reference = { tag: req.params.tag, date: new Date(), user: req.user, };
       store.saveReference(reference, err => {
         if (err) return next(err);
-        res.send(204);
+        res.sendStatus(204);
       });
     });
 

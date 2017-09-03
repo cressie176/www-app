@@ -18,7 +18,7 @@ class TagPicker extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({ value: nextProps.selected, });
+    this.setState({ value: nextProps.selected || nextProps.tags.map(tag => tag.id).find(() => true),});
   }
 
   handleChange(e) {
