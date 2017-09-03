@@ -1,0 +1,9 @@
+.publisher-page .page-intro__wrapper {
+  text-align: left;
+  background-color: var(--alt-colour);
+  color: var(--white);
+}
+
+.publisher-page .page-intro {
+  margin-bottom: 40px;
+}

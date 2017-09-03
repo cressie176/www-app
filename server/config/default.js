@@ -11,14 +11,14 @@ module.exports = {
   cms: {
     store: {
       content: {
-        path: path.join(process.cwd(), 'server', 'content', 'tagged'),
+        path: path.join(process.cwd(), 'server', 'content', 'data'),
       },
-      tag: {
-        path: path.join(process.cwd(), 'server', 'content'),
+      reference: {
+        path: path.join(process.cwd(), 'server', 'content', 'references'),
       },
     },
     cache: {
-      max: 10,
+      max: 3,
     },
   },
   contentful: {

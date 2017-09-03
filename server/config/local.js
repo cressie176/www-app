@@ -14,8 +14,8 @@ module.exports = {
   },
   cms: {
     store: {
-      tag: {
-        name: 'local',
+      reference: {
+        id: 'local',
       },
     },
   },

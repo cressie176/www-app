@@ -4,47 +4,61 @@ export default function(options = {}) {
 
   function start({ config, logger, store, }, cb) {
 
-    let tag;
+    let reference;
     const cache = new LRU(config);
 
-    function loadContent(tag, cb) {
-      const tagId = tag.id || tag;
-      if (cache.has(tagId)) return cb(null, cache.get(tagId));
+    function listTags(cb) {
+      store.listTags(cb);
+    }
 
-      store.loadContent(tagId, (err, content) => {
+    function loadContent(tag, cb) {
+      if (cache.has(tag)) return cb(null, cache.get(tag));
+
+      store.loadContent(tag, (err, content) => {
         if (err) return cb(err);
-        cache.set(tagId, content);
+        cache.set(tag, content);
         cb(null, content);
       });
     }
 
     function saveContent(tag, content, cb) {
-      const tagId = tag.id || tag;
-      store.saveContent(tagId, content, err => {
+      store.saveContent(tag, content, err => {
         if (err) return cb(err);
-        cache.set(tagId, content);
+        cache.set(tag, content);
         cb();
       });
     }
 
-    function loadTag(cb) {
-      if (tag) return cb(null, tag);
-      store.loadTag((err, _tag) => {
+    function deleteContent(tag, cb) {
+      store.deleteContent(tag, err => {
         if (err) return cb(err);
-        tag = _tag;
-        cb(null, tag);
-      });
-    }
-
-    function saveTag(_tag, cb) {
-      store.saveTag(_tag, err => {
-        if (err) return cb(err);
-        tag = _tag;
+        cache.del(tag);
         cb();
       });
     }
 
-    cb(null, { loadContent, saveContent, loadTag, saveTag, });
+    function listReferences(cb) {
+      store.listReferences(cb);
+    }
+
+    function loadReference(cb) {
+      if (reference) return cb(null, reference);
+      store.loadReference((err, _reference) => {
+        if (err) return cb(err);
+        reference = _reference;
+        cb(null, reference);
+      });
+    }
+
+    function saveReference(_reference, cb) {
+      store.saveReference(_reference, err => {
+        if (err) return cb(err);
+        reference = _reference;
+        cb();
+      });
+    }
+
+    cb(null, { listTags, loadContent, saveContent, deleteContent, listReferences, loadReference, saveReference, });
   }
 
   return {

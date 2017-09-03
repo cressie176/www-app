@@ -13,6 +13,7 @@ import HomePage from './components/home/HomePage';
 import ArticleListPage from './components/articles/ArticleListPage';
 import ArticlePage from './components/articles/ArticlePage';
 import LegalPage from './components/legal/LegalPage';
+import PublisherPage from './components/publisher/PublisherPage';
 import ErrorPage from './components/error/ErrorPage';
 import FeatureToggleQueryParser from './components/common/FeatureToggleQueryParser';
 import ScrollToTop from './components/common/ScrollToTop';
@@ -23,6 +24,7 @@ import { fetchSite, } from './actions/siteActions';
 
 // Reducers
 import config from './reducers/configReducer';
+import content from './reducers/contentReducer';
 import obfuscation from './reducers/obfuscationReducer';
 import error from './reducers/errorReducer';
 import site from './reducers/siteReducer';
@@ -53,6 +55,7 @@ const initialState = Object.assign({}, { config: window.config, });
 
 const store = createStore(combineReducers({
   config,
+  content,
   obfuscation,
   error,
   site,
@@ -96,6 +99,9 @@ class App extends React.Component {
                       ? <ErrorPage title='Page Not Found' html='The page you have requested has not been found.' />
                       : <ArticlePage id={id} />;
                   }
+                } />
+                <Route exact path='/publisher/' render={({ match, }) =>
+                  <PublisherPage />
                 } />
                 <Route path='/' render={() =>
                   <ErrorPage title='Page Not Found' html='The page you have requested has not been found.' />

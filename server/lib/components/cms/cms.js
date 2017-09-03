@@ -5,29 +5,29 @@ export default function(options = {}) {
 
   function start({ config, logger, store, }, cb) {
 
-    function getSite(tagId, cb) {
-      store.loadContent(tagId, (err, content) => {
+    function getSite(tag, cb) {
+      store.loadContent(tag, (err, content) => {
         if (err) return cb(err);
         cb(null, content.site);
       });
     }
 
-    function getPage(tagId, pageId, cb) {
-      store.loadContent(tagId, (err, content) => {
+    function getPage(tag, pageId, cb) {
+      store.loadContent(tag, (err, content) => {
         if (err) return cb(err);
         cb(null, get(content, `pages.${pageId}`));
       });
     }
 
-    function getProject(tagId, projectId, cb) {
-      store.loadContent(tagId, (err, content) => {
+    function getProject(tag, projectId, cb) {
+      store.loadContent(tag, (err, content) => {
         if (err) return cb(err);
         cb(null, get(content, `projects.${projectId}`));
       });
     }
 
-    function listArticles(tagId, cb) {
-      store.loadContent(tagId, (err, content) => {
+    function listArticles(tag, cb) {
+      store.loadContent(tag, (err, content) => {
         if (err) return cb(err);
         if (!content.articles) return cb(null, undefined);
         const articles = Object.keys(content.articles).reduce((memo, id) => {
@@ -37,8 +37,8 @@ export default function(options = {}) {
       });
     }
 
-    function getArticle(tagId, articleId, cb) {
-      store.loadContent(tagId, (err, content) => {
+    function getArticle(tag, articleId, cb) {
+      store.loadContent(tag, (err, content) => {
         if (err) return cb(err);
         const raw = get(content, `articles.${articleId}`);
         cb(null, toArticle(raw));
@@ -50,7 +50,8 @@ export default function(options = {}) {
     }
 
     async.waterfall([
-      store.loadTag.bind(store),
+      store.loadReference.bind(store),
+      (reference, cb) => cb(null, reference.tag),
       store.loadContent.bind(store),
     ], ((err, content) => {
       if (err) logger.warn('Error pre-loading content', err);
