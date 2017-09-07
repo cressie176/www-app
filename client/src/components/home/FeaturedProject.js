@@ -21,7 +21,7 @@ export class FeaturedProject extends React.Component {
     } else if (this.props.project.missing) {
       return (
         <li className='list-group-item featured-project featured-project--missing'>
-          <i className='fa fa-chain-broken featured-project__icon' aria-hidden='true'></i>
+          <i className='fa fa-chain-broken text-icon' aria-hidden='true'></i>
           <span className='featured-project__link'>Module not found</span>
         </li>
       );

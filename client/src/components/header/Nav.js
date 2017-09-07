@@ -25,8 +25,8 @@ export class Nav extends React.Component {
               {
                 this.props.links && this.props.links.map((item, index) => {
                   const active = this.props.location.pathname === item.url;
-                  return active ? <ActiveNavItem key={item.url} text={item.text} path={item.url} />
-                                : <InactiveNavItem key={item.url} text={item.text} path={item.url} />;
+                  return active ? <ActiveNavItem key={item.url} text={item.text} path={item.url} icon={item.icon} />
+                                : <InactiveNavItem key={item.url} text={item.text} path={item.url} icon={item.icon} />;
                 })
               }
             </ul>

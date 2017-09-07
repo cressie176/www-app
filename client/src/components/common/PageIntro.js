@@ -10,7 +10,7 @@ const PageIntro = ({ icon, title, text, link, image, }) => (
         <div className='col-md-offset-1 col-md-8'>
           <div className='page-intro__details'>
             <h1 className='page-intro__title' >
-              { icon && <i className={`fa ${icon} page-intro__icon`} aria-hidden='true'></i> }
+              { icon && <i className={`fa ${icon} icon-text`} aria-hidden='true'></i> }
               {text || title}
             </h1>
             { link ? <a className='page-intro__citation' href='{link.url}' >{link.text}</a> : null }

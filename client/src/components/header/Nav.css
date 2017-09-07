@@ -33,6 +33,10 @@
   color: var(--primary-colour);
 }
 
+.navbar .icon {
+  padding-right: 10px;
+}
+
 @media only screen and (max-width : 767px) {
   .navbar.navbar-overrides .navbar-brand {
      display: none;

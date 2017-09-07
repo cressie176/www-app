@@ -1,180 +1,9 @@
 {
-  "links": {
-    "Mobile": {
-      "id": "Mobile",
-      "text": "+44 (0)7814033321",
-      "icon": "fa-phone",
-      "url": "tel:+447814033321"
-    },
-    "Node.js Meetup - Divorcing Microservices With Rascal": {
-      "id": "Node.js Meetup - Divorcing Microservices With Rascal",
-      "text": "Node.js Meetup",
-      "url": "https://www.meetup.com/Node-js-Meetup-London/events/231560165/"
-    },
-    "See all software…": {
-      "id": "See all software…",
-      "text": "See all software…",
-      "url": "/software"
-    },
-    "Duty Calls": {
-      "id": "Duty Calls",
-      "text": "Duty Calls - xkcd",
-      "url": "https://xkcd.com/386/"
-    },
-    "GitHub": {
-      "id": "GitHub",
-      "icon": "fa-github",
-      "url": "https://www.github.com/cressie176/"
-    },
-    "Privacy Policy": {
-      "id": "Privacy Policy",
-      "text": "Privacy Policy",
-      "url": "/legal/privacy-policy"
-    },
-    "Terms & Conditions": {
-      "id": "Terms & Conditions",
-      "text": "Terms & Conditions",
-      "url": "/legal/terms-and-conditions"
-    },
-    "See all talks…": {
-      "id": "See all talks…",
-      "text": "See all talks…",
-      "url": "/talks"
-    },
-    "Twitter": {
-      "id": "Twitter",
-      "icon": "fa-twitter",
-      "url": "https://www.twitter.com/cressie176"
-    },
-    "Email": {
-      "id": "Email",
-      "text": "hello@stephen-cresswell.net",
-      "icon": "fa-envelope",
-      "url": "mailto:hello@stephen-cresswell.net"
-    },
-    "Talks": {
-      "id": "Talks",
-      "text": "Talks",
-      "url": "/talks"
-    },
-    "Corp.js - Enterprise Grade Microservices": {
-      "id": "Corp.js - Enterprise Grade Microservices",
-      "text": "Corp.js",
-      "url": "https://www.meetup.com/Corporate-JavaScript-Meetup-Budapest/"
-    },
-    "Blog": {
-      "id": "Blog",
-      "text": "Blog",
-      "url": "/blog"
-    },
-    "See all articles…": {
-      "id": "See all articles…",
-      "text": "See all articles…",
-      "url": "/blog"
-    },
-    "Community For Agile Testing - Yadda": {
-      "id": "Community For Agile Testing - Yadda",
-      "text": "Community For Agile Testing",
-      "url": "https://www.meetup.com/es-ES/Community-for-Agile-Testing/events/229788565/"
-    },
-    "Home": {
-      "id": "Home",
-      "text": "Home",
-      "url": "/"
-    },
-    "Linkedin": {
-      "id": "Linkedin",
-      "icon": "fa-linkedin",
-      "url": "https://www.linkedin.com/in/stephencresswell/"
-    }
-  },
-  "site": {
-    "id": "www.stephen-cresswell.net",
-    "title": "www.stephen-cresswell.net",
-    "navigation": {
-      "id": "navigation",
-      "title": "Navigation",
-      "links": [
-        {
-          "id": "Home",
-          "text": "Home",
-          "url": "/"
-        },
-        {
-          "id": "Blog",
-          "text": "Blog",
-          "url": "/blog"
-        },
-        {
-          "id": "Talks",
-          "text": "Talks",
-          "url": "/talks"
-        }
-      ]
-    },
-    "spotlights": [
-      {
-        "id": "contact",
-        "title": "Contact",
-        "links": [
-          {
-            "id": "Email",
-            "text": "hello@stephen-cresswell.net",
-            "icon": "fa-envelope",
-            "url": "mailto:hello@stephen-cresswell.net"
-          },
-          {
-            "id": "Mobile",
-            "text": "+44 (0)7814033321",
-            "icon": "fa-phone",
-            "url": "tel:+447814033321"
-          }
-        ]
-      },
-      {
-        "id": "legal",
-        "title": "Legal",
-        "links": [
-          {
-            "id": "Terms & Conditions",
-            "text": "Terms & Conditions",
-            "url": "/legal/terms-and-conditions"
-          },
-          {
-            "id": "Privacy Policy",
-            "text": "Privacy Policy",
-            "url": "/legal/privacy-policy"
-          }
-        ]
-      },
-      {
-        "id": "social",
-        "title": "Social Networks",
-        "links": [
-          {
-            "id": "GitHub",
-            "icon": "fa-github",
-            "url": "https://www.github.com/cressie176/"
-          },
-          {
-            "id": "Linkedin",
-            "icon": "fa-linkedin",
-            "url": "https://www.linkedin.com/in/stephencresswell/"
-          },
-          {
-            "id": "Twitter",
-            "icon": "fa-twitter",
-            "url": "https://www.twitter.com/cressie176"
-          }
-        ]
-      }
-    ],
-    "copyright": {
-      "id": "© 2017 Stephen Cresswell. All rights reserved.",
-      "year": 2017,
-      "owner": "Stephen Cresswell",
-      "rights": "All rights reserved."
-    }
+  "copyright": {
+    "id": "© 2017 Stephen Cresswell. All rights reserved.",
+    "year": 2017,
+    "owner": "Stephen Cresswell",
+    "rights": "All rights reserved."
   },
   "articles": {
     "1": {
@@ -186,6 +15,7 @@
         "link": {
           "id": "Talks",
           "text": "Talks",
+          "icon": "fa-microphone",
           "url": "/talks"
         }
       },
@@ -229,6 +59,7 @@
         "link": {
           "id": "Talks",
           "text": "Talks",
+          "icon": "fa-microphone",
           "url": "/talks"
         }
       },
@@ -275,6 +106,7 @@
         "link": {
           "id": "Talks",
           "text": "Talks",
+          "icon": "fa-microphone",
           "url": "/talks"
         }
       },
@@ -308,194 +140,63 @@
         }
       },
       "url": "/talks/yadda-the-other-bdd-library-3"
-    }
-  },
-  "imageSets": {
-    "Divorcing Microservices With Rascal": {
-      "id": "Divorcing Microservices With Rascal",
-      "main": {
-        "url": "//images.contentful.com/g99n9a78vx0s/1qT8990i1SqsACkwECicAI/ed05fc680b9409d92d0ebc46ca2b274a/divorcing-microservices-with-rascal-720x540.jpg",
-        "title": "Divorcing Microservices With Rascal (Thumbnail)",
-        "description": "A picture of a heart, ripped in two"
-      },
-      "thumbnail": {
-        "url": "//images.contentful.com/g99n9a78vx0s/1qT8990i1SqsACkwECicAI/ed05fc680b9409d92d0ebc46ca2b274a/divorcing-microservices-with-rascal-720x540.jpg",
-        "title": "Divorcing Microservices With Rascal (Thumbnail)",
-        "description": "A picture of a heart, ripped in two"
-      }
     },
-    "Yadda - The Other BDD Library": {
-      "id": "Yadda - The Other BDD Library",
-      "main": {
-        "url": "//images.contentful.com/g99n9a78vx0s/FntIzfFlAGWGOQMcoUCOm/595ab12150d77d1304c6de070c1711bc/yadda-720x540.jpg",
-        "title": "Yadda - The Other BDD Library",
-        "description": "Man sitting among boxes labelled chai, jasmine, mocha, vows and cucumber"
+    "1000": {
+      "id": 1000,
+      "title": "10½ Factor Microservices With Node.js And Docker",
+      "channel": {
+        "id": "blog",
+        "title": "Blog",
+        "link": {
+          "id": "Blog",
+          "text": "Blog",
+          "icon": "fa-file-text-o",
+          "url": "/blog"
+        },
+        "introImage": {
+          "url": "//images.contentful.com/g99n9a78vx0s/6oYIvHjLUsU0UISMyaOqq4/5ab8c6d5dcdbbe1e6beb0f5a9992d54e/duty_calls.png",
+          "title": "Duty Calls",
+          "description": "A stick figure refusing to leave his computer and come to bed"
+        },
+        "introText": "\"Someone is wrong on the internet\"",
+        "introLink": {
+          "id": "Duty Calls",
+          "text": "Duty Calls - xkcd",
+          "url": "https://xkcd.com/386/"
+        }
       },
-      "thumbnail": {
-        "url": "//images.contentful.com/g99n9a78vx0s/6jixHMToeAgwWUO62SSm6Q/fce6ea7787e9ebbab381c260397fce82/yadda-720x540.jpg",
-        "title": "Yadda - The Other BDD Library (Thumbnail)",
-        "description": "Man sitting among boxes labelled chai, jasmine, mocha, vows and cucumber"
-      }
-    },
-    "Enterprise Grade Microservices": {
-      "id": "Enterprise Grade Microservices",
-      "main": {
-        "url": "//images.contentful.com/g99n9a78vx0s/3rAYG3rbaEI6Ka4SwigAuA/a0c40e3e2e6113fcdbf3323775f35665/enterprise-grade-microservices-720x540.jpg",
-        "title": "Enterprise Grade Microservices (Thumbnail)",
-        "description": "Businessman standing by a window in a skyscraper"
+      "keywords": [
+        "Node.js",
+        "Microservices",
+        "Software",
+        "Architecture",
+        "Design",
+        "12 Factor",
+        "Docker",
+        "Containerisation",
+        "Kubernetes",
+        "JavaScript"
+      ],
+      "summary": "<p>\nBy now you've probably heard of the <a href='https://12factor.net'>12 Factor</a> design principles. Overall they are very good. However as with any piece of advice or recommendation they need to be viewed in the context of when they were written, and reassessed in the current content to see to what extent they are still valuable.\n</p><p>\nThe context I'm most interested in is that of microservice development, specifically with Node.js. Node is a great fit for microservces in most situations. The module system is excellent, so it's easy to reuse and share code. Once mastered JavaScript can be terse, yet still readable, it's interpretted so doesn't suffer from compilation delays, but thanks to V8 fast enough for the majority of applications. The only time I've found Node problematic is when performing computationally expensive operations or when interacting with a server who's client libraries are of dubious quality (I'm thinking of you kafka).\n</p><p>\nWith the scene set, how will the 12factor principles stack up?\n</p>",
+      "body": "<p>\nBy now you've probably heard of the <a href=\"https://12factor.net\">12 Factor</a> design principles. Overall they are very good. However as with any piece of advice or recommendation they need to be viewed in the context of when they were written, and reassessed in the current content to see to what extent they are still valuable.\n</p><p>\nThe context I'm most interested in is that of microservice development, specifically with Node.js. Node is a great fit for microservces in most situations. The module system is excellent, so it's easy to reuse and share code. Once mastered JavaScript can be terse, yet still readable, it's interpretted so doesn't suffer from compilation delays, but thanks to V8 fast enough for the majority of applications. The only time I've found Node problematic is when performing computationally expensive operations or when interacting with a server who's client libraries are of dubious quality (I'm thinking of you kafka).\n</p><p>\nWith the scene set, how will the 12factor principles stack up?\n</p><p>\nThe first of the principles - \"Codebase\" is also the most obviously questionable. The principle states that there should be a 1-1 relationship between codebase and source repository, with consideration for branches and forks etc. \n</p><p>\nI sympathise entirely with what I suspect to be the underlying motivation. I've had to suffer a number of projects with complicated, multi-stage setup, cross linked repositories, shared build scripts and all emcompasising development enviormnents which made life a misery. However the glaring problem with this principle is that it doesn't consider the recent trend of monorepos, where multiple applications are stored in a sincle repository. Monorepos aren't without their problems - unless appropriate tooling is adopted it because difficult to know what to build, test and deploy following a change, but it doesn't mean they shouldn't be considered.\n</p><p>\nThe second principle, \"Explicitly declare and isolate dependencies\", is more sound. Version and bundle all of your dependencies with the application, rather than trusting to their correct existence on deployment. Node.js solves this in a similar way to most other modern languages, by including a dependencies manifest. The latest version of Node's package manager automatically creates a lock file, so even transitive dependencies are explicitly versions, however there are some situations in which even this is not enough.\n</p><p>\nSome node modules have native dependencies, which must be present in the target environment in order to work. Examples are <a href=\"https://github.com/gsmcwhirter/node-zoneinfo\">zoneinfo</a>, <a href=\"https://www.npmjs.com/package/pg-native\">pg-native</a> and <a href=\"https://www.npmjs.com/package/node-expat\">node-expat</a>. To truely conform to this principle, these dependencies should be bundled too, as must Node.js itself, and this is where <a href=\"https://www.docker.com/\">docker</a> comes in.\n</p><p>\nBy deploying your application within a docker container, and by including it's dockerfile in your codebase you can not only version the non-native dependencies, but the native ones as well. \n</p><p>\nWhile we're on the subject of docker and containerisation, we may as well tick off the forth (backing services), and tenth (dev/prod parity) principles. The backing services principle states that external services (databases, message brokers, other web services, etc) should be treated as \"attached resources\", which can be detached and replaced with an alternative without having to rebuild and redeploy the application. \n</p><p>\nThis is achievable by through external configuration, but made even easier by the service discovery provided by docker, and related technologies such as <a href=\"https://kubernetes.io\">Kubernetes</a>. Kubernetes even comess with a <a href=\"https://kubernetes.io/docs/admin/kube-proxy/\">proxy</a> which enables you to attach a locally running application to a kubernetes managed backing service transparently.\n</p><p>\nBy deploying services within containers, you get a high degree of dev/prod parity, and even more if you deploy databases and message brokers within containers too. Despite this I tend to only do this locally and on CI for serious applications as I've encountered more than my share of issues with mounting network attached storage into docker containers, especially when managed by Kubernetes.\n</p><p>\nUnfortunately the 3rd principle of storing configuration (only) in the environment isn't as well thought out. The 12 factor principles argue that\n\n<ul>\n<li>You shouldn't name enviromnents because you will run out of meaningful names</li>\n<li>You should only use enviromnent variables for configuration, since config files can be scattered, inconsistent and may accidentally be checked into source control</li>\n</ul>\n\nMy problem with argument 1, is that in every organisation I've ever worked as, people always refer to environments by name, and so having a named environment configuration makes life significantly easier.\n</p><p>\nMy problem with argument 2, is that I specifically want to check config (excluding secrets), into source control. This enables it to be versioned and deployed with the application, for the same reasons behind the principle of dependency management. Furthermore environent variables lack native structure and typing and cannot be changed at runtime. They are also the <a href=\"https://www.theregister.co.uk/2017/08/02/typosquatting_npm/\">easiest configuration to steal</a>.\n</p><p>\nInstead my approach is to use whatever config format makes most sense (which can include environment variables). My approach is to <a href=\"https://github.com/cressie176/www-app/tree/master/server/config\">version control a default config file, and environmental overrides</a> with the application, then further override with secrets at deploy time using an appropriate secrets management tool such as <a href=\"https://github.com/StackExchange/blackbox\">blackbox</a>, <a href=\"https://www.vaultproject.io/\">vault</a> or <a href=\"https://kubernetes.io/docs/concepts/configuration/secret/\">Kubernetes</a>. I use <a href=\"https://www.npmjs.com/package/confabulous\">Confabulous</a>, a library of my own creation similar to nconf, to handle the merging and overrides.\n</p><p>\nThe next 3 principles aren't very interesting. Separating Build, Release, Run (principle 5) is trivial with docker...\n\n<ul>\n<li>Build and image from a clean checkout</li>\n<li>Push to a repository</li>\n<li>Run on a remote server</li>\n</ul>\n\nI prefer an internal CI server such as <a href=\"https://jenkins.io/\">Jenkins</a> for building the image and orchestrating the deployment as you get the advantage of the previously cached image, and have less security concerns. By doing so it's quite feasible to have a single microservice build, test and deploy in under 20 seconds.\n</p><p>\nPrinciple 6, stateless processes just boils down to using a database rather than memory to persist any data which spans a request, and Principle 7, process binding means your application should start it's own server rather than be deployed into an application server. Popular in the Java world, but not in Nodeland.\n</p><p>\nPrinciple 8, concurrency is highly relevant in a Node.js and microservice environment. This principle advocates scaling by distributing functionality to worker processes, whos instances may grow and shrink depending on demand. i.e. microservices 101. I've also found this a useful approach for circumventing one of Node's limitations. If you have an node process which by necessity performs some long running synchronous operation (e.g. parsing a large XML file), then it will block all other operations. By seprating the synchronous and asynchronous behaviour into different services, you bypass the problem.\n</p><p>\nWe take the same approach for admin processes (principle 12). They either exist as a temporary service, launching from their own docker container and running to completion, or they exist in a dedicated, permanently running service and can be triggered either by http request or message.\n</p><p>\nPrinciple 9, disposability is also interesting, and in my experience not well throught through by Node developers. The principle of disposability states that applications should startup and shutdown quickly and gracefully. By gracefully I mean that applications should not accept requests (http, message driven or scheduled) until all necessary resources (databases connections etc) have been established. When receing a shutdown signal the application should stop accepting new requests, allow time for inflight ones to complete and only then close connections to attached resources. \n</p><p>\nDepending on your number of microservices, and variety of backing services, this can be surprisingly difficult to orchestrate in a consistent way. My estemed comrade <a href=\"https://github.com/BorePlusPlus\">Dalibor Novak</a> worked with me creating <a href=\"https://www.npmjs.com/package/systemic\">systemic</a> for solving this problem. You can see it in action <a href=\"https://github.com/cressie176/www-app/tree/master/server/lib\">here</a>\n</p><p>\nThe remaining principle is to treat logs as event streams. The advice is to write logs, unbuffered to stdout, then route these to dedicated logging infrastructure. I agree, but think they missed a trick. Rather than writing directly to console or your logging framework of choice your application should also emit log messages as events. By doing so each message can have multiple consumers, which may include one which writes to the console, but could additionally include one which publishes events to a message bus or monitoring system such as <a href=\"https://prometheus.io/\">Prometheus</a>. As an added bonus it becomes trivial to selectively silence are asset logged events in automated tests. Node has excellent support for <a href=\"https://nodejs.org/api/events.html\">events</a>, but using it for logging would be rather unusual. For this reason (and others) I've wrapped the event emitter behind a loglike api in a library called <a href=\"https://www.npmjs.com/search?q=prepper\">prepper</a>. You can connect it to console, bunyan or any other logging framework to get the benefits given above while retaining your logger choice.\n</p>\n<h2>In Conclusion...</h2>\n<p>\nOf all the 12 factor principles, the only one I fully disagree with is that of config (-1). The codebase principle is still valid in spirit, even if the concerns about the relationship between source code and repository has become dated (-½). Node.js, Microservices and containerisation have revolutionised how we design, write and deploy code. Given the amount of change, 10½ out of 12 is pretty good.\n</p>\n\n\n\n\n\n\n\n\n",
+      "date": "2017-09-06T20:00:00.000Z",
+      "images": {
+        "id": "Enterprise Grade Microservices",
+        "main": {
+          "url": "//images.contentful.com/g99n9a78vx0s/3rAYG3rbaEI6Ka4SwigAuA/a0c40e3e2e6113fcdbf3323775f35665/enterprise-grade-microservices-720x540.jpg",
+          "title": "Enterprise Grade Microservices (Thumbnail)",
+          "description": "Businessman standing by a window in a skyscraper"
+        },
+        "thumbnail": {
+          "url": "//images.contentful.com/g99n9a78vx0s/3rAYG3rbaEI6Ka4SwigAuA/a0c40e3e2e6113fcdbf3323775f35665/enterprise-grade-microservices-720x540.jpg",
+          "title": "Enterprise Grade Microservices (Thumbnail)",
+          "description": "Businessman standing by a window in a skyscraper"
+        }
       },
-      "thumbnail": {
-        "url": "//images.contentful.com/g99n9a78vx0s/3rAYG3rbaEI6Ka4SwigAuA/a0c40e3e2e6113fcdbf3323775f35665/enterprise-grade-microservices-720x540.jpg",
-        "title": "Enterprise Grade Microservices (Thumbnail)",
-        "description": "Businessman standing by a window in a skyscraper"
-      }
+      "url": "/blog/10-factor-microservices-with-nodejs-and-docker-1000"
     }
   },
   "featured": {
-    "talks": {
-      "id": "talks",
-      "title": "Upcoming & Recent Talks",
-      "icon": "fa-microphone",
-      "items": [
-        {
-          "id": 1,
-          "title": "Enterprise Grade Microservices",
-          "channel": {
-            "id": "talks",
-            "title": "Talks",
-            "link": {
-              "id": "Talks",
-              "text": "Talks",
-              "url": "/talks"
-            }
-          },
-          "keywords": [
-            "Node.js",
-            "12 Factor",
-            "Microservices",
-            "Architecture",
-            "Design",
-            "Software"
-          ],
-          "summary": "<p>Microservice adoption is driven by promises of simplicity, flexibility, resilience and productivity. It liberates developers from clunky frameworks and legacy technology, enabling them to release faster and more frequently than ever before. With an effective deployment pipeline it is possible to have a new microservice running in production and delivering value within 15 minutes, and to achieve 20+ production releases a day.</p>\n\n<p>But the fast pace, technological freedom and segregated codebase is not without cost. The maxim that a microservice codebase doesn't matter because it's small, won't change and is easily replaced is more often false than it is true.</p>\n\n<p>The principles behind clean code and 12 factor apps are just as applicable to microservices as they are to monoliths, but are all too easily ignored in the typical hubbub and hype that surrounds microservice adoption.</p>",
-          "date": "2016-11-23T19:00:00.000Z",
-          "event": {
-            "id": "Corp.js - Enterprise Grade Microservices",
-            "text": "Corp.js",
-            "url": "https://www.meetup.com/Corporate-JavaScript-Meetup-Budapest/"
-          },
-          "location": "Budapest",
-          "images": {
-            "id": "Enterprise Grade Microservices",
-            "main": {
-              "url": "//images.contentful.com/g99n9a78vx0s/3rAYG3rbaEI6Ka4SwigAuA/a0c40e3e2e6113fcdbf3323775f35665/enterprise-grade-microservices-720x540.jpg",
-              "title": "Enterprise Grade Microservices (Thumbnail)",
-              "description": "Businessman standing by a window in a skyscraper"
-            },
-            "thumbnail": {
-              "url": "//images.contentful.com/g99n9a78vx0s/3rAYG3rbaEI6Ka4SwigAuA/a0c40e3e2e6113fcdbf3323775f35665/enterprise-grade-microservices-720x540.jpg",
-              "title": "Enterprise Grade Microservices (Thumbnail)",
-              "description": "Businessman standing by a window in a skyscraper"
-            }
-          },
-          "url": "/talks/enterprise-grade-microservices-1"
-        },
-        {
-          "id": 2,
-          "title": "Divorcing Microservices With Rascal",
-          "channel": {
-            "id": "talks",
-            "title": "Talks",
-            "link": {
-              "id": "Talks",
-              "text": "Talks",
-              "url": "/talks"
-            }
-          },
-          "keywords": [
-            "Node.js",
-            "Rascal",
-            "RabbitMQ",
-            "AMQP",
-            "Microservices",
-            "Messaging",
-            "Software",
-            "Architecture",
-            "Design"
-          ],
-          "summary": "<p>Microservice based architectures are everywhere, but to succeed you must find ways to decouple your services so they can be developed and deployed in isolation. A popular strategy is to use a message broker, which in addition to providing the decoupling, can also add robustness and scalability. But messaging can be deceptively difficult. Which broker suits your needs best? Should you follow a \"command\" or \"event\" based model? How will you handle duplicates? Can you tolerate message loss? Will you recover from errors by discarding, retrying or dead lettering?</p>\n\n<p>If these questions weren't enough, you have to find a good client library. For RabbitMQ there's the excellent <a href=\"https://github.com/squaremo/amqp.node\">ampqlib</a>, but it's not for the faint of heart. Estabilishing a communication channel with the broker requires serveral api calls, and will not be automatically be restablished if dropped. Messages are not persistent or confirmed by default. Errors are likely to crash your application, and there's no support for clustering.</p>\n\n<p>Enter <a href=\"https://www.github.com/guidesmiths/rascal\">Rascal</a>, a friendly, config driven RabbitMQ client which sits on top of amqplib, simplyfing adoption significantly.</p>",
-          "date": "2016-06-29T19:00:00.000Z",
-          "event": {
-            "id": "Node.js Meetup - Divorcing Microservices With Rascal",
-            "text": "Node.js Meetup",
-            "url": "https://www.meetup.com/Node-js-Meetup-London/events/231560165/"
-          },
-          "location": "London",
-          "images": {
-            "id": "Divorcing Microservices With Rascal",
-            "main": {
-              "url": "//images.contentful.com/g99n9a78vx0s/1qT8990i1SqsACkwECicAI/ed05fc680b9409d92d0ebc46ca2b274a/divorcing-microservices-with-rascal-720x540.jpg",
-              "title": "Divorcing Microservices With Rascal (Thumbnail)",
-              "description": "A picture of a heart, ripped in two"
-            },
-            "thumbnail": {
-              "url": "//images.contentful.com/g99n9a78vx0s/1qT8990i1SqsACkwECicAI/ed05fc680b9409d92d0ebc46ca2b274a/divorcing-microservices-with-rascal-720x540.jpg",
-              "title": "Divorcing Microservices With Rascal (Thumbnail)",
-              "description": "A picture of a heart, ripped in two"
-            }
-          },
-          "url": "/talks/divorcing-microservices-with-rascal-2"
-        },
-        {
-          "id": 3,
-          "title": "Yadda - The Other BDD Library",
-          "channel": {
-            "id": "talks",
-            "title": "Talks",
-            "link": {
-              "id": "Talks",
-              "text": "Talks",
-              "url": "/talks"
-            }
-          },
-          "keywords": [
-            "Node.js",
-            "Software",
-            "Testing",
-            "BDD",
-            "Cucumber",
-            "Yadda"
-          ],
-          "summary": "<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they're not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe('some test function') with text. Chai and Expect don't even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this().</p>\n\n<p>The only true BDD tool found for JavaScript is CucumberJS. The problem with CucumberJS is that the Gerkin syntax is restrictive. I don't want to be limited to starting my sentences with \"Given\", \"When\", \"Then\", \"And\" and \"But\". I want to express myself naturally.</p>\n\n<p>I also want a test runner that makes good decisions about which steps to run, that works in a browser and that lets me plugin different step libraries so that I can test multiple interfaces (e.g. rest and HTML) with the same scenarios. I even want a tool that has nothing to do with testing and just maps ordinary sentences to functions so I could use it in a rules engine or build script.</p>\n\n<p>That's why I wrote <a href=\\'http://www.github.com/acuminous/yadda\\'>Yadda</a> - the other JavaScript BDD library.</p>",
-          "date": "2016-04-26T18:00:00.000Z",
-          "event": {
-            "id": "Community For Agile Testing - Yadda",
-            "text": "Community For Agile Testing",
-            "url": "https://www.meetup.com/es-ES/Community-for-Agile-Testing/events/229788565/"
-          },
-          "location": "London",
-          "images": {
-            "id": "Yadda - The Other BDD Library",
-            "main": {
-              "url": "//images.contentful.com/g99n9a78vx0s/FntIzfFlAGWGOQMcoUCOm/595ab12150d77d1304c6de070c1711bc/yadda-720x540.jpg",
-              "title": "Yadda - The Other BDD Library",
-              "description": "Man sitting among boxes labelled chai, jasmine, mocha, vows and cucumber"
-            },
-            "thumbnail": {
-              "url": "//images.contentful.com/g99n9a78vx0s/6jixHMToeAgwWUO62SSm6Q/fce6ea7787e9ebbab381c260397fce82/yadda-720x540.jpg",
-              "title": "Yadda - The Other BDD Library (Thumbnail)",
-              "description": "Man sitting among boxes labelled chai, jasmine, mocha, vows and cucumber"
-            }
-          },
-          "url": "/talks/yadda-the-other-bdd-library-3"
-        }
-      ],
-      "link": {
-        "id": "See all talks…",
-        "text": "See all talks…",
-        "url": "/talks"
-      }
-    },
     "software": {
       "id": "software",
       "title": "Software",
@@ -557,6 +258,7 @@
             "link": {
               "id": "Talks",
               "text": "Talks",
+              "icon": "fa-microphone",
               "url": "/talks"
             }
           },
@@ -600,143 +302,262 @@
         "text": "See all articles…",
         "url": "/blog"
       }
+    },
+    "talks": {
+      "id": "talks",
+      "title": "Upcoming & Recent Talks",
+      "icon": "fa-microphone",
+      "items": [
+        {
+          "id": 1,
+          "title": "Enterprise Grade Microservices",
+          "channel": {
+            "id": "talks",
+            "title": "Talks",
+            "link": {
+              "id": "Talks",
+              "text": "Talks",
+              "icon": "fa-microphone",
+              "url": "/talks"
+            }
+          },
+          "keywords": [
+            "Node.js",
+            "12 Factor",
+            "Microservices",
+            "Architecture",
+            "Design",
+            "Software"
+          ],
+          "summary": "<p>Microservice adoption is driven by promises of simplicity, flexibility, resilience and productivity. It liberates developers from clunky frameworks and legacy technology, enabling them to release faster and more frequently than ever before. With an effective deployment pipeline it is possible to have a new microservice running in production and delivering value within 15 minutes, and to achieve 20+ production releases a day.</p>\n\n<p>But the fast pace, technological freedom and segregated codebase is not without cost. The maxim that a microservice codebase doesn't matter because it's small, won't change and is easily replaced is more often false than it is true.</p>\n\n<p>The principles behind clean code and 12 factor apps are just as applicable to microservices as they are to monoliths, but are all too easily ignored in the typical hubbub and hype that surrounds microservice adoption.</p>",
+          "date": "2016-11-23T19:00:00.000Z",
+          "event": {
+            "id": "Corp.js - Enterprise Grade Microservices",
+            "text": "Corp.js",
+            "url": "https://www.meetup.com/Corporate-JavaScript-Meetup-Budapest/"
+          },
+          "location": "Budapest",
+          "images": {
+            "id": "Enterprise Grade Microservices",
+            "main": {
+              "url": "//images.contentful.com/g99n9a78vx0s/3rAYG3rbaEI6Ka4SwigAuA/a0c40e3e2e6113fcdbf3323775f35665/enterprise-grade-microservices-720x540.jpg",
+              "title": "Enterprise Grade Microservices (Thumbnail)",
+              "description": "Businessman standing by a window in a skyscraper"
+            },
+            "thumbnail": {
+              "url": "//images.contentful.com/g99n9a78vx0s/3rAYG3rbaEI6Ka4SwigAuA/a0c40e3e2e6113fcdbf3323775f35665/enterprise-grade-microservices-720x540.jpg",
+              "title": "Enterprise Grade Microservices (Thumbnail)",
+              "description": "Businessman standing by a window in a skyscraper"
+            }
+          },
+          "url": "/talks/enterprise-grade-microservices-1"
+        },
+        {
+          "id": 2,
+          "title": "Divorcing Microservices With Rascal",
+          "channel": {
+            "id": "talks",
+            "title": "Talks",
+            "link": {
+              "id": "Talks",
+              "text": "Talks",
+              "icon": "fa-microphone",
+              "url": "/talks"
+            }
+          },
+          "keywords": [
+            "Node.js",
+            "Rascal",
+            "RabbitMQ",
+            "AMQP",
+            "Microservices",
+            "Messaging",
+            "Software",
+            "Architecture",
+            "Design"
+          ],
+          "summary": "<p>Microservice based architectures are everywhere, but to succeed you must find ways to decouple your services so they can be developed and deployed in isolation. A popular strategy is to use a message broker, which in addition to providing the decoupling, can also add robustness and scalability. But messaging can be deceptively difficult. Which broker suits your needs best? Should you follow a \"command\" or \"event\" based model? How will you handle duplicates? Can you tolerate message loss? Will you recover from errors by discarding, retrying or dead lettering?</p>\n\n<p>If these questions weren't enough, you have to find a good client library. For RabbitMQ there's the excellent <a href=\"https://github.com/squaremo/amqp.node\">ampqlib</a>, but it's not for the faint of heart. Estabilishing a communication channel with the broker requires serveral api calls, and will not be automatically be restablished if dropped. Messages are not persistent or confirmed by default. Errors are likely to crash your application, and there's no support for clustering.</p>\n\n<p>Enter <a href=\"https://www.github.com/guidesmiths/rascal\">Rascal</a>, a friendly, config driven RabbitMQ client which sits on top of amqplib, simplyfing adoption significantly.</p>",
+          "date": "2016-06-29T19:00:00.000Z",
+          "event": {
+            "id": "Node.js Meetup - Divorcing Microservices With Rascal",
+            "text": "Node.js Meetup",
+            "url": "https://www.meetup.com/Node-js-Meetup-London/events/231560165/"
+          },
+          "location": "London",
+          "images": {
+            "id": "Divorcing Microservices With Rascal",
+            "main": {
+              "url": "//images.contentful.com/g99n9a78vx0s/1qT8990i1SqsACkwECicAI/ed05fc680b9409d92d0ebc46ca2b274a/divorcing-microservices-with-rascal-720x540.jpg",
+              "title": "Divorcing Microservices With Rascal (Thumbnail)",
+              "description": "A picture of a heart, ripped in two"
+            },
+            "thumbnail": {
+              "url": "//images.contentful.com/g99n9a78vx0s/1qT8990i1SqsACkwECicAI/ed05fc680b9409d92d0ebc46ca2b274a/divorcing-microservices-with-rascal-720x540.jpg",
+              "title": "Divorcing Microservices With Rascal (Thumbnail)",
+              "description": "A picture of a heart, ripped in two"
+            }
+          },
+          "url": "/talks/divorcing-microservices-with-rascal-2"
+        },
+        {
+          "id": 3,
+          "title": "Yadda - The Other BDD Library",
+          "channel": {
+            "id": "talks",
+            "title": "Talks",
+            "link": {
+              "id": "Talks",
+              "text": "Talks",
+              "icon": "fa-microphone",
+              "url": "/talks"
+            }
+          },
+          "keywords": [
+            "Node.js",
+            "Software",
+            "Testing",
+            "BDD",
+            "Cucumber",
+            "Yadda"
+          ],
+          "summary": "<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they're not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe('some test function') with text. Chai and Expect don't even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this().</p>\n\n<p>The only true BDD tool found for JavaScript is CucumberJS. The problem with CucumberJS is that the Gerkin syntax is restrictive. I don't want to be limited to starting my sentences with \"Given\", \"When\", \"Then\", \"And\" and \"But\". I want to express myself naturally.</p>\n\n<p>I also want a test runner that makes good decisions about which steps to run, that works in a browser and that lets me plugin different step libraries so that I can test multiple interfaces (e.g. rest and HTML) with the same scenarios. I even want a tool that has nothing to do with testing and just maps ordinary sentences to functions so I could use it in a rules engine or build script.</p>\n\n<p>That's why I wrote <a href=\\'http://www.github.com/acuminous/yadda\\'>Yadda</a> - the other JavaScript BDD library.</p>",
+          "date": "2016-04-26T18:00:00.000Z",
+          "event": {
+            "id": "Community For Agile Testing - Yadda",
+            "text": "Community For Agile Testing",
+            "url": "https://www.meetup.com/es-ES/Community-for-Agile-Testing/events/229788565/"
+          },
+          "location": "London",
+          "images": {
+            "id": "Yadda - The Other BDD Library",
+            "main": {
+              "url": "//images.contentful.com/g99n9a78vx0s/FntIzfFlAGWGOQMcoUCOm/595ab12150d77d1304c6de070c1711bc/yadda-720x540.jpg",
+              "title": "Yadda - The Other BDD Library",
+              "description": "Man sitting among boxes labelled chai, jasmine, mocha, vows and cucumber"
+            },
+            "thumbnail": {
+              "url": "//images.contentful.com/g99n9a78vx0s/6jixHMToeAgwWUO62SSm6Q/fce6ea7787e9ebbab381c260397fce82/yadda-720x540.jpg",
+              "title": "Yadda - The Other BDD Library (Thumbnail)",
+              "description": "Man sitting among boxes labelled chai, jasmine, mocha, vows and cucumber"
+            }
+          },
+          "url": "/talks/yadda-the-other-bdd-library-3"
+        }
+      ],
+      "link": {
+        "id": "See all talks…",
+        "text": "See all talks…",
+        "url": "/talks"
+      }
     }
   },
-  "linkLists": {
-    "contact": {
-      "id": "contact",
-      "title": "Contact",
-      "links": [
-        {
-          "id": "Email",
-          "text": "hello@stephen-cresswell.net",
-          "icon": "fa-envelope",
-          "url": "mailto:hello@stephen-cresswell.net"
-        },
-        {
-          "id": "Mobile",
-          "text": "+44 (0)7814033321",
-          "icon": "fa-phone",
-          "url": "tel:+447814033321"
-        }
-      ]
+  "links": {
+    "See all articles…": {
+      "id": "See all articles…",
+      "text": "See all articles…",
+      "url": "/blog"
     },
-    "navigation": {
-      "id": "navigation",
-      "title": "Navigation",
-      "links": [
-        {
-          "id": "Home",
-          "text": "Home",
-          "url": "/"
-        },
-        {
-          "id": "Blog",
-          "text": "Blog",
-          "url": "/blog"
-        },
-        {
-          "id": "Talks",
-          "text": "Talks",
-          "url": "/talks"
-        }
-      ]
+    "Corp.js - Enterprise Grade Microservices": {
+      "id": "Corp.js - Enterprise Grade Microservices",
+      "text": "Corp.js",
+      "url": "https://www.meetup.com/Corporate-JavaScript-Meetup-Budapest/"
     },
-    "legal": {
-      "id": "legal",
-      "title": "Legal",
-      "links": [
-        {
-          "id": "Terms & Conditions",
-          "text": "Terms & Conditions",
-          "url": "/legal/terms-and-conditions"
-        },
-        {
-          "id": "Privacy Policy",
-          "text": "Privacy Policy",
-          "url": "/legal/privacy-policy"
-        }
-      ]
+    "Blog": {
+      "id": "Blog",
+      "text": "Blog",
+      "icon": "fa-file-text-o",
+      "url": "/blog"
     },
-    "social": {
-      "id": "social",
-      "title": "Social Networks",
-      "links": [
-        {
-          "id": "GitHub",
-          "icon": "fa-github",
-          "url": "https://www.github.com/cressie176/"
-        },
-        {
-          "id": "Linkedin",
-          "icon": "fa-linkedin",
-          "url": "https://www.linkedin.com/in/stephencresswell/"
-        },
-        {
-          "id": "Twitter",
-          "icon": "fa-twitter",
-          "url": "https://www.twitter.com/cressie176"
-        }
-      ]
+    "Email": {
+      "id": "Email",
+      "text": "hello@stephen-cresswell.net",
+      "icon": "fa-envelope",
+      "url": "mailto:hello@stephen-cresswell.net"
+    },
+    "Community For Agile Testing - Yadda": {
+      "id": "Community For Agile Testing - Yadda",
+      "text": "Community For Agile Testing",
+      "url": "https://www.meetup.com/es-ES/Community-for-Agile-Testing/events/229788565/"
+    },
+    "Mobile": {
+      "id": "Mobile",
+      "text": "+44 (0)7814033321",
+      "icon": "fa-phone",
+      "url": "tel:+447814033321"
+    },
+    "Duty Calls": {
+      "id": "Duty Calls",
+      "text": "Duty Calls - xkcd",
+      "url": "https://xkcd.com/386/"
+    },
+    "See all software…": {
+      "id": "See all software…",
+      "text": "See all software…",
+      "url": "/software"
+    },
+    "Linkedin": {
+      "id": "Linkedin",
+      "icon": "fa-linkedin",
+      "url": "https://www.linkedin.com/in/stephencresswell/"
+    },
+    "Home": {
+      "id": "Home",
+      "text": "Home",
+      "icon": "fa-home",
+      "url": "/"
+    },
+    "Twitter": {
+      "id": "Twitter",
+      "icon": "fa-twitter",
+      "url": "https://www.twitter.com/cressie176"
+    },
+    "See all talks…": {
+      "id": "See all talks…",
+      "text": "See all talks…",
+      "url": "/talks"
+    },
+    "Terms & Conditions": {
+      "id": "Terms & Conditions",
+      "text": "Terms & Conditions",
+      "url": "/legal/terms-and-conditions"
+    },
+    "Talks": {
+      "id": "Talks",
+      "text": "Talks",
+      "icon": "fa-microphone",
+      "url": "/talks"
+    },
+    "GitHub": {
+      "id": "GitHub",
+      "icon": "fa-github",
+      "url": "https://www.github.com/cressie176/"
+    },
+    "Privacy Policy": {
+      "id": "Privacy Policy",
+      "text": "Privacy Policy",
+      "url": "/legal/privacy-policy"
+    },
+    "Node.js Meetup - Divorcing Microservices With Rascal": {
+      "id": "Node.js Meetup - Divorcing Microservices With Rascal",
+      "text": "Node.js Meetup",
+      "url": "https://www.meetup.com/Node-js-Meetup-London/events/231560165/"
     }
-  },
-  "projects": {
-    "systemic": {
-      "id": "systemic",
-      "title": "Systemic",
-      "summary": "A minimal dependency injection library",
-      "body": "A minimal dependency injection library",
-      "url": "https://www.github.com/guidesmiths/systemic"
-    },
-    "rascal": {
-      "id": "rascal",
-      "title": "Rascal",
-      "summary": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
-      "body": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
-      "url": "https://www.github.com/guidesmiths/rascal"
-    },
-    "marv": {
-      "id": "marv",
-      "title": "Marv",
-      "summary": "A database migration library with pluggable drivers for PostgreSQL and MySQL",
-      "body": "A database migration library with pluggable drivers for PostgreSQL and MySQL",
-      "url": "https://www.github.com/guidesmiths/marv"
-    },
-    "confabulous": {
-      "id": "confabulous",
-      "title": "Confabulous",
-      "summary": "A hierarchical configuration loader with support for remote sources such as S3, etcd and Vault",
-      "body": "A hierarchical configuration loader with support for remote sources such as S3, etcd and Vault",
-      "url": "https://www.github.com/guidesmiths/confabulous"
-    },
-    "yadda": {
-      "id": "yadda",
-      "title": "Yadda",
-      "summary": "A cucumber-esque BDD library, but with greater flexibility",
-      "body": "A cucumber-esque BDD library, but with greater flexibility",
-      "url": "https://www.github.com/acuminous/yadda"
-    }
-  },
-  "copyright": {
-    "id": "© 2017 Stephen Cresswell. All rights reserved.",
-    "year": 2017,
-    "owner": "Stephen Cresswell",
-    "rights": "All rights reserved."
   },
   "pages": {
-    "privacy-policy": {
-      "id": "privacy-policy",
-      "title": "Privacy Policy",
-      "body": "<p>This privacy policy sets out how we use and protect any information that you give us when you use this website.</p>\n\n<p>We are committed to ensuring that your privacy is protected. Should we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement.</p>\n\n<p>We may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes. This policy is effective from 1st August 2017.</p>\n\n<h3>What we collect</h3>\n<p>This website does not ask for or collect personal information.</p>\n\n<h3>How we use cookies</h3>\n<p>A cookie is a small file which asks permission to be placed on your computer&apos;s hard drive. Once you agree, the file is added and the cookie helps analyse web traffic or lets you know when you visit a particular site. Cookies allow web applications to respond to you as an individual. The web application can tailor its operations to your needs, likes and dislikes by gathering and remembering information about your preferences.</p>\n\n<p>We use traffic log cookies to identify which pages are being used. This helps us analyse data about webpage traffic and improve our website in order to tailor it to customer needs. We only use this information for statistical analysis purposes and then the data is removed from the system.</p>\n\n<p>Overall, cookies help us provide you with a better website by enabling us to monitor which pages you find useful and which you do not. A cookie in no way gives us access to your computer or any information about you, other than the data you choose to share with us.</p>\n\n<p>You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of the website.</p>\n\n<h3>Links to other websites</h3>\n\n<p>Our website may contain links to other websites of interest. However, once you have used these links to leave our site, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites and such sites are not governed by this privacy statement. You should exercise caution and look at the privacy statement applicable to the website in question.</p>"
-    },
     "talks": {
       "id": "talks",
       "title": "Talks",
       "link": {
         "id": "Talks",
         "text": "Talks",
+        "icon": "fa-microphone",
         "url": "/talks"
       }
+    },
+    "privacy-policy": {
+      "id": "privacy-policy",
+      "title": "Privacy Policy",
+      "body": "<p>This privacy policy sets out how we use and protect any information that you give us when you use this website.</p>\n\n<p>We are committed to ensuring that your privacy is protected. Should we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement.</p>\n\n<p>We may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes. This policy is effective from 1st August 2017.</p>\n\n<h3>What we collect</h3>\n<p>This website does not ask for or collect personal information.</p>\n\n<h3>How we use cookies</h3>\n<p>A cookie is a small file which asks permission to be placed on your computer&apos;s hard drive. Once you agree, the file is added and the cookie helps analyse web traffic or lets you know when you visit a particular site. Cookies allow web applications to respond to you as an individual. The web application can tailor its operations to your needs, likes and dislikes by gathering and remembering information about your preferences.</p>\n\n<p>We use traffic log cookies to identify which pages are being used. This helps us analyse data about webpage traffic and improve our website in order to tailor it to customer needs. We only use this information for statistical analysis purposes and then the data is removed from the system.</p>\n\n<p>Overall, cookies help us provide you with a better website by enabling us to monitor which pages you find useful and which you do not. A cookie in no way gives us access to your computer or any information about you, other than the data you choose to share with us.</p>\n\n<p>You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of the website.</p>\n\n<h3>Links to other websites</h3>\n\n<p>Our website may contain links to other websites of interest. However, once you have used these links to leave our site, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites and such sites are not governed by this privacy statement. You should exercise caution and look at the privacy statement applicable to the website in question.</p>"
     },
     "terms-and-conditions": {
       "id": "terms-and-conditions",
@@ -817,6 +638,7 @@
               "link": {
                 "id": "Talks",
                 "text": "Talks",
+                "icon": "fa-microphone",
                 "url": "/talks"
               }
             },
@@ -875,6 +697,7 @@
               "link": {
                 "id": "Talks",
                 "text": "Talks",
+                "icon": "fa-microphone",
                 "url": "/talks"
               }
             },
@@ -918,6 +741,7 @@
               "link": {
                 "id": "Talks",
                 "text": "Talks",
+                "icon": "fa-microphone",
                 "url": "/talks"
               }
             },
@@ -964,6 +788,7 @@
               "link": {
                 "id": "Talks",
                 "text": "Talks",
+                "icon": "fa-microphone",
                 "url": "/talks"
               }
             },
@@ -1012,6 +837,7 @@
       "link": {
         "id": "Blog",
         "text": "Blog",
+        "icon": "fa-file-text-o",
         "url": "/blog"
       },
       "introImage": {
@@ -1027,9 +853,259 @@
       }
     }
   },
+  "linkLists": {
+    "navigation": {
+      "id": "navigation",
+      "title": "Navigation",
+      "links": [
+        {
+          "id": "Home",
+          "text": "Home",
+          "icon": "fa-home",
+          "url": "/"
+        },
+        {
+          "id": "Blog",
+          "text": "Blog",
+          "icon": "fa-file-text-o",
+          "url": "/blog"
+        },
+        {
+          "id": "Talks",
+          "text": "Talks",
+          "icon": "fa-microphone",
+          "url": "/talks"
+        }
+      ]
+    },
+    "social": {
+      "id": "social",
+      "title": "Social Networks",
+      "links": [
+        {
+          "id": "GitHub",
+          "icon": "fa-github",
+          "url": "https://www.github.com/cressie176/"
+        },
+        {
+          "id": "Linkedin",
+          "icon": "fa-linkedin",
+          "url": "https://www.linkedin.com/in/stephencresswell/"
+        },
+        {
+          "id": "Twitter",
+          "icon": "fa-twitter",
+          "url": "https://www.twitter.com/cressie176"
+        }
+      ]
+    },
+    "legal": {
+      "id": "legal",
+      "title": "Legal",
+      "links": [
+        {
+          "id": "Terms & Conditions",
+          "text": "Terms & Conditions",
+          "url": "/legal/terms-and-conditions"
+        },
+        {
+          "id": "Privacy Policy",
+          "text": "Privacy Policy",
+          "url": "/legal/privacy-policy"
+        }
+      ]
+    },
+    "contact": {
+      "id": "contact",
+      "title": "Contact",
+      "links": [
+        {
+          "id": "Email",
+          "text": "hello@stephen-cresswell.net",
+          "icon": "fa-envelope",
+          "url": "mailto:hello@stephen-cresswell.net"
+        },
+        {
+          "id": "Mobile",
+          "text": "+44 (0)7814033321",
+          "icon": "fa-phone",
+          "url": "tel:+447814033321"
+        }
+      ]
+    }
+  },
+  "projects": {
+    "marv": {
+      "id": "marv",
+      "title": "Marv",
+      "summary": "A database migration library with pluggable drivers for PostgreSQL and MySQL",
+      "body": "A database migration library with pluggable drivers for PostgreSQL and MySQL",
+      "url": "https://www.github.com/guidesmiths/marv"
+    },
+    "yadda": {
+      "id": "yadda",
+      "title": "Yadda",
+      "summary": "A cucumber-esque BDD library, but with greater flexibility",
+      "body": "A cucumber-esque BDD library, but with greater flexibility",
+      "url": "https://www.github.com/acuminous/yadda"
+    },
+    "confabulous": {
+      "id": "confabulous",
+      "title": "Confabulous",
+      "summary": "A hierarchical configuration loader with support for remote sources such as S3, etcd and Vault",
+      "body": "A hierarchical configuration loader with support for remote sources such as S3, etcd and Vault",
+      "url": "https://www.github.com/guidesmiths/confabulous"
+    },
+    "systemic": {
+      "id": "systemic",
+      "title": "Systemic",
+      "summary": "A minimal dependency injection library",
+      "body": "A minimal dependency injection library",
+      "url": "https://www.github.com/guidesmiths/systemic"
+    },
+    "rascal": {
+      "id": "rascal",
+      "title": "Rascal",
+      "summary": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
+      "body": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
+      "url": "https://www.github.com/guidesmiths/rascal"
+    }
+  },
   "profile": {
     "id": "profile",
     "title": "Profile",
     "body": "<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React, as demonstrated by the <a href='https://www.github.com/cressie176/www-app'>source code</a> for this site.</p>\n\n<p>Until recently I was operating in a dual role, firstly as CTO and co-founder of <a href='https://www.guidesmiths.com'>GuideSmiths</a>, a successful Node.js & microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients.<p>\n\n</p>Due to a desire to spend more time with my family, I have negotiated an exit, and accepted a senior, hands-on position, which can be predominantly carried out from the vicinity of my home in Suffolk.</p>\n\n<p>\nIf you would like more details about my skills and experience you may download a copy of my CV <a href=\"https://assets.contentful.com/g99n9a78vx0s/3zsZxciH7GIuOccQWEyEG8/eb74811d96bf98fc652f296db70bdb37/stephen-cresswell-cv-2017.pdf\">here</a>.\n\n"
+  },
+  "imageSets": {
+    "Enterprise Grade Microservices": {
+      "id": "Enterprise Grade Microservices",
+      "main": {
+        "url": "//images.contentful.com/g99n9a78vx0s/3rAYG3rbaEI6Ka4SwigAuA/a0c40e3e2e6113fcdbf3323775f35665/enterprise-grade-microservices-720x540.jpg",
+        "title": "Enterprise Grade Microservices (Thumbnail)",
+        "description": "Businessman standing by a window in a skyscraper"
+      },
+      "thumbnail": {
+        "url": "//images.contentful.com/g99n9a78vx0s/3rAYG3rbaEI6Ka4SwigAuA/a0c40e3e2e6113fcdbf3323775f35665/enterprise-grade-microservices-720x540.jpg",
+        "title": "Enterprise Grade Microservices (Thumbnail)",
+        "description": "Businessman standing by a window in a skyscraper"
+      }
+    },
+    "Divorcing Microservices With Rascal": {
+      "id": "Divorcing Microservices With Rascal",
+      "main": {
+        "url": "//images.contentful.com/g99n9a78vx0s/1qT8990i1SqsACkwECicAI/ed05fc680b9409d92d0ebc46ca2b274a/divorcing-microservices-with-rascal-720x540.jpg",
+        "title": "Divorcing Microservices With Rascal (Thumbnail)",
+        "description": "A picture of a heart, ripped in two"
+      },
+      "thumbnail": {
+        "url": "//images.contentful.com/g99n9a78vx0s/1qT8990i1SqsACkwECicAI/ed05fc680b9409d92d0ebc46ca2b274a/divorcing-microservices-with-rascal-720x540.jpg",
+        "title": "Divorcing Microservices With Rascal (Thumbnail)",
+        "description": "A picture of a heart, ripped in two"
+      }
+    },
+    "Yadda - The Other BDD Library": {
+      "id": "Yadda - The Other BDD Library",
+      "main": {
+        "url": "//images.contentful.com/g99n9a78vx0s/FntIzfFlAGWGOQMcoUCOm/595ab12150d77d1304c6de070c1711bc/yadda-720x540.jpg",
+        "title": "Yadda - The Other BDD Library",
+        "description": "Man sitting among boxes labelled chai, jasmine, mocha, vows and cucumber"
+      },
+      "thumbnail": {
+        "url": "//images.contentful.com/g99n9a78vx0s/6jixHMToeAgwWUO62SSm6Q/fce6ea7787e9ebbab381c260397fce82/yadda-720x540.jpg",
+        "title": "Yadda - The Other BDD Library (Thumbnail)",
+        "description": "Man sitting among boxes labelled chai, jasmine, mocha, vows and cucumber"
+      }
+    }
+  },
+  "site": {
+    "id": "www.stephen-cresswell.net",
+    "title": "www.stephen-cresswell.net",
+    "navigation": {
+      "id": "navigation",
+      "title": "Navigation",
+      "links": [
+        {
+          "id": "Home",
+          "text": "Home",
+          "icon": "fa-home",
+          "url": "/"
+        },
+        {
+          "id": "Blog",
+          "text": "Blog",
+          "icon": "fa-file-text-o",
+          "url": "/blog"
+        },
+        {
+          "id": "Talks",
+          "text": "Talks",
+          "icon": "fa-microphone",
+          "url": "/talks"
+        }
+      ]
+    },
+    "spotlights": [
+      {
+        "id": "contact",
+        "title": "Contact",
+        "links": [
+          {
+            "id": "Email",
+            "text": "hello@stephen-cresswell.net",
+            "icon": "fa-envelope",
+            "url": "mailto:hello@stephen-cresswell.net"
+          },
+          {
+            "id": "Mobile",
+            "text": "+44 (0)7814033321",
+            "icon": "fa-phone",
+            "url": "tel:+447814033321"
+          }
+        ]
+      },
+      {
+        "id": "legal",
+        "title": "Legal",
+        "links": [
+          {
+            "id": "Terms & Conditions",
+            "text": "Terms & Conditions",
+            "url": "/legal/terms-and-conditions"
+          },
+          {
+            "id": "Privacy Policy",
+            "text": "Privacy Policy",
+            "url": "/legal/privacy-policy"
+          }
+        ]
+      },
+      {
+        "id": "social",
+        "title": "Social Networks",
+        "links": [
+          {
+            "id": "GitHub",
+            "icon": "fa-github",
+            "url": "https://www.github.com/cressie176/"
+          },
+          {
+            "id": "Linkedin",
+            "icon": "fa-linkedin",
+            "url": "https://www.linkedin.com/in/stephencresswell/"
+          },
+          {
+            "id": "Twitter",
+            "icon": "fa-twitter",
+            "url": "https://www.twitter.com/cressie176"
+          }
+        ]
+      }
+    ],
+    "copyright": {
+      "id": "© 2017 Stephen Cresswell. All rights reserved.",
+      "year": 2017,
+      "owner": "Stephen Cresswell",
+      "rights": "All rights reserved."
+    }
   }
 }
