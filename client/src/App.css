@@ -40,3 +40,14 @@ a:active {
 .text-icon {
   margin-left: 8px;
 }
+
+#root code {
+  display: block;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 0px;
+  color: var(--black);
+  background-color: var(--light-grey);
+  white-space: pre;
+}
+

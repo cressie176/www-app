@@ -30,6 +30,11 @@
   margin-bottom: 20px;
 }
 
+.article-page .blurb em {
+  font-weight: bold;
+}
+
+
 .article-page .icon-list__item__link {
   color: var(--text-colour);
 }

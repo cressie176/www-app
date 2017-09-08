@@ -63,8 +63,9 @@ function mapStateToProps(state, props) {
     });
     return tag;
   }).sort((a, b) => {
-    return a.id.localeCompare(b.id);
+    return b.id.localeCompare(a.id);
   });
+
   const activeReference = Object.keys(references).map(id => references[id]).find(reference => reference.active) || {};
 
   return {
