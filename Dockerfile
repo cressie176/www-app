@@ -1,7 +1,4 @@
-from node:alpine
-
-ENV NODE_ENV=production
-RUN apk add -U --no-cache tcpdump curl
+FROM node:alpine AS builder
 
 RUN npm config set color false
 
@@ -29,8 +26,26 @@ RUN npm run build
 # Now build the server (likely to cachebust)
 WORKDIR /opt/app
 COPY . .
-RUN NODE_ENV=development npm run test-server -- --ci --bail --no-colors --verbose --runInBand
+RUN NODE_ENV=development npm run test-server -- --ci --bail --no-colors --verbose
 RUN npm run build-server
 RUN npm run lint
 
+# Create a clean node:alpine container
+FROM node:alpine
+
+# Install userland tools
+RUN apk add -U --no-cache tcpdump curl
+
+# Copy and configure in the node app
+ENV NODE_ENV=production
+RUN mkdir -p /opt/app
+WORKDIR /opt/app
+
+COPY --from=builder /opt/app/package.json package.json
+COPY --from=builder /opt/app/node_modules node_modules
+COPY --from=builder /opt/app/server/build/config ./server/config
+COPY --from=builder /opt/app/server/build/lib ./server/lib
+COPY --from=builder /opt/app/server/build/index.js server/index.js
+
+COPY --from=builder /opt/app/client/build ./client/build
 
