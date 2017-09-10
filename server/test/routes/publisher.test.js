@@ -25,16 +25,16 @@ describe('Publisher API', () => {
         store = components.cms.store;
 
         async.series([
-          store.saveContent.bind(store, 1, { content: "yay", }),
-          store.saveReference.bind(store, { tag: "1", }),
+          store.saveContent.bind(store, 1, { content: 'yay', }),
+          store.saveReference.bind(store, { tag: '1', }),
         ], done);
       });
   });
 
   beforeEach(done => {
     async.series([
-      store.saveContent.bind(store, 1, { content: "yay", }),
-      store.saveReference.bind(store, { tag: "1", }),
+      store.saveContent.bind(store, 1, { content: 'yay', }),
+      store.saveReference.bind(store, { tag: '1', }),
     ], done);
   });
 

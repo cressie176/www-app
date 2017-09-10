@@ -8,7 +8,7 @@ export default function(options = {}) {
     function getSite(tag, cb) {
       store.loadContent(tag, (err, content) => {
         if (err) return cb(err);
-        cb(null, content.site);
+        cb(null, get(content, 'site'));
       });
     }
 
@@ -29,24 +29,15 @@ export default function(options = {}) {
     function listArticles(tag, cb) {
       store.loadContent(tag, (err, content) => {
         if (err) return cb(err);
-        if (!content.articles) return cb(null, undefined);
-        const articles = Object.keys(content.articles).reduce((memo, id) => {
-          return Object.assign(memo, { [id]: toArticle(content.articles[id]), });
-        }, {});
-        cb(null, articles);
+        cb(null, get(content, 'articles'));
       });
     }
 
     function getArticle(tag, articleId, cb) {
       store.loadContent(tag, (err, content) => {
         if (err) return cb(err);
-        const raw = get(content, `articles.${articleId}`);
-        cb(null, toArticle(raw));
+        cb(null, get(content, `articles.${articleId}`));
       });
-    }
-
-    function toArticle(raw) {
-      return raw ? Object.assign({}, raw, { date: new Date(raw.date), }) : raw;
     }
 
     async.waterfall([

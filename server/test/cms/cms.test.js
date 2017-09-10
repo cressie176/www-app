@@ -1,117 +1,131 @@
-import component from '../../lib/components/cms/cms';
+import async from 'async';
+import createSystem from '../test-system';
+import human from '../../lib/components/logging/human';
+import storeComponent from '../../lib/components/cms/store-memory';
 
 describe('CMS', () => {
 
-  const logger = {
-    info: () => {},
-    error: () => {},
-  };
+  let cms, store;
+  let system = { stop: cb => cb(), };
 
-  const config = {
-    path: `${__dirname}/data`,
-  };
+  const loggerOptions = {};
+
+  beforeAll(done => {
+    system = createSystem()
+      .set('transports.human', human(loggerOptions))
+      .set('cms.store', storeComponent()).dependsOn('config', 'logger')
+      .set('transports.human', human(loggerOptions)).start((err, components) => {
+        if (err) return done(err);
+        store = components.cms.store;
+        cms = components.cms.client;
+        initContent(done);
+      });
+  });
+
+  beforeEach(initContent);
+
+  afterEach(done => {
+    loggerOptions.suppress = false;
+    store.nuke(done);
+  });
+
+  afterAll(done => {
+    system.stop(done);
+  });
+
+  function initContent(cb) {
+    async.series([
+      store.saveContent.bind(store, 1, {
+        site: {
+          id: 'SITE',
+        },
+        pages: {
+          home: {
+            id: 'HOME',
+          },
+        },
+        projects: {
+          yadda: {
+            id: 'YADDA',
+          },
+        },
+        articles: {
+          '1000': {
+            id: '1000',
+            title: 'Article 1000',
+          },
+        },
+      }),
+      store.saveContent.bind(store, 2, {}),
+      store.saveReference.bind(store, { tag: '1', }),
+    ], cb);
+  }
 
   describe('Get Site', () => {
 
     it('should get site', done => {
 
-      expect.assertions(5);
-
-      const tag = 'sample-1';
-      const store = {
-        loadReference: cb => {
-          return cb(null, { tag, });
-        },
-        loadContent: (tag, cb) => {
-          expect(tag).toBe('sample-1'); // Executed twice
-          cb(null, { site: { id: 'SITE', }, });
-        },
-      };
-
-      component().start({ config, logger, store, tag, }, (err, cms) => {
+      cms.getSite(1, (err, site) => {
         expect(err).toBe(null);
-        cms.getSite(tag, (err, site) => {
-          expect(err).toBe(null);
-          expect(site.id).toBe('SITE');
-          done();
-        });
+        expect(site.id).toBe('SITE');
+        done();
       });
     });
 
     it('should tolerate no site', done => {
 
-      expect.assertions(5);
-
-      const tag = 'sample-1';
-      const store = {
-        loadReference: cb => {
-          return cb(null, { tag, });
-        },
-        loadContent: (tag, cb) => {
-          expect(tag).toBe('sample-1'); // Executed twice
-          cb(null, {});
-        },
-      };
-
-      component().start({ config, logger, store, tag, }, (err, cms) => {
+      cms.getSite(2, (err, site) => {
         expect(err).toBe(null);
-        cms.getSite(tag, (err, site) => {
-          expect(err).toBe(null);
-          expect(site).toBe(undefined);
-          done();
-        });
+        expect(site).toBe(undefined);
+        done();
+      });
+    });
+
+    it('should tolerate no content', done => {
+
+      cms.getSite(3, (err, site) => {
+        expect(err).toBe(null);
+        expect(site).toBe(undefined);
+        done();
       });
     });
   });
 
   describe('Get Page', () => {
+
     it('should get page by id', done => {
 
-      expect.assertions(5);
-
-      const tag = 'sample-1';
-      const store = {
-        loadReference: cb => {
-          return cb(null, { tag, });
-        },
-        loadContent: (tag, cb) => {
-          expect(tag).toBe('sample-1'); // Executed twice
-          cb(null, { pages: { home: { id: 'HOME', }, }, });
-        },
-      };
-
-      component().start({ config, logger, store, tag, }, (err, cms) => {
+      cms.getPage(1, 'home', (err, page) => {
         expect(err).toBe(null);
-        cms.getPage(tag, 'home', (err, page) => {
-          expect(err).toBe(null);
-          expect(page.id).toBe('HOME');
-          done();
-        });
+        expect(page.id).toBe('HOME');
+        done();
+      });
+    });
+
+    it('should tolerate missing page', done => {
+
+      cms.getPage(1, 'missing', (err, page) => {
+        expect(err).toBe(null);
+        expect(page).toBe(undefined);
+        done();
       });
     });
 
     it('should tolerate no pages', done => {
 
-      expect.assertions(5);
-
-      const tag = 'sample-1';
-      const store = {
-        loadReference: cb => {
-          return cb(null, { tag, });
-        },
-        loadContent: (tag, cb) => {
-          expect(tag).toBe('sample-1'); // Executed twice
-          cb(null, {});
-        },
-      };
-
-      component().start({ config, logger, store, tag, }, (err, cms) => {
+      cms.getPage(2, 'home', (err, page) => {
         expect(err).toBe(null);
-        cms.getPage(tag, 'home', (err, page) => {
-          expect(err).toBe(null);
-          expect(page).toBe(undefined);
-          done();
-        });
+        expect(page).toBe(undefined);
+        done();
+      });
+    });
+
+    it('should tolerate no content', done => {
+
+      cms.getPage(3, 'home', (err, page) => {
+        expect(err).toBe(null);
+        expect(page).toBe(undefined);
+        done();
       });
     });
   });
@@ -120,51 +134,37 @@ describe('CMS', () => {
 
     it('should get project by id', done => {
 
-      expect.assertions(5);
-
-      const tag = 'sample-1';
-      const store = {
-        loadReference: cb => {
-          return cb(null, { tag, });
-        },
-        loadContent: (tag, cb) => {
-          expect(tag).toBe('sample-1'); // Executed twice
-          cb(null, { projects: { yadda: { id: 'YADDA', }, }, });
-        },
-      };
-
-      component().start({ config, logger, store, tag, }, (err, cms) => {
+      cms.getProject(1, 'yadda', (err, project) => {
         expect(err).toBe(null);
-        cms.getProject(tag, 'yadda', (err, project) => {
-          expect(err).toBe(null);
-          expect(project.id).toBe('YADDA');
-          done();
-        });
+        expect(project.id).toBe('YADDA');
+        done();
+      });
+    });
+
+    it('should tolerate missing project', done => {
+
+      cms.getProject(1, 'missing', (err, project) => {
+        expect(err).toBe(null);
+        expect(project).toBe(undefined);
+        done();
       });
     });
 
     it('should tolerate no projects', done => {
 
-      expect.assertions(5);
-
-      const tag = 'sample-1';
-      const store = {
-        loadReference: cb => {
-          return cb(null, { tag, });
-        },
-        loadContent: (tag, cb) => {
-          expect(tag).toBe('sample-1'); // Executed twice
-          cb(null, {});
-        },
-      };
-
-      component().start({ config, logger, store, tag, }, (err, cms) => {
+      cms.getProject(2, 'yadda', (err, project) => {
         expect(err).toBe(null);
-        cms.getProject(tag, 'yadda', (err, project) => {
-          expect(err).toBe(null);
-          expect(project).toBe(undefined);
-          done();
-        });
+        expect(project).toBe(undefined);
+        done();
+      });
+    });
+
+    it('should tolerate no content', done => {
+
+      cms.getProject(3, 'yadda', (err, project) => {
+        expect(err).toBe(null);
+        expect(project).toBe(undefined);
+        done();
       });
     });
   });
@@ -174,51 +174,28 @@ describe('CMS', () => {
 
     it('should get list of articles', done => {
 
-      expect.assertions(5);
-
-      const tag = 'sample-1';
-      const store = {
-        loadReference: cb => {
-          return cb(null, { tag, });
-        },
-        loadContent: (tag, cb) => {
-          expect(tag).toBe('sample-1'); // Executed twice
-          cb(null, { articles: { a: 1, b: 2, c: 3, d: 4, }, });
-        },
-      };
-
-      component().start({ config, logger, store, tag, }, (err, cms) => {
+      cms.listArticles(1, (err, articles) => {
         expect(err).toBe(null);
-        cms.listArticles(tag, (err, articles) => {
-          expect(err).toBe(null);
-          expect(Object.keys(articles).length).toBe(4);
-          done();
-        });
+        expect(articles['1000'].id).toBe('1000');
+        done();
       });
     });
 
     it('should tolerate no articles', done => {
 
-      expect.assertions(5);
-
-      const tag = 'sample-1';
-      const store = {
-        loadReference: cb => {
-          return cb(null, { tag, });
-        },
-        loadContent: (tag, cb) => {
-          expect(tag).toBe('sample-1'); // Executed twice
-          cb(null, {});
-        },
-      };
-
-      component().start({ config, logger, store, tag, }, (err, cms) => {
+      cms.listArticles(2, (err, articles) => {
         expect(err).toBe(null);
-        cms.listArticles(tag, (err, articles) => {
-          expect(err).toBe(null);
-          expect(articles).toBe(undefined);
-          done();
-        });
+        expect(articles).toBe(undefined);
+        done();
+      });
+    });
+
+    it('should tolerate no content', done => {
+
+      cms.listArticles(3, (err, articles) => {
+        expect(err).toBe(null);
+        expect(articles).toBe(undefined);
+        done();
       });
     });
 
@@ -228,79 +205,39 @@ describe('CMS', () => {
 
     it('should get a single article by id', done => {
 
-      expect.assertions(7);
-
-      const tag = 'sample-1';
-      const store = {
-        loadReference: cb => {
-          return cb(null, { tag, });
-        },
-        loadContent: (tag, cb) => {
-          expect(tag).toBe('sample-1'); // Executed twice
-          cb(null, { articles: { '1': { id: 1, title: 'Article 1', }, },} );
-        },
-      };
-
-      component().start({ config, logger, store, tag, }, (err, cms) => {
+      cms.getArticle(1, '1000', (err, article) => {
         expect(err).toBe(null);
-        cms.getArticle(tag, 1, (err, article) => {
-          expect(err).toBe(null);
-          expect(article).toBeDefined();
-          expect(article.id).toBe(1);
-          expect(article.title).toBe('Article 1');
-          done();
-        });
+        expect(article).toBeDefined();
+        expect(article.id).toBe('1000');
+        expect(article.title).toBe('Article 1000');
+        done();
       });
     });
 
-    it('should respond with undefined for missing article', done => {
-      expect.assertions(5);
-
-      const tag = 'sample-1';
-      const store = {
-        loadReference: cb => {
-          return cb(null, { tag, });
-        },
-        loadContent: (tag, cb) => {
-          expect(tag).toBe('sample-1'); // Executed twice
-          cb(null, { articles: { '1': { id: 1, title: 'Article 1', }, },} );
-        },
-      };
-
-      component().start({ config, logger, store, tag, }, (err, cms) => {
+    it('should tolerate for missing article', done => {
+      cms.getArticle(1, 'missing', (err, article) => {
         expect(err).toBe(null);
-        cms.getArticle(tag, 5, (err, article) => {
-          expect(err).toBe(null);
-          expect(article).toBe(undefined);
-          done();
-        });
+        expect(article).toBe(undefined);
+        done();
       });
     });
 
-    it('should respond with undefined when no articles', done => {
-
-      expect.assertions(5);
-
-      const tag = 'sample-1';
-      const store = {
-        loadReference: cb => {
-          return cb(null, { tag, });
-        },
-        loadContent: (tag, cb) => {
-          expect(tag).toBe('sample-1'); // Executed twice
-          cb(null, {} );
-        },
-      };
-
-      component().start({ config, logger, store, tag, }, (err, cms) => {
+    it('should tolerate for no articles', done => {
+      cms.getArticle(2, '1000', (err, article) => {
         expect(err).toBe(null);
-        cms.getArticle(tag, 1, (err, article) => {
-          expect(err).toBe(null);
-          expect(article).toBe(undefined);
-          done();
-        });
+        expect(article).toBe(undefined);
+        done();
       });
     });
+
+    it('should tolerate for no content', done => {
+      cms.getArticle(3, '1000', (err, article) => {
+        expect(err).toBe(null);
+        expect(article).toBe(undefined);
+        done();
+      });
+    });
+
   });
 
 });
