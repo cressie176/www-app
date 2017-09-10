@@ -48,6 +48,6 @@ a:active {
   border-radius: 0px;
   color: var(--black);
   background-color: var(--light-grey);
-  white-space: pre;
+  white-space: pre-wrap;
 }
 
