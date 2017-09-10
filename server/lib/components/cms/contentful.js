@@ -9,6 +9,7 @@ const debug = Debug('app:contentful');
 const collectionNames = {
   article: 'articles',
   project: 'projects',
+  person: 'people',
   link: 'links',
   linkList: 'linkLists',
   imageSet: 'imageSets',
@@ -103,8 +104,10 @@ export default function() {
             item.fields.id = parseInt(item.fields.id, 10);
             item.fields.url = path.join('/', item.fields.channel.link.url, slug(`${item.fields.title}-${item.fields.id}`).toLowerCase());
             item.fields.date = new Date(item.fields.date);
+            item.fields.tweetText = encodeURIComponent(item.fields.tweetText);
           }
           case 'imageSet':
+          case 'person':
           case 'project':
           case 'featuredArticles':
           case 'featuredSoftware':

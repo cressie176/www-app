@@ -98,6 +98,18 @@ describe('Contentful', () => {
       });
     });
 
+    it('should transform people', done => {
+
+      contentful.extract((err, content) => {
+        expect(err).toBe(null);
+        expect(content).toBeDefined();
+        expect(content.people).toBeDefined();
+        expect(content.people.id).toBe('scresswell');
+        expect(content.people.displayName).toBe('Stephen Cresswell');
+        done();
+      });
+    });
+
     it('should transform copyright', done => {
 
       contentful.extract((err, content) => {
@@ -119,10 +131,6 @@ describe('Contentful', () => {
         expect(content).toBeDefined();
         expect(content.imageSets).toBeDefined();
         expect(content.imageSets['Yadda - The Other BDD Library'].id).toBe('Yadda - The Other BDD Library');
-        expect(content.imageSets['Yadda - The Other BDD Library'].main).toBeDefined();
-        expect(content.imageSets['Yadda - The Other BDD Library'].main.url).toBeDefined();
-        expect(content.imageSets['Yadda - The Other BDD Library'].main.title).toBe('Yadda - The Other BDD Library');
-        expect(content.imageSets['Yadda - The Other BDD Library'].main.description).toBe('Man sitting among boxes labelled chai, jasmine, mocha, vows and cucumber');
         expect(content.imageSets['Yadda - The Other BDD Library'].thumbnail).toBeDefined();
         expect(content.imageSets['Yadda - The Other BDD Library'].thumbnail.url).toBeDefined();
         expect(content.imageSets['Yadda - The Other BDD Library'].thumbnail.title).toBe('Yadda - The Other BDD Library (Thumbnail)');
@@ -267,6 +275,7 @@ describe('Contentful', () => {
         expect(content.articles[1].title).toBe('Enterprise Grade Microservices');
         expect(content.articles[1].url).toBe('/talks/enterprise-grade-microservices-1');
         expect(content.articles[1].channel).toBe(content.pages['talks']);
+        expect(content.articles[1].tweetText).toBe('Enterprise%20Grade%20Microservices');
         expect(content.articles[1].keywords).toContain('Microservices');
         expect(content.articles[1].date.toISOString()).toBe('2016-11-23T19:00:00.000Z');
         expect(content.articles[1].location).toBe('Budapest');

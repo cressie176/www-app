@@ -15,6 +15,7 @@
 }
 
 .navbar.navbar-overrides .navbar-nav > li > a {
+  font-size: 16px;
   padding: 30px 60px;
 }
 

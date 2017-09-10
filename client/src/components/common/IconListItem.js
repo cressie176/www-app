@@ -29,7 +29,7 @@ const IconListItem = ({ icon, text, url, id, }) => {
     return (
       <li className={`icon-list__item icon-list__item--${id}`}>
         <CustomLink className={`icon-list__item__link`} url={url}>
-          <i className={`fa ${icon} icon-text`} aria-hidden='true'></i>
+          <i className={`fa ${icon}`} aria-hidden='true'></i>
         </CustomLink>
       </li>
     );
@@ -42,7 +42,7 @@ const IconListItem = ({ icon, text, url, id, }) => {
   } else if (icon) {
     return (
       <li className={`icon-list__item icon-list__item--${id}`}>
-        <i className={`fa ${icon} icon-text`} aria-hidden='true'></i>
+        <i className={`fa ${icon}`} aria-hidden='true'></i>
       </li>
     );
   } else if (text) {

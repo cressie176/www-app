@@ -15,6 +15,25 @@ export class ArticlePage extends React.Component {
 
   componentDidMount() {
     this.props.fetchArticle(this.props.id);
+
+    this.socialInterval = setInterval(() => {
+
+      const element = document.getElementById('social-buttons');
+      if (!element) return;
+      if (!window.FB) return;
+      if (!window.twttr) return;
+
+      clearInterval(this.socialInterval);
+
+      window.FB.XFBML.parse();
+      window.twttr.widgets.load(
+        document.getElementById("twitter")
+      );
+    }, 1000)
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.socialInterval);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -53,11 +72,6 @@ export class ArticlePage extends React.Component {
           <PageIntro title={this.props.article.title} />
           <div className='row'>
             <div className='col-sm-offset-1 col-sm-10'>
-              <img className='image--main' src={this.props.article.images.main.url} title={this.props.article.images.main.title} alt={this.props.article.images.main.description} />
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-sm-offset-1 col-sm-10'>
               <div className='blurb' dangerouslySetInnerHTML={{__html: this.props.article.body,}} />
             </div>
           </div>
@@ -91,6 +105,19 @@ export class ArticlePage extends React.Component {
               </ul>
             </div>
           </div>
+          <div className='row'>
+            <div className='col-sm-offset-1 col-sm-10'>
+              <div id='social-buttons'>
+                <span className="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></span>
+                <span id="twitter">
+                  &nbsp;
+                  <a className="twitter-share-button" href={`https://twitter.com/share?text=${this.props.article.tweetText}`} data-show-count="false" data-size="large">Tweet</a>
+                  &nbsp;
+                  <a className="twitter-follow-button" href="https://twitter.com/cressie176" data-show-count="false" data-size="large" data-show-screen-name="false">Follow</a>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       );
     }
@@ -104,7 +131,7 @@ ArticlePage.propTypes = {
 
 function mapStateToProps(state, props) {
   return {
-    article: state.articles.items[props.id] || { images: { main: {}, }, },
+    article: state.articles.items[props.id] || {},
   };
 }
 

@@ -7,7 +7,7 @@
   color: var(--white);
 }
 
-.article-list-page--blog .page-intro__wrapper {
+.article-list-page .page-intro__wrapper {
   text-align: center;
 }
 
@@ -26,5 +26,3 @@
     height: 330px;
   }
 }
-
-

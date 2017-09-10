@@ -22,7 +22,12 @@ module.exports = {
         ga: {
           trackingId: 'UA-104642477-1',
         },
-        featureToggles: {},
+        featureToggles: {
+          profile: true,
+          featuredSoftware: true,
+          featuredTalks: true,
+          featuredArticles: true,
+        },
       },
     },
   },

@@ -23,7 +23,7 @@ module.exports = {
           profile: true,
           featuredSoftware: true,
           featuredTalks: true,
-          featuredArticles: false,
+          featuredArticles: true,
         },
       },
     },

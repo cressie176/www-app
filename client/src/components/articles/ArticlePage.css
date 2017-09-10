@@ -17,6 +17,10 @@
   margin-bottom: 20px;
 }
 
+.article-page .blurb {
+  font-size: 18px;
+}
+
 .article-page .blurb p {
   margin-bottom: 20px;
 }
@@ -34,6 +38,10 @@
   font-weight: bold;
 }
 
+.article-page .blurb img {
+  width: 100%;
+  margin-bottom: 20px;
+}
 
 .article-page .icon-list__item__link {
   color: var(--text-colour);
@@ -42,4 +50,8 @@
 .article-page .icon-list__item__link:hover {
   color: var(--primary-colour);
   text-decoration: none;
+}
+
+.fb-like > span {
+  vertical-align: baseline !important;
 }
