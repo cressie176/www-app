@@ -87,7 +87,7 @@ export default function(options = {}) {
       async.each([config.content.path, config.reference.path,], (directory, cb) => {
         fs.readdir(directory, (err, files) => {
           if (err) return cb(err);
-          async.each(files, (file, cb) => {
+          async.each(files.filter(file => /\.json$/.test(file)), (file, cb) => {
             fs.unlink(path.join(directory, file), cb);
           }, cb);
         });
