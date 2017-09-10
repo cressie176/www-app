@@ -83,7 +83,7 @@ describe('www.stephen-cresswell.net', () => {
 
     expect(res.statusCode).toBe(200);
     expect(res.headers['content-type'].toLowerCase()).toBe('application/json; charset=utf-8');
-    expect(Object.keys(res.body).length).toBe(3);
+    expect(Object.keys(res.body).length).toBe(6);
   });
 
   it('should respond with 404 to unknown api requests', async () => {

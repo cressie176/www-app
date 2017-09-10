@@ -83,6 +83,17 @@ export default function(options = {}) {
       });
     }
 
+    function nuke(cb) {
+      async.each([config.content.path, config.reference.path,], (directory, cb) => {
+        fs.readdir(directory, (err, files) => {
+          if (err) return cb(err);
+          async.each(files, (file, cb) => {
+            fs.unlink(path.join(directory, file), cb);
+          }, cb);
+        });
+      }, cb);
+    }
+
 
     cb(null, {
       listTags,
@@ -92,6 +103,7 @@ export default function(options = {}) {
       listReferences,
       loadReference: loadReference.bind(null, config.reference.id),
       saveReference: saveReference.bind(null, config.reference.id),
+      nuke,
     });
   }
 

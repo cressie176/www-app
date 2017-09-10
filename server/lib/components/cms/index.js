@@ -1,6 +1,6 @@
 import System from 'systemic';
 import cms from './cms';
-import store from './store';
+import store from './store-fs';
 import cache from './cache';
 import contentful from './contentful';
 

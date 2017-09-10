@@ -5,8 +5,8 @@ import human from '../../lib/components/logging/human';
 
 describe('Content API', () => {
 
-  let system;
   let config;
+  let system = { stop: cb => cb(), };
 
   const loggerOptions = {};
 
@@ -18,13 +18,14 @@ describe('Content API', () => {
     });
   });
 
+  afterEach(() => {
+    loggerOptions.suppress = false;
+  });
+
   afterAll(cb => {
     system.stop(cb);
   });
 
-  afterEach(() => {
-    loggerOptions.suppress = false;
-  });
 
   describe('Get Page', () => {
 
@@ -109,7 +110,7 @@ describe('Content API', () => {
 
       expect(res.statusCode).toBe(200);
       expect(res.headers['content-type'].toLowerCase()).toBe('application/json; charset=utf-8');
-      expect(Object.keys(res.body).length).toBe(3);
+      expect(Object.keys(res.body).length).toBe(6);
       expect(res.body[1].id).toBe(1);
       expect(res.body[2].id).toBe(2);
       expect(res.body[3].id).toBe(3);

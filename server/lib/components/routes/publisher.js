@@ -18,7 +18,7 @@ export default function(options = {}) {
         if (err) return next(err);
         store.saveContent(req.params.tag, content, err => {
           if (err) return next(err);
-          res.sendStatus(201);
+          res.sendStatus(204);
         });
       });
     });

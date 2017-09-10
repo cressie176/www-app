@@ -1,6 +1,6 @@
 import createSystem from '../test-system';
 import nock from 'nock';
-import rawContent from './data/contentful';
+import rawContent from './testdata/contentful/extract';
 
 describe('Contentful', () => {
 
@@ -104,8 +104,9 @@ describe('Contentful', () => {
         expect(err).toBe(null);
         expect(content).toBeDefined();
         expect(content.people).toBeDefined();
-        expect(content.people.id).toBe('scresswell');
-        expect(content.people.displayName).toBe('Stephen Cresswell');
+        expect(content.people.scresswell).toBeDefined();
+        expect(content.people.scresswell.id).toBe('scresswell');
+        expect(content.people.scresswell.displayName).toBe('Stephen Cresswell');
         done();
       });
     });
@@ -133,7 +134,7 @@ describe('Contentful', () => {
         expect(content.imageSets['Yadda - The Other BDD Library'].id).toBe('Yadda - The Other BDD Library');
         expect(content.imageSets['Yadda - The Other BDD Library'].thumbnail).toBeDefined();
         expect(content.imageSets['Yadda - The Other BDD Library'].thumbnail.url).toBeDefined();
-        expect(content.imageSets['Yadda - The Other BDD Library'].thumbnail.title).toBe('Yadda - The Other BDD Library (Thumbnail)');
+        expect(content.imageSets['Yadda - The Other BDD Library'].thumbnail.title).toBe('Thumbnail of Yadda - The Other BDD Library');
         expect(content.imageSets['Yadda - The Other BDD Library'].thumbnail.description).toBe('Man sitting among boxes labelled chai, jasmine, mocha, vows and cucumber');
         done();
       });
@@ -244,8 +245,8 @@ describe('Contentful', () => {
         expect(content.featured.articles).toBeDefined();
         expect(content.featured.articles.id).toBe('articles');
         expect(content.featured.articles.icon).toBe('fa-file-text-o');
-        expect(content.featured.articles.items.length).toBe(1);
-        expect(content.featured.articles.items[0]).toBe(content.articles[2]);
+        expect(content.featured.articles.items.length).toBe(3);
+        expect(content.featured.articles.items[0]).toBe(content.articles[content.featured.articles.items[0].id]);
         done();
       });
     });

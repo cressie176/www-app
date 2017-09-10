@@ -21,13 +21,13 @@ RUN NODE_ENV=development npm install --clean --force
 
 # Now build the client (likely to cachebust)
 COPY client .
-RUN npm run test
+RUN NODE_ENV=development npm run test
 RUN npm run build
 
 # Now build the server (likely to cachebust)
 WORKDIR /opt/app
 COPY . .
-RUN npm run test-server
+RUN NODE_ENV=development npm run test-server
 RUN npm run build-server
 
 RUN npm run lint

@@ -104,8 +104,6 @@ describe('ArticlePage', () => {
 
     expect(wrapper.is('.article-page')).toBe(true);
     expect(wrapper.find('PageIntro').prop('title')).toBe('Article 1');
-    expect(wrapper.find('.image--main').prop('src')).toBe('http://main.jpg');
-    expect(wrapper.find('.image--main').prop('alt')).toBe('main');
     expect(wrapper.find('.blurb').html()).toBe('<div class="blurb"><p>blurb</p></div>');
   });
 

@@ -51,7 +51,7 @@ export default function(options = {}) {
 
     async.waterfall([
       store.loadReference.bind(store),
-      (reference, cb) => cb(null, reference.tag),
+      (reference, cb) => cb(null, reference ? reference.tag : undefined),
       store.loadContent.bind(store),
     ], ((err, content) => {
       if (err) logger.warn('Error pre-loading content', err);

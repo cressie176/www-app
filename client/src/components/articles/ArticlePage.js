@@ -29,7 +29,7 @@ export class ArticlePage extends React.Component {
       window.twttr.widgets.load(
         document.getElementById("twitter")
       );
-    }, 1000)
+    }, 1000);
   }
 
   componentWillUnmount() {

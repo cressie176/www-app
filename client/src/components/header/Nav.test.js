@@ -11,8 +11,8 @@ describe('Nav', () => {
         <Nav
           location={{ pathname: '/', }}
           links={[
-            { text: 'one', url: '/one', },
-            { text: 'two', url: '/two', },
+            { text: 'one', url: '/one', icon: 'fa-home', },
+            { text: 'two', url: '/two', icon: 'fa-cogs', },
           ]} />
       </Router>
     );
@@ -30,14 +30,13 @@ describe('Nav', () => {
         <Nav
           location={{ pathname: '/', }}
           links={[
-            { text: 'current', url: '/', },
-            { text: 'other', url: '/other', },
+            { text: 'current', url: '/', icon: 'fa-home', },
+            { text: 'other', url: '/other', icon: 'fa-cogs', },
           ]} />
       </Router>
     );
-
     expect(wrapper.find('ul li').first().hasClass('active')).toBe(true);
     expect(wrapper.find('ul li a').first().hasClass('active')).toBe(true);
-    expect(wrapper.find('ul li a span').first().text()).toBe('(current)');
+    expect(wrapper.find('ul li a span').at(1).text()).toBe('(current)');
   });
 });

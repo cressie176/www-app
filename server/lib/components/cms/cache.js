@@ -58,7 +58,15 @@ export default function(options = {}) {
       });
     }
 
-    cb(null, { listTags, loadContent, saveContent, deleteContent, listReferences, loadReference, saveReference, });
+    function nuke(cb) {
+      store.nuke((err) => {
+        if (err) return cb(err);
+        cache.reset();
+        cb();
+      });
+    }
+
+    cb(null, { listTags, loadContent, saveContent, deleteContent, listReferences, loadReference, saveReference, nuke, });
   }
 
   return {
