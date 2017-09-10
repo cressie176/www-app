@@ -3,7 +3,7 @@ import errors from 'request-promise/errors';
 import createSystem from '../test-system';
 import human from '../../lib/components/logging/human';
 
-describe.skip('Content API', () => {
+describe('Content API', () => {
 
   let config;
   let system = { stop: cb => cb(), };
