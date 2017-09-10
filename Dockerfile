@@ -23,13 +23,13 @@ RUN NODE_ENV=development npm install --clean --force
 
 # Now build the client (likely to cachebust)
 COPY client .
-RUN NODE_ENV=development npm run test -- --ci --no-colors --verbose
+RUN NODE_ENV=development npm run test -- --ci --bail --no-colors --verbose
 RUN npm run build
 
 # Now build the server (likely to cachebust)
 WORKDIR /opt/app
 COPY . .
-RUN NODE_ENV=development npm run test-server -- --ci --no-colors --verbose
+RUN NODE_ENV=development npm run test-server -- --ci --bail --no-colors --verbose
 RUN npm run build-server
 RUN npm run lint
 

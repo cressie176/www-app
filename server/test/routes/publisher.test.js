@@ -15,6 +15,7 @@ describe('Publisher API', () => {
 
   beforeAll(done => {
     system = createSystem()
+      .set('config.overrides', { server: { port: 13002, }, })
       .set('transports.human', human(loggerOptions))
       .set('cms.store', storeComponent()).dependsOn('config', 'logger')
       .set('contentful', { extract: cb => cb(null, {}), } )
