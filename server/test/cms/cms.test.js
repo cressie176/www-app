@@ -3,7 +3,7 @@ import createSystem from '../test-system';
 import human from '../../lib/components/logging/human';
 import storeComponent from '../../lib/components/cms/store-memory';
 
-describe.skip('CMS', () => {
+describe('CMS', () => {
 
   let cms, store;
   let system = { stop: cb => cb(), };

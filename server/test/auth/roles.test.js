@@ -4,7 +4,7 @@ import errors from 'request-promise/errors';
 import session from 'express-session';
 import roles from '../../lib/components/auth/roles';
 
-describe.skip('Roles', () => {
+describe('Roles', () => {
 
     const port = 13003;
     let server;

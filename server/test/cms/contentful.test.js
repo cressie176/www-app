@@ -2,7 +2,7 @@ import createSystem from '../test-system';
 import nock from 'nock';
 import rawContent from './testdata/contentful/extract';
 
-describe.skip('Contentful', () => {
+describe('Contentful', () => {
 
   let system;
   let config;
