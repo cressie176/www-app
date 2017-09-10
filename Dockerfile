@@ -1,4 +1,4 @@
-FROM node:alpine AS builder
+FROM node:alpine
 
 RUN npm config set color false
 
@@ -41,11 +41,11 @@ ENV NODE_ENV=production
 RUN mkdir -p /opt/app
 WORKDIR /opt/app
 
-COPY --from=builder /opt/app/package.json package.json
-COPY --from=builder /opt/app/node_modules node_modules
-COPY --from=builder /opt/app/server/build/config ./server/config
-COPY --from=builder /opt/app/server/build/lib ./server/lib
-COPY --from=builder /opt/app/server/build/index.js server/index.js
+COPY --from=0 /opt/app/package.json package.json
+COPY --from=0 /opt/app/node_modules node_modules
+COPY --from=0 /opt/app/server/build/config ./server/config
+COPY --from=0 /opt/app/server/build/lib ./server/lib
+COPY --from=0 /opt/app/server/build/index.js server/index.js
 
-COPY --from=builder /opt/app/client/build ./client/build
+COPY --from=0 /opt/app/client/build ./client/build
 
