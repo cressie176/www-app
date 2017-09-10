@@ -7,7 +7,7 @@ import config from '../../lib/components/config';
 import logging from '../../lib/components/logging';
 
 
-describe('Cache', () => {
+describe.skip('Cache', () => {
 
   const overrides = {
     cms: {

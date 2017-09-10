@@ -5,7 +5,7 @@ import createSystem from '../test-system';
 import human from '../../lib/components/logging/human';
 import storeComponent from '../../lib/components/cms/store-memory';
 
-describe('Publisher API', () => {
+describe.skip('Publisher API', () => {
 
   let store;
   let config;

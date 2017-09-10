@@ -3,7 +3,7 @@ import request from 'request-promise';
 import errors from 'request-promise/errors';
 import createSystem from './test-system';
 
-describe('www.stephen-cresswell.net', () => {
+describe.skip('www.stephen-cresswell.net', () => {
 
   let system;
   let config;
