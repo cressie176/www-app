@@ -7,7 +7,7 @@ import main from '../../lib/components/main';
 import config from '../../lib/components/config';
 import logging from '../../lib/components/logging';
 
-describe.skip('Store', () => {
+describe('Store', () => {
 
   describe('Memory', () => {
     tests(memoryStore);
