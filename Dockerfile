@@ -1,4 +1,7 @@
-FROM node:alpine
+from node:alpine
+
+ENV NODE_ENV=production
+RUN apk add -U --no-cache tcpdump curl
 
 RUN npm config set color false
 
@@ -29,23 +32,3 @@ COPY . .
 RUN NODE_ENV=development npm run test-server -- --ci --bail --no-colors --verbose
 RUN npm run build-server
 RUN npm run lint
-
-# Create a clean node:alpine container
-FROM node:alpine
-
-# Install userland tools
-RUN apk add -U --no-cache tcpdump curl
-
-# Copy and configure in the node app
-ENV NODE_ENV=production
-RUN mkdir -p /opt/app
-WORKDIR /opt/app
-
-COPY --from=0 /opt/app/package.json package.json
-COPY --from=0 /opt/app/node_modules node_modules
-COPY --from=0 /opt/app/server/build/config ./server/config
-COPY --from=0 /opt/app/server/build/lib ./server/lib
-COPY --from=0 /opt/app/server/build/index.js server/index.js
-
-COPY --from=0 /opt/app/client/build ./client/build
-
