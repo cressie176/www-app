@@ -5,25 +5,26 @@ import human from '../../lib/components/logging/human';
 
 describe('Content API', () => {
 
-  let config;
+  let host, port;
   let system = { stop: cb => cb(), };
 
   const loggerOptions = {};
 
-  beforeAll(cb => {
-    system = createSystem().set('transports.human', human(loggerOptions)).start((err, components) => {
-      if (err) return cb(err);
-      config = components.config;
-      cb();
-    });
+  beforeAll(done => {
+    system = createSystem()
+      .set('transports.human', human(loggerOptions)).start((err, components) => {
+        if (err) return done(err);
+        ({ host, port, } = components.config.server);
+        done();
+      });
   });
 
   afterEach(() => {
     loggerOptions.suppress = false;
   });
 
-  afterAll(cb => {
-    system.stop(cb);
+  afterAll(done => {
+    system.stop(done);
   });
 
 
@@ -34,7 +35,7 @@ describe('Content API', () => {
       expect.assertions(3);
 
       const res = await request({
-        url: `http://${config.server.host}:${config.server.port}/api/content/1.0/pages/home`,
+        url: `http://${host}:${port}/api/content/1.0/pages/home`,
         resolveWithFullResponse: true,
         json: true,
       });
@@ -51,7 +52,7 @@ describe('Content API', () => {
       loggerOptions.suppress = true;
 
       await request({
-        url: `http://${config.server.host}:${config.server.port}/api/content/1.0/pages/does-not-exist`,
+        url: `http://${host}:${port}/api/content/1.0/pages/does-not-exist`,
         resolveWithFullResponse: true,
         json: true,
       }).catch(errors.StatusCodeError, (reason) => {
@@ -68,7 +69,7 @@ describe('Content API', () => {
       expect.assertions(3);
 
       const res = await request({
-        url: `http://${config.server.host}:${config.server.port}/api/content/1.0/projects/yadda`,
+        url: `http://${host}:${port}/api/content/1.0/projects/yadda`,
         resolveWithFullResponse: true,
         json: true,
       });
@@ -85,7 +86,7 @@ describe('Content API', () => {
       loggerOptions.suppress = true;
 
       await request({
-        url: `http://${config.server.host}:${config.server.port}/api/content/1.0/projects/does-not-exist`,
+        url: `http://${host}:${port}/api/content/1.0/projects/does-not-exist`,
         resolveWithFullResponse: true,
         json: true,
       }).catch(errors.StatusCodeError, (reason) => {
@@ -103,7 +104,7 @@ describe('Content API', () => {
       expect.assertions(6);
 
       const res = await request({
-        url: `http://${config.server.host}:${config.server.port}/api/content/1.0/articles`,
+        url: `http://${host}:${port}/api/content/1.0/articles`,
         resolveWithFullResponse: true,
         json: true,
       });
@@ -124,7 +125,7 @@ describe('Content API', () => {
       expect.assertions(4);
 
       const res = await request({
-        url: `http://${config.server.host}:${config.server.port}/api/content/1.0/articles/1`,
+        url: `http://${host}:${port}/api/content/1.0/articles/1`,
         resolveWithFullResponse: true,
         json: true,
       });
@@ -142,7 +143,7 @@ describe('Content API', () => {
       loggerOptions.suppress = true;
 
       await request({
-        url: `http://${config.server.host}:${config.server.port}/api/content/1.0/articles/9999`,
+        url: `http://${host}:${port}/api/content/1.0/articles/9999`,
         resolveWithFullResponse: true,
         json: true,
       }).catch(errors.StatusCodeError, (reason) => {

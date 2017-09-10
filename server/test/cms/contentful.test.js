@@ -10,7 +10,9 @@ describe('Contentful', () => {
 
   beforeAll(cb => {
 
-    system = createSystem().start((err, components) => {
+    system = createSystem()
+      .remove('server')
+      .start((err, components) => {
       if (err) return cb(err);
       config = components.config;
       contentful = components.contentful;
