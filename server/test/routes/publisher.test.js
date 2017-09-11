@@ -66,6 +66,10 @@ describe('Publisher API', () => {
       expect(res.body[0]).toBe("1");
     });
 
+  });
+
+  describe('Save Content', () => {
+
     it('should save new content', async () => {
 
       expect.assertions(1);
@@ -98,6 +102,9 @@ describe('Publisher API', () => {
         done();
       });
     });
+  });
+
+  describe('Delete Content', () => {
 
     it('should delete content', async (done) => {
 
@@ -136,6 +143,10 @@ describe('Publisher API', () => {
 
     });
 
+  });
+
+  describe('List References', () => {
+
     it('should list references', async () => {
 
       expect.assertions(4);
@@ -152,6 +163,10 @@ describe('Publisher API', () => {
       expect(res.body.test.tag).toBe("1");
       expect(res.body.test.active).toBe(true);
     });
+
+  });
+
+  describe('Save Reference', () => {
 
     it('should update reference', async (done) => {
 
@@ -171,6 +186,5 @@ describe('Publisher API', () => {
         done();
       });
     });
-
   });
 });
