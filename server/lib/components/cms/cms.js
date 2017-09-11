@@ -12,6 +12,13 @@ export default function(options = {}) {
       });
     }
 
+    function listPages(tag, cb) {
+      store.loadContent(tag, (err, content) => {
+        if (err) return cb(err);
+        cb(null, get(content, 'pages'));
+      });
+    }
+
     function getPage(tag, pageId, cb) {
       store.loadContent(tag, (err, content) => {
         if (err) return cb(err);
@@ -48,6 +55,7 @@ export default function(options = {}) {
       if (err) logger.warn('Error pre-loading content', err);
       cb(null, {
         getSite,
+        listPages,
         getPage,
         getProject,
         listArticles,

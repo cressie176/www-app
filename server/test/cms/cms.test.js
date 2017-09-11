@@ -91,6 +91,39 @@ describe('CMS', () => {
     });
   });
 
+
+  describe('List Pages', () => {
+
+    it('should get list of pages', done => {
+
+      cms.listPages(1, (err, pages) => {
+        expect(err).toBe(null);
+        expect(pages.home.id).toBe('HOME');
+        done();
+      });
+    });
+
+    it('should tolerate no pages', done => {
+
+      cms.listPages(2, (err, pages) => {
+        expect(err).toBe(null);
+        expect(pages).toBe(undefined);
+        done();
+      });
+    });
+
+    it('should tolerate no content', done => {
+
+      cms.listPages(3, (err, pages) => {
+        expect(err).toBe(null);
+        expect(pages).toBe(undefined);
+        done();
+      });
+    });
+
+  });
+
+
   describe('Get Page', () => {
 
     it('should get page by id', done => {

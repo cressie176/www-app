@@ -15,29 +15,24 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "6xesezFf7G4mCEaYAO6wg8",
+        "id": "7DYkHbFZv28smw4QukeUkS",
         "type": "Entry",
-        "createdAt": "2017-08-31T23:38:00.761Z",
-        "updatedAt": "2017-09-02T19:57:40.091Z",
-        "revision": 5,
+        "createdAt": "2017-08-31T23:02:19.698Z",
+        "updatedAt": "2017-09-09T21:05:12.719Z",
+        "revision": 9,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "imageSet"
+            "id": "profile"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Divorcing Microservices With Rascal",
-        "thumbnail": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "1qT8990i1SqsACkwECicAI"
-          }
-        }
+        "id": "profile",
+        "title": "Profile",
+        "body": "<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React, as demonstrated by the <a href='https://www.github.com/cressie176/www-app'>source code</a> for this site.</p>\n\n<p>Until recently I was operating in a dual role, firstly as CTO and co-founder of <a href='https://www.guidesmiths.com'>GuideSmiths</a>, a successful Node.js & microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients.<p>\n\n</p>Due to a desire to spend more time with my family, I have negotiated an exit from GuideSmiths, and accepted a senior, hands-on position with <a href=\"https://www.tes.com\">Tes Global Ltd</a>, which can be predominantly carried out from the vicinity of my home in Suffolk.</p>\n\n\n"
       }
     },
     {
@@ -67,70 +62,6 @@
         "id": "Twitter",
         "icon": "fa-twitter",
         "url": "https://www.twitter.com/cressie176"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "3e6i5bHPBYKyuG8YKu066E",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:11:37.665Z",
-        "updatedAt": "2017-08-31T21:39:59.447Z",
-        "revision": 3,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Mobile",
-        "text": "+44 (0)7814033321",
-        "icon": "fa-phone",
-        "url": "tel:+447814033321"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "3pVLW3iAYgcIUuUe6EUmCS",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:43:25.836Z",
-        "updatedAt": "2017-09-09T14:01:35.909Z",
-        "revision": 7,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "imageSet"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Yadda - The Other BDD Library",
-        "thumbnail": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "3ipHCk26VGWG8YQiiy4kss"
-          }
-        }
       }
     },
     {
@@ -194,6 +125,76 @@
         "id": "Duty Calls",
         "text": "Duty Calls - xkcd",
         "url": "https://xkcd.com/386/"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "1cPPtw2Z3YOk6WYWO8IKY8",
+        "type": "Entry",
+        "createdAt": "2017-09-01T10:54:18.270Z",
+        "updatedAt": "2017-09-11T07:31:03.167Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "homePage"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "home",
+        "title": "Home",
+        "link": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5CuaQgEL4souWSi0uiei8o"
+          }
+        },
+        "heroImage": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2U93BNINsIgIKccgSo2Ewi"
+          }
+        },
+        "profile": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "7DYkHbFZv28smw4QukeUkS"
+          }
+        },
+        "featuredSoftware": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "BiHMILP0e4GougCcgss4G"
+          }
+        },
+        "featuredArticles": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5x2gdy4Q1yoa2wWwqiMoMA"
+          }
+        },
+        "featuredTalks": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "72cEhCrZAIOY0wmI64MMIm"
+          }
+        }
       }
     },
     {
@@ -302,6 +303,40 @@
         "id": "See all software…",
         "text": "See all software…",
         "url": "/software"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "6xesezFf7G4mCEaYAO6wg8",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:38:00.761Z",
+        "updatedAt": "2017-09-02T19:57:40.091Z",
+        "revision": 5,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "imageSet"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Divorcing Microservices With Rascal",
+        "thumbnail": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "1qT8990i1SqsACkwECicAI"
+          }
+        }
       }
     },
     {
@@ -809,93 +844,6 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "7DYkHbFZv28smw4QukeUkS",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:02:19.698Z",
-        "updatedAt": "2017-09-09T21:05:12.719Z",
-        "revision": 9,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "profile"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "profile",
-        "title": "Profile",
-        "body": "<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React, as demonstrated by the <a href='https://www.github.com/cressie176/www-app'>source code</a> for this site.</p>\n\n<p>Until recently I was operating in a dual role, firstly as CTO and co-founder of <a href='https://www.guidesmiths.com'>GuideSmiths</a>, a successful Node.js & microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients.<p>\n\n</p>Due to a desire to spend more time with my family, I have negotiated an exit from GuideSmiths, and accepted a senior, hands-on position with <a href=\"https://www.tes.com\">Tes Global Ltd</a>, which can be predominantly carried out from the vicinity of my home in Suffolk.</p>\n\n\n"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "VXGQK0uZUIueSUIuowugE",
-        "type": "Entry",
-        "createdAt": "2017-09-09T20:51:28.599Z",
-        "updatedAt": "2017-09-09T22:29:57.041Z",
-        "revision": 11,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "article"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": 1001,
-        "title": "When Orange Is Not The New Black",
-        "author": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "1aRUx8rcSOWacCaUeOYcqQ"
-          }
-        },
-        "channel": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "13bFqt7AHAGemE2cuUsiqM"
-          }
-        },
-        "tweetText": "When Orange Isn't The New Black",
-        "keywords": [
-          "Node.js",
-          "Software",
-          "JavaScript"
-        ],
-        "summary": "<p>\nFrameworks come and go so quickly that with some notable exceptions any libraries you depend on today, could be superseded tomorrow. There's a cost to adoption, but often a larger cost to migrate away. Jump on the band wagon too soon and you get the pain while a project is unstable, leave it too late and supporting community may already moving on.\n</p>\n<p>\nHow do you tell when orange really is the new black, rather than being the emperors new clothes?\n</p>",
-        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/8deT28SVQ4IqIcW8cI0i8/e6f3ef6fcf6f9bf92caa091ad13e0779/orange-is-the-new-black-1024x414.jpg\" title=\"Orange Is Not The New Black\" alt=\"Orange Is Not The New Black\" />\n<p>\nThe pace of software development is faster than ever before. Languages, libraries and applications emerge for their 15 minutes of fame, before being relegated to the C-List just as quickly. But at what cost?\n</p>\n<p>\nI remember when I first discovered open source. Adding a new library to a software project felt like adding value, with the added bonus that it was code I didn't have to write, test or maintain. But was there always a significant and worthwhile benefit?\n</p>\n<p>\nI remember a colleage complaining about the Spring framework, and that it was too much for him to learn. At a time when the most popular alternatives were <a href=\"https://struts.apache.org/\">Struts<a>, <a href=\"http://tapestry.apache.org/\">Tapestry</a>, <a href=\"http://www.oracle.com/technetwork/java/javaee/javaserverfaces-139869.html\">JSF</a> and his preferred option of vanilla <a href=\"https://docs.oracle.com/cd/E17904_01/web.1111/e13712/basics.htm\">Servlets and JSP</a> I didn't have much sympathy for him. Why should his reluctance to pick up new technology limit everyone elses productivity? Surely learning new tools is a key part of of the job?\n</p>\n<p>\nNow I often find myself facing a similar situation, but from the other site of the argument. I'm no ludite. I was an early adopter of docker, with a <a href=\"https://github.com/moby/moby/commit/fe727e2a87fa086d728664c396fd44f4be6d6afd\">commit</a> from 2013 to prove it. I have maintain several moderately popular Node.js packages, and spent the last year writing in Go. Despite frontend devleopment not being a core part of my job, I am comfortable enough with React to build websites like this one. So what's the problem?\n</p>\n<p>\nThe first problem is that frameworks come and go so quickly that with some noteable exceptions any libraries you depend on today, could be superseeded tomorrow. There's a cost to adoption, but often a larger cost to migrate away. Jump on the band wagon too soon and you get the pain while a project is unstable, leave it too late and supporting community may already moving on. \n</p>\n<p>\nThe second problem is that the new library or tool is either poorly designed or doesn't bring enough value to justitfy the cost, but that the developers introducing haven't been bitten enough times in the past to be wary.\n</p>\n<p>\nLet's consider three examples, <a href=\"https://www.npmjs.com/package/hapi\">hapi</a>, <a href=\"https://www.npmjs.com/package/yarn\">yarn</a> and <a href=\"https://www.npmjs.com/package/jest\">jests</a>. I have deliberately picked both these libraries because they are from large organisations, have a significant user base and received a lot of positive publicitly. Several teams I work with have moved, or are considering moving to them.\n</p>\n<p>\nMy preferred http server has always been <a href=\"https://www.npmjs.com/package/express\">express</a>, for the simple reason that it doesn't try to be in charge. Provided my handlers conform to a few trivial middleware conventions I'm good. A few years ago I was leading a team that wanted to move to <a href=\"https://www.npmjs.com/package/hapi\">hapi</a>. A pair of developers evaluated it, recommended it and so we started using it in all new services. It was a huge mistake. Hapi takes the opposite approach to express. It wants to be boss, exerting a strong influencing over how your code and tests are written. Discontent with hapi grew over the the next few months and the team switched back to express. Four years on there are still a handful of hapi services running that nobody wants to touch.\n</p>\n<p>\nWhen yarn was released it was well received. It was faster than npm and did a better job of locking transitive dependencies. With the release of npm 5 most of yarn's advantages have been negated. In order to support yarn, the organisation I work for had to make code changes to their build pipeline. At least some of those same teams are now considering moving back.\n</p>\n<p>\nThe new unit testing framework on the block is <a href=\"https://www.npmjs.com/package/jest\">Jest</a>. There are a whole series of blog posts from organisations who have successfully migrated from mocha to jest and report reaping the benefits. When I look at Jest I see everything I want to avoid in a unit test framework.\n</p>\n\n<ul>\n  <li>It wants to run your tests for you rather than making programmatic invocation a first class citizen, putting you at the mercy of its file globbing.</li>\n  <li>It uses a global \"expect\" function which doesn't differtiate whether it's being called from a previously executed test or the current one, resulting in difficult to diagnose failures.</li>\n  <li>It uses a fluid assertion api, leading to tests that are higher in ceromony, lower in essence.</li>\n  <li>Through its support for mocking it encourages testing interactions rather than side effects, which results in brittle and opaque test.</li>\n  <li>Through its support for snapshots it encourages brittle, whole document comparision tests</li>\n</ul>\n<p>\nThe irony of my last example is that I use jest for testing this site. Since it is configured by default with <a href=\"https://github.com/facebookincubator/create-react-app\">create-react-app</a>. While not reported in those same blog posts I had plenty of teething problems with Jest, from it.only still isn't working reliably and configuration has been neutered. Despite my reservations I've decided to stick with it. Given the support I'm sure these teething problems will get resolved and the react eco-system is sufficiently complex for me to want to stay on-piste as it were. I have a suspision that it's support for parallel testing will be worth the trouble, and if other teams are going to be adopting it, I might as well get on the band wagon.\n</p>\n<p>\nSo how do you tell when orange really is the new black, rather than being a case of the emperors new clothes? The answer is to be suspicious of any library that:\n</p>\n<ul>\n  <li>has a steep and/or prolonged learning curve</li>\n  <li>is accompanied by an unusual amount of hype</li>  \n  <li>significantly changes the design of your appliation</li>\n  <li>is accompanied by its own testing tools (a well designed library shouldn't need one)</li>\n  <li>wants to \"start\" your application</li>\n  <li>is primarily used for lily gilding</li>\n  <li>has poor documentation and who's issues go unanswered</li>  \n</ul>\n</p>\n<p>\nThat is unless the library in question written by me. In which case you should definitely use it without thinking twice.\n</p>\n",
-        "date": "2017-08-19T19:00+01:00",
-        "images": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "1HttWu08ByMIqYkMAwias0"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
         "id": "4gZuk9FDHWgcMGiwKwAuUc",
         "type": "Entry",
         "createdAt": "2017-09-08T17:28:04.513Z",
@@ -1038,6 +986,64 @@
             "type": "Link",
             "linkType": "Entry",
             "id": "fXohBYKRpeI606eSQYAwQ"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "VXGQK0uZUIueSUIuowugE",
+        "type": "Entry",
+        "createdAt": "2017-09-09T20:51:28.599Z",
+        "updatedAt": "2017-09-10T22:54:24.777Z",
+        "revision": 14,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "article"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": 1001,
+        "title": "When Orange Is Not The New Black",
+        "author": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1aRUx8rcSOWacCaUeOYcqQ"
+          }
+        },
+        "channel": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "13bFqt7AHAGemE2cuUsiqM"
+          }
+        },
+        "tweetText": "When Orange Isn't The New Black",
+        "keywords": [
+          "Node.js",
+          "Software",
+          "JavaScript"
+        ],
+        "summary": "<p>\nFrameworks come and go so quickly that with some notable exceptions any libraries you depend on today, could be superseded tomorrow. There's a cost to adoption, but often a larger cost to migrate away. Jump on the band wagon too soon and you get the pain while a project is unstable, leave it too late and supporting community may already moving on.\n</p>\n<p>\nHow do you tell when orange really is the new black, rather than being the emperors new clothes?\n</p>",
+        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/8deT28SVQ4IqIcW8cI0i8/e6f3ef6fcf6f9bf92caa091ad13e0779/orange-is-the-new-black-1024x414.jpg\" title=\"Orange Is Not The New Black\" alt=\"Orange Is Not The New Black\" />\n<p>\nThe pace of software development is faster than ever before. Languages, libraries and applications emerge for their 15 minutes of fame, before being relegated to the C-List just as quickly. But at what cost?\n</p>\n<p>\nI remember when I first discovered open source. Adding a new library to a software project felt like adding value, with the added bonus that it was code I didn't have to write, test or maintain. But was there always a significant and worthwhile benefit?\n</p>\n<p>\nI remember a colleage complaining about the Spring framework, and that it was too much for him to learn. At a time when the most popular alternatives were <a href=\"https://struts.apache.org/\">Struts<a>, <a href=\"http://tapestry.apache.org/\">Tapestry</a>, <a href=\"http://www.oracle.com/technetwork/java/javaee/javaserverfaces-139869.html\">JSF</a> and his preferred option of vanilla <a href=\"https://docs.oracle.com/cd/E17904_01/web.1111/e13712/basics.htm\">Servlets and JSP</a> I didn't have much sympathy for him. Why should his reluctance to pick up new technology limit everyone elses productivity? Surely learning new tools is a key part of of the job?\n</p>\n<p>\nNow I often find myself facing a similar situation, but from the other side of the argument. I'm no ludite. I was an early adopter of docker, with a <a href=\"https://github.com/moby/moby/commit/fe727e2a87fa086d728664c396fd44f4be6d6afd\">commit</a> from 2013 to prove it. I have maintain several moderately popular Node.js packages, and spent the last year writing microservices in Go. Despite frontend devleopment not being a core part of my job, I am comfortable enough with React to build websites like this one. So what's my problem? In fact I have thre.\n</p>\n<p>\nMy first problem is that frameworks come and go so quickly that with some noteable exceptions any libraries you depend on today, could be superseeded tomorrow. There's a cost to adoption, but often a larger cost to migrate away. Jump on the band wagon too soon and you get the pain while a project is unstable, leave it too late and supporting community may already moving on. \n</p>\n<p>\nMy second problem is that the new library or tool may not bring enough value to justitfy its cost, and that the cost is not predicatable. At a minimum you increase the learning curve for other developers. If the library contains bugs and is unmaintained, the costs go up. The <a href=\"https://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/\">lpad debarcle</a> and <a href=\"https://www.theregister.co.uk/2017/08/02/typosquatting_npm/\">typosquatting attacks</a> are two examples of when adding libraries incurred a major cost. Providing the library is genuinely useful it's usually worth the risk, but why take the risk by introducing a library which is used primarily for lily guilding?\n</p>\n<p>\nMy third problem is that the new library may be poorly designed but that the developers introducing them haven't been bitten enough times in the past to be wary. Very little in the software world is new. I drank both <a href=\"http://ant.apache.org/\">ant</a> and <a href=\"http://maven.apache.org/\">maven</a> which taught me to be suspicious of tools like <a href=\"https://puppet.com/\">puppet</a> which are configured by expressing dependencies or inheritance. \n</p>\n<p>\nLet's consider three examples, <a href=\"https://www.npmjs.com/package/hapi\">hapi</a>, <a href=\"https://www.npmjs.com/package/yarn\">yarn</a> and <a href=\"https://www.npmjs.com/package/jest\">jests</a>. I have deliberately picked both these libraries because they are from large organisations, have a significant user base and received a lot of positive publicitly. Several teams I work with have moved, or are considering moving to them.\n</p>\n<p>\nMy preferred http server has always been <a href=\"https://www.npmjs.com/package/express\">express</a>, for the simple reason that it doesn't try to be in charge. Provided my handlers conform to a few trivial middleware conventions I'm good. A few years ago I was leading a team that wanted to move to <a href=\"https://www.npmjs.com/package/hapi\">hapi</a>. A pair of developers evaluated it, recommended it and so we started using it in all new services. It was a huge mistake. Hapi takes the opposite approach to express. It wants to be boss, exerting a strong influencing over how your code and tests are written. Discontent with hapi grew over the the next few months and the team switched back to express. Four years on there are still a handful of hapi services running that nobody wants to touch.\n</p>\n<p>\nWhen yarn was released it was well received. It was faster than npm and did a better job of locking transitive dependencies. With the release of npm 5 most of yarn's advantages have been negated. In order to support yarn, the organisation I work for had to make code changes to their build pipeline. At least some of those same teams are now considering moving back. Yarn worked well and continues to be improved, but it was always likely that npm would updated. Would it have been better to wait?\n</p>\n<p>\nThe new unit testing framework on the block is <a href=\"https://www.npmjs.com/package/jest\">Jest</a>. There are a whole series of blog posts from organisations who have successfully migrated from mocha to jest and report reaping the benefits. When I look at Jest I see everything I want to avoid in a unit test framework.\n</p>\n\n<ul>\n  <li>It wants to run your tests for you rather than making programmatic invocation a first class citizen, putting you at the mercy of its file globbing.</li>\n  <li>It uses a global \"expect\" function which doesn't differentiate whether it's being called from a previously executed test or the current one, resulting in difficult to diagnose failures.</li>\n  <li>It uses a fluid assertion api leading to tests that are higher in ceromony, lower in essence. Jest's expectations are similar, but not identical to <a href=\"https://www.npmjs.com/package/expect.js\">expect.js</a> and <a href=\"https://www.npmjs.com/package/chai\">chai</a> so if you're using either of those libraries elsewhere in your organisation developers working multiple projects will always be have to be context switching.</li>\n  <li>Through its support for mocking it encourages testing interactions rather than side effects, which in turn encourages brittle and opaque test.</li>\n  <li>Through its support for snapshots it encourages brittle, whole document comparision tests.</li>\n</ul>\n\nWithout making all of the above mistakes with java and groovy based testing frameworks such as hamcrest, \n\n<p>\nThe irony of my last example is that I use jest for testing this site. Since it is configured by default with <a href=\"https://github.com/facebookincubator/create-react-app\">create-react-app</a>. While not reported in those previously mentioned blog posts, I had plenty of teething problems with Jest, exclusive tests don't work, the configuration has been neutered, the global expect leaked despite what the documentation claims, it wasn't possible to exclude watch paths until recently and the cryptic error messages such as the following caused by a missing test data directory makes fixing tests a nightmare.\n\n<code>10/09/2017, 20:57:14 PASS server/test/cms/cache.test.js\n10/09/2017, 20:57:14 Cache Cache ✓ should load uncached content (7ms)\n10/09/2017, 20:57:14 ✓ should return cached content (3ms)\n10/09/2017, 20:57:14 ✓ should return undefined when missing content (4ms)\n10/09/2017, 20:57:14 ✓ should eject items from the cache when max size exceeded (5ms)\n10/09/2017, 20:57:14 ✓ should save content (3ms)\n10/09/2017, 20:57:14 ✓ should optimistically cache content on save (3ms)\n10/09/2017, 20:57:14\n10/09/2017, 20:57:15/opt/app/node_modules/jest-jasmine2/build/jasmine/Env.js:511 currentRunnable().addExpectationResult(false, { ^ TypeError: Cannot read property 'addExpectationResult' of undefined at Env.fail (/opt/app/node_modules/jest-jasmine2/build/jasmine/Env.js:511:24) at next (/opt/app/node_modules/jest-jasmine2/build/queue_runner.js:37:24) at /opt/app/node_modules/async/dist/async.js:3861:9 at /opt/app/node_modules/async/dist/async.js:421:16 at iterateeCallback (/opt/app/node_modules/async/dist/async.js:924:17) at /opt/app/node_modules/async/dist/async.js:906:16 at /opt/app/node_modules/async/dist/async.js:3858:13 at /opt/app/node_modules/async/dist/async.js:421:16 at iteratorCallback (/opt/app/node_modules/async/dist/async.js:996:13) at /opt/app/node_modules/async/dist/async.js:906:16\n</code>\n\nDespite my reservations I've decided to stick with it. Given the support I'm sure these teething problems will get resolved and the react eco-system is sufficiently complex for me to want to stay on-piste as it were. I have a suspicion that it's support for parallel testing will be worth the trouble, the interactive test runner is a joy and if other teams are going to be adopting it, I might as well get on the band wagon.\n</p>\n<p>\nSo how do you tell when orange really is the new black, rather than being a case of the emperors new clothes? The answer is to be suspicious of any library that:\n</p>\n<ul>\n  <li>has a steep and/or prolonged learning curve</li>\n  <li>has a similar library already being used in the organisation</li> \n  <li>is accompanied by an unusual amount of hype</li>  \n  <li>significantly changes the design of your appliation</li>\n  <li>is accompanied by its own testing tools (a well designed library shouldn't need one)</li>\n  <li>wants to \"start\" your application</li>\n  <li>is primarily used for lily gilding</li>\n  <li>has poor documentation and who's issues go unanswered</li>  \n</ul>\n</p>\n<p>\n\nDo use libraries\n\nThat is unless the library in question written by me. In which case you should definitely use it without thinking twice.\n</p>\n",
+        "date": "2017-08-19T19:00+01:00",
+        "images": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1HttWu08ByMIqYkMAwias0"
           }
         }
       }
@@ -1535,69 +1541,6 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "1cPPtw2Z3YOk6WYWO8IKY8",
-        "type": "Entry",
-        "createdAt": "2017-09-01T10:54:18.270Z",
-        "updatedAt": "2017-09-01T10:54:18.270Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "homePage"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "home",
-        "title": "Home",
-        "heroImage": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "2U93BNINsIgIKccgSo2Ewi"
-          }
-        },
-        "profile": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "7DYkHbFZv28smw4QukeUkS"
-          }
-        },
-        "featuredSoftware": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "BiHMILP0e4GougCcgss4G"
-          }
-        },
-        "featuredArticles": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5x2gdy4Q1yoa2wWwqiMoMA"
-          }
-        },
-        "featuredTalks": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "72cEhCrZAIOY0wmI64MMIm"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
         "id": "1ybkgfeC0Usu6W4ICKmmco",
         "type": "Entry",
         "createdAt": "2017-09-01T22:05:15.270Z",
@@ -2025,6 +1968,70 @@
             "type": "Link",
             "linkType": "Entry",
             "id": "48CjwSLwRGiqWIu0kYMCU2"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3e6i5bHPBYKyuG8YKu066E",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:11:37.665Z",
+        "updatedAt": "2017-08-31T21:39:59.447Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Mobile",
+        "text": "+44 (0)7814033321",
+        "icon": "fa-phone",
+        "url": "tel:+447814033321"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3pVLW3iAYgcIUuUe6EUmCS",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:43:25.836Z",
+        "updatedAt": "2017-09-09T14:01:35.909Z",
+        "revision": 7,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "imageSet"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Yadda - The Other BDD Library",
+        "thumbnail": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "3ipHCk26VGWG8YQiiy4kss"
           }
         }
       }

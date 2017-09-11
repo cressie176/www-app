@@ -63,6 +63,9 @@ module.exports = {
         },
       },
     },
+    sitemap: {
+      path: path.join(process.cwd(), 'server', 'templates', 'sitemap.xml'),
+    },
   },
   server: {
     host: '0.0.0.0',
