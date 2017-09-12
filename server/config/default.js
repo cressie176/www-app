@@ -63,8 +63,13 @@ module.exports = {
         },
       },
     },
-    sitemap: {
-      path: path.join(process.cwd(), 'server', 'templates', 'sitemap.xml'),
+    feeds: {
+      atom: {
+        template: path.join(process.cwd(), 'server', 'templates', 'atom.xml'),
+      },
+      sitemap: {
+        template: path.join(process.cwd(), 'server', 'templates', 'sitemap.xml'),
+      },
     },
   },
   server: {

@@ -18,7 +18,6 @@
     "prepush": "docker build .",
     "lint": "eslint .",
     "fetch-content": "curl --fail --silent -H \"Authorization: Bearer $(cat secrets/secrets.json | jq -r '.contentful.key')\" \"https://cdn.contentful.com/spaces/$(cat secrets/secrets.json | jq -r '.contentful.space')/entries?limit=1000\" -o server/test/cms/testdata/contentful/extract.json"
-
   },
   "author": "Stephen Cresswell",
   "license": "ISC",
@@ -37,6 +36,7 @@
     "request-promise": "^4.2.1"
   },
   "dependencies": {
+    "babel-preset-stage-3": "^6.24.1",
     "body-parser": "^1.17.2",
     "boom": "^5.2.0",
     "bunyan": "^1.8.12",
