@@ -77,7 +77,7 @@ describe('Feeds', () => {
 
       expect($('feed > link').eq(0).attr('rel')).toBe('self');
       expect($('feed > link').eq(0).attr('type')).toBe('application/atom+xml');
-      expect($('feed > link').eq(0).attr('href')).toBe(`http://${config.server.host}:${config.server.port}/feeds/atom`);
+      expect($('feed > link').eq(0).attr('href')).toBe(`http://${config.server.host}:${config.server.port}/feeds/atom.xml`);
       expect($('feed > link').eq(1).attr('rel')).toBe('alternate');
       expect($('feed > link').eq(1).attr('type')).toBe('text/html');
       expect($('feed > link').eq(1).attr('href')).toBe(`http://${config.server.host}:${config.server.port}`);

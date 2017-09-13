@@ -95,7 +95,7 @@ module.exports = function() {
       const feed = {
         ...site,
         links: [
-          { rel: "self", type: "application/atom+xml", href: `${site.url}/feeds/atom`, },
+          { rel: "self", type: "application/atom+xml", href: `${site.url}/feeds/atom.xml`, },
           { rel: "alternate", type: "text/html", href: site.url, },
         ],
         author: {
