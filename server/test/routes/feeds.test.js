@@ -59,7 +59,7 @@ describe('Feeds', () => {
       expect.assertions(25);
 
       const res = await request({
-        url: `http://${config.server.host}:${config.server.port}/feeds/atom`,
+        url: `http://${config.server.host}:${config.server.port}/feeds/atom.xml`,
         qs: { channel: 'blog', },
         resolveWithFullResponse: true,
       });
@@ -103,7 +103,7 @@ describe('Feeds', () => {
       expect.assertions(2);
 
       const res = await request({
-        url: `http://${config.server.host}:${config.server.port}/feeds/atom`,
+        url: `http://${config.server.host}:${config.server.port}/feeds/atom.xml`,
         resolveWithFullResponse: true,
       });
 
@@ -116,7 +116,7 @@ describe('Feeds', () => {
       expect.assertions(2);
 
       const res = await request({
-        url: `http://${config.server.host}:${config.server.port}/feeds/atom`,
+        url: `http://${config.server.host}:${config.server.port}/feeds/atom.xml`,
         qs: { channel: 'meh', },
         resolveWithFullResponse: true,
       });
