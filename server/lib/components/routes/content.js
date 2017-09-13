@@ -6,7 +6,10 @@ module.exports = function(options = {}) {
 
   function start({ config, app, cms, store, }, cb) {
 
-    app.use('/api/content', bodyParser.json());
+    app.use('/api/content', app.locals.hasRole('guest'), bodyParser.json(), (req, res, next) => {
+      res.set('cache-control', 'public, max-age=3600, must-revalidate');
+      next();
+    });
 
     app.use('/api/content', cookieParser(), (req, res, next) => {
       store.loadReference((err, reference) => {
@@ -16,7 +19,7 @@ module.exports = function(options = {}) {
       });
     });
 
-    app.use('/api/content', app.locals.hasRole('guest'), (req, res, next) => {
+    app.use('/api/content', (req, res, next) => {
       res.set('cache-control', 'public, max-age=3600, must-revalidate');
       next();
     });

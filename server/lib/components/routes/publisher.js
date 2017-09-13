@@ -4,7 +4,7 @@ export default function(options = {}) {
 
   function start({ config, logger, app, contentful, store, }, cb) {
 
-    app.use('/api/publisher', bodyParser.json(), app.locals.hasRole('publisher'));
+    app.use('/api/publisher', app.locals.hasRole('publisher'), bodyParser.json(), );
 
     app.get('/api/publisher/1.0/tags', (req, res, next) => {
       store.listTags((err, tags) => {

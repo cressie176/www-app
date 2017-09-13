@@ -26,6 +26,8 @@ module.exports = function() {
       });
     }
 
+    app.use(['/sitemap.xml', '/feeds/',], app.locals.hasRole('guest'));
+
     app.use(['/sitemap.xml', '/feeds/',], cookieParser(), (req, res, next) => {
       store.loadReference((err, reference) => {
         if (err) return next(err);
@@ -35,7 +37,7 @@ module.exports = function() {
       });
     });
 
-    app.get('/sitemap.xml', app.locals.hasRole('guest'), (req, res, next) => {
+    app.get('/sitemap.xml', (req, res, next) => {
 
       fetchDocuments(res.locals.tag, (err, documents) => {
         if (err) return next(err);
@@ -50,7 +52,7 @@ module.exports = function() {
 
     });
 
-    app.get('/feeds/atom', app.locals.hasRole('guest'), (req, res, next) => {
+    app.get('/feeds/atom.xml', (req, res, next) => {
 
       async.parallel({
         site: cms.getSite.bind(cms, res.locals.tag),
