@@ -68,7 +68,7 @@ module.exports = function() {
         const feed = toFeed(site, articles);
 
         res.set('content-type' ,'application/atom+xml; charset=utf-8');
-        res.set('cache-control', 'public, max-age=86400, must-revalidate');
+        res.set('cache-control', 'public, max-age=3600, must-revalidate');
         res.send(templates.atom.render(feed));
       });
     });
