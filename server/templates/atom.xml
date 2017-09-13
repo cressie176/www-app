@@ -5,7 +5,9 @@
   {{#links}}
   <link rel="{{rel}}" type="{{type}}" href="{{href}}"/>
   {{/links}}
-
+  <author>
+    <name>{{author.name}}</name>
+  </author>
   <updated>{{updated}}</updated>
   <id>{{id}}</id>
   <rights type="html">{{rights}}</rights>

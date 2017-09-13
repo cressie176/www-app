@@ -98,8 +98,11 @@ module.exports = function() {
           { rel: "self", type: "application/atom+xml", href: `${site.url}/feeds/atom`, },
           { rel: "alternate", type: "text/html", href: site.url, },
         ],
-        updated: articles.length ? articles[0].date : undefined,
+        author: {
+          name: site.copyright.owner,
+        },
         rights: `© ${site.copyright.year} ${site.copyright.owner}. ${site.copyright.rights}`,
+        updated: articles.length ? articles[0].date : '2017-09-01T00:00:00.000Z',
       };
       feed.entries = articles.map(toAtomEntry(site, feed));
       return feed;

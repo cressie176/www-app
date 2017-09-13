@@ -56,7 +56,7 @@ describe('Feeds', () => {
 
     it('should get the atom feed', async () => {
 
-      expect.assertions(25);
+      expect.assertions(26);
 
       const res = await request({
         url: `http://${config.server.host}:${config.server.port}/feeds/atom.xml`,
@@ -72,6 +72,7 @@ describe('Feeds', () => {
       expect($('feed > id').text()).toBe('www.stephen-cresswell.net');
       expect($('feed > title').text()).toBe('www.stephen-cresswell.net');
       expect($('feed > updated').text()).toBe('2017-08-26T18:00:00.000Z');
+      expect($('feed > author name').text()).toBe('Stephen Cresswell');
       expect($('feed > rights').text()).toBe('© 2017 Stephen Cresswell. All rights reserved.');
 
       expect($('feed > link').eq(0).attr('rel')).toBe('self');
@@ -100,7 +101,7 @@ describe('Feeds', () => {
 
     it('should tolerate no channel parameter', async () => {
 
-      expect.assertions(2);
+      expect.assertions(7);
 
       const res = await request({
         url: `http://${config.server.host}:${config.server.port}/feeds/atom.xml`,
@@ -109,11 +110,19 @@ describe('Feeds', () => {
 
       expect(res.statusCode).toBe(200);
       expect(res.headers['content-type'].toLowerCase()).toBe('application/atom+xml; charset=utf-8');
+
+      const $ = cheerio.load(res.body, { xmlMode: true, });
+
+      expect($('feed > id').text()).toBe('www.stephen-cresswell.net');
+      expect($('feed > title').text()).toBe('www.stephen-cresswell.net');
+      expect($('feed > updated').text()).toBe('2017-09-01T00:00:00.000Z');
+      expect($('feed > author name').text()).toBe('Stephen Cresswell');
+      expect($('feed > rights').text()).toBe('© 2017 Stephen Cresswell. All rights reserved.');
     });
 
     it('should tolerate unknown channel parameter', async () => {
 
-      expect.assertions(2);
+      expect.assertions(7);
 
       const res = await request({
         url: `http://${config.server.host}:${config.server.port}/feeds/atom.xml`,
@@ -123,6 +132,14 @@ describe('Feeds', () => {
 
       expect(res.statusCode).toBe(200);
       expect(res.headers['content-type'].toLowerCase()).toBe('application/atom+xml; charset=utf-8');
+
+      const $ = cheerio.load(res.body, { xmlMode: true, });
+
+      expect($('feed > id').text()).toBe('www.stephen-cresswell.net');
+      expect($('feed > title').text()).toBe('www.stephen-cresswell.net');
+      expect($('feed > updated').text()).toBe('2017-09-01T00:00:00.000Z');
+      expect($('feed > author name').text()).toBe('Stephen Cresswell');
+      expect($('feed > rights').text()).toBe('© 2017 Stephen Cresswell. All rights reserved.');
     });
 
   });
