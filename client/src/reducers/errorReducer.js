@@ -14,13 +14,13 @@ export default function(state = initialState, action)  {
     case TYPE_KEY: {
       return {
         ...state,
-        ...{ message: state.message + action.key, },
+        message: state.message + action.key,
       };
     }
     case FINISH_TYPING: {
       return {
         ...state,
-        ...{ finishedTyping: true, },
+        finishedTyping: true,
       };
     }
     default: {

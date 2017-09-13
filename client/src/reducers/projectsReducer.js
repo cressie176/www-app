@@ -18,11 +18,11 @@ export default function(state = { items: {}, }, action)  {
       const project = Object.assign({}, state.items[action.project.id] || {}, extractProject(action));
       const items = {
         ...state.items,
-        ...{ [project.id]: project, },
+        [project.id]: project,
       };
       return {
         ...state,
-        ...{ items: items, },
+        items: items,
       };
     }
     case FETCH_DOWNLOAD_COUNT_REQUEST:
@@ -31,11 +31,11 @@ export default function(state = { items: {}, }, action)  {
       const project = Object.assign({}, state.items[action.project.id] || {}, extractDownloads(action));
       const items = {
         ...state.items,
-        ...{ [project.id]: project, },
+        [project.id]: project,
       };
       return {
         ...state,
-        ...{ items: items, },
+        items: items,
       };
     }
     default: {
@@ -47,13 +47,17 @@ export default function(state = { items: {}, }, action)  {
 function extractProject({ project, loading = false, missing = false, error, }) {
   return {
     ...project,
-    ...{ loading: loading, missing: missing, error: error, },
+    loading: loading,
+    missing: missing,
+    error: error,
   };
 }
 
 function extractDownloads({ project, loading = false, missing = false, error, }) {
   return {
     ...project,
-    ...{ downloads_loading: loading, downloads_missing: missing, downloads_error: error, },
+    downloads_loading: loading,
+    downloads_missing: missing,
+    downloads_error: error,
   };
 }

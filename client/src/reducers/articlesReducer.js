@@ -17,11 +17,11 @@ export default function(state = { items: {}, }, action)  {
       const article = extractArticle(action);
       const items = {
         ...state.items,
-        ...{ [article.id]: article, },
+        [article.id]: article,
       };
       return {
         ...state,
-        ...{ items: items, },
+        items,
       };
     }
     case FETCH_ARTICLES_REQUEST:
@@ -39,8 +39,9 @@ export default function(state = { items: {}, }, action)  {
 
       return {
         ...state,
-        ...{ items: items, },
-        ...{ loading: action.loading, error: action.error, },
+        items,
+        loading: action.loading,
+        error: action.error,
       };
     }
     default: {
@@ -52,7 +53,7 @@ export default function(state = { items: {}, }, action)  {
 function extractArticle({ article, loading = false, missing = false, error, }) {
   return {
     ...article,
-    ...{ date: article.date ? new Date(article.date) : undefined, },
-    ...{ loading: loading, missing: missing, error: error, },
+    date: article.date ? new Date(article.date) : undefined,
+    loading: loading, missing: missing, error: error,
   };
 }

@@ -23,8 +23,9 @@ export default function(state = { tags: [], references: {}, activeReference: {},
     case FETCH_REFERENCES_ERROR: {
       return {
         ...state,
-        ...{ references: action.references, },
-        ...{ loading: action.loading, error: action.error, },
+        references: action.references,
+        loading: action.loading,
+        error: action.error,
       };
     }
     case FETCH_TAGS_REQUEST:
@@ -32,8 +33,9 @@ export default function(state = { tags: [], references: {}, activeReference: {},
     case FETCH_TAGS_ERROR: {
       return {
         ...state,
-        ...{ tags: action.tags, },
-        ...{ loading: action.loading, error: action.error, },
+        tags: action.tags,
+        loading: action.loading,
+        error: action.error,
       };
     }
     case EXTRACT_CONTENT_REQUEST:
@@ -42,8 +44,9 @@ export default function(state = { tags: [], references: {}, activeReference: {},
       const tags = state.tags.indexOf(action.tag) >= 0 ? state.tags : state.tags.concat(action.tag);
       return {
         ...state,
-        ...{ tags: tags, },
-        ...{ loading: action.loading, error: action.error, },
+        tags: tags,
+        loading: action.loading,
+        error: action.error,
       };
     }
     case SELECT_CONTENT_REQUEST:
@@ -53,12 +56,13 @@ export default function(state = { tags: [], references: {}, activeReference: {},
       const activeReference = Object.assign({}, state.references[activeReferenceId], { tag: action.tag, });
       const references = {
         ...state.references,
-        ...{ [activeReferenceId]: activeReference, },
+        [activeReferenceId]: activeReference,
       };
       return {
         ...state,
-        ...{ references, },
-        ...{ loading: action.loading, error: action.error, },
+        references,
+        loading: action.loading,
+        error: action.error,
       };
     }
     case DELETE_CONTENT_REQUEST:
@@ -67,8 +71,9 @@ export default function(state = { tags: [], references: {}, activeReference: {},
       const tags = state.tags.filter(tag => tag !== action.tag);
       return {
         ...state,
-        ...{ tags: tags, },
-        ...{ loading: action.loading, error: action.error, },
+        tags: tags,
+        loading: action.loading,
+        error: action.error,
       };
     }
     default: {

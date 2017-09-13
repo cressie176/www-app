@@ -7,7 +7,7 @@ export default function(state = { featureToggles: {}, }, action)  {
     case TOGGLE_FEATURES: {
       return {
         ...state,
-        ...{ featureToggles: action.features, },
+        featureToggles: action.features,
       };
     }
     default: {

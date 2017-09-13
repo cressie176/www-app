@@ -8,7 +8,7 @@ export default function(state = { contact: true, }, action)  {
     case REMOVE_ELEMENT_OBFUSCATION: {
       return {
         ...state,
-        ...{ [action.id]: false, },
+        [action.id]: false,
       };
     }
     case REMOVE_ALL_OBFUSCATION: {

@@ -27,6 +27,8 @@ export default function(state = {}, action)  {
 function extractPage({ page, loading = false, missing = false, error, }) {
   return {
     ...page,
-    ...{ loading: loading, missing: missing, error: error, },
+    loading: loading,
+    missing: missing,
+    error: error,
   };
 }

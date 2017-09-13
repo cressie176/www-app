@@ -26,6 +26,8 @@ export default function(state = {}, action)  {
 function extractSite({ site, loading = false, missing = false, error, }) {
   return {
     ...site,
-    ...{ loading: loading, missing: missing, error: error, },
+    loading: loading,
+    missing: missing,
+    error: error,
   };
 }
