@@ -59,14 +59,12 @@ export default function(options = {}) {
       store.loadContent(tag, cb);
     }
 
-    async.waterfall([
-      loadReference,
-      extractTag,
-      loadContent,
-    ], (err => {
+    const preLoadContent = async.seq(loadReference, extractTag, loadContent);
+
+    preLoadContent(err => {
       if (err) logger.warn('Error pre-loading content', err);
       cb(null, { getSite, listPages, getPage, getProject, listArticles, getArticle, });
-    }));
+    });
   }
 
   return {
