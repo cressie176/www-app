@@ -41,6 +41,16 @@
   color: var(--primary-colour);
 }
 
+.article-list .icon-list__item__link {
+  color: var(--text-colour);
+}
+
+.article-list .icon-list__item__link:hover {
+  color: var(--primary-colour);
+  text-decoration: none;
+}
+
+
 .article-list-controls__load-more-button {
   background-color: transparent;
   color: var(--primary-colour);

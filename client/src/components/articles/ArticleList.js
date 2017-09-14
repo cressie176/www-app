@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, } from 'react-router-dom';
+import IconListItem from '../common/IconListItem';
 
 import './ArticleList.css';
 
@@ -44,6 +45,23 @@ const ArticleList = ({ articles, loading, error, }) => (
                     <div className='col-md-5 no-min-height'>
                       <h2 className='article-list__article__title'><Link to={article.url}>{article.title}</Link></h2>
                       <div className='article-list__article__summary' dangerouslySetInnerHTML={{__html: article.summary,}} />
+                      <ul className='featured-article__details'>
+                        {
+                          article.event ? (
+                            <IconListItem id='event' icon='fa-group' text={article.event.text} url={article.event.url} />
+                          ) : null
+                        }
+                        {
+                          article.date ? (
+                            <IconListItem id='date' icon='fa-calendar' text={article.date.toLocaleString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', })} />
+                          ) : null
+                        }
+                        {
+                          article.location ? (
+                            <IconListItem id='location' icon='fa-location-arrow' text={article.location} />
+                          ) : null
+                        }
+                      </ul>
                     </div>
                   </div>
                 </div>

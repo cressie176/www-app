@@ -40,6 +40,18 @@ describe('ArticleList', () => {
               },
             },
             summary: '<p>Article 1 Summary</p>',
+            event: {
+              text: 'what',
+              url: 'https://what',
+            },
+            date: 'when',
+            location: 'where',
+            downloads: [
+              {
+                text: 'pdf',
+                url: 'https://pdf',
+              }
+            ]
           },
           {
             id: 2,
@@ -66,6 +78,15 @@ describe('ArticleList', () => {
     expect(article1.find('.article-list__article__thumbnail').prop('alt')).toBe('thumb-1');
     expect(article1.find('.article-list__article__thumbnail').prop('title')).toBe('Thumb-1');
     expect(article1.find('.article-list__article__summary').html()).toBe('<div class="article-list__article__summary"><p>Article 1 Summary</p></div>');
+
+    expect(article1.find('.featured-article__details IconListItem').length).toBe(3);
+    expect(article1.find('.featured-article__details IconListItem').at(0).prop('id')).toBe('event');
+    expect(article1.find('.featured-article__details IconListItem').at(0).prop('text')).toBe('what');
+    expect(article1.find('.featured-article__details IconListItem').at(0).prop('url')).toBe('https://what');
+    expect(article1.find('.featured-article__details IconListItem').at(1).prop('id')).toBe('date');
+    expect(article1.find('.featured-article__details IconListItem').at(1).prop('text')).toBe('when');
+    expect(article1.find('.featured-article__details IconListItem').at(2).prop('id')).toBe('location')
+    expect(article1.find('.featured-article__details IconListItem').at(2).prop('text')).toBe('where');
   });
 
 });

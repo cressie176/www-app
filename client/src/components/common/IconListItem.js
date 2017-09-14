@@ -4,18 +4,18 @@ import { Link, } from 'react-router-dom';
 
 import './IconListItem.css';
 
-const CustomLink = ({ url, className, children, }) => (
+const CustomLink = ({ url, className, children, noFollow }) => (
   url.startsWith('/') ? <Link className={className} to={url}>{children}</Link>
-                      : <a className={className} href={url}>{children}</a>
+                      : <a className={className} href={url} rel={noFollow ? 'nofollow': ''}>{children}</a>
 );
 
-const IconListItem = ({ icon, text, url, id, }) => {
+const IconListItem = ({ id, icon, text, url, noFollow = false }) => {
 
   if (icon && text && url) {
     return (
       <li className={`icon-list__item icon-list__item--${id}`}>
         <i className={`fa ${icon} icon-text`} aria-hidden='true'></i>
-        <CustomLink className={`icon-list__item__link`} url={url} >{text}</CustomLink>
+        <CustomLink className={`icon-list__item__link`} url={url} noFollow={noFollow}>{text}</CustomLink>
       </li>
     );
   } else if (icon && text) {
@@ -28,7 +28,7 @@ const IconListItem = ({ icon, text, url, id, }) => {
   } else if (icon && url) {
     return (
       <li className={`icon-list__item icon-list__item--${id}`}>
-        <CustomLink className={`icon-list__item__link`} url={url}>
+        <CustomLink className={`icon-list__item__link`} url={url} noFollow={noFollow}>
           <i className={`fa ${icon}`} aria-hidden='true'></i>
         </CustomLink>
       </li>
@@ -36,7 +36,7 @@ const IconListItem = ({ icon, text, url, id, }) => {
   } else if (text && url) {
     return (
       <li className={`icon-list__item icon-list__item--${id}`}>
-        <CustomLink className={`icon-list__item__link`} url={url}>{text}</CustomLink>
+        <CustomLink className={`icon-list__item__link`} url={url} noFollow={noFollow}>{text}</CustomLink>
       </li>
     );
   } else if (icon) {
@@ -56,10 +56,10 @@ const IconListItem = ({ icon, text, url, id, }) => {
 };
 
 IconListItem.propTypes = {
+  id: PropTypes.string,
   icon: PropTypes.string,
   text: PropTypes.string,
   url: PropTypes.string,
-  type: PropTypes.string,
   obfuscate: PropTypes.bool,
 };
 

@@ -145,15 +145,17 @@ describe('ArticlePage', () => {
     );
 
     expect(wrapper.is('.article-page')).toBe(true);
-    expect(wrapper.find('IconListItem[type="date"]').prop('text')).toBe('2017 M01 1, Sun');
-    expect(wrapper.find('IconListItem[type="event"]').prop('text')).toBe('meetup');
-    expect(wrapper.find('IconListItem[type="event"]').prop('url')).toBe('http://meetup');
-    expect(wrapper.find('IconListItem[type="location"]').prop('text')).toBe('London');
+    expect(wrapper.find('IconListItem[id="date"]').prop('text')).toBe('2017 M01 1, Sun');
+    expect(wrapper.find('IconListItem[id="event"]').prop('text')).toBe('meetup');
+    expect(wrapper.find('IconListItem[id="event"]').prop('url')).toBe('http://meetup');
+    expect(wrapper.find('IconListItem[id="event"]').prop('noFollow')).toBe(undefined);
+    expect(wrapper.find('IconListItem[id="location"]').prop('text')).toBe('London');
 
-    expect(wrapper.find('IconListItem[type="download"]').length).toBe(2);
-    expect(wrapper.find('IconListItem[type="download"]').first().prop('url')).toBe('http://download-1');
-    expect(wrapper.find('IconListItem[type="download"]').first().prop('text')).toBe('download-1');
-    expect(wrapper.find('IconListItem[type="download"]').first().prop('icon')).toBe('fa-download-1');
+    expect(wrapper.find('IconListItem[id="download"]').length).toBe(2);
+    expect(wrapper.find('IconListItem[id="download"]').first().prop('url')).toBe('http://download-1');
+    expect(wrapper.find('IconListItem[id="download"]').first().prop('text')).toBe('download-1');
+    expect(wrapper.find('IconListItem[id="download"]').first().prop('icon')).toBe('fa-download-1');
+    expect(wrapper.find('IconListItem[id="download"]').first().prop('noFollow')).toBe(true);
   });
 
 });

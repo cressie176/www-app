@@ -82,4 +82,28 @@ describe('IconListItem', () => {
     expect(wrapper.find('a').exists()).toBe(false);
   });
 
+  it('should follow links by default', () => {
+    const wrapper = mount(
+      <IconListItem icon='fa-github' text='GitHub' url='https://github' id='social' />
+    );
+
+    expect(wrapper.find('a').prop('rel')).toBe('');
+  });
+
+  it('should not follow links when explicit', () => {
+    const wrapper = mount(
+      <IconListItem icon='fa-github' text='GitHub' url='https://github' id='social' noFollow={false} />
+    );
+
+    expect(wrapper.find('a').prop('rel')).toBe('');
+  });
+
+  it('should not follow links when explicit', () => {
+    const wrapper = mount(
+      <IconListItem icon='fa-github' text='GitHub' url='https://github' id='social' noFollow={true} />
+    );
+
+    expect(wrapper.find('a').prop('rel')).toBe('nofollow');
+  });
+
 });

@@ -80,24 +80,24 @@ export class ArticlePage extends React.Component {
               <ul className='featured-article__details'>
                 {
                   this.props.article.event ? (
-                    <IconListItem icon='fa-group' text={this.props.article.event.text} url={this.props.article.event.url} type='event' />
+                    <IconListItem id='event' icon='fa-group' text={this.props.article.event.text} url={this.props.article.event.url} />
                   ) : null
                 }
                 {
                   this.props.article.date ? (
-                    <IconListItem icon='fa-calendar' text={this.props.article.date.toLocaleString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', })} type='date' />
+                    <IconListItem id='date' icon='fa-calendar' text={this.props.article.date.toLocaleString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', })} />
                   ) : null
                 }
                 {
                   this.props.article.location ? (
-                    <IconListItem icon='fa-location-arrow' text={this.props.article.location} type='location' />
+                    <IconListItem id='location' icon='fa-location-arrow' text={this.props.article.location} />
                   ) : null
                 }
                 {
                   this.props.article.downloads ? (
                     this.props.article.downloads.map(download => {
                       return (
-                        <IconListItem key={download.url} icon={download.icon} text={download.text} url={download.url} type='download' />
+                        <IconListItem key={download.url} id='download' icon={download.icon} text={download.text} url={download.url} noFollow={true} />
                       );
                     })
                   ) : null
