@@ -47,20 +47,25 @@ export default function(options = {}) {
       });
     }
 
+    function loadReference(cb) {
+      store.loadReference(cb);
+    }
+
+    function extractTag(reference, cb) {
+      cb(null, reference ? reference.tag : undefined);
+    }
+
+    function loadContent(tag, cb) {
+      store.loadContent(tag, cb);
+    }
+
     async.waterfall([
-      store.loadReference.bind(store),
-      (reference, cb) => cb(null, reference ? reference.tag : undefined),
-      store.loadContent.bind(store),
-    ], ((err, content) => {
+      loadReference,
+      extractTag,
+      loadContent,
+    ], (err => {
       if (err) logger.warn('Error pre-loading content', err);
-      cb(null, {
-        getSite,
-        listPages,
-        getPage,
-        getProject,
-        listArticles,
-        getArticle,
-      });
+      cb(null, { getSite, listPages, getPage, getProject, listArticles, getArticle, });
     }));
   }
 
