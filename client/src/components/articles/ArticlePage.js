@@ -54,7 +54,7 @@ export class ArticlePage extends React.Component {
     } else if (this.props.article.loading) {
       return (
         <div className='article-page'>
-          <PageIntro title='Loading…' />
+          <PageIntro icon='fa-spinner fa-spin' title='Loading…' />
         </div>
       );
     } else if (!this.props.article.id) {
