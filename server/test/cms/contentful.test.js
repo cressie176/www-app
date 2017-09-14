@@ -133,11 +133,11 @@ describe('Contentful', () => {
         expect(err).toBe(null);
         expect(content).toBeDefined();
         expect(content.imageSets).toBeDefined();
-        expect(content.imageSets['Yadda - The Other BDD Library'].id).toBe('Yadda - The Other BDD Library');
-        expect(content.imageSets['Yadda - The Other BDD Library'].thumbnail).toBeDefined();
-        expect(content.imageSets['Yadda - The Other BDD Library'].thumbnail.url).toBeDefined();
-        expect(content.imageSets['Yadda - The Other BDD Library'].thumbnail.title).toBe('Thumbnail of Yadda - The Other BDD Library');
-        expect(content.imageSets['Yadda - The Other BDD Library'].thumbnail.description).toBe('Man sitting among boxes labelled chai, jasmine, mocha, vows and cucumber');
+        expect(content.imageSets['Yadda - The Other JavaScript BDD Library'].id).toBe('Yadda - The Other JavaScript BDD Library');
+        expect(content.imageSets['Yadda - The Other JavaScript BDD Library'].thumbnail).toBeDefined();
+        expect(content.imageSets['Yadda - The Other JavaScript BDD Library'].thumbnail.url).toBeDefined();
+        expect(content.imageSets['Yadda - The Other JavaScript BDD Library'].thumbnail.title).toBe('Thumbnail of Yadda - The Other JavaScript BDD Library');
+        expect(content.imageSets['Yadda - The Other JavaScript BDD Library'].thumbnail.description).toBe('Man sitting among boxes labelled chai, jasmine, mocha, vows and cucumber');
         done();
       });
     });
@@ -273,17 +273,22 @@ describe('Contentful', () => {
       contentful.extract((err, content) => {
         expect(err).toBe(null);
         expect(content).toBeDefined();
-        expect(content.articles[1]).toBeDefined();
-        expect(content.articles[1].id).toBe(1);
-        expect(content.articles[1].title).toBe('Enterprise Grade Microservices');
-        expect(content.articles[1].url).toBe('/talks/enterprise-grade-microservices-1');
-        expect(content.articles[1].channel).toBe(content.pages['talks']);
-        expect(content.articles[1].tweetText).toBe('Enterprise%20Grade%20Microservices');
-        expect(content.articles[1].keywords).toContain('Microservices');
-        expect(content.articles[1].date.toISOString()).toBe('2016-11-23T19:00:00.000Z');
-        expect(content.articles[1].location).toBe('Budapest');
+        expect(content.articles['1']).toBeDefined();
+        expect(content.articles['1'].id).toBe(1);
+        expect(content.articles['1'].title).toBe('Enterprise Grade Microservices');
+        expect(content.articles['1'].url).toBe('/talks/enterprise-grade-microservices-1');
+        expect(content.articles['1'].channel).toBe(content.pages['talks']);
+        expect(content.articles['1'].tweetText).toBe('Enterprise%20Grade%20Microservices');
+        expect(content.articles['1'].keywords).toContain('Microservices');
+        expect(content.articles['1'].date.toISOString()).toBe('2016-11-23T19:00:00.000Z');
+        expect(content.articles['1'].location).toBe('Budapest');
+        expect(content.articles['1'].downloads).toBeDefined();
+        expect(content.articles['1'].downloads.length).toBe(0);
+        expect(content.articles['1'].images).toBe(content.imageSets['Enterprise Grade Microservices']);
 
-        expect(content.articles[1].images).toBe(content.imageSets['Enterprise Grade Microservices']);
+        expect(content.articles['3'].downloads).toBeDefined();
+        expect(content.articles['3'].downloads.length).toBe(1);
+        expect(content.articles['3'].downloads[0].url).toBeDefined();
 
         done();
       });

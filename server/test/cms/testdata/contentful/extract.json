@@ -2,7 +2,7 @@
   "sys": {
     "type": "Array"
   },
-  "total": 51,
+  "total": 52,
   "skip": 0,
   "limit": 1000,
   "items": [
@@ -15,39 +15,10 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "7DYkHbFZv28smw4QukeUkS",
+        "id": "Q4D5N4wyQ0wWO0AmwmCmE",
         "type": "Entry",
-        "createdAt": "2017-08-31T23:02:19.698Z",
-        "updatedAt": "2017-09-09T21:05:12.719Z",
-        "revision": 9,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "profile"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "profile",
-        "title": "Profile",
-        "body": "<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React, as demonstrated by the <a href='https://www.github.com/cressie176/www-app'>source code</a> for this site.</p>\n\n<p>Until recently I was operating in a dual role, firstly as CTO and co-founder of <a href='https://www.guidesmiths.com'>GuideSmiths</a>, a successful Node.js & microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients.<p>\n\n</p>Due to a desire to spend more time with my family, I have negotiated an exit from GuideSmiths, and accepted a senior, hands-on position with <a href=\"https://www.tes.com\">Tes Global Ltd</a>, which can be predominantly carried out from the vicinity of my home in Suffolk.</p>\n\n\n"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "XXrykuPGkUEeuSkMGug64",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:13:33.601Z",
-        "updatedAt": "2017-09-01T22:21:21.156Z",
+        "createdAt": "2017-08-31T21:13:14.690Z",
+        "updatedAt": "2017-09-01T22:21:04.244Z",
         "revision": 4,
         "contentType": {
           "sys": {
@@ -59,9 +30,9 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Twitter",
-        "icon": "fa-twitter",
-        "url": "https://www.twitter.com/cressie176"
+        "id": "Linkedin",
+        "icon": "fa-linkedin",
+        "url": "https://www.linkedin.com/in/stephencresswell/"
       }
     },
     {
@@ -73,29 +44,26 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "1HttWu08ByMIqYkMAwias0",
+        "id": "7iTlZrljgWkQ0gGaYywaUU",
         "type": "Entry",
-        "createdAt": "2017-09-09T20:48:49.727Z",
-        "updatedAt": "2017-09-09T20:48:49.727Z",
+        "createdAt": "2017-08-31T21:36:02.352Z",
+        "updatedAt": "2017-08-31T21:36:02.353Z",
         "revision": 1,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "imageSet"
+            "id": "project"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Orange Is Not The New Black",
-        "thumbnail": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "4J3pfkFcTYQq8giGaCwSC8"
-          }
-        }
+        "id": "rascal",
+        "title": "Rascal",
+        "summary": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
+        "body": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
+        "url": "https://www.github.com/guidesmiths/rascal"
       }
     },
     {
@@ -107,24 +75,71 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "5uraX28hqg2EU02umO8qog",
+        "id": "5l4bNL91LOeicAIAMayAAc",
         "type": "Entry",
-        "createdAt": "2017-09-02T19:21:46.999Z",
-        "updatedAt": "2017-09-02T20:06:03.151Z",
-        "revision": 2,
+        "createdAt": "2017-08-31T23:44:58.380Z",
+        "updatedAt": "2017-09-14T18:23:11.313Z",
+        "revision": 14,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "link"
+            "id": "article"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Duty Calls",
-        "text": "Duty Calls - xkcd",
-        "url": "https://xkcd.com/386/"
+        "id": 3,
+        "title": "Yadda - The Other JavaScript BDD Library",
+        "author": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1aRUx8rcSOWacCaUeOYcqQ"
+          }
+        },
+        "channel": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5AeYQEH78Ie4OCKWWkmI2o"
+          }
+        },
+        "tweetText": "Yadda - The Other JavaScript Library",
+        "keywords": [
+          "Node.js",
+          "Testing",
+          "BDD",
+          "Yadda"
+        ],
+        "summary": "<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they're not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe('some test function') with text. Chai and Expect don't even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this() at the cost of additional ceremony. Surely there's more to BDD…</p>",
+        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/FntIzfFlAGWGOQMcoUCOm/0e35e0cf4b64d89d719a67e1dce027a4/yadda-1024x768.jpg\" title=\"Yadda\" alt=\"Man sitting among boxes labelled as JavaScript BDD librarys\" />\n\n<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they're not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe('some test function') with text. Chai and Expect don't even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this().</p>\n\n<p>The only true BDD tool found for JavaScript is CucumberJS. The problem with CucumberJS is that the Gerkin syntax is restrictive. I don't want to be limited to starting my sentences with \"Given\", \"When\", \"Then\", \"And\" and \"But\". I want to express myself naturally.</p>\n\n<p>I also want a test runner that makes good decisions about which steps to run, that works in a browser and that lets me plugin different step libraries so that I can test multiple interfaces (e.g. rest and HTML) with the same scenarios. I even want a tool that has nothing to do with testing and just maps ordinary sentences to functions so I could use it in a rules engine or build script.</p>\n\n<p>That's why I wrote <a href=\\'http://www.github.com/acuminous/yadda\\'>Yadda</a> - the other JavaScript BDD library.</p>",
+        "date": "2016-04-26T19:00+01:00",
+        "event": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "77RHHsHuSsKIuCE4uew000"
+          }
+        },
+        "location": "London",
+        "images": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "3pVLW3iAYgcIUuUe6EUmCS"
+          }
+        },
+        "downloads": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1h5xhIsfS2AKUsoamMKYO8"
+            }
+          }
+        ]
       }
     },
     {
@@ -206,103 +221,29 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "13bFqt7AHAGemE2cuUsiqM",
+        "id": "3pVLW3iAYgcIUuUe6EUmCS",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:56:17.744Z",
-        "updatedAt": "2017-09-02T20:44:04.451Z",
-        "revision": 5,
+        "createdAt": "2017-08-31T23:43:25.836Z",
+        "updatedAt": "2017-09-14T18:24:18.768Z",
+        "revision": 9,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "channelPage"
+            "id": "imageSet"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "blog",
-        "title": "Blog",
-        "link": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5ovlS609fqOmywE2kcSAWg"
-          }
-        },
-        "introImage": {
+        "id": "Yadda - The Other JavaScript BDD Library",
+        "thumbnail": {
           "sys": {
             "type": "Link",
             "linkType": "Asset",
-            "id": "6oYIvHjLUsU0UISMyaOqq4"
-          }
-        },
-        "introText": "\"Someone is wrong on the internet\"",
-        "introLink": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5uraX28hqg2EU02umO8qog"
+            "id": "3ipHCk26VGWG8YQiiy4kss"
           }
         }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "Q4D5N4wyQ0wWO0AmwmCmE",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:13:14.690Z",
-        "updatedAt": "2017-09-01T22:21:04.244Z",
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Linkedin",
-        "icon": "fa-linkedin",
-        "url": "https://www.linkedin.com/in/stephencresswell/"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "2ksz0Er8busMsUc6YO4Go2",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:30:46.853Z",
-        "updatedAt": "2017-08-31T21:38:42.017Z",
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "See all software…",
-        "text": "See all software…",
-        "url": "/software"
       }
     },
     {
@@ -348,39 +289,24 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "fL9gaet7tCCegUiCOoUme",
+        "id": "2ksz0Er8busMsUc6YO4Go2",
         "type": "Entry",
-        "createdAt": "2017-08-31T22:03:21.056Z",
-        "updatedAt": "2017-08-31T22:03:21.056Z",
-        "revision": 1,
+        "createdAt": "2017-08-31T21:30:46.853Z",
+        "updatedAt": "2017-08-31T21:38:42.017Z",
+        "revision": 2,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "linkList"
+            "id": "link"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "contact",
-        "title": "Contact",
-        "links": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "23BQPn6dHWOu2AkK8ymS68"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "3e6i5bHPBYKyuG8YKu066E"
-            }
-          }
-        ]
+        "id": "See all software…",
+        "text": "See all software…",
+        "url": "/software"
       }
     },
     {
@@ -392,85 +318,43 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "7iTlZrljgWkQ0gGaYywaUU",
+        "id": "13bFqt7AHAGemE2cuUsiqM",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:36:02.352Z",
-        "updatedAt": "2017-08-31T21:36:02.353Z",
-        "revision": 1,
+        "createdAt": "2017-08-31T21:56:17.744Z",
+        "updatedAt": "2017-09-02T20:44:04.451Z",
+        "revision": 5,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "project"
+            "id": "channelPage"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "rascal",
-        "title": "Rascal",
-        "summary": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
-        "body": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
-        "url": "https://www.github.com/guidesmiths/rascal"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "VGOaVS3FySAaIuKs2KWg6",
-        "type": "Entry",
-        "createdAt": "2017-09-08T17:28:22.022Z",
-        "updatedAt": "2017-09-09T21:16:28.770Z",
-        "revision": 47,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "article"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": 1002,
-        "title": "Await - I'll See You In JavaScript Hell!",
-        "author": {
+        "id": "blog",
+        "title": "Blog",
+        "link": {
           "sys": {
             "type": "Link",
             "linkType": "Entry",
-            "id": "1aRUx8rcSOWacCaUeOYcqQ"
+            "id": "5ovlS609fqOmywE2kcSAWg"
           }
         },
-        "channel": {
+        "introImage": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "6oYIvHjLUsU0UISMyaOqq4"
+          }
+        },
+        "introText": "\"Someone is wrong on the internet\"",
+        "introLink": {
           "sys": {
             "type": "Link",
             "linkType": "Entry",
-            "id": "13bFqt7AHAGemE2cuUsiqM"
-          }
-        },
-        "tweetText": "Await - I'll See You In JavaScript Hell!",
-        "keywords": [
-          "Node.js",
-          "JavaScript",
-          "Promises",
-          "Callback",
-          "Await",
-          "Software Craftsmanship"
-        ],
-        "summary": "<p>\nThe JavaScript callback vs promises debate is mostly over. Promises won, albeit by the back door of await. I for one welcome our new asynchronous overlords, but before we rush to our new programming nirvana let's take some time to look at the fallacy of promises and why they didn't save our codebases from nested damnation…\n</p>",
-        "body": "<p>\nThe JavaScript callback vs promises debate is mostly over. Promises won, albeit by the back door of await. I for one welcome our new asynchronous overlords, but before we rush to our new programming nirvana let's take some time to look at the fallacy of promises and why they didn't save our codebases from nested damnation. The following is some code which could justifiably be accused of callback hell.\n\n<code>function welcomeToHell(cb) {\n  foo(err => {\n    if (err) return cb(err)\n    bar(err => {\n      if (err) return cb(err)\n      baz(err => {\n        if (err) return cb(err)\n        cb()\n      })\n    })\n  })\n}\n</code>\n<p>\nThe only reason the callback based code might look like this, is because its author did a shoddy job. By using a library like <a href=\"https://www.npmjs.com/package/async\">async</a> things can be much improved. That aside, if the code had been written with promises it might look as follows become…\n</p>\n<code>function salvationIsHere() {\n  return Promise.resolve()\n    .then(foo)\n    .then(bar)\n    .then(baz)\n}\n</code>\n<p>\nIf all promises code ever written looked like the example above I would stop now. It doesn't. Promises are simple when code follows a linear sequence or can run in parallel, but when you add conditions or iteration, just like with callbacks it become harder to keep them simple. As a result most of the promise based code I come across looks nothing like the above. Instead it looks like this…\n</p>\n<code>function welcomeBackToHell(email) {\n  return getUserByEmail(email)\n    .then(user => getUserRoles(user.id)\n      .then(roles => {\n        if (roles.indexOf('publisher') < 0) return { user, roles }\n        return getUserArticles(user.id)\n          .then(articles => ({ user, roles, articles }))\n      })\n  )\n}\n</code>\n<p>\nAll we've done is traded callback hell for promise hell. Now my point isn't that with appropriate care promisified code can't read well. <em>It can</em>. But this is equally true with <a href=\"https://github.com/cressie176/www-app/blob/master/server/lib/components/cms/cms.js\">callbacks</a>, providing you take the time to write functions that:\n</p>\n<ol>\n  <li>Have meaningful names</li>\n  <li>Are small (I aim for &lt;=4 lines)</li>\n  <li>Do one thing well</li>\n  <li>Have a single level of abstraction</li>\n  <li>Minimise parameters (I aim for &lt;= 2 excluding cb)</li>\n  <li>Avoid booleans</li>\n  <li>Minimise conditional logic (guard conditions permitted)</li>  \n</ol>\n<p>\nand modules that:\n</p>\n<ol>\n  <li>Have meaningful names</li>\n  <li>Have a single responsibility</li>\n  <li>Encapsulate data and behaviour</li>\n</ol>\n<p>\nTo write coherent and cohesive code you have to understand and care about the principles of software craftsmanship. This is thousands of times more important than whether you use callbacks, promises or await. We seem to have forgotten, but lets try to remember before we damn ourselves to another level of asynchronous hell with await.\n</p>",
-        "date": "2017-08-26T19:00+01:00",
-        "images": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "4gZuk9FDHWgcMGiwKwAuUc"
+            "id": "5uraX28hqg2EU02umO8qog"
           }
         }
       }
@@ -545,11 +429,55 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "5b5pXtgGjSiCcKwCieE4UC",
+        "id": "fL9gaet7tCCegUiCOoUme",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:10:04.513Z",
-        "updatedAt": "2017-08-31T21:39:11.321Z",
-        "revision": 3,
+        "createdAt": "2017-08-31T22:03:21.056Z",
+        "updatedAt": "2017-08-31T22:03:21.056Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "linkList"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "contact",
+        "title": "Contact",
+        "links": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "23BQPn6dHWOu2AkK8ymS68"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3e6i5bHPBYKyuG8YKu066E"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "XXrykuPGkUEeuSkMGug64",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:13:33.601Z",
+        "updatedAt": "2017-09-01T22:21:21.156Z",
+        "revision": 4,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -560,9 +488,9 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Terms & Conditions",
-        "text": "Terms & Conditions",
-        "url": "/legal/terms-and-conditions"
+        "id": "Twitter",
+        "icon": "fa-twitter",
+        "url": "https://www.twitter.com/cressie176"
       }
     },
     {
@@ -592,6 +520,240 @@
         "id": "See all talks…",
         "text": "See all talks…",
         "url": "/talks"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "5b5pXtgGjSiCcKwCieE4UC",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:10:04.513Z",
+        "updatedAt": "2017-08-31T21:39:11.321Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Terms & Conditions",
+        "text": "Terms & Conditions",
+        "url": "/legal/terms-and-conditions"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3w2lWUvmhGi8K0WS4mksYk",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:12:01.437Z",
+        "updatedAt": "2017-08-31T21:40:12.384Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Privacy Policy",
+        "text": "Privacy Policy",
+        "url": "/legal/privacy-policy"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "72cEhCrZAIOY0wmI64MMIm",
+        "type": "Entry",
+        "createdAt": "2017-08-31T22:52:08.237Z",
+        "updatedAt": "2017-09-01T14:04:34.786Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "featuredArticles"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "talks",
+        "title": "Upcoming & Recent Talks",
+        "icon": "fa-microphone",
+        "items": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2mGqla8uE8ukUSUwIY8swS"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3COc9WAIMMY0QKkaycg0WQ"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5l4bNL91LOeicAIAMayAAc"
+            }
+          }
+        ],
+        "link": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "Ho8vv9fNWUgeiyYggOGWo"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "74hFY4cLKggKiGuyy2iqK0",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:07:43.485Z",
+        "updatedAt": "2017-09-06T21:52:24.531Z",
+        "revision": 7,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Talks",
+        "text": "Talks",
+        "icon": "fa-microphone",
+        "url": "/talks"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "7DYkHbFZv28smw4QukeUkS",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:02:19.698Z",
+        "updatedAt": "2017-09-09T21:05:12.719Z",
+        "revision": 9,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "profile"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "profile",
+        "title": "Profile",
+        "body": "<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React, as demonstrated by the <a href='https://www.github.com/cressie176/www-app'>source code</a> for this site.</p>\n\n<p>Until recently I was operating in a dual role, firstly as CTO and co-founder of <a href='https://www.guidesmiths.com'>GuideSmiths</a>, a successful Node.js & microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients.<p>\n\n</p>Due to a desire to spend more time with my family, I have negotiated an exit from GuideSmiths, and accepted a senior, hands-on position with <a href=\"https://www.tes.com\">Tes Global Ltd</a>, which can be predominantly carried out from the vicinity of my home in Suffolk.</p>\n\n\n"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "1vB10lNZBSiiKsai0KiCIe",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:12:39.858Z",
+        "updatedAt": "2017-09-01T22:20:56.371Z",
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "GitHub",
+        "icon": "fa-github",
+        "url": "https://www.github.com/cressie176/"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3yKsrbq2XSgU0mooEyO4oo",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:35:07.184Z",
+        "updatedAt": "2017-08-31T23:35:07.184Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Node.js Meetup - Divorcing Microservices With Rascal",
+        "text": "Node.js Meetup",
+        "url": "https://www.meetup.com/Node-js-Meetup-London/events/231560165/"
       }
     },
     {
@@ -668,81 +830,43 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "3yKsrbq2XSgU0mooEyO4oo",
+        "id": "5AeYQEH78Ie4OCKWWkmI2o",
         "type": "Entry",
-        "createdAt": "2017-08-31T23:35:07.184Z",
-        "updatedAt": "2017-08-31T23:35:07.184Z",
-        "revision": 1,
+        "createdAt": "2017-08-31T21:56:36.596Z",
+        "updatedAt": "2017-09-13T05:36:34.017Z",
+        "revision": 5,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Node.js Meetup - Divorcing Microservices With Rascal",
-        "text": "Node.js Meetup",
-        "url": "https://www.meetup.com/Node-js-Meetup-London/events/231560165/"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "72cEhCrZAIOY0wmI64MMIm",
-        "type": "Entry",
-        "createdAt": "2017-08-31T22:52:08.237Z",
-        "updatedAt": "2017-09-01T14:04:34.786Z",
-        "revision": 3,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "featuredArticles"
+            "id": "channelPage"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
         "id": "talks",
-        "title": "Upcoming & Recent Talks",
-        "icon": "fa-microphone",
-        "items": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "2mGqla8uE8ukUSUwIY8swS"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "3COc9WAIMMY0QKkaycg0WQ"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "5l4bNL91LOeicAIAMayAAc"
-            }
-          }
-        ],
+        "title": "Talks",
         "link": {
           "sys": {
             "type": "Link",
             "linkType": "Entry",
-            "id": "Ho8vv9fNWUgeiyYggOGWo"
+            "id": "74hFY4cLKggKiGuyy2iqK0"
+          }
+        },
+        "introImage": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2GQFdGSiTCsiOOCcwu6Yge"
+          }
+        },
+        "introText": "\"How did that gobshite get on the internet?\"",
+        "introLink": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "3iVaxd7WKsU2QyAKoSoAmS"
           }
         }
       }
@@ -756,83 +880,28 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "3w2lWUvmhGi8K0WS4mksYk",
+        "id": "1aRUx8rcSOWacCaUeOYcqQ",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:12:01.437Z",
-        "updatedAt": "2017-08-31T21:40:12.384Z",
-        "revision": 3,
+        "createdAt": "2017-09-09T13:55:50.582Z",
+        "updatedAt": "2017-09-09T14:05:52.931Z",
+        "revision": 2,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "link"
+            "id": "person"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Privacy Policy",
-        "text": "Privacy Policy",
-        "url": "/legal/privacy-policy"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "1vB10lNZBSiiKsai0KiCIe",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:12:39.858Z",
-        "updatedAt": "2017-09-01T22:20:56.371Z",
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "GitHub",
-        "icon": "fa-github",
-        "url": "https://www.github.com/cressie176/"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "74hFY4cLKggKiGuyy2iqK0",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:07:43.485Z",
-        "updatedAt": "2017-09-06T21:52:24.531Z",
-        "revision": 7,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Talks",
-        "text": "Talks",
-        "icon": "fa-microphone",
-        "url": "/talks"
+        "id": "scresswell",
+        "displayName": "Stephen Cresswell",
+        "firstName": "Stephen",
+        "lastName": "Cresswell",
+        "jobTitle": "Moderator",
+        "email": "email@stephen-cresswell.net",
+        "mobile": "+44 (0)7814 033321"
       }
     },
     {
@@ -878,28 +947,126 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "1aRUx8rcSOWacCaUeOYcqQ",
+        "id": "BiHMILP0e4GougCcgss4G",
         "type": "Entry",
-        "createdAt": "2017-09-09T13:55:50.582Z",
-        "updatedAt": "2017-09-09T14:05:52.931Z",
+        "createdAt": "2017-08-31T22:53:47.975Z",
+        "updatedAt": "2017-09-01T14:04:22.294Z",
         "revision": 2,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "person"
+            "id": "featuredSoftware"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "scresswell",
-        "displayName": "Stephen Cresswell",
-        "firstName": "Stephen",
-        "lastName": "Cresswell",
-        "jobTitle": "Moderator",
-        "email": "email@stephen-cresswell.net",
-        "mobile": "+44 (0)7814 033321"
+        "id": "software",
+        "title": "Software",
+        "icon": "fa-laptop",
+        "items": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2Z335f4s5G4M880UCeUe0W"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7iTlZrljgWkQ0gGaYywaUU"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3dmRj7SUUg2Mei2eWoa0ok"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "BeyYWLb8AgOUsYMciKG4"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6NXtw4v3GMCgoaE4IKk6a2"
+            }
+          }
+        ],
+        "link": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "2ksz0Er8busMsUc6YO4Go2"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "VXGQK0uZUIueSUIuowugE",
+        "type": "Entry",
+        "createdAt": "2017-09-09T20:51:28.599Z",
+        "updatedAt": "2017-09-10T22:54:24.777Z",
+        "revision": 14,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "article"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": 1001,
+        "title": "When Orange Is Not The New Black",
+        "author": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1aRUx8rcSOWacCaUeOYcqQ"
+          }
+        },
+        "channel": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "13bFqt7AHAGemE2cuUsiqM"
+          }
+        },
+        "tweetText": "When Orange Isn't The New Black",
+        "keywords": [
+          "Node.js",
+          "Software",
+          "JavaScript"
+        ],
+        "summary": "<p>\nFrameworks come and go so quickly that with some notable exceptions any libraries you depend on today, could be superseded tomorrow. There's a cost to adoption, but often a larger cost to migrate away. Jump on the band wagon too soon and you get the pain while a project is unstable, leave it too late and supporting community may already moving on.\n</p>\n<p>\nHow do you tell when orange really is the new black, rather than being the emperors new clothes?\n</p>",
+        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/8deT28SVQ4IqIcW8cI0i8/e6f3ef6fcf6f9bf92caa091ad13e0779/orange-is-the-new-black-1024x414.jpg\" title=\"Orange Is Not The New Black\" alt=\"Orange Is Not The New Black\" />\n<p>\nThe pace of software development is faster than ever before. Languages, libraries and applications emerge for their 15 minutes of fame, before being relegated to the C-List just as quickly. But at what cost?\n</p>\n<p>\nI remember when I first discovered open source. Adding a new library to a software project felt like adding value, with the added bonus that it was code I didn't have to write, test or maintain. But was there always a significant and worthwhile benefit?\n</p>\n<p>\nI remember a colleage complaining about the Spring framework, and that it was too much for him to learn. At a time when the most popular alternatives were <a href=\"https://struts.apache.org/\">Struts<a>, <a href=\"http://tapestry.apache.org/\">Tapestry</a>, <a href=\"http://www.oracle.com/technetwork/java/javaee/javaserverfaces-139869.html\">JSF</a> and his preferred option of vanilla <a href=\"https://docs.oracle.com/cd/E17904_01/web.1111/e13712/basics.htm\">Servlets and JSP</a> I didn't have much sympathy for him. Why should his reluctance to pick up new technology limit everyone elses productivity? Surely learning new tools is a key part of of the job?\n</p>\n<p>\nNow I often find myself facing a similar situation, but from the other side of the argument. I'm no ludite. I was an early adopter of docker, with a <a href=\"https://github.com/moby/moby/commit/fe727e2a87fa086d728664c396fd44f4be6d6afd\">commit</a> from 2013 to prove it. I have maintain several moderately popular Node.js packages, and spent the last year writing microservices in Go. Despite frontend devleopment not being a core part of my job, I am comfortable enough with React to build websites like this one. So what's my problem? In fact I have thre.\n</p>\n<p>\nMy first problem is that frameworks come and go so quickly that with some noteable exceptions any libraries you depend on today, could be superseeded tomorrow. There's a cost to adoption, but often a larger cost to migrate away. Jump on the band wagon too soon and you get the pain while a project is unstable, leave it too late and supporting community may already moving on. \n</p>\n<p>\nMy second problem is that the new library or tool may not bring enough value to justitfy its cost, and that the cost is not predicatable. At a minimum you increase the learning curve for other developers. If the library contains bugs and is unmaintained, the costs go up. The <a href=\"https://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/\">lpad debarcle</a> and <a href=\"https://www.theregister.co.uk/2017/08/02/typosquatting_npm/\">typosquatting attacks</a> are two examples of when adding libraries incurred a major cost. Providing the library is genuinely useful it's usually worth the risk, but why take the risk by introducing a library which is used primarily for lily guilding?\n</p>\n<p>\nMy third problem is that the new library may be poorly designed but that the developers introducing them haven't been bitten enough times in the past to be wary. Very little in the software world is new. I drank both <a href=\"http://ant.apache.org/\">ant</a> and <a href=\"http://maven.apache.org/\">maven</a> which taught me to be suspicious of tools like <a href=\"https://puppet.com/\">puppet</a> which are configured by expressing dependencies or inheritance. \n</p>\n<p>\nLet's consider three examples, <a href=\"https://www.npmjs.com/package/hapi\">hapi</a>, <a href=\"https://www.npmjs.com/package/yarn\">yarn</a> and <a href=\"https://www.npmjs.com/package/jest\">jests</a>. I have deliberately picked both these libraries because they are from large organisations, have a significant user base and received a lot of positive publicitly. Several teams I work with have moved, or are considering moving to them.\n</p>\n<p>\nMy preferred http server has always been <a href=\"https://www.npmjs.com/package/express\">express</a>, for the simple reason that it doesn't try to be in charge. Provided my handlers conform to a few trivial middleware conventions I'm good. A few years ago I was leading a team that wanted to move to <a href=\"https://www.npmjs.com/package/hapi\">hapi</a>. A pair of developers evaluated it, recommended it and so we started using it in all new services. It was a huge mistake. Hapi takes the opposite approach to express. It wants to be boss, exerting a strong influencing over how your code and tests are written. Discontent with hapi grew over the the next few months and the team switched back to express. Four years on there are still a handful of hapi services running that nobody wants to touch.\n</p>\n<p>\nWhen yarn was released it was well received. It was faster than npm and did a better job of locking transitive dependencies. With the release of npm 5 most of yarn's advantages have been negated. In order to support yarn, the organisation I work for had to make code changes to their build pipeline. At least some of those same teams are now considering moving back. Yarn worked well and continues to be improved, but it was always likely that npm would updated. Would it have been better to wait?\n</p>\n<p>\nThe new unit testing framework on the block is <a href=\"https://www.npmjs.com/package/jest\">Jest</a>. There are a whole series of blog posts from organisations who have successfully migrated from mocha to jest and report reaping the benefits. When I look at Jest I see everything I want to avoid in a unit test framework.\n</p>\n\n<ul>\n  <li>It wants to run your tests for you rather than making programmatic invocation a first class citizen, putting you at the mercy of its file globbing.</li>\n  <li>It uses a global \"expect\" function which doesn't differentiate whether it's being called from a previously executed test or the current one, resulting in difficult to diagnose failures.</li>\n  <li>It uses a fluid assertion api leading to tests that are higher in ceromony, lower in essence. Jest's expectations are similar, but not identical to <a href=\"https://www.npmjs.com/package/expect.js\">expect.js</a> and <a href=\"https://www.npmjs.com/package/chai\">chai</a> so if you're using either of those libraries elsewhere in your organisation developers working multiple projects will always be have to be context switching.</li>\n  <li>Through its support for mocking it encourages testing interactions rather than side effects, which in turn encourages brittle and opaque test.</li>\n  <li>Through its support for snapshots it encourages brittle, whole document comparision tests.</li>\n</ul>\n\nWithout making all of the above mistakes with java and groovy based testing frameworks such as hamcrest, \n\n<p>\nThe irony of my last example is that I use jest for testing this site. Since it is configured by default with <a href=\"https://github.com/facebookincubator/create-react-app\">create-react-app</a>. While not reported in those previously mentioned blog posts, I had plenty of teething problems with Jest, exclusive tests don't work, the configuration has been neutered, the global expect leaked despite what the documentation claims, it wasn't possible to exclude watch paths until recently and the cryptic error messages such as the following caused by a missing test data directory makes fixing tests a nightmare.\n\n<code>10/09/2017, 20:57:14 PASS server/test/cms/cache.test.js\n10/09/2017, 20:57:14 Cache Cache ✓ should load uncached content (7ms)\n10/09/2017, 20:57:14 ✓ should return cached content (3ms)\n10/09/2017, 20:57:14 ✓ should return undefined when missing content (4ms)\n10/09/2017, 20:57:14 ✓ should eject items from the cache when max size exceeded (5ms)\n10/09/2017, 20:57:14 ✓ should save content (3ms)\n10/09/2017, 20:57:14 ✓ should optimistically cache content on save (3ms)\n10/09/2017, 20:57:14\n10/09/2017, 20:57:15/opt/app/node_modules/jest-jasmine2/build/jasmine/Env.js:511 currentRunnable().addExpectationResult(false, { ^ TypeError: Cannot read property 'addExpectationResult' of undefined at Env.fail (/opt/app/node_modules/jest-jasmine2/build/jasmine/Env.js:511:24) at next (/opt/app/node_modules/jest-jasmine2/build/queue_runner.js:37:24) at /opt/app/node_modules/async/dist/async.js:3861:9 at /opt/app/node_modules/async/dist/async.js:421:16 at iterateeCallback (/opt/app/node_modules/async/dist/async.js:924:17) at /opt/app/node_modules/async/dist/async.js:906:16 at /opt/app/node_modules/async/dist/async.js:3858:13 at /opt/app/node_modules/async/dist/async.js:421:16 at iteratorCallback (/opt/app/node_modules/async/dist/async.js:996:13) at /opt/app/node_modules/async/dist/async.js:906:16\n</code>\n\nDespite my reservations I've decided to stick with it. Given the support I'm sure these teething problems will get resolved and the react eco-system is sufficiently complex for me to want to stay on-piste as it were. I have a suspicion that it's support for parallel testing will be worth the trouble, the interactive test runner is a joy and if other teams are going to be adopting it, I might as well get on the band wagon.\n</p>\n<p>\nSo how do you tell when orange really is the new black, rather than being a case of the emperors new clothes? The answer is to be suspicious of any library that:\n</p>\n<ul>\n  <li>has a steep and/or prolonged learning curve</li>\n  <li>has a similar library already being used in the organisation</li> \n  <li>is accompanied by an unusual amount of hype</li>  \n  <li>significantly changes the design of your appliation</li>\n  <li>is accompanied by its own testing tools (a well designed library shouldn't need one)</li>\n  <li>wants to \"start\" your application</li>\n  <li>is primarily used for lily gilding</li>\n  <li>has poor documentation and who's issues go unanswered</li>  \n</ul>\n</p>\n<p>\n\nDo use libraries\n\nThat is unless the library in question written by me. In which case you should definitely use it without thinking twice.\n</p>\n",
+        "date": "2017-08-19T19:00+01:00",
+        "images": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1HttWu08ByMIqYkMAwias0"
+          }
+        }
       }
     },
     {
@@ -999,124 +1166,29 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "VXGQK0uZUIueSUIuowugE",
+        "id": "1h5xhIsfS2AKUsoamMKYO8",
         "type": "Entry",
-        "createdAt": "2017-09-09T20:51:28.599Z",
-        "updatedAt": "2017-09-10T22:54:24.777Z",
-        "revision": 14,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "article"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": 1001,
-        "title": "When Orange Is Not The New Black",
-        "author": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "1aRUx8rcSOWacCaUeOYcqQ"
-          }
-        },
-        "channel": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "13bFqt7AHAGemE2cuUsiqM"
-          }
-        },
-        "tweetText": "When Orange Isn't The New Black",
-        "keywords": [
-          "Node.js",
-          "Software",
-          "JavaScript"
-        ],
-        "summary": "<p>\nFrameworks come and go so quickly that with some notable exceptions any libraries you depend on today, could be superseded tomorrow. There's a cost to adoption, but often a larger cost to migrate away. Jump on the band wagon too soon and you get the pain while a project is unstable, leave it too late and supporting community may already moving on.\n</p>\n<p>\nHow do you tell when orange really is the new black, rather than being the emperors new clothes?\n</p>",
-        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/8deT28SVQ4IqIcW8cI0i8/e6f3ef6fcf6f9bf92caa091ad13e0779/orange-is-the-new-black-1024x414.jpg\" title=\"Orange Is Not The New Black\" alt=\"Orange Is Not The New Black\" />\n<p>\nThe pace of software development is faster than ever before. Languages, libraries and applications emerge for their 15 minutes of fame, before being relegated to the C-List just as quickly. But at what cost?\n</p>\n<p>\nI remember when I first discovered open source. Adding a new library to a software project felt like adding value, with the added bonus that it was code I didn't have to write, test or maintain. But was there always a significant and worthwhile benefit?\n</p>\n<p>\nI remember a colleage complaining about the Spring framework, and that it was too much for him to learn. At a time when the most popular alternatives were <a href=\"https://struts.apache.org/\">Struts<a>, <a href=\"http://tapestry.apache.org/\">Tapestry</a>, <a href=\"http://www.oracle.com/technetwork/java/javaee/javaserverfaces-139869.html\">JSF</a> and his preferred option of vanilla <a href=\"https://docs.oracle.com/cd/E17904_01/web.1111/e13712/basics.htm\">Servlets and JSP</a> I didn't have much sympathy for him. Why should his reluctance to pick up new technology limit everyone elses productivity? Surely learning new tools is a key part of of the job?\n</p>\n<p>\nNow I often find myself facing a similar situation, but from the other side of the argument. I'm no ludite. I was an early adopter of docker, with a <a href=\"https://github.com/moby/moby/commit/fe727e2a87fa086d728664c396fd44f4be6d6afd\">commit</a> from 2013 to prove it. I have maintain several moderately popular Node.js packages, and spent the last year writing microservices in Go. Despite frontend devleopment not being a core part of my job, I am comfortable enough with React to build websites like this one. So what's my problem? In fact I have thre.\n</p>\n<p>\nMy first problem is that frameworks come and go so quickly that with some noteable exceptions any libraries you depend on today, could be superseeded tomorrow. There's a cost to adoption, but often a larger cost to migrate away. Jump on the band wagon too soon and you get the pain while a project is unstable, leave it too late and supporting community may already moving on. \n</p>\n<p>\nMy second problem is that the new library or tool may not bring enough value to justitfy its cost, and that the cost is not predicatable. At a minimum you increase the learning curve for other developers. If the library contains bugs and is unmaintained, the costs go up. The <a href=\"https://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/\">lpad debarcle</a> and <a href=\"https://www.theregister.co.uk/2017/08/02/typosquatting_npm/\">typosquatting attacks</a> are two examples of when adding libraries incurred a major cost. Providing the library is genuinely useful it's usually worth the risk, but why take the risk by introducing a library which is used primarily for lily guilding?\n</p>\n<p>\nMy third problem is that the new library may be poorly designed but that the developers introducing them haven't been bitten enough times in the past to be wary. Very little in the software world is new. I drank both <a href=\"http://ant.apache.org/\">ant</a> and <a href=\"http://maven.apache.org/\">maven</a> which taught me to be suspicious of tools like <a href=\"https://puppet.com/\">puppet</a> which are configured by expressing dependencies or inheritance. \n</p>\n<p>\nLet's consider three examples, <a href=\"https://www.npmjs.com/package/hapi\">hapi</a>, <a href=\"https://www.npmjs.com/package/yarn\">yarn</a> and <a href=\"https://www.npmjs.com/package/jest\">jests</a>. I have deliberately picked both these libraries because they are from large organisations, have a significant user base and received a lot of positive publicitly. Several teams I work with have moved, or are considering moving to them.\n</p>\n<p>\nMy preferred http server has always been <a href=\"https://www.npmjs.com/package/express\">express</a>, for the simple reason that it doesn't try to be in charge. Provided my handlers conform to a few trivial middleware conventions I'm good. A few years ago I was leading a team that wanted to move to <a href=\"https://www.npmjs.com/package/hapi\">hapi</a>. A pair of developers evaluated it, recommended it and so we started using it in all new services. It was a huge mistake. Hapi takes the opposite approach to express. It wants to be boss, exerting a strong influencing over how your code and tests are written. Discontent with hapi grew over the the next few months and the team switched back to express. Four years on there are still a handful of hapi services running that nobody wants to touch.\n</p>\n<p>\nWhen yarn was released it was well received. It was faster than npm and did a better job of locking transitive dependencies. With the release of npm 5 most of yarn's advantages have been negated. In order to support yarn, the organisation I work for had to make code changes to their build pipeline. At least some of those same teams are now considering moving back. Yarn worked well and continues to be improved, but it was always likely that npm would updated. Would it have been better to wait?\n</p>\n<p>\nThe new unit testing framework on the block is <a href=\"https://www.npmjs.com/package/jest\">Jest</a>. There are a whole series of blog posts from organisations who have successfully migrated from mocha to jest and report reaping the benefits. When I look at Jest I see everything I want to avoid in a unit test framework.\n</p>\n\n<ul>\n  <li>It wants to run your tests for you rather than making programmatic invocation a first class citizen, putting you at the mercy of its file globbing.</li>\n  <li>It uses a global \"expect\" function which doesn't differentiate whether it's being called from a previously executed test or the current one, resulting in difficult to diagnose failures.</li>\n  <li>It uses a fluid assertion api leading to tests that are higher in ceromony, lower in essence. Jest's expectations are similar, but not identical to <a href=\"https://www.npmjs.com/package/expect.js\">expect.js</a> and <a href=\"https://www.npmjs.com/package/chai\">chai</a> so if you're using either of those libraries elsewhere in your organisation developers working multiple projects will always be have to be context switching.</li>\n  <li>Through its support for mocking it encourages testing interactions rather than side effects, which in turn encourages brittle and opaque test.</li>\n  <li>Through its support for snapshots it encourages brittle, whole document comparision tests.</li>\n</ul>\n\nWithout making all of the above mistakes with java and groovy based testing frameworks such as hamcrest, \n\n<p>\nThe irony of my last example is that I use jest for testing this site. Since it is configured by default with <a href=\"https://github.com/facebookincubator/create-react-app\">create-react-app</a>. While not reported in those previously mentioned blog posts, I had plenty of teething problems with Jest, exclusive tests don't work, the configuration has been neutered, the global expect leaked despite what the documentation claims, it wasn't possible to exclude watch paths until recently and the cryptic error messages such as the following caused by a missing test data directory makes fixing tests a nightmare.\n\n<code>10/09/2017, 20:57:14 PASS server/test/cms/cache.test.js\n10/09/2017, 20:57:14 Cache Cache ✓ should load uncached content (7ms)\n10/09/2017, 20:57:14 ✓ should return cached content (3ms)\n10/09/2017, 20:57:14 ✓ should return undefined when missing content (4ms)\n10/09/2017, 20:57:14 ✓ should eject items from the cache when max size exceeded (5ms)\n10/09/2017, 20:57:14 ✓ should save content (3ms)\n10/09/2017, 20:57:14 ✓ should optimistically cache content on save (3ms)\n10/09/2017, 20:57:14\n10/09/2017, 20:57:15/opt/app/node_modules/jest-jasmine2/build/jasmine/Env.js:511 currentRunnable().addExpectationResult(false, { ^ TypeError: Cannot read property 'addExpectationResult' of undefined at Env.fail (/opt/app/node_modules/jest-jasmine2/build/jasmine/Env.js:511:24) at next (/opt/app/node_modules/jest-jasmine2/build/queue_runner.js:37:24) at /opt/app/node_modules/async/dist/async.js:3861:9 at /opt/app/node_modules/async/dist/async.js:421:16 at iterateeCallback (/opt/app/node_modules/async/dist/async.js:924:17) at /opt/app/node_modules/async/dist/async.js:906:16 at /opt/app/node_modules/async/dist/async.js:3858:13 at /opt/app/node_modules/async/dist/async.js:421:16 at iteratorCallback (/opt/app/node_modules/async/dist/async.js:996:13) at /opt/app/node_modules/async/dist/async.js:906:16\n</code>\n\nDespite my reservations I've decided to stick with it. Given the support I'm sure these teething problems will get resolved and the react eco-system is sufficiently complex for me to want to stay on-piste as it were. I have a suspicion that it's support for parallel testing will be worth the trouble, the interactive test runner is a joy and if other teams are going to be adopting it, I might as well get on the band wagon.\n</p>\n<p>\nSo how do you tell when orange really is the new black, rather than being a case of the emperors new clothes? The answer is to be suspicious of any library that:\n</p>\n<ul>\n  <li>has a steep and/or prolonged learning curve</li>\n  <li>has a similar library already being used in the organisation</li> \n  <li>is accompanied by an unusual amount of hype</li>  \n  <li>significantly changes the design of your appliation</li>\n  <li>is accompanied by its own testing tools (a well designed library shouldn't need one)</li>\n  <li>wants to \"start\" your application</li>\n  <li>is primarily used for lily gilding</li>\n  <li>has poor documentation and who's issues go unanswered</li>  \n</ul>\n</p>\n<p>\n\nDo use libraries\n\nThat is unless the library in question written by me. In which case you should definitely use it without thinking twice.\n</p>\n",
-        "date": "2017-08-19T19:00+01:00",
-        "images": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "1HttWu08ByMIqYkMAwias0"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "BiHMILP0e4GougCcgss4G",
-        "type": "Entry",
-        "createdAt": "2017-08-31T22:53:47.975Z",
-        "updatedAt": "2017-09-01T14:04:22.294Z",
+        "createdAt": "2017-09-13T22:41:25.861Z",
+        "updatedAt": "2017-09-14T18:21:10.868Z",
         "revision": 2,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "featuredSoftware"
+            "id": "link"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "software",
-        "title": "Software",
-        "icon": "fa-laptop",
-        "items": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "2Z335f4s5G4M880UCeUe0W"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "7iTlZrljgWkQ0gGaYywaUU"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "3dmRj7SUUg2Mei2eWoa0ok"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "BeyYWLb8AgOUsYMciKG4"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "6NXtw4v3GMCgoaE4IKk6a2"
-            }
-          }
-        ],
-        "link": {
+        "id": "PDF of Yadda - The Other JavaScript BDD Library",
+        "text": "Slides",
+        "icon": "fa-pdf",
+        "media": {
           "sys": {
             "type": "Link",
-            "linkType": "Entry",
-            "id": "2ksz0Er8busMsUc6YO4Go2"
+            "linkType": "Asset",
+            "id": "2SF5G8WIXKQUyE0SISuuwG"
           }
         }
       }
@@ -1159,24 +1231,106 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "5uE0rEBTS8KKAo2EYAoyGq",
+        "id": "VGOaVS3FySAaIuKs2KWg6",
         "type": "Entry",
-        "createdAt": "2017-09-01T22:06:47.727Z",
-        "updatedAt": "2017-09-01T22:06:47.727Z",
-        "revision": 1,
+        "createdAt": "2017-09-08T17:28:22.022Z",
+        "updatedAt": "2017-09-14T05:35:57.260Z",
+        "revision": 49,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "legalPage"
+            "id": "article"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "privacy-policy",
-        "title": "Privacy Policy",
-        "body": "<p>This privacy policy sets out how we use and protect any information that you give us when you use this website.</p>\n\n<p>We are committed to ensuring that your privacy is protected. Should we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement.</p>\n\n<p>We may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes. This policy is effective from 1st August 2017.</p>\n\n<h3>What we collect</h3>\n<p>This website does not ask for or collect personal information.</p>\n\n<h3>How we use cookies</h3>\n<p>A cookie is a small file which asks permission to be placed on your computer&apos;s hard drive. Once you agree, the file is added and the cookie helps analyse web traffic or lets you know when you visit a particular site. Cookies allow web applications to respond to you as an individual. The web application can tailor its operations to your needs, likes and dislikes by gathering and remembering information about your preferences.</p>\n\n<p>We use traffic log cookies to identify which pages are being used. This helps us analyse data about webpage traffic and improve our website in order to tailor it to customer needs. We only use this information for statistical analysis purposes and then the data is removed from the system.</p>\n\n<p>Overall, cookies help us provide you with a better website by enabling us to monitor which pages you find useful and which you do not. A cookie in no way gives us access to your computer or any information about you, other than the data you choose to share with us.</p>\n\n<p>You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of the website.</p>\n\n<h3>Links to other websites</h3>\n\n<p>Our website may contain links to other websites of interest. However, once you have used these links to leave our site, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites and such sites are not governed by this privacy statement. You should exercise caution and look at the privacy statement applicable to the website in question.</p>"
+        "id": 1002,
+        "title": "Await - I'll See You In JavaScript Hell!",
+        "author": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1aRUx8rcSOWacCaUeOYcqQ"
+          }
+        },
+        "channel": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "13bFqt7AHAGemE2cuUsiqM"
+          }
+        },
+        "tweetText": "Await - I'll See You In JavaScript Hell!",
+        "keywords": [
+          "Node.js",
+          "JavaScript",
+          "Callback",
+          "Promise",
+          "Software Craftsmanship"
+        ],
+        "summary": "<p>\nThe JavaScript callback vs promises debate is mostly over. Promises won, albeit by the back door of await. I for one welcome our new asynchronous overlords, but before we rush to our new programming nirvana let's take some time to look at promises and why they underdelivered at saving our codebases from nested damnation…\n</p>",
+        "body": "<p>\nThe JavaScript callback vs promises debate is mostly over. Promises won, albeit by the back door of await. I for one welcome our new asynchronous overlords, but before we rush to our new programming nirvana let's take some time to look at  promises and why they underdelivered at saving our codebases from nested damnation. The following is some code which could justifiably be accused of callback hell.\n\n<code>function welcomeToHell(cb) {\n  foo(err => {\n    if (err) return cb(err)\n    bar(err => {\n      if (err) return cb(err)\n      baz(err => {\n        if (err) return cb(err)\n        cb()\n      })\n    })\n  })\n}\n</code>\n<p>\nThe only reason the callback based code might look like this, is because its author did a shoddy job. By using a library like <a href=\"https://www.npmjs.com/package/async\">async</a> things can be much improved. That aside, if the code had been written with promises it might look as follows become…\n</p>\n<code>function salvationIsHere() {\n  return foo()\n    .then(bar)\n    .then(baz)\n}\n</code>\n<p>\nIf all promises code ever written looked like the example above I would stop now. <em>It doesn't</em>. Promises are simple when code follows a linear sequence or can run entirely in parallel, but when you add conditions and/or iteration, it become hard to keep them simple. As a result most of the promise based code I come across looks nothing like the above. Instead it looks like this…\n</p>\n<code>function welcomeBackToHell(email) {\n  return getUserByEmail(email)\n    .then(user => getUserRoles(user.id)\n      .then(roles => {\n        if (roles.indexOf('publisher') < 0) return { user, roles }\n        return getUserArticles(user.id)\n          .then(articles => ({ user, roles, articles }))\n      })\n  )\n}\n</code>\n<p>\nAll we've done is traded callback hell for promise hell. Now my point isn't that with appropriate care promisified code can't read well. <em>It can</em>. But this is equally true with <a href=\"https://github.com/cressie176/www-app/blob/master/server/lib/components/cms/cms.js\">callbacks</a>, providing you take the time to write functions that:\n</p>\n<ol>\n  <li>Have meaningful names</li>\n  <li>Are small (I aim for &lt;=4 lines)</li>\n  <li>Do one thing well</li>\n  <li>Have a single level of abstraction</li>\n  <li>Minimise parameters (I aim for &lt;= 2 excluding cb)</li>\n  <li>Avoid booleans</li>\n  <li>Minimise conditional logic (guard conditions permitted)</li>  \n</ol>\n<p>\nand modules that:\n</p>\n<ol>\n  <li>Have meaningful names</li>\n  <li>Have a single responsibility</li>\n  <li>Encapsulate data and behaviour</li>\n</ol>\n<p>\nTo write coherent and cohesive code you have to understand and care about the principles of software craftsmanship. This is thousands of times more important than whether you use callbacks, promises or await. Lets try to remember, before we damn codebases to level three of asynchronous hell with await.\n</p>",
+        "date": "2017-08-26T19:00+01:00",
+        "images": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "4gZuk9FDHWgcMGiwKwAuUc"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "5tyOG8UYlaw0s8G8YqS0wQ",
+        "type": "Entry",
+        "createdAt": "2017-08-31T22:04:35.017Z",
+        "updatedAt": "2017-08-31T22:04:35.017Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "linkList"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "navigation",
+        "title": "Navigation",
+        "links": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5CuaQgEL4souWSi0uiei8o"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5ovlS609fqOmywE2kcSAWg"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "74hFY4cLKggKiGuyy2iqK0"
+            }
+          }
+        ]
       }
     },
     {
@@ -1253,46 +1407,24 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "5tyOG8UYlaw0s8G8YqS0wQ",
+        "id": "5uE0rEBTS8KKAo2EYAoyGq",
         "type": "Entry",
-        "createdAt": "2017-08-31T22:04:35.017Z",
-        "updatedAt": "2017-08-31T22:04:35.017Z",
+        "createdAt": "2017-09-01T22:06:47.727Z",
+        "updatedAt": "2017-09-01T22:06:47.727Z",
         "revision": 1,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "linkList"
+            "id": "legalPage"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "navigation",
-        "title": "Navigation",
-        "links": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "5CuaQgEL4souWSi0uiei8o"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "5ovlS609fqOmywE2kcSAWg"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "74hFY4cLKggKiGuyy2iqK0"
-            }
-          }
-        ]
+        "id": "privacy-policy",
+        "title": "Privacy Policy",
+        "body": "<p>This privacy policy sets out how we use and protect any information that you give us when you use this website.</p>\n\n<p>We are committed to ensuring that your privacy is protected. Should we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement.</p>\n\n<p>We may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes. This policy is effective from 1st August 2017.</p>\n\n<h3>What we collect</h3>\n<p>This website does not ask for or collect personal information.</p>\n\n<h3>How we use cookies</h3>\n<p>A cookie is a small file which asks permission to be placed on your computer&apos;s hard drive. Once you agree, the file is added and the cookie helps analyse web traffic or lets you know when you visit a particular site. Cookies allow web applications to respond to you as an individual. The web application can tailor its operations to your needs, likes and dislikes by gathering and remembering information about your preferences.</p>\n\n<p>We use traffic log cookies to identify which pages are being used. This helps us analyse data about webpage traffic and improve our website in order to tailor it to customer needs. We only use this information for statistical analysis purposes and then the data is removed from the system.</p>\n\n<p>Overall, cookies help us provide you with a better website by enabling us to monitor which pages you find useful and which you do not. A cookie in no way gives us access to your computer or any information about you, other than the data you choose to share with us.</p>\n\n<p>You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of the website.</p>\n\n<h3>Links to other websites</h3>\n\n<p>Our website may contain links to other websites of interest. However, once you have used these links to leave our site, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites and such sites are not governed by this privacy statement. You should exercise caution and look at the privacy statement applicable to the website in question.</p>"
       }
     },
     {
@@ -1304,41 +1436,11 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "3d4GTHKfj2GEsIAYcuScoQ",
+        "id": "23BQPn6dHWOu2AkK8ymS68",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:24:43.330Z",
-        "updatedAt": "2017-09-01T11:54:58.659Z",
+        "createdAt": "2017-08-31T21:08:23.477Z",
+        "updatedAt": "2017-08-31T21:39:20.732Z",
         "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "copyright"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "© 2017 Stephen Cresswell. All rights reserved.",
-        "year": 2017,
-        "owner": "Stephen Cresswell",
-        "rights": "All rights reserved."
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "3iVaxd7WKsU2QyAKoSoAmS",
-        "type": "Entry",
-        "createdAt": "2017-09-09T21:50:04.809Z",
-        "updatedAt": "2017-09-09T21:50:24.820Z",
-        "revision": 2,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1349,9 +1451,10 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Father Ted - Channel 4",
-        "text": "Father Ted - Channel 4",
-        "url": "http://www.channel4.com/programmes/father-ted"
+        "id": "Email",
+        "text": "hello@stephen-cresswell.net",
+        "icon": "fa-envelope",
+        "url": "mailto:hello@stephen-cresswell.net"
       }
     },
     {
@@ -1393,11 +1496,11 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "23BQPn6dHWOu2AkK8ymS68",
+        "id": "3iVaxd7WKsU2QyAKoSoAmS",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:08:23.477Z",
-        "updatedAt": "2017-08-31T21:39:20.732Z",
-        "revision": 4,
+        "createdAt": "2017-09-09T21:50:04.809Z",
+        "updatedAt": "2017-09-09T21:50:24.820Z",
+        "revision": 2,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1408,10 +1511,39 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Email",
-        "text": "hello@stephen-cresswell.net",
-        "icon": "fa-envelope",
-        "url": "mailto:hello@stephen-cresswell.net"
+        "id": "Father Ted - Channel 4",
+        "text": "Father Ted - Channel 4",
+        "url": "http://www.channel4.com/programmes/father-ted"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3d4GTHKfj2GEsIAYcuScoQ",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:24:43.330Z",
+        "updatedAt": "2017-09-01T11:54:58.659Z",
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "copyright"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "© 2017 Stephen Cresswell. All rights reserved.",
+        "year": 2017,
+        "owner": "Stephen Cresswell",
+        "rights": "All rights reserved."
       }
     },
     {
@@ -1474,62 +1606,39 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "5l4bNL91LOeicAIAMayAAc",
+        "id": "2nyUF7itooUI8yMasiyAUs",
         "type": "Entry",
-        "createdAt": "2017-08-31T23:44:58.380Z",
-        "updatedAt": "2017-09-09T19:19:38.319Z",
-        "revision": 9,
+        "createdAt": "2017-08-31T22:03:45.486Z",
+        "updatedAt": "2017-08-31T22:03:45.486Z",
+        "revision": 1,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "article"
+            "id": "linkList"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": 3,
-        "title": "Yadda - The Other BDD Library",
-        "author": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "1aRUx8rcSOWacCaUeOYcqQ"
+        "id": "legal",
+        "title": "Legal",
+        "links": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5b5pXtgGjSiCcKwCieE4UC"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3w2lWUvmhGi8K0WS4mksYk"
+            }
           }
-        },
-        "channel": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5AeYQEH78Ie4OCKWWkmI2o"
-          }
-        },
-        "tweetText": "Yadda - The Other JavaScript Library",
-        "keywords": [
-          "Node.js",
-          "Testing",
-          "BDD",
-          "Yadda"
-        ],
-        "summary": "<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they're not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe('some test function') with text. Chai and Expect don't even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this() at the cost of additional ceremony. Surely there's more to BDD…</p>",
-        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/FntIzfFlAGWGOQMcoUCOm/0212b9817bd81ebf80a6726ed1191ffb/yadda-1024x768.jpg\" title=\"Yadda\" alt=\"Man sitting among boxes labelled as JavaScript BDD librarys\" />\n\n<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they're not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe('some test function') with text. Chai and Expect don't even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this().</p>\n\n<p>The only true BDD tool found for JavaScript is CucumberJS. The problem with CucumberJS is that the Gerkin syntax is restrictive. I don't want to be limited to starting my sentences with \"Given\", \"When\", \"Then\", \"And\" and \"But\". I want to express myself naturally.</p>\n\n<p>I also want a test runner that makes good decisions about which steps to run, that works in a browser and that lets me plugin different step libraries so that I can test multiple interfaces (e.g. rest and HTML) with the same scenarios. I even want a tool that has nothing to do with testing and just maps ordinary sentences to functions so I could use it in a rules engine or build script.</p>\n\n<p>That's why I wrote <a href=\\'http://www.github.com/acuminous/yadda\\'>Yadda</a> - the other JavaScript BDD library.</p>",
-        "date": "2016-04-26T19:00+01:00",
-        "event": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "77RHHsHuSsKIuCE4uew000"
-          }
-        },
-        "location": "London",
-        "images": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "3pVLW3iAYgcIUuUe6EUmCS"
-          }
-        }
+        ]
       }
     },
     {
@@ -1559,56 +1668,6 @@
         "id": "terms-and-conditions",
         "title": "Terms & Conditions",
         "body": "<p>Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern our relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.</p>\n\n<p>The term 'us' or 'we' refers to the owner of the website. The term 'you' refers to the user or viewer of our website.</p>\n\n<p>The use of this website is subject to the following terms of use:\n\n<ol>\n<li>The content of the pages of this website is for your general information and use only. It is subject to change without notice.</li>\n<li>This website uses cookies to monitor browsing preferences. If you do allow cookies to be used, the personal information may be stored by us for use by third parties.</li>\n<li>Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</li>\n<li>Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific requirements.</li>\n<li>This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</li>\n<li>All trade marks reproduced in this website which are not the property of, or licensed to, the operator are acknowledged on the website.</li>\n<li>Unauthorised use of this website may give rise to a claim for damages and/or be a criminal offence.</li><li>From time to time this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).</li>\n<li>Your use of this website and any dispute arising out of such use of the website is subject to the laws of England, Northern Ireland, Scotland and Wales.</li>\n</ol>\n</p>"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "5AeYQEH78Ie4OCKWWkmI2o",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:56:36.596Z",
-        "updatedAt": "2017-09-09T22:21:15.225Z",
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "channelPage"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "talks",
-        "title": "Talks",
-        "link": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "74hFY4cLKggKiGuyy2iqK0"
-          }
-        },
-        "introImage": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "2GQFdGSiTCsiOOCcwu6Yge"
-          }
-        },
-        "introText": "\"How did that gobshite get on the television?\"",
-        "introLink": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "3iVaxd7WKsU2QyAKoSoAmS"
-          }
-        }
       }
     },
     {
@@ -1687,68 +1746,29 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "2nyUF7itooUI8yMasiyAUs",
+        "id": "9hIixEpd04ksKwqCoWYKg",
         "type": "Entry",
-        "createdAt": "2017-08-31T22:03:45.486Z",
-        "updatedAt": "2017-08-31T22:03:45.486Z",
-        "revision": 1,
+        "createdAt": "2017-08-31T23:26:51.194Z",
+        "updatedAt": "2017-09-02T19:45:57.627Z",
+        "revision": 4,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "linkList"
+            "id": "imageSet"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "legal",
-        "title": "Legal",
-        "links": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "5b5pXtgGjSiCcKwCieE4UC"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "3w2lWUvmhGi8K0WS4mksYk"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "sys": {
-        "space": {
+        "id": "Enterprise Grade Microservices",
+        "thumbnail": {
           "sys": {
             "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
+            "linkType": "Asset",
+            "id": "3rAYG3rbaEI6Ka4SwigAuA"
           }
-        },
-        "id": "77RHHsHuSsKIuCE4uew000",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:41:44.131Z",
-        "updatedAt": "2017-08-31T23:41:44.131Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Community For Agile Testing - Yadda",
-        "text": "Community For Agile Testing",
-        "url": "https://www.meetup.com/es-ES/Community-for-Agile-Testing/events/229788565/"
+        }
       }
     },
     {
@@ -1826,29 +1846,55 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "9hIixEpd04ksKwqCoWYKg",
+        "id": "77RHHsHuSsKIuCE4uew000",
         "type": "Entry",
-        "createdAt": "2017-08-31T23:26:51.194Z",
-        "updatedAt": "2017-09-02T19:45:57.627Z",
-        "revision": 4,
+        "createdAt": "2017-08-31T23:41:44.131Z",
+        "updatedAt": "2017-08-31T23:41:44.131Z",
+        "revision": 1,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "imageSet"
+            "id": "link"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Enterprise Grade Microservices",
-        "thumbnail": {
+        "id": "Community For Agile Testing - Yadda",
+        "text": "Community For Agile Testing",
+        "url": "https://www.meetup.com/es-ES/Community-for-Agile-Testing/events/229788565/"
+      }
+    },
+    {
+      "sys": {
+        "space": {
           "sys": {
             "type": "Link",
-            "linkType": "Asset",
-            "id": "3rAYG3rbaEI6Ka4SwigAuA"
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
           }
-        }
+        },
+        "id": "2Z335f4s5G4M880UCeUe0W",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:35:05.655Z",
+        "updatedAt": "2017-08-31T21:35:05.655Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "yadda",
+        "title": "Yadda",
+        "summary": "A cucumber-esque BDD library, but with greater flexibility",
+        "body": "A cucumber-esque BDD library, but with greater flexibility",
+        "url": "https://www.github.com/acuminous/yadda"
       }
     },
     {
@@ -1891,26 +1937,25 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "2Z335f4s5G4M880UCeUe0W",
+        "id": "3e6i5bHPBYKyuG8YKu066E",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:35:05.655Z",
-        "updatedAt": "2017-08-31T21:35:05.655Z",
-        "revision": 1,
+        "createdAt": "2017-08-31T21:11:37.665Z",
+        "updatedAt": "2017-08-31T21:39:59.447Z",
+        "revision": 3,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "project"
+            "id": "link"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "yadda",
-        "title": "Yadda",
-        "summary": "A cucumber-esque BDD library, but with greater flexibility",
-        "body": "A cucumber-esque BDD library, but with greater flexibility",
-        "url": "https://www.github.com/acuminous/yadda"
+        "id": "Mobile",
+        "text": "+44 (0)7814033321",
+        "icon": "fa-phone",
+        "url": "tel:+447814033321"
       }
     },
     {
@@ -1981,11 +2026,11 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "3e6i5bHPBYKyuG8YKu066E",
+        "id": "5uraX28hqg2EU02umO8qog",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:11:37.665Z",
-        "updatedAt": "2017-08-31T21:39:59.447Z",
-        "revision": 3,
+        "createdAt": "2017-09-02T19:21:46.999Z",
+        "updatedAt": "2017-09-02T20:06:03.151Z",
+        "revision": 2,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1996,10 +2041,9 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Mobile",
-        "text": "+44 (0)7814033321",
-        "icon": "fa-phone",
-        "url": "tel:+447814033321"
+        "id": "Duty Calls",
+        "text": "Duty Calls - xkcd",
+        "url": "https://xkcd.com/386/"
       }
     },
     {
@@ -2011,11 +2055,11 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "3pVLW3iAYgcIUuUe6EUmCS",
+        "id": "1HttWu08ByMIqYkMAwias0",
         "type": "Entry",
-        "createdAt": "2017-08-31T23:43:25.836Z",
-        "updatedAt": "2017-09-09T14:01:35.909Z",
-        "revision": 7,
+        "createdAt": "2017-09-09T20:48:49.727Z",
+        "updatedAt": "2017-09-09T20:48:49.727Z",
+        "revision": 1,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2026,12 +2070,12 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Yadda - The Other BDD Library",
+        "id": "Orange Is Not The New Black",
         "thumbnail": {
           "sys": {
             "type": "Link",
             "linkType": "Asset",
-            "id": "3ipHCk26VGWG8YQiiy4kss"
+            "id": "4J3pfkFcTYQq8giGaCwSC8"
           }
         }
       }
@@ -2114,6 +2158,34 @@
               "id": "g99n9a78vx0s"
             }
           },
+          "id": "2SF5G8WIXKQUyE0SISuuwG",
+          "type": "Asset",
+          "createdAt": "2017-09-13T22:33:50.427Z",
+          "updatedAt": "2017-09-13T22:39:16.923Z",
+          "revision": 2,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "PDF of Yadda - The Other JavaScript BDD Library",
+          "file": {
+            "url": "//downloads.contentful.com/g99n9a78vx0s/2SF5G8WIXKQUyE0SISuuwG/7d4f4a448734dc7e17e02acfbcf0d8c2/Yadda.pdf",
+            "details": {
+              "size": 35632614
+            },
+            "fileName": "Yadda.pdf",
+            "contentType": "application/pdf"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "g99n9a78vx0s"
+            }
+          },
           "id": "2U93BNINsIgIKccgSo2Ewi",
           "type": "Asset",
           "createdAt": "2017-09-01T10:53:59.285Z",
@@ -2183,17 +2255,17 @@
           "id": "3ipHCk26VGWG8YQiiy4kss",
           "type": "Asset",
           "createdAt": "2017-09-09T14:00:21.053Z",
-          "updatedAt": "2017-09-09T14:01:21.981Z",
-          "revision": 2,
+          "updatedAt": "2017-09-14T18:24:51.803Z",
+          "revision": 4,
           "locale": "en-GB"
         },
         "fields": {
-          "title": "Thumbnail of Yadda - The Other BDD Library",
+          "title": "Thumbnail of Yadda - The Other JavaScript BDD Library",
           "description": "Man sitting among boxes labelled chai, jasmine, mocha, vows and cucumber",
           "file": {
-            "url": "//images.contentful.com/g99n9a78vx0s/3ipHCk26VGWG8YQiiy4kss/fd1988b7d5aa41f645b96fc9082fad07/yadda-720x540.jpg",
+            "url": "//images.contentful.com/g99n9a78vx0s/3ipHCk26VGWG8YQiiy4kss/f67788160355d53ad71b64c01f638f76/yadda-720x540.jpg",
             "details": {
-              "size": 65517,
+              "size": 105860,
               "image": {
                 "width": 720,
                 "height": 540

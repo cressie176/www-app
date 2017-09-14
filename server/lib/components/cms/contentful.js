@@ -105,6 +105,12 @@ export default function() {
             item.fields.url = path.join('/', item.fields.channel.link.url, slug(`${item.fields.title}-${item.fields.id}`).toLowerCase());
             item.fields.date = new Date(item.fields.date);
             item.fields.tweetText = encodeURIComponent(item.fields.tweetText);
+            item.fields.downloads = item.fields.downloads || [];
+            return collect(content, item);
+          }
+          case 'link': {
+            item.fields.url = item.fields.url || item.fields.media.url;
+            return collect(content, item);
           }
           case 'imageSet':
           case 'person':
@@ -112,14 +118,10 @@ export default function() {
           case 'featuredArticles':
           case 'featuredSoftware':
           case 'linkList':
-          case 'link':
           case 'channelPage':
           case 'legalPage':
           case 'homePage': {
-            const collectionName = collectionNames[item.type];
-            const collection = content[collectionName] || {};
-            collection[item.fields.id] = item.fields;
-            return Object.assign(content, { [collectionName]: collection, });
+            return collect(content, item);
           }
           case 'copyright':
           case 'profile':
@@ -133,6 +135,13 @@ export default function() {
       }, {});
 
       cb(null, transformed);
+    }
+
+    function collect(content, item) {
+      const collectionName = collectionNames[item.type];
+      const collection = content[collectionName] || {};
+      collection[item.fields.id] = item.fields;
+      return Object.assign(content, { [collectionName]: collection, });
     }
 
     function extract(cb) {

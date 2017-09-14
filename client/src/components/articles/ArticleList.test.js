@@ -50,8 +50,8 @@ describe('ArticleList', () => {
               {
                 text: 'pdf',
                 url: 'https://pdf',
-              }
-            ]
+              },
+            ],
           },
           {
             id: 2,
@@ -85,7 +85,7 @@ describe('ArticleList', () => {
     expect(article1.find('.featured-article__details IconListItem').at(0).prop('url')).toBe('https://what');
     expect(article1.find('.featured-article__details IconListItem').at(1).prop('id')).toBe('date');
     expect(article1.find('.featured-article__details IconListItem').at(1).prop('text')).toBe('when');
-    expect(article1.find('.featured-article__details IconListItem').at(2).prop('id')).toBe('location')
+    expect(article1.find('.featured-article__details IconListItem').at(2).prop('id')).toBe('location');
     expect(article1.find('.featured-article__details IconListItem').at(2).prop('text')).toBe('where');
   });
 
