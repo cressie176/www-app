@@ -86,7 +86,7 @@ class App extends React.Component {
                 <Route exact path='/' render={() =>
                   <HomePage />
                 } />
-                <Route exact path='/legal/:pageId(terms-and-conditions|privacy-policy)' render={({ match, }) =>
+                <Route exact path='/legal/:pageId(terms-and-conditions|privacy-policy|production-credits)' render={({ match, }) =>
                   <LegalPage id={match.params.pageId} />
                 } />
                 <Route exact path='/:channel(blog|talks)' render={({ match, }) =>

@@ -77,7 +77,7 @@ export class ArticlePage extends React.Component {
           </div>
           <div className='row'>
             <div className='col-sm-offset-1 col-sm-10'>
-              <ul className='featured-article__details'>
+              <ul className='article__details'>
                 {
                   this.props.article.event ? (
                     <IconListItem id='event' icon='fa-group' text={this.props.article.event.text} url={this.props.article.event.url} />

@@ -43,6 +43,12 @@
   margin-bottom: 20px;
 }
 
+.article-page .article__details {
+  list-style: none;
+  margin-bottom: 30px;
+  padding-left: 0px;
+}
+
 .article-page .icon-list__item__link {
   color: var(--text-colour);
 }
@@ -51,6 +57,11 @@
   color: var(--primary-colour);
   text-decoration: none;
 }
+
+.article-page #social-buttons {
+  height: 33px;
+}
+
 
 .fb-like > span {
   vertical-align: baseline !important;

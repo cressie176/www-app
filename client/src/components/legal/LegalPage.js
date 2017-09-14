@@ -31,7 +31,7 @@ export class LegalPage extends React.Component {
       );
     } else {
       return (
-          <div className={`page legal-page legal-page--{this.props.id}`}>
+          <div className={`page legal-page legal-page--${this.props.id}`}>
 
           <PageIntro title={this.props.page.title} />
 

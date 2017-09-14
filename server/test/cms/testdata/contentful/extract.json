@@ -2,526 +2,10 @@
   "sys": {
     "type": "Array"
   },
-  "total": 52,
+  "total": 54,
   "skip": 0,
   "limit": 1000,
   "items": [
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "Q4D5N4wyQ0wWO0AmwmCmE",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:13:14.690Z",
-        "updatedAt": "2017-09-01T22:21:04.244Z",
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Linkedin",
-        "icon": "fa-linkedin",
-        "url": "https://www.linkedin.com/in/stephencresswell/"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "7iTlZrljgWkQ0gGaYywaUU",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:36:02.352Z",
-        "updatedAt": "2017-08-31T21:36:02.353Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "rascal",
-        "title": "Rascal",
-        "summary": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
-        "body": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
-        "url": "https://www.github.com/guidesmiths/rascal"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "5l4bNL91LOeicAIAMayAAc",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:44:58.380Z",
-        "updatedAt": "2017-09-14T18:23:11.313Z",
-        "revision": 14,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "article"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": 3,
-        "title": "Yadda - The Other JavaScript BDD Library",
-        "author": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "1aRUx8rcSOWacCaUeOYcqQ"
-          }
-        },
-        "channel": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5AeYQEH78Ie4OCKWWkmI2o"
-          }
-        },
-        "tweetText": "Yadda - The Other JavaScript Library",
-        "keywords": [
-          "Node.js",
-          "Testing",
-          "BDD",
-          "Yadda"
-        ],
-        "summary": "<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they're not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe('some test function') with text. Chai and Expect don't even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this() at the cost of additional ceremony. Surely there's more to BDD…</p>",
-        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/FntIzfFlAGWGOQMcoUCOm/0e35e0cf4b64d89d719a67e1dce027a4/yadda-1024x768.jpg\" title=\"Yadda\" alt=\"Man sitting among boxes labelled as JavaScript BDD librarys\" />\n\n<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they're not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe('some test function') with text. Chai and Expect don't even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this().</p>\n\n<p>The only true BDD tool found for JavaScript is CucumberJS. The problem with CucumberJS is that the Gerkin syntax is restrictive. I don't want to be limited to starting my sentences with \"Given\", \"When\", \"Then\", \"And\" and \"But\". I want to express myself naturally.</p>\n\n<p>I also want a test runner that makes good decisions about which steps to run, that works in a browser and that lets me plugin different step libraries so that I can test multiple interfaces (e.g. rest and HTML) with the same scenarios. I even want a tool that has nothing to do with testing and just maps ordinary sentences to functions so I could use it in a rules engine or build script.</p>\n\n<p>That's why I wrote <a href=\\'http://www.github.com/acuminous/yadda\\'>Yadda</a> - the other JavaScript BDD library.</p>",
-        "date": "2016-04-26T19:00+01:00",
-        "event": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "77RHHsHuSsKIuCE4uew000"
-          }
-        },
-        "location": "London",
-        "images": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "3pVLW3iAYgcIUuUe6EUmCS"
-          }
-        },
-        "downloads": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "1h5xhIsfS2AKUsoamMKYO8"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "1cPPtw2Z3YOk6WYWO8IKY8",
-        "type": "Entry",
-        "createdAt": "2017-09-01T10:54:18.270Z",
-        "updatedAt": "2017-09-11T07:31:03.167Z",
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "homePage"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "home",
-        "title": "Home",
-        "link": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5CuaQgEL4souWSi0uiei8o"
-          }
-        },
-        "heroImage": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "2U93BNINsIgIKccgSo2Ewi"
-          }
-        },
-        "profile": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "7DYkHbFZv28smw4QukeUkS"
-          }
-        },
-        "featuredSoftware": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "BiHMILP0e4GougCcgss4G"
-          }
-        },
-        "featuredArticles": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5x2gdy4Q1yoa2wWwqiMoMA"
-          }
-        },
-        "featuredTalks": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "72cEhCrZAIOY0wmI64MMIm"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "3pVLW3iAYgcIUuUe6EUmCS",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:43:25.836Z",
-        "updatedAt": "2017-09-14T18:24:18.768Z",
-        "revision": 9,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "imageSet"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Yadda - The Other JavaScript BDD Library",
-        "thumbnail": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "3ipHCk26VGWG8YQiiy4kss"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "6xesezFf7G4mCEaYAO6wg8",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:38:00.761Z",
-        "updatedAt": "2017-09-02T19:57:40.091Z",
-        "revision": 5,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "imageSet"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Divorcing Microservices With Rascal",
-        "thumbnail": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "1qT8990i1SqsACkwECicAI"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "2ksz0Er8busMsUc6YO4Go2",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:30:46.853Z",
-        "updatedAt": "2017-08-31T21:38:42.017Z",
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "See all software…",
-        "text": "See all software…",
-        "url": "/software"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "13bFqt7AHAGemE2cuUsiqM",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:56:17.744Z",
-        "updatedAt": "2017-09-02T20:44:04.451Z",
-        "revision": 5,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "channelPage"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "blog",
-        "title": "Blog",
-        "link": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5ovlS609fqOmywE2kcSAWg"
-          }
-        },
-        "introImage": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "6oYIvHjLUsU0UISMyaOqq4"
-          }
-        },
-        "introText": "\"Someone is wrong on the internet\"",
-        "introLink": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5uraX28hqg2EU02umO8qog"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "5CuaQgEL4souWSi0uiei8o",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:07:22.607Z",
-        "updatedAt": "2017-09-06T21:51:36.394Z",
-        "revision": 7,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Home",
-        "text": "Home",
-        "icon": "fa-home",
-        "url": "/"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "6NXtw4v3GMCgoaE4IKk6a2",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:37:38.599Z",
-        "updatedAt": "2017-08-31T21:37:38.599Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "systemic",
-        "title": "Systemic",
-        "summary": "A minimal dependency injection library",
-        "body": "A minimal dependency injection library",
-        "url": "https://www.github.com/guidesmiths/systemic"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "fL9gaet7tCCegUiCOoUme",
-        "type": "Entry",
-        "createdAt": "2017-08-31T22:03:21.056Z",
-        "updatedAt": "2017-08-31T22:03:21.056Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "linkList"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "contact",
-        "title": "Contact",
-        "links": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "23BQPn6dHWOu2AkK8ymS68"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "3e6i5bHPBYKyuG8YKu066E"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "XXrykuPGkUEeuSkMGug64",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:13:33.601Z",
-        "updatedAt": "2017-09-01T22:21:21.156Z",
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Twitter",
-        "icon": "fa-twitter",
-        "url": "https://www.twitter.com/cressie176"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "Ho8vv9fNWUgeiyYggOGWo",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:31:09.787Z",
-        "updatedAt": "2017-08-31T21:38:34.266Z",
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "See all talks…",
-        "text": "See all talks…",
-        "url": "/talks"
-      }
-    },
     {
       "sys": {
         "space": {
@@ -560,81 +44,27 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "3w2lWUvmhGi8K0WS4mksYk",
+        "id": "9hIixEpd04ksKwqCoWYKg",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:12:01.437Z",
-        "updatedAt": "2017-08-31T21:40:12.384Z",
-        "revision": 3,
+        "createdAt": "2017-08-31T23:26:51.194Z",
+        "updatedAt": "2017-09-02T19:45:57.627Z",
+        "revision": 4,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "link"
+            "id": "imageSet"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Privacy Policy",
-        "text": "Privacy Policy",
-        "url": "/legal/privacy-policy"
-      }
-    },
-    {
-      "sys": {
-        "space": {
+        "id": "Enterprise Grade Microservices",
+        "thumbnail": {
           "sys": {
             "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "72cEhCrZAIOY0wmI64MMIm",
-        "type": "Entry",
-        "createdAt": "2017-08-31T22:52:08.237Z",
-        "updatedAt": "2017-09-01T14:04:34.786Z",
-        "revision": 3,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "featuredArticles"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "talks",
-        "title": "Upcoming & Recent Talks",
-        "icon": "fa-microphone",
-        "items": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "2mGqla8uE8ukUSUwIY8swS"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "3COc9WAIMMY0QKkaycg0WQ"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "5l4bNL91LOeicAIAMayAAc"
-            }
-          }
-        ],
-        "link": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "Ho8vv9fNWUgeiyYggOGWo"
+            "linkType": "Asset",
+            "id": "3rAYG3rbaEI6Ka4SwigAuA"
           }
         }
       }
@@ -648,98 +78,10 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "74hFY4cLKggKiGuyy2iqK0",
+        "id": "77RHHsHuSsKIuCE4uew000",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:07:43.485Z",
-        "updatedAt": "2017-09-06T21:52:24.531Z",
-        "revision": 7,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Talks",
-        "text": "Talks",
-        "icon": "fa-microphone",
-        "url": "/talks"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "7DYkHbFZv28smw4QukeUkS",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:02:19.698Z",
-        "updatedAt": "2017-09-09T21:05:12.719Z",
-        "revision": 9,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "profile"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "profile",
-        "title": "Profile",
-        "body": "<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React, as demonstrated by the <a href='https://www.github.com/cressie176/www-app'>source code</a> for this site.</p>\n\n<p>Until recently I was operating in a dual role, firstly as CTO and co-founder of <a href='https://www.guidesmiths.com'>GuideSmiths</a>, a successful Node.js & microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients.<p>\n\n</p>Due to a desire to spend more time with my family, I have negotiated an exit from GuideSmiths, and accepted a senior, hands-on position with <a href=\"https://www.tes.com\">Tes Global Ltd</a>, which can be predominantly carried out from the vicinity of my home in Suffolk.</p>\n\n\n"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "1vB10lNZBSiiKsai0KiCIe",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:12:39.858Z",
-        "updatedAt": "2017-09-01T22:20:56.371Z",
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "GitHub",
-        "icon": "fa-github",
-        "url": "https://www.github.com/cressie176/"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "3yKsrbq2XSgU0mooEyO4oo",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:35:07.184Z",
-        "updatedAt": "2017-08-31T23:35:07.184Z",
+        "createdAt": "2017-08-31T23:41:44.131Z",
+        "updatedAt": "2017-08-31T23:41:44.131Z",
         "revision": 1,
         "contentType": {
           "sys": {
@@ -751,9 +93,9 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Node.js Meetup - Divorcing Microservices With Rascal",
-        "text": "Node.js Meetup",
-        "url": "https://www.meetup.com/Node-js-Meetup-London/events/231560165/"
+        "id": "Community For Agile Testing - Yadda",
+        "text": "Community For Agile Testing",
+        "url": "https://www.meetup.com/es-ES/Community-for-Agile-Testing/events/229788565/"
       }
     },
     {
@@ -765,58 +107,59 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "6Y0NzhDESk8qg0IsEwc2mE",
+        "id": "2mGqla8uE8ukUSUwIY8swS",
         "type": "Entry",
-        "createdAt": "2017-08-31T22:12:50.200Z",
-        "updatedAt": "2017-09-01T11:23:49.829Z",
-        "revision": 3,
+        "createdAt": "2017-08-31T23:27:15.257Z",
+        "updatedAt": "2017-09-09T19:20:39.945Z",
+        "revision": 9,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "site"
+            "id": "article"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "www.stephen-cresswell.net",
-        "title": "www.stephen-cresswell.net",
-        "navigation": {
+        "id": 1,
+        "title": "Enterprise Grade Microservices",
+        "author": {
           "sys": {
             "type": "Link",
             "linkType": "Entry",
-            "id": "5tyOG8UYlaw0s8G8YqS0wQ"
+            "id": "1aRUx8rcSOWacCaUeOYcqQ"
           }
         },
-        "spotlights": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "fL9gaet7tCCegUiCOoUme"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "2nyUF7itooUI8yMasiyAUs"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "6oPgI4zNzqSIWUS2QOsQKy"
-            }
-          }
-        ],
-        "copyright": {
+        "channel": {
           "sys": {
             "type": "Link",
             "linkType": "Entry",
-            "id": "3d4GTHKfj2GEsIAYcuScoQ"
+            "id": "5AeYQEH78Ie4OCKWWkmI2o"
+          }
+        },
+        "tweetText": "Enterprise Grade Microservices",
+        "keywords": [
+          "Node.js",
+          "12 Factor",
+          "Microservices"
+        ],
+        "summary": "<p>Microservice adoption is driven by promises of simplicity, flexibility, resilience and productivity. It liberates developers from clunky frameworks and legacy technology, enabling them to release faster and more frequently than ever before. With an effective deployment pipeline it is possible to have a new microservice running in production and delivering value within 15 minutes, and to achieve 20+ production releases a day…</p>",
+        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/4pBKNjkDzaoiYqsScA6aQ2/2adc227a96754741c608e4c1ec9757fb/enterprise-grade-microservices-720x540.jpg\" title=\"Enterprise Grade Microservices\" alt=\"Businessman standing by the window in an office tower\" />\n<p>Microservice adoption is driven by promises of simplicity, flexibility, resilience and productivity. It liberates developers from clunky frameworks and legacy technology, enabling them to release faster and more frequently than ever before. With an effective deployment pipeline it is possible to have a new microservice running in production and delivering value within 15 minutes, and to achieve 20+ production releases a day.</p>\n\n<p>But the fast pace, technological freedom and segregated codebase is not without cost. The maxim that a microservice codebase doesn't matter because it's small, won't change and is easily replaced is more often false than it is true.</p>\n\n<p>The principles behind clean code and 12 factor apps are just as applicable to microservices as they are to monoliths, but are all too easily ignored in the typical hubbub and hype that surrounds microservice adoption.</p>",
+        "date": "2016-11-23T19:00+00:00",
+        "event": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "19VmSbmGN2gGoGU24CIE2a"
+          }
+        },
+        "location": "Budapest",
+        "images": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "9hIixEpd04ksKwqCoWYKg"
           }
         }
       }
@@ -830,43 +173,82 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "5AeYQEH78Ie4OCKWWkmI2o",
+        "id": "5ovlS609fqOmywE2kcSAWg",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:56:36.596Z",
-        "updatedAt": "2017-09-13T05:36:34.017Z",
-        "revision": 5,
+        "createdAt": "2017-08-31T21:07:33.567Z",
+        "updatedAt": "2017-09-06T21:52:48.934Z",
+        "revision": 7,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "channelPage"
+            "id": "link"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "talks",
-        "title": "Talks",
+        "id": "Blog",
+        "text": "Blog",
+        "icon": "fa-file-text-o",
+        "url": "/blog"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "5x2gdy4Q1yoa2wWwqiMoMA",
+        "type": "Entry",
+        "createdAt": "2017-08-31T22:51:26.155Z",
+        "updatedAt": "2017-09-09T21:08:33.321Z",
+        "revision": 7,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "featuredArticles"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "articles",
+        "title": "Featured Articles",
+        "icon": "fa-file-text-o",
+        "items": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "VGOaVS3FySAaIuKs2KWg6"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "VXGQK0uZUIueSUIuowugE"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6equZuAAPmaQMAOAu8wguy"
+            }
+          }
+        ],
         "link": {
           "sys": {
             "type": "Link",
             "linkType": "Entry",
-            "id": "74hFY4cLKggKiGuyy2iqK0"
-          }
-        },
-        "introImage": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "2GQFdGSiTCsiOOCcwu6Yge"
-          }
-        },
-        "introText": "\"How did that gobshite get on the internet?\"",
-        "introLink": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "3iVaxd7WKsU2QyAKoSoAmS"
+            "id": "fXohBYKRpeI606eSQYAwQ"
           }
         }
       }
@@ -880,62 +262,24 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "1aRUx8rcSOWacCaUeOYcqQ",
+        "id": "fXohBYKRpeI606eSQYAwQ",
         "type": "Entry",
-        "createdAt": "2017-09-09T13:55:50.582Z",
-        "updatedAt": "2017-09-09T14:05:52.931Z",
-        "revision": 2,
+        "createdAt": "2017-08-31T21:29:30.348Z",
+        "updatedAt": "2017-08-31T22:05:02.439Z",
+        "revision": 4,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "person"
+            "id": "link"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "scresswell",
-        "displayName": "Stephen Cresswell",
-        "firstName": "Stephen",
-        "lastName": "Cresswell",
-        "jobTitle": "Moderator",
-        "email": "email@stephen-cresswell.net",
-        "mobile": "+44 (0)7814 033321"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "4gZuk9FDHWgcMGiwKwAuUc",
-        "type": "Entry",
-        "createdAt": "2017-09-08T17:28:04.513Z",
-        "updatedAt": "2017-09-09T11:47:30.649Z",
-        "revision": 3,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "imageSet"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Await - I'll See You In Hell",
-        "thumbnail": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "Ayv9uj9UyWu6oOge8sYMo"
-          }
-        }
+        "id": "See all articles…",
+        "text": "See all articles…",
+        "url": "/blog"
       }
     },
     {
@@ -1078,130 +422,6 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "fXohBYKRpeI606eSQYAwQ",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:29:30.348Z",
-        "updatedAt": "2017-08-31T22:05:02.439Z",
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "See all articles…",
-        "text": "See all articles…",
-        "url": "/blog"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "5x2gdy4Q1yoa2wWwqiMoMA",
-        "type": "Entry",
-        "createdAt": "2017-08-31T22:51:26.155Z",
-        "updatedAt": "2017-09-09T21:08:33.321Z",
-        "revision": 7,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "featuredArticles"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "articles",
-        "title": "Featured Articles",
-        "icon": "fa-file-text-o",
-        "items": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "VGOaVS3FySAaIuKs2KWg6"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "VXGQK0uZUIueSUIuowugE"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "6equZuAAPmaQMAOAu8wguy"
-            }
-          }
-        ],
-        "link": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "fXohBYKRpeI606eSQYAwQ"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "1h5xhIsfS2AKUsoamMKYO8",
-        "type": "Entry",
-        "createdAt": "2017-09-13T22:41:25.861Z",
-        "updatedAt": "2017-09-14T18:21:10.868Z",
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "PDF of Yadda - The Other JavaScript BDD Library",
-        "text": "Slides",
-        "icon": "fa-pdf",
-        "media": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "2SF5G8WIXKQUyE0SISuuwG"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
         "id": "19VmSbmGN2gGoGU24CIE2a",
         "type": "Entry",
         "createdAt": "2017-08-31T23:31:13.936Z",
@@ -1231,186 +451,10 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "VGOaVS3FySAaIuKs2KWg6",
+        "id": "ZDimT44KgEowGSa6cUQCW",
         "type": "Entry",
-        "createdAt": "2017-09-08T17:28:22.022Z",
-        "updatedAt": "2017-09-14T05:35:57.260Z",
-        "revision": 49,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "article"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": 1002,
-        "title": "Await - I'll See You In JavaScript Hell!",
-        "author": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "1aRUx8rcSOWacCaUeOYcqQ"
-          }
-        },
-        "channel": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "13bFqt7AHAGemE2cuUsiqM"
-          }
-        },
-        "tweetText": "Await - I'll See You In JavaScript Hell!",
-        "keywords": [
-          "Node.js",
-          "JavaScript",
-          "Callback",
-          "Promise",
-          "Software Craftsmanship"
-        ],
-        "summary": "<p>\nThe JavaScript callback vs promises debate is mostly over. Promises won, albeit by the back door of await. I for one welcome our new asynchronous overlords, but before we rush to our new programming nirvana let's take some time to look at promises and why they underdelivered at saving our codebases from nested damnation…\n</p>",
-        "body": "<p>\nThe JavaScript callback vs promises debate is mostly over. Promises won, albeit by the back door of await. I for one welcome our new asynchronous overlords, but before we rush to our new programming nirvana let's take some time to look at  promises and why they underdelivered at saving our codebases from nested damnation. The following is some code which could justifiably be accused of callback hell.\n\n<code>function welcomeToHell(cb) {\n  foo(err => {\n    if (err) return cb(err)\n    bar(err => {\n      if (err) return cb(err)\n      baz(err => {\n        if (err) return cb(err)\n        cb()\n      })\n    })\n  })\n}\n</code>\n<p>\nThe only reason the callback based code might look like this, is because its author did a shoddy job. By using a library like <a href=\"https://www.npmjs.com/package/async\">async</a> things can be much improved. That aside, if the code had been written with promises it might look as follows become…\n</p>\n<code>function salvationIsHere() {\n  return foo()\n    .then(bar)\n    .then(baz)\n}\n</code>\n<p>\nIf all promises code ever written looked like the example above I would stop now. <em>It doesn't</em>. Promises are simple when code follows a linear sequence or can run entirely in parallel, but when you add conditions and/or iteration, it become hard to keep them simple. As a result most of the promise based code I come across looks nothing like the above. Instead it looks like this…\n</p>\n<code>function welcomeBackToHell(email) {\n  return getUserByEmail(email)\n    .then(user => getUserRoles(user.id)\n      .then(roles => {\n        if (roles.indexOf('publisher') < 0) return { user, roles }\n        return getUserArticles(user.id)\n          .then(articles => ({ user, roles, articles }))\n      })\n  )\n}\n</code>\n<p>\nAll we've done is traded callback hell for promise hell. Now my point isn't that with appropriate care promisified code can't read well. <em>It can</em>. But this is equally true with <a href=\"https://github.com/cressie176/www-app/blob/master/server/lib/components/cms/cms.js\">callbacks</a>, providing you take the time to write functions that:\n</p>\n<ol>\n  <li>Have meaningful names</li>\n  <li>Are small (I aim for &lt;=4 lines)</li>\n  <li>Do one thing well</li>\n  <li>Have a single level of abstraction</li>\n  <li>Minimise parameters (I aim for &lt;= 2 excluding cb)</li>\n  <li>Avoid booleans</li>\n  <li>Minimise conditional logic (guard conditions permitted)</li>  \n</ol>\n<p>\nand modules that:\n</p>\n<ol>\n  <li>Have meaningful names</li>\n  <li>Have a single responsibility</li>\n  <li>Encapsulate data and behaviour</li>\n</ol>\n<p>\nTo write coherent and cohesive code you have to understand and care about the principles of software craftsmanship. This is thousands of times more important than whether you use callbacks, promises or await. Lets try to remember, before we damn codebases to level three of asynchronous hell with await.\n</p>",
-        "date": "2017-08-26T19:00+01:00",
-        "images": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "4gZuk9FDHWgcMGiwKwAuUc"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "5tyOG8UYlaw0s8G8YqS0wQ",
-        "type": "Entry",
-        "createdAt": "2017-08-31T22:04:35.017Z",
-        "updatedAt": "2017-08-31T22:04:35.017Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "linkList"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "navigation",
-        "title": "Navigation",
-        "links": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "5CuaQgEL4souWSi0uiei8o"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "5ovlS609fqOmywE2kcSAWg"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "74hFY4cLKggKiGuyy2iqK0"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "3dmRj7SUUg2Mei2eWoa0ok",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:36:34.809Z",
-        "updatedAt": "2017-08-31T21:36:34.809Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "marv",
-        "title": "Marv",
-        "summary": "A database migration library with pluggable drivers for PostgreSQL and MySQL",
-        "body": "A database migration library with pluggable drivers for PostgreSQL and MySQL",
-        "url": "https://www.github.com/guidesmiths/marv"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "48CjwSLwRGiqWIu0kYMCU2",
-        "type": "Entry",
-        "createdAt": "2017-09-09T13:10:00.260Z",
-        "updatedAt": "2017-09-09T13:10:00.260Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "imageSet"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "10½ Factor Microservices With Node.js",
-        "thumbnail": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "3aMxdRlFxuggOWEqeIYm6i"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "5uE0rEBTS8KKAo2EYAoyGq",
-        "type": "Entry",
-        "createdAt": "2017-09-01T22:06:47.727Z",
-        "updatedAt": "2017-09-01T22:06:47.727Z",
+        "createdAt": "2017-09-14T19:29:15.814Z",
+        "updatedAt": "2017-09-14T19:29:15.814Z",
         "revision": 1,
         "contentType": {
           "sys": {
@@ -1422,9 +466,9 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "privacy-policy",
-        "title": "Privacy Policy",
-        "body": "<p>This privacy policy sets out how we use and protect any information that you give us when you use this website.</p>\n\n<p>We are committed to ensuring that your privacy is protected. Should we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement.</p>\n\n<p>We may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes. This policy is effective from 1st August 2017.</p>\n\n<h3>What we collect</h3>\n<p>This website does not ask for or collect personal information.</p>\n\n<h3>How we use cookies</h3>\n<p>A cookie is a small file which asks permission to be placed on your computer&apos;s hard drive. Once you agree, the file is added and the cookie helps analyse web traffic or lets you know when you visit a particular site. Cookies allow web applications to respond to you as an individual. The web application can tailor its operations to your needs, likes and dislikes by gathering and remembering information about your preferences.</p>\n\n<p>We use traffic log cookies to identify which pages are being used. This helps us analyse data about webpage traffic and improve our website in order to tailor it to customer needs. We only use this information for statistical analysis purposes and then the data is removed from the system.</p>\n\n<p>Overall, cookies help us provide you with a better website by enabling us to monitor which pages you find useful and which you do not. A cookie in no way gives us access to your computer or any information about you, other than the data you choose to share with us.</p>\n\n<p>You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of the website.</p>\n\n<h3>Links to other websites</h3>\n\n<p>Our website may contain links to other websites of interest. However, once you have used these links to leave our site, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites and such sites are not governed by this privacy statement. You should exercise caution and look at the privacy statement applicable to the website in question.</p>"
+        "id": "Production Credits",
+        "title": "Production Credits",
+        "body": "<dl>\n<dt>POV of woman using laptop while relaxing on sofa</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/Neustockimages\">iStock.com/Neustockimages</dd>\n<dt>Businessman is looking at city</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/Pinkypills\">iStock.com/Pinkypills</dd>\n<dt>Holding vitual 12 sided role playing game dice numbers background</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/gemredding\">iStock.com/gemredding</dd>\n<dt>Hacking int the new age</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/Yuri_Arcurs\">iStock.com/Yuri_Arcurs</dd>\n<dt>Felt sew star toy</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/mamezito\">iStock.com/mamezito</dd>\n<dt>Abstract network connection background</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/nadla\">iStock.com/nadla</dd>\n<dt>Retro robot on the road</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/benoitb\">iStock.com/benoitb</dd>\n<dt>Construction workers digging</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/KatarzynaBialasiewicz\">iStock.com/KatarzynaBialasiewicz</dd>\n<dt>Logs floating On Water</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/tvisttv\">iStock.com/tvisttv</dd>\n<dt>Garbage</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/Smitt\">iStock.com/Smitt</dd>\n</dl>"
       }
     },
     {
@@ -1436,11 +480,11 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "23BQPn6dHWOu2AkK8ymS68",
+        "id": "4RdujCGE1qak4SoIoQs2UQ",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:08:23.477Z",
-        "updatedAt": "2017-08-31T21:39:20.732Z",
-        "revision": 4,
+        "createdAt": "2017-09-14T19:30:29.919Z",
+        "updatedAt": "2017-09-14T19:30:29.919Z",
+        "revision": 1,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1451,10 +495,9 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Email",
-        "text": "hello@stephen-cresswell.net",
-        "icon": "fa-envelope",
-        "url": "mailto:hello@stephen-cresswell.net"
+        "id": "Production Credits",
+        "text": "Production Credits",
+        "url": "/legal/production-credits"
       }
     },
     {
@@ -1466,25 +509,26 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "5ovlS609fqOmywE2kcSAWg",
+        "id": "BeyYWLb8AgOUsYMciKG4",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:07:33.567Z",
-        "updatedAt": "2017-09-06T21:52:48.934Z",
-        "revision": 7,
+        "createdAt": "2017-08-31T21:37:03.113Z",
+        "updatedAt": "2017-08-31T21:37:03.113Z",
+        "revision": 1,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "link"
+            "id": "project"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Blog",
-        "text": "Blog",
-        "icon": "fa-file-text-o",
-        "url": "/blog"
+        "id": "confabulous",
+        "title": "Confabulous",
+        "summary": "A hierarchical configuration loader with support for remote sources such as S3, etcd and Vault",
+        "body": "A hierarchical configuration loader with support for remote sources such as S3, etcd and Vault",
+        "url": "https://www.github.com/guidesmiths/confabulous"
       }
     },
     {
@@ -1496,54 +540,26 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "3iVaxd7WKsU2QyAKoSoAmS",
+        "id": "2Z335f4s5G4M880UCeUe0W",
         "type": "Entry",
-        "createdAt": "2017-09-09T21:50:04.809Z",
-        "updatedAt": "2017-09-09T21:50:24.820Z",
-        "revision": 2,
+        "createdAt": "2017-08-31T21:35:05.655Z",
+        "updatedAt": "2017-08-31T21:35:05.655Z",
+        "revision": 1,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "link"
+            "id": "project"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Father Ted - Channel 4",
-        "text": "Father Ted - Channel 4",
-        "url": "http://www.channel4.com/programmes/father-ted"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "3d4GTHKfj2GEsIAYcuScoQ",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:24:43.330Z",
-        "updatedAt": "2017-09-01T11:54:58.659Z",
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "copyright"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "© 2017 Stephen Cresswell. All rights reserved.",
-        "year": 2017,
-        "owner": "Stephen Cresswell",
-        "rights": "All rights reserved."
+        "id": "yadda",
+        "title": "Yadda",
+        "summary": "A cucumber-esque BDD library, but with greater flexibility",
+        "body": "A cucumber-esque BDD library, but with greater flexibility",
+        "url": "https://www.github.com/acuminous/yadda"
       }
     },
     {
@@ -1746,11 +762,11 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "9hIixEpd04ksKwqCoWYKg",
+        "id": "3pVLW3iAYgcIUuUe6EUmCS",
         "type": "Entry",
-        "createdAt": "2017-08-31T23:26:51.194Z",
-        "updatedAt": "2017-09-02T19:45:57.627Z",
-        "revision": 4,
+        "createdAt": "2017-08-31T23:43:25.836Z",
+        "updatedAt": "2017-09-14T18:24:18.768Z",
+        "revision": 9,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1761,12 +777,12 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Enterprise Grade Microservices",
+        "id": "Yadda - The Other JavaScript BDD Library",
         "thumbnail": {
           "sys": {
             "type": "Link",
             "linkType": "Asset",
-            "id": "3rAYG3rbaEI6Ka4SwigAuA"
+            "id": "3ipHCk26VGWG8YQiiy4kss"
           }
         }
       }
@@ -1780,11 +796,81 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "2mGqla8uE8ukUSUwIY8swS",
+        "id": "1cPPtw2Z3YOk6WYWO8IKY8",
         "type": "Entry",
-        "createdAt": "2017-08-31T23:27:15.257Z",
-        "updatedAt": "2017-09-09T19:20:39.945Z",
-        "revision": 9,
+        "createdAt": "2017-09-01T10:54:18.270Z",
+        "updatedAt": "2017-09-11T07:31:03.167Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "homePage"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "home",
+        "title": "Home",
+        "link": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5CuaQgEL4souWSi0uiei8o"
+          }
+        },
+        "heroImage": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2U93BNINsIgIKccgSo2Ewi"
+          }
+        },
+        "profile": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "7DYkHbFZv28smw4QukeUkS"
+          }
+        },
+        "featuredSoftware": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "BiHMILP0e4GougCcgss4G"
+          }
+        },
+        "featuredArticles": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5x2gdy4Q1yoa2wWwqiMoMA"
+          }
+        },
+        "featuredTalks": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "72cEhCrZAIOY0wmI64MMIm"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "5l4bNL91LOeicAIAMayAAc",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:44:58.380Z",
+        "updatedAt": "2017-09-14T18:33:21.861Z",
+        "revision": 15,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1795,8 +881,8 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": 1,
-        "title": "Enterprise Grade Microservices",
+        "id": 3,
+        "title": "Yadda - The Other JavaScript BDD Library",
         "author": {
           "sys": {
             "type": "Link",
@@ -1811,28 +897,117 @@
             "id": "5AeYQEH78Ie4OCKWWkmI2o"
           }
         },
-        "tweetText": "Enterprise Grade Microservices",
+        "tweetText": "Yadda - The Other JavaScript BDD Library",
         "keywords": [
           "Node.js",
-          "12 Factor",
-          "Microservices"
+          "Testing",
+          "BDD",
+          "Yadda"
         ],
-        "summary": "<p>Microservice adoption is driven by promises of simplicity, flexibility, resilience and productivity. It liberates developers from clunky frameworks and legacy technology, enabling them to release faster and more frequently than ever before. With an effective deployment pipeline it is possible to have a new microservice running in production and delivering value within 15 minutes, and to achieve 20+ production releases a day…</p>",
-        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/4pBKNjkDzaoiYqsScA6aQ2/2adc227a96754741c608e4c1ec9757fb/enterprise-grade-microservices-720x540.jpg\" title=\"Enterprise Grade Microservices\" alt=\"Businessman standing by the window in an office tower\" />\n<p>Microservice adoption is driven by promises of simplicity, flexibility, resilience and productivity. It liberates developers from clunky frameworks and legacy technology, enabling them to release faster and more frequently than ever before. With an effective deployment pipeline it is possible to have a new microservice running in production and delivering value within 15 minutes, and to achieve 20+ production releases a day.</p>\n\n<p>But the fast pace, technological freedom and segregated codebase is not without cost. The maxim that a microservice codebase doesn't matter because it's small, won't change and is easily replaced is more often false than it is true.</p>\n\n<p>The principles behind clean code and 12 factor apps are just as applicable to microservices as they are to monoliths, but are all too easily ignored in the typical hubbub and hype that surrounds microservice adoption.</p>",
-        "date": "2016-11-23T19:00+00:00",
+        "summary": "<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they're not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe('some test function') with text. Chai and Expect don't even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this() at the cost of additional ceremony. Surely there's more to BDD…</p>",
+        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/FntIzfFlAGWGOQMcoUCOm/0e35e0cf4b64d89d719a67e1dce027a4/yadda-1024x768.jpg\" title=\"Yadda\" alt=\"Man sitting among boxes labelled as JavaScript BDD librarys\" />\n\n<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they're not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe('some test function') with text. Chai and Expect don't even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this().</p>\n\n<p>The only true BDD tool found for JavaScript is CucumberJS. The problem with CucumberJS is that the Gerkin syntax is restrictive. I don't want to be limited to starting my sentences with \"Given\", \"When\", \"Then\", \"And\" and \"But\". I want to express myself naturally.</p>\n\n<p>I also want a test runner that makes good decisions about which steps to run, that works in a browser and that lets me plugin different step libraries so that I can test multiple interfaces (e.g. rest and HTML) with the same scenarios. I even want a tool that has nothing to do with testing and just maps ordinary sentences to functions so I could use it in a rules engine or build script.</p>\n\n<p>That's why I wrote <a href=\\'http://www.github.com/acuminous/yadda\\'>Yadda</a> - the other JavaScript BDD library.</p>",
+        "date": "2016-04-26T19:00+01:00",
         "event": {
           "sys": {
             "type": "Link",
             "linkType": "Entry",
-            "id": "19VmSbmGN2gGoGU24CIE2a"
+            "id": "77RHHsHuSsKIuCE4uew000"
           }
         },
-        "location": "Budapest",
+        "location": "London",
         "images": {
           "sys": {
             "type": "Link",
             "linkType": "Entry",
-            "id": "9hIixEpd04ksKwqCoWYKg"
+            "id": "3pVLW3iAYgcIUuUe6EUmCS"
+          }
+        },
+        "downloads": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1h5xhIsfS2AKUsoamMKYO8"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "Q4D5N4wyQ0wWO0AmwmCmE",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:13:14.690Z",
+        "updatedAt": "2017-09-01T22:21:04.244Z",
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Linkedin",
+        "icon": "fa-linkedin",
+        "url": "https://www.linkedin.com/in/stephencresswell/"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "13bFqt7AHAGemE2cuUsiqM",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:56:17.744Z",
+        "updatedAt": "2017-09-02T20:44:04.451Z",
+        "revision": 5,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "channelPage"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "blog",
+        "title": "Blog",
+        "link": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5ovlS609fqOmywE2kcSAWg"
+          }
+        },
+        "introImage": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "6oYIvHjLUsU0UISMyaOqq4"
+          }
+        },
+        "introText": "\"Someone is wrong on the internet\"",
+        "introLink": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5uraX28hqg2EU02umO8qog"
           }
         }
       }
@@ -1846,11 +1021,45 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "77RHHsHuSsKIuCE4uew000",
+        "id": "6xesezFf7G4mCEaYAO6wg8",
         "type": "Entry",
-        "createdAt": "2017-08-31T23:41:44.131Z",
-        "updatedAt": "2017-08-31T23:41:44.131Z",
-        "revision": 1,
+        "createdAt": "2017-08-31T23:38:00.761Z",
+        "updatedAt": "2017-09-02T19:57:40.091Z",
+        "revision": 5,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "imageSet"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Divorcing Microservices With Rascal",
+        "thumbnail": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "1qT8990i1SqsACkwECicAI"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "2ksz0Er8busMsUc6YO4Go2",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:30:46.853Z",
+        "updatedAt": "2017-08-31T21:38:42.017Z",
+        "revision": 2,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1861,101 +1070,9 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Community For Agile Testing - Yadda",
-        "text": "Community For Agile Testing",
-        "url": "https://www.meetup.com/es-ES/Community-for-Agile-Testing/events/229788565/"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "2Z335f4s5G4M880UCeUe0W",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:35:05.655Z",
-        "updatedAt": "2017-08-31T21:35:05.655Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "yadda",
-        "title": "Yadda",
-        "summary": "A cucumber-esque BDD library, but with greater flexibility",
-        "body": "A cucumber-esque BDD library, but with greater flexibility",
-        "url": "https://www.github.com/acuminous/yadda"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "BeyYWLb8AgOUsYMciKG4",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:37:03.113Z",
-        "updatedAt": "2017-08-31T21:37:03.113Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "confabulous",
-        "title": "Confabulous",
-        "summary": "A hierarchical configuration loader with support for remote sources such as S3, etcd and Vault",
-        "body": "A hierarchical configuration loader with support for remote sources such as S3, etcd and Vault",
-        "url": "https://www.github.com/guidesmiths/confabulous"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "3e6i5bHPBYKyuG8YKu066E",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:11:37.665Z",
-        "updatedAt": "2017-08-31T21:39:59.447Z",
-        "revision": 3,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Mobile",
-        "text": "+44 (0)7814033321",
-        "icon": "fa-phone",
-        "url": "tel:+447814033321"
+        "id": "See all software…",
+        "text": "See all software…",
+        "url": "/software"
       }
     },
     {
@@ -2026,6 +1143,36 @@
             "id": "g99n9a78vx0s"
           }
         },
+        "id": "3e6i5bHPBYKyuG8YKu066E",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:11:37.665Z",
+        "updatedAt": "2017-08-31T21:39:59.447Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Mobile",
+        "text": "+44 (0)7814033321",
+        "icon": "fa-phone",
+        "url": "tel:+447814033321"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
         "id": "5uraX28hqg2EU02umO8qog",
         "type": "Entry",
         "createdAt": "2017-09-02T19:21:46.999Z",
@@ -2078,6 +1225,917 @@
             "id": "4J3pfkFcTYQq8giGaCwSC8"
           }
         }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "1h5xhIsfS2AKUsoamMKYO8",
+        "type": "Entry",
+        "createdAt": "2017-09-13T22:41:25.861Z",
+        "updatedAt": "2017-09-14T18:37:20.535Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "PDF of Yadda - The Other JavaScript BDD Library",
+        "text": "Slides",
+        "icon": "fa-file-pdf-o",
+        "media": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2SF5G8WIXKQUyE0SISuuwG"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3yKsrbq2XSgU0mooEyO4oo",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:35:07.184Z",
+        "updatedAt": "2017-08-31T23:35:07.184Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Node.js Meetup - Divorcing Microservices With Rascal",
+        "text": "Node.js Meetup",
+        "url": "https://www.meetup.com/Node-js-Meetup-London/events/231560165/"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "5AeYQEH78Ie4OCKWWkmI2o",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:56:36.596Z",
+        "updatedAt": "2017-09-13T05:36:34.017Z",
+        "revision": 5,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "channelPage"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "talks",
+        "title": "Talks",
+        "link": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "74hFY4cLKggKiGuyy2iqK0"
+          }
+        },
+        "introImage": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2GQFdGSiTCsiOOCcwu6Yge"
+          }
+        },
+        "introText": "\"How did that gobshite get on the internet?\"",
+        "introLink": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "3iVaxd7WKsU2QyAKoSoAmS"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "6Y0NzhDESk8qg0IsEwc2mE",
+        "type": "Entry",
+        "createdAt": "2017-08-31T22:12:50.200Z",
+        "updatedAt": "2017-09-01T11:23:49.829Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "site"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "www.stephen-cresswell.net",
+        "title": "www.stephen-cresswell.net",
+        "navigation": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5tyOG8UYlaw0s8G8YqS0wQ"
+          }
+        },
+        "spotlights": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "fL9gaet7tCCegUiCOoUme"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2nyUF7itooUI8yMasiyAUs"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6oPgI4zNzqSIWUS2QOsQKy"
+            }
+          }
+        ],
+        "copyright": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "3d4GTHKfj2GEsIAYcuScoQ"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "1vB10lNZBSiiKsai0KiCIe",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:12:39.858Z",
+        "updatedAt": "2017-09-01T22:20:56.371Z",
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "GitHub",
+        "icon": "fa-github",
+        "url": "https://www.github.com/cressie176/"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "74hFY4cLKggKiGuyy2iqK0",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:07:43.485Z",
+        "updatedAt": "2017-09-06T21:52:24.531Z",
+        "revision": 7,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Talks",
+        "text": "Talks",
+        "icon": "fa-microphone",
+        "url": "/talks"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "7DYkHbFZv28smw4QukeUkS",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:02:19.698Z",
+        "updatedAt": "2017-09-09T21:05:12.719Z",
+        "revision": 9,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "profile"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "profile",
+        "title": "Profile",
+        "body": "<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React, as demonstrated by the <a href='https://www.github.com/cressie176/www-app'>source code</a> for this site.</p>\n\n<p>Until recently I was operating in a dual role, firstly as CTO and co-founder of <a href='https://www.guidesmiths.com'>GuideSmiths</a>, a successful Node.js & microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients.<p>\n\n</p>Due to a desire to spend more time with my family, I have negotiated an exit from GuideSmiths, and accepted a senior, hands-on position with <a href=\"https://www.tes.com\">Tes Global Ltd</a>, which can be predominantly carried out from the vicinity of my home in Suffolk.</p>\n\n\n"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "72cEhCrZAIOY0wmI64MMIm",
+        "type": "Entry",
+        "createdAt": "2017-08-31T22:52:08.237Z",
+        "updatedAt": "2017-09-01T14:04:34.786Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "featuredArticles"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "talks",
+        "title": "Upcoming & Recent Talks",
+        "icon": "fa-microphone",
+        "items": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2mGqla8uE8ukUSUwIY8swS"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3COc9WAIMMY0QKkaycg0WQ"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5l4bNL91LOeicAIAMayAAc"
+            }
+          }
+        ],
+        "link": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "Ho8vv9fNWUgeiyYggOGWo"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3w2lWUvmhGi8K0WS4mksYk",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:12:01.437Z",
+        "updatedAt": "2017-08-31T21:40:12.384Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Privacy Policy",
+        "text": "Privacy Policy",
+        "url": "/legal/privacy-policy"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "4gZuk9FDHWgcMGiwKwAuUc",
+        "type": "Entry",
+        "createdAt": "2017-09-08T17:28:04.513Z",
+        "updatedAt": "2017-09-09T11:47:30.649Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "imageSet"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Await - I'll See You In Hell",
+        "thumbnail": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "Ayv9uj9UyWu6oOge8sYMo"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "1aRUx8rcSOWacCaUeOYcqQ",
+        "type": "Entry",
+        "createdAt": "2017-09-09T13:55:50.582Z",
+        "updatedAt": "2017-09-09T14:05:52.931Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "person"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "scresswell",
+        "displayName": "Stephen Cresswell",
+        "firstName": "Stephen",
+        "lastName": "Cresswell",
+        "jobTitle": "Moderator",
+        "email": "email@stephen-cresswell.net",
+        "mobile": "+44 (0)7814 033321"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "VGOaVS3FySAaIuKs2KWg6",
+        "type": "Entry",
+        "createdAt": "2017-09-08T17:28:22.022Z",
+        "updatedAt": "2017-09-14T18:50:39.428Z",
+        "revision": 50,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "article"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": 1002,
+        "title": "Await - I'll See You In JavaScript Hell!",
+        "author": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1aRUx8rcSOWacCaUeOYcqQ"
+          }
+        },
+        "channel": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "13bFqt7AHAGemE2cuUsiqM"
+          }
+        },
+        "tweetText": "Await - I'll See You In JavaScript Hell!",
+        "keywords": [
+          "Node.js",
+          "JavaScript",
+          "Callback",
+          "Promise",
+          "Software Craftsmanship"
+        ],
+        "summary": "<p>\nThe JavaScript callback vs promises debate is mostly over. Promises won, albeit by the back door of await. I for one welcome our new asynchronous overlords, but before we rush to our new programming nirvana let's take some time to look at promises and why they failed to resolve nesting in our codebase…\n</p>",
+        "body": "<p>\nThe JavaScript callback vs promises debate is mostly over. Promises won, albeit by the back door of await. I for one welcome our new asynchronous overlords, but before we rush to our new programming nirvana let's take some time to look at promises and why they failed to resolve nesting in our codebase. The following is some code which could justifiably be damned as callback hell.\n\n<code>function welcomeToHell(cb) {\n  foo(err => {\n    if (err) return cb(err)\n    bar(err => {\n      if (err) return cb(err)\n      baz(err => {\n        if (err) return cb(err)\n        cb()\n      })\n    })\n  })\n}\n</code>\n<p>\nThe only reason the callback based code might look like this, is because its author did a shoddy job. By using a library like <a href=\"https://www.npmjs.com/package/async\">async</a> things can be much improved. That aside, if the code had been written with promises it might look as follows become…\n</p>\n<code>function salvationIsHere() {\n  return foo()\n    .then(bar)\n    .then(baz)\n}\n</code>\n<p>\nIf all promises code ever written looked like the example above I would stop now. <em>It doesn't</em>. Promises are simple when code follows a linear sequence or can run entirely in parallel, but when you add conditions and/or iteration, it become hard to keep them simple. As a result most of the promise based code I come across looks nothing like the above. Instead it looks like this…\n</p>\n<code>function welcomeBackToHell(email) {\n  return getUserByEmail(email)\n    .then(user => getUserRoles(user.id)\n      .then(roles => {\n        if (roles.indexOf('publisher') < 0) return { user, roles }\n        return getUserArticles(user.id)\n          .then(articles => ({ user, roles, articles }))\n      })\n  )\n}\n</code>\n<p>\nAll we've done is trade callback hell for promise hell. Now my point isn't that with appropriate care promisified code can't read well. <em>It can</em>. But this is equally true with <a href=\"https://github.com/cressie176/www-app/blob/master/server/lib/components/cms/cms.js\">callbacks</a>, providing you take the time to write functions that:\n</p>\n<ol>\n  <li>Have meaningful names</li>\n  <li>Are small (I aim for &lt;=4 lines)</li>\n  <li>Do one thing well</li>\n  <li>Have a single level of abstraction</li>\n  <li>Minimise parameters (I aim for &lt;= 2 excluding cb)</li>\n  <li>Avoid booleans</li>\n  <li>Minimise conditional logic (guard conditions permitted)</li>  \n</ol>\n<p>\nand modules that:\n</p>\n<ol>\n  <li>Have meaningful names</li>\n  <li>Have a single responsibility</li>\n  <li>Encapsulate data and behaviour</li>\n</ol>\n<p>\nTo write coherent and cohesive code you have to understand and care about the principles of software craftsmanship. This is thousands of times more important than whether you use callbacks, promises or await. Lets try to remember before we damn codebases to yet another level of asynchronous hell with await.\n</p>",
+        "date": "2017-08-26T19:00+01:00",
+        "images": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "4gZuk9FDHWgcMGiwKwAuUc"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "XXrykuPGkUEeuSkMGug64",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:13:33.601Z",
+        "updatedAt": "2017-09-01T22:21:21.156Z",
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Twitter",
+        "icon": "fa-twitter",
+        "url": "https://www.twitter.com/cressie176"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "fL9gaet7tCCegUiCOoUme",
+        "type": "Entry",
+        "createdAt": "2017-08-31T22:03:21.056Z",
+        "updatedAt": "2017-08-31T22:03:21.056Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "linkList"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "contact",
+        "title": "Contact",
+        "links": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "23BQPn6dHWOu2AkK8ymS68"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3e6i5bHPBYKyuG8YKu066E"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "5CuaQgEL4souWSi0uiei8o",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:07:22.607Z",
+        "updatedAt": "2017-09-06T21:51:36.394Z",
+        "revision": 7,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Home",
+        "text": "Home",
+        "icon": "fa-home",
+        "url": "/"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "6NXtw4v3GMCgoaE4IKk6a2",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:37:38.599Z",
+        "updatedAt": "2017-08-31T21:37:38.599Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "systemic",
+        "title": "Systemic",
+        "summary": "A minimal dependency injection library",
+        "body": "A minimal dependency injection library",
+        "url": "https://www.github.com/guidesmiths/systemic"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "7iTlZrljgWkQ0gGaYywaUU",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:36:02.352Z",
+        "updatedAt": "2017-08-31T21:36:02.353Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "rascal",
+        "title": "Rascal",
+        "summary": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
+        "body": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
+        "url": "https://www.github.com/guidesmiths/rascal"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "Ho8vv9fNWUgeiyYggOGWo",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:31:09.787Z",
+        "updatedAt": "2017-08-31T21:38:34.266Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "See all talks…",
+        "text": "See all talks…",
+        "url": "/talks"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "48CjwSLwRGiqWIu0kYMCU2",
+        "type": "Entry",
+        "createdAt": "2017-09-09T13:10:00.260Z",
+        "updatedAt": "2017-09-09T13:10:00.260Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "imageSet"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "10½ Factor Microservices With Node.js",
+        "thumbnail": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "3aMxdRlFxuggOWEqeIYm6i"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3dmRj7SUUg2Mei2eWoa0ok",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:36:34.809Z",
+        "updatedAt": "2017-08-31T21:36:34.809Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "marv",
+        "title": "Marv",
+        "summary": "A database migration library with pluggable drivers for PostgreSQL and MySQL",
+        "body": "A database migration library with pluggable drivers for PostgreSQL and MySQL",
+        "url": "https://www.github.com/guidesmiths/marv"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "5uE0rEBTS8KKAo2EYAoyGq",
+        "type": "Entry",
+        "createdAt": "2017-09-01T22:06:47.727Z",
+        "updatedAt": "2017-09-01T22:06:47.727Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "legalPage"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "privacy-policy",
+        "title": "Privacy Policy",
+        "body": "<p>This privacy policy sets out how we use and protect any information that you give us when you use this website.</p>\n\n<p>We are committed to ensuring that your privacy is protected. Should we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement.</p>\n\n<p>We may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes. This policy is effective from 1st August 2017.</p>\n\n<h3>What we collect</h3>\n<p>This website does not ask for or collect personal information.</p>\n\n<h3>How we use cookies</h3>\n<p>A cookie is a small file which asks permission to be placed on your computer&apos;s hard drive. Once you agree, the file is added and the cookie helps analyse web traffic or lets you know when you visit a particular site. Cookies allow web applications to respond to you as an individual. The web application can tailor its operations to your needs, likes and dislikes by gathering and remembering information about your preferences.</p>\n\n<p>We use traffic log cookies to identify which pages are being used. This helps us analyse data about webpage traffic and improve our website in order to tailor it to customer needs. We only use this information for statistical analysis purposes and then the data is removed from the system.</p>\n\n<p>Overall, cookies help us provide you with a better website by enabling us to monitor which pages you find useful and which you do not. A cookie in no way gives us access to your computer or any information about you, other than the data you choose to share with us.</p>\n\n<p>You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of the website.</p>\n\n<h3>Links to other websites</h3>\n\n<p>Our website may contain links to other websites of interest. However, once you have used these links to leave our site, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites and such sites are not governed by this privacy statement. You should exercise caution and look at the privacy statement applicable to the website in question.</p>"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "5tyOG8UYlaw0s8G8YqS0wQ",
+        "type": "Entry",
+        "createdAt": "2017-08-31T22:04:35.017Z",
+        "updatedAt": "2017-08-31T22:04:35.017Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "linkList"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "navigation",
+        "title": "Navigation",
+        "links": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5CuaQgEL4souWSi0uiei8o"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5ovlS609fqOmywE2kcSAWg"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "74hFY4cLKggKiGuyy2iqK0"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3iVaxd7WKsU2QyAKoSoAmS",
+        "type": "Entry",
+        "createdAt": "2017-09-09T21:50:04.809Z",
+        "updatedAt": "2017-09-09T21:50:24.820Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Father Ted - Channel 4",
+        "text": "Father Ted - Channel 4",
+        "url": "http://www.channel4.com/programmes/father-ted"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3d4GTHKfj2GEsIAYcuScoQ",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:24:43.330Z",
+        "updatedAt": "2017-09-01T11:54:58.659Z",
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "copyright"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "© 2017 Stephen Cresswell. All rights reserved.",
+        "year": 2017,
+        "owner": "Stephen Cresswell",
+        "rights": "All rights reserved."
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "23BQPn6dHWOu2AkK8ymS68",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:08:23.477Z",
+        "updatedAt": "2017-08-31T21:39:20.732Z",
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Email",
+        "text": "hello@stephen-cresswell.net",
+        "icon": "fa-envelope",
+        "url": "mailto:hello@stephen-cresswell.net"
       }
     }
   ],
