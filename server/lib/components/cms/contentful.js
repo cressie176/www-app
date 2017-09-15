@@ -60,7 +60,11 @@ class KeyValueStore {
   }
 
   addAsset(asset) {
-    this.set(asset.sys.id, 'asset', { url: asset.fields.file.url, title: asset.fields.title, description: asset.fields.description, });
+    this.set(asset.sys.id, 'asset', {
+      url: `https:${asset.fields.file.url}`,
+      title: asset.fields.title,
+      description: asset.fields.description,
+    });
   }
 
   values() {
