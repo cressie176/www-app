@@ -8,9 +8,4 @@ The Node.js / React application which serves www.stephen-cresswell.net
 1. [www-compose](https://www.github.com/cressie176/www-nginx) - A [Docker Compose](https://docs.docker.com/compose/) project for deploying www.stephen-cresswell.net
 
 ## TODO
-1. Image restrictions
 1. consider duplicated content model
-1. Meta tags (probably not possible)
-1. Fix twitter and facebook buttons (failing due to CSP)
-1. Improve image quality (yadda is especially bad)
-1. rss / atom

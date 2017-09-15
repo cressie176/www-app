@@ -40,13 +40,15 @@ export default function(options = {}) {
     function listReferences(cb) {
       listJsonFiles(config.reference.path, (err, ids) => {
         if (err) return cb(err);
-        async.reduce(ids, {}, (references, id, cb) => {
-          loadJsonFile(getReferencePath(id), (err, reference) => {
-            if (err) return cb(err);
-            reference.active = id === config.reference.id;
-            cb(null, Object.assign(references, { [id]: reference, }));
-          });
-        }, cb);
+        async.reduce(ids, {}, toReferences, cb);
+      });
+    }
+
+    function toReferences(references, id, cb) {
+      loadJsonFile(getReferencePath(id), (err, reference) => {
+        if (err) return cb(err);
+        reference.active = id === config.reference.id;
+        cb(null, Object.assign(references, { [id]: reference, }));
       });
     }
 
