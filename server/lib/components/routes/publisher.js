@@ -4,7 +4,12 @@ export default function(options = {}) {
 
   function start({ config, logger, app, contentful, store, }, cb) {
 
-    app.use('/api/publisher', app.locals.hasRole('publisher'), bodyParser.json(), );
+    app.use('/api/publisher', app.locals.hasRole('publisher'), bodyParser.json(), (req, res, next) => {
+      res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
+      res.set('Pragma', 'no-cache');
+      res.set('Expires', '0');
+      next();
+    });
 
     app.get('/api/publisher/1.0/tags', (req, res, next) => {
       store.listTags((err, tags) => {

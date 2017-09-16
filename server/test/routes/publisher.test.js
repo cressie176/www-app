@@ -61,9 +61,24 @@ describe('Publisher API', () => {
       });
 
       expect(res.statusCode).toBe(200);
-      expect(res.headers['content-type'].toLowerCase()).toBe('application/json; charset=utf-8');
+      expect(res.headers['content-type']).toBe('application/json; charset=utf-8');
       expect(res.body.length).toBe(1);
       expect(res.body[0]).toBe("1");
+    });
+
+    it('should not be cached', async () => {
+
+      expect.assertions(3);
+
+      const res = await request({
+        url: `http://${config.server.host}:${config.server.port}/api/publisher/1.0/tags`,
+        resolveWithFullResponse: true,
+        json: true,
+      });
+
+      expect(res.headers['cache-control']).toBe('no-cache, no-store, must-revalidate');
+      expect(res.headers['pragma']).toBe('no-cache');
+      expect(res.headers['expires']).toBe('0');
     });
 
   });
@@ -138,7 +153,7 @@ describe('Publisher API', () => {
         json: true,
       }).catch(errors.StatusCodeError, (reason) => {
         expect(reason.statusCode).toBe(500);
-        expect(reason.response.headers['content-type'].toLowerCase()).toBe('application/json; charset=utf-8');
+        expect(reason.response.headers['content-type']).toBe('application/json; charset=utf-8');
       });
 
     });
@@ -159,9 +174,24 @@ describe('Publisher API', () => {
       });
 
       expect(res.statusCode).toBe(200);
-      expect(res.headers['content-type'].toLowerCase()).toBe('application/json; charset=utf-8');
+      expect(res.headers['content-type']).toBe('application/json; charset=utf-8');
       expect(res.body.test.tag).toBe("1");
       expect(res.body.test.active).toBe(true);
+    });
+
+    it('should not be cached', async () => {
+
+      expect.assertions(3);
+
+      const res = await request({
+        url: `http://${config.server.host}:${config.server.port}/api/publisher/1.0/references`,
+        resolveWithFullResponse: true,
+        json: true,
+      });
+
+      expect(res.headers['cache-control']).toBe('no-cache, no-store, must-revalidate');
+      expect(res.headers['pragma']).toBe('no-cache');
+      expect(res.headers['expires']).toBe('0');
     });
 
   });
