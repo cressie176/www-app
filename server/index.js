@@ -1,5 +1,5 @@
 process.env.APP_ENV = process.env.APP_ENV || 'local';
-
+import 'newrelic';
 import system from './lib/system';
 import runner from 'systemic-domain-runner';
 
