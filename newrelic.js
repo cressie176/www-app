@@ -1,6 +1,6 @@
 exports.config = {
   app_name: [`www-app-${process.env.APP_ENV}`,],
-  agent_enabled: true,
+  agent_enabled: false,
   capture_params: true,
   logging: {
     level: 'info',
