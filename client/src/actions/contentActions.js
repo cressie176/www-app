@@ -103,6 +103,10 @@ export const SELECT_CONTENT_ERROR = 'SELECT_CONTENT_ERROR';
 export function selectContent(tag, options = { quiet: false, }) {
   return async (dispatch) => {
 
+    const cookies = new Cookies();
+    cookies.remove('tag', { path: '/', });
+    cookies.remove('nocache', { path: '/', });
+
     dispatch({ type: SELECT_CONTENT_REQUEST, loading: true, tag, });
 
     try {
