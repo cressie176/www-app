@@ -7,6 +7,7 @@ import PageIntro from '../common/PageIntro';
 import ExtractContent from './ExtractContent';
 import TagPicker from './TagPicker';
 import TagTable from './TagTable';
+import naturally from 'string-natural-compare';
 
 
 import './PublisherPage.css';
@@ -63,7 +64,7 @@ function mapStateToProps(state, props) {
     });
     return tag;
   }).sort((a, b) => {
-    return b.id.localeCompare(a.id);
+    return naturally(b.id, a.id);
   });
 
   const activeReference = Object.keys(references).map(id => references[id]).find(reference => reference.active) || {};
