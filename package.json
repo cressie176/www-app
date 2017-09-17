@@ -36,6 +36,7 @@
     "request-promise": "^4.2.1"
   },
   "dependencies": {
+    "@newrelic/native-metrics": "^2.1.1",
     "babel-preset-stage-3": "^6.24.1",
     "body-parser": "^1.17.2",
     "boom": "^5.2.0",
