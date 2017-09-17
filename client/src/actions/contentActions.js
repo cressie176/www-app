@@ -90,10 +90,11 @@ export const PREVIEW_CONTENT = 'PREVIEW_CONTENT';
 
 export function previewContent(tag, options = { quiet: false, }) {
   return async (dispatch) => {
-    new Cookies().set('tag', tag, { path: '/', });
+    const cookies = new Cookies();
+    cookies.set('tag', tag, { path: '/', });
+    cookies.set('nocache', true, { path: '/', });
   };
 }
-
 
 export const SELECT_CONTENT_REQUEST = 'SELECT_CONTENT_REQUEST';
 export const SELECT_CONTENT_SUCCESS = 'SELECT_CONTENT_SUCCESS';
