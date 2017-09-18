@@ -57,7 +57,7 @@ describe('FeatureProject', () => {
     expect(wrapper.hasClass('featured-project')).toBe(true);
     expect(wrapper.find('.featured-project__link').prop('href')).toBe('https://yadda');
     expect(wrapper.find('.featured-project__link').text()).toBe('Yadda');
-    expect(wrapper.find('.featured-project__downloads__icon').hasClass('fa-spinner')).toBe(true);
+    expect(wrapper.find('.featured-project__downloads i').hasClass('fa-spinner')).toBe(true);
     expect(wrapper.find('.featured-project__downloads').hasClass('featured-project__downloads--loading')).toBe(true);
     expect(wrapper.find('.featured-project__downloads').text()).toBe('');
   });
@@ -76,7 +76,7 @@ describe('FeatureProject', () => {
     expect(wrapper.hasClass('featured-project')).toBe(true);
     expect(wrapper.find('.featured-project__link').prop('href')).toBe('https://yadda');
     expect(wrapper.find('.featured-project__link').text()).toBe('Yadda');
-    expect(wrapper.find('.featured-project__downloads__icon').hasClass('fa-spinner')).toBe(false);
+    expect(wrapper.find('.featured-project__downloads i').hasClass('fa-spinner')).toBe(false);
     expect(wrapper.find('.featured-project__downloads').hasClass('featured-project__downloads--missing')).toBe(true);
     expect(wrapper.find('.featured-project__downloads').text()).toBe('');
   });
@@ -95,7 +95,7 @@ describe('FeatureProject', () => {
     expect(wrapper.hasClass('featured-project')).toBe(true);
     expect(wrapper.find('.featured-project__link').prop('href')).toBe('https://yadda');
     expect(wrapper.find('.featured-project__link').text()).toBe('Yadda');
-    expect(wrapper.find('.featured-project__downloads__icon').hasClass('fa-spinner')).toBe(false);
+    expect(wrapper.find('.featured-project__downloads i').hasClass('fa-spinner')).toBe(false);
     expect(wrapper.find('.featured-project__downloads').hasClass('featured-project__downloads--error')).toBe(true);
     expect(wrapper.find('.featured-project__downloads').text()).toBe('');
   });
@@ -114,7 +114,7 @@ describe('FeatureProject', () => {
     expect(wrapper.hasClass('featured-project')).toBe(true);
     expect(wrapper.find('.featured-project__link').prop('href')).toBe('https://yadda');
     expect(wrapper.find('.featured-project__link').text()).toBe('Yadda');
-    expect(wrapper.find('.featured-project__downloads__icon').hasClass('fa-download')).toBe(true);
+    expect(wrapper.find('.featured-project__downloads i').hasClass('fa-download')).toBe(true);
     expect(wrapper.find('.featured-project__downloads').hasClass('featured-project__downloads--loaded')).toBe(true);
     expect(wrapper.find('.featured-project__downloads').text()).toBe('1,000');
   });

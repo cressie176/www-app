@@ -19,7 +19,7 @@ export default async function request(url, { method = 'GET', headers = {}, crede
   }
 
   function assignCsrfToken(headers) {
-    const { host } = Url.parse(url);
+    const { host, } = Url.parse(url);
     if (host) return headers;
 
     const cookies = new Cookies();
@@ -27,6 +27,6 @@ export default async function request(url, { method = 'GET', headers = {}, crede
     return {
       ...headers,
       'x-csrf-token': csrfToken,
-    }
+    };
   }
 }
