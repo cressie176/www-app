@@ -63,6 +63,9 @@ module.exports = {
         },
       },
     },
+    csrf: {
+      secure: true,
+    },
     feeds: {
       atom: {
         template: path.join(process.cwd(), 'server', 'templates', 'atom.xml'),

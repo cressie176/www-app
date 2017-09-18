@@ -35,6 +35,9 @@ module.exports = {
         foo: 'bar',
       },
     },
+    csrf: {
+      secure: false,
+    },
   },
   server: {
     host: '0.0.0.0',

@@ -15,7 +15,7 @@ describe('Publisher API', () => {
 
   beforeAll(done => {
     system = createSystem()
-      .set('config.overrides', { server: { port: 13002, }, })
+      .set('config.overrides', { server: { port: 13006, }, })
       .set('transports.human', human(loggerOptions))
       .set('cms.store', storeComponent()).dependsOn('config', 'logger')
       .set('contentful', { extract: cb => cb(null, {}), } )
@@ -85,38 +85,71 @@ describe('Publisher API', () => {
 
   describe('Save Content', () => {
 
-    it('should save new content', async () => {
-
-      expect.assertions(1);
-
-      const res = await request({
-        method: 'POST',
-        url: `http://${config.server.host}:${config.server.port}/api/publisher/1.0/tags/2`,
-        resolveWithFullResponse: true,
-        json: true,
-      });
-
-      expect(res.statusCode).toBe(204);
-    });
-
     it('should save new content', async (done) => {
 
       expect.assertions(3);
 
+      const jar = request.jar();
+      const csrfToken = await getCsrfToken(jar);
+
       const res = await request({
         method: 'POST',
         url: `http://${config.server.host}:${config.server.port}/api/publisher/1.0/tags/2`,
+        headers: { 'x-csrf-token': csrfToken, },
         resolveWithFullResponse: true,
         json: true,
+        jar,
       });
 
       expect(res.statusCode).toBe(204);
+
       store.listTags((err, tags) => {
         expect(err).toBeFalsy();
         expect(tags.length).toBe(2);
         done();
       });
     });
+
+    it('should check csrf token exists', async (done) => {
+
+      expect.assertions(1);
+
+      loggerOptions.suppress = true;
+
+      await request({
+        method: 'POST',
+        url: `http://${config.server.host}:${config.server.port}/api/publisher/1.0/tags/2`,
+        resolveWithFullResponse: true,
+        json: true,
+      }).catch(errors.StatusCodeError, (reason) => {
+        expect(reason.statusCode).toBe(403);
+        done();
+      });
+    });
+
+
+    it('should check csrf token matches header', async (done) => {
+
+      expect.assertions(1);
+
+      loggerOptions.suppress = true;
+
+      const jar = request.jar();
+      await getCsrfToken(jar);
+
+      await request({
+        method: 'POST',
+        url: `http://${config.server.host}:${config.server.port}/api/publisher/1.0/tags/2`,
+        headers: { 'x-csrf-token': 'this-is-not-the-token-you-are-looking-for', },
+        resolveWithFullResponse: true,
+        json: true,
+        jar,
+      }).catch(errors.StatusCodeError, (reason) => {
+        expect(reason.statusCode).toBe(403);
+        done();
+      });
+    });
+
   });
 
   describe('Delete Content', () => {
@@ -125,11 +158,16 @@ describe('Publisher API', () => {
 
       expect.assertions(3);
 
+      const jar = request.jar();
+      const csrfToken = await getCsrfToken(jar);
+
       const res = await request({
         method: 'DELETE',
         url: `http://${config.server.host}:${config.server.port}/api/publisher/1.0/tags/1`,
+        headers: { 'x-csrf-token': csrfToken, },
         resolveWithFullResponse: true,
         json: true,
+        jar,
       });
 
       expect(res.statusCode).toBe(204);
@@ -146,16 +184,37 @@ describe('Publisher API', () => {
 
       loggerOptions.suppress = true;
 
+      const jar = request.jar();
+      const csrfToken = await getCsrfToken(jar);
+
       await request({
         method: 'DELETE',
         url: `http://${config.server.host}:${config.server.port}/api/publisher/1.0/tags/99`,
+        headers: { 'x-csrf-token': csrfToken, },
         resolveWithFullResponse: true,
         json: true,
+        jar,
       }).catch(errors.StatusCodeError, (reason) => {
         expect(reason.statusCode).toBe(500);
         expect(reason.response.headers['content-type']).toBe('application/json; charset=utf-8');
       });
+    });
 
+    it('should check csrf token exists', async (done) => {
+
+      expect.assertions(1);
+
+      loggerOptions.suppress = true;
+
+      await request({
+        method: 'DELETE',
+        url: `http://${config.server.host}:${config.server.port}/api/publisher/1.0/tags/1`,
+        resolveWithFullResponse: true,
+        json: true,
+      }).catch(errors.StatusCodeError, (reason) => {
+        expect(reason.statusCode).toBe(403);
+        done();
+      });
     });
 
   });
@@ -202,11 +261,16 @@ describe('Publisher API', () => {
 
       expect.assertions(3);
 
+      const jar = request.jar();
+      const csrfToken = await getCsrfToken(jar);
+
       const res = await request({
         method: 'POST',
         url: `http://${config.server.host}:${config.server.port}/api/publisher/1.0/references/2`,
+        headers: { 'x-csrf-token': csrfToken, },
         resolveWithFullResponse: true,
         json: true,
+        jar,
       });
 
       expect(res.statusCode).toBe(204);
@@ -216,5 +280,38 @@ describe('Publisher API', () => {
         done();
       });
     });
+
+
+    it('should check csrf token exists', async (done) => {
+
+      expect.assertions(1);
+
+      loggerOptions.suppress = true;
+
+      await request({
+        method: 'POST',
+        url: `http://${config.server.host}:${config.server.port}/api/publisher/1.0/references/2`,
+        resolveWithFullResponse: true,
+        json: true,
+      }).catch(errors.StatusCodeError, (reason) => {
+        expect(reason.statusCode).toBe(403);
+        done();
+      });
+    });
   });
+
+  async function getCsrfToken(jar) {
+
+    await request({
+      method: 'GET',
+      url: `http://${config.server.host}:${config.server.port}/api/publisher/1.0/tags`,
+      resolveWithFullResponse: true,
+      json: true,
+      jar,
+    });
+
+    return jar.getCookies(`http://${config.server.host}`).map(cookie => cookie.toJSON()).find(cookie => {
+      return cookie.key === 'x-csrf-token';
+    }).value;
+  }
 });

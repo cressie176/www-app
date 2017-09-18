@@ -33,6 +33,9 @@ module.exports = {
         },
       },
     },
+    csrf: {
+      secure: false,
+    },
   },
   server: {
     port: 3001,

@@ -8,4 +8,4 @@ The Node.js / React application which serves www.stephen-cresswell.net
 1. [www-compose](https://www.github.com/cressie176/www-nginx) - A [Docker Compose](https://docs.docker.com/compose/) project for deploying www.stephen-cresswell.net
 
 ## TODO
-1. consider duplicated content model
+1. Consider deduping content model
