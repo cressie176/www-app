@@ -126,6 +126,37 @@ describe('www.stephen-cresswell.net', () => {
     expect(Object.keys(res.body).length).toBe(6);
   });
 
+  it('should respond to sitemap requests', async () => {
+
+    expect.assertions(5);
+
+    const res = await request({
+      url: `http://${config.server.host}:${config.server.port}/sitemap.xml`,
+      resolveWithFullResponse: true,
+      followRedirect: false,
+    });
+
+    expectStatus(res, 200);
+    expectHeader(res, 'content-type', 'application/xml; charset=utf-8');
+    expectHeader(res, 'cache-control', 'public, max-age=3600, must-revalidate');
+  });
+
+  it('should respond to atom feed requests', async () => {
+
+    expect.assertions(5);
+
+    const res = await request({
+      url: `http://${config.server.host}:${config.server.port}/feeds/atom.xml`,
+      resolveWithFullResponse: true,
+      followRedirect: false,
+    });
+
+    expectStatus(res, 200);
+    expectHeader(res, 'content-type', 'application/atom+xml; charset=utf-8');
+    expectHeader(res, 'cache-control', 'public, max-age=3600, must-revalidate');
+  });
+
+
   it('should respond to robots.txt requests', async () => {
 
     expect.assertions(5);
@@ -156,7 +187,7 @@ describe('www.stephen-cresswell.net', () => {
     expectHeader(res, 'cache-control', 'public, max-age=3600, must-revalidate');
   });
 
-  it('should respond to static resources', async () => {
+  it('should respond to static resource requests', async () => {
 
     expect.assertions(5);
 
@@ -192,15 +223,16 @@ describe('www.stephen-cresswell.net', () => {
 
     expect.assertions(5);
 
-    const res = await request({
+    await request({
       url: `http://${config.server.host}:${config.server.port}/unknown`,
       resolveWithFullResponse: true,
       followRedirect: false,
+    }).catch(errors.StatusCodeError, (reason) => {
+      expectStatus(reason.response, 404);
+      expectHeader(reason.response, 'content-type', 'text/html; charset=utf-8');
+      expectHeader(reason.response, 'cache-control', 'public, max-age=3600, must-revalidate');
     });
 
-    expectStatus(res, 200);
-    expectHeader(res, 'content-type', 'text/html; charset=utf-8');
-    expectHeader(res, 'cache-control', 'public, max-age=3600, must-revalidate');
   });
 
   it('should protect private resources', async () => {
@@ -217,7 +249,7 @@ describe('www.stephen-cresswell.net', () => {
     });
   });
 
-  it('should log requests under normal circumstances', async () => {
+  it('should log requests to root', async () => {
 
     expect.assertions(1);
 
@@ -235,24 +267,7 @@ describe('www.stephen-cresswell.net', () => {
     expect(handler.mock.calls.length).toBe(1);
   });
 
-  it('should log requests without user agents', async () => {
-
-    expect.assertions(1);
-
-    const handler = jest.fn();
-    logger.on('message', handler);
-
-    await request({
-      url: `http://${config.server.host}:${config.server.port}`,
-      resolveWithFullResponse: true,
-      followRedirect: false,
-    });
-
-    logger.removeListener('message', handler);
-    expect(handler.mock.calls.length).toBe(1);
-  });
-
-  it('should log request to static resources', async () => {
+  it('should log request to robots.txt', async () => {
 
     expect.assertions(1);
 
@@ -268,6 +283,41 @@ describe('www.stephen-cresswell.net', () => {
     logger.removeListener('message', handler);
     expect(handler.mock.calls.length).toBe(1);
 
+  });
+
+  it('should not log request to static resources', async () => {
+
+    expect.assertions(1);
+
+    const handler = jest.fn();
+    logger.on('message', handler);
+
+    await request({
+      url: `http://${config.server.host}:${config.server.port}/facebook.js`,
+      resolveWithFullResponse: true,
+      followRedirect: false,
+    });
+
+    logger.removeListener('message', handler);
+    expect(handler.mock.calls.length).toBe(0);
+
+  });
+
+  it('should log requests without user agents', async () => {
+
+    expect.assertions(1);
+
+    const handler = jest.fn();
+    logger.on('message', handler);
+
+    await request({
+      url: `http://${config.server.host}:${config.server.port}`,
+      resolveWithFullResponse: true,
+      followRedirect: false,
+    });
+
+    logger.removeListener('message', handler);
+    expect(handler.mock.calls.length).toBe(1);
   });
 
   it('should not log request from StatusCake', async () => {

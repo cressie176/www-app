@@ -46,7 +46,7 @@ module.exports = function() {
           .sort(byLocation);
 
         res.set('content-type' ,'application/xml; charset=utf-8');
-        res.set('cache-control', 'public, max-age=86400, must-revalidate');
+        res.set('cache-control', 'public, max-age=3600, must-revalidate');
         res.send(templates.sitemap.render({ urls, }));
       });
 

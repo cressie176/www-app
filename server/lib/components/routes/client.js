@@ -1,7 +1,7 @@
 import path from 'path';
 import express from 'systemic-express/express';
 
-const OTHER_CLIENT_REQUESTS = /^(?!(?:\/api\/|\/__\/)).*/;
+const CLIENT_REQUESTS = /^(?!(?:\/api\/|\/__\/)).*/;
 
 module.exports = function() {
 
@@ -28,23 +28,18 @@ module.exports = function() {
     // Always serve the app from root
     app.get('/index.html', (req, res) => res.redirect(301, '/'));
 
-    // Handle requests to the robots, humans and client app
+    // Handle requests to the robots.txt, humans.txt and the client app
     app.get([/^\/$/, '/robots.txt', '/humans.txt',], app.locals.hasRole('guest'), staticMiddleware);
 
-    // Do not log non index requests to static content
-    app.get(prepper.disable, app.locals.hasRole('guest'), staticMiddleware);
-
     // Attempt to serve other static resources
-    app.get(OTHER_CLIENT_REQUESTS, app.locals.hasRole('guest'), staticMiddleware);
+    app.get(CLIENT_REQUESTS, prepper.disable, app.locals.hasRole('guest'), staticMiddleware);
 
     // Ensures client 404's are handled by the app
-    app.get(OTHER_CLIENT_REQUESTS, app.locals.hasRole('guest'), sendIndex);
-
-
-    function sendIndex(req, res, next) {
+    app.get(CLIENT_REQUESTS, prepper.enable, app.locals.hasRole('guest'), (req, res, next) => {
       res.set('cache-control', 'public, max-age=3600, must-revalidate');
+      res.status(404);
       res.sendFile(path.join(process.cwd(), 'client', 'build', 'index.html'));
-    }
+    });
 
     cb();
   }
