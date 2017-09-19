@@ -7,21 +7,32 @@ export default function(options = {}) {
   function start({ config, logger, app, }, cb) {
 
     app.use(cookieParser(), (req, res, next) => {
-      return ['GET', 'HEAD', 'OPTIONS',].indexOf(req.method) >= 0
-        ? dropCsrfToken(req, res, next)
-        : checkCsrfToken(req, res, next);
+      if (isAccessor(req)) {
+        if (!hasCsrfToken(req)) dropCsrfToken(res);
+        next();
+      } else if (checkCsrfToken(req)) {
+        next();
+      } else {
+        next(Boom.forbidden());
+      }
     });
 
-    function dropCsrfToken(req, res, next) {
-      res.cookie('x-csrf-token', uuid(), { path: '/', secure: config.secure, });
-      next();
+    function isAccessor(req) {
+      return ['GET', 'HEAD', 'OPTIONS',].indexOf(req.method) >= 0;
     }
 
-    function checkCsrfToken(req, res, next) {
+    function hasCsrfToken(req) {
+      return req.cookies['x-csrf-token'];
+    }
+
+    function checkCsrfToken(req) {
       const headerToken = req.headers['x-csrf-token'];
       const cookieToken = req.cookies['x-csrf-token'];
-      if (!headerToken || !cookieToken || headerToken !== cookieToken) return next(Boom.forbidden());
-      next();
+      return headerToken && cookieToken && headerToken === cookieToken;
+    }
+
+    function dropCsrfToken(res) {
+      res.cookie('x-csrf-token', uuid(), { path: '/', secure: config.secure, });
     }
 
     cb();
