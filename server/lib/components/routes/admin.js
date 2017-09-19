@@ -3,7 +3,7 @@ export default function(options = {}) {
   function start({ pkg, app, prepper, }, cb) {
 
     app.get('/__/*', (req, res, next) => {
-      res.set('cache-control', 'no-cache');
+      res.set('Cache-Control', 'no-cache');
       next();
     });
 

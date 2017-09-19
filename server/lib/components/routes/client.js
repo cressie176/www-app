@@ -8,7 +8,7 @@ module.exports = function() {
   function start({ app, config, logger, prepper,}, cb) {
 
     const staticMiddleware = express.static('./client/build', { setHeaders: (res, path) => {
-      res.set('cache-control', 'public, max-age=3600, must-revalidate');
+      res.set('Cache-Control', 'public, max-age=3600, must-revalidate');
     }, });
 
     // We use StatusCake for monitoring site availability. No need to log
@@ -20,8 +20,8 @@ module.exports = function() {
 
     // Make runtime client config available to index.html via script tag (yuck!)
     app.get('/config.js', app.locals.hasRole('guest'), (req, res) => {
-      res.set('content-type' ,'application/javascript; charset=utf-8');
-      res.set('cache-control', 'public, max-age=3600, must-revalidate');
+      res.set('Content-Type' ,'application/javascript; charset=utf-8');
+      res.set('Cache-Control', 'public, max-age=3600, must-revalidate');
       res.send(`this.window.config = ${JSON.stringify(config.public)}`);
     });
 
@@ -36,7 +36,7 @@ module.exports = function() {
 
     // Ensures client 404's are handled by the app
     app.get(CLIENT_REQUESTS, prepper.enable, app.locals.hasRole('guest'), (req, res, next) => {
-      res.set('cache-control', 'public, max-age=3600, must-revalidate');
+      res.set('Cache-Control', 'public, max-age=3600, must-revalidate');
       res.status(404);
       res.sendFile(path.join(process.cwd(), 'client', 'build', 'index.html'));
     });

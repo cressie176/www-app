@@ -7,7 +7,7 @@ module.exports = function(options = {}) {
   function start({ config, app, cms, store, }, cb) {
 
     app.use('/api/content', app.locals.hasRole('guest'), bodyParser.json(), (req, res, next) => {
-      res.set('cache-control', 'public, max-age=3600, must-revalidate');
+      res.set('Cache-Control', 'public, max-age=3600, must-revalidate');
       next();
     });
 
@@ -20,7 +20,7 @@ module.exports = function(options = {}) {
     });
 
     app.use('/api/content', (req, res, next) => {
-      res.set('cache-control', 'public, max-age=3600, must-revalidate');
+      res.set('Cache-Control', 'public, max-age=3600, must-revalidate');
       next();
     });
 
