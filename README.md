@@ -9,3 +9,5 @@ The Node.js / React application which serves www.stephen-cresswell.net
 
 ## TODO
 1. Consider deduping content model
+1. Add no-cache argument to StatusCake
+1. Check API 404s are handled

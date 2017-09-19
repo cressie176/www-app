@@ -2,6 +2,11 @@ export default function(options = {}) {
 
   function start({ pkg, app, prepper, }, cb) {
 
+    app.get('/__/*', (req, res, next) => {
+      res.set('cache-control', 'no-cache');
+      next();
+    });
+
     app.get('/__/status', prepper.disable, (req, res) => {
       res.json({ name: pkg.name, version: pkg.version, description: pkg.description, });
     });
