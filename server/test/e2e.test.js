@@ -35,7 +35,7 @@ describe('www.stephen-cresswell.net', () => {
 
     expectStatus(res, 200);
     expectHeader(res, 'content-type', 'application/json; charset=utf-8');
-    expectHeader(res, 'cache-control', 'no-cache');
+    expectHeader(res, 'cache-control', 'no-cache, no-store, must-revalidate');
     expect(res.body.name).toBe('www-app');
   });
 
@@ -51,7 +51,7 @@ describe('www.stephen-cresswell.net', () => {
     }).catch(errors.StatusCodeError, (reason) => {
       expectStatus(reason.response, 404);
       expectHeader(reason.response, 'content-type', 'application/json; charset=utf-8');
-      expectHeader(reason.response, 'cache-control', 'no-cache');
+      expectHeader(reason.response, 'cache-control', 'no-cache, no-store, must-revalidate');
     });
   });
 
