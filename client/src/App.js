@@ -7,16 +7,16 @@ import { Provider, } from 'react-redux';
 import { composeWithDevTools, } from 'redux-devtools-extension';
 
 // Components
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
-import HomePageContainer from './components/home/HomePageContainer';
-import ArticleListPageContainer from './components/articles/ArticleListPageContainer';
-import ArticlePageContainer from './components/articles/ArticlePageContainer';
-import LegalPageContainer from './components/legal/LegalPageContainer';
-import PublisherPageContainer from './components/publisher/PublisherPageContainer';
-import ErrorPageContainer from './components/error/ErrorPageContainer';
-import FeatureToggleQueryParser from './components/common/FeatureToggleQueryParser';
-import ScrollToTop from './components/common/ScrollToTop';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import HomePage from './components/HomePage';
+import ArticleListPage from './components/ArticleListPage';
+import ArticlePage from './components/ArticlePage';
+import LegalPage from './components/LegalPage';
+import PublisherPage from './components/PublisherPage';
+import ErrorPage from './components/ErrorPage';
+import FeatureToggleQueryParser from './components/FeatureToggle/FeatureToggleQueryParser';
+import ScrollToTop from './components/ScrollToTop';
 
 // Actions
 import { removeAllObfuscation, } from './actions/obfuscationActions';
@@ -84,27 +84,27 @@ class App extends React.Component {
               <Header />
               <Switch>
                 <Route exact path='/' render={() =>
-                  <HomePageContainer />
+                  <HomePage />
                 } />
                 <Route exact path='/legal/:pageId(terms-and-conditions|privacy-policy|production-credits)' render={({ match, }) =>
-                  <LegalPageContainer id={match.params.pageId} />
+                  <LegalPage id={match.params.pageId} />
                 } />
                 <Route exact path='/:channel(blog|talks)' render={({ match, }) =>
-                  <ArticleListPageContainer id={match.params.channel} />
+                  <ArticleListPage id={match.params.channel} />
                 } />
                 <Route exact path='/:channel(blog|talks)/:slug' render={
                   ({ match, }) => {
                     const id = parseInt(match.params.slug.split('-').slice(-1)[0], 10);
                     return isNaN(id)
-                      ? <ErrorPageContainer title='Page Not Found' html='The page you have requested has not been found.' />
-                      : <ArticlePageContainer id={id} />;
+                      ? <ErrorPage title='Page Not Found' html='The page you have requested has not been found.' />
+                      : <ArticlePage id={id} />;
                   }
                 } />
                 <Route exact path='/publisher/' render={({ match, }) =>
-                  <PublisherPageContainer />
+                  <PublisherPage />
                 } />
                 <Route path='/' render={() =>
-                  <ErrorPageContainer title='Page Not Found' html='The page you have requested has not been found.' />
+                  <ErrorPage title='Page Not Found' html='The page you have requested has not been found.' />
                 } />
               </Switch>
               <Footer />

@@ -1,12 +1,15 @@
 import React from 'react';
-import FooterSpotlightsContainer from './FooterSpotlightsContainer';
-import CopyrightContainer from './CopyrightContainer';
+
+import Spotlights from '../Spotlights';
+import Copyright from '../Copyright';
+
+import './Footer.css';
 
 const Footer = () => {
   return (
     <footer className='full-width'>
-      <FooterSpotlightsContainer />
-      <CopyrightContainer />
+      <Spotlights />
+      <Copyright />
     </footer>
   );
 };
