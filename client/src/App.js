@@ -29,6 +29,7 @@ import obfuscation from './reducers/obfuscationReducer';
 import error from './reducers/errorReducer';
 import site from './reducers/siteReducer';
 import page from './reducers/pageReducer';
+import article from './reducers/article';
 import articles from './reducers/articlesReducer';
 import projects from './reducers/projectsReducer';
 
@@ -60,6 +61,7 @@ const store = createStore(combineReducers({
   error,
   site,
   page,
+  article,
   articles,
   projects,
 }), initialState, composeWithDevTools(

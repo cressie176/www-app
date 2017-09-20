@@ -66,3 +66,11 @@
 .fb-like > span {
   vertical-align: baseline !important;
 }
+
+#twitter iframe {
+  margin-left: 2px;
+}
+
+#twitter a {
+  display: none;
+}
