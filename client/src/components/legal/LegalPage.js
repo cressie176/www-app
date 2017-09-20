@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect, } from 'react-redux';
-import { fetchPage, } from '../../actions/pageActions';
-import ErrorPage from '../error/ErrorPage';
+import ErrorPageContainer from '../error/ErrorPageContainer';
 
 import PageIntro from '../common/PageIntro';
 
 import './LegalPage.css';
 
-export class LegalPage extends React.Component {
+class LegalPage extends React.Component {
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchPage(this.props.id);
   }
 
@@ -27,7 +25,7 @@ export class LegalPage extends React.Component {
   render() {
     if (this.props.page.error) {
       return (
-        <ErrorPage title='Error loading page' />
+        <ErrorPageContainer title='Error loading page' />
       );
     } else {
       return (
@@ -51,18 +49,4 @@ LegalPage.propTypes = {
   page: PropTypes.object,
 };
 
-function mapStateToProps(state, props) {
-  return {
-    page: state.page,
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    fetchPage: id => {
-      dispatch(fetchPage(id, { relative: true, }));
-    },
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(LegalPage);
+export default LegalPage;

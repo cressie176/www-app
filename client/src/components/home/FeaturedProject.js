@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect, } from 'react-redux';
-import { fetchProject, fetchDownloadCount, } from '../../actions/projectActions';
 
-export class FeaturedProject extends React.Component {
+class FeaturedProject extends React.Component {
 
   componentDidMount() {
     this.props.fetchProject(this.props.id);
@@ -75,21 +73,4 @@ FeaturedProject.propTypes = {
   project: PropTypes.object,
 };
 
-function mapStateToProps(state, props) {
-  return {
-    project: state.projects.items[props.id] || {},
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    fetchProject: (id) => {
-      dispatch(fetchProject(id));
-    },
-    fetchDownloadCount: (id) => {
-      dispatch(fetchDownloadCount(id));
-    },
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(FeaturedProject);
+export default FeaturedProject;

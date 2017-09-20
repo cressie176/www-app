@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FeaturedProject from './FeaturedProject';
+import FeaturedProjectContainer from './FeaturedProjectContainer';
 import './FeaturedProjects.css';
 
 const FeaturedProjects = ({ projects = { items: [], link: {}, }, }) => {
@@ -15,7 +15,7 @@ const FeaturedProjects = ({ projects = { items: [], link: {}, }, }) => {
       <ul className='list-group featured-projects__list'>
         {
           projects.items.map((project, index) => {
-            return <FeaturedProject key={index} id={project.id} />;
+            return <FeaturedProjectContainer key={index} id={project.id} />;
           })
         }
       </ul>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, } from 'enzyme';
-import { ErrorPage, } from './ErrorPage';
+import ErrorPage from './ErrorPage';
 
 describe('ErrorPage', () => {
 

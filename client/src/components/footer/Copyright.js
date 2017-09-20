@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect, } from 'react-redux';
 
 import './Copyright.css';
 
-export class Copyright extends React.Component {
+class Copyright extends React.Component {
 
   render() {
     if (!this.props.id) {
@@ -32,11 +31,5 @@ Copyright.propTypes = {
   rights: PropTypes.string,
 };
 
-function mapStateToProps(state, props) {
-  return {
-    ...state.site.copyright,
-  };
-}
-
-export default connect(mapStateToProps)(Copyright);
+export default Copyright;
 

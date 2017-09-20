@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import IconListItem from '../common/IconListItem';
-import { connect, } from 'react-redux';
-import { fetchArticle, } from '../../actions/articleActions';
 import { Link, } from 'react-router-dom';
 
+class FeaturedArticle extends React.Component {
 
-export class FeaturedArticle extends React.Component {
   componentDidMount() {
     this.props.fetchArticle(this.props.id);
   }
+
   render() {
     if (this.props.article.error) {
       return (
@@ -65,18 +64,4 @@ FeaturedArticle.propTypes = {
   article: PropTypes.object,
 };
 
-function mapStateToProps(state, props) {
-  return {
-    article: state.articles.items[props.id] || {},
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    fetchArticle: (id) => {
-      dispatch(fetchArticle(id));
-    },
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(FeaturedArticle);
+export default FeaturedArticle;

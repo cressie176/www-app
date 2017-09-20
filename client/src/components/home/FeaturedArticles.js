@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FeaturedArticle from './FeaturedArticle';
+import FeaturedArticleContainer from './FeaturedArticleContainer';
 import { Link, } from 'react-router-dom';
 
 import './FeaturedArticles.css';
@@ -23,7 +23,7 @@ const FeaturedArticles = ({ articles = { items: [], link: {}, }, }) => {
           <div className='row'>
             {
               articles.items.map((article, index) => {
-                return <FeaturedArticle key={index} id={article.id} />;
+                return <FeaturedArticleContainer key={index} id={article.id} />;
               })
             }
           </div>

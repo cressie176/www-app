@@ -9,12 +9,12 @@ import { composeWithDevTools, } from 'redux-devtools-extension';
 // Components
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
-import HomePage from './components/home/HomePage';
-import ArticleListPage from './components/articles/ArticleListPage';
-import ArticlePage from './components/articles/ArticlePage';
-import LegalPage from './components/legal/LegalPage';
+import HomePageContainer from './components/home/HomePageContainer';
+import ArticleListPageContainer from './components/articles/ArticleListPageContainer';
+import ArticlePageContainer from './components/articles/ArticlePageContainer';
+import LegalPageContainer from './components/legal/LegalPageContainer';
 import PublisherPage from './components/publisher/PublisherPage';
-import ErrorPage from './components/error/ErrorPage';
+import ErrorPageContainer from './components/error/ErrorPageContainer';
 import FeatureToggleQueryParser from './components/common/FeatureToggleQueryParser';
 import ScrollToTop from './components/common/ScrollToTop';
 
@@ -84,27 +84,27 @@ class App extends React.Component {
               <Header />
               <Switch>
                 <Route exact path='/' render={() =>
-                  <HomePage />
+                  <HomePageContainer />
                 } />
                 <Route exact path='/legal/:pageId(terms-and-conditions|privacy-policy|production-credits)' render={({ match, }) =>
-                  <LegalPage id={match.params.pageId} />
+                  <LegalPageContainer id={match.params.pageId} />
                 } />
                 <Route exact path='/:channel(blog|talks)' render={({ match, }) =>
-                  <ArticleListPage id={match.params.channel} />
+                  <ArticleListPageContainer id={match.params.channel} />
                 } />
                 <Route exact path='/:channel(blog|talks)/:slug' render={
                   ({ match, }) => {
                     const id = parseInt(match.params.slug.split('-').slice(-1)[0], 10);
                     return isNaN(id)
-                      ? <ErrorPage title='Page Not Found' html='The page you have requested has not been found.' />
-                      : <ArticlePage id={id} />;
+                      ? <ErrorPageContainer title='Page Not Found' html='The page you have requested has not been found.' />
+                      : <ArticlePageContainer id={id} />;
                   }
                 } />
                 <Route exact path='/publisher/' render={({ match, }) =>
                   <PublisherPage />
                 } />
                 <Route path='/' render={() =>
-                  <ErrorPage title='Page Not Found' html='The page you have requested has not been found.' />
+                  <ErrorPageContainer title='Page Not Found' html='The page you have requested has not been found.' />
                 } />
               </Switch>
               <Footer />

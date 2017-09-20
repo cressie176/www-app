@@ -1,13 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ActiveNavItem, InactiveNavItem, } from './NavItem';
-import { connect, } from 'react-redux';
-import { withRouter, } from 'react-router';
-
 
 import './Nav.css';
 
-export class Nav extends React.Component {
+class Nav extends React.Component {
   render() {
     return (
       <div className='row'>
@@ -41,10 +38,4 @@ Nav.propTypes = {
   links: PropTypes.array,
 };
 
-function mapStateToProps(state, props) {
-  return {
-    ...state.site.navigation,
-  };
-}
-
-export default withRouter(connect(mapStateToProps)(Nav));
+export default Nav;

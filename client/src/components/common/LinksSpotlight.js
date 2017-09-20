@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import IconListItem from './IconListItem';
-import { connect, } from 'react-redux';
-import { removeObfuscation, } from '../../actions/obfuscationActions';
 
 import './LinksSpotlight.css';
 
-export class LinksSpotlight extends React.Component {
+class LinksSpotlight extends React.Component {
 
   render() {
     const obfuscation = this.props.obfuscate ? 'obfuscated' : 'clear';
@@ -36,18 +34,4 @@ LinksSpotlight.propTypes = {
   links: PropTypes.array,
 };
 
-function mapStateToProps(state, props) {
-  return {
-    obfuscate: !!state.obfuscation[props.id],
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    removeObfuscation: (id) => {
-      dispatch(removeObfuscation(id));
-    },
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(LinksSpotlight);
+export default LinksSpotlight;

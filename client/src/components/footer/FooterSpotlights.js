@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LinksSpotlight from '../common/LinksSpotlight';
-import { connect, } from 'react-redux';
+import LinksSpotlightContainer from '../common/LinksSpotlightContainer';
 
 import './FooterSpotlights.css';
 
@@ -16,7 +15,7 @@ class FooterSpotlights extends React.Component {
                 this.props.spotlights && this.props.spotlights.map((spotlight, index) => {
                   return (
                     <div key={index} className='col-sm-4'>
-                      <LinksSpotlight title={spotlight.title} id={spotlight.id} links={spotlight.links} />
+                      <LinksSpotlightContainer title={spotlight.title} id={spotlight.id} links={spotlight.links} />
                     </div>
                   );
                 })
@@ -33,10 +32,4 @@ FooterSpotlights.propTypes = {
   spotlights: PropTypes.array,
 };
 
-function mapStateToProps(state, props) {
-  return {
-    ...state.site,
-  };
-}
-
-export default connect(mapStateToProps)(FooterSpotlights);
+export default FooterSpotlights;

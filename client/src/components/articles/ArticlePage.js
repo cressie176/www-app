@@ -2,16 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PageIntro from '../common/PageIntro';
 import IconListItem from '../common/IconListItem';
-import ErrorPage from '../error/ErrorPage';
+import ErrorPageContainer from '../error/ErrorPageContainer';
 
-import { connect, } from 'react-redux';
-import { fetchArticle, } from '../../actions/articleActions';
-import { withRouter, } from 'react-router';
 import { Redirect,} from 'react-router-dom';
 
 import './ArticlePage.css';
 
-export class ArticlePage extends React.Component {
+class ArticlePage extends React.Component {
 
   componentDidMount() {
     this.props.fetchArticle(this.props.id);
@@ -45,11 +42,11 @@ export class ArticlePage extends React.Component {
   render() {
     if (this.props.article.error) {
       return (
-        <ErrorPage title='Error loading article' />
+        <ErrorPageContainer title='Error loading article' />
       );
     } else if (this.props.article.missing) {
       return (
-        <ErrorPage title='Page Not Found' />
+        <ErrorPageContainer title='Page Not Found' />
       );
     } else if (this.props.article.loading) {
       return (
@@ -129,18 +126,4 @@ ArticlePage.propTypes = {
   article: PropTypes.object,
 };
 
-function mapStateToProps(state, props) {
-  return {
-    article: state.articles.items[props.id] || {},
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    fetchArticle: id => {
-      dispatch(fetchArticle(id));
-    },
-  };
-}
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ArticlePage));
+export default ArticlePage;

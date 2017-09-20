@@ -1,14 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import PageIntro from '../common/PageIntro';
-import { connect, } from 'react-redux';
-
-import { typeKey, finishTyping, } from '../../actions/errorActions';
 
 import './ErrorPage.css';
 
-export class ErrorPage extends React.Component {
+class ErrorPage extends React.Component {
+
   componentWillMount() {
     const scheduleNextKeyPress = () => {
       return delay(() => {
@@ -25,9 +22,11 @@ export class ErrorPage extends React.Component {
     this.timeout = scheduleNextKeyPress();
 
   }
+
   componentWillUnmount() {
     clearTimeout(this.timeout);
   }
+
   render() {
     return (
       <div className={`page error-page error-page--{this.props.type}`}>
@@ -55,27 +54,8 @@ ErrorPage.propTypes = {
   finishedTyping: PropTypes.bool,
 };
 
-function mapStateToProps(state, props) {
-  return {
-    fullMessage: state.error.fullMessage,
-    message: state.error.message,
-    finishedTyping: state.error.finishedTyping,
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    typeKey: (key) => {
-      dispatch(typeKey(key));
-    },
-    finishTyping: () => {
-      dispatch(finishTyping());
-    },
-  };
-}
-
 function delay(fn) {
   return setTimeout(fn, 80 + Math.random() * 50);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ErrorPage);
+export default ErrorPage;

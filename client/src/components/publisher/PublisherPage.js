@@ -4,7 +4,7 @@ import { connect, } from 'react-redux';
 import { fetchTags, fetchReferences, } from '../../actions/contentActions';
 
 import PageIntro from '../common/PageIntro';
-import ExtractContent from './ExtractContent';
+import ExtractContentContainer from './ExtractContentContainer';
 import TagPicker from './TagPicker';
 import TagTable from './TagTable';
 import naturally from 'string-natural-compare';
@@ -27,7 +27,7 @@ export class PublisherPage extends React.Component {
 
         <div className='row'>
           <div className='col-sm-offset-1 col-sm-6'>
-             <ExtractContent />
+             <ExtractContentContainer />
           </div>
         </div>
 

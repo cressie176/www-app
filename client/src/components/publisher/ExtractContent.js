@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect, } from 'react-redux';
 import { FormGroup, ControlLabel, FormControl, Button, ButtonToolbar, } from 'react-bootstrap';
-import { extractContent, } from '../../actions/contentActions';
 
-export class ExtractContent extends React.Component {
+class ExtractContent extends React.Component {
 
   constructor(props) {
     super(props);
@@ -66,18 +64,4 @@ ExtractContent.propTypes = {
   loading: PropTypes.bool,
 };
 
-function mapStateToProps(state, props) {
-  return {
-    loading: state.content.loading,
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    extractContent: tag => {
-      dispatch(extractContent(tag));
-    },
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ExtractContent);
+export default ExtractContent;

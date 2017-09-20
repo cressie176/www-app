@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount, } from 'enzyme';
 import { MemoryRouter as Router, } from 'react-router';
-import { Nav, } from './Nav';
+import Nav from './Nav';
 
 describe('Nav', () => {
 

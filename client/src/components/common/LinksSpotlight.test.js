@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount, } from 'enzyme';
-import { LinksSpotlight, } from './LinksSpotlight';
+import LinksSpotlight from './LinksSpotlight';
 
 describe('LinksSpotlight', () => {
 

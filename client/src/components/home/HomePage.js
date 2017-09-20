@@ -1,20 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect, } from 'react-redux';
-import { fetchPage, } from '../../actions/pageActions';
 
 import Profile from './Profile';
 import FeaturedArticles from './FeaturedArticles';
 import FeaturedProjects from './FeaturedProjects';
 import FeatureToggle from '../common/FeatureToggle';
-
-import ErrorPage from '../error/ErrorPage';
+import ErrorPageContainer from '../error/ErrorPageContainer';
 
 import './HomePage.css';
 
 class HomePage extends React.Component {
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchPage('home');
   }
 
@@ -27,7 +24,7 @@ class HomePage extends React.Component {
       return <div className='page home-page' />;
     } else if (this.props.page.error) {
       return (
-        <ErrorPage title='Error loading page' />
+        <ErrorPageContainer title='Error loading page' />
       );
     } else {
       return (
@@ -83,18 +80,4 @@ HomePage.propTypes = {
   page: PropTypes.object,
 };
 
-function mapStateToProps(state, props) {
-  return {
-    page: state.page,
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    fetchPage: id => {
-      dispatch(fetchPage(id));
-    },
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
+export default HomePage;
