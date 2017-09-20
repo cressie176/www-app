@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import PageIntro from '../common/PageIntro';
 import ExtractContentContainer from './ExtractContentContainer';
 import TagPickerContainer from './TagPickerContainer';
-import TagTable from './TagTable';
+import TagTableContainer from './TagTableContainer';
 
 import './PublisherPage.css';
 
@@ -35,7 +35,7 @@ class PublisherPage extends React.Component {
 
         <div className='row'>
           <div className='col-sm-offset-1 col-sm-6'>
-             <TagTable tags={this.props.tags} />
+             <TagTableContainer tags={this.props.tags} />
           </div>
         </div>
       </div>
