@@ -13,7 +13,7 @@ import HomePageContainer from './components/home/HomePageContainer';
 import ArticleListPageContainer from './components/articles/ArticleListPageContainer';
 import ArticlePageContainer from './components/articles/ArticlePageContainer';
 import LegalPageContainer from './components/legal/LegalPageContainer';
-import PublisherPage from './components/publisher/PublisherPage';
+import PublisherPageContainer from './components/publisher/PublisherPageContainer';
 import ErrorPageContainer from './components/error/ErrorPageContainer';
 import FeatureToggleQueryParser from './components/common/FeatureToggleQueryParser';
 import ScrollToTop from './components/common/ScrollToTop';
@@ -101,7 +101,7 @@ class App extends React.Component {
                   }
                 } />
                 <Route exact path='/publisher/' render={({ match, }) =>
-                  <PublisherPage />
+                  <PublisherPageContainer />
                 } />
                 <Route path='/' render={() =>
                   <ErrorPageContainer title='Page Not Found' html='The page you have requested has not been found.' />
