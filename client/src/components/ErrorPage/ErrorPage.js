@@ -9,12 +9,15 @@ class ErrorPage extends React.Component {
 
   componentWillMount() {
     const scheduleNextKeyPress = () => {
+
+      const { message, fullMessage, typeKey, finishTyping, } = this.props;
+
       return delay(() => {
-        if (this.props.message.length < this.props.fullMessage.length) {
-          this.props.typeKey(this.props.fullMessage[this.props.message.length]);
+        if (message.length < fullMessage.length) {
+          typeKey(fullMessage[message.length]);
           this.timeout = scheduleNextKeyPress();
         } else {
-          this.props.finishTyping();
+          finishTyping();
           clearTimeout(this.timeout);
         }
       });
@@ -29,15 +32,22 @@ class ErrorPage extends React.Component {
   }
 
   render() {
+
+    const { title, message, finishedTyping, } = this.props;
+
     return (
-      <div className={`page error-page error-page--{this.props.type}`}>
-        <PageIntro icon='fa-exclamation-triangle' title={this.props.title} />
+      <div className='page error-page'>
+        <PageIntro icon='fa-exclamation-triangle' title={title} />
         <div className='message__wrapper full-width gutter'>
           <div className='row'>
               <div className='col-md-offset-1 col-md-10'>
                 <div className='message'>
-                    <div className='message__text'>&gt; {this.props.message}</div>
-                    { this.props.finishedTyping && <div className='message__cursor'>▋</div> }
+                  <div className='message__text'>&gt; {message}</div>
+                  {
+                    finishedTyping
+                      ? <div className='message__cursor'>▋</div>
+                      : null
+                  }
                 </div>
               </div>
           </div>
@@ -48,10 +58,9 @@ class ErrorPage extends React.Component {
 }
 
 ErrorPage.propTypes = {
-  title: PropTypes.string,
-  type: PropTypes.string,
-  message: PropTypes.string,
-  fullMessage: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
+  fullMessage: PropTypes.string.isRequired,
   finishedTyping: PropTypes.bool,
 };
 

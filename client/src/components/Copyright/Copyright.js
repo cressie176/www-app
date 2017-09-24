@@ -6,7 +6,10 @@ import './Copyright.css';
 class Copyright extends React.Component {
 
   render() {
-    if (!this.props.id) {
+
+    const { id, year, owner, rights, } = this.props;
+
+    if (!id) {
       return (
         <div className='copyright gutter' />
       );
@@ -15,7 +18,7 @@ class Copyright extends React.Component {
         <div className='copyright gutter'>
           <div className='row'>
             <div className='col-sm-offset-1 col-sm-10'>
-              <span className='text'><span className='text-nowrap'>&copy; {this.props.year} {this.props.owner}.</span> <span className='text-nowrap'>{this.props.rights}</span></span>
+              <span className='text'><span className='text-nowrap'>&copy; {year} {owner}.</span> <span className='text-nowrap'>{rights}</span></span>
             </div>
           </div>
         </div>
@@ -25,10 +28,10 @@ class Copyright extends React.Component {
 }
 
 Copyright.propTypes = {
-  id: PropTypes.string,
-  year: PropTypes.number,
-  owner: PropTypes.string,
-  rights: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  year: PropTypes.number.isRequired,
+  owner: PropTypes.string.isRequired,
+  rights: PropTypes.string.isRequired,
 };
 
 export default Copyright;

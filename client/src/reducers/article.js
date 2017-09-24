@@ -13,7 +13,7 @@ export default function(state = { data: {}, meta: {}, }, action)  {
     case FETCH_ARTICLE_ERROR: {
       return {
         data: getArticle(action),
-        meta: getMetaData(action),
+        meta: getArticleMetaData(action),
       };
     }
     default: {
@@ -29,6 +29,6 @@ function getArticle({ article, }) {
   };
 }
 
-function getMetaData({ loading = false, missing = false, error = undefined, }) {
-  return { loading, missing: missing, error, };
+function getArticleMetaData({ loading = false, missing = false, error = undefined, }) {
+  return { loading, missing, error, };
 }

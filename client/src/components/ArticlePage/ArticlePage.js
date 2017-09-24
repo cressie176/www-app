@@ -41,36 +41,36 @@ class ArticlePage extends React.Component {
   }
 
   render() {
-    if (this.props.error) {
+
+    const { id, article, path, loading, missing, error, } = this.props;
+
+    if (error) {
       return (
         <ErrorPageContainer title='Error loading article' />
       );
-    } else if (this.props.missing) {
+    } else if (missing) {
       return (
         <ErrorPageContainer title='Page Not Found' />
       );
-    } else if (this.props.loading) {
+    } else if (article.id === id && article.url !== path) {
+      return (
+        <Redirect to={article.url} />
+      );
+    } else if (loading) {
+      return (
+        <PageIntro icon='fa-spinner fa-spin' title='Loading…' />
+      );
+    } else {
       return (
         <div className='article-page'>
-          <PageIntro icon='fa-spinner fa-spin' title='Loading…' />
-        </div>
-      );
-    } else if (this.props.article.id === this.props.id && this.props.article.url !== this.props.path) {
-      return (
-        <Redirect to={this.props.article.url} />
-      );
-    }
-    else {
-      return (
-        <div className='article-page'>
-          <PageIntro title={this.props.article.title} />
+          <PageIntro title={article.title} />
           <div className='row'>
             <div className='col-sm-offset-1 col-sm-10'>
-              <Article {...this.props.article} />
-              <SocialButtons tweet={this.props.article.tweetText} username='cressie176' />
+              <Article {...article} />
+              <SocialButtons tweet={article.tweetText} username='cressie176' />
             </div>
+          </div>
         </div>
-      </div>
       );
     }
   }

@@ -9,6 +9,7 @@ class FeaturedProject extends React.Component {
   }
 
   render() {
+
     if (this.props.project.error) {
       return (
         <li className='list-group-item featured-project featured-project--error'>

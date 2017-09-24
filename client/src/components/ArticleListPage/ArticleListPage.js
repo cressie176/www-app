@@ -26,15 +26,18 @@ class ArticleListPage extends React.Component {
   }
 
   render() {
-    if (this.props.page.error) {
+
+    const { id, page, articleList, } = this.props;
+
+    if (page.error) {
       return (
         <ErrorPage title='Error loading page' />
       );
     } else {
       return (
-        <div className={`article-list-page article-list-page--${this.props.id}`}>
-          <PageIntro title={this.props.page.title} text={this.props.page.introText} link={this.props.page.introLink} image={this.props.page.introImage}/>
-          <ArticleList articles={this.props.articleList.data} error={this.props.articleList.meta.error} loading={this.props.articleList.meta.loading} />
+        <div className={`article-list-page article-list-page--${id}`}>
+          <PageIntro title={page.title} text={page.introText} link={page.introLink} image={page.introImage}/>
+          <ArticleList articles={articleList.data} error={articleList.meta.error} loading={articleList.meta.loading} />
         </div>
       );
     }

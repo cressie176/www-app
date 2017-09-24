@@ -8,7 +8,6 @@ describe('ErrorPage', () => {
     const wrapper = shallow(
       <ErrorPage
         title='Oh Noes!'
-        type='not-found'
         fullMessage='Oh Noes!'
         message='Oh '
         finishedTyping={false}
@@ -25,7 +24,6 @@ describe('ErrorPage', () => {
     const wrapper = shallow(
       <ErrorPage
         title='Oh Noes!'
-        type='not-found'
         fullMessage='Oh Noes!'
         message='Oh Noes!'
         finishedTyping={true}
@@ -52,7 +50,6 @@ describe('ErrorPage', () => {
     const wrapper = shallow(
       <ErrorPage
         title='Oh Noes!'
-        type='not-found'
         fullMessage='Oh Noes!'
         message='Oh '
         finishedTyping={false}
@@ -76,7 +73,6 @@ describe('ErrorPage', () => {
     shallow(
       <ErrorPage
         title='Oh Noes!'
-        type='not-found'
         fullMessage='Oh Noes!'
         message='Oh Noes!'
         finishedTyping={false}
