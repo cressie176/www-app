@@ -23,18 +23,3 @@
   width: 100%;
   margin-bottom: 20px;
 }
-
-.article__details {
-  list-style: none;
-  margin-bottom: 30px;
-  padding-left: 0px;
-}
-
-.article__details .icon-list__item__link {
-  color: var(--text-colour);
-}
-
-.article__details .icon-list__item__link:hover {
-  color: var(--primary-colour);
-  text-decoration: none;
-}

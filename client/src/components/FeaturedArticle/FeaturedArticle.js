@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, } from 'react-router-dom';
 
-import IconListItem from '../IconListItem';
+import ArticleDetails from '../ArticleDetails';
 
 import './FeaturedArticle.css';
 
-const FeaturedArticle = ({id, title, url, summary, images, event, date, location, downloads, }) => (
+const FeaturedArticle = ({id, title, url, summary, images, event, date, location, }) => (
   <div className='featured-article'>
     <div className='col-md-4'>
       <div className='featured-article__title__wrapper'>
@@ -16,23 +16,7 @@ const FeaturedArticle = ({id, title, url, summary, images, event, date, location
         <img className='featured-article__thumbnail' src={images.thumbnail.url} title={images.thumbnail.title} alt={images.thumbnail.description} />
       </Link>
       <div className='featured-article__summary' dangerouslySetInnerHTML={{__html: summary,}} />
-      <ul className='featured-article__details'>
-        {
-          event ? (
-            <IconListItem id='event' icon='fa-group' text={event.text} url={event.url} />
-          ) : null
-        }
-        {
-          date ? (
-            <IconListItem id='date' icon='fa-calendar' text={new Date(date).toLocaleString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', })} />
-          ) : null
-        }
-        {
-          location ? (
-            <IconListItem id='location' icon='fa-location-arrow' text={location} />
-          ) : null
-        }
-      </ul>
+      <ArticleDetails { ...{event, date, location, } } />
     </div>
   </div>
 );
@@ -47,7 +31,6 @@ FeaturedArticle.propTypes = {
     PropTypes.instanceOf(Date),
   ]),
   location: PropTypes.string,
-  downloads: PropTypes.array,
 };
 
 export default FeaturedArticle;
