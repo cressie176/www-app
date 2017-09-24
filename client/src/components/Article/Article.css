@@ -1,0 +1,40 @@
+.article__body {
+  font-size: 18px;
+}
+
+.article__body p {
+  margin-bottom: 20px;
+}
+
+.article__body li {
+  margin-bottom: 10px;
+}
+
+.article__body ol,
+.article__body ul {
+  margin-bottom: 20px;
+}
+
+.article__body em {
+  font-weight: bold;
+}
+
+.article__body img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.article__details {
+  list-style: none;
+  margin-bottom: 30px;
+  padding-left: 0px;
+}
+
+.article__details .icon-list__item__link {
+  color: var(--text-colour);
+}
+
+.article__details .icon-list__item__link:hover {
+  color: var(--primary-colour);
+  text-decoration: none;
+}

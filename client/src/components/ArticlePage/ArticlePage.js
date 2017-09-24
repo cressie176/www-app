@@ -59,7 +59,7 @@ class ArticlePage extends React.Component {
       return (
         <div className='article-page'/>
       );
-    } else if (this.props.article.id === this.props.id && this.props.article.url !== this.props.location.pathname) {
+    } else if (this.props.article.id === this.props.id && this.props.article.url !== this.props.path) {
       return (
         <Redirect to={this.props.article.url} />
       );
@@ -77,8 +77,9 @@ class ArticlePage extends React.Component {
 }
 
 ArticlePage.propTypes = {
-  id: PropTypes.number,
-  article: PropTypes.object,
+  id: PropTypes.number.isRequired,
+  article: PropTypes.object.isRequired,
+  path: PropTypes.string.isRequired,
   loading: PropTypes.bool,
   missing: PropTypes.bool,
   error: PropTypes.object,

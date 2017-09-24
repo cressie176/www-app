@@ -33,11 +33,8 @@ class ArticleListPage extends React.Component {
     } else {
       return (
         <div className={`article-list-page article-list-page--${this.props.id}`}>
-
           <PageIntro title={this.props.page.title} text={this.props.page.introText} link={this.props.page.introLink} image={this.props.page.introImage}/>
-
-          <ArticleList articles={this.props.filteredArticles} loading={this.props.articles.loading} error={this.props.articles.error} />
-
+          <ArticleList articles={this.props.articleList.data} error={this.props.articleList.meta.error} loading={this.props.articleList.meta.loading} />
         </div>
       );
     }
@@ -45,10 +42,9 @@ class ArticleListPage extends React.Component {
 }
 
 ArticleListPage.propTypes = {
-  id: PropTypes.string,
-  page: PropTypes.object,
-  articles: PropTypes.object,
-  filteredArticles: PropTypes.array,
+  id: PropTypes.string.isRequired,
+  page: PropTypes.object.isRequired,
+  articleList: PropTypes.object.isRequired,
 };
 
 export default ArticleListPage;

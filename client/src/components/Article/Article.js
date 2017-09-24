@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 
 import IconListItem from '../IconListItem';
 
+import './Article.css';
+
 const Article = ({ id, title, body, event, date, location, downloads, }) => (<div className={`article article--${id}`}>
     <div className='row'>
       <div className='col-sm-offset-1 col-sm-10'>
-        <div className='blurb' dangerouslySetInnerHTML={{__html: body,}} />
+        <div className='article__body' dangerouslySetInnerHTML={{__html: body,}} />
       </div>
     </div>
     <div className='row'>
@@ -43,11 +45,14 @@ const Article = ({ id, title, body, event, date, location, downloads, }) => (<di
 );
 
 Article.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.number.isRequired,
   title: PropTypes.string,
   body: PropTypes.string,
   event: PropTypes.object,
-  date: PropTypes.object,
+  date: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.instanceOf(Date),
+  ]),
   location: PropTypes.string,
   downloads: PropTypes.array,
 };

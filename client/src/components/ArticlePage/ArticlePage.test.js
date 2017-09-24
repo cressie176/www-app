@@ -8,7 +8,9 @@ describe('ArticlePage', () => {
     const wrapper = shallow(
       <ArticlePage
         id={1}
-        article={{ id: 1, loading: true, }}
+        article={{ id: 1, }}
+        loading={ true }
+        path=''
       />
     );
     expect(wrapper.is('.article-page')).toBe(true);
@@ -20,7 +22,9 @@ describe('ArticlePage', () => {
     const wrapper = shallow(
       <ArticlePage
         id={1}
-        article={{ id: 1, error: new Error('Oh Noes!'), }}
+        article={{ id: 1, }}
+        error={ new Error('Oh Noes!') }
+        path=''
       />
     );
 
@@ -33,7 +37,9 @@ describe('ArticlePage', () => {
     const wrapper = shallow(
       <ArticlePage
         id={1}
-        article={{ id: 1, missing: true, }}
+        article={{ id: 1, }}
+        missing={ true }
+        path=''
       />
     );
 
@@ -47,6 +53,7 @@ describe('ArticlePage', () => {
       <ArticlePage
         id={1}
         article={{}}
+        path=''
       />
     );
 
@@ -59,8 +66,8 @@ describe('ArticlePage', () => {
     const wrapper = shallow(
       <ArticlePage
         id={1}
+        path='/blog/other-1'
         article={{ id: 1, url: '/blog/article-1', }}
-        location={{ pathname: '/blog/other-1', }}
       />
     );
 
@@ -74,14 +81,14 @@ describe('ArticlePage', () => {
       <ArticlePage
         id={1}
         article={{ id: 2, url: '/blog/article-2', images: { main: {}, }, }}
-        location={{ pathname: '/blog/other-2', }}
+        path='/blog/other-2'
       />
     );
 
     expect(wrapper.is('.article-page')).toBe(true);
   });
 
-  it('should render minimal article', () => {
+  it('should render article', () => {
 
     const wrapper = shallow(
       <ArticlePage
@@ -91,71 +98,18 @@ describe('ArticlePage', () => {
           url: '/blog/article-1',
           title: 'Article 1',
           body: '<p>blurb</p>',
-          images: {
-            main: {
-              url: 'http://main.jpg',
-              description: 'main',
-            },
-          },
+          tweetText: 'meh',
         }}
-        location={{ pathname: '/blog/article-1', }}
+        path='/blog/article-1'
       />
     );
 
     expect(wrapper.is('.article-page')).toBe(true);
     expect(wrapper.find('PageIntro').prop('title')).toBe('Article 1');
-    expect(wrapper.find('.blurb').html()).toBe('<div class="blurb"><p>blurb</p></div>');
-  });
-
-
-  it('should render optional extras', () => {
-
-    const wrapper = shallow(
-      <ArticlePage
-        id={1}
-        article={{
-          id: 1,
-          url: '/blog/article-1',
-          title: 'Article 1',
-          body: '<p>blurb</p>',
-          images: {
-            main: {
-              url: 'http://main.jpg',
-              alt: 'main',
-            },
-          },
-          date: new Date('2017-01-01T00:00:00.000Z'),
-          location: 'London',
-          event: {
-            text: 'meetup',
-            url: 'http://meetup',
-          },
-          downloads: [{
-            url: 'http://download-1',
-            text: 'download-1',
-            icon: 'fa-download-1',
-          }, {
-            url: 'http://download-2',
-            text: 'download-2',
-            icon: 'fa-download-2',
-          },],
-        }}
-        location={{ pathname: '/blog/article-1', }}
-      />
-    );
-
-    expect(wrapper.is('.article-page')).toBe(true);
-    expect(wrapper.find('IconListItem[id="date"]').prop('text')).toBe('2017 M01 1, Sun');
-    expect(wrapper.find('IconListItem[id="event"]').prop('text')).toBe('meetup');
-    expect(wrapper.find('IconListItem[id="event"]').prop('url')).toBe('http://meetup');
-    expect(wrapper.find('IconListItem[id="event"]').prop('noFollow')).toBe(undefined);
-    expect(wrapper.find('IconListItem[id="location"]').prop('text')).toBe('London');
-
-    expect(wrapper.find('IconListItem[id="download"]').length).toBe(2);
-    expect(wrapper.find('IconListItem[id="download"]').first().prop('url')).toBe('http://download-1');
-    expect(wrapper.find('IconListItem[id="download"]').first().prop('text')).toBe('download-1');
-    expect(wrapper.find('IconListItem[id="download"]').first().prop('icon')).toBe('fa-download-1');
-    expect(wrapper.find('IconListItem[id="download"]').first().prop('noFollow')).toBe(true);
+    expect(wrapper.find('Article').prop('title')).toBe('Article 1');
+    expect(wrapper.find('Article').prop('body')).toBe('<p>blurb</p>');
+    expect(wrapper.find('SocialButtons').prop('tweet')).toBe('meh');
+    expect(wrapper.find('SocialButtons').prop('username')).toBe('cressie176');
   });
 
 });

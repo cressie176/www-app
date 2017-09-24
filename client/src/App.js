@@ -30,7 +30,7 @@ import error from './reducers/errorReducer';
 import site from './reducers/siteReducer';
 import page from './reducers/pageReducer';
 import article from './reducers/article';
-import articles from './reducers/articlesReducer';
+import articleList from './reducers/articleList';
 import projects from './reducers/projectsReducer';
 
 // Miscellaneous
@@ -62,7 +62,7 @@ const store = createStore(combineReducers({
   site,
   page,
   article,
-  articles,
+  articleList,
   projects,
 }), initialState, composeWithDevTools(
   applyMiddleware(thunk)

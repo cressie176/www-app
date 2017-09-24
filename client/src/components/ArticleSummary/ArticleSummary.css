@@ -1,0 +1,25 @@
+.article-summary__title__link,
+.article-summary__title__link:active,
+.article-summary__title__link:focus,
+.article-summary__title__link:visited {
+  color: var(--text-colour);
+}
+
+.article-summary__title__link:hover {
+  color: var(--primary-colour);
+}
+
+.article-summary__details {
+  list-style: none;
+  margin-top: 15px;
+  padding-left: 0px;
+}
+
+.article-summary__details .icon-list__item__link {
+  color: var(--text-colour);
+}
+
+.article-summary__details .icon-list__item__link:hover {
+  color: var(--primary-colour);
+  text-decoration: none;
+}

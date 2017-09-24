@@ -59,14 +59,14 @@ class HomePage extends React.Component {
           <FeatureToggle id='featuredArticles'>
           {
             this.props.page.featuredArticles
-              ? <FeaturedArticleList articles={this.props.page.featuredArticles} />
+              ? <FeaturedArticleList featuredArticles={this.props.page.featuredArticles} />
               : null
           }
           </FeatureToggle>
           <FeatureToggle id='featuredTalks'>
           {
             this.props.page.featuredTalks
-              ? <FeaturedArticleList articles={this.props.page.featuredTalks} />
+              ? <FeaturedArticleList featuredArticles={this.props.page.featuredTalks} />
               : null
           }
           </FeatureToggle>
@@ -77,7 +77,7 @@ class HomePage extends React.Component {
 }
 
 HomePage.propTypes = {
-  page: PropTypes.object,
+  page: PropTypes.object.isRequired,
 };
 
 export default HomePage;

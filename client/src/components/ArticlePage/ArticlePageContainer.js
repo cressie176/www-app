@@ -6,8 +6,9 @@ import ArticlePage from './ArticlePage';
 
 function mapStateToProps(state, props) {
   return {
-    article: state.article.item,
+    article: state.article.data,
     ...state.article.meta,
+    path: props.location.pathname,
   };
 }
 

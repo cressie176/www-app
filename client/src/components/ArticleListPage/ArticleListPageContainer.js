@@ -6,10 +6,6 @@ import ArticleListPage from './ArticleListPage';
 
 function mapStateToProps(state, props) {
 
-  function toArticle(id) {
-    return state.articles.items[id];
-  }
-
   function byChannel(article) {
     return article.channel.id === props.id;
   }
@@ -20,8 +16,10 @@ function mapStateToProps(state, props) {
 
   return {
     page: state.page,
-    articles: state.articles,
-    filteredArticles: Object.keys(state.articles.items || {}).map(toArticle).filter(byChannel).sort(byDateAndId),
+    articleList: {
+      data: state.articleList.data.filter(byChannel).sort(byDateAndId),
+      meta: state.articleList.meta,
+    },
   };
 }
 

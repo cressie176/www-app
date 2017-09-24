@@ -5,17 +5,15 @@ import {
   FETCH_ARTICLE_ERROR,
 } from '../actions/articleActions';
 
-export default function(state = { item: {}, meta: {}, }, action)  {
+export default function(state = { data: {}, meta: {}, }, action)  {
   switch (action.type) {
     case FETCH_ARTICLE_REQUEST:
     case FETCH_ARTICLE_SUCCESS:
     case FETCH_ARTICLE_NOT_FOUND:
     case FETCH_ARTICLE_ERROR: {
       return {
-        item: getArticle(action),
-        loading: action.loading || false,
-        missing: action.missing || false,
-        error: action.error,
+        data: getArticle(action),
+        meta: getMetaData(action),
       };
     }
     default: {
@@ -29,4 +27,8 @@ function getArticle({ article, }) {
     ...article,
     date: article.date ? new Date(article.date) : undefined,
   };
+}
+
+function getMetaData({ loading = false, missing = false, error = undefined, }) {
+  return { loading, missing: missing, error, };
 }

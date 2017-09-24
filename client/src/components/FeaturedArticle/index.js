@@ -1,1 +1,1 @@
-export { default, } from './FeaturedArticleContainer';
+export { default, } from './FeaturedArticle';
