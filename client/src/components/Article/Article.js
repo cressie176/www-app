@@ -7,16 +7,8 @@ import './Article.css';
 
 const Article = ({ id, title, body, event, date, location, downloads, }) => (
   <div className={`article article--${id}`}>
-    <div className='row'>
-      <div className='col-sm-offset-1 col-sm-10'>
-        <div className='article__body' dangerouslySetInnerHTML={{__html: body,}} />
-      </div>
-    </div>
-    <div className='row'>
-      <div className='col-sm-offset-1 col-sm-10'>
-        <ArticleDetails { ...{event, date, location, downloads,} } />
-      </div>
-    </div>
+    <div className='article__body' dangerouslySetInnerHTML={{__html: body,}} />
+    <ArticleDetails { ...{event, date, location, downloads,} } />
   </div>
 );
 

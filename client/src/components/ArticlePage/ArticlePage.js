@@ -55,10 +55,6 @@ class ArticlePage extends React.Component {
           <PageIntro icon='fa-spinner fa-spin' title='Loading…' />
         </div>
       );
-    } else if (!this.props.article.id) {
-      return (
-        <div className='article-page'/>
-      );
     } else if (this.props.article.id === this.props.id && this.props.article.url !== this.props.path) {
       return (
         <Redirect to={this.props.article.url} />
@@ -68,9 +64,13 @@ class ArticlePage extends React.Component {
       return (
         <div className='article-page'>
           <PageIntro title={this.props.article.title} />
-          <Article {...this.props.article} />
-          <SocialButtons tweet={this.props.article.tweetText} username='cressie176' />
+          <div className='row'>
+            <div className='col-sm-offset-1 col-sm-10'>
+              <Article {...this.props.article} />
+              <SocialButtons tweet={this.props.article.tweetText} username='cressie176' />
+            </div>
         </div>
+      </div>
       );
     }
   }
