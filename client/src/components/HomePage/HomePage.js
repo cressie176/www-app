@@ -50,7 +50,7 @@ class HomePage extends React.Component {
               <FeatureToggle id='featuredSoftware'>
               {
                 this.props.page.featuredSoftware
-                  ? <FeaturedProjectList projects={this.props.page.featuredSoftware} />
+                  ? <FeaturedProjectList featuredProjectList={this.props.page.featuredSoftware} />
                   : null
               }
               </FeatureToggle>
@@ -59,14 +59,14 @@ class HomePage extends React.Component {
           <FeatureToggle id='featuredArticles'>
           {
             this.props.page.featuredArticles
-              ? <FeaturedArticleList featuredArticles={this.props.page.featuredArticles} />
+              ? <FeaturedArticleList featuredArticleList={this.props.page.featuredArticles} />
               : null
           }
           </FeatureToggle>
           <FeatureToggle id='featuredTalks'>
           {
             this.props.page.featuredTalks
-              ? <FeaturedArticleList featuredArticles={this.props.page.featuredTalks} />
+              ? <FeaturedArticleList featuredArticleList={this.props.page.featuredTalks} />
               : null
           }
           </FeatureToggle>

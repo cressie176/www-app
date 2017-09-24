@@ -32,7 +32,7 @@ const PageIntro = ({ icon, title, text, link, image, }) => (
 PageIntro.propTypes = {
   icon: PropTypes.string,
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   link: PropTypes.object,
   image: PropTypes.object,
 };

@@ -1,19 +1,17 @@
 import { connect, } from 'react-redux';
+import get from 'lodash.get';
 
-import { fetchProject, fetchDownloadCount, } from '../../actions/projectActions';
+import { fetchDownloadCount, } from '../../actions/projectActions';
 import FeaturedProject from './FeaturedProject';
 
 function mapStateToProps(state, props) {
   return {
-    project: state.projects.items[props.id] || {},
+    stats: get(state, `project.${props.id}.stats`),
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    fetchProject: (id) => {
-      dispatch(fetchProject(id));
-    },
     fetchDownloadCount: (id) => {
       dispatch(fetchDownloadCount(id));
     },

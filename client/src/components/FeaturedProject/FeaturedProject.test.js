@@ -2,54 +2,17 @@ import React from 'react';
 import { shallow, } from 'enzyme';
 import FeaturedProject from './FeaturedProject';
 
-describe('FeatureProject', () => {
+describe('Featured Project', () => {
 
-  it('should render a message on error', () => {
 
-    const wrapper = shallow(
-      <FeaturedProject
-        id='yadda'
-        project={{ id: 'yadda', error: new Error('Oh Noes!'), }}
-      />
-    );
+  it('should render a featured project without stats', () => {
 
-    expect(wrapper.hasClass('featured-project')).toBe(true);
-    expect(wrapper.find('.featured-project--error').text()).toBe('Error loading module');
-  });
-
-  it('should render a message when missing', () => {
+    const project = { id: 'yadda', title: 'Yadda',  url: 'https://yadda', summary:'meh', };
 
     const wrapper = shallow(
+
       <FeaturedProject
-        id='yadda'
-        project={{ id: 'yadda', missing: true, }}
-      />
-    );
-
-    expect(wrapper.hasClass('featured-project')).toBe(true);
-    expect(wrapper.find('.featured-project--missing').text()).toBe('Module not found');
-  });
-
-  it('should render a message while loading', () => {
-
-    const wrapper = shallow(
-      <FeaturedProject
-        id='yadda'
-        project={{ id: 'yadda', loading: true, }}
-      />
-    );
-
-    expect(wrapper.hasClass('featured-project')).toBe(true);
-    expect(wrapper.find('.featured-project--loading').text()).toBe('Loading…');
-  });
-
-  it('should render a featured project while fetching download count', () => {
-
-    const wrapper = shallow(
-      <FeaturedProject
-        id='yadda'
-        project={{ id: 'yadda', title: 'Yadda',  url: 'https://yadda', summary:'meh', downloads_loading: true, }}
-        fetchProject={() => {}}
+        { ...project }
         fetchDownloadCount={() => {}}
       />
     );
@@ -57,18 +20,19 @@ describe('FeatureProject', () => {
     expect(wrapper.hasClass('featured-project')).toBe(true);
     expect(wrapper.find('.featured-project__link').prop('href')).toBe('https://yadda');
     expect(wrapper.find('.featured-project__link').text()).toBe('Yadda');
-    expect(wrapper.find('.featured-project__downloads i').hasClass('fa-spinner')).toBe(true);
-    expect(wrapper.find('.featured-project__downloads').hasClass('featured-project__downloads--loading')).toBe(true);
-    expect(wrapper.find('.featured-project__downloads').text()).toBe('');
+    expect(wrapper.find('.featured-project__stats i').hasClass('fa-spinner')).toBe(true);
+    expect(wrapper.find('.featured-project__stats').hasClass('featured-project__stats--loading')).toBe(true);
+    expect(wrapper.find('.featured-project__stats').text()).toBe('');
   });
 
-  it('should render a featured project with missing download count', () => {
+  it('should render a featured project with stats', () => {
+
+    const project = { id: 'yadda', title: 'Yadda',  url: 'https://yadda', summary:'meh', stats: { data: { downloads: 1000, }, meta: { loading: false, }, }, };
+
 
     const wrapper = shallow(
       <FeaturedProject
-        id='yadda'
-        project={{ id: 'yadda', title: 'Yadda',  url: 'https://yadda', summary:'meh', downloads_missing: true, }}
-        fetchProject={() => {}}
+        { ...project }
         fetchDownloadCount={() => {}}
       />
     );
@@ -76,18 +40,20 @@ describe('FeatureProject', () => {
     expect(wrapper.hasClass('featured-project')).toBe(true);
     expect(wrapper.find('.featured-project__link').prop('href')).toBe('https://yadda');
     expect(wrapper.find('.featured-project__link').text()).toBe('Yadda');
-    expect(wrapper.find('.featured-project__downloads i').hasClass('fa-spinner')).toBe(false);
-    expect(wrapper.find('.featured-project__downloads').hasClass('featured-project__downloads--missing')).toBe(true);
-    expect(wrapper.find('.featured-project__downloads').text()).toBe('');
+    expect(wrapper.find('.featured-project__stats i').hasClass('fa-spinner')).toBe(false);
+    expect(wrapper.find('.featured-project__stats').hasClass('featured-project__stats--loaded')).toBe(true);
+    expect(wrapper.find('.featured-project__stats').text()).toBe('1,000');
   });
 
-  it('should render a featured project with errored download count', () => {
+
+  it('should render a featured project while loading stats', () => {
+
+    const project = { id: 'yadda', title: 'Yadda',  url: 'https://yadda', summary:'meh', stats: { meta: { loading: true, }, data: {}, }, };
+
 
     const wrapper = shallow(
       <FeaturedProject
-        id='yadda'
-        project={{ id: 'yadda', title: 'Yadda',  url: 'https://yadda', summary:'meh', downloads_error: new Error('Oh Noes!'), }}
-        fetchProject={() => {}}
+        { ...project }
         fetchDownloadCount={() => {}}
       />
     );
@@ -95,18 +61,20 @@ describe('FeatureProject', () => {
     expect(wrapper.hasClass('featured-project')).toBe(true);
     expect(wrapper.find('.featured-project__link').prop('href')).toBe('https://yadda');
     expect(wrapper.find('.featured-project__link').text()).toBe('Yadda');
-    expect(wrapper.find('.featured-project__downloads i').hasClass('fa-spinner')).toBe(false);
-    expect(wrapper.find('.featured-project__downloads').hasClass('featured-project__downloads--error')).toBe(true);
-    expect(wrapper.find('.featured-project__downloads').text()).toBe('');
+    expect(wrapper.find('.featured-project__stats i').hasClass('fa-spinner')).toBe(true);
+    expect(wrapper.find('.featured-project__stats').hasClass('featured-project__stats--loading')).toBe(true);
+    expect(wrapper.find('.featured-project__stats').text()).toBe('');
   });
 
-  it('should render a featured project with download count', () => {
+
+  it('should render a featured project with stats error', () => {
+
+    const project = { id: 'yadda', title: 'Yadda',  url: 'https://yadda', summary:'meh', stats: { meta: { loading: false, error: new Error('Oh Noes!'), }, data: {}, }, };
+
 
     const wrapper = shallow(
       <FeaturedProject
-        id='yadda'
-        project={{ id: 'yadda', title: 'Yadda',  url: 'https://yadda', summary:'meh', downloads: 1000, }}
-        fetchProject={()=>{}}
+        { ...project }
         fetchDownloadCount={() => {}}
       />
     );
@@ -114,9 +82,9 @@ describe('FeatureProject', () => {
     expect(wrapper.hasClass('featured-project')).toBe(true);
     expect(wrapper.find('.featured-project__link').prop('href')).toBe('https://yadda');
     expect(wrapper.find('.featured-project__link').text()).toBe('Yadda');
-    expect(wrapper.find('.featured-project__downloads i').hasClass('fa-download')).toBe(true);
-    expect(wrapper.find('.featured-project__downloads').hasClass('featured-project__downloads--loaded')).toBe(true);
-    expect(wrapper.find('.featured-project__downloads').text()).toBe('1,000');
+    expect(wrapper.find('.featured-project__stats i').hasClass('fa-spinner')).toBe(false);
+    expect(wrapper.find('.featured-project__stats').hasClass('featured-project__stats--error')).toBe(true);
+    expect(wrapper.find('.featured-project__stats').text()).toBe('');
   });
 
 });

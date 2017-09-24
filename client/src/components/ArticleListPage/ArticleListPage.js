@@ -33,6 +33,12 @@ class ArticleListPage extends React.Component {
       return (
         <ErrorPage title='Error loading page' />
       );
+    } else if (!page.title) {
+      return (
+        <div className='article-list-page'>
+          <PageIntro icon='fa-spinner fa-spin' title='Loading…' />
+        </div>
+      );
     } else {
       return (
         <div className={`article-list-page article-list-page--${id}`}>

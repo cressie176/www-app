@@ -56,9 +56,11 @@ class ArticlePage extends React.Component {
       return (
         <Redirect to={article.url} />
       );
-    } else if (loading) {
+    } else if (!article.title || loading) {
       return (
-        <PageIntro icon='fa-spinner fa-spin' title='Loading…' />
+        <div className='article-page'>
+          <PageIntro icon='fa-spinner fa-spin' title='Loading…' />
+        </div>
       );
     } else {
       return (

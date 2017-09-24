@@ -5,7 +5,7 @@ import ArticleSummary from '../ArticleSummary';
 
 import './ArticleList.css';
 
-const ArticleList = ({ articles, error, loading, }) => (
+const ArticleList = ({ articles, loading, error, }) => (
   <div className='article-list'>
     {
       (() => {

@@ -4,28 +4,26 @@ import FeaturedProject from '../FeaturedProject';
 
 import './FeaturedProjectList.css';
 
-const FeaturedProjects = ({ projects = { items: [], link: {}, }, }) => {
-  return (
-    <div className='featured-projects'>
-      <h2>
-        <span className='icon'>
-          <i className={`fa ${projects.icon}`} aria-hidden='true'></i>
-        </span>
-        {projects.title}
-      </h2>
-      <ul className='list-group featured-projects__list'>
-        {
-          projects.items.map((project, index) => {
-            return <FeaturedProject key={index} id={project.id} />;
-          })
-        }
-      </ul>
-    </div>
-  );
+const FeaturedProjectList = ({ featuredProjectList, }) => (
+  <div className='featured-projects'>
+    <h2>
+      <span className='icon'>
+        <i className={`fa ${featuredProjectList.icon}`} aria-hidden='true'></i>
+      </span>
+      {featuredProjectList.title}
+    </h2>
+    <ul className='list-group featured-projects__list'>
+      {
+        featuredProjectList.items.map(project => {
+          return <FeaturedProject key={project.id} {...project} />;
+        })
+      }
+    </ul>
+  </div>
+);
+
+FeaturedProjectList.propTypes = {
+  featuredProjectList: PropTypes.object.isRequired,
 };
 
-FeaturedProjects.propTypes = {
-  projects: PropTypes.object,
-};
-
-export default FeaturedProjects;
+export default FeaturedProjectList;

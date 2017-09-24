@@ -1,0 +1,18 @@
+.featured-project__stats--error {
+  color: var(--error-colour);
+}
+
+.featured-project__stats {
+  float: right;
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.featured-projects__see-all-link {
+  text-align: right;
+}

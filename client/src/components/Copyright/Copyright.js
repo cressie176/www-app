@@ -28,10 +28,10 @@ class Copyright extends React.Component {
 }
 
 Copyright.propTypes = {
-  id: PropTypes.string.isRequired,
-  year: PropTypes.number.isRequired,
-  owner: PropTypes.string.isRequired,
-  rights: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  year: PropTypes.number,
+  owner: PropTypes.string,
+  rights: PropTypes.string,
 };
 
 export default Copyright;

@@ -8,9 +8,9 @@ describe('ArticlePage', () => {
     const wrapper = shallow(
       <ArticlePage
         id={1}
-        article={{ id: 1, }}
+        article={{ id: 1, title: 'Article 1', url: '/article-1', }}
         loading={ true }
-        path=''
+        path='/article-1'
       />
     );
     expect(wrapper.is('.article-page')).toBe(true);
@@ -22,7 +22,7 @@ describe('ArticlePage', () => {
     const wrapper = shallow(
       <ArticlePage
         id={1}
-        article={{ id: 1, }}
+        article={{ id: 1, title: 'Article 1', }}
         error={ new Error('Oh Noes!') }
         path=''
       />
@@ -37,7 +37,7 @@ describe('ArticlePage', () => {
     const wrapper = shallow(
       <ArticlePage
         id={1}
-        article={{ id: 1, }}
+        article={{ id: 1, title: 'Article 1', }}
         missing={ true }
         path=''
       />
@@ -47,27 +47,13 @@ describe('ArticlePage', () => {
     expect(wrapper.prop('title')).toBe('Page Not Found');
   });
 
-  it('should render empty div when article is uninitialised', () => {
-
-    const wrapper = shallow(
-      <ArticlePage
-        id={1}
-        article={{}}
-        path=''
-      />
-    );
-
-    expect(wrapper.is('.article-page')).toBe(true);
-    expect(wrapper.children().length).toBe(0);
-  });
-
   it('should redirect to canonical url', () => {
 
     const wrapper = shallow(
       <ArticlePage
         id={1}
         path='/blog/other-1'
-        article={{ id: 1, url: '/blog/article-1', }}
+        article={{ id: 1, title: 'Article 1', url: '/blog/article-1', }}
       />
     );
 
@@ -80,7 +66,7 @@ describe('ArticlePage', () => {
     const wrapper = shallow(
       <ArticlePage
         id={1}
-        article={{ id: 2, url: '/blog/article-2', images: { main: {}, }, }}
+        article={{ id: 2, title: 'Article 2', url: '/blog/article-2', images: { main: {}, }, }}
         path='/blog/other-2'
       />
     );
