@@ -4,7 +4,7 @@ import { Redirect, } from 'react-router-dom';
 
 import PageIntro from '../PageIntro';
 import Article from '../Article';
-import ErrorPageContainer from '../ErrorPage';
+import ErrorPage from '../ErrorPage';
 import SocialButtons from '../SocialButtons';
 
 import './ArticlePage.css';
@@ -46,17 +46,17 @@ class ArticlePage extends React.Component {
 
     if (error) {
       return (
-        <ErrorPageContainer title='Error loading article' />
+        <ErrorPage title='Error loading article' />
       );
     } else if (missing) {
       return (
-        <ErrorPageContainer title='Page Not Found' />
+        <ErrorPage title='Page Not Found' />
       );
     } else if (article.id === id && article.url !== path) {
       return (
         <Redirect to={article.url} />
       );
-    } else if (!article.title || loading) {
+    } else if (loading || !article.title) {
       return (
         <div className='article-page'>
           <PageIntro icon='fa-spinner fa-spin' title='Loading…' />

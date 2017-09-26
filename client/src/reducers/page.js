@@ -11,11 +11,9 @@ export default function(state = {}, action)  {
     case FETCH_PAGE_SUCCESS:
     case FETCH_PAGE_NOT_FOUND:
     case FETCH_PAGE_ERROR: {
-      const page = extractPage(action);
-      const mergeState = page.id === state.id ? state : {};
       return {
-        ...mergeState,
-        ...page,
+        data: getPage(state, action),
+        meta: getPageMetaData(action),
       };
     }
     default: {
@@ -24,11 +22,15 @@ export default function(state = {}, action)  {
   }
 }
 
-function extractPage({ page, loading = false, missing = false, error, }) {
+function getPage(state, { page, }) {
+  // Prevents flicker while redirecting to canonical url
+  const mergePage = (state.data && state.data.id === page.id) ? state.data : {};
   return {
+    ...mergePage,
     ...page,
-    loading: loading,
-    missing: missing,
-    error: error,
   };
+}
+
+function getPageMetaData({ loading = false, missing = false, error = undefined, }) {
+  return { loading, missing, error, };
 }

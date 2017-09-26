@@ -5,7 +5,7 @@ import FeatureToggle from '../FeatureToggle/FeatureToggle';
 import Profile from '../Profile';
 import FeaturedProjectList from '../FeaturedProjectList';
 import FeaturedArticleList from '../FeaturedArticleList';
-import ErrorPageContainer from '../ErrorPage';
+import ErrorPage from '../ErrorPage';
 
 import './HomePage.css';
 
@@ -20,19 +20,26 @@ class HomePage extends React.Component {
   }
 
   render() {
-    if (this.props.page.id !== 'home' || this.props.page.loading) {
-      return <div className='page home-page' />;
-    } else if (this.props.page.error) {
+
+    const { page = {}, loading = false, missing = false, error, } = this.props;
+
+    if (error) {
       return (
-        <ErrorPageContainer title='Error loading page' />
+        <ErrorPage title='Error loading page' />
       );
+    } else if (missing) {
+      return (
+        <ErrorPage title='Page Not Found' />
+      );
+    } else if (loading || !page.title) {
+      return null;
     } else {
       return (
         <div className='page home-page'>
           {
-            this.props.page.heroImage && (
+            page.heroImage && (
               <div className='row'>
-                <img className='hero' title={this.props.page.heroImage.title} alt={this.props.page.heroImage.description} src={this.props.page.heroImage.url} />
+                <img className='hero' title={page.heroImage.title} alt={page.heroImage.description} src={page.heroImage.url} />
               </div>
             )
           }
@@ -40,8 +47,8 @@ class HomePage extends React.Component {
             <div className='col-md-offset-1 col-md-5 no-min-height'>
               <FeatureToggle id='profile'>
               {
-                this.props.page.profile
-                  ? <Profile profile={this.props.page.profile} />
+                page.profile
+                  ? <Profile profile={page.profile} />
                   : null
               }
               </FeatureToggle>
@@ -49,8 +56,8 @@ class HomePage extends React.Component {
             <div className='col-md-5 no-min-height'>
               <FeatureToggle id='featuredSoftware'>
               {
-                this.props.page.featuredSoftware
-                  ? <FeaturedProjectList featuredProjectList={this.props.page.featuredSoftware} />
+                page.featuredSoftware
+                  ? <FeaturedProjectList featuredProjectList={page.featuredSoftware} />
                   : null
               }
               </FeatureToggle>
@@ -58,15 +65,15 @@ class HomePage extends React.Component {
           </div>
           <FeatureToggle id='featuredArticles'>
           {
-            this.props.page.featuredArticles
-              ? <FeaturedArticleList featuredArticleList={this.props.page.featuredArticles} />
+            page.featuredArticles
+              ? <FeaturedArticleList featuredArticleList={page.featuredArticles} />
               : null
           }
           </FeatureToggle>
           <FeatureToggle id='featuredTalks'>
           {
-            this.props.page.featuredTalks
-              ? <FeaturedArticleList featuredArticleList={this.props.page.featuredTalks} />
+            page.featuredTalks
+              ? <FeaturedArticleList featuredArticleList={page.featuredTalks} />
               : null
           }
           </FeatureToggle>
@@ -77,7 +84,10 @@ class HomePage extends React.Component {
 }
 
 HomePage.propTypes = {
-  page: PropTypes.object.isRequired,
+  page: PropTypes.object,
+  loading: PropTypes.bool,
+  missing: PropTypes.bool,
+  error: PropTypes.object,
 };
 
 export default HomePage;

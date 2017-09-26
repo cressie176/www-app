@@ -5,7 +5,8 @@ import HomePage from './HomePage';
 
 function mapStateToProps(state, props) {
   return {
-    page: state.page,
+    page: state.page.data,
+    ...state.page.meta,
   };
 }
 

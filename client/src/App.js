@@ -28,7 +28,7 @@ import content from './reducers/contentReducer';
 import obfuscation from './reducers/obfuscationReducer';
 import error from './reducers/errorReducer';
 import site from './reducers/siteReducer';
-import page from './reducers/pageReducer';
+import page from './reducers/page';
 import article from './reducers/article';
 import articleList from './reducers/articleList';
 import projects from './reducers/projects';

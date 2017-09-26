@@ -15,7 +15,8 @@ function mapStateToProps(state, props) {
   }
 
   return {
-    page: state.page,
+    page: state.page.data,
+    ...state.page.meta,
     articleList: {
       data: state.articleList.data.filter(byChannel).sort(byDateAndId),
       meta: state.articleList.meta,

@@ -2,18 +2,46 @@ import React from 'react';
 import { shallow, } from 'enzyme';
 import ArticleListPage from './ArticleListPage';
 
-describe('ArticleListPage', () => {
+describe('Article List Page', () => {
 
   it('should render message on error', () => {
     const wrapper = shallow(
       <ArticleListPage
         id='blog'
-        page={{ error: new Error('Oh Noes!'), }}
+        error={new Error('Oh Noes!')}
+        page={{}}
         articleList={{}}
       />
     );
+
     expect(wrapper.is('Connect(ErrorPage)')).toBe(true);
     expect(wrapper.prop('title')).toBe('Error loading page');
+  });
+
+  it('should render message on not found', () => {
+    const wrapper = shallow(
+      <ArticleListPage
+        id='blog'
+        missing={true}
+        page={{}}
+        articleList={{}}
+      />
+    );
+
+    expect(wrapper.is('Connect(ErrorPage)')).toBe(true);
+    expect(wrapper.prop('title')).toBe('Page Not Found');
+  });
+
+  it('should advise when page is loading', () => {
+    const wrapper = shallow(
+      <ArticleListPage
+        id='blog'
+        loading={true}
+        page={{}}
+        articleList={{}}
+      />
+    );
+    expect(wrapper.find('PageIntro').prop('title')).toBe('Loading…');
   });
 
   it('should advise while articles are loading', () => {

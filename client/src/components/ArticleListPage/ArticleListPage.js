@@ -27,13 +27,17 @@ class ArticleListPage extends React.Component {
 
   render() {
 
-    const { id, page, articleList, } = this.props;
+    const { id, page, articleList, loading, missing, error, } = this.props;
 
-    if (page.error) {
+    if (error) {
       return (
         <ErrorPage title='Error loading page' />
       );
-    } else if (!page.title) {
+    } else if (missing) {
+      return (
+        <ErrorPage title='Page Not Found' />
+      );
+    } else if (loading || !page.title) {
       return (
         <div className='article-list-page'>
           <PageIntro icon='fa-spinner fa-spin' title='Loading…' />
@@ -52,8 +56,11 @@ class ArticleListPage extends React.Component {
 
 ArticleListPage.propTypes = {
   id: PropTypes.string.isRequired,
-  page: PropTypes.object.isRequired,
-  articleList: PropTypes.object.isRequired,
+  page: PropTypes.object,
+  articleList: PropTypes.object,
+  loading: PropTypes.bool,
+  missing: PropTypes.bool,
+  error: PropTypes.object,
 };
 
 export default ArticleListPage;
