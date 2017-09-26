@@ -18,8 +18,8 @@ module.exports = function() {
         res.set('Cache-Control', 'public, max-age=3600, must-revalidate');
         res.status(status);
         res.sendFile(path.join(process.cwd(), 'client', 'build', 'index.html'));
-      }
-    }
+      };
+    };
 
     // Disable logging for StatusCake
     app.use((req, res, next) => {
