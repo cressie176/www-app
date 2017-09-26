@@ -25,8 +25,8 @@ import { fetchSite, } from './actions/siteActions';
 // Reducers
 import config from './reducers/config';
 import content from './reducers/content';
-import obfuscation from './reducers/obfuscationReducer';
-import error from './reducers/errorReducer';
+import obfuscation from './reducers/obfuscation';
+import error from './reducers/error';
 import site from './reducers/site';
 import page from './reducers/page';
 import article from './reducers/article';
