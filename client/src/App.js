@@ -31,7 +31,7 @@ import site from './reducers/siteReducer';
 import page from './reducers/pageReducer';
 import article from './reducers/article';
 import articleList from './reducers/articleList';
-import project from './reducers/project';
+import projects from './reducers/projects';
 
 // Miscellaneous
 import 'autotrack/autotrack.js';
@@ -63,7 +63,7 @@ const store = createStore(combineReducers({
   page,
   article,
   articleList,
-  project,
+  projects,
 }), initialState, composeWithDevTools(
   applyMiddleware(thunk)
 ));

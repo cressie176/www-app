@@ -6,7 +6,7 @@ import FeaturedProject from './FeaturedProject';
 
 function mapStateToProps(state, props) {
   return {
-    stats: get(state, `project.${props.id}.stats`),
+    stats: get(state, `projects.${props.id}.stats`),
   };
 }
 

@@ -3,9 +3,9 @@ import {
   FETCH_DOWNLOAD_COUNT_SUCCESS,
   FETCH_DOWNLOAD_COUNT_ERROR,
 } from '../actions/projectActions';
-import reduce from './project';
+import reduce from './projects';
 
-describe('Project Reducer', () => {
+describe('Projects Reducer', () => {
 
   describe('Fetch Download Count Request', () => {
 
