@@ -13,6 +13,6 @@ const Footer = () => {
     </footer>
   );
 };
-//touch
+
 export default Footer;
 
