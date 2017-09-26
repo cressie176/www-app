@@ -23,6 +23,7 @@ function mapStateToProps(state, props) {
     references,
     tags,
     activeReference: activeReference,
+    ...state.content.meta,
   };
 }
 

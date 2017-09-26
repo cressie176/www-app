@@ -29,6 +29,6 @@ function getArticle({ article, }) {
   };
 }
 
-function getArticleMetaData({ loading = false, missing = false, error = undefined, }) {
+function getArticleMetaData({ loading = false, missing = false, error, }) {
   return { loading, missing, error, };
 }

@@ -26,7 +26,6 @@ class ArticleListPage extends React.Component {
   }
 
   render() {
-
     const { id, page, articleList, loading, missing, error, } = this.props;
 
     if (error) {

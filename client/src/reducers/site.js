@@ -5,16 +5,15 @@ import {
   FETCH_SITE_ERROR,
 } from '../actions/siteActions';
 
-export default function(state = {}, action)  {
+export default function(state = { data: {}, meta: {}, }, action)  {
   switch (action.type) {
     case FETCH_SITE_REQUEST:
     case FETCH_SITE_SUCCESS:
     case FETCH_SITE_NOT_FOUND:
     case FETCH_SITE_ERROR: {
-      const site = extractSite(action);
       return {
-        ...state,
-        ...site,
+        data: getSite(action),
+        meta: getSiteMetaData(action),
       };
     }
     default: {
@@ -23,11 +22,10 @@ export default function(state = {}, action)  {
   }
 }
 
-function extractSite({ site, loading = false, missing = false, error, }) {
-  return {
-    ...site,
-    loading: loading,
-    missing: missing,
-    error: error,
-  };
+function getSite({ site, }) {
+  return { ...site, };
+}
+
+function getSiteMetaData({ loading = false, missing = false, error, }) {
+  return { loading, missing, error, };
 }

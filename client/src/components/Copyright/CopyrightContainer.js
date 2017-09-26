@@ -3,7 +3,7 @@ import Copyright from './Copyright';
 
 function mapStateToProps(state, props) {
   return {
-    ...state.site.copyright,
+    ...state.site.data.copyright,
   };
 }
 

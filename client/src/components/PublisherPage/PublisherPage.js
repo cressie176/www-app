@@ -16,28 +16,51 @@ class PublisherPage extends React.Component {
   }
 
   render() {
+
+    const { tags, activeReference, error,} = this.props;
+
     return (
       <div className='page publisher-page'>
 
         <PageIntro title='Publisher' />
+        {
+          (() => {
+            if (error) {
+              return (
+                <div className='row'>
+                  <div className='col-sm-offset-1 col-sm-10'>
+                    <div className='alert alert-danger'>
+                      <i className={`fa fa-exclamation-triangle icon-text`} aria-hidden='true'></i>
+                      {error.message}
+                    </div>
+                  </div>
+                </div>
+              );
+            }
 
-        <div className='row'>
-          <div className='col-sm-offset-1 col-sm-6'>
-             <TagExtract />
-          </div>
-        </div>
+            return (
+              <div>
+                <div className='row'>
+                  <div className='col-sm-offset-1 col-sm-6'>
+                     <TagExtract />
+                  </div>
+                </div>
 
-        <div className='row'>
-          <div className='col-sm-offset-1 col-sm-6'>
-             <TagPicker selected={this.props.activeReference.tag} tags={this.props.tags} />
-          </div>
-        </div>
+                <div className='row'>
+                  <div className='col-sm-offset-1 col-sm-6'>
+                     <TagPicker selected={activeReference.tag} tags={tags} />
+                  </div>
+                </div>
 
-        <div className='row'>
-          <div className='col-sm-offset-1 col-sm-6'>
-             <TagTable tags={this.props.tags} />
-          </div>
-        </div>
+                <div className='row'>
+                  <div className='col-sm-offset-1 col-sm-6'>
+                     <TagTable tags={tags} />
+                  </div>
+                </div>
+              </div>
+            );
+          })()
+        }
       </div>
     );
   }

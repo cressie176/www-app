@@ -4,7 +4,7 @@ import {
   FETCH_DOWNLOAD_COUNT_ERROR,
 } from '../actions/projectActions';
 
-export default function(state = {}, action)  {
+export default function(state = { stats: { data: {}, meta: {}, }, }, action)  {
   switch (action.type) {
     case FETCH_DOWNLOAD_COUNT_REQUEST:
     case FETCH_DOWNLOAD_COUNT_SUCCESS:

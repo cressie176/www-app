@@ -6,7 +6,11 @@ import { ActiveNavItem, InactiveNavItem, } from './NavItem';
 import './Nav.css';
 
 class Nav extends React.Component {
+
   render() {
+
+    const { links = [], location = {}, } = this.props;
+
     return (
       <div className='row'>
         <nav className='navbar navbar-default navbar-overrides'>
@@ -21,8 +25,8 @@ class Nav extends React.Component {
           <div className='collapse navbar-collapse' id='navbar-collapse'>
             <ul className='nav navbar-nav'>
               {
-                this.props.links && this.props.links.map((item, index) => {
-                  const active = this.props.location.pathname === item.url;
+                links.map((item, index) => {
+                  const active = location.pathname === item.url;
                   return active ? <ActiveNavItem key={item.url} text={item.text} path={item.url} icon={item.icon} />
                                 : <InactiveNavItem key={item.url} text={item.text} path={item.url} icon={item.icon} />;
                 })
@@ -37,6 +41,7 @@ class Nav extends React.Component {
 
 Nav.propTypes = {
   links: PropTypes.array,
+  location: PropTypes.object,
 };
 
 export default Nav;

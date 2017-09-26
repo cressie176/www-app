@@ -4,7 +4,7 @@ import Nav from './Nav';
 
 function mapStateToProps(state, props) {
   return {
-    ...state.site.navigation,
+    ...state.site.data.navigation,
   };
 }
 

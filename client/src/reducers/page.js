@@ -5,7 +5,8 @@ import {
   FETCH_PAGE_ERROR,
 } from '../actions/pageActions';
 
-export default function(state = {}, action)  {
+
+export default function(state = { data: {}, meta: {}, }, action)  {
   switch (action.type) {
     case FETCH_PAGE_REQUEST:
     case FETCH_PAGE_SUCCESS:
@@ -22,7 +23,7 @@ export default function(state = {}, action)  {
   }
 }
 
-function getPage(state, { page, }) {
+function getPage(state, { page = {}, }) {
   // Prevents flicker while redirecting to canonical url
   const mergePage = (state.data && state.data.id === page.id) ? state.data : {};
   return {
@@ -31,6 +32,6 @@ function getPage(state, { page, }) {
   };
 }
 
-function getPageMetaData({ loading = false, missing = false, error = undefined, }) {
+function getPageMetaData({ loading = false, missing = false, error, }) {
   return { loading, missing, error, };
 }

@@ -32,6 +32,6 @@ function getArticle(article) {
   };
 }
 
-function getMetaData({ loading = false, error = undefined, }) {
+function getMetaData({ loading = false, error, }) {
   return { loading, error, };
 }

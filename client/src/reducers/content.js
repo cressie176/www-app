@@ -16,16 +16,15 @@ import {
   DELETE_CONTENT_ERROR,
 } from '../actions/contentActions';
 
-export default function(state = { tags: [], references: {}, activeReference: {},}, action)  {
+export default function(state = { tags: [], references: {}, activeReference: {}, meta: {},}, action)  {
   switch (action.type) {
     case FETCH_REFERENCES_REQUEST:
     case FETCH_REFERENCES_SUCCESS:
     case FETCH_REFERENCES_ERROR: {
       return {
         ...state,
-        references: action.references,
-        loading: action.loading,
-        error: action.error,
+        references: getReferences(action),
+        meta: getMetaData(action),
       };
     }
     case FETCH_TAGS_REQUEST:
@@ -33,47 +32,35 @@ export default function(state = { tags: [], references: {}, activeReference: {},
     case FETCH_TAGS_ERROR: {
       return {
         ...state,
-        tags: action.tags,
-        loading: action.loading,
-        error: action.error,
+        tags: getTags(action),
+        meta: getMetaData(action),
       };
     }
     case EXTRACT_CONTENT_REQUEST:
     case EXTRACT_CONTENT_SUCCESS:
     case EXTRACT_CONTENT_ERROR: {
-      const tags = state.tags.indexOf(action.tag) >= 0 ? state.tags : state.tags.concat(action.tag);
       return {
         ...state,
-        tags: tags,
-        loading: action.loading,
-        error: action.error,
+        tags: unionTags(action, state),
+        meta: getMetaData(action),
       };
     }
     case SELECT_CONTENT_REQUEST:
     case SELECT_CONTENT_SUCCESS:
     case SELECT_CONTENT_ERROR: {
-      const activeReferenceId = Object.keys(state.references).find(id => state.references[id].active);
-      const activeReference = Object.assign({}, state.references[activeReferenceId], { tag: action.tag, });
-      const references = {
-        ...state.references,
-        [activeReferenceId]: activeReference,
-      };
       return {
         ...state,
-        references,
-        loading: action.loading,
-        error: action.error,
+        references: getDecoratedReferences(action, state),
+        meta: getMetaData(action),
       };
     }
     case DELETE_CONTENT_REQUEST:
     case DELETE_CONTENT_SUCCESS:
     case DELETE_CONTENT_ERROR: {
-      const tags = state.tags.filter(tag => tag !== action.tag);
       return {
         ...state,
-        tags: tags,
-        loading: action.loading,
-        error: action.error,
+        tags: getUnusedTags(action, state),
+        meta: getMetaData(action),
       };
     }
     default: {
@@ -81,3 +68,34 @@ export default function(state = { tags: [], references: {}, activeReference: {},
     }
   }
 }
+
+function getReferences({ references, }) {
+  return references;
+}
+
+function getTags({ tags, }) {
+  return tags;
+}
+
+function unionTags({ tag, }, { tags, }) {
+  return tags.indexOf(tag) >= 0 ? tags : tags.concat(tag);
+}
+
+function getUnusedTags({ tag, }, { tags, }) {
+  return tags.filter(t => t !== tag);
+}
+
+function getDecoratedReferences({ tag, }, { references, }) {
+  const activeReferenceId = Object.keys(references).find(id => references[id].active);
+  const activeReference = Object.assign({}, references[activeReferenceId], { tag, });
+  return {
+    ...references,
+    [activeReferenceId]: activeReference,
+  };
+
+}
+
+function getMetaData({ loading = false, error, }) {
+  return { loading, error, };
+}
+

@@ -4,7 +4,7 @@ import Spotlights from './Spotlights';
 
 function mapStateToProps(state, props) {
   return {
-    ...state.site,
+    spotlights: state.site.data.spotlights,
   };
 }
 
