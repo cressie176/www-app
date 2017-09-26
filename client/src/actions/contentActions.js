@@ -1,4 +1,4 @@
-import request from './request';
+import request from '../http/request';
 import Cookies from 'universal-cookie';
 
 export const FETCH_REFERENCES_REQUEST = 'FETCH_REFERENCES_REQUEST';

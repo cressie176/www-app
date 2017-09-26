@@ -1,4 +1,4 @@
-import request from './request';
+import request from '../http/request';
 
 export const FETCH_ARTICLE_REQUEST = 'FETCH_ARTICLE_REQUEST';
 export const FETCH_ARTICLE_SUCCESS = 'FETCH_ARTICLE_SUCCESS';

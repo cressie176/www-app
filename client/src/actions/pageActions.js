@@ -1,4 +1,4 @@
-import request from './request';
+import request from '../http/request';
 
 export const FETCH_PAGE_REQUEST = 'FETCH_PAGE_REQUEST';
 export const FETCH_PAGE_SUCCESS = 'FETCH_PAGE_SUCCESS';
