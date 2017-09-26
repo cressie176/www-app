@@ -10,5 +10,3 @@ The Node.js / React application which serves www.stephen-cresswell.net
 ## TODO
 1. Consider deduping content model
 1. Separate components from bootstrap grid system then dedupe
-1. page.meta (check every Page component for loading)
-1. Remove feature toggles

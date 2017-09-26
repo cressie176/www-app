@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import FeatureToggle from '../FeatureToggle/FeatureToggle';
 import Profile from '../Profile';
 import FeaturedProjectList from '../FeaturedProjectList';
 import FeaturedArticleList from '../FeaturedArticleList';
@@ -45,38 +44,22 @@ class HomePage extends React.Component {
           }
           <div className='row'>
             <div className='col-md-offset-1 col-md-5 no-min-height'>
-              <FeatureToggle id='profile'>
-              {
-                page.profile
-                  ? <Profile profile={page.profile} />
-                  : null
-              }
-              </FeatureToggle>
+              page.profile
+                ? <Profile profile={page.profile} />
+                : null
             </div>
             <div className='col-md-5 no-min-height'>
-              <FeatureToggle id='featuredSoftware'>
-              {
-                page.featuredSoftware
-                  ? <FeaturedProjectList featuredProjectList={page.featuredSoftware} />
-                  : null
-              }
-              </FeatureToggle>
+              page.featuredSoftware
+                ? <FeaturedProjectList featuredProjectList={page.featuredSoftware} />
+                : null
             </div>
           </div>
-          <FeatureToggle id='featuredArticles'>
-          {
-            page.featuredArticles
-              ? <FeaturedArticleList featuredArticleList={page.featuredArticles} />
-              : null
-          }
-          </FeatureToggle>
-          <FeatureToggle id='featuredTalks'>
-          {
-            page.featuredTalks
-              ? <FeaturedArticleList featuredArticleList={page.featuredTalks} />
-              : null
-          }
-          </FeatureToggle>
+          page.featuredArticles
+            ? <FeaturedArticleList featuredArticleList={page.featuredArticles} />
+            : null
+          page.featuredTalks
+            ? <FeaturedArticleList featuredArticleList={page.featuredTalks} />
+            : null
         </div>
       );
     }

@@ -61,6 +61,8 @@ module.exports = {
         ga: {
           trackingId: 'UA-104642477-2',
         },
+        featureToggles: {
+        },
       },
     },
     csrf: {
