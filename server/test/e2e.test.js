@@ -55,7 +55,7 @@ describe('www.stephen-cresswell.net', () => {
     });
   });
 
-  it('should respond to application requests', async () => {
+  it('should respond to client app requests', async () => {
 
     expect.assertions(7);
 
@@ -86,6 +86,25 @@ describe('www.stephen-cresswell.net', () => {
       expectStatus(reason.response, 301);
       expectHeader(reason.response, 'location', '/');
     });
+  });
+
+  it('should respond to article requests', async () => {
+
+    expect.assertions(7);
+
+    const res = await request({
+      url: `http://${config.server.host}:${config.server.port}/blog/10½ Factor Microservices'`,
+      resolveWithFullResponse: true,
+      followRedirect: false,
+    });
+
+    expectStatus(res, 200);
+    expectHeader(res, 'content-type', 'text/html; charset=utf-8');
+    expectHeader(res, 'cache-control', 'public, max-age=3600, must-revalidate');
+    expectHeader(res, 'etag');
+
+    const $ = cheerio.load(res.body);
+    expect($('title').text()).toBe('Stephen Cresswell');
   });
 
   it('should respond to config requests', async () => {
