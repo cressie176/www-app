@@ -44,22 +44,30 @@ class HomePage extends React.Component {
           }
           <div className='row'>
             <div className='col-md-offset-1 col-md-5 no-min-height'>
-              page.profile
-                ? <Profile profile={page.profile} />
-                : null
+              {
+                page.profile
+                  ? <Profile profile={page.profile} />
+                  : null
+              }
             </div>
             <div className='col-md-5 no-min-height'>
-              page.featuredSoftware
-                ? <FeaturedProjectList featuredProjectList={page.featuredSoftware} />
-                : null
+              {
+                page.featuredSoftware
+                  ? <FeaturedProjectList featuredProjectList={page.featuredSoftware} />
+                  : null
+              }
             </div>
           </div>
-          page.featuredArticles
-            ? <FeaturedArticleList featuredArticleList={page.featuredArticles} />
-            : null
-          page.featuredTalks
-            ? <FeaturedArticleList featuredArticleList={page.featuredTalks} />
-            : null
+          {
+            page.featuredArticles
+              ? <FeaturedArticleList featuredArticleList={page.featuredArticles} />
+              : null
+          }
+          {
+            page.featuredTalks
+                ? <FeaturedArticleList featuredArticleList={page.featuredTalks} />
+                : null
+          }
         </div>
       );
     }
