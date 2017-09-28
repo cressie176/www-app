@@ -2,7 +2,7 @@
   "sys": {
     "type": "Array"
   },
-  "total": 54,
+  "total": 56,
   "skip": 0,
   "limit": 1000,
   "items": [
@@ -15,11 +15,11 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "5b5pXtgGjSiCcKwCieE4UC",
+        "id": "5ovlS609fqOmywE2kcSAWg",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:10:04.513Z",
-        "updatedAt": "2017-08-31T21:39:11.321Z",
-        "revision": 3,
+        "createdAt": "2017-08-31T21:07:33.567Z",
+        "updatedAt": "2017-09-06T21:52:48.934Z",
+        "revision": 7,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -30,9 +30,351 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Terms & Conditions",
-        "text": "Terms & Conditions",
-        "url": "/legal/terms-and-conditions"
+        "id": "Blog",
+        "text": "Blog",
+        "icon": "fa-file-text-o",
+        "url": "/blog"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "2ZhYVXRGHe8aW0QimU0cq6",
+        "type": "Entry",
+        "createdAt": "2017-09-17T19:10:03.168Z",
+        "updatedAt": "2017-09-17T19:10:03.168Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "PDF of Enterprise Grade Microservices",
+        "text": "Slides",
+        "icon": "fa-file-pdf-o",
+        "media": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "4B7sV4FeE8kQSWeY22G8a0"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "1aRUx8rcSOWacCaUeOYcqQ",
+        "type": "Entry",
+        "createdAt": "2017-09-09T13:55:50.582Z",
+        "updatedAt": "2017-09-27T18:48:59.728Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "person"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "scresswell",
+        "displayName": "Stephen Cresswell",
+        "firstName": "Stephen",
+        "lastName": "Cresswell",
+        "jobTitle": "Moderator",
+        "email": "email@stephen-cresswell.net",
+        "mobile": "+44 (0)7814 033321",
+        "twitterUsername": "cressie176"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "5tyOG8UYlaw0s8G8YqS0wQ",
+        "type": "Entry",
+        "createdAt": "2017-08-31T22:04:35.017Z",
+        "updatedAt": "2017-08-31T22:04:35.017Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "linkList"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "navigation",
+        "title": "Navigation",
+        "links": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5CuaQgEL4souWSi0uiei8o"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5ovlS609fqOmywE2kcSAWg"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "74hFY4cLKggKiGuyy2iqK0"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3iVaxd7WKsU2QyAKoSoAmS",
+        "type": "Entry",
+        "createdAt": "2017-09-09T21:50:04.809Z",
+        "updatedAt": "2017-09-09T21:50:24.820Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Father Ted - Channel 4",
+        "text": "Father Ted - Channel 4",
+        "url": "http://www.channel4.com/programmes/father-ted"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3d4GTHKfj2GEsIAYcuScoQ",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:24:43.330Z",
+        "updatedAt": "2017-09-01T11:54:58.659Z",
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "copyright"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "© 2017 Stephen Cresswell. All rights reserved.",
+        "year": 2017,
+        "owner": "Stephen Cresswell",
+        "rights": "All rights reserved."
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "23BQPn6dHWOu2AkK8ymS68",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:08:23.477Z",
+        "updatedAt": "2017-08-31T21:39:20.732Z",
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Email",
+        "text": "hello@stephen-cresswell.net",
+        "icon": "fa-envelope",
+        "url": "mailto:hello@stephen-cresswell.net"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "2nyUF7itooUI8yMasiyAUs",
+        "type": "Entry",
+        "createdAt": "2017-08-31T22:03:45.486Z",
+        "updatedAt": "2017-09-14T19:32:19.139Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "linkList"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "legal",
+        "title": "Legal",
+        "links": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5b5pXtgGjSiCcKwCieE4UC"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3w2lWUvmhGi8K0WS4mksYk"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4RdujCGE1qak4SoIoQs2UQ"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "6oPgI4zNzqSIWUS2QOsQKy",
+        "type": "Entry",
+        "createdAt": "2017-08-31T22:02:59.642Z",
+        "updatedAt": "2017-08-31T22:02:59.642Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "linkList"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "social",
+        "title": "Social Networks",
+        "links": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1vB10lNZBSiiKsai0KiCIe"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "Q4D5N4wyQ0wWO0AmwmCmE"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "XXrykuPGkUEeuSkMGug64"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "1ybkgfeC0Usu6W4ICKmmco",
+        "type": "Entry",
+        "createdAt": "2017-09-01T22:05:15.270Z",
+        "updatedAt": "2017-09-01T22:07:41.521Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "legalPage"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "terms-and-conditions",
+        "title": "Terms & Conditions",
+        "body": "<p>Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern our relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.</p>\n\n<p>The term 'us' or 'we' refers to the owner of the website. The term 'you' refers to the user or viewer of our website.</p>\n\n<p>The use of this website is subject to the following terms of use:\n\n<ol>\n<li>The content of the pages of this website is for your general information and use only. It is subject to change without notice.</li>\n<li>This website uses cookies to monitor browsing preferences. If you do allow cookies to be used, the personal information may be stored by us for use by third parties.</li>\n<li>Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</li>\n<li>Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific requirements.</li>\n<li>This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</li>\n<li>All trade marks reproduced in this website which are not the property of, or licensed to, the operator are acknowledged on the website.</li>\n<li>Unauthorised use of this website may give rise to a claim for damages and/or be a criminal offence.</li><li>From time to time this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).</li>\n<li>Your use of this website and any dispute arising out of such use of the website is subject to the laws of England, Northern Ireland, Scotland and Wales.</li>\n</ol>\n</p>"
       }
     },
     {
@@ -107,408 +449,6 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "2mGqla8uE8ukUSUwIY8swS",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:27:15.257Z",
-        "updatedAt": "2017-09-09T19:20:39.945Z",
-        "revision": 9,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "article"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": 1,
-        "title": "Enterprise Grade Microservices",
-        "author": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "1aRUx8rcSOWacCaUeOYcqQ"
-          }
-        },
-        "channel": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5AeYQEH78Ie4OCKWWkmI2o"
-          }
-        },
-        "tweetText": "Enterprise Grade Microservices",
-        "keywords": [
-          "Node.js",
-          "12 Factor",
-          "Microservices"
-        ],
-        "summary": "<p>Microservice adoption is driven by promises of simplicity, flexibility, resilience and productivity. It liberates developers from clunky frameworks and legacy technology, enabling them to release faster and more frequently than ever before. With an effective deployment pipeline it is possible to have a new microservice running in production and delivering value within 15 minutes, and to achieve 20+ production releases a day…</p>",
-        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/4pBKNjkDzaoiYqsScA6aQ2/2adc227a96754741c608e4c1ec9757fb/enterprise-grade-microservices-720x540.jpg\" title=\"Enterprise Grade Microservices\" alt=\"Businessman standing by the window in an office tower\" />\n<p>Microservice adoption is driven by promises of simplicity, flexibility, resilience and productivity. It liberates developers from clunky frameworks and legacy technology, enabling them to release faster and more frequently than ever before. With an effective deployment pipeline it is possible to have a new microservice running in production and delivering value within 15 minutes, and to achieve 20+ production releases a day.</p>\n\n<p>But the fast pace, technological freedom and segregated codebase is not without cost. The maxim that a microservice codebase doesn't matter because it's small, won't change and is easily replaced is more often false than it is true.</p>\n\n<p>The principles behind clean code and 12 factor apps are just as applicable to microservices as they are to monoliths, but are all too easily ignored in the typical hubbub and hype that surrounds microservice adoption.</p>",
-        "date": "2016-11-23T19:00+00:00",
-        "event": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "19VmSbmGN2gGoGU24CIE2a"
-          }
-        },
-        "location": "Budapest",
-        "images": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "9hIixEpd04ksKwqCoWYKg"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "5ovlS609fqOmywE2kcSAWg",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:07:33.567Z",
-        "updatedAt": "2017-09-06T21:52:48.934Z",
-        "revision": 7,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Blog",
-        "text": "Blog",
-        "icon": "fa-file-text-o",
-        "url": "/blog"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "5x2gdy4Q1yoa2wWwqiMoMA",
-        "type": "Entry",
-        "createdAt": "2017-08-31T22:51:26.155Z",
-        "updatedAt": "2017-09-09T21:08:33.321Z",
-        "revision": 7,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "featuredArticles"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "articles",
-        "title": "Featured Articles",
-        "icon": "fa-file-text-o",
-        "items": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "VGOaVS3FySAaIuKs2KWg6"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "VXGQK0uZUIueSUIuowugE"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "6equZuAAPmaQMAOAu8wguy"
-            }
-          }
-        ],
-        "link": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "fXohBYKRpeI606eSQYAwQ"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "fXohBYKRpeI606eSQYAwQ",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:29:30.348Z",
-        "updatedAt": "2017-08-31T22:05:02.439Z",
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "See all articles…",
-        "text": "See all articles…",
-        "url": "/blog"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "BiHMILP0e4GougCcgss4G",
-        "type": "Entry",
-        "createdAt": "2017-08-31T22:53:47.975Z",
-        "updatedAt": "2017-09-01T14:04:22.294Z",
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "featuredSoftware"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "software",
-        "title": "Software",
-        "icon": "fa-laptop",
-        "items": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "2Z335f4s5G4M880UCeUe0W"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "7iTlZrljgWkQ0gGaYywaUU"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "3dmRj7SUUg2Mei2eWoa0ok"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "BeyYWLb8AgOUsYMciKG4"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "6NXtw4v3GMCgoaE4IKk6a2"
-            }
-          }
-        ],
-        "link": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "2ksz0Er8busMsUc6YO4Go2"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "VXGQK0uZUIueSUIuowugE",
-        "type": "Entry",
-        "createdAt": "2017-09-09T20:51:28.599Z",
-        "updatedAt": "2017-09-10T22:54:24.777Z",
-        "revision": 14,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "article"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": 1001,
-        "title": "When Orange Is Not The New Black",
-        "author": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "1aRUx8rcSOWacCaUeOYcqQ"
-          }
-        },
-        "channel": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "13bFqt7AHAGemE2cuUsiqM"
-          }
-        },
-        "tweetText": "When Orange Isn't The New Black",
-        "keywords": [
-          "Node.js",
-          "Software",
-          "JavaScript"
-        ],
-        "summary": "<p>\nFrameworks come and go so quickly that with some notable exceptions any libraries you depend on today, could be superseded tomorrow. There's a cost to adoption, but often a larger cost to migrate away. Jump on the band wagon too soon and you get the pain while a project is unstable, leave it too late and supporting community may already moving on.\n</p>\n<p>\nHow do you tell when orange really is the new black, rather than being the emperors new clothes?\n</p>",
-        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/8deT28SVQ4IqIcW8cI0i8/e6f3ef6fcf6f9bf92caa091ad13e0779/orange-is-the-new-black-1024x414.jpg\" title=\"Orange Is Not The New Black\" alt=\"Orange Is Not The New Black\" />\n<p>\nThe pace of software development is faster than ever before. Languages, libraries and applications emerge for their 15 minutes of fame, before being relegated to the C-List just as quickly. But at what cost?\n</p>\n<p>\nI remember when I first discovered open source. Adding a new library to a software project felt like adding value, with the added bonus that it was code I didn't have to write, test or maintain. But was there always a significant and worthwhile benefit?\n</p>\n<p>\nI remember a colleage complaining about the Spring framework, and that it was too much for him to learn. At a time when the most popular alternatives were <a href=\"https://struts.apache.org/\">Struts<a>, <a href=\"http://tapestry.apache.org/\">Tapestry</a>, <a href=\"http://www.oracle.com/technetwork/java/javaee/javaserverfaces-139869.html\">JSF</a> and his preferred option of vanilla <a href=\"https://docs.oracle.com/cd/E17904_01/web.1111/e13712/basics.htm\">Servlets and JSP</a> I didn't have much sympathy for him. Why should his reluctance to pick up new technology limit everyone elses productivity? Surely learning new tools is a key part of of the job?\n</p>\n<p>\nNow I often find myself facing a similar situation, but from the other side of the argument. I'm no ludite. I was an early adopter of docker, with a <a href=\"https://github.com/moby/moby/commit/fe727e2a87fa086d728664c396fd44f4be6d6afd\">commit</a> from 2013 to prove it. I have maintain several moderately popular Node.js packages, and spent the last year writing microservices in Go. Despite frontend devleopment not being a core part of my job, I am comfortable enough with React to build websites like this one. So what's my problem? In fact I have thre.\n</p>\n<p>\nMy first problem is that frameworks come and go so quickly that with some noteable exceptions any libraries you depend on today, could be superseeded tomorrow. There's a cost to adoption, but often a larger cost to migrate away. Jump on the band wagon too soon and you get the pain while a project is unstable, leave it too late and supporting community may already moving on. \n</p>\n<p>\nMy second problem is that the new library or tool may not bring enough value to justitfy its cost, and that the cost is not predicatable. At a minimum you increase the learning curve for other developers. If the library contains bugs and is unmaintained, the costs go up. The <a href=\"https://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/\">lpad debarcle</a> and <a href=\"https://www.theregister.co.uk/2017/08/02/typosquatting_npm/\">typosquatting attacks</a> are two examples of when adding libraries incurred a major cost. Providing the library is genuinely useful it's usually worth the risk, but why take the risk by introducing a library which is used primarily for lily guilding?\n</p>\n<p>\nMy third problem is that the new library may be poorly designed but that the developers introducing them haven't been bitten enough times in the past to be wary. Very little in the software world is new. I drank both <a href=\"http://ant.apache.org/\">ant</a> and <a href=\"http://maven.apache.org/\">maven</a> which taught me to be suspicious of tools like <a href=\"https://puppet.com/\">puppet</a> which are configured by expressing dependencies or inheritance. \n</p>\n<p>\nLet's consider three examples, <a href=\"https://www.npmjs.com/package/hapi\">hapi</a>, <a href=\"https://www.npmjs.com/package/yarn\">yarn</a> and <a href=\"https://www.npmjs.com/package/jest\">jests</a>. I have deliberately picked both these libraries because they are from large organisations, have a significant user base and received a lot of positive publicitly. Several teams I work with have moved, or are considering moving to them.\n</p>\n<p>\nMy preferred http server has always been <a href=\"https://www.npmjs.com/package/express\">express</a>, for the simple reason that it doesn't try to be in charge. Provided my handlers conform to a few trivial middleware conventions I'm good. A few years ago I was leading a team that wanted to move to <a href=\"https://www.npmjs.com/package/hapi\">hapi</a>. A pair of developers evaluated it, recommended it and so we started using it in all new services. It was a huge mistake. Hapi takes the opposite approach to express. It wants to be boss, exerting a strong influencing over how your code and tests are written. Discontent with hapi grew over the the next few months and the team switched back to express. Four years on there are still a handful of hapi services running that nobody wants to touch.\n</p>\n<p>\nWhen yarn was released it was well received. It was faster than npm and did a better job of locking transitive dependencies. With the release of npm 5 most of yarn's advantages have been negated. In order to support yarn, the organisation I work for had to make code changes to their build pipeline. At least some of those same teams are now considering moving back. Yarn worked well and continues to be improved, but it was always likely that npm would updated. Would it have been better to wait?\n</p>\n<p>\nThe new unit testing framework on the block is <a href=\"https://www.npmjs.com/package/jest\">Jest</a>. There are a whole series of blog posts from organisations who have successfully migrated from mocha to jest and report reaping the benefits. When I look at Jest I see everything I want to avoid in a unit test framework.\n</p>\n\n<ul>\n  <li>It wants to run your tests for you rather than making programmatic invocation a first class citizen, putting you at the mercy of its file globbing.</li>\n  <li>It uses a global \"expect\" function which doesn't differentiate whether it's being called from a previously executed test or the current one, resulting in difficult to diagnose failures.</li>\n  <li>It uses a fluid assertion api leading to tests that are higher in ceromony, lower in essence. Jest's expectations are similar, but not identical to <a href=\"https://www.npmjs.com/package/expect.js\">expect.js</a> and <a href=\"https://www.npmjs.com/package/chai\">chai</a> so if you're using either of those libraries elsewhere in your organisation developers working multiple projects will always be have to be context switching.</li>\n  <li>Through its support for mocking it encourages testing interactions rather than side effects, which in turn encourages brittle and opaque test.</li>\n  <li>Through its support for snapshots it encourages brittle, whole document comparision tests.</li>\n</ul>\n\nWithout making all of the above mistakes with java and groovy based testing frameworks such as hamcrest, \n\n<p>\nThe irony of my last example is that I use jest for testing this site. Since it is configured by default with <a href=\"https://github.com/facebookincubator/create-react-app\">create-react-app</a>. While not reported in those previously mentioned blog posts, I had plenty of teething problems with Jest, exclusive tests don't work, the configuration has been neutered, the global expect leaked despite what the documentation claims, it wasn't possible to exclude watch paths until recently and the cryptic error messages such as the following caused by a missing test data directory makes fixing tests a nightmare.\n\n<code>10/09/2017, 20:57:14 PASS server/test/cms/cache.test.js\n10/09/2017, 20:57:14 Cache Cache ✓ should load uncached content (7ms)\n10/09/2017, 20:57:14 ✓ should return cached content (3ms)\n10/09/2017, 20:57:14 ✓ should return undefined when missing content (4ms)\n10/09/2017, 20:57:14 ✓ should eject items from the cache when max size exceeded (5ms)\n10/09/2017, 20:57:14 ✓ should save content (3ms)\n10/09/2017, 20:57:14 ✓ should optimistically cache content on save (3ms)\n10/09/2017, 20:57:14\n10/09/2017, 20:57:15/opt/app/node_modules/jest-jasmine2/build/jasmine/Env.js:511 currentRunnable().addExpectationResult(false, { ^ TypeError: Cannot read property 'addExpectationResult' of undefined at Env.fail (/opt/app/node_modules/jest-jasmine2/build/jasmine/Env.js:511:24) at next (/opt/app/node_modules/jest-jasmine2/build/queue_runner.js:37:24) at /opt/app/node_modules/async/dist/async.js:3861:9 at /opt/app/node_modules/async/dist/async.js:421:16 at iterateeCallback (/opt/app/node_modules/async/dist/async.js:924:17) at /opt/app/node_modules/async/dist/async.js:906:16 at /opt/app/node_modules/async/dist/async.js:3858:13 at /opt/app/node_modules/async/dist/async.js:421:16 at iteratorCallback (/opt/app/node_modules/async/dist/async.js:996:13) at /opt/app/node_modules/async/dist/async.js:906:16\n</code>\n\nDespite my reservations I've decided to stick with it. Given the support I'm sure these teething problems will get resolved and the react eco-system is sufficiently complex for me to want to stay on-piste as it were. I have a suspicion that it's support for parallel testing will be worth the trouble, the interactive test runner is a joy and if other teams are going to be adopting it, I might as well get on the band wagon.\n</p>\n<p>\nSo how do you tell when orange really is the new black, rather than being a case of the emperors new clothes? The answer is to be suspicious of any library that:\n</p>\n<ul>\n  <li>has a steep and/or prolonged learning curve</li>\n  <li>has a similar library already being used in the organisation</li> \n  <li>is accompanied by an unusual amount of hype</li>  \n  <li>significantly changes the design of your appliation</li>\n  <li>is accompanied by its own testing tools (a well designed library shouldn't need one)</li>\n  <li>wants to \"start\" your application</li>\n  <li>is primarily used for lily gilding</li>\n  <li>has poor documentation and who's issues go unanswered</li>  \n</ul>\n</p>\n<p>\n\nDo use libraries\n\nThat is unless the library in question written by me. In which case you should definitely use it without thinking twice.\n</p>\n",
-        "date": "2017-08-19T19:00+01:00",
-        "images": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "1HttWu08ByMIqYkMAwias0"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "19VmSbmGN2gGoGU24CIE2a",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:31:13.936Z",
-        "updatedAt": "2017-08-31T23:31:13.936Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Corp.js - Enterprise Grade Microservices",
-        "text": "Corp.js",
-        "url": "https://www.meetup.com/Corporate-JavaScript-Meetup-Budapest/"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "ZDimT44KgEowGSa6cUQCW",
-        "type": "Entry",
-        "createdAt": "2017-09-14T19:29:15.814Z",
-        "updatedAt": "2017-09-14T19:29:15.814Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "legalPage"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Production Credits",
-        "title": "Production Credits",
-        "body": "<dl>\n<dt>POV of woman using laptop while relaxing on sofa</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/Neustockimages\">iStock.com/Neustockimages</dd>\n<dt>Businessman is looking at city</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/Pinkypills\">iStock.com/Pinkypills</dd>\n<dt>Holding vitual 12 sided role playing game dice numbers background</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/gemredding\">iStock.com/gemredding</dd>\n<dt>Hacking int the new age</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/Yuri_Arcurs\">iStock.com/Yuri_Arcurs</dd>\n<dt>Felt sew star toy</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/mamezito\">iStock.com/mamezito</dd>\n<dt>Abstract network connection background</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/nadla\">iStock.com/nadla</dd>\n<dt>Retro robot on the road</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/benoitb\">iStock.com/benoitb</dd>\n<dt>Construction workers digging</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/KatarzynaBialasiewicz\">iStock.com/KatarzynaBialasiewicz</dd>\n<dt>Logs floating On Water</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/tvisttv\">iStock.com/tvisttv</dd>\n<dt>Garbage</dt>\n<dd><a href=\"http://www.istockphoto.com/gb/portfolio/Smitt\">iStock.com/Smitt</dd>\n</dl>"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "4RdujCGE1qak4SoIoQs2UQ",
-        "type": "Entry",
-        "createdAt": "2017-09-14T19:30:29.919Z",
-        "updatedAt": "2017-09-14T19:30:29.919Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Production Credits",
-        "text": "Production Credits",
-        "url": "/legal/production-credits"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
         "id": "BeyYWLb8AgOUsYMciKG4",
         "type": "Entry",
         "createdAt": "2017-08-31T21:37:03.113Z",
@@ -571,46 +511,25 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "6oPgI4zNzqSIWUS2QOsQKy",
+        "id": "3e6i5bHPBYKyuG8YKu066E",
         "type": "Entry",
-        "createdAt": "2017-08-31T22:02:59.642Z",
-        "updatedAt": "2017-08-31T22:02:59.642Z",
-        "revision": 1,
+        "createdAt": "2017-08-31T21:11:37.665Z",
+        "updatedAt": "2017-08-31T21:39:59.447Z",
+        "revision": 3,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "linkList"
+            "id": "link"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "social",
-        "title": "Social Networks",
-        "links": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "1vB10lNZBSiiKsai0KiCIe"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "Q4D5N4wyQ0wWO0AmwmCmE"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "XXrykuPGkUEeuSkMGug64"
-            }
-          }
-        ]
+        "id": "Mobile",
+        "text": "+44 (0)7814033321",
+        "icon": "fa-phone",
+        "url": "tel:+447814033321"
       }
     },
     {
@@ -622,68 +541,24 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "2nyUF7itooUI8yMasiyAUs",
+        "id": "5uraX28hqg2EU02umO8qog",
         "type": "Entry",
-        "createdAt": "2017-08-31T22:03:45.486Z",
-        "updatedAt": "2017-08-31T22:03:45.486Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "linkList"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "legal",
-        "title": "Legal",
-        "links": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "5b5pXtgGjSiCcKwCieE4UC"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "3w2lWUvmhGi8K0WS4mksYk"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "1ybkgfeC0Usu6W4ICKmmco",
-        "type": "Entry",
-        "createdAt": "2017-09-01T22:05:15.270Z",
-        "updatedAt": "2017-09-01T22:07:41.521Z",
+        "createdAt": "2017-09-02T19:21:46.999Z",
+        "updatedAt": "2017-09-02T20:06:03.151Z",
         "revision": 2,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "legalPage"
+            "id": "link"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "terms-and-conditions",
-        "title": "Terms & Conditions",
-        "body": "<p>Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern our relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.</p>\n\n<p>The term 'us' or 'we' refers to the owner of the website. The term 'you' refers to the user or viewer of our website.</p>\n\n<p>The use of this website is subject to the following terms of use:\n\n<ol>\n<li>The content of the pages of this website is for your general information and use only. It is subject to change without notice.</li>\n<li>This website uses cookies to monitor browsing preferences. If you do allow cookies to be used, the personal information may be stored by us for use by third parties.</li>\n<li>Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</li>\n<li>Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific requirements.</li>\n<li>This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</li>\n<li>All trade marks reproduced in this website which are not the property of, or licensed to, the operator are acknowledged on the website.</li>\n<li>Unauthorised use of this website may give rise to a claim for damages and/or be a criminal offence.</li><li>From time to time this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).</li>\n<li>Your use of this website and any dispute arising out of such use of the website is subject to the laws of England, Northern Ireland, Scotland and Wales.</li>\n</ol>\n</p>"
+        "id": "Duty Calls",
+        "text": "Duty Calls - xkcd",
+        "url": "https://xkcd.com/386/"
       }
     },
     {
@@ -695,60 +570,27 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "3COc9WAIMMY0QKkaycg0WQ",
+        "id": "1HttWu08ByMIqYkMAwias0",
         "type": "Entry",
-        "createdAt": "2017-08-31T23:37:55.487Z",
-        "updatedAt": "2017-09-09T19:21:10.886Z",
-        "revision": 11,
+        "createdAt": "2017-09-09T20:48:49.727Z",
+        "updatedAt": "2017-09-09T20:48:49.727Z",
+        "revision": 1,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "article"
+            "id": "imageSet"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": 2,
-        "title": "Divorcing Microservices With Rascal",
-        "author": {
+        "id": "Orange Is Not The New Black",
+        "thumbnail": {
           "sys": {
             "type": "Link",
-            "linkType": "Entry",
-            "id": "1aRUx8rcSOWacCaUeOYcqQ"
-          }
-        },
-        "channel": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5AeYQEH78Ie4OCKWWkmI2o"
-          }
-        },
-        "tweetText": "Divorcing Microservices With Rascal",
-        "keywords": [
-          "Node.js",
-          "Rascal",
-          "RabbitMQ",
-          "Microservices"
-        ],
-        "summary": "<p>Microservice based architectures are everywhere, but to succeed you must find ways to decouple your services so they can be developed and deployed in isolation. A popular strategy is to use a message broker, which in addition to providing the decoupling, can also add robustness and scalability. But messaging can be deceptively difficult. Which broker suits your needs best? Should you follow a \"command\" or \"event\" based model? How will you handle duplicates? Can you tolerate message loss? Will you recover from errors by discarding, retrying or dead lettering?</p>",
-        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/1CYrJfCdiEMmO2GqsiQOMc/7ad6800d453f62b42880e4c34ecd8dac/divorcing-microservices-with-rascal-720x540.jpg\" title=\"Divorcing Microservices With Rascal\" alt=\"Hands holding a torn picture of a heart\" />\n\n<p>Microservice based architectures are everywhere, but to succeed you must find ways to decouple your services so they can be developed and deployed in isolation. A popular strategy is to use a message broker, which in addition to providing the decoupling, can also add robustness and scalability. But messaging can be deceptively difficult. Which broker suits your needs best? Should you follow a \"command\" or \"event\" based model? How will you handle duplicates? Can you tolerate message loss? Will you recover from errors by discarding, retrying or dead lettering?</p>\n\n<p>If these questions weren't enough, you have to find a good client library. For RabbitMQ there's the excellent <a href=\"https://github.com/squaremo/amqp.node\">ampqlib</a>, but it's not for the faint of heart. Estabilishing a communication channel with the broker requires serveral api calls, and will not be automatically be restablished if dropped. Messages are not persistent or confirmed by default. Errors are likely to crash your application, and there's no support for clustering.</p>\n\n<p>Enter <a href=\"https://www.github.com/guidesmiths/rascal\">Rascal</a>, a friendly, config driven RabbitMQ client which sits on top of amqplib, simplyfing adoption significantly.</p>",
-        "date": "2016-06-29T19:00+00:00",
-        "event": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "3yKsrbq2XSgU0mooEyO4oo"
-          }
-        },
-        "location": "London",
-        "images": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "6xesezFf7G4mCEaYAO6wg8"
+            "linkType": "Asset",
+            "id": "4J3pfkFcTYQq8giGaCwSC8"
           }
         }
       }
@@ -866,82 +708,6 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "5l4bNL91LOeicAIAMayAAc",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:44:58.380Z",
-        "updatedAt": "2017-09-14T18:33:21.861Z",
-        "revision": 15,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "article"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": 3,
-        "title": "Yadda - The Other JavaScript BDD Library",
-        "author": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "1aRUx8rcSOWacCaUeOYcqQ"
-          }
-        },
-        "channel": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5AeYQEH78Ie4OCKWWkmI2o"
-          }
-        },
-        "tweetText": "Yadda - The Other JavaScript BDD Library",
-        "keywords": [
-          "Node.js",
-          "Testing",
-          "BDD",
-          "Yadda"
-        ],
-        "summary": "<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they're not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe('some test function') with text. Chai and Expect don't even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this() at the cost of additional ceremony. Surely there's more to BDD…</p>",
-        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/FntIzfFlAGWGOQMcoUCOm/0e35e0cf4b64d89d719a67e1dce027a4/yadda-1024x768.jpg\" title=\"Yadda\" alt=\"Man sitting among boxes labelled as JavaScript BDD librarys\" />\n\n<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they're not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe('some test function') with text. Chai and Expect don't even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this().</p>\n\n<p>The only true BDD tool found for JavaScript is CucumberJS. The problem with CucumberJS is that the Gerkin syntax is restrictive. I don't want to be limited to starting my sentences with \"Given\", \"When\", \"Then\", \"And\" and \"But\". I want to express myself naturally.</p>\n\n<p>I also want a test runner that makes good decisions about which steps to run, that works in a browser and that lets me plugin different step libraries so that I can test multiple interfaces (e.g. rest and HTML) with the same scenarios. I even want a tool that has nothing to do with testing and just maps ordinary sentences to functions so I could use it in a rules engine or build script.</p>\n\n<p>That's why I wrote <a href=\\'http://www.github.com/acuminous/yadda\\'>Yadda</a> - the other JavaScript BDD library.</p>",
-        "date": "2016-04-26T19:00+01:00",
-        "event": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "77RHHsHuSsKIuCE4uew000"
-          }
-        },
-        "location": "London",
-        "images": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "3pVLW3iAYgcIUuUe6EUmCS"
-          }
-        },
-        "downloads": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "1h5xhIsfS2AKUsoamMKYO8"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
         "id": "Q4D5N4wyQ0wWO0AmwmCmE",
         "type": "Entry",
         "createdAt": "2017-08-31T21:13:14.690Z",
@@ -1021,6 +787,64 @@
             "id": "g99n9a78vx0s"
           }
         },
+        "id": "VXGQK0uZUIueSUIuowugE",
+        "type": "Entry",
+        "createdAt": "2017-09-09T20:51:28.599Z",
+        "updatedAt": "2017-09-27T20:04:35.559Z",
+        "revision": 104,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "article"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": 1001,
+        "title": "When Orange Is Not The New Black",
+        "author": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1aRUx8rcSOWacCaUeOYcqQ"
+          }
+        },
+        "channel": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "13bFqt7AHAGemE2cuUsiqM"
+          }
+        },
+        "keywords": [
+          "Node.js",
+          "Software",
+          "JavaScript"
+        ],
+        "tweet": "When Orange Is Not The New Black",
+        "summary": "<p>\nFrameworks come and go so quickly that with some notable exceptions any libraries you depend on today, could be superseded tomorrow. There's a cost to adoption, but often a larger cost to migrate away. Jump on the band wagon too soon and you get the pain while a project is unstable, leave it too late and supporting community may already moving on.\n</p>\n<p>\nHow do you tell when orange really is the new black, rather than being the emperors new clothes?\n</p>",
+        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/8deT28SVQ4IqIcW8cI0i8/e0aec2652cdf65ce6bf77a1d5a21f8da/orange-is-the-new-black-1024x413.jpg\" title=\"Orange Is Not The New Black\" alt=\"Orange Is Not The New Black\" />\n\n<p>\nThe pace of software development is faster than ever before. Languages, libraries and applications emerge for their 15 minutes of fame, before being relegated to the C-List just as quickly. But at what cost? I remember when I first discovered open source. Adding a new library to a software project felt like adding value, with the added bonus that it was code I didn't have to write, test or maintain. But was there always a significant and worthwhile benefit?\n</p>\n<p>\nI remember a colleague complaining about the Spring framework, and that it was too much for him to learn. At a time when the most popular alternatives were Struts, Tapestry, JSF and his preferred option of vanilla Servlets with JSP. I didn't have much sympathy for him. Why should his reluctance to pick up new technology limit everyone else's productivity? Surely learning new tools was a key part of the job?\n</p>\n<p>\nNow I often find myself facing a similar situation, but from the other side of the argument. I'm no luddite. I was an early adopter of docker, with a <a href=\"https://github.com/moby/moby/commit/fe727e2a87fa086d728664c396fd44f4be6d6afd\">commit</a> from 2013 to prove it. I maintain several moderately popular Node.js modules, and spent the last year writing microservices in Go. Despite frontend development not being a critical part of my job, I am comfortable enough with React to build websites like this one. So what's my problem? I don't have one, I have three.\n</p>\n<p>\nThe first problem is that frameworks come and go so quickly that, with some notable exceptions any libraries you depend on today, could be superseded tomorrow. There's a cost to adoption, but often a larger cost to migrate away. Jump on the band wagon too soon and you get the pain while a project is unstable, pick the wrong library or wait too long and the community may move on, leaving you with a legacy codebase before you've reaped sufficient benefit. An example of this is <a href=\"http://alt.js.org/\">Alt</a>, a once popular flux implementation, which now languishes in the shadow of <a href=\"http://redux.js.org/\">Redux</a>. A more serious example is <a href=\"http://coffeescript.org/\">CoffeeScript</a>.\n</p>\n<p>\nThe second problem is that even when a library isn't a fad, it still may not bring enough value to justify its cost. This is hard to know upfront because neither the cost or benefit are predictable. At a minimum you increase the learning curve for other developers. If the library contains bugs and is unmaintained, the costs go up. The <a href=\"https://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/\">lpad debarcle</a> and <a href=\"https://www.theregister.co.uk/2017/08/02/typosquatting_npm/\">typosquatting attacks</a> are two examples of when adding libraries incurred a major cost. Providing the library is genuinely useful it's usually worth the risk, but why take the chance on a library that is trivial or superficial? Despite their popularity, fluid assertion APIs such as <a href=\"https://www.npmjs.com/package/expect.js\">expect.js</a> fall into this category, as does tooling such as <a href=\"https://www.npmjs.com/package/react-autobind\">react-autobind</a> which attempt to make up for perceived shortcommings of another language or framework. Individually these libraries are negligible, but introduce too many and the cumulative costs can have an impact.\n</p>\n<p>\nThe third problem is that the new library may be poorly designed. The flaws may not be significant when the software is young, but as features are added, it becomes harder and harder to adapt. The rate and quality of releases drops. A new and better library emerges, but your codebase is wedded to the old one. Spotting design flaws in software requires experience, but often the developers introducing it haven't been bitten enough times to be wary. I drank both the <a href=\"http://ant.apache.org/\">ant</a> and <a href=\"http://maven.apache.org/\">maven</a> kool aid, but doing so taught me to be suspicious of tools like <a href=\"https://puppet.com/\">puppet</a> which are configured by expressing dependencies or inheritance, and favour imperative ones such as <a href=\"https://www.ansible.com/\">Ansible</a> instead.\n</p>\n<p>\nTo highlight my points further, let's consider three examples, <a href=\"https://hapijs.com/\">hapi</a>, <a href=\"https://yarnpkg.com/en/\">Yarn</a> and <a href=\"https://facebook.github.io/jest/\">Jest</a>. All these libraries are from large organisations, have a significant user base and received a lot of positive publicity. Several teams I work with have moved, or are considering moving to them.\n</p>\n<p>\nMy preferred http server has always been <a href=\"http://expressjs.com/\">Express</a>, for the simple reason that it doesn't try to be in charge. Provided my handlers conform to a few simple conventions I'm good. A few years ago I was leading a team who were considering moving to <a href=\"https://hapijs.com/\">hapi</a>. A pair of developers evaluated it, liked it and so we started using it in all new services. It was a huge mistake. hapi takes the opposite approach to express. It wants to be boss, exerting a strong influence over how your code and tests are written. Discontent with hapi grew over the next few months and the team switched back to express. Four years on and there are still a handful of hapi services running that nobody wants to touch.\n</p>\n<p>\nWhen <a href=\"https://yarnpkg.com/en/\">Yarn</a> was released it was well received. It was faster than npm and did a better job of locking transitive dependencies. With the release of npm 5, most of Yarn's advantages have been negated. In order to support Yarn, the organisation I work for had to make code changes to their build pipeline. At least some of those same teams are now considering moving back. Yarn worked well and continues to be improved, but it was always likely that npm would be updated. Would it have been better to put up with the shortcomings of npm for a little while longer rather than support two package managers?\n</p>\n<p>\n<a href=\"https://facebook.github.io/jest/\">Jest</a> is a trending testing framework from Facebook. Several organisations, such as Airbnb, have <a href=\"https://medium.com/airbnb-engineering/unlocking-test-performance-migrating-from-mocha-to-jest-2796c508ec50\">written about</a> the benefits of migrating to Jest. When either Facebook or Airbnb advocate something the Node.js community sit up and take note, however when I look at Jest I see everything I want to avoid in a test framework.\n</p>\n\n<ul>\n  <li>It lacks support for programatic selection of test suites</li>\n  <li>It expects to be the entry point for running your tests</li>\n  <li>It uses a global \"expect\" function</li>\n  <li>It uses a fluid assertion api</li>\n  <li>It encourages mocking</li>\n  <li>It encourages snapshot testing</li>\n</ul>\n\n<p>\nSo why are these a concern?\n</p>\n<p>\nIf programatically declaring test suites and running tests isn't a first class citizen of the test framework you end up at the mercy of its globbing and configuration. Both have resulted in a number of GitHub issues, such as <a href=\"https://github.com/facebookincubator/create-react-app/pull/3124\">infinite loops while running in watch mode</a> and <a href=\"https://github.com/facebook/jest/issues/3584\">problems reading config</a>. Instead if you make programatic execution a first class citizen, then it becomes trivial to add test suite discovery and execution on top. It also becomes easier to customise or workaround when something goes awry.\n</p>\n<p>\nJest uses globals which are supposed to fully reset between each test, however as with any shared, mutable, state you are always likely to hit some kind of gotcha. I did while testing code calling setTimeout from componentWillMount and clearTimeout from componentWillUnmount. One of <a href=\"https://github.com/cressie176/www-app/blob/master/client/src/components/error/ErrorPage.test.js#L67\">my tests</a> failed intermittently because of an additional assertion. Jest provided no clue that the assertion was actually being triggered in <a href=\"https://github.com/cressie176/www-app/blob/master/client/src/components/error/ErrorPage.test.js#L45-L50\">a different test</a> that had already passed.\n</p>\n<p>\nI'm a big fan of <a href=\"http://thinkrelevance.com/blog/2008/04/01/ending-legacy-code-in-our-lifetime\">essence over ceromony</a>. Fluid apis clutter tests with irrelevant detail, thereby diluting their essence. In an ideal world I would write all my tests as follows:\n</p>\n<code>given:\n  a = 10\n  b = 9\n\nexpect:\n  91 == a * b\n</code>\n<code>Assertion failed: \n \nassert 91 == a * b\n          |  | | |\n          |  10| 9\n          |    90\n          false\n</code>\n<p>\nI also favour testing for expected side effects rather than for interactions, due to the latter leading to brittle tests which don't communicate intent. It really isn't important that function X was called with three arguments, 'a', 'b' and 'c'. What's important is the side effect of calling X. Mocking and spying do have a place, such to assert when a function is not called, or called only once, but most of the time I prefer to write <a href=\"https://github.com/cressie176/www-app/blob/master/server/lib/components/cms/store-memory.js\">in-memory test doubles</a>. I feel nervous when a library as influential as Jest makes such a strong and one sided case for mocking.\n</p>\n<p>\nI feel even more nervous with regards to snapshotting. Performing a deep comparison of two documents is usually an anti-pattern, because it results in both brittle and vague tests which are hard to debug when they fail. Usually the more specific a test is, the better. At least the snapshot <a href=\"https://facebook.github.io/jest/docs/en/snapshot-testing.html\">documentation</a> clearly acknowledges this and links to some good resources for guidance on snapshot testing.\n</p>\n<p>\nThe irony is that I use Jest for testing this site, since it is configured by default with create-react-app, and because I try to keep an open mind when I appear to be in the minority. While not reported in any of the blog posts I read, I had plenty more teething problems with Jest. Exclusive tests don't work and error messages are cryptic. The following was caused by a missing test data directory. Similarly cryptic error messages are output for syntax errors.\n\n<code>10/09/2017, 20:57:14 PASS server/test/cms/cache.test.js\n10/09/2017, 20:57:14 ✓ should save content (3ms)\n10/09/2017, 20:57:14 ✓ should optimistically cache content on save (3ms)\n10/09/2017, 20:57:14\n10/09/2017, 20:57:15/opt/app/node_modules/jest-jasmine2/build/jasmine/Env.js:511 currentRunnable().addExpectationResult(false, { ^ TypeError: Cannot read property 'addExpectationResult' of undefined at Env.fail (/opt/app/node_modules/jest-jasmine2/build/jasmine/Env.js:511:24) at next (/opt/app/node_modules/jest-jasmine2/build/queue_runner.js:37:24) at /opt/app/node_modules/async/dist/async.js:3861:9 at /opt/app/node_modules/async/dist/async.js:421:16 at iterateeCallback (/opt/app/node_modules/async/dist/async.js:924:17) at /opt/app/node_modules/async/dist/async.js:906:16 at /opt/app/node_modules/async/dist/async.js:3858:13 at /opt/app/node_modules/async/dist/async.js:421:16 at iteratorCallback (/opt/app/node_modules/async/dist/async.js:996:13) at /opt/app/node_modules/async/dist/async.js:906:16\n</code>\n<p>\nDespite all this, I feel uncharitable for being so hard on Jest. All software has bugs, and the more successful the library the more bugs that are discovered. I respect that the developers and Facebook have made their work available to the community. Given the support I'm sure the most of the teething problems will be resolved and the react eco-system is sufficiently complex for me to want to stay on-piste. I have a suspicion that its support for parallel testing will be worth the trouble, the interactive test runner is a joy and if other teams are going to be adopting it, I might as well get on the band wagon too.\n</p>\n<h2>In Conclusion...</h2>\n<p>\nTelling when orange really is the new black, rather than <a href=\"https://en.wikipedia.org/wiki/The_Emperor%27s_New_Clothes\">The Emperor's New Clothes</a> is hard. Sometimes (as was the case with <a href=\"http://alt.js.org/\">Alt</a>), the selected option really was the best choice at the time, and it wasn't feasible to wait to see whether a better choice would materialize. Other times the warning signs are there, providing you know what to look for. So what can you do? My advice is to be suspicious of any library that:\n</p>\n<ul>\n  <li>interferes with the design of your application</li>\n  <li>attempts to be the entry point for your application</li>  \n  <li>is primarily used for lily gilding</li>\n  <li>compensates for shortcommings in a language or other library</li>\n  <li>is clever, not clear</li>    \n</ul>\n</p>\n<p>\nBeing suspicious doesn't necessarily mean avoid, but it should mean performing a little extra due dilegence, recognising and resisting if you have a natural inclination for shiny.\n</p>\n",
+        "date": "2017-08-19T19:00+01:00",
+        "images": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1HttWu08ByMIqYkMAwias0"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
         "id": "6xesezFf7G4mCEaYAO6wg8",
         "type": "Entry",
         "createdAt": "2017-08-31T23:38:00.761Z",
@@ -1084,11 +908,205 @@
             "id": "g99n9a78vx0s"
           }
         },
+        "id": "fL9gaet7tCCegUiCOoUme",
+        "type": "Entry",
+        "createdAt": "2017-08-31T22:03:21.056Z",
+        "updatedAt": "2017-08-31T22:03:21.056Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "linkList"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "contact",
+        "title": "Contact",
+        "links": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "23BQPn6dHWOu2AkK8ymS68"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3e6i5bHPBYKyuG8YKu066E"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "XXrykuPGkUEeuSkMGug64",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:13:33.601Z",
+        "updatedAt": "2017-09-01T22:21:21.156Z",
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Twitter",
+        "icon": "fa-twitter",
+        "url": "https://www.twitter.com/cressie176"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "5CuaQgEL4souWSi0uiei8o",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:07:22.607Z",
+        "updatedAt": "2017-09-06T21:51:36.394Z",
+        "revision": 7,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Home",
+        "text": "Home",
+        "icon": "fa-home",
+        "url": "/"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "6NXtw4v3GMCgoaE4IKk6a2",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:37:38.599Z",
+        "updatedAt": "2017-08-31T21:37:38.599Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "systemic",
+        "title": "Systemic",
+        "summary": "A minimal dependency injection library",
+        "body": "A minimal dependency injection library",
+        "url": "https://www.github.com/guidesmiths/systemic"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "7iTlZrljgWkQ0gGaYywaUU",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:36:02.352Z",
+        "updatedAt": "2017-08-31T21:36:02.353Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "rascal",
+        "title": "Rascal",
+        "summary": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
+        "body": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
+        "url": "https://www.github.com/guidesmiths/rascal"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "5b5pXtgGjSiCcKwCieE4UC",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:10:04.513Z",
+        "updatedAt": "2017-08-31T21:39:11.321Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Terms & Conditions",
+        "text": "Terms & Conditions",
+        "url": "/legal/terms-and-conditions"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
         "id": "6equZuAAPmaQMAOAu8wguy",
         "type": "Entry",
         "createdAt": "2017-09-06T21:32:28.705Z",
-        "updatedAt": "2017-09-09T21:07:02.359Z",
-        "revision": 43,
+        "updatedAt": "2017-09-27T18:39:31.731Z",
+        "revision": 54,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1115,15 +1133,15 @@
             "id": "13bFqt7AHAGemE2cuUsiqM"
           }
         },
-        "tweetText": "10½ Factor Microservices",
         "keywords": [
           "Node.js",
           "Microservices",
           "12 Factor",
           "Docker"
         ],
+        "tweet": "10½ Factor Microservices",
         "summary": "<p>\nBy now you've probably heard of the <a href='https://12factor.net'>12 Factor</a> design principles. Overall they are very good. However as with any piece of advice they should be viewed in the context of when they were written, and reassessed in the current content to see to what extent they are still valuable. In the context of Node.js microservices how will the 12 factor principles stack up?\n</p>",
-        "body": "<p>\nBy now you've probably heard of the <a href=\"https://12factor.net\">12 Factor</a> design principles. Overall they are very good, but as with any piece of advice they should be viewed in the context of when they were written, and reassessed in the current content to see to what extent they are still valuable.\n</p><p>\nThe context I'm most interested in is that of microservice development,  with Node.js. Node is a great fit for microservces in most situations. The module system is excellent, so it's easy to reuse and share code. Once mastered JavaScript can be terse, yet readable, it's interpreted so doesn't suffer from compilation delays, but thanks to V8 fast enough for the majority of applications. The only time I've found Node problematic is when performing event loop blocking operations or when interacting with a server who's client libraries are of dubious quality. With the scene set, how will the 12 factor principles stack up?\n</p>\n<h2>Codebase (1)</h2>\n<img src=\"https://images.contentful.com/g99n9a78vx0s/2sohHw99zqsmuQWqkmCYcw/a7d4ac73cde04f7ce2b04c13b00b2bab/codebase-1024x768.jpg\" title=\"Codebase\" alt=\"A programmer typing on a keyboard\" />\n<p>\nThe first of the principles - \"Codebase\" is also the most easily challenged. The principle states that there should be a 1-1 relationship between codebase and source repository, with consideration for branches and forks etc. \n</p>\n<p>\nI sympathise entirely with what I suspect to be the underlying motivation. I've had to suffer a number of projects with complicated, multi-stage setup, linked repositories (e.g. git sub-modules), shared build scripts and all encompassing development environments which made life a misery. However the glaring problem with this principle is that it prohibits monorepos, where multiple applications are stored in a single repository. Monorepos aren't without their problems - without appropriate tooling it is difficult to know what to build, test and deploy, but have certain advantages such as making it easier to make sweeping changes to the entire codebase.\n</p>\n<h2>Dependencies (2)</h2>\n<img src=\"https://images.contentful.com/g99n9a78vx0s/jGfmTiIZEW88GOIMCSU8u/675b86d953174e791fac4f35e85de04a/dependencies-1024x768.jpeg\" title=\"Dependencies\" alt=\"Stars from a baby's mobile\" />\n<p>\nThe second principle, \"Explicitly declare and isolate dependencies\", is more sound. Version and bundle all dependencies with the application, rather than trusting to their correct existence on deployment. Node.js solves this in a similar way to most other modern languages, by including a dependencies manifest. The latest version of Node's package manager automatically creates a lock file, so even transitive dependencies are explicitly versioned, however there are some situations in which even this is not enough.\n</p><p>\nSome node modules have native dependencies, which must be present in the target environment in order to work. Examples are <a href=\"https://github.com/gsmcwhirter/node-zoneinfo\">zoneinfo</a>, <a href=\"https://www.npmjs.com/package/pg-native\">pg-native</a> and <a href=\"https://www.npmjs.com/package/node-expat\">node-expat</a>. To truly conform to this principle, these dependencies should be bundled too, as must Node.js itself, and this is where <a href=\"https://www.docker.com/\">docker</a> comes in.\n</p><p>\nBy deploying your application within a docker container, and by including its dockerfile in your codebase you can not only version the non-native dependencies, but the native ones as well. \n</p><p>\n<h2>Backing Services (4) and Dev/Prod Parity (10)</h2>\n<div class=\"row\">\n<div class=\"col-md-6\">\n<img src=\"https://images.contentful.com/g99n9a78vx0s/5VN3f8hLB6gwgmauwmKKoa/11dfc597c2e980d9bf7375878429a96a/backing-services-1024x768.jpeg\" title=\"Backing Services\" alt=\"A server communicating with database and web service\"/>\n</div>\n<div class=\"col-md-6\">\n<img src=\"https://images.contentful.com/g99n9a78vx0s/3VDwtMdYykG8cki4C2OQ6u/25a707ce6c7e17a05c2b2a22653a4b2c/dev-prod-parity-1024x768.jpg\" title=\"Dev/Prod Parity\" alt=\"Two nearly identical robots\" />\n</div>\n</div>\nWhile we're on the subject of docker and containerisation, we may as well tick off the forth (backing services), and tenth (dev/prod parity) principles. The backing services principle states that external services (databases, message brokers, other web services, etc) should be treated as \"attached resources\", which can be substituded without having to rebuild and redeploy the application. \n</p><p>\nThis is achievable through external configuration, but made even easier by the service discovery provided by docker, and related technologies such as <a href=\"https://kubernetes.io\">Kubernetes</a>. Kubernetes even comes with a <a href=\"https://kubernetes.io/docs/admin/kube-proxy/\">proxy</a> which enables you to attach a locally running application to a kubernetes managed backing service transparently.\n</p>\n<p>\nBy deploying services within containers, you get a high degree of dev/prod parity, and even more if you deploy databases and message brokers within containers too. Despite this I tend to only do this locally and on CI for serious applications as I've encountered more than my share of issues with mounting network attached storage into docker containers, especially when managed by Kubernetes.\n</p>\n<h2>Config (3)</h2>\n<p>\nUnfortunately the 3rd principle of storing configuration (only) in the environment isn't as well thought out. The 12 factor principles argue that\n</p>\n<ol>\n  <li>against named environments because you will run out of meaningful names</li>\n  <li>for limiting configuration to environment variables, since files can be scattered, inconsistent and may accidentally be checked into source control</li>\n</ol>\n<p>\nMy counter to argument 1, is that in every organisation I've ever worked as, people always refer to environments by name, and so having a named environment configuration makes life significantly easier.\n</p><p>\nMy problem with argument 2, is that I specifically want to check config (excluding secrets) into source control. This enables it to be versioned and deployed with the application, for the same reasons behind the principle of dependency management. Furthermore environment variables lack native structure and typing and cannot be changed at runtime. They are also the <a href=\"https://www.theregister.co.uk/2017/08/02/typosquatting_npm/\">easiest configuration to steal</a>.\n</p><p>\nInstead my approach is to use whatever config source makes most sense (which can include environment variables). I <a href=\"https://github.com/cressie176/www-app/tree/master/server/config\">version control a default config file, and environmental overrides</a> with the application source, then further override with secrets at deploy or runtime using an appropriate secrets management tool such as <a href=\"https://github.com/StackExchange/blackbox\">blackbox</a>, <a href=\"https://www.vaultproject.io/\">vault</a> or <a href=\"https://kubernetes.io/docs/concepts/configuration/secret/\">Kubernetes</a>. I use <a href=\"https://www.npmjs.com/package/confabulous\">Confabulous</a>, a library of my own creation similar to <a href=\"https://www.npmjs.com/package/nconf\">nconf</a>, to handle the merging and overrides.\n</p>\n<h2>Build, Release, Run (5), Processes (6) and Port Binding (7)</h2>\n<p>\nThe next 3 principles aren't very interesting. Separating Build, Release, Run (principle 5) is trivial with docker...\n</p>\n<ul>\n<li>Build and image from a clean checkout</li>\n<li>Push to a repository</li>\n<li>Run on a remote server</li>\n</ul>\n<p>\nI prefer a self managed CI server such as <a href=\"https://jenkins.io/\">Jenkins</a> for building images and orchestrating deployments. With your own server you can preinstall build dependencies, cache images and have fewer security concerns. As a result, some of our microservices build, test and deploy in under 20 seconds.\n</p>\n<p>\nPrinciple 6, stateless processes just boils down to using a database rather than memory to persist any data which spans a request, and Principle 7, port binding means your application should start it's own server rather than be deployed into an application server. Popular in the Java world, but not in Nodeland.\n</p>\n<h2>Concurrency (8) and Admin Processes (12)</h2>\n<img src=\"https://images.contentful.com/g99n9a78vx0s/493at3Zgc0smAquIsIA8uC/e240f820a8f659877b7acd75b3b39bcb/concurrency-1024x768.jpg\" title=\"Concurrency\" alt=\"A graph showing process instances by worker diversity\" />\n<p>\nPrinciple 8, concurrency is highly relevant in a Node.js and microservice environment. This principle advocates scaling by distributing functionality to worker processes, whos instances may grow and shrink depending on demand. i.e. microservices 101. I've also found this a useful approach for circumventing one of Node's limitations. If you have an node process which by necessity performs some long running synchronous operation (e.g. parsing a large XML file), then it will block all other tasks. By separating the synchronous and asynchronous behaviour into different services, you bypass the problem.\n</p><p>\nWe take the same approach for admin processes (principle 12). They either exist as a temporary service, launching from their own docker container and running to completion, or they lie dormant in another permanently running service and can be triggered either by http request or message.\n</p>\n\n<h2>Disposability (9)</h2>\n<img src=\"https:////images.contentful.com/g99n9a78vx0s/5UBtNZVk6kSGeQ0IWm6Cwc/e03218aed927f0b59df6a34c28c08e1c/disposability-1024x768.jpg\" title=\"Disposability\" alt=\"A waste paper basket\"/>\n<p>\nPrinciple 9, disposability is also interesting, and often under appreciated. The principle states that applications should startup and shutdown quickly and gracefully. By gracefully I mean that applications should not attempt to perform any work until all necessary resources (databases connections etc) have been established. When receiving a shutdown signal the application should stop accepting new work, but wait for inflight tasks to complete and only then close connections to attached resources. \n</p><p>\nDepending on your number of microservices, and variety of backing services, this can be surprisingly difficult to orchestrate in a consistent way. My esteemed comrade <a href=\"https://github.com/BorePlusPlus\">Dalibor Novak</a> worked with me creating <a href=\"https://www.npmjs.com/package/systemic\">systemic</a> for solving this problem. You can see it in action <a href=\"https://github.com/cressie176/www-app/tree/master/server/lib\">here</a>\n</p>\n<h2>Logs (11)</h2>\n<img src=\"https://images.contentful.com/g99n9a78vx0s/4KUiWSfUasommuGiO0E2mi/9b648e38d75e13f6e6055a27148e990d/logs-1024x768.jpeg\" title=\"Logs\" alt=\"Logs being transported down a river\"/>\n<p>\nThe remaining principle is to treat logs as event streams. The advice is to write logs, unbuffered to stdout, then route these to dedicated logging infrastructure. I agree, but think they missed a trick. Rather than writing directly to console or your logging framework of choice your application should also emit log messages as events. By doing so each message can have multiple consumers, which may include one which writes to the console, but could additionally include one which publishes events to a message bus or monitoring system such as <a href=\"https://prometheus.io/\">Prometheus</a>. As an added bonus it becomes trivial to selectively silence are asset logged events in automated tests. Node has excellent support for <a href=\"https://nodejs.org/api/events.html\">events</a>, but using it for logging would be rather unusual. For this reason (and others) I've wrapped the event emitter behind a loglike api in a library called <a href=\"https://www.npmjs.com/search?q=prepper\">prepper</a>. You can connect it to console, bunyan or any other logging framework to get the benefits given above while retaining your logger choice.\n\nThe remaining principle is to treat logs as event streams. The advice is to write logs, unbuffered to stdout, then route these to dedicated logging infrastructure. I agree, but think they missed a trick. Rather than writing directly to stdout or your logging framework of choice your application should emit log messages as internal events. By doing so each message can have multiple consumers, which may include one which writes to stdout, but could additionally include one which publishes events to a message bus or monitoring system such as <a href=\"https://prometheus.io/\">Prometheus</a>. As an added bonus it becomes trivial to selectively silence or assert logged events in automated tests. Node has excellent support for <a href=\"https://nodejs.org/api/events.html\">events</a>, but using it for logging would be rather unusual. For this reason (and others) I've wrapped the event emitter behind a loglike API in a library called <a href=\"https://www.npmjs.com/search?q=prepper\">prepper</a>. You can connect it to console, bunyan or any other logging framework to get the benefits given above while retaining your logger of choice.\n\n</p>\n<h2>In Conclusion...</h2>\n<p>\nOf all the 12 factor principles, the only one I fully disagree with is that of config (-1). The codebase principle is still valid in spirit, even if the concerns about the relationship between source code and repository has  dated (-½). Given the extent to which Node.js, Microservices and containerisation have revolutionised how we design, write and deploy code. 10½ out of 12 is pretty good.\n</p>\n\n\n\n\n\n\n\n\n",
+        "body": "\n<p>\nBy now you've probably heard of the <a href=\"https://12factor.net\">12 Factor</a> design principles. Overall they are very good, but as with any piece of advice they should be viewed in the context of when they were written, and reassessed in the current content to see to what extent they are still valuable.\n</p><p>\nThe context I'm most interested in is that of microservice development,  with Node.js. Node is a great fit for microservces in most situations. The module system is excellent, so it's easy to reuse and share code. Once mastered JavaScript can be terse, yet readable, it's interpreted so doesn't suffer from compilation delays, but thanks to V8 fast enough for the majority of applications. The only time I've found Node problematic is when performing event loop blocking operations or when interacting with a server who's client libraries are of dubious quality. With the scene set, how will the 12 factor principles stack up?\n</p>\n<h2>Codebase (1)</h2>\n<img src=\"https://images.contentful.com/g99n9a78vx0s/2sohHw99zqsmuQWqkmCYcw/a7d4ac73cde04f7ce2b04c13b00b2bab/codebase-1024x768.jpg\" title=\"Codebase\" alt=\"A programmer typing on a keyboard\" />\n<p>\nThe first of the principles - \"Codebase\" is also the most easily challenged. The principle states that there should be a 1-1 relationship between codebase and source repository, with consideration for branches and forks etc. \n</p>\n<p>\nI sympathise entirely with what I suspect to be the underlying motivation. I've had to suffer a number of projects with complicated, multi-stage setup, linked repositories (e.g. git sub-modules), shared build scripts and all encompassing development environments which made life a misery. However the glaring problem with this principle is that it prohibits monorepos, where multiple applications are stored in a single repository. Monorepos aren't without their problems - without appropriate tooling it is difficult to know what to build, test and deploy, but have certain advantages such as making it easier to make sweeping changes to the entire codebase.\n</p>\n<h2>Dependencies (2)</h2>\n<img src=\"https://images.contentful.com/g99n9a78vx0s/jGfmTiIZEW88GOIMCSU8u/675b86d953174e791fac4f35e85de04a/dependencies-1024x768.jpeg\" title=\"Dependencies\" alt=\"Stars from a baby's mobile\" />\n<p>\nThe second principle, \"Explicitly declare and isolate dependencies\", is more sound. Version and bundle all dependencies with the application, rather than trusting to their correct existence on deployment. Node.js solves this in a similar way to most other modern languages, by including a dependencies manifest. The latest version of Node's package manager automatically creates a lock file, so even transitive dependencies are explicitly versioned, however there are some situations in which even this is not enough.\n</p><p>\nSome node modules have native dependencies, which must be present in the target environment in order to work. Examples are <a href=\"https://github.com/gsmcwhirter/node-zoneinfo\">zoneinfo</a>, <a href=\"https://www.npmjs.com/package/pg-native\">pg-native</a> and <a href=\"https://www.npmjs.com/package/node-expat\">node-expat</a>. To truly conform to this principle, these dependencies should be bundled too, as must Node.js itself, and this is where <a href=\"https://www.docker.com/\">docker</a> comes in. By deploying your application within a docker container, and by including its dockerfile in your codebase you can not only version the non-native dependencies, but the native ones as well. \n</p><p>\n<h2>Backing Services (4) and Dev/Prod Parity (10)</h2>\n<div class=\"row\">\n<div class=\"col-md-6\">\n<img src=\"https://images.contentful.com/g99n9a78vx0s/5VN3f8hLB6gwgmauwmKKoa/11dfc597c2e980d9bf7375878429a96a/backing-services-1024x768.jpeg\" title=\"Backing Services\" alt=\"A server communicating with database and web service\"/>\n</div>\n<div class=\"col-md-6\">\n<img src=\"https://images.contentful.com/g99n9a78vx0s/3VDwtMdYykG8cki4C2OQ6u/25a707ce6c7e17a05c2b2a22653a4b2c/dev-prod-parity-1024x768.jpg\" title=\"Dev/Prod Parity\" alt=\"Two nearly identical robots\" />\n</div>\n</div>\nWhile we're on the subject of docker and containerisation, we may as well tick off the forth (backing services), and tenth (dev/prod parity) principles. The backing services principle states that external services (databases, message brokers, other web services, etc) should be treated as \"attached resources\", which can be substituded without having to rebuild and redeploy the application. \n</p><p>\nThis is achievable through external configuration, but made even easier by the service discovery provided by docker, and related technologies such as <a href=\"https://kubernetes.io\">Kubernetes</a>. Kubernetes even comes with a <a href=\"https://kubernetes.io/docs/admin/kube-proxy/\">proxy</a> which enables you to attach a locally running application to a Kubernetes managed container transparently.\n</p>\n<p>\nBy deploying services within containers, you get a high degree of dev/prod parity, and even more if you deploy databases and message brokers within containers too. Despite this I tend to only run stateless containers in producation and pre-production environments as I've encountered more than my share of issues with mounting network attached storage into docker containers.\n</p>\n<h2>Config (3)</h2>\n<p>\nThe 3rd principle of storing configuration (only) in the environment isn't as well thought out. The 12 factor principles argue against named environments because you will run out of meaningful names and for limiting configuration to environment variables, since files can be scattered, inconsistent and may accidentally be checked into source control\n</p><p>\nMy counter to argument 1, is that in every organisation I've ever worked as, people always refer to environments by name, and so having a named environment configuration makes life significantly easier.\n</p><p>\nMy problem with argument 2, is that I specifically want to check config (excluding secrets) into source control. This enables it to be versioned and deployed with the application, for the same reasons behind the principle of dependency management. Furthermore environment variables lack native structure or typing and cannot be changed at runtime. They are also the <a href=\"https://www.theregister.co.uk/2017/08/02/typosquatting_npm/\">easiest configuration to steal</a>.\n</p><p>\nInstead my approach is to use whatever config source makes most sense (which can include environment variables). I <a href=\"https://github.com/cressie176/www-app/tree/master/server/config\">version control a default config file, and environmental overrides</a> with the application source, then further override with secrets at deploy or runtime using an appropriate secrets management tool such as <a href=\"https://github.com/StackExchange/blackbox\">blackbox</a>, <a href=\"https://www.vaultproject.io/\">vault</a> or <a href=\"https://kubernetes.io/docs/concepts/configuration/secret/\">Kubernetes</a>. I use <a href=\"https://www.npmjs.com/package/confabulous\">Confabulous</a>, a library of my own creation similar to <a href=\"https://www.npmjs.com/package/nconf\">nconf</a>, to handle the merging and overrides.\n</p>\n<h2>Build, Release, Run (5), Processes (6) and Port Binding (7)</h2>\n<p>\nThe next 3 principles aren't very interesting. Separating Build, Release, Run (principle 5) is trivial with docker...\n</p>\n<ul>\n<li>Build and image from a clean checkout</li>\n<li>Push to a repository</li>\n<li>Run on a remote server</li>\n</ul>\n<p>\nI prefer a self managed CI server such as <a href=\"https://jenkins.io/\">Jenkins</a> for building images and orchestrating deployments. With your own server you can preinstall build dependencies, cache images and have fewer security concerns. As a result, some of our microservices build, test and deploy in under 20 seconds.\n</p>\n<p>\nPrinciple 6, stateless processes just boils down to using a database rather than memory to persist any data which spans a request, and Principle 7, port binding means your application should start it's own server rather than be deployed into an application server. Popular in the Java world, but not in Nodeland.\n</p>\n<h2>Concurrency (8) and Admin Processes (12)</h2>\n<img src=\"https://images.contentful.com/g99n9a78vx0s/493at3Zgc0smAquIsIA8uC/e240f820a8f659877b7acd75b3b39bcb/concurrency-1024x768.jpg\" title=\"Concurrency\" alt=\"A graph showing process instances by worker diversity\" />\n<p>\nPrinciple 8, concurrency is highly relevant in a Node.js and microservice environment. This principle advocates scaling by distributing functionality to worker processes, whos instances may grow and shrink depending on demand. i.e. microservices 101. I've also found this a useful approach for circumventing one of Node's limitations. If you have an node process which by necessity performs some long running synchronous operation (e.g. parsing a large XML file), then it will block all other tasks. By separating the synchronous and asynchronous behaviour into different services, you bypass the problem.\n</p><p>\nWe take the same approach for admin processes (principle 12). They either exist as a temporary service, launching from their own docker container and running to completion, or they lie dormant in another permanently running service and can be triggered either by http request or message.\n</p>\n\n<h2>Disposability (9)</h2>\n<img src=\"https:////images.contentful.com/g99n9a78vx0s/5UBtNZVk6kSGeQ0IWm6Cwc/e03218aed927f0b59df6a34c28c08e1c/disposability-1024x768.jpg\" title=\"Disposability\" alt=\"A waste paper basket\"/>\n<p>\nPrinciple 9, disposability is also interesting, and often under appreciated. The principle states that applications should startup and shutdown quickly and gracefully. By gracefully I mean that applications should not attempt to perform any work until all necessary resources (database connections etc) have been established. When receiving a shutdown signal the application should stop accepting new work, but wait for inflight tasks to complete and only then close connections to attached resources. \n</p><p>\nDepending on your number of microservices, and variety of backing services, this can be surprisingly difficult to orchestrate in a consistent way. My esteemed comrade <a href=\"https://github.com/BorePlusPlus\">Dalibor Novak</a> worked with me creating <a href=\"https://www.npmjs.com/package/systemic\">systemic</a> for solving this problem. You can see it in action <a href=\"https://github.com/cressie176/www-app/tree/master/server/lib\">here</a>.\n</p>\n<h2>Logs (11)</h2>\n<img src=\"https://images.contentful.com/g99n9a78vx0s/4KUiWSfUasommuGiO0E2mi/9b648e38d75e13f6e6055a27148e990d/logs-1024x768.jpeg\" title=\"Logs\" alt=\"Logs being transported down a river\"/>\n<p>\nThe remaining principle is to treat logs as event streams. The advice is to write logs, unbuffered to stdout, then route these to dedicated logging infrastructure. I agree, but think they missed a trick. Rather than writing directly to console or your logging framework of choice your application should also emit log messages as events. By doing so each message can have multiple consumers, which may include one which writes to the console, but could additionally include one which publishes events to a message bus or monitoring system such as <a href=\"https://prometheus.io/\">Prometheus</a>. As an added bonus it becomes trivial to selectively silence are asset logged events in automated tests. Node has excellent support for <a href=\"https://nodejs.org/api/events.html\">events</a>, but using it for logging would be rather unusual. For this reason (and others) I've wrapped the event emitter behind a loglike api in a library called <a href=\"https://www.npmjs.com/search?q=prepper\">prepper</a>. You can connect it to console, bunyan or any other logging framework to get the benefits given above while retaining your logger choice.\n</p>\n<h2>In Conclusion...</h2>\n<p>\nOf all the 12 factor principles, the only one I fully disagree with is that of config (-1). The codebase principle is still valid in spirit, even if the concerns about the relationship between source code and repository have dated (-½). Given the extent to which Node.js, Microservices and containerisation have revolutionised how we design, write and deploy code. I think 10½ out of 12 is pretty good.\n</p>\n\n\n\n\n\n\n\n\n",
         "date": "2017-08-12T21:00+01:00",
         "images": {
           "sys": {
@@ -1143,25 +1161,71 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "3e6i5bHPBYKyuG8YKu066E",
+        "id": "5l4bNL91LOeicAIAMayAAc",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:11:37.665Z",
-        "updatedAt": "2017-08-31T21:39:59.447Z",
-        "revision": 3,
+        "createdAt": "2017-08-31T23:44:58.380Z",
+        "updatedAt": "2017-09-27T18:39:42.210Z",
+        "revision": 17,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "link"
+            "id": "article"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Mobile",
-        "text": "+44 (0)7814033321",
-        "icon": "fa-phone",
-        "url": "tel:+447814033321"
+        "id": 3,
+        "title": "Yadda - The Other JavaScript BDD Library",
+        "author": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1aRUx8rcSOWacCaUeOYcqQ"
+          }
+        },
+        "channel": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5AeYQEH78Ie4OCKWWkmI2o"
+          }
+        },
+        "keywords": [
+          "Node.js",
+          "Testing",
+          "BDD",
+          "Yadda"
+        ],
+        "tweet": "Yadda - The Other JavaScript BDD Library",
+        "summary": "<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they're not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe('some test function') with text. Chai and Expect don't even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this() at the cost of additional ceremony. Surely there's more to BDD…</p>",
+        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/FntIzfFlAGWGOQMcoUCOm/0e35e0cf4b64d89d719a67e1dce027a4/yadda-1024x768.jpg\" title=\"Yadda\" alt=\"Man sitting among boxes labelled as JavaScript BDD librarys\" />\n\n<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they're not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe('some test function') with text. Chai and Expect don't even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this().</p>\n\n<p>The only true BDD tool found for JavaScript is CucumberJS. The problem with CucumberJS is that the Gerkin syntax is restrictive. I don't want to be limited to starting my sentences with \"Given\", \"When\", \"Then\", \"And\" and \"But\". I want to express myself naturally.</p>\n\n<p>I also want a test runner that makes good decisions about which steps to run, that works in a browser and that lets me plugin different step libraries so that I can test multiple interfaces (e.g. rest and HTML) with the same scenarios. I even want a tool that has nothing to do with testing and just maps ordinary sentences to functions so I could use it in a rules engine or build script.</p>\n\n<p>That's why I wrote <a href='http://www.github.com/acuminous/yadda'>Yadda</a> - the other JavaScript BDD library.</p>",
+        "date": "2016-04-26T19:00+01:00",
+        "event": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "77RHHsHuSsKIuCE4uew000"
+          }
+        },
+        "location": "London",
+        "images": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "3pVLW3iAYgcIUuUe6EUmCS"
+          }
+        },
+        "downloads": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1h5xhIsfS2AKUsoamMKYO8"
+            }
+          }
+        ]
       }
     },
     {
@@ -1173,10 +1237,10 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "5uraX28hqg2EU02umO8qog",
+        "id": "Ho8vv9fNWUgeiyYggOGWo",
         "type": "Entry",
-        "createdAt": "2017-09-02T19:21:46.999Z",
-        "updatedAt": "2017-09-02T20:06:03.151Z",
+        "createdAt": "2017-08-31T21:31:09.787Z",
+        "updatedAt": "2017-08-31T21:38:34.266Z",
         "revision": 2,
         "contentType": {
           "sys": {
@@ -1188,43 +1252,9 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Duty Calls",
-        "text": "Duty Calls - xkcd",
-        "url": "https://xkcd.com/386/"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "1HttWu08ByMIqYkMAwias0",
-        "type": "Entry",
-        "createdAt": "2017-09-09T20:48:49.727Z",
-        "updatedAt": "2017-09-09T20:48:49.727Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "imageSet"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Orange Is Not The New Black",
-        "thumbnail": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "4J3pfkFcTYQq8giGaCwSC8"
-          }
-        }
+        "id": "See all talks…",
+        "text": "See all talks…",
+        "url": "/talks"
       }
     },
     {
@@ -1416,24 +1446,71 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "1vB10lNZBSiiKsai0KiCIe",
+        "id": "3COc9WAIMMY0QKkaycg0WQ",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:12:39.858Z",
-        "updatedAt": "2017-09-01T22:20:56.371Z",
-        "revision": 4,
+        "createdAt": "2017-08-31T23:37:55.487Z",
+        "updatedAt": "2017-09-27T18:39:09.882Z",
+        "revision": 16,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "link"
+            "id": "article"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "GitHub",
-        "icon": "fa-github",
-        "url": "https://www.github.com/cressie176/"
+        "id": 2,
+        "title": "Divorcing Microservices With Rascal",
+        "author": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1aRUx8rcSOWacCaUeOYcqQ"
+          }
+        },
+        "channel": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5AeYQEH78Ie4OCKWWkmI2o"
+          }
+        },
+        "keywords": [
+          "Node.js",
+          "Rascal",
+          "RabbitMQ",
+          "Microservices"
+        ],
+        "tweet": "Divorcing Microservices With Rascal",
+        "summary": "<p>Microservice based architectures are everywhere, but to succeed you must find ways to decouple your services so they can be developed and deployed in isolation. A popular strategy is to use a message broker, which in addition to providing the decoupling, can also add robustness and scalability. But messaging can be deceptively difficult. Which broker suits your needs best? Should you follow a \"command\" or \"event\" based model? How will you handle duplicates? Can you tolerate message loss? Will you recover from errors by discarding, retrying or dead lettering?</p>",
+        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/1CYrJfCdiEMmO2GqsiQOMc/3de80ad7c921977e8ca2d2cff63cdb65/divorcing-microservices-with-rascal-1024x768.jpg\" title=\"Divorcing Microservices With Rascal\" alt=\"Hands holding a torn picture of a heart\" />\n\n<p>Microservice based architectures are everywhere, but to succeed you must find ways to decouple your services so they can be developed and deployed in isolation. A popular strategy is to use a message broker, which in addition to providing the decoupling, can also add robustness and scalability. But messaging can be deceptively difficult. Which broker suits your needs best? Should you follow a \"command\" or \"event\" based model? How will you handle duplicates? Can you tolerate message loss? Will you recover from errors by discarding, retrying or dead lettering?</p>\n\n<p>If these questions weren't enough, you have to find a good client library. For RabbitMQ there's the excellent <a href=\"https://github.com/squaremo/amqp.node\">ampqlib</a>, but it's not for the faint of heart. Estabilishing a communication channel with the broker requires serveral api calls, and will not be automatically be restablished if dropped. Messages are not persistent or confirmed by default. Errors are likely to crash your application, and there's no support for clustering.</p>\n\n<p>Enter <a href=\"https://www.github.com/guidesmiths/rascal\">Rascal</a>, a friendly, config driven RabbitMQ client which sits on top of amqplib, simplyfing adoption significantly.</p>",
+        "date": "2016-06-29T19:00+00:00",
+        "event": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "3yKsrbq2XSgU0mooEyO4oo"
+          }
+        },
+        "location": "London",
+        "images": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "6xesezFf7G4mCEaYAO6wg8"
+          }
+        },
+        "downloads": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2WS8uCPP4seyC0WiUEI4cK"
+            }
+          }
+        ]
       }
     },
     {
@@ -1475,24 +1552,53 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "7DYkHbFZv28smw4QukeUkS",
+        "id": "1vB10lNZBSiiKsai0KiCIe",
         "type": "Entry",
-        "createdAt": "2017-08-31T23:02:19.698Z",
-        "updatedAt": "2017-09-09T21:05:12.719Z",
-        "revision": 9,
+        "createdAt": "2017-08-31T21:12:39.858Z",
+        "updatedAt": "2017-09-01T22:20:56.371Z",
+        "revision": 4,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "profile"
+            "id": "link"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "profile",
-        "title": "Profile",
-        "body": "<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React, as demonstrated by the <a href='https://www.github.com/cressie176/www-app'>source code</a> for this site.</p>\n\n<p>Until recently I was operating in a dual role, firstly as CTO and co-founder of <a href='https://www.guidesmiths.com'>GuideSmiths</a>, a successful Node.js & microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients.<p>\n\n</p>Due to a desire to spend more time with my family, I have negotiated an exit from GuideSmiths, and accepted a senior, hands-on position with <a href=\"https://www.tes.com\">Tes Global Ltd</a>, which can be predominantly carried out from the vicinity of my home in Suffolk.</p>\n\n\n"
+        "id": "GitHub",
+        "icon": "fa-github",
+        "url": "https://www.github.com/cressie176/"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3w2lWUvmhGi8K0WS4mksYk",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:12:01.437Z",
+        "updatedAt": "2017-08-31T21:40:12.384Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Privacy Policy",
+        "text": "Privacy Policy",
+        "url": "/legal/privacy-policy"
       }
     },
     {
@@ -1563,24 +1669,55 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "3w2lWUvmhGi8K0WS4mksYk",
+        "id": "VGOaVS3FySAaIuKs2KWg6",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:12:01.437Z",
-        "updatedAt": "2017-08-31T21:40:12.384Z",
-        "revision": 3,
+        "createdAt": "2017-09-08T17:28:22.022Z",
+        "updatedAt": "2017-09-27T18:38:45.988Z",
+        "revision": 74,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "link"
+            "id": "article"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Privacy Policy",
-        "text": "Privacy Policy",
-        "url": "/legal/privacy-policy"
+        "id": 1002,
+        "title": "Await - I'll See You In JavaScript Hell!",
+        "author": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1aRUx8rcSOWacCaUeOYcqQ"
+          }
+        },
+        "channel": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "13bFqt7AHAGemE2cuUsiqM"
+          }
+        },
+        "keywords": [
+          "Node.js",
+          "JavaScript",
+          "Callback",
+          "Promise",
+          "Software Craftsmanship"
+        ],
+        "tweet": "Await - I'll See You In JavaScript Hell!",
+        "summary": "<p>\nThe JavaScript callback vs promises debate is mostly over. Promises won, albeit by the back door of await. I, for one, welcome our new asynchronous overlords, but before we rush to our new programming nirvana let's take some time to look at promises and why they failed to resolve the problems with asynchronous JavaScript…\n</p>",
+        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/1xmevRml5OSmEKSOywei00/58ac49ec43ed80570e34072bc5292a5c/pinhead-1024x768.jpg\" title=\"Pinhead from Hellraiser\" alt=\"Pinhead from Hellraiser\" />\n<p>\nThe JavaScript callback vs promises debate is mostly over. Promises won, albeit by the back door of await. I, for one, welcome our new asynchronous overlords, but before we rush to our new programming nirvana let's take some time to look at promises and why they failed to resolve the problems with asynchronous JavaScript.\n\nThe following code could rightly be damned as callback hell.\n\n<code>function welcomeToHell(cb) {\n  foo(err => {\n    if (err) return cb(err)\n    bar(err => {\n      if (err) return cb(err)\n      baz(err => {\n        if (err) return cb(err)\n        cb()\n      })\n    })\n  })\n}\n</code>\n<p>\nThe only reason callback based code ever looks like this, is because its author did a shoddy job. By using a library like <a href=\"https://www.npmjs.com/package/async\">async</a> and separating the code into explicit functions, things can be much improved. That aside, if the code had been written with promises it would look as follows…\n</p>\n<code>function salvationIsHere() {\n  return foo()\n    .then(bar)\n    .then(baz)\n}\n</code>\n<p>\nIf all promises code ever written looked like the example above I would finish this article now. Regretably it doesn't. Promises are simple when code follows a linear sequence or can run entirely in parallel, but when you add conditions and/or iteration, just like callbacks, they become complicated, taking effort to simplify. As a result most of the promise based code I come across looks nothing like the above. Instead it looks like this…\n</p>\n<code>function welcomeBackToHell(email) {\n  return getUserByEmail(email)\n    .then(user => getUserRoles(user.id)\n      .then(roles => {\n        if (roles.indexOf('publisher') < 0) return { user, roles }\n        return getUserArticles(user.id)\n          .then(articles => ({ user, roles, articles }))\n      })\n  )\n}\n</code>\n<p>\nCall me a cynic, but it looks a lot like the pyramid of doom associated with callback hell. Now my point isn't that with appropriate care promisified code can't read well. It can. But this is equally true with callbacks</a>, providing you take the time to write functions that:\n</p>\n<ol>\n  <li>Have meaningful names</li>\n  <li>Are small (I aim for &lt;=4 lines)</li>\n  <li>Do one thing well</li>\n  <li>Have a single level of abstraction</li>\n  <li>Minimise parameters (I aim for &lt;= 2 excluding cb)</li>\n  <li>Avoid booleans</li>\n  <li>Minimise conditional logic (guard conditions are ok)</li>  \n</ol>\n<p>\nand modules that:\n</p>\n<ol>\n  <li>Have meaningful names that do not end in 'er' or 'or'</li>\n  <li>Have a single responsibility</li>\n  <li>Encapsulate data and behaviour</li>\n</ol>\n<h2>In Conclusion...</h2>\n<p>\nTo write coherent and cohesive code you have to understand and care about the principles of software craftsmanship. This is thousands of times more important than whether you use callbacks, promises or await. Lets try to remember before we damn our codebases with yet more poorly factored code. We're running out of patterns to blame.\n</p>",
+        "date": "2017-08-26T19:00+01:00",
+        "images": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "4gZuk9FDHWgcMGiwKwAuUc"
+          }
+        }
       }
     },
     {
@@ -1626,86 +1763,29 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "1aRUx8rcSOWacCaUeOYcqQ",
+        "id": "2WS8uCPP4seyC0WiUEI4cK",
         "type": "Entry",
-        "createdAt": "2017-09-09T13:55:50.582Z",
-        "updatedAt": "2017-09-09T14:05:52.931Z",
-        "revision": 2,
+        "createdAt": "2017-09-17T16:43:57.084Z",
+        "updatedAt": "2017-09-17T16:43:57.084Z",
+        "revision": 1,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "person"
+            "id": "link"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "scresswell",
-        "displayName": "Stephen Cresswell",
-        "firstName": "Stephen",
-        "lastName": "Cresswell",
-        "jobTitle": "Moderator",
-        "email": "email@stephen-cresswell.net",
-        "mobile": "+44 (0)7814 033321"
-      }
-    },
-    {
-      "sys": {
-        "space": {
+        "id": "PDF of Divorcing Microservices With Rascal",
+        "text": "Slides",
+        "icon": "fa-file-pdf-o",
+        "media": {
           "sys": {
             "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "VGOaVS3FySAaIuKs2KWg6",
-        "type": "Entry",
-        "createdAt": "2017-09-08T17:28:22.022Z",
-        "updatedAt": "2017-09-14T18:50:39.428Z",
-        "revision": 50,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "article"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": 1002,
-        "title": "Await - I'll See You In JavaScript Hell!",
-        "author": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "1aRUx8rcSOWacCaUeOYcqQ"
-          }
-        },
-        "channel": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "13bFqt7AHAGemE2cuUsiqM"
-          }
-        },
-        "tweetText": "Await - I'll See You In JavaScript Hell!",
-        "keywords": [
-          "Node.js",
-          "JavaScript",
-          "Callback",
-          "Promise",
-          "Software Craftsmanship"
-        ],
-        "summary": "<p>\nThe JavaScript callback vs promises debate is mostly over. Promises won, albeit by the back door of await. I for one welcome our new asynchronous overlords, but before we rush to our new programming nirvana let's take some time to look at promises and why they failed to resolve nesting in our codebase…\n</p>",
-        "body": "<p>\nThe JavaScript callback vs promises debate is mostly over. Promises won, albeit by the back door of await. I for one welcome our new asynchronous overlords, but before we rush to our new programming nirvana let's take some time to look at promises and why they failed to resolve nesting in our codebase. The following is some code which could justifiably be damned as callback hell.\n\n<code>function welcomeToHell(cb) {\n  foo(err => {\n    if (err) return cb(err)\n    bar(err => {\n      if (err) return cb(err)\n      baz(err => {\n        if (err) return cb(err)\n        cb()\n      })\n    })\n  })\n}\n</code>\n<p>\nThe only reason the callback based code might look like this, is because its author did a shoddy job. By using a library like <a href=\"https://www.npmjs.com/package/async\">async</a> things can be much improved. That aside, if the code had been written with promises it might look as follows become…\n</p>\n<code>function salvationIsHere() {\n  return foo()\n    .then(bar)\n    .then(baz)\n}\n</code>\n<p>\nIf all promises code ever written looked like the example above I would stop now. <em>It doesn't</em>. Promises are simple when code follows a linear sequence or can run entirely in parallel, but when you add conditions and/or iteration, it become hard to keep them simple. As a result most of the promise based code I come across looks nothing like the above. Instead it looks like this…\n</p>\n<code>function welcomeBackToHell(email) {\n  return getUserByEmail(email)\n    .then(user => getUserRoles(user.id)\n      .then(roles => {\n        if (roles.indexOf('publisher') < 0) return { user, roles }\n        return getUserArticles(user.id)\n          .then(articles => ({ user, roles, articles }))\n      })\n  )\n}\n</code>\n<p>\nAll we've done is trade callback hell for promise hell. Now my point isn't that with appropriate care promisified code can't read well. <em>It can</em>. But this is equally true with <a href=\"https://github.com/cressie176/www-app/blob/master/server/lib/components/cms/cms.js\">callbacks</a>, providing you take the time to write functions that:\n</p>\n<ol>\n  <li>Have meaningful names</li>\n  <li>Are small (I aim for &lt;=4 lines)</li>\n  <li>Do one thing well</li>\n  <li>Have a single level of abstraction</li>\n  <li>Minimise parameters (I aim for &lt;= 2 excluding cb)</li>\n  <li>Avoid booleans</li>\n  <li>Minimise conditional logic (guard conditions permitted)</li>  \n</ol>\n<p>\nand modules that:\n</p>\n<ol>\n  <li>Have meaningful names</li>\n  <li>Have a single responsibility</li>\n  <li>Encapsulate data and behaviour</li>\n</ol>\n<p>\nTo write coherent and cohesive code you have to understand and care about the principles of software craftsmanship. This is thousands of times more important than whether you use callbacks, promises or await. Lets try to remember before we damn codebases to yet another level of asynchronous hell with await.\n</p>",
-        "date": "2017-08-26T19:00+01:00",
-        "images": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "4gZuk9FDHWgcMGiwKwAuUc"
+            "linkType": "Asset",
+            "id": "57Rh7KuLKMYgIOKgmESMkk"
           }
         }
       }
@@ -1719,24 +1799,54 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "XXrykuPGkUEeuSkMGug64",
+        "id": "5x2gdy4Q1yoa2wWwqiMoMA",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:13:33.601Z",
-        "updatedAt": "2017-09-01T22:21:21.156Z",
-        "revision": 4,
+        "createdAt": "2017-08-31T22:51:26.155Z",
+        "updatedAt": "2017-09-09T21:08:33.321Z",
+        "revision": 7,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "link"
+            "id": "featuredArticles"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Twitter",
-        "icon": "fa-twitter",
-        "url": "https://www.twitter.com/cressie176"
+        "id": "articles",
+        "title": "Featured Articles",
+        "icon": "fa-file-text-o",
+        "items": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "VGOaVS3FySAaIuKs2KWg6"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "VXGQK0uZUIueSUIuowugE"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6equZuAAPmaQMAOAu8wguy"
+            }
+          }
+        ],
+        "link": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "fXohBYKRpeI606eSQYAwQ"
+          }
+        }
       }
     },
     {
@@ -1748,36 +1858,227 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "fL9gaet7tCCegUiCOoUme",
+        "id": "ZDimT44KgEowGSa6cUQCW",
         "type": "Entry",
-        "createdAt": "2017-08-31T22:03:21.056Z",
-        "updatedAt": "2017-08-31T22:03:21.056Z",
-        "revision": 1,
+        "createdAt": "2017-09-14T19:29:15.814Z",
+        "updatedAt": "2017-09-14T21:15:27.252Z",
+        "revision": 6,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "linkList"
+            "id": "legalPage"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "contact",
-        "title": "Contact",
-        "links": [
+        "id": "production-credits",
+        "title": "Production Credits",
+        "body": "<table class='table table-striped'>\n  <body>\n    <tr>\n      <td>POV of woman using laptop while relaxing on sofa</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/Neustockimages\">iStock.com/Neustockimages</a></td>\n    </tr>\n    <tr>\n      <td>Businessman is looking at city</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/Pinkypills\">iStock.com/Pinkypills</a></td>\n    </tr>\n    <tr>\n      <td>Holding vitual 12 sided role playing game dice numbers background</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/gemredding\">iStock.com/gemredding</a></td>\n    </tr>\n    <tr>\n      <td>Hacking int the new age</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/Yuri_Arcurs\">iStock.com/Yuri_Arcurs</a></td>\n    </tr>\n    <tr>\n      <td>Felt sew star toy</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/mamezito\">iStock.com/mamezito</a></td>\n    </tr>\n    <tr>\n      <td>Abstract network connection background</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/nadla\">iStock.com/nadla</a></td>\n    </tr>\n    <tr>\n      <td>Retro robot on the road</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/benoitb\">iStock.com/benoitb</a></td>\n    </tr>\n    <tr>\n      <td>Construction workers digging</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/KatarzynaBialasiewicz\">iStock.com/KatarzynaBialasiewicz</a></td>\n    </tr>\n    <tr>\n      <td>Garbage</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/Smitt\">iStock.com/Smitt</a></td>\n    </tr>\n    <tr>\n      <td>Logs floating On Water</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/tvisttv\">iStock.com/tvisttv</a></td>\n    </tr>\n</table>"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "4RdujCGE1qak4SoIoQs2UQ",
+        "type": "Entry",
+        "createdAt": "2017-09-14T19:30:29.919Z",
+        "updatedAt": "2017-09-14T20:56:56.512Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Production Credits",
+        "text": "Production Credits",
+        "url": "/legal/production-credits"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "fXohBYKRpeI606eSQYAwQ",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:29:30.348Z",
+        "updatedAt": "2017-08-31T22:05:02.439Z",
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "See all articles…",
+        "text": "See all articles…",
+        "url": "/blog"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "BiHMILP0e4GougCcgss4G",
+        "type": "Entry",
+        "createdAt": "2017-08-31T22:53:47.975Z",
+        "updatedAt": "2017-09-01T14:04:22.294Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "featuredSoftware"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "software",
+        "title": "Software",
+        "icon": "fa-laptop",
+        "items": [
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "23BQPn6dHWOu2AkK8ymS68"
+              "id": "2Z335f4s5G4M880UCeUe0W"
             }
           },
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "3e6i5bHPBYKyuG8YKu066E"
+              "id": "7iTlZrljgWkQ0gGaYywaUU"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3dmRj7SUUg2Mei2eWoa0ok"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "BeyYWLb8AgOUsYMciKG4"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6NXtw4v3GMCgoaE4IKk6a2"
+            }
+          }
+        ],
+        "link": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "2ksz0Er8busMsUc6YO4Go2"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "2mGqla8uE8ukUSUwIY8swS",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:27:15.257Z",
+        "updatedAt": "2017-09-27T18:39:20.327Z",
+        "revision": 12,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "article"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": 1,
+        "title": "Enterprise Grade Microservices",
+        "author": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1aRUx8rcSOWacCaUeOYcqQ"
+          }
+        },
+        "channel": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5AeYQEH78Ie4OCKWWkmI2o"
+          }
+        },
+        "keywords": [
+          "Node.js",
+          "12 Factor",
+          "Microservices"
+        ],
+        "tweet": "Enterprise Grade Microservices",
+        "summary": "<p>Microservice adoption is driven by promises of simplicity, flexibility, resilience and productivity. It liberates developers from clunky frameworks and legacy technology, enabling them to release faster and more frequently than ever before. With an effective deployment pipeline it is possible to have a new microservice running in production and delivering value within 15 minutes, and to achieve 20+ production releases a day…</p>",
+        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/4pBKNjkDzaoiYqsScA6aQ2/cda3f29bb762d806c312b83593bcd3b4/enterprise-grade-microservices-1024x768.jpg\" title=\"Enterprise Grade Microservices\" alt=\"Businessman standing by the window in an office tower\" />\n\n<p>Microservice adoption is driven by promises of simplicity, flexibility, resilience and productivity. It liberates developers from clunky frameworks and legacy technology, enabling them to release faster and more frequently than ever before. With an effective deployment pipeline it is possible to have a new microservice running in production and delivering value within 15 minutes, and to achieve 20+ production releases a day.</p>\n\n<p>But the fast pace, technological freedom and segregated codebase is not without cost. The maxim that a microservice codebase doesn't matter because it's small, won't change and is easily replaced is more often false than it is true.</p>\n\n<p>The principles behind clean code and 12 factor apps are just as applicable to microservices as they are to monoliths, but are all too easily ignored in the typical hubbub and hype that surrounds microservice adoption.</p>",
+        "date": "2016-11-23T19:00+00:00",
+        "event": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "19VmSbmGN2gGoGU24CIE2a"
+          }
+        },
+        "location": "Budapest",
+        "images": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "9hIixEpd04ksKwqCoWYKg"
+          }
+        },
+        "downloads": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2ZhYVXRGHe8aW0QimU0cq6"
             }
           }
         ]
@@ -1792,11 +2093,40 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "5CuaQgEL4souWSi0uiei8o",
+        "id": "7DYkHbFZv28smw4QukeUkS",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:07:22.607Z",
-        "updatedAt": "2017-09-06T21:51:36.394Z",
-        "revision": 7,
+        "createdAt": "2017-08-31T23:02:19.698Z",
+        "updatedAt": "2017-09-15T04:56:33.502Z",
+        "revision": 10,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "profile"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "profile",
+        "title": "Profile",
+        "body": "<p>I am a creative and conscientious software engineer with over 20 years experience in a variety of sectors. While most productive designing and writing backend systems, I am accomplished at leading cross functional teams and have extensive DevOps experience, especially with regards to CI/CD pipelines and containerisation. I also have reasonable frontend skills which include React. You can see an example of my work in the <a href='https://www.github.com/cressie176/www-app'>source code</a> for this site.</p>\n\n<p>Until recently I was operating in a dual role, firstly as CTO and co-founder of <a href='https://www.guidesmiths.com'>GuideSmiths</a>, a successful Node.js & microservices consultancy, secondly as principal consultant, leading technical teams designing and implementing solutions for GuideSmith’s clients.<p>\n\n</p>Due to a desire to spend more time with my family, I have negotiated an exit from GuideSmiths, and accepted a senior, hands-on position with <a href=\"https://www.tes.com\">Tes Global Ltd</a>, which can be predominantly carried out from the vicinity of my home in Suffolk.</p>\n\n\n"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "19VmSbmGN2gGoGU24CIE2a",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:31:13.936Z",
+        "updatedAt": "2017-08-31T23:31:13.936Z",
+        "revision": 1,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1807,101 +2137,9 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Home",
-        "text": "Home",
-        "icon": "fa-home",
-        "url": "/"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "6NXtw4v3GMCgoaE4IKk6a2",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:37:38.599Z",
-        "updatedAt": "2017-08-31T21:37:38.599Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "systemic",
-        "title": "Systemic",
-        "summary": "A minimal dependency injection library",
-        "body": "A minimal dependency injection library",
-        "url": "https://www.github.com/guidesmiths/systemic"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "7iTlZrljgWkQ0gGaYywaUU",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:36:02.352Z",
-        "updatedAt": "2017-08-31T21:36:02.353Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "rascal",
-        "title": "Rascal",
-        "summary": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
-        "body": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
-        "url": "https://www.github.com/guidesmiths/rascal"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "Ho8vv9fNWUgeiyYggOGWo",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:31:09.787Z",
-        "updatedAt": "2017-08-31T21:38:34.266Z",
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "See all talks…",
-        "text": "See all talks…",
-        "url": "/talks"
+        "id": "Corp.js - Enterprise Grade Microservices",
+        "text": "Corp.js",
+        "url": "https://www.meetup.com/Corporate-JavaScript-Meetup-Budapest/"
       }
     },
     {
@@ -1997,146 +2235,6 @@
         "title": "Privacy Policy",
         "body": "<p>This privacy policy sets out how we use and protect any information that you give us when you use this website.</p>\n\n<p>We are committed to ensuring that your privacy is protected. Should we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement.</p>\n\n<p>We may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes. This policy is effective from 1st August 2017.</p>\n\n<h3>What we collect</h3>\n<p>This website does not ask for or collect personal information.</p>\n\n<h3>How we use cookies</h3>\n<p>A cookie is a small file which asks permission to be placed on your computer&apos;s hard drive. Once you agree, the file is added and the cookie helps analyse web traffic or lets you know when you visit a particular site. Cookies allow web applications to respond to you as an individual. The web application can tailor its operations to your needs, likes and dislikes by gathering and remembering information about your preferences.</p>\n\n<p>We use traffic log cookies to identify which pages are being used. This helps us analyse data about webpage traffic and improve our website in order to tailor it to customer needs. We only use this information for statistical analysis purposes and then the data is removed from the system.</p>\n\n<p>Overall, cookies help us provide you with a better website by enabling us to monitor which pages you find useful and which you do not. A cookie in no way gives us access to your computer or any information about you, other than the data you choose to share with us.</p>\n\n<p>You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of the website.</p>\n\n<h3>Links to other websites</h3>\n\n<p>Our website may contain links to other websites of interest. However, once you have used these links to leave our site, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites and such sites are not governed by this privacy statement. You should exercise caution and look at the privacy statement applicable to the website in question.</p>"
       }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "5tyOG8UYlaw0s8G8YqS0wQ",
-        "type": "Entry",
-        "createdAt": "2017-08-31T22:04:35.017Z",
-        "updatedAt": "2017-08-31T22:04:35.017Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "linkList"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "navigation",
-        "title": "Navigation",
-        "links": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "5CuaQgEL4souWSi0uiei8o"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "5ovlS609fqOmywE2kcSAWg"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "74hFY4cLKggKiGuyy2iqK0"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "3iVaxd7WKsU2QyAKoSoAmS",
-        "type": "Entry",
-        "createdAt": "2017-09-09T21:50:04.809Z",
-        "updatedAt": "2017-09-09T21:50:24.820Z",
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Father Ted - Channel 4",
-        "text": "Father Ted - Channel 4",
-        "url": "http://www.channel4.com/programmes/father-ted"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "3d4GTHKfj2GEsIAYcuScoQ",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:24:43.330Z",
-        "updatedAt": "2017-09-01T11:54:58.659Z",
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "copyright"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "© 2017 Stephen Cresswell. All rights reserved.",
-        "year": 2017,
-        "owner": "Stephen Cresswell",
-        "rights": "All rights reserved."
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "23BQPn6dHWOu2AkK8ymS68",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:08:23.477Z",
-        "updatedAt": "2017-08-31T21:39:20.732Z",
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Email",
-        "text": "hello@stephen-cresswell.net",
-        "icon": "fa-envelope",
-        "url": "mailto:hello@stephen-cresswell.net"
-      }
     }
   ],
   "includes": {
@@ -2153,17 +2251,17 @@
           "id": "1qT8990i1SqsACkwECicAI",
           "type": "Asset",
           "createdAt": "2017-08-31T23:37:20.693Z",
-          "updatedAt": "2017-09-09T13:51:03.236Z",
-          "revision": 6,
+          "updatedAt": "2017-09-17T17:14:31.332Z",
+          "revision": 7,
           "locale": "en-GB"
         },
         "fields": {
           "title": "Thumbnail of Microservices With Rascal",
           "description": "A picture of a heart, ripped in two",
           "file": {
-            "url": "//images.contentful.com/g99n9a78vx0s/1qT8990i1SqsACkwECicAI/ed05fc680b9409d92d0ebc46ca2b274a/divorcing-microservices-with-rascal-720x540.jpg",
+            "url": "//images.contentful.com/g99n9a78vx0s/1qT8990i1SqsACkwECicAI/0e2c7b89c1c5ac6212c944fe279e1ff7/divorcing-microservices-with-rascal-720x540.jpg",
             "details": {
-              "size": 60429,
+              "size": 76908,
               "image": {
                 "width": 720,
                 "height": 540
@@ -2219,16 +2317,16 @@
           "id": "2SF5G8WIXKQUyE0SISuuwG",
           "type": "Asset",
           "createdAt": "2017-09-13T22:33:50.427Z",
-          "updatedAt": "2017-09-13T22:39:16.923Z",
-          "revision": 2,
+          "updatedAt": "2017-09-18T22:45:02.386Z",
+          "revision": 3,
           "locale": "en-GB"
         },
         "fields": {
           "title": "PDF of Yadda - The Other JavaScript BDD Library",
           "file": {
-            "url": "//downloads.contentful.com/g99n9a78vx0s/2SF5G8WIXKQUyE0SISuuwG/7d4f4a448734dc7e17e02acfbcf0d8c2/Yadda.pdf",
+            "url": "//downloads.contentful.com/g99n9a78vx0s/2SF5G8WIXKQUyE0SISuuwG/ef6bad1f78411c393592c3ce28c558f7/Yadda.pdf",
             "details": {
-              "size": 35632614
+              "size": 27320483
             },
             "fileName": "Yadda.pdf",
             "contentType": "application/pdf"
@@ -2346,17 +2444,17 @@
           "id": "3rAYG3rbaEI6Ka4SwigAuA",
           "type": "Asset",
           "createdAt": "2017-08-31T23:19:44.408Z",
-          "updatedAt": "2017-09-09T13:51:26.882Z",
-          "revision": 5,
+          "updatedAt": "2017-09-17T19:19:35.500Z",
+          "revision": 6,
           "locale": "en-GB"
         },
         "fields": {
           "title": "Thumbnail of Enterprise Grade Microservices",
           "description": "Businessman standing by a window in a skyscraper",
           "file": {
-            "url": "//images.contentful.com/g99n9a78vx0s/3rAYG3rbaEI6Ka4SwigAuA/a0c40e3e2e6113fcdbf3323775f35665/enterprise-grade-microservices-720x540.jpg",
+            "url": "//images.contentful.com/g99n9a78vx0s/3rAYG3rbaEI6Ka4SwigAuA/a0f98136aa6e8acb0f2533a5890c106a/enterprise-grade-microservices-720x540.jpg",
             "details": {
-              "size": 40674,
+              "size": 92304,
               "image": {
                 "width": 720,
                 "height": 540
@@ -2376,20 +2474,48 @@
               "id": "g99n9a78vx0s"
             }
           },
+          "id": "4B7sV4FeE8kQSWeY22G8a0",
+          "type": "Asset",
+          "createdAt": "2017-09-17T19:09:34.317Z",
+          "updatedAt": "2017-09-18T22:47:26.485Z",
+          "revision": 2,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "PDF of Enterprise Grade Microservices",
+          "file": {
+            "url": "//downloads.contentful.com/g99n9a78vx0s/4B7sV4FeE8kQSWeY22G8a0/497b274ff18f515dc0744a4b4d8d7a04/Enterprise_Grade_Microservices.pdf",
+            "details": {
+              "size": 21461838
+            },
+            "fileName": "Enterprise Grade Microservices.pdf",
+            "contentType": "application/pdf"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "g99n9a78vx0s"
+            }
+          },
           "id": "4J3pfkFcTYQq8giGaCwSC8",
           "type": "Asset",
           "createdAt": "2017-09-09T20:44:02.281Z",
-          "updatedAt": "2017-09-09T20:49:48.911Z",
-          "revision": 3,
+          "updatedAt": "2017-09-15T05:36:15.949Z",
+          "revision": 4,
           "locale": "en-GB"
         },
         "fields": {
           "title": "Thumbnail of Orange Is Not The New Black",
           "description": "Orange Is Not The New Black ",
           "file": {
-            "url": "//images.contentful.com/g99n9a78vx0s/4J3pfkFcTYQq8giGaCwSC8/7953f2c1dd967032cab1aa26b1c91bd3/orange-is-the-new-black-720x540.jpg",
+            "url": "//images.contentful.com/g99n9a78vx0s/4J3pfkFcTYQq8giGaCwSC8/e901ff5c5d9dc8ea3a27bed1ad0f7d52/orange-is-the-new-black-720x540.jpg",
             "details": {
-              "size": 26766,
+              "size": 68688,
               "image": {
                 "width": 720,
                 "height": 540
@@ -2397,6 +2523,34 @@
             },
             "fileName": "orange-is-the-new-black-720x540.jpg",
             "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "g99n9a78vx0s"
+            }
+          },
+          "id": "57Rh7KuLKMYgIOKgmESMkk",
+          "type": "Asset",
+          "createdAt": "2017-09-17T16:42:46.537Z",
+          "updatedAt": "2017-09-22T11:31:01.650Z",
+          "revision": 6,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "PDF of Divorcing Microservices With Rascal",
+          "file": {
+            "url": "//downloads.contentful.com/g99n9a78vx0s/57Rh7KuLKMYgIOKgmESMkk/d69604f0f4ebf68033208a752110a1db/Rascal.pdf",
+            "details": {
+              "size": 63210440
+            },
+            "fileName": "Rascal.pdf",
+            "contentType": "application/pdf"
           }
         }
       },
