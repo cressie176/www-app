@@ -46,6 +46,11 @@ module.exports = function() {
       '/legal/:article?',
     ], app.locals.hasRole('guest'), clientApp(200));
 
+    // Handle requests to the publisher without disabling logging
+    app.get([
+      '/publisher',
+    ], app.locals.hasRole('publisher'), clientApp(200));
+
     // Handle requests to the robots.txt, humans.txt without disabling logging
     app.get(['/robots.txt', '/humans.txt',], app.locals.hasRole('guest'), staticMiddleware);
 
