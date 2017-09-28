@@ -108,7 +108,7 @@ export default function() {
             item.fields.id = parseInt(item.fields.id, 10);
             item.fields.url = path.join('/', item.fields.channel.link.url, slug(`${item.fields.title}-${item.fields.id}`).toLowerCase());
             item.fields.date = new Date(item.fields.date);
-            item.fields.tweetText = encodeURIComponent(item.fields.tweetText);
+            item.fields.tweet = encodeURIComponent(item.fields.tweet);
             item.fields.downloads = item.fields.downloads || [];
             return collect(content, item);
           }

@@ -12,6 +12,7 @@
 .navbar.navbar-overrides .navbar-nav {
   margin-top: 0px;
   margin-bottom: 0px;
+  min-height: 80px;
 }
 
 .navbar.navbar-overrides .navbar-nav > li > a {
@@ -34,9 +35,14 @@
   color: var(--primary-colour);
 }
 
-.navbar .icon {
-  padding-right: 10px;
+.navbar.navbar-overrides .icon {
+  padding-right: 6px;
 }
+
+.navbar.navbar-overrides .icon i {
+  min-width: 16px;
+}
+
 
 @media only screen and (max-width : 767px) {
   .navbar.navbar-overrides .navbar-brand {

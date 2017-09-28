@@ -32,7 +32,7 @@ describe('Article List Page', () => {
     expect(wrapper.prop('title')).toBe('Page Not Found');
   });
 
-  it('should advise when page is loading', () => {
+  it('should render while loading', () => {
     const wrapper = shallow(
       <ArticleListPage
         id='blog'
@@ -41,7 +41,7 @@ describe('Article List Page', () => {
         articleList={{}}
       />
     );
-    expect(wrapper.find('PageIntro').prop('title')).toBe('Loading…');
+    expect(wrapper.is('.article-list-page')).toBe(true);
   });
 
   it('should advise while articles are loading', () => {

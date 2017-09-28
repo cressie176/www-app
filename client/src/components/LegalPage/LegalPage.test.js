@@ -30,7 +30,7 @@ describe('Legal Page', () => {
     expect(wrapper.prop('title')).toBe('Page Not Found');
   });
 
-  it('should advise when page is loading', () => {
+  it('should render while loading', () => {
     const wrapper = shallow(
       <LegalPage
         id='blog'
@@ -38,7 +38,7 @@ describe('Legal Page', () => {
         page={{}}
       />
     );
-    expect(wrapper.find('PageIntro').prop('title')).toBe('Loading…');
+    expect(wrapper.is('.legal-page')).toBe(true);
   });
 
 });

@@ -36,13 +36,11 @@ class LegalPage extends React.Component {
       );
     } else if (loading || !page.title) {
       return (
-        <div className='legal-page'>
-          <PageIntro icon='fa-spinner fa-spin' title='Loading…' />
-        </div>
+        <div className='page legal-page' />
       );
     } else {
       return (
-          <div className={`legal-page legal-page--${this.props.id}`}>
+          <div className={`page legal-page legal-page--${this.props.id}`}>
 
           <PageIntro title={this.props.page.title} />
 

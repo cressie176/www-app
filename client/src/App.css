@@ -51,3 +51,7 @@ a:active {
   white-space: pre-wrap;
 }
 
+#root .page {
+  min-height: 800px;
+  background-color: var(--white);
+}

@@ -4,7 +4,7 @@ import ArticlePage from './ArticlePage';
 
 describe('ArticlePage', () => {
 
-  it('should render message while loading', () => {
+  it('should render while loading', () => {
     const wrapper = shallow(
       <ArticlePage
         id={1}
@@ -14,7 +14,6 @@ describe('ArticlePage', () => {
       />
     );
     expect(wrapper.is('.article-page')).toBe(true);
-    expect(wrapper.find('PageIntro').prop('title')).toBe('Loading…');
   });
 
   it('should render message on error', () => {
@@ -84,7 +83,10 @@ describe('ArticlePage', () => {
           url: '/blog/article-1',
           title: 'Article 1',
           body: '<p>blurb</p>',
-          tweetText: 'meh',
+          tweet: 'meh',
+          author: {
+            twitterUsername: 'cressie176',
+          },
         }}
         path='/blog/article-1'
       />
@@ -95,7 +97,7 @@ describe('ArticlePage', () => {
     expect(wrapper.find('Article').prop('title')).toBe('Article 1');
     expect(wrapper.find('Article').prop('body')).toBe('<p>blurb</p>');
     expect(wrapper.find('SocialButtons').prop('tweet')).toBe('meh');
-    expect(wrapper.find('SocialButtons').prop('username')).toBe('cressie176');
+    expect(wrapper.find('SocialButtons').prop('user').twitterUsername).toBe('cressie176');
   });
 
 });

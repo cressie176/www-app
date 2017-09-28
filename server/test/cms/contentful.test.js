@@ -278,7 +278,7 @@ describe('Contentful', () => {
         expect(content.articles['1'].title).toBe('Enterprise Grade Microservices');
         expect(content.articles['1'].url).toBe('/talks/enterprise-grade-microservices-1');
         expect(content.articles['1'].channel).toBe(content.pages['talks']);
-        expect(content.articles['1'].tweetText).toBe('Enterprise%20Grade%20Microservices');
+        expect(content.articles['1'].tweet).toBe('Enterprise%20Grade%20Microservices');
         expect(content.articles['1'].keywords).toContain('Microservices');
         expect(content.articles['1'].date.toISOString()).toBe('2016-11-23T19:00:00.000Z');
         expect(content.articles['1'].location).toBe('Budapest');

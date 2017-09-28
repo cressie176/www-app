@@ -38,13 +38,11 @@ class ArticleListPage extends React.Component {
       );
     } else if (loading || !page.title) {
       return (
-        <div className='article-list-page'>
-          <PageIntro icon='fa-spinner fa-spin' title='Loading…' />
-        </div>
+        <div className='page article-list-page' />
       );
     } else {
       return (
-        <div className={`article-list-page article-list-page--${id}`}>
+        <div className={`page article-list-page article-list-page--${id}`}>
           <PageIntro title={page.title} text={page.introText} link={page.introLink} image={page.introImage}/>
           <ArticleList articles={articleList.data} error={articleList.meta.error} loading={articleList.meta.loading} />
         </div>

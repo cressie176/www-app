@@ -58,18 +58,16 @@ class ArticlePage extends React.Component {
       );
     } else if (loading || !article.title) {
       return (
-        <div className='article-page'>
-          <PageIntro icon='fa-spinner fa-spin' title='Loading…' />
-        </div>
+        <div className='page article-page' />
       );
     } else {
       return (
-        <div className='article-page'>
+        <div className={`page article-page article-page--${article.id}`}>
           <PageIntro title={article.title} />
           <div className='row'>
             <div className='col-sm-offset-1 col-sm-10'>
               <Article {...article} />
-              <SocialButtons tweet={article.tweetText} username='cressie176' />
+              <SocialButtons tweet={article.tweet} user={article.author} />
             </div>
           </div>
         </div>
