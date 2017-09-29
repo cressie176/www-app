@@ -208,6 +208,7 @@ describe('Contentful', () => {
 
         expect(content.pages.blog.id).toBe('blog');
         expect(content.pages.blog.title).toBe('Blog');
+        expect(content.pages.blog.feedTitle).toBe('Stephen Cresswell\'s Blog');
         expect(content.pages.blog.introImage).toBeDefined();
         expect(content.pages.blog.introImage.title).toBe('Duty Calls');
         expect(content.pages.blog.introImage.description).toBe('A stick figure refusing to leave his computer and come to bed');

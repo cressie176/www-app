@@ -56,16 +56,19 @@ module.exports = function() {
 
       async.parallel({
         site: cms.getSite.bind(cms, res.locals.tag),
+        page: cms.getPage.bind(cms, res.locals.tag, req.query.channel),
         articles: cms.listArticles.bind(cms, res.locals.tag),
       }, (err, documents) => {
         if (err) return next(err);
+        if (!documents.page) return next();
 
         const site = { ...documents.site, url: res.locals.baseUrl, };
+        const page = { ...documents.page, };
         const articles = Object.keys(documents.articles)
           .map(id => documents.articles[id])
-          .filter(byChannel(req.query.channel))
+          .filter(byChannel(page.id))
           .sort(byDate);
-        const feed = toFeed(site, articles);
+        const feed = toFeed(site, page, articles);
 
         res.set('Content-Type' ,'application/atom+xml; charset=utf-8');
         res.set('Cache-Control', 'public, max-age=3600, must-revalidate');
@@ -91,9 +94,11 @@ module.exports = function() {
       };
     }
 
-    function toFeed(site, articles) {
+    function toFeed(site, page, articles) {
       const feed = {
         ...site,
+        ...page,
+        id: `${site.id}:${page.id}`,
         links: [
           { rel: "self", type: "application/atom+xml", href: `${site.url}/feeds/atom.xml`, },
           { rel: "alternate", type: "text/html", href: site.url, },
@@ -104,6 +109,7 @@ module.exports = function() {
         rights: `© ${site.copyright.year} ${site.copyright.owner}. ${site.copyright.rights}`,
         updated: articles.length ? articles[0].date : '2017-09-01T00:00:00.000Z',
       };
+
       feed.entries = articles.map(toAtomEntry(site, feed));
       return feed;
     }
@@ -112,7 +118,7 @@ module.exports = function() {
       return function(article) {
         return {
           ...article,
-          id: `${feed.id}:${article.channel.id}:${article.id}`,
+          id: `${feed.id}:${article.id}`,
           links: [
             { rel: 'alternate', type: 'text/html', href: `${site.url}${article.url}`, },
           ],

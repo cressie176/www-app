@@ -166,6 +166,7 @@ describe('www.stephen-cresswell.net', () => {
 
     const res = await request({
       url: `http://${config.server.host}:${config.server.port}/feeds/atom.xml`,
+      qs: { channel: 'blog', },
       resolveWithFullResponse: true,
       followRedirect: false,
     });
