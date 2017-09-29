@@ -1,4 +1,4 @@
-from node:alpine
+from node:8-alpine
 
 ENV NODE_ENV=production
 RUN apk add -U --no-cache tcpdump curl
