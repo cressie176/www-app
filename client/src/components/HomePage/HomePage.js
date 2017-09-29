@@ -19,8 +19,7 @@ class HomePage extends React.Component {
   }
 
   render() {
-
-    const { page = {}, loading = false, missing = false, error, } = this.props;
+    const { page = {}, missing = false, error, } = this.props;
 
     if (error) {
       return (
@@ -30,15 +29,13 @@ class HomePage extends React.Component {
       return (
         <ErrorPage title='Page Not Found' />
       );
-    } else if (loading || !page.title) {
-      return null;
     } else {
       return (
         <div className='page home-page'>
           {
             page.heroImage && (
               <div className='row'>
-                <img className='hero' title={page.heroImage.title} alt={page.heroImage.description} src={page.heroImage.url} />
+                <img className='hero' title='Someone lying on a sofa writing code on a laptop' alt='Coding On The Sofa' src='https://images.contentful.com/g99n9a78vx0s/2U93BNINsIgIKccgSo2Ewi/33107dd33838f8a51986fea1306ae9a7/hero.jpg' />
               </div>
             )
           }
