@@ -52,7 +52,7 @@ class ArticlePage extends React.Component {
       return (
         <ErrorPage title='Page Not Found' />
       );
-    } else if (article.id === id && article.url !== path) {
+    } else if (article.id === id && article.url && article.url !== path) {
       return (
         <Redirect to={article.url} />
       );
