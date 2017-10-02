@@ -36,8 +36,14 @@ export default function(options = {}) {
     function listArticles(tag, cb) {
       store.loadContent(tag, (err, content) => {
         if (err) return cb(err);
-        cb(null, get(content, 'articles'));
+        const articles = get(content, 'articles', {});
+        const liveArticles = Object.keys(articles).map(id => articles[id]).reduce(toLiveArticles, {});
+        cb(null, liveArticles);
       });
+    }
+
+    function toLiveArticles(articles, article) {
+      return article.live ? Object.assign(articles, { [article.id]: article, }) : articles;
     }
 
     function getArticle(tag, articleId, cb) {

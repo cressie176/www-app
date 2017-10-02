@@ -2,7 +2,7 @@
   "sys": {
     "type": "Array"
   },
-  "total": 56,
+  "total": 57,
   "skip": 0,
   "limit": 1000,
   "items": [
@@ -15,82 +15,27 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "5ovlS609fqOmywE2kcSAWg",
+        "id": "6xesezFf7G4mCEaYAO6wg8",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:07:33.567Z",
-        "updatedAt": "2017-09-06T21:52:48.934Z",
-        "revision": 7,
+        "createdAt": "2017-08-31T23:38:00.761Z",
+        "updatedAt": "2017-09-02T19:57:40.091Z",
+        "revision": 5,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "link"
+            "id": "imageSet"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Blog",
-        "text": "Blog",
-        "icon": "fa-file-text-o",
-        "url": "/blog"
-      }
-    },
-    {
-      "sys": {
-        "space": {
+        "id": "Divorcing Microservices With Rascal",
+        "thumbnail": {
           "sys": {
             "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "6equZuAAPmaQMAOAu8wguy",
-        "type": "Entry",
-        "createdAt": "2017-09-06T21:32:28.705Z",
-        "updatedAt": "2017-09-28T21:41:55.250Z",
-        "revision": 55,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "article"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": 1000,
-        "title": "10½ Factor Microservices",
-        "author": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "1aRUx8rcSOWacCaUeOYcqQ"
-          }
-        },
-        "channel": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "13bFqt7AHAGemE2cuUsiqM"
-          }
-        },
-        "keywords": [
-          "Node.js",
-          "Microservices",
-          "12 Factor",
-          "Docker"
-        ],
-        "tweet": "10½ Factor Microservices",
-        "summary": "<p>\nBy now you've probably heard of the <a href='https://12factor.net'>12 Factor</a> design principles. Overall they are very good. However as with any piece of advice they should be viewed in the context of when they were written, and reassessed in the current content to see to what extent they are still valuable. In the context of Node.js microservices how will the 12 factor principles stack up?\n</p>",
-        "body": "<p>\nBy now you've probably heard of the <a href=\"https://12factor.net\">12 Factor</a> design principles. Overall they are very good, but as with any piece of advice they should be viewed in the context of when they were written, and reassessed in the current content to see to what extent they are still valuable.\n</p><p>\nThe context I'm most interested in is that of microservice development,  with Node.js. Node is a great fit for microservces in most situations. The module system is excellent, so it's easy to reuse and share code. Once mastered JavaScript can be terse, yet readable, it's interpreted so doesn't suffer from compilation delays, but thanks to V8 fast enough for the majority of applications. The only time I've found Node problematic is when performing event loop blocking operations or when interacting with a server who's client libraries are of dubious quality. With the scene set, how will the 12 factor principles stack up?\n</p>\n<h2>Codebase (1)</h2>\n<img src=\"https://images.contentful.com/g99n9a78vx0s/2sohHw99zqsmuQWqkmCYcw/a7d4ac73cde04f7ce2b04c13b00b2bab/codebase-1024x768.jpg\" title=\"Codebase\" alt=\"A programmer typing on a keyboard\" />\n<p>\nThe first of the principles - \"Codebase\" is also the most easily challenged. The principle states that there should be a 1-1 relationship between codebase and source repository, with consideration for branches and forks etc. \n</p>\n<p>\nI sympathise entirely with what I suspect to be the underlying motivation. I've had to suffer a number of projects with complicated, multi-stage setup, linked repositories (e.g. git sub-modules), shared build scripts and all encompassing development environments which made life a misery. However the glaring problem with this principle is that it prohibits monorepos, where multiple applications are stored in a single repository. Monorepos aren't without their problems - without appropriate tooling it is difficult to know what to build, test and deploy, but have certain advantages such as making it easier to make sweeping changes to the entire codebase.\n</p>\n<h2>Dependencies (2)</h2>\n<img src=\"https://images.contentful.com/g99n9a78vx0s/jGfmTiIZEW88GOIMCSU8u/675b86d953174e791fac4f35e85de04a/dependencies-1024x768.jpeg\" title=\"Dependencies\" alt=\"Stars from a baby's mobile\" />\n<p>\nThe second principle, \"Explicitly declare and isolate dependencies\", is more sound. Version and bundle all dependencies with the application, rather than trusting to their correct existence on deployment. Node.js solves this in a similar way to most other modern languages, by including a dependencies manifest. The latest version of Node's package manager automatically creates a lock file, so even transitive dependencies are explicitly versioned, however there are some situations in which even this is not enough.\n</p><p>\nSome node modules have native dependencies, which must be present in the target environment in order to work. Examples are <a href=\"https://github.com/gsmcwhirter/node-zoneinfo\">zoneinfo</a>, <a href=\"https://www.npmjs.com/package/pg-native\">pg-native</a> and <a href=\"https://www.npmjs.com/package/node-expat\">node-expat</a>. To truly conform to this principle, these dependencies should be bundled too, as must Node.js itself, and this is where <a href=\"https://www.docker.com/\">docker</a> comes in. By deploying your application within a docker container, and by including its dockerfile in your codebase you can not only version the non-native dependencies, but the native ones as well. \n</p><p>\n<h2>Backing Services (4) and Dev/Prod Parity (10)</h2>\n<div class=\"row\">\n<div class=\"col-md-6\">\n<img src=\"https://images.contentful.com/g99n9a78vx0s/5VN3f8hLB6gwgmauwmKKoa/11dfc597c2e980d9bf7375878429a96a/backing-services-1024x768.jpeg\" title=\"Backing Services\" alt=\"A server communicating with database and web service\"/>\n</div>\n<div class=\"col-md-6\">\n<img src=\"https://images.contentful.com/g99n9a78vx0s/3VDwtMdYykG8cki4C2OQ6u/25a707ce6c7e17a05c2b2a22653a4b2c/dev-prod-parity-1024x768.jpg\" title=\"Dev/Prod Parity\" alt=\"Two nearly identical robots\" />\n</div>\n</div>\nWhile we're on the subject of docker and containerisation, we may as well tick off the forth (backing services), and tenth (dev/prod parity) principles. The backing services principle states that external services (databases, message brokers, other web services, etc) should be treated as \"attached resources\", which can be substituded without having to rebuild and redeploy the application. \n</p><p>\nThis is achievable through external configuration, but made even easier by the service discovery provided by docker, and related technologies such as <a href=\"https://kubernetes.io\">Kubernetes</a>. Kubernetes even comes with a <a href=\"https://kubernetes.io/docs/admin/kube-proxy/\">proxy</a> which enables you to attach a locally running application to a Kubernetes managed container transparently.\n</p>\n<p>\nBy deploying services within containers, you get a high degree of dev/prod parity, and even more if you deploy databases and message brokers within containers too. Despite this I tend to only run stateless containers in producation and pre-production environments as I've encountered more than my share of issues with mounting network attached storage into docker containers.\n</p>\n<h2>Config (3)</h2>\n<p>\nThe 3rd principle of storing configuration (only) in the environment isn't as well thought out. The 12 factor principles argue against named environments because you will run out of meaningful names and for limiting configuration to environment variables, since files can be scattered, inconsistent and may accidentally be checked into source control\n</p><p>\nMy counter to argument 1, is that in every organisation I've ever worked as, people always refer to environments by name, and so having a named environment configuration makes life significantly easier.\n</p><p>\nMy problem with argument 2, is that I specifically want to check config (excluding secrets) into source control. This enables it to be versioned and deployed with the application, for the same reasons behind the principle of dependency management. Furthermore environment variables lack native structure or typing and cannot be changed at runtime. They are also the <a href=\"https://www.theregister.co.uk/2017/08/02/typosquatting_npm/\">easiest configuration to steal</a>.\n</p><p>\nInstead my approach is to use whatever config source makes most sense (which can include environment variables). I <a href=\"https://github.com/cressie176/www-app/tree/master/server/config\">version control a default config file, and environmental overrides</a> with the application source, then further override with secrets at deploy or runtime using an appropriate secrets management tool such as <a href=\"https://github.com/StackExchange/blackbox\">blackbox</a>, <a href=\"https://www.vaultproject.io/\">vault</a> or <a href=\"https://kubernetes.io/docs/concepts/configuration/secret/\">Kubernetes</a>. I use <a href=\"https://www.npmjs.com/package/confabulous\">Confabulous</a>, a library of my own creation similar to <a href=\"https://www.npmjs.com/package/nconf\">nconf</a>, to handle the merging and overrides.\n</p>\n<h2>Build, Release, Run (5), Processes (6) and Port Binding (7)</h2>\n<p>\nThe next 3 principles aren't very interesting. Separating Build, Release, Run (principle 5) is trivial with docker...\n</p>\n<ul>\n<li>Build and image from a clean checkout</li>\n<li>Push to a repository</li>\n<li>Run on a remote server</li>\n</ul>\n<p>\nI prefer a self managed CI server such as <a href=\"https://jenkins.io/\">Jenkins</a> for building images and orchestrating deployments. With your own server you can preinstall build dependencies, cache images and have fewer security concerns. As a result, some of our microservices build, test and deploy in under 20 seconds.\n</p>\n<p>\nPrinciple 6, stateless processes just boils down to using a database rather than memory to persist any data which spans a request, and Principle 7, port binding means your application should start it's own server rather than be deployed into an application server. Popular in the Java world, but not in Nodeland.\n</p>\n<h2>Concurrency (8) and Admin Processes (12)</h2>\n<img src=\"https://images.contentful.com/g99n9a78vx0s/493at3Zgc0smAquIsIA8uC/e240f820a8f659877b7acd75b3b39bcb/concurrency-1024x768.jpg\" title=\"Concurrency\" alt=\"A graph showing process instances by worker diversity\" />\n<p>\nPrinciple 8, concurrency is highly relevant in a Node.js and microservice environment. This principle advocates scaling by distributing functionality to worker processes, who's instances may grow and shrink depending on demand. i.e. microservices 101. I've also found this a useful approach for circumventing one of Node's limitations. If you have an node process which by necessity performs some long running synchronous operation (e.g. parsing a large XML file), then it will block all other tasks. By separating the synchronous and asynchronous behaviour into different services, you bypass the problem.\n</p><p>\nWe take the same approach for admin processes (principle 12). They either exist as a temporary service, launching from their own docker container and running to completion, or they lie dormant in another permanently running service and can be triggered either by http request or message.\n</p>\n\n<h2>Disposability (9)</h2>\n<img src=\"https:////images.contentful.com/g99n9a78vx0s/5UBtNZVk6kSGeQ0IWm6Cwc/e03218aed927f0b59df6a34c28c08e1c/disposability-1024x768.jpg\" title=\"Disposability\" alt=\"A waste paper basket\"/>\n<p>\nPrinciple 9, disposability is also interesting, and often under appreciated. The principle states that applications should startup and shutdown quickly and gracefully. By gracefully I mean that applications should not attempt to perform any work until all necessary resources (database connections etc) have been established. When receiving a shutdown signal the application should stop accepting new work, but wait for inflight tasks to complete and only then close connections to attached resources. \n</p><p>\nDepending on your number of microservices, and variety of backing services, this can be surprisingly difficult to orchestrate in a consistent way. My esteemed comrade <a href=\"https://github.com/BorePlusPlus\">Dalibor Novak</a> worked with me creating <a href=\"https://www.npmjs.com/package/systemic\">systemic</a> for solving this problem. You can see it in action <a href=\"https://github.com/cressie176/www-app/tree/master/server/lib\">here</a>.\n</p>\n<h2>Logs (11)</h2>\n<img src=\"https://images.contentful.com/g99n9a78vx0s/4KUiWSfUasommuGiO0E2mi/9b648e38d75e13f6e6055a27148e990d/logs-1024x768.jpeg\" title=\"Logs\" alt=\"Logs being transported down a river\"/>\n<p>\nThe remaining principle is to treat logs as event streams. The advice is to write logs, unbuffered to stdout, then route these to dedicated logging infrastructure. I agree, but think they missed a trick. Rather than writing directly to console or your logging framework of choice your application should also emit log messages as events. By doing so each message can have multiple consumers, which may include one which writes to the console, but could additionally include one which publishes events to a message bus or monitoring system such as <a href=\"https://prometheus.io/\">Prometheus</a>. As an added bonus it becomes trivial to selectively silence are asset logged events in automated tests. Node has excellent support for <a href=\"https://nodejs.org/api/events.html\">events</a>, but using it for logging would be rather unusual. For this reason (and others) I've wrapped the event emitter behind a loglike api in a library called <a href=\"https://www.npmjs.com/search?q=prepper\">prepper</a>. You can connect it to console, bunyan or any other logging framework to get the benefits given above while retaining your logger choice.\n</p>\n<h2>In Conclusion...</h2>\n<p>\nOf all the 12 factor principles, the only one I fully disagree with is that of config (-1). The codebase principle is still valid in spirit, even if the concerns about the relationship between source code and repository have dated (-½). Given the extent to which Node.js, Microservices and containerisation have revolutionised how we design, write and deploy code. I think 10½ out of 12 is pretty good.\n</p>\n\n\n\n\n\n\n\n\n",
-        "date": "2017-08-12T21:00+01:00",
-        "images": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "48CjwSLwRGiqWIu0kYMCU2"
+            "linkType": "Asset",
+            "id": "1qT8990i1SqsACkwECicAI"
           }
         }
       }
@@ -104,11 +49,11 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "5AeYQEH78Ie4OCKWWkmI2o",
+        "id": "13bFqt7AHAGemE2cuUsiqM",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:56:36.596Z",
-        "updatedAt": "2017-09-29T20:35:38.986Z",
-        "revision": 7,
+        "createdAt": "2017-08-31T21:56:17.744Z",
+        "updatedAt": "2017-09-29T20:35:25.250Z",
+        "revision": 6,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -119,29 +64,29 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "talks",
-        "title": "Talks",
-        "feedTitle": "Stephen Cresswell's Talks",
+        "id": "blog",
+        "title": "Blog",
+        "feedTitle": "Stephen Cresswell's Blog",
         "link": {
           "sys": {
             "type": "Link",
             "linkType": "Entry",
-            "id": "74hFY4cLKggKiGuyy2iqK0"
+            "id": "5ovlS609fqOmywE2kcSAWg"
           }
         },
         "introImage": {
           "sys": {
             "type": "Link",
             "linkType": "Asset",
-            "id": "2GQFdGSiTCsiOOCcwu6Yge"
+            "id": "6oYIvHjLUsU0UISMyaOqq4"
           }
         },
-        "introText": "\"How did that gobshite get on the internet?\"",
+        "introText": "\"Someone is wrong on the internet\"",
         "introLink": {
           "sys": {
             "type": "Link",
             "linkType": "Entry",
-            "id": "3iVaxd7WKsU2QyAKoSoAmS"
+            "id": "5uraX28hqg2EU02umO8qog"
           }
         }
       }
@@ -155,41 +100,11 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "3d4GTHKfj2GEsIAYcuScoQ",
+        "id": "VGOaVS3FySAaIuKs2KWg6",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:24:43.330Z",
-        "updatedAt": "2017-09-01T11:54:58.659Z",
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "copyright"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "© 2017 Stephen Cresswell. All rights reserved.",
-        "year": 2017,
-        "owner": "Stephen Cresswell",
-        "rights": "All rights reserved."
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "VXGQK0uZUIueSUIuowugE",
-        "type": "Entry",
-        "createdAt": "2017-09-09T20:51:28.599Z",
-        "updatedAt": "2017-09-28T21:38:33.212Z",
-        "revision": 110,
+        "createdAt": "2017-09-08T17:28:22.022Z",
+        "updatedAt": "2017-10-01T21:17:05.054Z",
+        "revision": 76,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -200,8 +115,9 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": 1001,
-        "title": "When Orange Is Not The New Black",
+        "id": 1002,
+        "title": "Await - I'll See You In JavaScript Hell!",
+        "live": true,
         "author": {
           "sys": {
             "type": "Link",
@@ -218,18 +134,20 @@
         },
         "keywords": [
           "Node.js",
-          "Software",
-          "JavaScript"
+          "JavaScript",
+          "Callback",
+          "Promise",
+          "Software Craftsmanship"
         ],
-        "tweet": "When Orange Is Not The New Black",
-        "summary": "<p>\nFrameworks come and go so quickly that with some notable exceptions any libraries you depend on today, could be superseded tomorrow. There's a cost to adoption, but often a larger cost to migrate away. Jump on the band wagon too soon and you get the pain while a project is unstable, leave it too late and supporting community may already moving on.\n</p>\n<p>\nHow do you tell when orange really is the new black, rather than being the emperors new clothes?\n</p>",
-        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/8deT28SVQ4IqIcW8cI0i8/e0aec2652cdf65ce6bf77a1d5a21f8da/orange-is-the-new-black-1024x413.jpg\" title=\"Orange Is Not The New Black\" alt=\"Orange Is Not The New Black\" />\n\n<p>\nThe pace of software development is faster than ever before. Languages, libraries and applications emerge for their 15 minutes of fame, before being relegated to the C-List just as quickly. But at what cost? I remember when I first discovered open source. Adding a new library to a software project felt like adding value, with the bonus that it was code I didn't have to write, test or maintain. But was there always a significant and worthwhile benefit?\n</p>\n<p>\nI remember a colleague complaining about the Spring framework, and that it was too much for him to learn. At a time when the most popular alternative was Struts I didn't have much sympathy for him. Why should his reluctance to pick up new technology limit everyone else's productivity? Surely learning new tools was a key part of the job?\n</p>\n<p>\nNow I often find myself facing a similar situation, but from the other side of the argument. I'm no luddite. I was an <a href=\"https://github.com/moby/moby/commit/fe727e2a87fa086d728664c396fd44f4be6d6afd\">early adopter</a> of docker, maintain several moderately popular Node.js modules, and spent the last year writing microservices in Go. Despite frontend development not being a critical part of my job, I am comfortable enough with React to build websites like this one. So what's my problem? I don't have one, I have thre.\n</p>\n<p>\nThe first problem is that frameworks come and go so quickly that, with some notable exceptions any libraries you depend on today, could be superseded tomorrow. There's a cost to adoption, but often a larger cost to migrate away. Jump on the band wagon too soon and you get the pain while a project is unstable, pick the wrong library or wait too long and the community may move on, leaving you with a legacy codebase before you've reaped sufficient benefit. An example of this is <a href=\"http://alt.js.org/\">Alt</a>, a once popular flux implementation, which now languishes in the shadow of <a href=\"http://redux.js.org/\">Redux</a>.\n</p>\n<p>\nThe second problem is that even when a library isn't a fad, it still may not bring enough value to justify its cost. This is hard to know upfront because neither the cost or benefit are predictable. At a minimum you increase the learning curve for other developers. If the library contains bugs and poorly maintained, the costs go up. The <a href=\"https://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/\">lpad debarcle</a> and <a href=\"https://www.theregister.co.uk/2017/08/02/typosquatting_npm/\">typosquatting attacks</a> are two examples of when adding libraries incurred a major cost. Providing the library is genuinely useful it's usually worth the risk, but why take the chance on a library that is trivial or superficial? Despite their popularity, fluid assertion APIs such as <a href=\"https://www.npmjs.com/package/expect.js\">expect.js</a> fall into this category. Individually these libraries are negligible, but introduce too many and the cumulative costs can have an impact.\n<p>\n</p>\nAt least libraries like expect.js are limited a single area of the codebase, but what happens when you decide to lily gild JavaScript itself? One recent example is <a href=\"http://coffeescript.org/\">CoffeeScript</a>. I wonder whether the current trend of static type checkers fall into the same category.\n</p>\n<p>\nThe third problem is that the new library may be poorly designed. The flaws may not be significant when the software is young, but as features are added, it becomes harder and harder to adapt. The rate and quality of releases drops. A new and better library emerges, but your codebase is wedded to the old one. Spotting design flaws in software requires experience, but often the developers introducing it haven't made enough mistakes to know the difference. I drank both the <a href=\"http://ant.apache.org/\">ant</a> and <a href=\"http://maven.apache.org/\">maven</a> kool aid, but doing so taught me to be suspicious of tools like <a href=\"https://puppet.com/\">puppet</a> which are configured by expressing dependencies or through inheritance. (Instead I favour imperative ones such as <a href=\"https://www.ansible.com/\">Ansible</a>).\n</p>\n<p>\nTo highlight my points further, let's consider three examples, <a href=\"https://hapijs.com/\">hapi</a>, <a href=\"https://yarnpkg.com/en/\">Yarn</a> and <a href=\"https://facebook.github.io/jest/\">Jest</a>. All these libraries are from large organisations, have a significant user base and received a lot of positive publicity. Several teams I work with have moved, or are considering moving to them.\n</p>\n<p>\nMy preferred http server has always been <a href=\"http://expressjs.com/\">Express</a>, for the simple reason that it doesn't try to be in charge. Provided my handlers conform to a few simple conventions I'm good. A few years ago I was leading a team who were considering moving to <a href=\"https://hapijs.com/\">hapi</a>. A pair of developers evaluated it, liked it and so we started using it in all new services. It was a huge mistake. hapi takes the opposite approach to express. It wants to be boss, exerting a strong influence over how your code and tests are written. Discontent with hapi grew over the next few months and the team switched back to express. Four years on and there are still a handful of hapi services running that nobody wants to touch.\n</p>\n<p>\nWhen <a href=\"https://yarnpkg.com/en/\">Yarn</a> was released it was well received. It was faster than npm and did a better job of locking transitive dependencies. With the release of npm 5, most of Yarn's advantages have been negated. In order to support Yarn, the organisation I work for had to make code changes to their build pipeline. At least some of those same teams are now considering moving back. Yarn worked well and continues to be improved, but it was always likely that npm would be updated. Would it have been better to put up with the shortcomings of npm for a little while longer rather than support two package managers?\n</p>\n<p>\n<a href=\"https://facebook.github.io/jest/\">Jest</a> is a trending testing framework from Facebook. Several organisations, such as Airbnb, have <a href=\"https://medium.com/airbnb-engineering/unlocking-test-performance-migrating-from-mocha-to-jest-2796c508ec50\">written about</a> the benefits of migrating to Jest. When either Facebook or Airbnb advocate something the Node.js community sit up and take note, however when I look at Jest I see everything I want to avoid in a test framework.\n</p>\n\n<ul>\n  <li>It lacks support for programatic selection of test suites</li>\n  <li>It expects to be the entry point for running your tests</li>\n  <li>It uses a global \"expect\" function</li>\n  <li>It uses a fluid assertion api</li>\n  <li>It encourages mocking</li>\n  <li>It encourages snapshot testing</li>\n</ul>\n\n<p>\nSo why are these a concern?\n</p>\n<p>\nIf programatically declaring test suites and running tests isn't a first class citizen of the test framework you end up at the mercy of its globbing and configuration. Both have resulted in a number of GitHub issues, such as <a href=\"https://github.com/facebookincubator/create-react-app/pull/3124\">infinite loops while running in watch mode</a> and <a href=\"https://github.com/facebook/jest/issues/3584\">problems reading config</a>. Instead if you make programatic execution a first class citizen, then it becomes trivial to add test suite discovery and execution on top. It also becomes easier to customise or workaround when something goes awry.\n</p>\n<p>\nJest uses globals which are supposed to fully reset between each test, however as with any shared, mutable, state you are always likely to hit some kind of gotcha. I did while testing code calling setTimeout from componentWillMount and clearTimeout from componentWillUnmount. One of <a href=\"https://github.com/cressie176/www-app/blob/master/client/src/components/error/ErrorPage.test.js#L67\">my tests</a> failed intermittently because of an additional assertion. Jest provided no clue that the assertion was actually being triggered in <a href=\"https://github.com/cressie176/www-app/blob/master/client/src/components/error/ErrorPage.test.js#L45-L50\">a different test</a> that had already passed.\n</p>\n<p>\nI'm a big fan of <a href=\"http://thinkrelevance.com/blog/2008/04/01/ending-legacy-code-in-our-lifetime\">essence over ceromony</a>. Fluid apis clutter tests with irrelevant detail, thereby diluting their essence. In an ideal world I would write all my tests as follows:\n</p>\n<code>given:\n  a = 10\n  b = 9\n\nexpect:\n  91 == a * b\n</code>\n<code>Assertion failed: \n \nassert 91 == a * b\n          |  | | |\n          |  10| 9\n          |    90\n          false\n</code>\n<p>\nI also favour testing for expected side effects rather than for interactions, due to the latter leading to brittle tests which don't communicate intent. It really isn't important that function X was called with three arguments, 'a', 'b' and 'c'. What's important is the side effect of calling X. Mocking and spying do have a place, such to assert when a function is not called, or called only once, but most of the time I prefer to write <a href=\"https://github.com/cressie176/www-app/blob/master/server/lib/components/cms/store-memory.js\">in-memory test doubles</a>. I feel nervous when a library as influential as Jest makes such a strong and one sided case for mocking.\n</p>\n<p>\nI feel even more nervous with regards to snapshotting. Performing a deep comparison of two documents is usually an anti-pattern, because it results in both brittle and vague tests which are hard to debug when they fail. Usually the more specific a test is, the better. At least the snapshot <a href=\"https://facebook.github.io/jest/docs/en/snapshot-testing.html\">documentation</a> clearly acknowledges this and links to some good resources for guidance on snapshot testing.\n</p>\n<p>\nThe irony is that I use Jest for testing this site, since it is configured by default with create-react-app, and because I try to keep an open mind when I appear to be in the minority. While not reported in any of the blog posts I read, I had plenty more teething problems with Jest. Exclusive tests don't work and error messages are cryptic. The following was caused by a missing test data directory. Similarly cryptic error messages are output for syntax errors.\n\n<code>10/09/2017, 20:57:14 PASS server/test/cms/cache.test.js\n10/09/2017, 20:57:14 ✓ should save content (3ms)\n10/09/2017, 20:57:14 ✓ should optimistically cache content on save (3ms)\n10/09/2017, 20:57:14\n10/09/2017, 20:57:15/opt/app/node_modules/jest-jasmine2/build/jasmine/Env.js:511 currentRunnable().addExpectationResult(false, { ^ TypeError: Cannot read property 'addExpectationResult' of undefined at Env.fail (/opt/app/node_modules/jest-jasmine2/build/jasmine/Env.js:511:24) at next (/opt/app/node_modules/jest-jasmine2/build/queue_runner.js:37:24) at /opt/app/node_modules/async/dist/async.js:3861:9 at /opt/app/node_modules/async/dist/async.js:421:16 at iterateeCallback (/opt/app/node_modules/async/dist/async.js:924:17) at /opt/app/node_modules/async/dist/async.js:906:16 at /opt/app/node_modules/async/dist/async.js:3858:13 at /opt/app/node_modules/async/dist/async.js:421:16 at iteratorCallback (/opt/app/node_modules/async/dist/async.js:996:13) at /opt/app/node_modules/async/dist/async.js:906:16\n</code>\n<p>\nIn addition the codebase is huge (but at a glance, well factored) and the build has been broken for over three months!\n<p>\nDespite all this, I feel uncharitable for being so hard on Jest. All software has bugs, and the more successful the library the more bugs that are discovered. I respect that the developers and Facebook have made their work available to the community. Given the momentum I'm sure the most of the teething problems will be resolved and the react eco-system is sufficiently complex for me to want to stay on-piste. I have a suspicion that its support for parallel testing will be worth the trouble, the interactive test runner is a joy and if other teams are going to be adopting it, I might as well get on the band wagon too.\n</p>\n<h2>In Conclusion...</h2>\n<p>\nTelling when orange really is the new black, rather than <a href=\"https://en.wikipedia.org/wiki/The_Emperor%27s_New_Clothes\">The Emperor's New Clothes</a> is hard. Sometimes (as was the case with <a href=\"http://alt.js.org/\">Alt</a>), the selected option really was the best choice at the time, and it wasn't feasible to wait to see whether a better choice would materialise. Other times the warning signs are there, if you know what to look for. So what can you do? My advice is to be suspicious of any library that:\n</p>\n<ul>\n  <li>dictates the design of your application</li>\n  <li>takes over the entry point for your application</li>  \n  <li>is primarily used for lily gilding</li>\n  <li>compensates for perceived shortcomings in a language or library</li>\n  <li>is clever, not clear</li>\n  <li>does more than one thing</li>\n  <li>has a surprisingly large amount of code (indicates sub-optimal abstractions)</li>  \n</ul>\n</p>\n<p>\nBeing suspicious doesn't necessarily mean avoid, but it should mean performing some extra due diligence, resisting your own natural inclination for shiny and canvasing the opinion of those you work with.\n</p>\n",
-        "date": "2017-08-19T19:00+01:00",
+        "tweet": "Await - I'll See You In JavaScript Hell!",
+        "summary": "<p>\nThe JavaScript callback vs promises debate is mostly over. Promises won, albeit by the back door of await. I, for one, welcome our new asynchronous overlords, but before we rush to our new programming nirvana let's take some time to look at promises and why they failed to resolve the problems with asynchronous JavaScript…\n</p>",
+        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/1xmevRml5OSmEKSOywei00/58ac49ec43ed80570e34072bc5292a5c/pinhead-1024x768.jpg\" title=\"Pinhead from Hellraiser\" alt=\"Pinhead from Hellraiser\" />\n<p>\nThe JavaScript callback vs promises debate is mostly over. Promises won, albeit by the back door of await. I, for one, welcome our new asynchronous overlords, but before we rush to our new programming nirvana let's take some time to look at promises and why they failed to resolve the problems with asynchronous JavaScript.\n\nThe following code could rightly be damned as callback hell.\n\n<pre class=\"code\">\nfunction welcomeToHell(cb) {\n  foo(err => {\n    if (err) return cb(err)\n    bar(err => {\n      if (err) return cb(err)\n      baz(err => {\n        if (err) return cb(err)\n        cb()\n      })\n    })\n  })\n}\n</pre>\n<p>\nThe only reason callback based code ever looks like this, is because its author did a shoddy job. By using a library like <a href=\"https://www.npmjs.com/package/async\">async</a> and separating the code into explicit functions, things can be much improved. That aside, if the code had been written with promises it would look as follows…\n</p>\n<pre class=\"code\">\nfunction salvationIsHere() {\n  return foo()\n    .then(bar)\n    .then(baz)\n}\n</pre>\n<p>\nIf all promises code ever written looked like the example above I would finish this article now. Regretably it doesn't. Promises are simple when code follows a linear sequence or can run entirely in parallel, but when you add conditions and/or iteration, just like callbacks, they become complicated, taking effort to simplify. As a result most of the promise based code I come across looks nothing like the above. Instead it looks like this…\n</p>\n<pre class=\"code\">\nfunction welcomeBackToHell(email) {\n  return getUserByEmail(email)\n    .then(user => getUserRoles(user.id)\n      .then(roles => {\n        if (roles.indexOf('publisher') < 0) return { user, roles }\n        return getUserArticles(user.id)\n          .then(articles => ({ user, roles, articles }))\n      })\n  )\n}\n</pre>\n<p>\nCall me a cynic, but it looks a lot like the pyramid of doom associated with callback hell. Now my point isn't that with appropriate care promisified code can't read well. It can. But this is equally true with callbacks</a>, providing you take the time to write functions that:\n</p>\n<ol>\n  <li>Have meaningful names</li>\n  <li>Are small (I aim for &lt;=4 lines)</li>\n  <li>Do one thing well</li>\n  <li>Have a single level of abstraction</li>\n  <li>Minimise parameters (I aim for &lt;= 2 excluding cb)</li>\n  <li>Avoid booleans</li>\n  <li>Minimise conditional logic (guard conditions are ok)</li>  \n</ol>\n<p>\nand modules that:\n</p>\n<ol>\n  <li>Have meaningful names that do not end in 'er' or 'or'</li>\n  <li>Have a single responsibility</li>\n  <li>Encapsulate data and behaviour</li>\n</ol>\n<h2>In Conclusion...</h2>\n<p>\nTo write coherent and cohesive code you have to understand and care about the principles of software craftsmanship. This is thousands of times more important than whether you use callbacks, promises or await. Lets try to remember before we damn our codebases with yet more poorly factored code. We're running out of patterns to blame.\n</p>",
+        "date": "2017-08-26T19:00+01:00",
         "images": {
           "sys": {
             "type": "Link",
             "linkType": "Entry",
-            "id": "1HttWu08ByMIqYkMAwias0"
+            "id": "4gZuk9FDHWgcMGiwKwAuUc"
           }
         }
       }
@@ -243,406 +161,52 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "23BQPn6dHWOu2AkK8ymS68",
+        "id": "3UHlXFiLWMQkaCqwMiakuG",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:08:23.477Z",
-        "updatedAt": "2017-08-31T21:39:20.732Z",
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Email",
-        "text": "hello@stephen-cresswell.net",
-        "icon": "fa-envelope",
-        "url": "mailto:hello@stephen-cresswell.net"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "2nyUF7itooUI8yMasiyAUs",
-        "type": "Entry",
-        "createdAt": "2017-08-31T22:03:45.486Z",
-        "updatedAt": "2017-09-14T19:32:19.139Z",
+        "createdAt": "2017-10-01T21:15:17.563Z",
+        "updatedAt": "2017-10-01T21:16:32.201Z",
         "revision": 2,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "linkList"
+            "id": "article"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "legal",
-        "title": "Legal",
-        "links": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "5b5pXtgGjSiCcKwCieE4UC"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "3w2lWUvmhGi8K0WS4mksYk"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "4RdujCGE1qak4SoIoQs2UQ"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "sys": {
-        "space": {
+        "id": 1003,
+        "title": "Then Thing Every Programmer Should Know",
+        "live": false,
+        "author": {
           "sys": {
             "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
+            "linkType": "Entry",
+            "id": "1aRUx8rcSOWacCaUeOYcqQ"
           }
         },
-        "id": "6oPgI4zNzqSIWUS2QOsQKy",
-        "type": "Entry",
-        "createdAt": "2017-08-31T22:02:59.642Z",
-        "updatedAt": "2017-08-31T22:02:59.642Z",
-        "revision": 1,
-        "contentType": {
+        "channel": {
           "sys": {
             "type": "Link",
-            "linkType": "ContentType",
-            "id": "linkList"
+            "linkType": "Entry",
+            "id": "13bFqt7AHAGemE2cuUsiqM"
           }
         },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "social",
-        "title": "Social Networks",
-        "links": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "1vB10lNZBSiiKsai0KiCIe"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "Q4D5N4wyQ0wWO0AmwmCmE"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "XXrykuPGkUEeuSkMGug64"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "sys": {
-        "space": {
+        "keywords": [
+          "Software Development",
+          "Agile",
+          "Programming"
+        ],
+        "tweet": "Ten things every programmer should know",
+        "summary": "Before your code is \"done\", it should meet four criteria. In order of importance, the code must:\n\n<ol>\n  <li>work</li>\n  <li>communicate</li>\n  <li>be free from duplication, at least within the same code base</li>\n  <li>be reachable (i.e. no dead code)</li>\n</ol>\n\nWorking code is code which meets it's functional and non-functional requirements. The relative merits and pitfalls of duplication vs coupling is a subject worth of it's own blog post. The 'DRY' mantra is widely understood and heralded, but creating abstractions before fully appreciating the domain is worse than leaving the duplicate code in place. Coupling separate code bases can greatly increase workload and introduce configuration management headaches. Removing dead code should be a no brainer. But how do you write code that communicates?",
+        "body": "Before your code is \"done\", it should meet four criteria. In order of importance, the code must:\n\n<ol>\n  <li>work</li>\n  <li>communicate</li>\n  <li>be free from duplication, at least within the same code base</li>\n  <li>be reachable (i.e. no dead code)</li>\n</ol>\n\nWorking code is code which meets it's functional and non-functional requirements. The relative merits and pitfalls of duplication vs coupling is a subject worth of it's own blog post. The 'DRY' mantra is widely understood and heralded, but creating abstractions before fully appreciating the domain is worse than leaving the duplicate code in place. Coupling separate code bases can greatly increase workload and introduce configuration management headaches. Removing dead code should be a no brainer. But how do you write code that communicates?\n\n<h2>1. Use Meaningful Names</h2>\nName objects, classes and modules using nouns. Name functions using verbs, except when used in parameters - then make them read naturally. Be suspicious of nouns ending in 'er' or 'or'. While not always bad, they they often indicate an entity which acts on data belonging to another entity. \n<table class=\"table\">\n  <thead>\n    <tr>\n      <th>Less Coherent</th>\n      <th>More Coherent</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>\n<pre class=\"code\">\n  jsonTransformer(nameFilter(users));\n</pre>\n      </td>\n      <td>\n<pre class=\"code\">\nstaff.filter(byName).map(toJson);\n</pre>\n      </td>\n    </tr>\n  </tbody>    \n</table>\nRefrain from abbreviations and literals unless standard or defacto-standard across the relevant industry, or language style, but prefer them when well known and unlikely to change. Extracting variables may also increase coherence.\n<table class=\"table\">\n  <thead>\n    <tr>\n      <th>Less Coherent</th>\n      <th>More Coherent</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>\n<pre class=\"code\">\ntry {\n  fxRate = await rateLocator.find(req.query.cc);\n} catch (error) {\n  return res.status(INTERNAL_SERVER_ERROR).send(error.message);  \n}  \n</pre>\n      </td>\n      <td>\n<pre class=\"code\">\nconst { currency } = req.query\ntry {\n  fxRate = await fxRates.find(currency);\n} catch (err) {\n  req.status(500).send(err.message);  \n}</pre>\n      </td>\n    </tr>\n  </tbody>\n</table>\n\n<h2>2. Refrain From Comments</h2>\nComments which attempt to explain code are a form of duplication and should be avoided. They become stale easily, and unless carefully crafted can actually increase confusion. Instead take the time to simplify the code. TODO and FIXME comments are an anti-pattern unless you must wait until an external dependency has been resolved. Instead fix whatever the problem is as part of your work. The most useful type of comment is a link to a GitHub issue that explains why the code cannot be written in a more coherently.\n<table class=\"table\">\n  <thead>\n    <tr>\n      <th>Less Coherent</th>\n      <th>More Coherent</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>\n<pre class=\"code\">\n// Unavailable After must be specified in RFC0850 format\nconst unavailableAfter = moment(date).format(\"DDD, DD-MMM-YYYY HH:mm:ss z\"));\n\n// Set all values in a single X-Robots-Tag headers due to bug in Node.js\nres.set('X-Robots-Tag', `nofollow, nofollow, unavailable_after: ${unavailableAfter}`);\n</pre>\n      </td>\n      <td>\n<pre class=\"code\">\nconst unavailableAfter = moment(date).format(RFC0850));\n\n// TODO Separate into multiple X-Robots-Tag headers when https://github.com/nodejs/node/issues/3591#issuecomment-170374000 is resolved - cressie176 10/2017\nres.set('X-Robots-Tag', `nofollow, nofollow, unavailable_after: ${unavailableAfter}`);\n</pre>\n      </td>\n    </tr>\n  </tbody>\n</table>\n\n<h2>3. Be Suspisuous Of If, Try To Avoid Else And Switch</h2>\nOne of the most difficult challenges with programming is keeping the code base simple. Every branch in logic doubles the complexity of the code it wraps. Prefer polymorphism to conditional constructs such as if, else and switch. Guard conditions and ternary assignments are usually OK since they only exist for a single line of code. Be suspicious of booleans since they often lead to logic branches.\n<table class=\"table\">\n  <thead>\n    <tr>\n      <th>Less Coherent</th>\n      <th>More Coherent</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>\n<pre class=\"code\">\n  let price;\n  if (customer.isGoldMember()) {\n    price = rrp * 0.8;\n  } else if (customer.isSilverMember()) {\n    price = rrp * 0.9;\n  } else {\n    price = rrp;\n  }\n</pre>\n      </td>\n      <td>\n<pre class=\"code\">\nprice = customer.membership.applyDiscount(rrp);\n</pre>\n      </td>\n    </tr>\n  </tbody>\n</table>\nAn exception to this rule is when dealing with external input. It is often necessary to switch upon some value in order to instantiate or lookup an appropriate handler, but this should be done at the external edges of your application, not deep within it.\n\n<h2>4. Prefer Composition And Polymorphism To Inheritance</h2>\nThe real world is messy, and your abstractions will be too, at least until they are mature. Tying yourself into a inheritance hierarchy is usually a premature optimistation that will result in tightly coupled, brittle code that cannot be re-used. Prefer composition and polymorphism unless the code is at least 90% similar. \n\n<h2>5. Encapsulate, Encapsulate, Encapsulate</h2>\nKeep an object's state private. Resist accessor and especially mutator methods since these will allow the state, and worse, behaviour to leak across the code base. It is not enough to return immutable values.\n<table class=\"table\">\n  <thead>\n    <tr>\n      <th>Less Coherent</th>\n      <th>More Coherent</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>\n<pre class=\"code\">\n</pre>\n      </td>\n      <td>\n<pre class=\"code\">\n</pre>\n      </td>\n    </tr>\n  </tbody>\n</table>\nAn exception to this rule is when rendering or serialising data for transport / persistence.\n\n<h2>6. Classes / Modules Should Have One Reason To Change</h2>\nThe single reponsibility principle states the a class should have only one reason to change. When you create a new class ask yourself \"What is it's job?\". You should be able to answer in a single concise sentence. If you find yourself using circular references, then consider whether the behaviour you are adding belongs to another entity. If you find yourself using the word \"and\" then consider writing two classes. Utility or helper modules are an anti-pattern. Instead find somewhere for the behaviour to belong.\n<table class=\"table\">\n  <thead>\n    <tr>\n      <th>Less Coherent</th>\n      <th>More Coherent</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>\n<pre class=\"code\">  \nimport { request } from './utils/request';\n</pre>\n      </td>\n      <td>\n<pre class=\"code\">\nimport { client } from './http';\n</pre>\n      </td>\n    </tr>\n  </tbody>\n</table>\n\n<h2>7. Functions should be small, do one thing, and have a single level of abstraction</h2>\nI aim to keep my functions to 4 statements or less. Anything larger and it is probably doing more than one thing, or operating at multiple levels of abstraction. Any time you feel like inserting a blank line or comment it is a giveaway for a function which should be split up.\n<table class=\"table\">\n  <thead>\n    <tr>\n      <th>Less Coherent</th>\n      <th>More Coherent</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>\n<pre class=\"code\">  \nfunction async shutdown() {  \n  try {\n    debug('Shutting down server');\n    await server.close();\n    \n    debug('Shutting down database')\n    await database.close()\n    \n    console.log('Shutdown OK');\n    process.exit(0);\n  } catch (err) {\n    console.error(`Shutdown Error: ${err.message}`);\n    process.exit(1);\n  };\n}\n</pre>\n      </td>\n      <td>\n<pre class=\"code\">\nfunction async shutdown() {  \n  try {\n    await shutdownServer();\n    await database.close();\n    shutdownSuccessful();\n  } catch (err) {\n    shutdownError();\n  };\n}\n</pre>\n      </td>\n    </tr>\n  </tbody>\n</table>\n\n\n<h2>7. Get Your Abstractions Right</h2>\nA simple code base can only be achieved when you're abstractions are good. A tell-tale sign of poor abstractions is when your code frequently traverses, transforms or cross references the domain model. If the domain model is aligned to the features it needs to support you shouldn't have to. Redesign your domain model so you don't have to compensate for it in code.\n\n<h2>8. Become a Master Of Testing</h2>\nTesting is too broad a scope for this blog post, but in general if you're not starting with an assertion, testing interactions rather than side effects, performing deep comparisions or excessive setup, spewing output, ignoring intermittent failures, skipping tests, not using dependency injection, relying on timeouts or test order then you're not a master of testing. Go and read <a href=\"http://amzn.to/2fJ10ua\">Test Driven Development: By Example</a>.\n\n<h2>9. Understand Simplicity</h2>\nThe objective is not to look for the simplest change, but to implement the change which will result in the simplest system. The latter is much harder, but essential for sustainable development.\n\n<h2>10. Understand the relationship between coupling and duplication</h2>\nWhenever you duplicate code, you increase maintenance. Whenever you remove duplication, you increase coupling. One is not necessarily better than the other. If you don't fully understand the domain, defer recatoring until enough variations of the problem have emerged. Otherwise your pre-optimisations will make the code base harder to refactor in future.\n\n\n",
+        "date": "2017-10-01T00:00+01:00",
+        "images": {
           "sys": {
             "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "1ybkgfeC0Usu6W4ICKmmco",
-        "type": "Entry",
-        "createdAt": "2017-09-01T22:05:15.270Z",
-        "updatedAt": "2017-09-01T22:07:41.521Z",
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "legalPage"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "terms-and-conditions",
-        "title": "Terms & Conditions",
-        "body": "<p>Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern our relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.</p>\n\n<p>The term 'us' or 'we' refers to the owner of the website. The term 'you' refers to the user or viewer of our website.</p>\n\n<p>The use of this website is subject to the following terms of use:\n\n<ol>\n<li>The content of the pages of this website is for your general information and use only. It is subject to change without notice.</li>\n<li>This website uses cookies to monitor browsing preferences. If you do allow cookies to be used, the personal information may be stored by us for use by third parties.</li>\n<li>Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</li>\n<li>Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific requirements.</li>\n<li>This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</li>\n<li>All trade marks reproduced in this website which are not the property of, or licensed to, the operator are acknowledged on the website.</li>\n<li>Unauthorised use of this website may give rise to a claim for damages and/or be a criminal offence.</li><li>From time to time this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).</li>\n<li>Your use of this website and any dispute arising out of such use of the website is subject to the laws of England, Northern Ireland, Scotland and Wales.</li>\n</ol>\n</p>"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "9hIixEpd04ksKwqCoWYKg",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:26:51.194Z",
-        "updatedAt": "2017-09-02T19:45:57.627Z",
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "imageSet"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Enterprise Grade Microservices",
-        "thumbnail": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "3rAYG3rbaEI6Ka4SwigAuA"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "77RHHsHuSsKIuCE4uew000",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:41:44.131Z",
-        "updatedAt": "2017-08-31T23:41:44.131Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Community For Agile Testing - Yadda",
-        "text": "Community For Agile Testing",
-        "url": "https://www.meetup.com/es-ES/Community-for-Agile-Testing/events/229788565/"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "BeyYWLb8AgOUsYMciKG4",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:37:03.113Z",
-        "updatedAt": "2017-08-31T21:37:03.113Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "confabulous",
-        "title": "Confabulous",
-        "summary": "A hierarchical configuration loader with support for remote sources such as S3, etcd and Vault",
-        "body": "A hierarchical configuration loader with support for remote sources such as S3, etcd and Vault",
-        "url": "https://www.github.com/guidesmiths/confabulous"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "2Z335f4s5G4M880UCeUe0W",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:35:05.655Z",
-        "updatedAt": "2017-08-31T21:35:05.655Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "yadda",
-        "title": "Yadda",
-        "summary": "A cucumber-esque BDD library, but with greater flexibility",
-        "body": "A cucumber-esque BDD library, but with greater flexibility",
-        "url": "https://www.github.com/acuminous/yadda"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "3e6i5bHPBYKyuG8YKu066E",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:11:37.665Z",
-        "updatedAt": "2017-08-31T21:39:59.447Z",
-        "revision": 3,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Mobile",
-        "text": "+44 (0)7814033321",
-        "icon": "fa-phone",
-        "url": "tel:+447814033321"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "5uraX28hqg2EU02umO8qog",
-        "type": "Entry",
-        "createdAt": "2017-09-02T19:21:46.999Z",
-        "updatedAt": "2017-09-02T20:06:03.151Z",
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Duty Calls",
-        "text": "Duty Calls - xkcd",
-        "url": "https://xkcd.com/386/"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "1HttWu08ByMIqYkMAwias0",
-        "type": "Entry",
-        "createdAt": "2017-09-09T20:48:49.727Z",
-        "updatedAt": "2017-09-09T20:48:49.727Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "imageSet"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Orange Is Not The New Black",
-        "thumbnail": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "4J3pfkFcTYQq8giGaCwSC8"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "3pVLW3iAYgcIUuUe6EUmCS",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:43:25.836Z",
-        "updatedAt": "2017-09-14T18:24:18.768Z",
-        "revision": 9,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "imageSet"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Yadda - The Other JavaScript BDD Library",
-        "thumbnail": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "3ipHCk26VGWG8YQiiy4kss"
+            "linkType": "Entry",
+            "id": "9hIixEpd04ksKwqCoWYKg"
           }
         }
       }
@@ -726,6 +290,83 @@
             "id": "g99n9a78vx0s"
           }
         },
+        "id": "5l4bNL91LOeicAIAMayAAc",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:44:58.380Z",
+        "updatedAt": "2017-10-01T21:17:11.777Z",
+        "revision": 18,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "article"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": 3,
+        "title": "Yadda - The Other JavaScript BDD Library",
+        "live": true,
+        "author": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1aRUx8rcSOWacCaUeOYcqQ"
+          }
+        },
+        "channel": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5AeYQEH78Ie4OCKWWkmI2o"
+          }
+        },
+        "keywords": [
+          "Node.js",
+          "Testing",
+          "BDD",
+          "Yadda"
+        ],
+        "tweet": "Yadda - The Other JavaScript BDD Library",
+        "summary": "<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they're not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe('some test function') with text. Chai and Expect don't even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this() at the cost of additional ceremony. Surely there's more to BDD…</p>",
+        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/FntIzfFlAGWGOQMcoUCOm/0e35e0cf4b64d89d719a67e1dce027a4/yadda-1024x768.jpg\" title=\"Yadda\" alt=\"Man sitting among boxes labelled as JavaScript BDD librarys\" />\n\n<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they're not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe('some test function') with text. Chai and Expect don't even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this().</p>\n\n<p>The only true BDD tool found for JavaScript is CucumberJS. The problem with CucumberJS is that the Gerkin syntax is restrictive. I don't want to be limited to starting my sentences with \"Given\", \"When\", \"Then\", \"And\" and \"But\". I want to express myself naturally.</p>\n\n<p>I also want a test runner that makes good decisions about which steps to run, that works in a browser and that lets me plugin different step libraries so that I can test multiple interfaces (e.g. rest and HTML) with the same scenarios. I even want a tool that has nothing to do with testing and just maps ordinary sentences to functions so I could use it in a rules engine or build script.</p>\n\n<p>That's why I wrote <a href='http://www.github.com/acuminous/yadda'>Yadda</a> - the other JavaScript BDD library.</p>",
+        "date": "2016-04-26T19:00+01:00",
+        "event": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "77RHHsHuSsKIuCE4uew000"
+          }
+        },
+        "location": "London",
+        "images": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "3pVLW3iAYgcIUuUe6EUmCS"
+          }
+        },
+        "downloads": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1h5xhIsfS2AKUsoamMKYO8"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
         "id": "Q4D5N4wyQ0wWO0AmwmCmE",
         "type": "Entry",
         "createdAt": "2017-08-31T21:13:14.690Z",
@@ -744,40 +385,6 @@
         "id": "Linkedin",
         "icon": "fa-linkedin",
         "url": "https://www.linkedin.com/in/stephencresswell/"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "6xesezFf7G4mCEaYAO6wg8",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:38:00.761Z",
-        "updatedAt": "2017-09-02T19:57:40.091Z",
-        "revision": 5,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "imageSet"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Divorcing Microservices With Rascal",
-        "thumbnail": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "1qT8990i1SqsACkwECicAI"
-          }
-        }
       }
     },
     {
@@ -891,46 +498,26 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "13bFqt7AHAGemE2cuUsiqM",
+        "id": "7iTlZrljgWkQ0gGaYywaUU",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:56:17.744Z",
-        "updatedAt": "2017-09-29T20:35:25.250Z",
-        "revision": 6,
+        "createdAt": "2017-08-31T21:36:02.352Z",
+        "updatedAt": "2017-08-31T21:36:02.353Z",
+        "revision": 1,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "channelPage"
+            "id": "project"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "blog",
-        "title": "Blog",
-        "feedTitle": "Stephen Cresswell's Blog",
-        "link": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5ovlS609fqOmywE2kcSAWg"
-          }
-        },
-        "introImage": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "6oYIvHjLUsU0UISMyaOqq4"
-          }
-        },
-        "introText": "\"Someone is wrong on the internet\"",
-        "introLink": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5uraX28hqg2EU02umO8qog"
-          }
-        }
+        "id": "rascal",
+        "title": "Rascal",
+        "summary": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
+        "body": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
+        "url": "https://www.github.com/guidesmiths/rascal"
       }
     },
     {
@@ -1003,26 +590,55 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "7iTlZrljgWkQ0gGaYywaUU",
+        "id": "6equZuAAPmaQMAOAu8wguy",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:36:02.352Z",
-        "updatedAt": "2017-08-31T21:36:02.353Z",
-        "revision": 1,
+        "createdAt": "2017-09-06T21:32:28.705Z",
+        "updatedAt": "2017-10-01T21:16:48.155Z",
+        "revision": 57,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "project"
+            "id": "article"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "rascal",
-        "title": "Rascal",
-        "summary": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
-        "body": "A friendly RabbitMQ client, with advanced error handling and mostly safe defaults",
-        "url": "https://www.github.com/guidesmiths/rascal"
+        "id": 1000,
+        "title": "10½ Factor Microservices",
+        "live": true,
+        "author": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1aRUx8rcSOWacCaUeOYcqQ"
+          }
+        },
+        "channel": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "13bFqt7AHAGemE2cuUsiqM"
+          }
+        },
+        "keywords": [
+          "Node.js",
+          "Microservices",
+          "12 Factor",
+          "Docker"
+        ],
+        "tweet": "10½ Factor Microservices",
+        "summary": "<p>\nBy now you've probably heard of the <a href='https://12factor.net'>12 Factor</a> design principles. Overall they are very good. However as with any piece of advice they should be viewed in the context of when they were written, and reassessed in the current content to see to what extent they are still valuable. In the context of Node.js microservices how will the 12 factor principles stack up?\n</p>",
+        "body": "<p>\nBy now you've probably heard of the <a href=\"https://12factor.net\">12 Factor</a> design principles. Overall they are very good, but as with any piece of advice they should be viewed in the context of when they were written, and reassessed in the current content to see to what extent they are still valuable.\n</p><p>\nThe context I'm most interested in is that of microservice development,  with Node.js. Node is a great fit for microservces in most situations. The module system is excellent, so it's easy to reuse and share code. Once mastered JavaScript can be terse, yet readable, it's interpreted so doesn't suffer from compilation delays, but thanks to V8 fast enough for the majority of applications. The only time I've found Node problematic is when performing event loop blocking operations or when interacting with a server who's client libraries are of dubious quality. With the scene set, how will the 12 factor principles stack up?\n</p>\n<h2>Codebase (1)</h2>\n<img src=\"https://images.contentful.com/g99n9a78vx0s/2sohHw99zqsmuQWqkmCYcw/a7d4ac73cde04f7ce2b04c13b00b2bab/codebase-1024x768.jpg\" title=\"Codebase\" alt=\"A programmer typing on a keyboard\" />\n<p>\nThe first of the principles - \"Codebase\" is also the most easily challenged. The principle states that there should be a 1-1 relationship between codebase and source repository, with consideration for branches and forks etc. \n</p>\n<p>\nI sympathise entirely with what I suspect to be the underlying motivation. I've had to suffer a number of projects with complicated, multi-stage setup, linked repositories (e.g. git sub-modules), shared build scripts and all encompassing development environments which made life a misery. However the glaring problem with this principle is that it prohibits monorepos, where multiple applications are stored in a single repository. Monorepos aren't without their problems - without appropriate tooling it is difficult to know what to build, test and deploy, but have certain advantages such as making it easier to make sweeping changes to the entire codebase.\n</p>\n<h2>Dependencies (2)</h2>\n<img src=\"https://images.contentful.com/g99n9a78vx0s/jGfmTiIZEW88GOIMCSU8u/675b86d953174e791fac4f35e85de04a/dependencies-1024x768.jpeg\" title=\"Dependencies\" alt=\"Stars from a baby's mobile\" />\n<p>\nThe second principle, \"Explicitly declare and isolate dependencies\", is more sound. Version and bundle all dependencies with the application, rather than trusting to their correct existence on deployment. Node.js solves this in a similar way to most other modern languages, by including a dependencies manifest. The latest version of Node's package manager automatically creates a lock file, so even transitive dependencies are explicitly versioned, however there are some situations in which even this is not enough.\n</p><p>\nSome node modules have native dependencies, which must be present in the target environment in order to work. Examples are <a href=\"https://github.com/gsmcwhirter/node-zoneinfo\">zoneinfo</a>, <a href=\"https://www.npmjs.com/package/pg-native\">pg-native</a> and <a href=\"https://www.npmjs.com/package/node-expat\">node-expat</a>. To truly conform to this principle, these dependencies should be bundled too, as must Node.js itself, and this is where <a href=\"https://www.docker.com/\">docker</a> comes in. By deploying your application within a docker container, and by including its dockerfile in your codebase you can not only version the non-native dependencies, but the native ones as well. \n</p><p>\n<h2>Backing Services (4) and Dev/Prod Parity (10)</h2>\n<div class=\"row\">\n<div class=\"col-md-6\">\n<img src=\"https://images.contentful.com/g99n9a78vx0s/5VN3f8hLB6gwgmauwmKKoa/11dfc597c2e980d9bf7375878429a96a/backing-services-1024x768.jpeg\" title=\"Backing Services\" alt=\"A server communicating with database and web service\"/>\n</div>\n<div class=\"col-md-6\">\n<img src=\"https://images.contentful.com/g99n9a78vx0s/3VDwtMdYykG8cki4C2OQ6u/25a707ce6c7e17a05c2b2a22653a4b2c/dev-prod-parity-1024x768.jpg\" title=\"Dev/Prod Parity\" alt=\"Two nearly identical robots\" />\n</div>\n</div>\nWhile we're on the subject of docker and containerisation, we may as well tick off the forth (backing services), and tenth (dev/prod parity) principles. The backing services principle states that external services (databases, message brokers, other web services, etc) should be treated as \"attached resources\", which can be substituded without having to rebuild and redeploy the application. \n</p><p>\nThis is achievable through external configuration, but made even easier by the service discovery provided by docker, and related technologies such as <a href=\"https://kubernetes.io\">Kubernetes</a>. Kubernetes even comes with a <a href=\"https://kubernetes.io/docs/admin/kube-proxy/\">proxy</a> which enables you to attach a locally running application to a Kubernetes managed container transparently.\n</p>\n<p>\nBy deploying services within containers, you get a high degree of dev/prod parity, and even more if you deploy databases and message brokers within containers too. Despite this I tend to only run stateless containers in producation and pre-production environments as I've encountered more than my share of issues with mounting network attached storage into docker containers.\n</p>\n<h2>Config (3)</h2>\n<p>\nThe 3rd principle of storing configuration (only) in the environment isn't as well thought out. The 12 factor principles argue against named environments because you will run out of meaningful names and for limiting configuration to environment variables, since files can be scattered, inconsistent and may accidentally be checked into source control\n</p><p>\nMy counter to argument 1, is that in every organisation I've ever worked as, people always refer to environments by name, and so having a named environment configuration makes life significantly easier.\n</p><p>\nMy problem with argument 2, is that I specifically want to check config (excluding secrets) into source control. This enables it to be versioned and deployed with the application, for the same reasons behind the principle of dependency management. Furthermore environment variables lack native structure or typing and cannot be changed at runtime. They are also the <a href=\"https://www.theregister.co.uk/2017/08/02/typosquatting_npm/\">easiest configuration to steal</a>.\n</p><p>\nInstead my approach is to use whatever config source makes most sense (which can include environment variables). I <a href=\"https://github.com/cressie176/www-app/tree/master/server/config\">version control a default config file, and environmental overrides</a> with the application source, then further override with secrets at deploy or runtime using an appropriate secrets management tool such as <a href=\"https://github.com/StackExchange/blackbox\">blackbox</a>, <a href=\"https://www.vaultproject.io/\">vault</a> or <a href=\"https://kubernetes.io/docs/concepts/configuration/secret/\">Kubernetes</a>. I use <a href=\"https://www.npmjs.com/package/confabulous\">Confabulous</a>, a library of my own creation similar to <a href=\"https://www.npmjs.com/package/nconf\">nconf</a>, to handle the merging and overrides.\n</p>\n<h2>Build, Release, Run (5), Processes (6) and Port Binding (7)</h2>\n<p>\nThe next 3 principles aren't very interesting. Separating Build, Release, Run (principle 5) is trivial with docker...\n</p>\n<ul>\n<li>Build and image from a clean checkout</li>\n<li>Push to a repository</li>\n<li>Run on a remote server</li>\n</ul>\n<p>\nI prefer a self managed CI server such as <a href=\"https://jenkins.io/\">Jenkins</a> for building images and orchestrating deployments. With your own server you can preinstall build dependencies, cache images and have fewer security concerns. As a result, some of our microservices build, test and deploy in under 20 seconds.\n</p>\n<p>\nPrinciple 6, stateless processes just boils down to using a database rather than memory to persist any data which spans a request, and Principle 7, port binding means your application should start it's own server rather than be deployed into an application server. Popular in the Java world, but not in Nodeland.\n</p>\n<h2>Concurrency (8) and Admin Processes (12)</h2>\n<img src=\"https://images.contentful.com/g99n9a78vx0s/493at3Zgc0smAquIsIA8uC/e240f820a8f659877b7acd75b3b39bcb/concurrency-1024x768.jpg\" title=\"Concurrency\" alt=\"A graph showing process instances by worker diversity\" />\n<p>\nPrinciple 8, concurrency is highly relevant in a Node.js and microservice environment. This principle advocates scaling by distributing functionality to worker processes, who's instances may grow and shrink depending on demand. i.e. microservices 101. I've also found this a useful approach for circumventing one of Node's limitations. If you have an node process which by necessity performs some long running synchronous operation (e.g. parsing a large XML file), then it will block all other tasks. By separating the synchronous and asynchronous behaviour into different services, you bypass the problem.\n</p><p>\nWe take the same approach for admin processes (principle 12). They either exist as a temporary service, launching from their own docker container and running to completion, or they lie dormant in another permanently running service and can be triggered either by http request or message.\n</p>\n\n<h2>Disposability (9)</h2>\n<img src=\"https:////images.contentful.com/g99n9a78vx0s/5UBtNZVk6kSGeQ0IWm6Cwc/e03218aed927f0b59df6a34c28c08e1c/disposability-1024x768.jpg\" title=\"Disposability\" alt=\"A waste paper basket\"/>\n<p>\nPrinciple 9, disposability is also interesting, and often under appreciated. The principle states that applications should startup and shutdown quickly and gracefully. By gracefully I mean that applications should not attempt to perform any work until all necessary resources (database connections etc) have been established. When receiving a shutdown signal the application should stop accepting new work, but wait for inflight tasks to complete and only then close connections to attached resources. \n</p><p>\nDepending on your number of microservices, and variety of backing services, this can be surprisingly difficult to orchestrate in a consistent way. My esteemed comrade <a href=\"https://github.com/BorePlusPlus\">Dalibor Novak</a> worked with me creating <a href=\"https://www.npmjs.com/package/systemic\">systemic</a> for solving this problem. You can see it in action <a href=\"https://github.com/cressie176/www-app/tree/master/server/lib\">here</a>.\n</p>\n<h2>Logs (11)</h2>\n<img src=\"https://images.contentful.com/g99n9a78vx0s/4KUiWSfUasommuGiO0E2mi/9b648e38d75e13f6e6055a27148e990d/logs-1024x768.jpeg\" title=\"Logs\" alt=\"Logs being transported down a river\"/>\n<p>\nThe remaining principle is to treat logs as event streams. The advice is to write logs, unbuffered to stdout, then route these to dedicated logging infrastructure. I agree, but think they missed a trick. Rather than writing directly to console or your logging framework of choice your application should also emit log messages as events. By doing so each message can have multiple consumers, which may include one which writes to the console, but could additionally include one which publishes events to a message bus or monitoring system such as <a href=\"https://prometheus.io/\">Prometheus</a>. As an added bonus it becomes trivial to selectively silence are asset logged events in automated tests. Node has excellent support for <a href=\"https://nodejs.org/api/events.html\">events</a>, but using it for logging would be rather unusual. For this reason (and others) I've wrapped the event emitter behind a loglike api in a library called <a href=\"https://www.npmjs.com/package/prepper\">prepper</a>. You can connect it to console, bunyan or any other logging framework to get the benefits given above while retaining your logger choice.\n</p>\n<h2>In Conclusion...</h2>\n<p>\nOf all the 12 factor principles, the only one I fully disagree with is that of config (-1). The codebase principle is still valid in spirit, even if the concerns about the relationship between source code and repository have dated (-½). Given the extent to which Node.js, Microservices and containerisation have revolutionised how we design, write and deploy code. I think 10½ out of 12 is pretty good.\n</p>\n\n\n\n\n\n\n\n\n",
+        "date": "2017-08-12T21:00+01:00",
+        "images": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "48CjwSLwRGiqWIu0kYMCU2"
+          }
+        }
       }
     },
     {
@@ -1063,82 +679,6 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "5l4bNL91LOeicAIAMayAAc",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:44:58.380Z",
-        "updatedAt": "2017-09-27T18:39:42.210Z",
-        "revision": 17,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "article"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": 3,
-        "title": "Yadda - The Other JavaScript BDD Library",
-        "author": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "1aRUx8rcSOWacCaUeOYcqQ"
-          }
-        },
-        "channel": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5AeYQEH78Ie4OCKWWkmI2o"
-          }
-        },
-        "keywords": [
-          "Node.js",
-          "Testing",
-          "BDD",
-          "Yadda"
-        ],
-        "tweet": "Yadda - The Other JavaScript BDD Library",
-        "summary": "<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they're not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe('some test function') with text. Chai and Expect don't even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this() at the cost of additional ceremony. Surely there's more to BDD…</p>",
-        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/FntIzfFlAGWGOQMcoUCOm/0e35e0cf4b64d89d719a67e1dce027a4/yadda-1024x768.jpg\" title=\"Yadda\" alt=\"Man sitting among boxes labelled as JavaScript BDD librarys\" />\n\n<p>The JavaScript community has got rather confused about BDD. The most popular tools, Jasmine, Mocha, Vows, Chai and Expect are proclaimed as BDD, but they're not. Jasmine, Mocha and Vows, are excellent test frameworks, but from a BDD perspective they merely describe('some test function') with text. Chai and Expect don't even do this, they are fluid assertion apis, which attempt to simulate an ordinary language a.bit.like.this().</p>\n\n<p>The only true BDD tool found for JavaScript is CucumberJS. The problem with CucumberJS is that the Gerkin syntax is restrictive. I don't want to be limited to starting my sentences with \"Given\", \"When\", \"Then\", \"And\" and \"But\". I want to express myself naturally.</p>\n\n<p>I also want a test runner that makes good decisions about which steps to run, that works in a browser and that lets me plugin different step libraries so that I can test multiple interfaces (e.g. rest and HTML) with the same scenarios. I even want a tool that has nothing to do with testing and just maps ordinary sentences to functions so I could use it in a rules engine or build script.</p>\n\n<p>That's why I wrote <a href='http://www.github.com/acuminous/yadda'>Yadda</a> - the other JavaScript BDD library.</p>",
-        "date": "2016-04-26T19:00+01:00",
-        "event": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "77RHHsHuSsKIuCE4uew000"
-          }
-        },
-        "location": "London",
-        "images": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "3pVLW3iAYgcIUuUe6EUmCS"
-          }
-        },
-        "downloads": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "1h5xhIsfS2AKUsoamMKYO8"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
         "id": "Ho8vv9fNWUgeiyYggOGWo",
         "type": "Entry",
         "createdAt": "2017-08-31T21:31:09.787Z",
@@ -1157,71 +697,6 @@
         "id": "See all talks…",
         "text": "See all talks…",
         "url": "/talks"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "1h5xhIsfS2AKUsoamMKYO8",
-        "type": "Entry",
-        "createdAt": "2017-09-13T22:41:25.861Z",
-        "updatedAt": "2017-09-14T18:37:20.535Z",
-        "revision": 3,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "PDF of Yadda - The Other JavaScript BDD Library",
-        "text": "Slides",
-        "icon": "fa-file-pdf-o",
-        "media": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "2SF5G8WIXKQUyE0SISuuwG"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "3yKsrbq2XSgU0mooEyO4oo",
-        "type": "Entry",
-        "createdAt": "2017-08-31T23:35:07.184Z",
-        "updatedAt": "2017-08-31T23:35:07.184Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Node.js Meetup - Divorcing Microservices With Rascal",
-        "text": "Node.js Meetup",
-        "url": "https://www.meetup.com/Node-js-Meetup-London/events/231560165/"
       }
     },
     {
@@ -1298,71 +773,24 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "3COc9WAIMMY0QKkaycg0WQ",
+        "id": "3yKsrbq2XSgU0mooEyO4oo",
         "type": "Entry",
-        "createdAt": "2017-08-31T23:37:55.487Z",
-        "updatedAt": "2017-09-27T18:39:09.882Z",
-        "revision": 16,
+        "createdAt": "2017-08-31T23:35:07.184Z",
+        "updatedAt": "2017-08-31T23:35:07.184Z",
+        "revision": 1,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "article"
+            "id": "link"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": 2,
-        "title": "Divorcing Microservices With Rascal",
-        "author": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "1aRUx8rcSOWacCaUeOYcqQ"
-          }
-        },
-        "channel": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5AeYQEH78Ie4OCKWWkmI2o"
-          }
-        },
-        "keywords": [
-          "Node.js",
-          "Rascal",
-          "RabbitMQ",
-          "Microservices"
-        ],
-        "tweet": "Divorcing Microservices With Rascal",
-        "summary": "<p>Microservice based architectures are everywhere, but to succeed you must find ways to decouple your services so they can be developed and deployed in isolation. A popular strategy is to use a message broker, which in addition to providing the decoupling, can also add robustness and scalability. But messaging can be deceptively difficult. Which broker suits your needs best? Should you follow a \"command\" or \"event\" based model? How will you handle duplicates? Can you tolerate message loss? Will you recover from errors by discarding, retrying or dead lettering?</p>",
-        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/1CYrJfCdiEMmO2GqsiQOMc/3de80ad7c921977e8ca2d2cff63cdb65/divorcing-microservices-with-rascal-1024x768.jpg\" title=\"Divorcing Microservices With Rascal\" alt=\"Hands holding a torn picture of a heart\" />\n\n<p>Microservice based architectures are everywhere, but to succeed you must find ways to decouple your services so they can be developed and deployed in isolation. A popular strategy is to use a message broker, which in addition to providing the decoupling, can also add robustness and scalability. But messaging can be deceptively difficult. Which broker suits your needs best? Should you follow a \"command\" or \"event\" based model? How will you handle duplicates? Can you tolerate message loss? Will you recover from errors by discarding, retrying or dead lettering?</p>\n\n<p>If these questions weren't enough, you have to find a good client library. For RabbitMQ there's the excellent <a href=\"https://github.com/squaremo/amqp.node\">ampqlib</a>, but it's not for the faint of heart. Estabilishing a communication channel with the broker requires serveral api calls, and will not be automatically be restablished if dropped. Messages are not persistent or confirmed by default. Errors are likely to crash your application, and there's no support for clustering.</p>\n\n<p>Enter <a href=\"https://www.github.com/guidesmiths/rascal\">Rascal</a>, a friendly, config driven RabbitMQ client which sits on top of amqplib, simplyfing adoption significantly.</p>",
-        "date": "2016-06-29T19:00+00:00",
-        "event": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "3yKsrbq2XSgU0mooEyO4oo"
-          }
-        },
-        "location": "London",
-        "images": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "6xesezFf7G4mCEaYAO6wg8"
-          }
-        },
-        "downloads": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "2WS8uCPP4seyC0WiUEI4cK"
-            }
-          }
-        ]
+        "id": "Node.js Meetup - Divorcing Microservices With Rascal",
+        "text": "Node.js Meetup",
+        "url": "https://www.meetup.com/Node-js-Meetup-London/events/231560165/"
       }
     },
     {
@@ -1374,11 +802,11 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "74hFY4cLKggKiGuyy2iqK0",
+        "id": "1h5xhIsfS2AKUsoamMKYO8",
         "type": "Entry",
-        "createdAt": "2017-08-31T21:07:43.485Z",
-        "updatedAt": "2017-09-06T21:52:24.531Z",
-        "revision": 7,
+        "createdAt": "2017-09-13T22:41:25.861Z",
+        "updatedAt": "2017-09-14T18:37:20.535Z",
+        "revision": 3,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1389,39 +817,16 @@
         "locale": "en-GB"
       },
       "fields": {
-        "id": "Talks",
-        "text": "Talks",
-        "icon": "fa-microphone",
-        "url": "/talks"
-      }
-    },
-    {
-      "sys": {
-        "space": {
+        "id": "PDF of Yadda - The Other JavaScript BDD Library",
+        "text": "Slides",
+        "icon": "fa-file-pdf-o",
+        "media": {
           "sys": {
             "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
+            "linkType": "Asset",
+            "id": "2SF5G8WIXKQUyE0SISuuwG"
           }
-        },
-        "id": "1vB10lNZBSiiKsai0KiCIe",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:12:39.858Z",
-        "updatedAt": "2017-09-01T22:20:56.371Z",
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "GitHub",
-        "icon": "fa-github",
-        "url": "https://www.github.com/cressie176/"
+        }
       }
     },
     {
@@ -1521,55 +926,54 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "VGOaVS3FySAaIuKs2KWg6",
+        "id": "74hFY4cLKggKiGuyy2iqK0",
         "type": "Entry",
-        "createdAt": "2017-09-08T17:28:22.022Z",
-        "updatedAt": "2017-09-27T18:38:45.988Z",
-        "revision": 74,
+        "createdAt": "2017-08-31T21:07:43.485Z",
+        "updatedAt": "2017-09-06T21:52:24.531Z",
+        "revision": 7,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "article"
+            "id": "link"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": 1002,
-        "title": "Await - I'll See You In JavaScript Hell!",
-        "author": {
+        "id": "Talks",
+        "text": "Talks",
+        "icon": "fa-microphone",
+        "url": "/talks"
+      }
+    },
+    {
+      "sys": {
+        "space": {
           "sys": {
             "type": "Link",
-            "linkType": "Entry",
-            "id": "1aRUx8rcSOWacCaUeOYcqQ"
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
           }
         },
-        "channel": {
+        "id": "1vB10lNZBSiiKsai0KiCIe",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:12:39.858Z",
+        "updatedAt": "2017-09-01T22:20:56.371Z",
+        "revision": 4,
+        "contentType": {
           "sys": {
             "type": "Link",
-            "linkType": "Entry",
-            "id": "13bFqt7AHAGemE2cuUsiqM"
+            "linkType": "ContentType",
+            "id": "link"
           }
         },
-        "keywords": [
-          "Node.js",
-          "JavaScript",
-          "Callback",
-          "Promise",
-          "Software Craftsmanship"
-        ],
-        "tweet": "Await - I'll See You In JavaScript Hell!",
-        "summary": "<p>\nThe JavaScript callback vs promises debate is mostly over. Promises won, albeit by the back door of await. I, for one, welcome our new asynchronous overlords, but before we rush to our new programming nirvana let's take some time to look at promises and why they failed to resolve the problems with asynchronous JavaScript…\n</p>",
-        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/1xmevRml5OSmEKSOywei00/58ac49ec43ed80570e34072bc5292a5c/pinhead-1024x768.jpg\" title=\"Pinhead from Hellraiser\" alt=\"Pinhead from Hellraiser\" />\n<p>\nThe JavaScript callback vs promises debate is mostly over. Promises won, albeit by the back door of await. I, for one, welcome our new asynchronous overlords, but before we rush to our new programming nirvana let's take some time to look at promises and why they failed to resolve the problems with asynchronous JavaScript.\n\nThe following code could rightly be damned as callback hell.\n\n<code>function welcomeToHell(cb) {\n  foo(err => {\n    if (err) return cb(err)\n    bar(err => {\n      if (err) return cb(err)\n      baz(err => {\n        if (err) return cb(err)\n        cb()\n      })\n    })\n  })\n}\n</code>\n<p>\nThe only reason callback based code ever looks like this, is because its author did a shoddy job. By using a library like <a href=\"https://www.npmjs.com/package/async\">async</a> and separating the code into explicit functions, things can be much improved. That aside, if the code had been written with promises it would look as follows…\n</p>\n<code>function salvationIsHere() {\n  return foo()\n    .then(bar)\n    .then(baz)\n}\n</code>\n<p>\nIf all promises code ever written looked like the example above I would finish this article now. Regretably it doesn't. Promises are simple when code follows a linear sequence or can run entirely in parallel, but when you add conditions and/or iteration, just like callbacks, they become complicated, taking effort to simplify. As a result most of the promise based code I come across looks nothing like the above. Instead it looks like this…\n</p>\n<code>function welcomeBackToHell(email) {\n  return getUserByEmail(email)\n    .then(user => getUserRoles(user.id)\n      .then(roles => {\n        if (roles.indexOf('publisher') < 0) return { user, roles }\n        return getUserArticles(user.id)\n          .then(articles => ({ user, roles, articles }))\n      })\n  )\n}\n</code>\n<p>\nCall me a cynic, but it looks a lot like the pyramid of doom associated with callback hell. Now my point isn't that with appropriate care promisified code can't read well. It can. But this is equally true with callbacks</a>, providing you take the time to write functions that:\n</p>\n<ol>\n  <li>Have meaningful names</li>\n  <li>Are small (I aim for &lt;=4 lines)</li>\n  <li>Do one thing well</li>\n  <li>Have a single level of abstraction</li>\n  <li>Minimise parameters (I aim for &lt;= 2 excluding cb)</li>\n  <li>Avoid booleans</li>\n  <li>Minimise conditional logic (guard conditions are ok)</li>  \n</ol>\n<p>\nand modules that:\n</p>\n<ol>\n  <li>Have meaningful names that do not end in 'er' or 'or'</li>\n  <li>Have a single responsibility</li>\n  <li>Encapsulate data and behaviour</li>\n</ol>\n<h2>In Conclusion...</h2>\n<p>\nTo write coherent and cohesive code you have to understand and care about the principles of software craftsmanship. This is thousands of times more important than whether you use callbacks, promises or await. Lets try to remember before we damn our codebases with yet more poorly factored code. We're running out of patterns to blame.\n</p>",
-        "date": "2017-08-26T19:00+01:00",
-        "images": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "4gZuk9FDHWgcMGiwKwAuUc"
-          }
-        }
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "GitHub",
+        "icon": "fa-github",
+        "url": "https://www.github.com/cressie176/"
       }
     },
     {
@@ -1651,6 +1055,64 @@
             "id": "g99n9a78vx0s"
           }
         },
+        "id": "4RdujCGE1qak4SoIoQs2UQ",
+        "type": "Entry",
+        "createdAt": "2017-09-14T19:30:29.919Z",
+        "updatedAt": "2017-09-14T20:56:56.512Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Production Credits",
+        "text": "Production Credits",
+        "url": "/legal/production-credits"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "fXohBYKRpeI606eSQYAwQ",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:29:30.348Z",
+        "updatedAt": "2017-08-31T22:05:02.439Z",
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "See all articles…",
+        "text": "See all articles…",
+        "url": "/blog"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
         "id": "5x2gdy4Q1yoa2wWwqiMoMA",
         "type": "Entry",
         "createdAt": "2017-08-31T22:51:26.155Z",
@@ -1710,171 +1172,11 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "ZDimT44KgEowGSa6cUQCW",
-        "type": "Entry",
-        "createdAt": "2017-09-14T19:29:15.814Z",
-        "updatedAt": "2017-09-14T21:15:27.252Z",
-        "revision": 6,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "legalPage"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "production-credits",
-        "title": "Production Credits",
-        "body": "<table class='table table-striped'>\n  <body>\n    <tr>\n      <td>POV of woman using laptop while relaxing on sofa</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/Neustockimages\">iStock.com/Neustockimages</a></td>\n    </tr>\n    <tr>\n      <td>Businessman is looking at city</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/Pinkypills\">iStock.com/Pinkypills</a></td>\n    </tr>\n    <tr>\n      <td>Holding vitual 12 sided role playing game dice numbers background</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/gemredding\">iStock.com/gemredding</a></td>\n    </tr>\n    <tr>\n      <td>Hacking int the new age</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/Yuri_Arcurs\">iStock.com/Yuri_Arcurs</a></td>\n    </tr>\n    <tr>\n      <td>Felt sew star toy</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/mamezito\">iStock.com/mamezito</a></td>\n    </tr>\n    <tr>\n      <td>Abstract network connection background</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/nadla\">iStock.com/nadla</a></td>\n    </tr>\n    <tr>\n      <td>Retro robot on the road</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/benoitb\">iStock.com/benoitb</a></td>\n    </tr>\n    <tr>\n      <td>Construction workers digging</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/KatarzynaBialasiewicz\">iStock.com/KatarzynaBialasiewicz</a></td>\n    </tr>\n    <tr>\n      <td>Garbage</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/Smitt\">iStock.com/Smitt</a></td>\n    </tr>\n    <tr>\n      <td>Logs floating On Water</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/tvisttv\">iStock.com/tvisttv</a></td>\n    </tr>\n</table>"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "4RdujCGE1qak4SoIoQs2UQ",
-        "type": "Entry",
-        "createdAt": "2017-09-14T19:30:29.919Z",
-        "updatedAt": "2017-09-14T20:56:56.512Z",
-        "revision": 3,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "Production Credits",
-        "text": "Production Credits",
-        "url": "/legal/production-credits"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "fXohBYKRpeI606eSQYAwQ",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:29:30.348Z",
-        "updatedAt": "2017-08-31T22:05:02.439Z",
-        "revision": 4,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "link"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "See all articles…",
-        "text": "See all articles…",
-        "url": "/blog"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "BiHMILP0e4GougCcgss4G",
-        "type": "Entry",
-        "createdAt": "2017-08-31T22:53:47.975Z",
-        "updatedAt": "2017-09-01T14:04:22.294Z",
-        "revision": 2,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "featuredSoftware"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "software",
-        "title": "Software",
-        "icon": "fa-laptop",
-        "items": [
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "2Z335f4s5G4M880UCeUe0W"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "7iTlZrljgWkQ0gGaYywaUU"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "3dmRj7SUUg2Mei2eWoa0ok"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "BeyYWLb8AgOUsYMciKG4"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "6NXtw4v3GMCgoaE4IKk6a2"
-            }
-          }
-        ],
-        "link": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "2ksz0Er8busMsUc6YO4Go2"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
         "id": "2mGqla8uE8ukUSUwIY8swS",
         "type": "Entry",
         "createdAt": "2017-08-31T23:27:15.257Z",
-        "updatedAt": "2017-09-27T18:39:20.327Z",
-        "revision": 12,
+        "updatedAt": "2017-10-01T21:17:18.435Z",
+        "revision": 13,
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1887,6 +1189,7 @@
       "fields": {
         "id": 1,
         "title": "Enterprise Grade Microservices",
+        "live": true,
         "author": {
           "sys": {
             "type": "Link",
@@ -1974,6 +1277,79 @@
             "id": "g99n9a78vx0s"
           }
         },
+        "id": "BiHMILP0e4GougCcgss4G",
+        "type": "Entry",
+        "createdAt": "2017-08-31T22:53:47.975Z",
+        "updatedAt": "2017-09-01T14:04:22.294Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "featuredSoftware"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "software",
+        "title": "Software",
+        "icon": "fa-laptop",
+        "items": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2Z335f4s5G4M880UCeUe0W"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7iTlZrljgWkQ0gGaYywaUU"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3dmRj7SUUg2Mei2eWoa0ok"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "BeyYWLb8AgOUsYMciKG4"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6NXtw4v3GMCgoaE4IKk6a2"
+            }
+          }
+        ],
+        "link": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "2ksz0Er8busMsUc6YO4Go2"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
         "id": "19VmSbmGN2gGoGU24CIE2a",
         "type": "Entry",
         "createdAt": "2017-08-31T23:31:13.936Z",
@@ -1992,100 +1368,6 @@
         "id": "Corp.js - Enterprise Grade Microservices",
         "text": "Corp.js",
         "url": "https://www.meetup.com/Corporate-JavaScript-Meetup-Budapest/"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "48CjwSLwRGiqWIu0kYMCU2",
-        "type": "Entry",
-        "createdAt": "2017-09-09T13:10:00.260Z",
-        "updatedAt": "2017-09-09T13:10:00.260Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "imageSet"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "10½ Factor Microservices With Node.js",
-        "thumbnail": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "3aMxdRlFxuggOWEqeIYm6i"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "3dmRj7SUUg2Mei2eWoa0ok",
-        "type": "Entry",
-        "createdAt": "2017-08-31T21:36:34.809Z",
-        "updatedAt": "2017-08-31T21:36:34.809Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "project"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "marv",
-        "title": "Marv",
-        "summary": "A database migration library with pluggable drivers for PostgreSQL and MySQL",
-        "body": "A database migration library with pluggable drivers for PostgreSQL and MySQL",
-        "url": "https://www.github.com/guidesmiths/marv"
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "g99n9a78vx0s"
-          }
-        },
-        "id": "5uE0rEBTS8KKAo2EYAoyGq",
-        "type": "Entry",
-        "createdAt": "2017-09-01T22:06:47.727Z",
-        "updatedAt": "2017-09-01T22:06:47.727Z",
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "legalPage"
-          }
-        },
-        "locale": "en-GB"
-      },
-      "fields": {
-        "id": "privacy-policy",
-        "title": "Privacy Policy",
-        "body": "<p>This privacy policy sets out how we use and protect any information that you give us when you use this website.</p>\n\n<p>We are committed to ensuring that your privacy is protected. Should we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement.</p>\n\n<p>We may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes. This policy is effective from 1st August 2017.</p>\n\n<h3>What we collect</h3>\n<p>This website does not ask for or collect personal information.</p>\n\n<h3>How we use cookies</h3>\n<p>A cookie is a small file which asks permission to be placed on your computer&apos;s hard drive. Once you agree, the file is added and the cookie helps analyse web traffic or lets you know when you visit a particular site. Cookies allow web applications to respond to you as an individual. The web application can tailor its operations to your needs, likes and dislikes by gathering and remembering information about your preferences.</p>\n\n<p>We use traffic log cookies to identify which pages are being used. This helps us analyse data about webpage traffic and improve our website in order to tailor it to customer needs. We only use this information for statistical analysis purposes and then the data is removed from the system.</p>\n\n<p>Overall, cookies help us provide you with a better website by enabling us to monitor which pages you find useful and which you do not. A cookie in no way gives us access to your computer or any information about you, other than the data you choose to share with us.</p>\n\n<p>You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of the website.</p>\n\n<h3>Links to other websites</h3>\n\n<p>Our website may contain links to other websites of interest. However, once you have used these links to leave our site, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites and such sites are not governed by this privacy statement. You should exercise caution and look at the privacy statement applicable to the website in question.</p>"
       }
     },
     {
@@ -2133,29 +1415,89 @@
             "id": "g99n9a78vx0s"
           }
         },
-        "id": "1aRUx8rcSOWacCaUeOYcqQ",
+        "id": "5uE0rEBTS8KKAo2EYAoyGq",
         "type": "Entry",
-        "createdAt": "2017-09-09T13:55:50.582Z",
-        "updatedAt": "2017-09-27T18:48:59.728Z",
-        "revision": 3,
+        "createdAt": "2017-09-01T22:06:47.727Z",
+        "updatedAt": "2017-09-01T22:06:47.727Z",
+        "revision": 1,
         "contentType": {
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "person"
+            "id": "legalPage"
           }
         },
         "locale": "en-GB"
       },
       "fields": {
-        "id": "scresswell",
-        "displayName": "Stephen Cresswell",
-        "firstName": "Stephen",
-        "lastName": "Cresswell",
-        "jobTitle": "Moderator",
-        "email": "email@stephen-cresswell.net",
-        "mobile": "+44 (0)7814 033321",
-        "twitterUsername": "cressie176"
+        "id": "privacy-policy",
+        "title": "Privacy Policy",
+        "body": "<p>This privacy policy sets out how we use and protect any information that you give us when you use this website.</p>\n\n<p>We are committed to ensuring that your privacy is protected. Should we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement.</p>\n\n<p>We may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes. This policy is effective from 1st August 2017.</p>\n\n<h3>What we collect</h3>\n<p>This website does not ask for or collect personal information.</p>\n\n<h3>How we use cookies</h3>\n<p>A cookie is a small file which asks permission to be placed on your computer&apos;s hard drive. Once you agree, the file is added and the cookie helps analyse web traffic or lets you know when you visit a particular site. Cookies allow web applications to respond to you as an individual. The web application can tailor its operations to your needs, likes and dislikes by gathering and remembering information about your preferences.</p>\n\n<p>We use traffic log cookies to identify which pages are being used. This helps us analyse data about webpage traffic and improve our website in order to tailor it to customer needs. We only use this information for statistical analysis purposes and then the data is removed from the system.</p>\n\n<p>Overall, cookies help us provide you with a better website by enabling us to monitor which pages you find useful and which you do not. A cookie in no way gives us access to your computer or any information about you, other than the data you choose to share with us.</p>\n\n<p>You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of the website.</p>\n\n<h3>Links to other websites</h3>\n\n<p>Our website may contain links to other websites of interest. However, once you have used these links to leave our site, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites and such sites are not governed by this privacy statement. You should exercise caution and look at the privacy statement applicable to the website in question.</p>"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3dmRj7SUUg2Mei2eWoa0ok",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:36:34.809Z",
+        "updatedAt": "2017-08-31T21:36:34.809Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "marv",
+        "title": "Marv",
+        "summary": "A database migration library with pluggable drivers for PostgreSQL and MySQL",
+        "body": "A database migration library with pluggable drivers for PostgreSQL and MySQL",
+        "url": "https://www.github.com/guidesmiths/marv"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "48CjwSLwRGiqWIu0kYMCU2",
+        "type": "Entry",
+        "createdAt": "2017-09-09T13:10:00.260Z",
+        "updatedAt": "2017-09-09T13:10:00.260Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "imageSet"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "10½ Factor Microservices With Node.js",
+        "thumbnail": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "3aMxdRlFxuggOWEqeIYm6i"
+          }
+        }
       }
     },
     {
@@ -2218,6 +1560,147 @@
             "id": "g99n9a78vx0s"
           }
         },
+        "id": "1aRUx8rcSOWacCaUeOYcqQ",
+        "type": "Entry",
+        "createdAt": "2017-09-09T13:55:50.582Z",
+        "updatedAt": "2017-09-27T18:48:59.728Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "person"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "scresswell",
+        "displayName": "Stephen Cresswell",
+        "firstName": "Stephen",
+        "lastName": "Cresswell",
+        "jobTitle": "Moderator",
+        "email": "email@stephen-cresswell.net",
+        "mobile": "+44 (0)7814 033321",
+        "twitterUsername": "cressie176"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3COc9WAIMMY0QKkaycg0WQ",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:37:55.487Z",
+        "updatedAt": "2017-10-01T21:17:24.940Z",
+        "revision": 17,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "article"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": 2,
+        "title": "Divorcing Microservices With Rascal",
+        "live": true,
+        "author": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1aRUx8rcSOWacCaUeOYcqQ"
+          }
+        },
+        "channel": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5AeYQEH78Ie4OCKWWkmI2o"
+          }
+        },
+        "keywords": [
+          "Node.js",
+          "Rascal",
+          "RabbitMQ",
+          "Microservices"
+        ],
+        "tweet": "Divorcing Microservices With Rascal",
+        "summary": "<p>Microservice based architectures are everywhere, but to succeed you must find ways to decouple your services so they can be developed and deployed in isolation. A popular strategy is to use a message broker, which in addition to providing the decoupling, can also add robustness and scalability. But messaging can be deceptively difficult. Which broker suits your needs best? Should you follow a \"command\" or \"event\" based model? How will you handle duplicates? Can you tolerate message loss? Will you recover from errors by discarding, retrying or dead lettering?</p>",
+        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/1CYrJfCdiEMmO2GqsiQOMc/3de80ad7c921977e8ca2d2cff63cdb65/divorcing-microservices-with-rascal-1024x768.jpg\" title=\"Divorcing Microservices With Rascal\" alt=\"Hands holding a torn picture of a heart\" />\n\n<p>Microservice based architectures are everywhere, but to succeed you must find ways to decouple your services so they can be developed and deployed in isolation. A popular strategy is to use a message broker, which in addition to providing the decoupling, can also add robustness and scalability. But messaging can be deceptively difficult. Which broker suits your needs best? Should you follow a \"command\" or \"event\" based model? How will you handle duplicates? Can you tolerate message loss? Will you recover from errors by discarding, retrying or dead lettering?</p>\n\n<p>If these questions weren't enough, you have to find a good client library. For RabbitMQ there's the excellent <a href=\"https://github.com/squaremo/amqp.node\">ampqlib</a>, but it's not for the faint of heart. Estabilishing a communication channel with the broker requires serveral api calls, and will not be automatically be restablished if dropped. Messages are not persistent or confirmed by default. Errors are likely to crash your application, and there's no support for clustering.</p>\n\n<p>Enter <a href=\"https://www.github.com/guidesmiths/rascal\">Rascal</a>, a friendly, config driven RabbitMQ client which sits on top of amqplib, simplyfing adoption significantly.</p>",
+        "date": "2016-06-29T19:00+00:00",
+        "event": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "3yKsrbq2XSgU0mooEyO4oo"
+          }
+        },
+        "location": "London",
+        "images": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "6xesezFf7G4mCEaYAO6wg8"
+          }
+        },
+        "downloads": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2WS8uCPP4seyC0WiUEI4cK"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3d4GTHKfj2GEsIAYcuScoQ",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:24:43.330Z",
+        "updatedAt": "2017-09-01T11:54:58.659Z",
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "copyright"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "© 2017 Stephen Cresswell. All rights reserved.",
+        "year": 2017,
+        "owner": "Stephen Cresswell",
+        "rights": "All rights reserved."
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
         "id": "3iVaxd7WKsU2QyAKoSoAmS",
         "type": "Entry",
         "createdAt": "2017-09-09T21:50:04.809Z",
@@ -2236,6 +1719,588 @@
         "id": "Father Ted - Channel 4",
         "text": "Father Ted - Channel 4",
         "url": "http://www.channel4.com/programmes/father-ted"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "5AeYQEH78Ie4OCKWWkmI2o",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:56:36.596Z",
+        "updatedAt": "2017-09-29T20:35:38.986Z",
+        "revision": 7,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "channelPage"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "talks",
+        "title": "Talks",
+        "feedTitle": "Stephen Cresswell's Talks",
+        "link": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "74hFY4cLKggKiGuyy2iqK0"
+          }
+        },
+        "introImage": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2GQFdGSiTCsiOOCcwu6Yge"
+          }
+        },
+        "introText": "\"How did that gobshite get on the internet?\"",
+        "introLink": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "3iVaxd7WKsU2QyAKoSoAmS"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "5ovlS609fqOmywE2kcSAWg",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:07:33.567Z",
+        "updatedAt": "2017-09-06T21:52:48.934Z",
+        "revision": 7,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Blog",
+        "text": "Blog",
+        "icon": "fa-file-text-o",
+        "url": "/blog"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "2nyUF7itooUI8yMasiyAUs",
+        "type": "Entry",
+        "createdAt": "2017-08-31T22:03:45.486Z",
+        "updatedAt": "2017-09-14T19:32:19.139Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "linkList"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "legal",
+        "title": "Legal",
+        "links": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5b5pXtgGjSiCcKwCieE4UC"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3w2lWUvmhGi8K0WS4mksYk"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4RdujCGE1qak4SoIoQs2UQ"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "23BQPn6dHWOu2AkK8ymS68",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:08:23.477Z",
+        "updatedAt": "2017-08-31T21:39:20.732Z",
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Email",
+        "text": "hello@stephen-cresswell.net",
+        "icon": "fa-envelope",
+        "url": "mailto:hello@stephen-cresswell.net"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "VXGQK0uZUIueSUIuowugE",
+        "type": "Entry",
+        "createdAt": "2017-09-09T20:51:28.599Z",
+        "updatedAt": "2017-10-01T21:16:57.015Z",
+        "revision": 116,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "article"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": 1001,
+        "title": "When Orange Is Not The New Black",
+        "live": true,
+        "author": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1aRUx8rcSOWacCaUeOYcqQ"
+          }
+        },
+        "channel": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "13bFqt7AHAGemE2cuUsiqM"
+          }
+        },
+        "keywords": [
+          "Node.js",
+          "Software",
+          "JavaScript"
+        ],
+        "tweet": "When Orange Is Not The New Black",
+        "summary": "<p>\nFrameworks come and go so quickly that with some notable exceptions any libraries you depend on today, could be superseded tomorrow. There's a cost to adoption, but often a larger cost to migrate away. Jump on the band wagon too soon and you get the pain while a project is unstable, leave it too late and supporting community may already moving on.\n</p>\n<p>\nHow do you tell when orange really is the new black, rather than being the emperors new clothes?\n</p>",
+        "body": "<img src=\"https://images.contentful.com/g99n9a78vx0s/8deT28SVQ4IqIcW8cI0i8/e0aec2652cdf65ce6bf77a1d5a21f8da/orange-is-the-new-black-1024x413.jpg\" title=\"Orange Is Not The New Black\" alt=\"Orange Is Not The New Black\" />\n\n<p>\nThe pace of software development is faster than ever before. Languages, libraries and applications emerge for their 15 minutes of fame, before being relegated to the C-List just as quickly. But at what cost? I remember when I first discovered open source. Adding a new library to a software project felt like adding value, with the bonus that it was code I didn't have to write, test or maintain. But was there always a significant and worthwhile benefit?\n</p>\n<p>\nI remember a colleague complaining about the Spring framework, and that it was too much for him to learn. At a time when the most popular alternative was Struts I didn't have much sympathy for him. Why should his reluctance to pick up new technology limit everyone else's productivity? Surely learning new tools was a key part of the job?\n</p>\n<p>\nNow I often find myself facing a similar situation, but from the other side of the argument. I'm no luddite. I was an <a href=\"https://github.com/moby/moby/commit/fe727e2a87fa086d728664c396fd44f4be6d6afd\">early adopter</a> of docker, maintain several moderately popular Node.js modules, and spent the last year writing microservices in Go. Despite frontend development not being a critical part of my job, I am comfortable enough with React to build websites like this one. So what's my problem? I don't have one, I have three.\n</p>\n<p>\nThe first problem is that frameworks come and go so quickly that, with some notable exceptions any libraries you depend on today, could be superseded tomorrow. There's a cost to adoption, but often a larger cost to migrate away. Jump on the band wagon too soon and you get the pain while a project is unstable, pick the wrong library or wait too long and the community may move on, leaving you with a legacy codebase before you've reaped sufficient benefit. An example of this is <a href=\"http://alt.js.org/\">Alt</a>, a once popular flux implementation, which now languishes in the shadow of <a href=\"http://redux.js.org/\">Redux</a>.\n</p>\n<p>\nThe second problem is that even when a library isn't a fad, it still may not bring enough value to justify its cost. This is hard to know upfront because neither the cost or benefit are predictable. At a minimum you increase the learning curve for other developers. If the library contains bugs and poorly maintained, the costs go up. The <a href=\"https://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/\">lpad debarcle</a> and <a href=\"https://www.theregister.co.uk/2017/08/02/typosquatting_npm/\">typosquatting attacks</a> are two examples of when adding libraries incurred a major cost. Providing the library is genuinely useful it's usually worth the risk, but why take the chance on a library that is trivial or superficial? Despite their popularity, fluid assertion APIs such as <a href=\"https://www.npmjs.com/package/expect.js\">expect.js</a> fall into this category. Individually these libraries are negligible, but introduce too many and the cumulative costs can have an impact. At least libraries like <a href=\"https://www.npmjs.com/package/expect.js\">expect.js</a> are limited a single area of the codebase, but what happens when you decide to lily gild JavaScript itself? One recent example is <a href=\"http://coffeescript.org/\">CoffeeScript</a>. I wonder whether the current trend of static type checkers fall into the same category.\n</p>\n<p>\nThe third problem is that the new library may be poorly designed. The flaws may not be significant when the software is young, but as features are added, it becomes harder and harder to adapt. The rate and quality of releases drops. A new and better library emerges, but your codebase is wedded to the old one. Spotting design flaws in software requires experience, but often the developers introducing it haven't made enough mistakes to know the difference. I drank both the <a href=\"http://ant.apache.org/\">ant</a> and <a href=\"http://maven.apache.org/\">maven</a> kool aid, but doing so taught me to eschew tools like <a href=\"https://puppet.com/\">puppet</a> which are configured by expressing dependencies or through inheritance. Instead I favour <a href=\"https://www.ansible.com/\">Ansible</a>, which takes an imperative approach, and I've never regretted my decision.\n</p>\n<p>\nTo highlight my points further, let's consider three examples, <a href=\"https://hapijs.com/\">hapi</a>, <a href=\"https://yarnpkg.com/en/\">Yarn</a> and <a href=\"https://facebook.github.io/jest/\">Jest</a>. All these libraries are from large organisations, have a significant user base and received a lot of positive publicity. Several teams I work with have moved, or are considering moving to them.\n</p>\n<p>\nMy preferred http server has always been <a href=\"http://expressjs.com/\">Express</a>, for the simple reason that it doesn't try to be in charge. Provided my handlers conform to a few simple conventions I'm good. A few years ago I was leading a team who were considering moving to <a href=\"https://hapijs.com/\">hapi</a>. A pair of developers evaluated it, liked it and so we started using it in all new services. It was a huge mistake. hapi takes the opposite approach to express. It wants to be boss, exerting a strong influence over how your code and tests are written. Discontent with hapi grew over the next few months and the team switched back to express. Four years on and there are still a handful of hapi services running that nobody wants to touch.\n</p>\n<p>\nWhen <a href=\"https://yarnpkg.com/en/\">Yarn</a> was released it was well received. It was faster than npm and did a better job of locking transitive dependencies. With the release of npm 5, most of Yarn's advantages have been negated. In order to support Yarn, the organisation I work for had to make code changes to their build pipeline. At least some of those same teams are now considering moving back. Yarn worked well and continues to be improved, but it was always likely that npm would be updated. Would it have been better to put up with the shortcomings of npm for a little while longer rather than support two package managers?\n</p>\n<p>\n<a href=\"https://facebook.github.io/jest/\">Jest</a> is a trending testing framework from Facebook. Several organisations, such as Airbnb, have <a href=\"https://medium.com/airbnb-engineering/unlocking-test-performance-migrating-from-mocha-to-jest-2796c508ec50\">written about</a> the benefits of migrating to Jest. When either Facebook or Airbnb advocate something the Node.js community sit up and take note, however when I look at Jest I see everything I want to avoid in a test framework.\n</p>\n\n<ul>\n  <li>It lacks support for programatic selection of test suites</li>\n  <li>It expects to be the entry point for running your tests</li>\n  <li>It uses a global \"expect\" function</li>\n  <li>It uses a fluid assertion api</li>\n  <li>It encourages mocking</li>\n  <li>It encourages snapshot testing</li>\n</ul>\n\n<p>\nSo why are these a concern?\n</p>\n<p>\nIf programatically declaring test suites and running tests isn't a first class citizen of the test framework you end up at the mercy of its globbing and configuration. Both have resulted in a number of GitHub issues, such as <a href=\"https://github.com/facebookincubator/create-react-app/pull/3124\">infinite loops while running in watch mode</a> and <a href=\"https://github.com/facebook/jest/issues/3584\">problems reading config</a>. Instead if you make programatic execution a first class citizen, then it becomes trivial to add test suite discovery and execution on top. It also becomes easier to customise or workaround when something goes awry.\n</p>\n<p>\nJest uses globals which are supposed to fully reset between each test, however as with any shared, mutable, state you are always likely to hit some kind of gotcha. I did while testing code calling setTimeout from componentWillMount and clearTimeout from componentWillUnmount. One of my tests failed intermittently because of an additional assertion. Jest provided no clue that the assertion was actually being triggered in a different test that had already passed.\n</p>\n<p>\nI'm a big fan of <a href=\"http://thinkrelevance.com/blog/2008/04/01/ending-legacy-code-in-our-lifetime\">essence over ceromony</a>. Fluid apis clutter tests with irrelevant detail, thereby diluting their essence. In an ideal world I would write all my tests as follows:\n</p>\n<pre class=\"code\">\ngiven:\n  a = 10\n  b = 9\n\nexpect:\n  91 == a * b\n</pre>\n<pre class=\"code\">\nAssertion failed: \n \nassert 91 == a * b\n          |  | | |\n          |  10| 9\n          |    90\n          false\n</pre>\n<p>\nI also favour testing for expected side effects rather than for interactions, due to the latter leading to brittle tests which don't communicate intent. It really isn't important that function X was called with three arguments, 'a', 'b' and 'c'. What's important is the side effect of calling X. Mocking and spying do have a place, such to assert when a function is not called, or called only once, but most of the time I prefer to write in-memory test doubles. I feel nervous when a library as influential as Jest makes such a strong and one sided case for mocking.\n</p>\n<p>\nI feel even more nervous with regards to snapshotting. Performing a deep comparison of two documents is usually an anti-pattern, because it results in both brittle and vague tests which are hard to debug when they fail. Usually the more specific a test is, the better. At least the snapshot <a href=\"https://facebook.github.io/jest/docs/en/snapshot-testing.html\">documentation</a> clearly acknowledges this and links to some good resources for guidance on snapshot testing.\n</p>\n<p>\nThe irony is that I use Jest for testing this site, since it is configured by default with create-react-app, and because I try to keep an open mind when I appear to be in the minority. While not reported in any of the blog posts I read, I had plenty more teething problems with Jest. Exclusive tests don't work and error messages are cryptic. The following was caused by a missing test data directory. Similarly cryptic error messages are output for syntax errors.\n\n<pre class=\"code\">\n10/09/2017, 20:57:14 PASS server/test/cms/cache.test.js\n10/09/2017, 20:57:14 ✓ should save content (3ms)\n10/09/2017, 20:57:14 ✓ should optimistically cache content on save (3ms)\n10/09/2017, 20:57:14\n10/09/2017, 20:57:15/opt/app/node_modules/jest-jasmine2/build/jasmine/Env.js:511 \ncurrentRunnable().addExpectationResult(false, { ^ TypeError: Cannot read property 'addExpectationResult' of undefined at Env.fail \n(/opt/app/node_modules/jest-jasmine2/build/jasmine/Env.js:511:24) at next \n(/opt/app/node_modules/jest-jasmine2/build/queue_runner.js:37:24) at \n/opt/app/node_modules/async/dist/async.js:3861:9 at \n/opt/app/node_modules/async/dist/async.js:421:16 at iterateeCallback \n(/opt/app/node_modules/async/dist/async.js:924:17) at \n/opt/app/node_modules/async/dist/async.js:906:16 at \n/opt/app/node_modules/async/dist/async.js:3858:13 at\n/opt/app/node_modules/async/dist/async.js:421:16 at iteratorCallback \n(/opt/app/node_modules/async/dist/async.js:996:13) at\n/opt/app/node_modules/async/dist/async.js:906:16\n</pre>\n<p>\nIn addition the codebase is huge (but at a glance, well factored) and the build has been broken for over three months!\n<p>\nDespite all this, I feel uncharitable for being so hard on Jest. All software has bugs, and the more successful the library the more bugs that are discovered. I respect that the developers and Facebook have made their work available to the community. Given the momentum I'm sure the most of the teething problems will be resolved and the react eco-system is sufficiently complex for me to want to stay on-piste. I have a suspicion that its support for parallel testing will be worth the trouble, the interactive test runner is a joy and if other teams are going to be adopting it, I might as well get on the band wagon too.\n</p>\n<h2>In Conclusion...</h2>\n<p>\nTelling when orange really is the new black, rather than <a href=\"https://en.wikipedia.org/wiki/The_Emperor%27s_New_Clothes\">The Emperor's New Clothes</a> is hard. Sometimes (as was the case with <a href=\"http://alt.js.org/\">Alt</a>), the selected option really was the best choice at the time, and it wasn't feasible to wait to see whether a better choice would materialise. Other times the warning signs are there, if you know what to look for. So what can you do? My advice is to be suspicious of any library that:\n</p>\n<ul>\n  <li>dictates the design of your application</li>\n  <li>takes over the entry point for your application</li>  \n  <li>is primarily used for lily gilding</li>\n  <li>compensates for perceived shortcomings in another library or language</li>\n  <li>is clever, not clear</li>\n  <li>doesn't have a single responsibility (e.g. is both a test runner and assertion library</li>\n  <li>has a surprisingly large amount of code (indicates sub-optimal abstractions)</li>\n</ul>\n</p>\n<p>\nBeing suspicious doesn't necessarily mean avoid, but it should mean performing some extra due diligence, dialing down your own natural inclination for shiny and canvasing the opinion of those you work with.\n</p>\n",
+        "date": "2017-08-19T19:00+01:00",
+        "images": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1HttWu08ByMIqYkMAwias0"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "6oPgI4zNzqSIWUS2QOsQKy",
+        "type": "Entry",
+        "createdAt": "2017-08-31T22:02:59.642Z",
+        "updatedAt": "2017-08-31T22:02:59.642Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "linkList"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "social",
+        "title": "Social Networks",
+        "links": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1vB10lNZBSiiKsai0KiCIe"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "Q4D5N4wyQ0wWO0AmwmCmE"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "XXrykuPGkUEeuSkMGug64"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "ZDimT44KgEowGSa6cUQCW",
+        "type": "Entry",
+        "createdAt": "2017-09-14T19:29:15.814Z",
+        "updatedAt": "2017-09-30T21:35:58.996Z",
+        "revision": 7,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "legalPage"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "production-credits",
+        "title": "Production Credits",
+        "body": "<table class='table table-striped'>\n  <body>\n    <tr>\n      <td>POV of woman using laptop while relaxing on sofa</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/Neustockimages\">iStock.com/Neustockimages</a></td>\n    </tr>\n    <tr>\n      <td>Businessman is looking at city</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/Pinkypills\">iStock.com/Pinkypills</a></td>\n    </tr>\n    <tr>\n      <td>Holding vitual 12 sided role playing game dice numbers background</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/gemredding\">iStock.com/gemredding</a></td>\n    </tr>\n    <tr>\n      <td>Hacking int the new age</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/Yuri_Arcurs\">iStock.com/Yuri_Arcurs</a></td>\n    </tr>\n    <tr>\n      <td>Felt sew star toy</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/mamezito\">iStock.com/mamezito</a></td>\n    </tr>\n    <tr>\n      <td>Abstract network connection background</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/nadla\">iStock.com/nadla</a></td>\n    </tr>\n    <tr>\n      <td>Retro robot on the road</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/benoitb\">iStock.com/benoitb</a></td>\n    </tr>\n    <tr>\n      <td>Construction workers digging</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/KatarzynaBialasiewicz\">iStock.com/KatarzynaBialasiewicz</a></td>\n    </tr>\n    <tr>\n      <td>Garbage</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/Smitt\">iStock.com/Smitt</a></td>\n    </tr>\n    <tr>\n      <td>Logs floating On Water</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/tvisttv\">iStock.com/tvisttv</a></td>\n    </tr>\n    <tr>\n      <td>A man surrounded by boxes sitting on floor using his laptop</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/mattjeacock\">iStock.com/mattjeacock</a></td>\n    </tr>   \n    <tr>\n      <td>Man holds red broken paper heart in his hands</td>\n      <td><a href=\"http://www.istockphoto.com/gb/portfolio/Professor25\">iStock.com/Professor25</a></td>\n    </tr>     \n</table>"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "1ybkgfeC0Usu6W4ICKmmco",
+        "type": "Entry",
+        "createdAt": "2017-09-01T22:05:15.270Z",
+        "updatedAt": "2017-09-01T22:07:41.521Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "legalPage"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "terms-and-conditions",
+        "title": "Terms & Conditions",
+        "body": "<p>Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern our relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.</p>\n\n<p>The term 'us' or 'we' refers to the owner of the website. The term 'you' refers to the user or viewer of our website.</p>\n\n<p>The use of this website is subject to the following terms of use:\n\n<ol>\n<li>The content of the pages of this website is for your general information and use only. It is subject to change without notice.</li>\n<li>This website uses cookies to monitor browsing preferences. If you do allow cookies to be used, the personal information may be stored by us for use by third parties.</li>\n<li>Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</li>\n<li>Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific requirements.</li>\n<li>This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</li>\n<li>All trade marks reproduced in this website which are not the property of, or licensed to, the operator are acknowledged on the website.</li>\n<li>Unauthorised use of this website may give rise to a claim for damages and/or be a criminal offence.</li><li>From time to time this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).</li>\n<li>Your use of this website and any dispute arising out of such use of the website is subject to the laws of England, Northern Ireland, Scotland and Wales.</li>\n</ol>\n</p>"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "77RHHsHuSsKIuCE4uew000",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:41:44.131Z",
+        "updatedAt": "2017-08-31T23:41:44.131Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Community For Agile Testing - Yadda",
+        "text": "Community For Agile Testing",
+        "url": "https://www.meetup.com/es-ES/Community-for-Agile-Testing/events/229788565/"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "9hIixEpd04ksKwqCoWYKg",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:26:51.194Z",
+        "updatedAt": "2017-09-02T19:45:57.627Z",
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "imageSet"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Enterprise Grade Microservices",
+        "thumbnail": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "3rAYG3rbaEI6Ka4SwigAuA"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "BeyYWLb8AgOUsYMciKG4",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:37:03.113Z",
+        "updatedAt": "2017-08-31T21:37:03.113Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "confabulous",
+        "title": "Confabulous",
+        "summary": "A hierarchical configuration loader with support for remote sources such as S3, etcd and Vault",
+        "body": "A hierarchical configuration loader with support for remote sources such as S3, etcd and Vault",
+        "url": "https://www.github.com/guidesmiths/confabulous"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "2Z335f4s5G4M880UCeUe0W",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:35:05.655Z",
+        "updatedAt": "2017-08-31T21:35:05.655Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "yadda",
+        "title": "Yadda",
+        "summary": "A cucumber-esque BDD library, but with greater flexibility",
+        "body": "A cucumber-esque BDD library, but with greater flexibility",
+        "url": "https://www.github.com/acuminous/yadda"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3e6i5bHPBYKyuG8YKu066E",
+        "type": "Entry",
+        "createdAt": "2017-08-31T21:11:37.665Z",
+        "updatedAt": "2017-08-31T21:39:59.447Z",
+        "revision": 3,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Mobile",
+        "text": "+44 (0)7814033321",
+        "icon": "fa-phone",
+        "url": "tel:+447814033321"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "1HttWu08ByMIqYkMAwias0",
+        "type": "Entry",
+        "createdAt": "2017-09-09T20:48:49.727Z",
+        "updatedAt": "2017-09-09T20:48:49.727Z",
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "imageSet"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Orange Is Not The New Black",
+        "thumbnail": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "4J3pfkFcTYQq8giGaCwSC8"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "5uraX28hqg2EU02umO8qog",
+        "type": "Entry",
+        "createdAt": "2017-09-02T19:21:46.999Z",
+        "updatedAt": "2017-09-02T20:06:03.151Z",
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Duty Calls",
+        "text": "Duty Calls - xkcd",
+        "url": "https://xkcd.com/386/"
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "g99n9a78vx0s"
+          }
+        },
+        "id": "3pVLW3iAYgcIUuUe6EUmCS",
+        "type": "Entry",
+        "createdAt": "2017-08-31T23:43:25.836Z",
+        "updatedAt": "2017-09-14T18:24:18.768Z",
+        "revision": 9,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "imageSet"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "id": "Yadda - The Other JavaScript BDD Library",
+        "thumbnail": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "3ipHCk26VGWG8YQiiy4kss"
+          }
+        }
       }
     }
   ],

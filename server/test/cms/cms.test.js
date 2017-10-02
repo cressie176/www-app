@@ -53,7 +53,14 @@ describe('CMS', () => {
           '1000': {
             id: '1000',
             title: 'Article 1000',
+            live: true,
           },
+          '2000': {
+            id: '2000',
+            title: 'Article 2000',
+            live: false,
+          },
+
         },
       }),
       store.saveContent.bind(store, 2, {}),
@@ -205,11 +212,12 @@ describe('CMS', () => {
 
   describe('List Articles', () => {
 
-    it('should get list of articles', done => {
+    it('should get list of live articles', done => {
 
       cms.listArticles(1, (err, articles) => {
         expect(err).toBe(null);
         expect(articles['1000'].id).toBe('1000');
+        expect(articles['2000']).toBeUndefined();
         done();
       });
     });
@@ -218,7 +226,7 @@ describe('CMS', () => {
 
       cms.listArticles(2, (err, articles) => {
         expect(err).toBe(null);
-        expect(articles).toBe(undefined);
+        expect(Object.keys(articles).length).toBe(0);
         done();
       });
     });
@@ -227,7 +235,7 @@ describe('CMS', () => {
 
       cms.listArticles(3, (err, articles) => {
         expect(err).toBe(null);
-        expect(articles).toBe(undefined);
+        expect(Object.keys(articles).length).toBe(0);
         done();
       });
     });
