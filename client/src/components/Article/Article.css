@@ -23,3 +23,24 @@
   width: 100%;
   margin-bottom: 20px;
 }
+
+.article__body .youtube__wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto 20px auto;
+  background-color: var(--light-grey);
+}
+
+.article__body .youtube__h_iframe {
+  position: relative;
+  padding-top: 56%;
+}
+
+.article__body .youtube__h_iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
