@@ -9,7 +9,7 @@
     "start-client": "cd client; npm start",
     "test": "npm run test-server && npm run test-client",
     "test-server": "jest",
-    "test-server-w": "jest --watch",
+    "test-server-w": "jest --verbose --watch",
     "test-client": "cd client; npm test",
     "test-client-w": "cd client; npm run test-w",
     "build": "concurrently 'npm run build-server' 'npm run build-client'",
