@@ -83,10 +83,6 @@ describe('ArticlePage', () => {
           url: '/blog/article-1',
           title: 'Article 1',
           body: '<p>blurb</p>',
-          tweet: 'meh',
-          author: {
-            twitterUsername: 'cressie176',
-          },
         }}
         path='/blog/article-1'
       />
@@ -96,8 +92,6 @@ describe('ArticlePage', () => {
     expect(wrapper.find('PageIntro').prop('title')).toBe('Article 1');
     expect(wrapper.find('Article').prop('title')).toBe('Article 1');
     expect(wrapper.find('Article').prop('body')).toBe('<p>blurb</p>');
-    expect(wrapper.find('SocialButtons').prop('tweet')).toBe('meh');
-    expect(wrapper.find('SocialButtons').prop('user').twitterUsername).toBe('cressie176');
   });
 
 });

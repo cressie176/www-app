@@ -8,10 +8,10 @@
   margin-bottom: 40px;
 }
 
-.legal-page .body {
+.legal-page .legal-page__article__body {
   margin-bottom: 60px;
 }
 
-.legal-page .body li {
+.legal-page .legal-page__article__body li {
   margin-bottom: 10px;
 }

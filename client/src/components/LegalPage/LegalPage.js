@@ -40,13 +40,15 @@ class LegalPage extends React.Component {
       );
     } else {
       return (
-          <div className={`page legal-page legal-page--${this.props.id}`}>
+        <div className={`page legal-page legal-page--${this.props.id}`}>
 
           <PageIntro title={this.props.page.title} />
 
           <div className='row'>
-            <div className='col-sm-offset-1 col-sm-8'>
-              <div className='body' dangerouslySetInnerHTML={{__html: this.props.page.body,}} />
+            <div className='col-sm-offset-1 col-md-10 col-xl-8'>
+              <div className={`legal-page__article`}>
+                <div className='legal-page__article__body' dangerouslySetInnerHTML={{__html: this.props.page.body,}} />
+              </div>
             </div>
           </div>
         </div>

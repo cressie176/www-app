@@ -5,7 +5,6 @@ import { Redirect, } from 'react-router-dom';
 import PageIntro from '../PageIntro';
 import Article from '../Article';
 import ErrorPage from '../ErrorPage';
-import SocialButtons from '../SocialButtons';
 
 import './ArticlePage.css';
 
@@ -65,9 +64,8 @@ class ArticlePage extends React.Component {
         <div className={`page article-page article-page--${article.id}`}>
           <PageIntro title={article.title} />
           <div className='row'>
-            <div className='col-sm-offset-1 col-sm-10'>
+            <div className='col-sm-offset-1 col-md-10 col-xl-8'>
               <Article {...article} />
-              <SocialButtons tweet={article.tweet} user={article.author} />
             </div>
           </div>
         </div>

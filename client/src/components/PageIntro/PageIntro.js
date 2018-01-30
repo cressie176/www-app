@@ -13,7 +13,7 @@ const PageIntro = ({ icon, title, text, link, image, }) => (
               { icon && <i className={`fa ${icon} icon-text`} aria-hidden='true'></i> }
               {text || title}
             </h1>
-            { link ? <a className='page-intro__citation' href={link.url} >{link.text}</a> : null }
+            { link ? <a className='page-intro__citation' href={link.url} >~ {link.text}</a> : null }
           </div>
         </div>
         {

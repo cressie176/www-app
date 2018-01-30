@@ -2,13 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import ArticleDetails from '../ArticleDetails';
+import SocialButtons from '../SocialButtons';
 
 import './Article.css';
 
-const Article = ({ id, title, body, event, date, location, downloads, }) => (
+const Article = ({ id, title, body, event, date, location, downloads, tweet, author, }) => (
   <div className={`article article--${id}`}>
     <div className='article__body' dangerouslySetInnerHTML={{__html: body,}} />
     <ArticleDetails { ...{event, date, location, downloads,} } />
+    <SocialButtons tweet={tweet} user={author} />
   </div>
 );
 

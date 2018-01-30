@@ -1,6 +1,6 @@
 .page-intro__title {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .page-intro__details {
@@ -9,6 +9,7 @@
 
 .page-intro .page-intro__citation {
   color: var(--white);
+  margin-left: 20px;
 }
 
 .page-intro__image {

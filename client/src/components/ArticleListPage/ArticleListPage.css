@@ -7,10 +7,6 @@
   color: var(--white);
 }
 
-.article-list-page .page-intro__wrapper {
-  text-align: center;
-}
-
 .article-list-page .page-intro {
   margin-bottom: 40px;
 }
