@@ -45,7 +45,7 @@ class LegalPage extends React.Component {
           <PageIntro title={this.props.page.title} />
 
           <div className='row'>
-            <div className='col-sm-offset-1 col-md-10 col-xl-8'>
+            <div className='col-md-offset-2 col-md-8'>
               <div className={`legal-page__article`}>
                 <div className='legal-page__article__body' dangerouslySetInnerHTML={{__html: this.props.page.body,}} />
               </div>

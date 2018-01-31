@@ -7,7 +7,7 @@ const PageIntro = ({ icon, title, text, link, image, }) => (
   <div className='page-intro__wrapper full-width gutter'>
     <div className='page-intro'>
       <div className='row'>
-        <div className='col-md-offset-1 col-md-8'>
+        <div className='col-md-offset-2 col-md-6'>
           <div className='page-intro__details'>
             <h1 className='page-intro__title' >
               { icon && <i className={`fa ${icon} icon-text`} aria-hidden='true'></i> }
@@ -19,7 +19,7 @@ const PageIntro = ({ icon, title, text, link, image, }) => (
         {
           image ?
           (
-            <div className='col-md-2'>
+            <div className='hidden-xs col-md-2 text-right'>
               <img className='page-intro__image' title={image.title} alt={image.description} src={image.url}/>
             </div>
           ) : null

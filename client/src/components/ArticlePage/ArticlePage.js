@@ -64,7 +64,7 @@ class ArticlePage extends React.Component {
         <div className={`page article-page article-page--${article.id}`}>
           <PageIntro title={article.title} />
           <div className='row'>
-            <div className='col-sm-offset-1 col-md-10 col-xl-8'>
+            <div className='col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8'>
               <Article {...article} />
             </div>
           </div>

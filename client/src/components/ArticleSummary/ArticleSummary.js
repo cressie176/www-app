@@ -9,12 +9,12 @@ import './ArticleSummary.css';
 const ArticleSummary = ({ id, url, title, images, summary, event, date, location, }) => (
   <div className='article-summary'>
     <div className='row'>
-      <div className='col-md-offset-1 col-md-3 no-min-height'>
+      <div className='col-md-offset-2 col-md-3 no-min-height'>
         <Link to={url}>
           <img className='article-summary__thumbnail' src={images.thumbnail.url} alt={images.thumbnail.description} title={images.thumbnail.title} />
         </Link>
       </div>
-      <div className='col-md-7 col-xl-5 no-min-height'>
+      <div className='col-md-5 no-min-height'>
         <h2 className='article-summary__title'><Link className='article-summary__title__link' to={url}>{title}</Link></h2>
         <div className='article-summary__body' dangerouslySetInnerHTML={{__html: summary,}} />
         <ArticleDetails { ...{ event, date, location, } } />
