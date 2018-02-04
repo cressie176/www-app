@@ -5,8 +5,8 @@ import { Link, } from 'react-router-dom';
 import './IconListItem.css';
 
 const CustomLink = ({ url, className, children, noFollow, }) => (
-  url.startsWith('/') ? <Link className={className} to={url}>{children}</Link>
-                      : <a className={className} href={url} rel={noFollow ? 'nofollow': ''}>{children}</a>
+  url[0] === '/' ? <Link className={className} to={url}>{children}</Link>
+                 : <a className={className} href={url} rel={noFollow ? 'nofollow': ''}>{children}</a>
 );
 
 const IconListItem = ({ id, icon, text, url, noFollow = false, }) => {
