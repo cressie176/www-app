@@ -36,10 +36,7 @@ const ArticleDetails = ({ event, date, location, downloads, }) => (
 
 ArticleDetails.propTypes = {
   event: PropTypes.object,
-  date: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.instanceOf(Date),
-  ]),
+  date: PropTypes.instanceOf(Date),
   location: PropTypes.string,
   downloads: PropTypes.array,
 };

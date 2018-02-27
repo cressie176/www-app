@@ -16,7 +16,7 @@ const FeaturedArticle = ({id, title, url, summary, images, event, date, location
         <img className='featured-article__thumbnail' src={images.thumbnail.url} title={images.thumbnail.title} alt={images.thumbnail.description} />
       </Link>
       <div className='featured-article__summary' dangerouslySetInnerHTML={{__html: summary,}} />
-      <ArticleDetails { ...{event, date, location, } } />
+      <ArticleDetails { ...{event, date: new Date(date), location, } } />
     </div>
   </div>
 );
@@ -26,10 +26,7 @@ FeaturedArticle.propTypes = {
   title: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,
   event: PropTypes.object,
-  date: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.instanceOf(Date),
-  ]),
+  date: PropTypes.string,
   location: PropTypes.string,
 };
 
