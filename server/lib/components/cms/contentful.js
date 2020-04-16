@@ -82,7 +82,7 @@ export default function() {
       request({ url: url, auth: { bearer: config.key, }, qs: { limit: 1000, }, json: true, }, (err, res, body) => {
         if (err) return cb(err);
         if (res.statusCode >= 400) return cb(new Error(`Received status ${res.statusCode} getting content from ${url}`));
-        if (body.errors && body.errors.length > 0) cb(new Error('Invalid content'));
+        // if (body.errors && body.errors.length > 0) return cb(new Error('Invalid content'));
         return cb(null, body);
       });
     }

@@ -17,7 +17,7 @@ export default function(options = {}) {
 
     function loadContent(tag, cb) {
       const contentPath = getContentPath(tag);
-      logger.info(`Loading content to ${contentPath}`);
+      logger.info(`Loading content from ${contentPath}`);
       loadJsonFile(contentPath, cb);
     }
 
