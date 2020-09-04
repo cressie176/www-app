@@ -48,7 +48,7 @@
     "hogan.js": "^3.0.2",
     "lodash.get": "^4.4.2",
     "lodash.has": "^4.5.2",
-    "lodash.merge": "^4.6.0",
+    "lodash.merge": "^4.6.2",
     "lodash.omit": "^4.5.0",
     "lodash.pick": "^4.4.0",
     "lru-cache": "^4.1.1",
